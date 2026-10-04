@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meta Open-Sources Muse Gadgets SDK and Firmware | rkj dev</title>
+<meta name="description" content="Meta has released the open-source Muse Gadgets SDK and ESP32 firmware, enabling developers to build custom AI hardware and connect local smart home devices.">
+<link rel="canonical" href="https://www.rkjdev.com/blog/meta-open-sources-muse-gadgets-sdk-firmware/">
+<meta name="theme-color" content="#16101a">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:site_name" content="rkj dev Blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Meta Open-Sources Muse Gadgets SDK and Firmware | rkj dev">
+<meta property="og:description" content="Meta has released the open-source Muse Gadgets SDK and ESP32 firmware, enabling developers to build custom AI hardware and connect local smart home devices.">
+<meta property="og:url" content="https://www.rkjdev.com/blog/meta-open-sources-muse-gadgets-sdk-firmware/">
+<meta property="og:image" content="https://www.rkjdev.com/blog/img/meta-open-sources-muse-gadgets-sdk-firmware/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://www.rkjdev.com/blog/img/meta-open-sources-muse-gadgets-sdk-firmware/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Meta Open-Sources Muse Gadgets SDK and Firmware | rkj dev">
+<meta name="twitter:description" content="Meta has released the open-source Muse Gadgets SDK and ESP32 firmware, enabling developers to build custom AI hardware and connect local smart home devices.">
+<link rel="alternate" type="application/rss+xml" title="rkj dev Blog" href="/blog/feed.xml">
+<link rel="alternate" type="application/feed+json" title="rkj dev Blog" href="/blog/feed.json">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2316101a'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23f4b860'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=Unbounded:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="/blog/blog.css?v=4ed3a51a">
+<meta property="article:published_time" content="2026-10-04T00:36:03.711Z">
+<meta property="article:modified_time" content="2026-10-04T00:36:03.711Z">
+<meta property="article:section" content="Open Source">
+<meta property="article:tag" content="Meta">
+<meta property="article:tag" content="Open Source">
+<meta property="article:tag" content="ESP32">
+<meta property="article:tag" content="Hardware">
+<meta property="article:tag" content="Artificial Intelligence">
+<meta property="article:tag" content="Smart Home">
+<link rel="preload" as="image" href="/blog/img/meta-open-sources-muse-gadgets-sdk-firmware/hero.webp" imagesrcset="/blog/img/meta-open-sources-muse-gadgets-sdk-firmware/hero-640.webp 640w, /blog/img/meta-open-sources-muse-gadgets-sdk-firmware/hero.webp 1200w" imagesizes="(max-width: 760px) 100vw, 1200px">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"Meta Open-Sources Muse Gadgets SDK and Firmware for DIY AI Devices","description":"Meta has released the open-source Muse Gadgets SDK and ESP32 firmware, enabling developers to build custom AI hardware and connect local smart home devices.","url":"https://www.rkjdev.com/blog/meta-open-sources-muse-gadgets-sdk-firmware/","mainEntityOfPage":"https://www.rkjdev.com/blog/meta-open-sources-muse-gadgets-sdk-firmware/","image":["https://www.rkjdev.com/blog/img/meta-open-sources-muse-gadgets-sdk-firmware/og.jpg","https://www.rkjdev.com/blog/img/meta-open-sources-muse-gadgets-sdk-firmware/hero.webp"],"datePublished":"2026-10-04T00:36:03.711Z","dateModified":"2026-10-04T00:36:03.711Z","articleSection":"Open Source","keywords":"Meta, Open Source, ESP32, Hardware, Artificial Intelligence, Smart Home","wordCount":586,"author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","name":"rkj dev","url":"https://www.rkjdev.com","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/me.jpg"}},"isBasedOn":["https://github.com/facebookincubator/muse-gadget-sdk","https://www.engadget.com/2276312/meta-muse-gadgets-open-source-smart-home-link/","https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link","https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/","https://the-decoder.com/muse-gadgets-turns-ai-hardware-into-an-open-source-diy-project/","https://www.zeniteq.com/meta-open-sources-muse-sdks-for-diy-gadgets-qhe7ta"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"Open Source","item":"https://www.rkjdev.com/blog/category/open-source/"},{"@type":"ListItem","position":3,"name":"Meta Open-Sources Muse Gadgets SDK and Firmware for DIY AI Devices","item":"https://www.rkjdev.com/blog/meta-open-sources-muse-gadgets-sdk-firmware/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the Muse Home Link required to use the Muse Gadgets SDK?","acceptedAnswer":{"@type":"Answer","text":"No. Developers can build DIY devices independently using off-the-shelf ESP32 boards or Linux devices like the Raspberry Pi without purchasing or owning a Muse Home Link."}},{"@type":"Question","name":"Can users modify the firmware on the Muse Home Link device?","acceptedAnswer":{"@type":"Answer","text":"No. The Muse Home Link runs locked official firmware and cannot be reflashed. Developers looking to run customized firmware must use standard third-party ESP32 microcontrollers."}},{"@type":"Question","name":"What license governs the Muse Gadgets software?","acceptedAnswer":{"@type":"Answer","text":"The SDK repository is published under the Apache License, Version 2.0, with individual third-party libraries retaining their respective open-source licenses. The underlying Muse AI backend remains proprietary."}}]}]</script>
+</head>
+<body class="post">
+<div class="progress" aria-hidden="true"><span></span></div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="backdrop" aria-hidden="true"></div>
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="/" aria-label="rkj dev, home">rkj dev</a>
+    <nav aria-label="Site">
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <article class="article">
+    <header class="post-head wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/category/open-source/">Open Source</a></nav>
+      <h1>Meta Open-Sources Muse Gadgets SDK and Firmware for DIY AI Devices</h1>
+      <p class="standfirst">Developers can now build custom hardware powered by Meta's Muse AI agent using ESP32 microcontrollers and Linux boards, alongside a new Home Link device.</p>
+      <div class="byline">
+        <span class="by">rkj dev newsroom</span>
+        <span><time datetime="2026-10-04T00:36:03.711Z" class="abs" data-rel>Oct 4, 2026</time></span>
+        <span>3 min read</span>
+        <a href="#sources">6 sources, fact-checked</a>
+      </div>
+    </header>
+    <div class="hero-wrap wrap"><figure class="hero-fig is-ai">
+  <div class="img"><img src="/blog/img/meta-open-sources-muse-gadgets-sdk-firmware/hero.webp" srcset="/blog/img/meta-open-sources-muse-gadgets-sdk-firmware/hero-640.webp 640w, /blog/img/meta-open-sources-muse-gadgets-sdk-firmware/hero.webp 1200w" sizes="(max-width: 760px) 100vw, 1200px" width="1200" height="675" alt="A maker workbench with microcontroller boards, electronic components, and small displays." fetchpriority="high" decoding="async"></div>
+  <figcaption><span>Illustration: An electronics development environment with microcontroller modules and breadboard components.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure></div>
+    <div class="layout wrap">
+      <aside class="rail" aria-label="On this page">
+        <nav class="toc"><p>On this page</p><ol><li><a href="#building-custom-hardware-with-esp32-and-linux">Building Custom Hardware With ESP32 and Linux</a></li><li><a href="#the-muse-home-link-bridge">The Muse Home Link Bridge</a></li><li><a href="#licensing-security-and-availability">Licensing, Security, and Availability</a></li></ol></nav>
+        <div class="share">
+          <p>Share</p>
+          <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fmeta-open-sources-muse-gadgets-sdk-firmware%2F&text=Meta%20Open-Sources%20Muse%20Gadgets%20SDK%20and%20Firmware%20for%20DIY%20AI%20Devices" target="_blank" rel="noopener">X</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fmeta-open-sources-muse-gadgets-sdk-firmware%2F" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://wa.me/?text=Meta%20Open-Sources%20Muse%20Gadgets%20SDK%20and%20Firmware%20for%20DIY%20AI%20Devices%20https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fmeta-open-sources-muse-gadgets-sdk-firmware%2F" target="_blank" rel="noopener">WhatsApp</a>
+          <button type="button" data-copy="https://www.rkjdev.com/blog/meta-open-sources-muse-gadgets-sdk-firmware/">Copy link</button>
+        </div>
+      </aside>
+      <div class="prose">
+        <section class="takeaways" aria-labelledby="tk">
+          <h2 id="tk">Key takeaways</h2>
+          <ul><li>Meta released the open-source Muse Gadgets SDK under the Apache 2.0 license for ESP32 microcontrollers and Linux systems.</li><li>Developers can link custom hardware components like e-ink screens, sensors, and audio modules to the Muse AI agent via the Muse mobile app.</li><li>Meta built the Muse Home Link, an ESP32-C5 USB-C dongle manufactured in a 5,000-unit batch for active U.S. subscribers.</li><li>Community-built skills allow the Muse agent to interface with local devices such as TVs, lights, and speakers using local HTTP APIs.</li></ul>
+        </section>
+        <p>Meta has introduced Muse Gadgets, an open-source initiative designed to let developers build and customize physical hardware that connects directly to the company&#39;s Muse AI agent. Published on <a href="https://github.com/facebookincubator/muse-gadget-sdk" target="_blank" rel="noopener">GitHub under the Apache 2.0 license</a>, the release includes an ESP32 device SDK, Linux device SDK, and low-level firmware.</p>
+<p>The project arrives shortly after Meta CEO Mark Zuckerberg revealed the Muse Charm at Meta Connect, presenting a wearable alternative for users seeking dedicated AI hardware without wearing smart glasses. According to <a href="https://www.engadget.com/2276312/meta-muse-gadgets-open-source-smart-home-link/" target="_blank" rel="noopener">Engadget</a>, the new SDK expands that hardware ecosystem by encouraging tinkerers to experiment with alternative form factors.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/meta-open-sources-muse-gadgets-sdk-firmware/figure-1.webp" width="1200" height="670" alt="An e-ink screen attached to a small development board with colorful jumper wires." loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: A prototype DIY hardware module featuring an e-ink display connected to a microcontroller.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="building-custom-hardware-with-esp32-and-linux">Building Custom Hardware With ESP32 and Linux</h2>
+<p>The open-source release is divided into two primary toolkits: an ESP32 Device SDK for microcontrollers and a Linux Device SDK for single-board computers such as the Raspberry Pi. According to the <a href="https://github.com/facebookincubator/muse-gadget-sdk" target="_blank" rel="noopener">official GitHub repository</a>, builders can connect displays, audio in and out, buttons, actuators, and sensors to interact with the Muse assistant.</p>
+<p>Meta suggests several initial project concepts, including color e-ink briefing displays, status screens, and push-to-talk accessories. For Linux setups, developers can configure custom commands to let Muse manage system-administration tasks or bridge into existing Home Assistant installations. The repository also includes configuration files (<code>AGENTS.md</code>) designed to work with AI coding tools such as Muse Code.</p>
+<p>To configure a DIY device, developers must generate an SDK token from Meta&#39;s gadget portal and enable Developer mode in the Muse mobile app on iOS or Android under Settings &gt; Devices. The app detects devices broadcasting with the &quot;MuseGadget&quot; prefix, establishing a connection while requiring developers to safeguard their pairing tokens as secure credentials, according to documentation detailed by <a href="https://www.zeniteq.com/meta-open-sources-muse-sdks-for-diy-gadgets-qhe7ta" target="_blank" rel="noopener">zeniteq.com</a>.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/meta-open-sources-muse-gadgets-sdk-firmware/figure-2.webp" width="1200" height="670" alt="A compact USB dongle with a glowing LED indicator resting near home network electronics." loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: A compact home networking bridge device communicating with connected household appliances.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="the-muse-home-link-bridge">The Muse Home Link Bridge</h2>
+<p>Alongside the developer SDKs, Meta created its own reference hardware device called the Muse Home Link. Built on an ESP32-C5 chip, the USB-C-powered accessory features dual-band Wi-Fi 6 (2.4 GHz and 5 GHz), USB-A connectivity, and an LED indicator for pairing and device status.</p>
+<p>As reported by <a href="https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/" target="_blank" rel="noopener">TechCrunch</a>, Nat Friedman, head of product at Meta&#39;s Superintelligence Labs, announced that the company manufactured an initial run of 5,000 Home Link units. The device functions as a local network bridge, allowing the Muse AI agent to communicate over local HTTP APIs with smart electronics including Samsung TVs, Philips Hue lighting, Sonos sound systems, and network printers.</p>
+<p>While the Home Link firmware is derived from the open-source ESP32 codebase, Meta notes that Home Link runs official firmware only and cannot be reflashed by users. Developers who want to flash custom firmware builds must supply their own third-party ESP32 development boards.</p>
+<h2 id="licensing-security-and-availability">Licensing, Security, and Availability</h2>
+<p>The core Muse Gadgets code is licensed under Apache 2.0, with specific third-party components retaining their original licenses—such as <code>minimp3</code> under CC0-1.0 and pixel font files under BSD-2-Clause. The Jollybot avatar asset is excluded from the Apache license. While the device-side firmware is open source, the Muse AI service itself remains proprietary and subject to separate platform terms.</p>
+<p>Meta cautions that community-created smart home integrations are not officially warranted and should not be used for safety-critical systems such as emergency equipment or home security. Security guidelines published with the project advise builders to isolate gadgets on dedicated local networks and restrict exposed shell commands on Linux systems.</p>
+<p>According to <a href="https://www.zeniteq.com/meta-open-sources-muse-sdks-for-diy-gadgets-qhe7ta" target="_blank" rel="noopener">zeniteq.com</a>, Meta is distributing the 5,000 manufactured Home Link units for free to active Muse subscribers in the United States on a first-come, first-served basis, with shipments slated to begin in October 2026. The DIY SDK route is available immediately for builders with compatible hardware.</p>
+
+        <section class="faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Frequently asked questions</h2>
+          <details open><summary>Is the Muse Home Link required to use the Muse Gadgets SDK?</summary><p>No. Developers can build DIY devices independently using off-the-shelf ESP32 boards or Linux devices like the Raspberry Pi without purchasing or owning a Muse Home Link.</p></details>
+<details><summary>Can users modify the firmware on the Muse Home Link device?</summary><p>No. The Muse Home Link runs locked official firmware and cannot be reflashed. Developers looking to run customized firmware must use standard third-party ESP32 microcontrollers.</p></details>
+<details><summary>What license governs the Muse Gadgets software?</summary><p>The SDK repository is published under the Apache License, Version 2.0, with individual third-party libraries retaining their respective open-source licenses. The underlying Muse AI backend remains proprietary.</p></details>
+        </section>
+        <section class="sources" id="sources" aria-labelledby="src-title">
+          <h2 id="src-title">Sources</h2>
+          <ol><li><a href="https://github.com/facebookincubator/muse-gadget-sdk" target="_blank" rel="noopener">facebookincubator/muse-gadget-sdk</a><span>GitHub · Oct 2, 2026 · <b class="official">Official</b></span></li><li><a href="https://www.engadget.com/2276312/meta-muse-gadgets-open-source-smart-home-link/" target="_blank" rel="noopener">Meta Wants People To Build Their Own Muse Gadgets, Too</a><span>Engadget · Oct 2, 2026</span></li><li><a href="https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link" target="_blank" rel="noopener">Meta open sources code to let you make Muse AI gadgets</a><span>The Verge · Oct 2, 2026</span></li><li><a href="https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/" target="_blank" rel="noopener">Meta wants your next gadget to be Muse-infused</a><span>TechCrunch · Oct 3, 2026</span></li><li><a href="https://the-decoder.com/muse-gadgets-turns-ai-hardware-into-an-open-source-diy-project/" target="_blank" rel="noopener">&quot;Muse Gadgets&quot; turns AI hardware into an open-source DIY project</a><span>The Decoder · Oct 3, 2026</span></li><li><a href="https://www.zeniteq.com/meta-open-sources-muse-sdks-for-diy-gadgets-qhe7ta" target="_blank" rel="noopener">Meta Open-Sources Muse SDKs for DIY Gadgets</a><span>zeniteq.com · Oct 3, 2026</span></li></ol>
+          <p class="method">How this story was made: the newsroom picked it up from Techmeme, theverge.com and techcrunch.com, gathered the full text of the sources above, and drafted it with AI assistance. Every factual claim was then checked against those sources before publishing (34 claims checked). Illustrations marked as AI-generated are not photographs. Spotted an error? <a href="mailto:rajankrishnan909@gmail.com?subject=Correction%3A%20Meta%20Open-Sources%20Muse%20Gadgets%20SDK%20and%20Firmware%20for%20DIY%20AI%20Devices">Tell us</a>.</p>
+        </section>
+        <p class="tags"><span>#Meta</span> <span>#Open Source</span> <span>#ESP32</span> <span>#Hardware</span> <span>#Artificial Intelligence</span> <span>#Smart Home</span></p>
+        <p class="stamp">Published October 4, 2026 at 00:36 UTC</p>
+      </div>
+    </div>
+  </article>
+  <section class="related wrap" aria-labelledby="rel-title">
+    <h2 id="rel-title">Keep reading</h2>
+    <div class="grid"><article class="card ">
+  <a class="card-link" href="/blog/openai-safety-lead-david-robinson-resigns-broken-culture/">
+    <div class="thumb is-ai"><img src="/blog/img/openai-safety-lead-david-robinson-resigns-broken-culture/hero-640.webp" srcset="/blog/img/openai-safety-lead-david-robinson-resigns-broken-culture/hero-640.webp 640w, /blog/img/openai-safety-lead-david-robinson-resigns-broken-culture/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="An AI researcher leaving a technology lab with personal belongings" loading="lazy" decoding="async"></div>
+    <div class="card-body">
+      <p class="meta"><span class="cat">Industry</span><time datetime="2026-10-04T00:07:41.273Z" data-rel>Oct 4, 2026</time></p>
+      <h3>OpenAI Safety Lead David Robinson Resigns Over Rapid Deployment Culture</h3>
+      <p class="dek">Former safety transparency lead David Robinson warns that perpetual sprints and trial-and-error deployment leave AI labs ill-equipped to prevent catastrophic risks.</p>
+      <p class="foot-meta">3 min read · 7 sources</p>
+    </div>
+  </a>
+</article>
+<article class="card ">
+  <a class="card-link" href="/blog/aleph-alpha-releases-kolibri-1-open-weights-model/">
+    <div class="thumb is-ai"><img src="/blog/img/aleph-alpha-releases-kolibri-1-open-weights-model/hero-640.webp" srcset="/blog/img/aleph-alpha-releases-kolibri-1-open-weights-model/hero-640.webp 640w, /blog/img/aleph-alpha-releases-kolibri-1-open-weights-model/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="Illustration of modern data center infrastructure and research environment" loading="lazy" decoding="async"></div>
+    <div class="card-body">
+      <p class="meta"><span class="cat">AI Models</span><time datetime="2026-10-04T00:05:17.354Z" data-rel>Oct 4, 2026</time></p>
+      <h3>Aleph Alpha Releases Kolibri-1 Open-Weights Model Under Apache 2.0</h3>
+      <p class="dek">The German AI lab has published the full weights for its 78-billion-parameter bilingual mixture-of-experts model under a permissive open-source license.</p>
+      <p class="foot-meta">3 min read · 5 sources</p>
+    </div>
+  </a>
+</article>
+<article class="card ">
+  <a class="card-link" href="/blog/microsoft-launches-mai-transcribe-2-streaming-voice-models/">
+    <div class="thumb is-ai"><img src="/blog/img/microsoft-launches-mai-transcribe-2-streaming-voice-models/hero-640.webp" srcset="/blog/img/microsoft-launches-mai-transcribe-2-streaming-voice-models/hero-640.webp 640w, /blog/img/microsoft-launches-mai-transcribe-2-streaming-voice-models/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="Abstract visualization of audio waves transitioning into streaming digital data streams." loading="lazy" decoding="async"></div>
+    <div class="card-body">
+      <p class="meta"><span class="cat">Audio &amp; Video</span><time datetime="2026-10-03T01:11:53.380Z" data-rel>Oct 3, 2026</time></p>
+      <h3>Microsoft Launches MAI-Transcribe-2-Streaming and MAI-Voice 2.1</h3>
+      <p class="dek">The new audio models provide real-time streaming speech-to-text across 60 languages and low-latency multilingual speech synthesis.</p>
+      <p class="foot-meta">3 min read · 6 sources</p>
+    </div>
+  </a>
+</article></div>
+  </section>
+  <nav class="prevnext wrap" aria-label="More stories">
+    <a href="/blog/openai-investigation-rogue-agent-costs-500k-daily/"><span>Newer</span>OpenAI Investigation Into Rogue Agent Incidents Tops $500,000 a Day</a>
+    <a class="next" href="/blog/openai-safety-lead-david-robinson-resigns-broken-culture/"><span>Older</span>OpenAI Safety Lead David Robinson Resigns Over Rapid Deployment Culture</a>
+  </nav>
+</main>
+<footer class="foot wrap">
+  <div>
+    <p class="foot-mark">rkj dev <span>Blog</span></p>
+    <p>Fast, source-checked coverage of new AI models, open-source releases, audio and video AI, and the tech and science breakthroughs of the day.</p>
+  </div>
+  <nav aria-label="Blog">
+    <a href="/blog/">Latest</a>
+    <a href="/blog/category/ai-models/">AI Models</a>
+    <a href="/blog/category/open-source/">Open Source</a>
+    <a href="/blog/category/research/">Research</a>
+    <a href="/blog/category/audio-and-video/">Audio &amp; Video</a>
+    <a href="/blog/category/agents-and-tools/">Agents &amp; Tools</a>
+    <a href="/blog/category/industry/">Industry</a>
+    <a href="/blog/feed.xml">RSS</a>
+    <a href="/">About rkj dev</a>
+  </nav>
+  <p class="fine">© 2026 Rajan Krishnan. Articles are researched from the linked sources, written with AI assistance and checked claim by claim against those sources. AI-generated illustrations are labeled.</p>
+</footer>
+<script src="/blog/blog.js?v=210b69de" defer></script>
+</body>
+</html>

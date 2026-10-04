@@ -1,0 +1,154 @@
+{
+ "slug": "meta-open-sources-muse-gadgets-sdk-firmware",
+ "title": "Meta Open-Sources Muse Gadgets SDK and Firmware for DIY AI Devices",
+ "seoTitle": "Meta Open-Sources Muse Gadgets SDK and Firmware",
+ "description": "Meta has released the open-source Muse Gadgets SDK and ESP32 firmware, enabling developers to build custom AI hardware and connect local smart home devices.",
+ "dek": "Developers can now build custom hardware powered by Meta's Muse AI agent using ESP32 microcontrollers and Linux boards, alongside a new Home Link device.",
+ "category": "Open Source",
+ "tags": [
+  "Meta",
+  "Open Source",
+  "ESP32",
+  "Hardware",
+  "Artificial Intelligence",
+  "Smart Home"
+ ],
+ "keyTakeaways": [
+  "Meta released the open-source Muse Gadgets SDK under the Apache 2.0 license for ESP32 microcontrollers and Linux systems.",
+  "Developers can link custom hardware components like e-ink screens, sensors, and audio modules to the Muse AI agent via the Muse mobile app.",
+  "Meta built the Muse Home Link, an ESP32-C5 USB-C dongle manufactured in a 5,000-unit batch for active U.S. subscribers.",
+  "Community-built skills allow the Muse agent to interface with local devices such as TVs, lights, and speakers using local HTTP APIs."
+ ],
+ "body": "Meta has introduced Muse Gadgets, an open-source initiative designed to let developers build and customize physical hardware that connects directly to the company's Muse AI agent. Published on [GitHub under the Apache 2.0 license](https://github.com/facebookincubator/muse-gadget-sdk), the release includes an ESP32 device SDK, Linux device SDK, and low-level firmware.\n\nThe project arrives shortly after Meta CEO Mark Zuckerberg revealed the Muse Charm at Meta Connect, presenting a wearable alternative for users seeking dedicated AI hardware without wearing smart glasses. According to [Engadget](https://www.engadget.com/2276312/meta-muse-gadgets-open-source-smart-home-link/), the new SDK expands that hardware ecosystem by encouraging tinkerers to experiment with alternative form factors.\n\n[[FIG1]]\n\n## Building Custom Hardware With ESP32 and Linux\n\nThe open-source release is divided into two primary toolkits: an ESP32 Device SDK for microcontrollers and a Linux Device SDK for single-board computers such as the Raspberry Pi. According to the [official GitHub repository](https://github.com/facebookincubator/muse-gadget-sdk), builders can connect displays, audio in and out, buttons, actuators, and sensors to interact with the Muse assistant.\n\nMeta suggests several initial project concepts, including color e-ink briefing displays, status screens, and push-to-talk accessories. For Linux setups, developers can configure custom commands to let Muse manage system-administration tasks or bridge into existing Home Assistant installations. The repository also includes configuration files (`AGENTS.md`) designed to work with AI coding tools such as Muse Code.\n\nTo configure a DIY device, developers must generate an SDK token from Meta's gadget portal and enable Developer mode in the Muse mobile app on iOS or Android under Settings > Devices. The app detects devices broadcasting with the \"MuseGadget\" prefix, establishing a connection while requiring developers to safeguard their pairing tokens as secure credentials, according to documentation detailed by [zeniteq.com](https://www.zeniteq.com/meta-open-sources-muse-sdks-for-diy-gadgets-qhe7ta).\n\n[[FIG2]]\n\n## The Muse Home Link Bridge\n\nAlongside the developer SDKs, Meta created its own reference hardware device called the Muse Home Link. Built on an ESP32-C5 chip, the USB-C-powered accessory features dual-band Wi-Fi 6 (2.4 GHz and 5 GHz), USB-A connectivity, and an LED indicator for pairing and device status.\n\nAs reported by [TechCrunch](https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/), Nat Friedman, head of product at Meta's Superintelligence Labs, announced that the company manufactured an initial run of 5,000 Home Link units. The device functions as a local network bridge, allowing the Muse AI agent to communicate over local HTTP APIs with smart electronics including Samsung TVs, Philips Hue lighting, Sonos sound systems, and network printers.\n\nWhile the Home Link firmware is derived from the open-source ESP32 codebase, Meta notes that Home Link runs official firmware only and cannot be reflashed by users. Developers who want to flash custom firmware builds must supply their own third-party ESP32 development boards.\n\n## Licensing, Security, and Availability\n\nThe core Muse Gadgets code is licensed under Apache 2.0, with specific third-party components retaining their original licenses—such as `minimp3` under CC0-1.0 and pixel font files under BSD-2-Clause. The Jollybot avatar asset is excluded from the Apache license. While the device-side firmware is open source, the Muse AI service itself remains proprietary and subject to separate platform terms.\n\nMeta cautions that community-created smart home integrations are not officially warranted and should not be used for safety-critical systems such as emergency equipment or home security. Security guidelines published with the project advise builders to isolate gadgets on dedicated local networks and restrict exposed shell commands on Linux systems.\n\nAccording to [zeniteq.com](https://www.zeniteq.com/meta-open-sources-muse-sdks-for-diy-gadgets-qhe7ta), Meta is distributing the 5,000 manufactured Home Link units for free to active Muse subscribers in the United States on a first-come, first-served basis, with shipments slated to begin in October 2026. The DIY SDK route is available immediately for builders with compatible hardware.",
+ "faq": [
+  {
+   "q": "Is the Muse Home Link required to use the Muse Gadgets SDK?",
+   "a": "No. Developers can build DIY devices independently using off-the-shelf ESP32 boards or Linux devices like the Raspberry Pi without purchasing or owning a Muse Home Link."
+  },
+  {
+   "q": "Can users modify the firmware on the Muse Home Link device?",
+   "a": "No. The Muse Home Link runs locked official firmware and cannot be reflashed. Developers looking to run customized firmware must use standard third-party ESP32 microcontrollers."
+  },
+  {
+   "q": "What license governs the Muse Gadgets software?",
+   "a": "The SDK repository is published under the Apache License, Version 2.0, with individual third-party libraries retaining their respective open-source licenses. The underlying Muse AI backend remains proprietary."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An electronics workbench filled with microcontrollers, circuit boards, ribbon cables, soldering equipment, and small glowing electronic displays in a modern maker lab setting.",
+  "alt": "A maker workbench with microcontroller boards, electronic components, and small displays.",
+  "caption": "Illustration: An electronics development environment with microcontroller modules and breadboard components.",
+  "src": "img/meta-open-sources-muse-gadgets-sdk-firmware/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 77292,
+  "small": "img/meta-open-sources-muse-gadgets-sdk-firmware/hero-640.webp",
+  "og": "img/meta-open-sources-muse-gadgets-sdk-firmware/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/meta-open-sources-muse-gadgets-sdk-firmware/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A close-up view of a small microcontroller development board wired with wires to an e-ink display screen showing text and icons on a wooden table.",
+   "alt": "An e-ink screen attached to a small development board with colorful jumper wires.",
+   "caption": "Illustration: A prototype DIY hardware module featuring an e-ink display connected to a microcontroller.",
+   "slot": "FIG1",
+   "src": "img/meta-open-sources-muse-gadgets-sdk-firmware/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 37280,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A compact modern smart home bridge dongle with an illuminated LED light plugged into a power socket near home entertainment and networking equipment.",
+   "alt": "A compact USB dongle with a glowing LED indicator resting near home network electronics.",
+   "caption": "Illustration: A compact home networking bridge device communicating with connected household appliances.",
+   "slot": "FIG2",
+   "src": "img/meta-open-sources-muse-gadgets-sdk-firmware/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 18546,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://github.com/facebookincubator/muse-gadget-sdk",
+   "title": "facebookincubator/muse-gadget-sdk",
+   "site": "GitHub",
+   "published": 1790965283000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://www.engadget.com/2276312/meta-muse-gadgets-open-source-smart-home-link/",
+   "title": "Meta Wants People To Build Their Own Muse Gadgets, Too",
+   "site": "Engadget",
+   "published": 1790972834000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link",
+   "title": "Meta open sources code to let you make Muse AI gadgets",
+   "site": "The Verge",
+   "published": 1790975317000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/",
+   "title": "Meta wants your next gadget to be Muse-infused",
+   "site": "TechCrunch",
+   "published": 1790988339000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://the-decoder.com/muse-gadgets-turns-ai-hardware-into-an-open-source-diy-project/",
+   "title": "\"Muse Gadgets\" turns AI hardware into an open-source DIY project",
+   "site": "The Decoder",
+   "published": 1791037731000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://www.zeniteq.com/meta-open-sources-muse-sdks-for-diy-gadgets-qhe7ta",
+   "title": "Meta Open-Sources Muse SDKs for DIY Gadgets",
+   "site": "zeniteq.com",
+   "published": 1791028800000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1791074163711,
+ "updatedAt": 1791074163711,
+ "foundVia": "Techmeme, theverge.com and techcrunch.com",
+ "check": {
+  "claims": 34,
+  "score": 10
+ },
+ "story": {
+  "id": "Pbb8354b1",
+  "score": 85,
+  "items": [
+   "https://www.techmeme.com/261002/p24#a261002p24",
+   "https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link",
+   "https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/",
+   "https://github.com/facebookincubator/muse-gadget-sdk",
+   "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQbnFHM3p5eEJocTktSDRvZ2RlNExndFVNNVJFaFVmMVp2UmRtbmVXLW5SVEVDUEhlVzVqcmotT0hPMHRsdHR5RjdCVlFHMkYyQzB0bFEzam04THJDVzRNLTNNU0lRUTVFUGI2cFk4cVVtQWtfeTZYMm8wRGtjWVJUZGxiWXgzMlFtZ0tQS3ZEX0FKZDhZR0QySU8zMzdHLTNUX09JV09qNTB2RFBoV085SHdweHZpclFvd0lUaDU2QVI0TzM0NjBOTGFWc2Roa243MXF6dllNdjVSQdIB4AFBVV95cUxQb3BPenZUa0JSYTU5TnVsSWl3Z0tNVzB3NEY3S1kycnMtanU1UG01VFMxTTR4RVZJS3ZmNmdjbHJETl9oRE1uWHZCeVlWcFloYkgyWGs1WGdkY0JNMDNoOS03cXpnMHdNT0c2QnEtZlRMQzduZjRqUWdtMnlLVjdMV3ZrOHlyRXgwY002M2F0RjZMUzY1YlVGMkh1WUVrc2RiQmZiQi1nSVFsbFlONGpjd29teDg4R1pwX09ZWDJ4Nm5ZZi0xaUg4dmJxcXFSWE9ZeDAwMk5wNWFKUGNSRjBDTg?oc=5",
+   "https://the-decoder.com/muse-gadgets-turns-ai-hardware-into-an-open-source-diy-project/",
+   "https://news.google.com/rss/articles/CBMijwFBVV95cUxPQkxYXy1OanVZSTczckFMU3o0VmxQOWliT0g5VUg1NVJDU25tOEtXSjJLeTVrM3hCMEFPdlBDYWxQaDc4b253QVpWSTVjOHJHSDZTbjZfTU9DcXZmVjBuNGxpWVMyMEZNSVhfbVhtenhLY3FtblhxbVhVeDZBUVlFVlZocFlqaHdBR0Vpdm9KUQ?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
