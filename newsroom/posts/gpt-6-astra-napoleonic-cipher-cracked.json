@@ -1,0 +1,123 @@
+{
+ "slug": "gpt-6-astra-napoleonic-cipher-cracked",
+ "title": "GPT-6 Astra Decodes 217-Year-Old Napoleonic Cipher in Six Hours",
+ "seoTitle": "GPT-6 Astra Decodes Napoleonic Cipher in Six Hours",
+ "description": "Using a single image prompt, OpenAI's GPT-6 Astra cracked an unsolved 1809 Napoleonic military cipher in six hours, revealing lost French troop orders.",
+ "dek": "A SentinelOne engineer used OpenAI's multimodal model to autonomously transcribe and solve an unread 1809 military letter to General Marmont.",
+ "category": "AI Models",
+ "tags": [
+  "GPT-6 Astra",
+  "OpenAI",
+  "Cryptography",
+  "Machine Learning",
+  "History"
+ ],
+ "keyTakeaways": [
+  "SentinelOne engineer Carter Church used OpenAI's GPT-6 Astra to solve an unsolved 1809 Napoleonic cipher in approximately six hours from a single image prompt.",
+  "The model autonomously handled both transcription of 155 distinct hand-drawn symbols and cryptanalysis using a simulated-annealing solver.",
+  "The decrypted document provides missing text from an order sent to General Auguste de Marmont two weeks before the Austrian invasion of Bavaria.",
+  "Cryptiana database maintainer Satoshi Tomokiyo officially marked the cipher as solved, while Carter Church noted the solution is mechanically testable."
+ ],
+ "body": "An artificial intelligence engineer has used OpenAI's GPT-6 Astra to decipher a 217-year-old encrypted military briefing from the Napoleonic Wars that had remained unread since 1809. Initiated with a single visual prompt containing an image scan of the manuscript, the multimodal model parsed handwritten symbols, rebuilt the cipher key, and translated the secret troop instructions in roughly six hours, according to reporting by [Tom's Hardware](https://www.tomshardware.com/tech-industry/artificial-intelligence/chatgpt-6-astra-cracks-217-year-old-napoleonic-code-in-just-six-hours-single-prompt-ai-run-solves-24-rows-of-custom-symbols-from-a-single-image-reveals-lost-troop-orders).\n\nCarter Church, an AI engineer at cybersecurity firm SentinelOne, announced the breakthrough in late September 2026, releasing the entire deciphering script, transcription logs, and decoded text in a public research post on [his personal website](https://carter.church/writeups/the-letter-to-marmont/). The document had sat on the Cryptiana Unsolved Historical Ciphers list for decades before the automated run solved it.\n\n[[FIG1]]\n\n## How GPT-6 Astra Broke the 1809 Marmont Cipher\n\nThe target document was an encoded dispatch sent in late March 1809 to French General Auguste de Marmont. Marmont was stationed in Dalmatia on the far side of the Adriatic, isolated from other Imperial forces just as Austria prepared to invade Bavaria. The message came from the headquarters of Eugène de Beauharnais, the Viceroy of Italy and Napoleon Bonaparte's stepson, relaying Napoleon's strategic orders.\n\nAlthough the opening sentence was written in plain French, the body of the letter contained 24 rows consisting of 1,300 cipher units made up of two-digit numbers, stray characters, and custom hand-drawn glyphs. In total, the document employed 155 distinct signs in a homophonic substitution system, where common letters are represented by multiple interchangeable symbols to foil basic frequency analysis.\n\nAccording to Church's technical breakdown, GPT-6 Astra executed both visual transcription and cryptanalysis in a unified workflow from a single 1,202-by-1,836-pixel scanned plate digitized from a 1969 French military journal article by Lieutenant-Colonel J. Vilcoq. The model segmented the image into line crops, grouped approximately 175 raw marks into 155 distinct signs, incorporated a previously known partial table of 33 letter values published by French historian Daniel Tant, and resolved the remaining two-thirds of the ciphertext.\n\nTo fill the remaining gaps, Astra deployed a simulated-annealing solver that tested candidate plaintexts against statistical n-gram patterns in historical French. It identified 29 whole-word signs (such as *général*, *vous*, *que*, and *les*), isolated null characters, and validated every proposed value across all instances in the source image.\n\n[[FIG2]]\n\n## Uncovering Lost Napoleonic Troop Orders\n\nThe decrypted text fills an incomplete passage in historical records, including Napoleon's 1865 published correspondence. In the memoirs, a recorded draft order to Marmont had cut off mid-sentence, stating that Marmont must not be held back by \"a handful of ...\", which the decrypted text completes with \"a gathering of rabble.\"\n\nThe deciphered letter reveals the full sentence: \"When you receive the order to march, you must not allow yourself to be intimidated by a few troops or a gathering of rabble.\" It also enumerates specific French and allied force dispositions across central Europe—including 40,000 Bavarian troops under the Duke of Danzig occupying Munich and Passau, and 80,000 French soldiers under the Duke of Auerstaedt in Bayreuth.\n\nSatoshi Tomokiyo, curator of the Cryptiana historical cipher database, reviewed the work and officially marked the letter as solved, while Carter Church noted that the solution is mechanically testable against the ciphertext.\n\nAs reported by [Live Science](https://www.livescience.com/technology/artificial-intelligence/a-kind-of-rosetta-stone-ai-decodes-217-year-old-secret-letter-ordered-by-napoleon), historians are excited about AI's potential to become a modern-day \"Rosetta Stone\" for translating coded historical messages.",
+ "faq": [
+  {
+   "q": "What was the historical document decoded by GPT-6 Astra?",
+   "a": "It was an encrypted French military briefing sent in late March 1809 from the headquarters of Eugène de Beauharnais to General Auguste de Marmont, detailing allied troop deployments two weeks before Austria attacked Bavaria."
+  },
+  {
+   "q": "Who initiated the decoding project?",
+   "a": "Carter Church, an AI engineer at cybersecurity firm SentinelOne, provided the single image scan and prompt to OpenAI's GPT-6 Astra."
+  },
+  {
+   "q": "How did the model solve the cipher?",
+   "a": "GPT-6 Astra sliced the scanned image, transcribed 155 distinct handwritten symbols, incorporated a partial 33-letter reference table, and used an integrated simulated-annealing solver against historical French n-grams to decipher the remaining 865 units in about six hours."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An 1800s military commander in an ornate historical uniform reviewing a weathered parchment letter filled with numerical codes and hand-drawn geometric cipher symbols on a rustic wooden table by candlelight in a field tent",
+  "alt": "Illustration of an early 19th-century military officer examining an encrypted parchment document in a field tent",
+  "caption": "Illustration: an 1809 French military commander inspecting a ciphered letter in the field.",
+  "src": "img/gpt-6-astra-napoleonic-cipher-cracked/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 64464,
+  "small": "img/gpt-6-astra-napoleonic-cipher-cracked/hero-640.webp",
+  "og": "img/gpt-6-astra-napoleonic-cipher-cracked/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/gpt-6-astra-napoleonic-cipher-cracked/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A modern software engineer working at a clean dual-monitor workstation in an office, viewing digital scans of aged handwritten manuscripts alongside algorithmic data visualizations",
+   "alt": "Illustration of an engineer analyzing historical coded documents on computer displays",
+   "caption": "Illustration: an engineer pairing computational models with scans of historical manuscripts.",
+   "slot": "FIG1",
+   "src": "img/gpt-6-astra-napoleonic-cipher-cracked/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 41822,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "An antique wooden desk covered with rows of handwritten cryptographic substitution tables, quill pens, and historical maps of Central Europe during the early 19th century",
+   "alt": "Illustration of historical cryptographic tables and military maps laid out on a wooden desk",
+   "caption": "Illustration: historical cipher tables used by 19th-century military clerks to encode dispatches.",
+   "slot": "FIG2",
+   "src": "img/gpt-6-astra-napoleonic-cipher-cracked/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 44048,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/chatgpt-6-astra-cracks-217-year-old-napoleonic-code-in-just-six-hours-single-prompt-ai-run-solves-24-rows-of-custom-symbols-from-a-single-image-reveals-lost-troop-orders",
+   "title": "ChatGPT-6 Astra cracks 217-year-old Napoleonic code in just six hours — single-prompt AI run solves 24 rows of custom symbols from a single image, reveals lost troop orders | Tom's Hardware",
+   "site": "tomshardware.com",
+   "published": 1791119326000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://carter.church/writeups/the-letter-to-marmont/",
+   "title": "Breaking the Marmont Cipher, 1809",
+   "site": "Carter Church",
+   "published": 1789689600000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://www.livescience.com/technology/artificial-intelligence/a-kind-of-rosetta-stone-ai-decodes-217-year-old-secret-letter-ordered-by-napoleon",
+   "title": "'A kind of Rosetta Stone': AI decodes 217-year-old secret letter ordered by Napoleon",
+   "site": "Live Science",
+   "published": 1790937000000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1791162112976,
+ "updatedAt": 1791162112976,
+ "foundVia": "tomshardware.com",
+ "check": {
+  "claims": 29,
+  "score": 10
+ },
+ "story": {
+  "id": "P2fc1e767",
+  "score": 78,
+  "items": [
+   "https://www.tomshardware.com/tech-industry/artificial-intelligence/chatgpt-6-astra-cracks-217-year-old-napoleonic-code-in-just-six-hours-single-prompt-ai-run-solves-24-rows-of-custom-symbols-from-a-single-image-reveals-lost-troop-orders"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}

@@ -1,0 +1,144 @@
+{
+ "slug": "elevenlabs-releases-eleven-v4-audio-model",
+ "title": "ElevenLabs Launches Eleven v4 Audio Model with In-Text Voice Direction",
+ "seoTitle": "ElevenLabs Releases Eleven v4 Voice Generation Model",
+ "description": "ElevenLabs has released Eleven v4 and Eleven v4 Turbo, introducing natural language voice direction, 90+ language accents, and sub-150ms latency.",
+ "dek": "The new architecture introduces inline natural-language voice directing, low-latency streaming for AI agents, and multilingual native accent adoption.",
+ "category": "Audio & Video",
+ "tags": [
+  "ElevenLabs",
+  "Voice AI",
+  "Text to Speech",
+  "Artificial Intelligence",
+  "Audio Generation"
+ ],
+ "keyTakeaways": [
+  "ElevenLabs released Eleven v4 and Eleven v4 Turbo on September 28, 2026, built on an entirely new architecture for expressive text-to-speech.",
+  "The model introduces inline natural-language audio tags, letting creators steer emotion, pacing, and sound effects directly in the script.",
+  "ElevenLabs reports that Eleven v4 Turbo achieves a median time to first speech of approximately 150ms based on internal testing against identical scripts for conversational agent workflows.",
+  "Support extends across more than 90 languages, automatically matching native accents while preserving speaker identity from source voices."
+ ],
+ "body": "ElevenLabs announced the launch of Eleven v4 and Eleven v4 Turbo on September 28, 2026, introducing an overhauled architecture designed to interpret tone, pacing, and context from written text. According to [ElevenLabs' official announcement](https://elevenlabs.io/blog/eleven-v4), the new generation delivers natural multi-speaker dynamics and in-text directional control, while reducing voice generation latency for real-time applications.\n\nAlongside the flagship model, ElevenLabs launched Eleven v4 Turbo to serve low-latency interactive workflows, such as customer service tools and conversational characters. Both model tiers are available immediately through the company's web platforms and API, including access on the free tier.\n\n## Natural Language Voice Direction and Audio Tags\n\nThe central architectural shift in Eleven v4 is the ability to interpret performance directions written directly into script text. Rather than relying solely on sliders for speed or style, users can embed natural language instructions and bracketed tags to control emotional delivery, pacing, and non-speech sounds.\n\nAccording to [ElevenLabs](https://elevenlabs.io/blog/eleven-v4), the model processes descriptive inline tags such as `[laughs]` and `[said angrily in French accent]`, alongside sound effects like `[phone buzzing]` or `[light rain]`. Developer documentation also indicates improved support for the International Phonetic Alphabet (IPA) to handle custom pronunciations.\n\n[[FIG1]]\n\nAI audio generation and workflow platform [Morphic noted](https://morphic.com/resources/models/eleven-v4) that previous manual style and speed sliders have been replaced by this context-driven approach. Instead of using SSML break tags, creators shape rhythm and timing by adjusting punctuation, capitalization, or inserting natural cues such as `[rushed]` or `[slowly]`.\n\nAnalysis from [MindStudio](https://www.mindstudio.ai/blog/elevenlabs-v4-voice-model) highlighted that natural language direction lowers friction for creators building narrative audiobooks, games, and AI video sound design, comparing the feature trajectory to capabilities previously demonstrated by ByteDance's Seed Audio.\n\n## Speed, Benchmarks, and the Turbo Architecture\n\nTo address interactive voice applications, ElevenLabs deployed Eleven v4 Turbo alongside the primary model. High-fidelity voice models historically traded response speed for expressive performance, but ElevenLabs reports that Eleven v4 Turbo reaches a median inference latency of approximately 100 milliseconds and a median time to first speech of roughly 150 milliseconds over WebSocket streaming.\n\nIn benchmark testing conducted in September 2026, ElevenLabs stated that Eleven v4 ranked number one on the [Artificial Analysis](https://elevenlabs.io/blog/eleven-v4) Provider Voice Arena Leaderboard. In blind head-to-head preference evaluations against competing models—including Cartesia Sonic 3.6, Inworld TTS-2, Google Gemini 3.8 Flash TTS, and Google Gemini 3.8 Flash-Lite TTS—graders preferred Eleven v4 approximately 75% of the time for expressiveness and natural tone.\n\n[[FIG2]]\n\nFor real-time evaluation, ElevenLabs benchmarked time-to-first-speech against systems including OpenAI GPT-4o mini TTS and xAI TTS, measuring performance with network latency removed.\n\n## Multilingual Native Accents and Voice Cloning\n\nEleven v4 expands language coverage to more than 90 languages, an increase from over 70 supported in Eleven v3. A key change in the model's multilingual behavior is native accent adoption: when an existing voice clone speaks a target language, it automatically adopts the accent of a native speaker in that language while preserving the original vocal identity.\n\nAccording to [ElevenLabs' feature documentation](https://elevenlabs.io/blog/eleven-v4), voice cloning fidelity has also been updated:\n\n* **Instant Voice Clones:** Can capture speaker characteristics from 10 seconds of source audio.\n* **Professional Voice Clones (PVC):** Supported for high-fidelity studio productions.\n* **Request Stitching:** Improved consistency across long-form multi-line generations in ElevenLabs Studio and the Reader App.\n* **Accent Adherence:** Voice clones maintain consistent pronunciation across generations without drifting back to their source language accent.\n\nInteractive demonstrations published on the [ElevenLabs Emotional Range showcase](https://elevenlabs.io/emotional-range) illustrate the model generating more than 35 discrete emotional states, including variations for anxious, excited, and vulnerable states across repeated phrases.\n\n[[FIG3]]\n\n## Availability and Platform Access\n\nEleven v4 and Eleven v4 Turbo are available immediately through [ElevenLabs](https://elevenlabs.io/blog/eleven-v4) within ElevenAgents, ElevenCreative, and via the developer API. Free account holders can test the models directly without entering a paid tier, though standard platform usage limits apply.\n\nThird-party workflow platforms have also integrated the models. As detailed by [Morphic](https://morphic.com/resources/models/eleven-v4), Eleven v4 serves as the default engine for text generation up to 3,000 characters per request and supports multi-speaker dialogue scenes with two to ten distinct voices.",
+ "faq": [
+  {
+   "q": "What is new in ElevenLabs Eleven v4?",
+   "a": "Eleven v4 introduces an updated architecture with natural-language voice direction, inline sound effect tags, native accent adaptation across 90+ languages, and improved speaker identity retention."
+  },
+  {
+   "q": "What is the latency of Eleven v4 Turbo?",
+   "a": "According to ElevenLabs, Eleven v4 Turbo achieves a median inference latency of approximately 100ms and a median time to first speech of around 150ms over WebSocket streaming."
+  },
+  {
+   "q": "Is Eleven v4 free to use?",
+   "a": "Yes, Eleven v4 and Eleven v4 Turbo are available on ElevenLabs' free tier as well as on third-party platforms like Morphic's free tier, subject to standard credit limits."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern audio engineering control room illuminated by soft blue and amber ambient lighting, showing a glass sound booth, large studio monitor speakers, and glowing waveform visualizations on high-resolution displays.",
+  "alt": "Illustration of a professional sound design studio with digital audio waveform visualizations",
+  "caption": "Illustration: Modern digital audio engineering environment optimized for voice synthesis and directional audio control.",
+  "src": "img/elevenlabs-releases-eleven-v4-audio-model/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 67848,
+  "small": "img/elevenlabs-releases-eleven-v4-audio-model/hero-640.webp",
+  "og": "img/elevenlabs-releases-eleven-v4-audio-model/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/elevenlabs-releases-eleven-v4-audio-model/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A theater director sitting at a desk reviewing a dramatic script illuminated by a warm desk lamp, with translucent glowing musical notes and emotional expression symbols floating above the pages.",
+   "alt": "Illustration of script directing with visual indicators of emotion and pacing",
+   "caption": "Illustration: Natural-language script direction allows creators to guide emotional tone and timing directly within written text.",
+   "slot": "FIG1",
+   "src": "img/elevenlabs-releases-eleven-v4-audio-model/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 30060,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "Abstract digital network lines and glowing soundwaves moving rapidly across a sleek dark server rack array, symbolizing high-speed low-latency data streaming.",
+   "alt": "Illustration representing low-latency streaming audio data transferring through server infrastructure",
+   "caption": "Illustration: Low-latency audio streaming enables real-time conversational responses in AI voice agent platforms.",
+   "slot": "FIG2",
+   "src": "img/elevenlabs-releases-eleven-v4-audio-model/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 54774,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "A diverse group of global professionals speaking in different settings around a stylized luminous globe connected by delicate audio frequency lines.",
+   "alt": "Illustration of a connected globe representing multilingual speech synthesis",
+   "caption": "Illustration: Multilingual speech synthesis enables cross-language communication with native regional accents.",
+   "slot": "FIG3",
+   "src": "img/elevenlabs-releases-eleven-v4-audio-model/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 59068,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://elevenlabs.io/blog/eleven-v4",
+   "title": "Introducing Eleven v4, our most emotive model",
+   "site": "ElevenLabs",
+   "published": 1790596800000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://elevenlabs.io/emotional-range",
+   "title": "Eleven v4: Meet the fastest and most emotive model we've ever built | ElevenLabs",
+   "site": "elevenlabs.io",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://morphic.com/resources/models/eleven-v4",
+   "title": "Eleven v4: ElevenLabs' most expressive AI voice model",
+   "site": "Morphic",
+   "published": null,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.mindstudio.ai/blog/elevenlabs-v4-voice-model",
+   "title": "ElevenLabs v4: Natural Language Voice Direction Now on the Free Tier",
+   "site": "MindStudio",
+   "published": 1790899200000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1791162330594,
+ "updatedAt": 1791162330594,
+ "foundVia": "elevenlabs.io",
+ "check": {
+  "claims": 33,
+  "score": 10
+ },
+ "story": {
+  "id": "Pa0a720a2",
+  "score": 78,
+  "items": [
+   "https://elevenlabs.io/blog/eleven-v4"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
