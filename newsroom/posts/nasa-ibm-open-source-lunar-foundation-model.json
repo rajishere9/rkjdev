@@ -1,0 +1,160 @@
+{
+ "slug": "nasa-ibm-open-source-lunar-foundation-model",
+ "title": "NASA and IBM Release Open-Source Lunar Foundation Model",
+ "seoTitle": "NASA and IBM Open-Source Lunar Foundation Model",
+ "description": "NASA and IBM have open-sourced the NASA-IBM Lunar Foundation Model, a multimodal AI trained on 17 years of lunar data to map ice, craters, and geology.",
+ "dek": "Trained on nearly 2 million image bundles from 17 years of lunar orbiter data, the open-source vision transformer helps scientists detect polar ice and map rugged terrain.",
+ "category": "Science",
+ "tags": [
+  "NASA",
+  "IBM",
+  "Open Source",
+  "Space Exploration",
+  "Computer Vision",
+  "Planetary Science"
+ ],
+ "keyTakeaways": [
+  "NASA and IBM open-sourced the NASA-IBM Lunar Foundation Model under an Apache-2.0 license on Hugging Face and GitHub.",
+  "The model is pretrained on SomBench, a multimodal dataset of roughly 2 million tile bundles combining 17 years of Lunar Reconnaissance Orbiter data with missions like GRAIL and Kaguya.",
+  "Benchmark results show up to a 22% reduction in error when predicting polar ice stability compared to standard vision baselines.",
+  "Using lightweight LoRA fine-tuning and the TerraTorch toolkit, the architecture lets researchers adapt the system with lower compute requirements."
+ ],
+ "body": "NASA and IBM Research have released the [NASA-IBM Lunar Foundation Model](https://science.nasa.gov/science-research/artificial-intelligence-lunar-foundation-model/), an open-source artificial intelligence system built to analyze decades of lunar observation data. Announced on September 10, 2026, the model is designed to accelerate planetary science by automating complex mapping tasks, including detecting craters, studying volcanic features, and identifying stable subsurface ice deposits near the Moon's poles.\n\nPretrained on roughly 2 million image bundles spanning 17 years of orbital observations, the model is available on [Hugging Face](https://huggingface.co/nasa-ibm-ai4science/NASA-IBM-Lunar-Foundation-Model) under an Apache-2.0 license, with supporting code and datasets hosted on GitHub and integrated into the open-source TerraTorch toolkit.\n\n[[FIG1]]\n\n## Solving the Data Bottleneck in Lunar Science\n\nFor decades, planetary orbiters have accumulated petabytes of surface observations. Data collected by NASA's Lunar Reconnaissance Orbiter (LRO) alone exceeds the volume of all other NASA planetary missions combined. However, analyzing these archives has traditionally required manual evaluation or specialized, single-task algorithms that are computationally intensive to train from scratch.\n\n\"NASA has spent decades building an extraordinary scientific record of the Moon, but collecting data is only part of the job,\" said Kevin Murphy, chief science data officer and acting chief data and AI officer at NASA Headquarters, in the [agency announcement](https://science.nasa.gov/science-research/artificial-intelligence-lunar-foundation-model/). \"We also have to make data easier for scientists to explore and use. The NASA-IBM Lunar Foundation Model shows what’s possible when we bring AI to NASA’s petabytes of scientific data.\"\n\nTo build a unified framework, IBM and NASA compiled SomBench, a machine-learning-ready corpus that integrates more than 30 spatially aligned layers across nine instruments from four space missions. The dataset includes roughly 1 million high-resolution panchromatic images at 1 meter per pixel from the LRO Narrow Angle Camera (NAC) and nearly 964,000 multispectral images at 100 meters per pixel from the Wide Angle Camera (WAC). It also incorporates gravity measurements from NASA's GRAIL mission, hydrogen data from Lunar Prospector, and mineralogy maps from JAXA's SELENE/Kaguya orbiter.\n\n## Architecture and Training Technical Specifications\n\nAccording to the [model documentation and technical paper](https://huggingface.co/nasa-ibm-ai4science/NASA-IBM-Lunar-Foundation-Model), the NASA-IBM Lunar Foundation Model uses a Vision Transformer base (ViT-B) architecture with 12 layers, 12 attention heads, and a 768-dimensional hidden state. It adapts the masked-token training framework from TerraMind, an Earth observation model previously developed by IBM, the European Space Agency (ESA), and Forschungszentrum Jülich.\n\nTraining the model required approximately 1,100 GPU-hours across 16 Nvidia H100 GPUs over 150,000 steps using bfloat16 precision. Two distinct adaptations were implemented for lunar conditions:\n\n* **Explicit Illumination Geometry:** Surface appearance on the airless Moon is heavily distorted by changing sun angles and long shadows. The model ingests optical metadata—such as solar incidence, phase angles, and sub-solar coordinates—as explicit sequence tokens rather than forcing the neural network to infer lighting variations purely from raw pixels.\n* **Joint Mixed-Resolution Pretraining:** Instead of training separate models for different imaging instruments, high-resolution NAC tiles (1 m/pixel) and wider WAC tiles (100 m/pixel) are trained jointly in a single mixed-batch pipeline.\n* **FlexiViT Patch Resizing:** The checkpoint incorporates flexible patch embeddings, allowing fine-tuning at alternate patch resolutions without retraining the entire backbone.\n\n[[FIG2]]\n\n## Benchmark Performance Across Core Lunar Tasks\n\nIBM and NASA evaluated the foundation model across several core planetary science tasks, comparing it against general-purpose vision architectures like SwinV2-B, ConvNeXt-B, and ViT-B MAE, according to the [model documentation and technical paper](https://huggingface.co/nasa-ibm-ai4science/NASA-IBM-Lunar-Foundation-Model).\n\n### Polar Ice Prospectivity\nPermanently shadowed regions at the lunar poles can remain cold enough to preserve water ice for billions of years, offering potential water, oxygen, and fuel sources for future Artemis missions. In tests predicting polar ice stability from multimodal topography and thermal datasets, the foundation model reduced root-mean-square error (RMSE) by up to 22% compared to an ImageNet-pretrained SwinV2-B baseline (0.0293 vs 0.0377 RMSE).\n\n### Crater Mapping and Label Efficiency\nCraters provide critical data for dating surface ages and selecting safe landing sites. On context-scale WAC imagery (100 meters per pixel), the foundation model achieved a mean Average Precision (mAP) of 0.2541 when fine-tuned on only 50% of the training data—surpassing the 0.2313 mAP achieved by a SwinV2-B baseline trained on 50% data and the 0.2420 mAP achieved on the full 100% dataset, according to the [model card evaluation table](https://huggingface.co/nasa-ibm-ai4science/NASA-IBM-Lunar-Foundation-Model). At meter-scale resolution (NAC images), the model performed comparably to top baselines (0.1543 mAP for LoRA adaptation vs 0.1552 for SwinV2-B).\n\n### Volcanic Geology\nTo map irregular mare patches—younger volcanic structures that provide insight into the Moon's thermal history—the model reached an intersection over union ($IoU_1$) of 0.5709 with a frozen encoder, outperforming baseline models and demonstrating higher parameter efficiency.\n\n## Fine-Tuning Efficiency and Operational Scope\n\nThe researchers highlighted that lightweight Low-Rank Adaptation (LoRA) on encoder attention and MLP layers matched or exceeded full fine-tuning performance across most benchmarks while training only a small fraction of the total parameters.\n\nHowever, the model card specifies clear boundaries for operational use. The model does not maintain an internal geodetic reference frame, meaning generated outputs can experience absolute coordinate or elevation drifts and are not certified for real-time hazard clearance or automated landing-site selection. Instead, the model is intended to function as an open scientific framework for dense regression, semantic segmentation, and planetary feature discovery.",
+ "faq": [
+  {
+   "q": "Where is the NASA-IBM Lunar Foundation Model available?",
+   "a": "The model checkpoints and tokenizers are hosted on Hugging Face under the Apache-2.0 license, while training scripts, fine-tuning tools, and benchmark datasets are available via GitHub and the TerraTorch library."
+  },
+  {
+   "q": "What datasets were used to train the lunar model?",
+   "a": "The model was trained from scratch on SomBench, an aggregation of roughly 2 million tile bundles combining 17 years of NASA Lunar Reconnaissance Orbiter imagery with data from NASA's GRAIL, Lunar Prospector, and JAXA's SELENE/Kaguya missions."
+  },
+  {
+   "q": "How does the model handle extreme lunar shadows and lighting?",
+   "a": "Rather than forcing the model to infer lighting solely from image pixels, the architecture tokenizes explicit optical metadata—such as solar incidence angles, emission, and tile footprints—directly into the encoder."
+  },
+  {
+   "q": "Can the model be used directly for autonomous spacecraft landings?",
+   "a": "No. The model card states that the system does not maintain an absolute geodetic reference frame and is designed for scientific analysis and mapping rather than operational landing-site hazard certification."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An orbital scientific satellite studying a detailed lunar surface with deep shadowed craters and illuminated ridges, with glowing digital data streams connecting sensor instruments to planetary terrain maps",
+  "alt": "Digital representation of a lunar orbiter mapping the surface of the Moon with data overlays.",
+  "caption": "Illustration: An orbital satellite scanning the rugged lunar topography to build unified multi-instrument surface maps.",
+  "src": "img/nasa-ibm-open-source-lunar-foundation-model/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 97862,
+  "small": "img/nasa-ibm-open-source-lunar-foundation-model/hero-640.webp",
+  "og": "img/nasa-ibm-open-source-lunar-foundation-model/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/nasa-ibm-open-source-lunar-foundation-model/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "Two planetary scientists in a control center examining high-resolution multispectral lunar maps and topographic data across large monitor screens",
+   "alt": "Planetary researchers reviewing lunar terrain data and digital elevation models on computer displays.",
+   "caption": "Illustration: Scientists analyzing multispectral and elevation data collected from decades of lunar orbital missions.",
+   "slot": "FIG1",
+   "src": "img/nasa-ibm-open-source-lunar-foundation-model/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 38062,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A close-up view of a dark permanently shadowed lunar crater with glowing data points highlighting potential subsurface volatile and ice deposits",
+   "alt": "Diagrammatic visual of a shadowed polar lunar crater overlaid with predictive data mapping points.",
+   "caption": "Illustration: Machine learning models combine elevation, slope, and thermal data to estimate ice stability within shadowed polar craters.",
+   "slot": "FIG2",
+   "src": "img/nasa-ibm-open-source-lunar-foundation-model/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 54650,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://science.nasa.gov/science-research/artificial-intelligence-lunar-foundation-model/",
+   "title": "NASA, IBM Launch AI Foundation Model for Lunar Science - NASA Science",
+   "site": "NASA Science",
+   "published": 1789041600000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://newsroom.ibm.com/2026-09-10-ibm-and-nasa-release-open-source-ai-model-to-support-lunar-exploration",
+   "title": "IBM and NASA Release Open-Source AI Model to Support Lunar Exploration",
+   "site": "IBM Newsroom",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://research.ibm.com/blog/nasa-ibm-lunar-foundation-model",
+   "title": "A rough guide for going back to the Moon",
+   "site": "IBM",
+   "published": 1789043400000,
+   "official": true
+  },
+  {
+   "n": 4,
+   "url": "https://huggingface.co/nasa-ibm-ai4science/NASA-IBM-Lunar-Foundation-Model",
+   "title": "nasa-ibm-ai4science/NASA-IBM-Lunar-Foundation-Model",
+   "site": "Hugging Face",
+   "published": 1788277789000,
+   "official": true
+  },
+  {
+   "n": 5,
+   "url": "https://the-decoder.com/nasa-and-ibms-open-source-lunar-model-turns-17-years-of-orbiter-data-into-a-foundation-for-lunar-science/",
+   "title": "NASA and IBM's open source lunar model turns 17 years of orbiter data into a foundation for lunar science",
+   "site": "The Decoder",
+   "published": 1791108612000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://www.space.com/astronomy/moon/nasa-ibm-launch-new-ai-model-for-studying-the-moon",
+   "title": "NASA, IBM launch new AI model for studying the moon",
+   "site": "Space",
+   "published": 1789207200000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://thenextweb.com/news/nasa-ibm-lunar-foundation-model-open-source",
+   "title": "IBM and NASA release an open-source lunar foundation model",
+   "site": "TNW | Space",
+   "published": 1789041652000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1791160727944,
+ "updatedAt": 1791160727944,
+ "foundVia": "the-decoder.com",
+ "check": {
+  "claims": 24,
+  "score": 10
+ },
+ "story": {
+  "id": "Pc7619d88",
+  "score": 78,
+  "items": [
+   "https://the-decoder.com/nasa-and-ibms-open-source-lunar-model-turns-17-years-of-orbiter-data-into-a-foundation-for-lunar-science/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
