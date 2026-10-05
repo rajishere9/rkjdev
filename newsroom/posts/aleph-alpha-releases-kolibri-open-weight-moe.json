@@ -1,0 +1,144 @@
+{
+ "slug": "aleph-alpha-releases-kolibri-open-weight-moe",
+ "title": "Aleph Alpha Releases Kolibri, an Open-Weight 78.1B MoE Model",
+ "seoTitle": "Aleph Alpha Releases Kolibri 78.1B MoE Model",
+ "description": "Aleph Alpha has launched Kolibri, a 78.1B parameter open-weight MoE model for German and English with 3.46B active parameters and 1M token context.",
+ "dek": "The German AI lab releases an open-weight mixture-of-experts model optimized for bilingual enterprise workloads, long contexts, and sovereign European compliance.",
+ "category": "AI Models",
+ "tags": [
+  "Aleph Alpha",
+  "Kolibri",
+  "Open Source AI",
+  "Mixture of Experts",
+  "Large Language Models"
+ ],
+ "keyTakeaways": [
+  "Kolibri features 78.1 billion total parameters but activates only 3.46 billion parameters per token across 50 transformer layers.",
+  "The model supports context lengths up to 1,048,576 tokens, with native training at 262,144 tokens using hybrid sliding-window and full attention.",
+  "Released under an Apache 2.0 license, Kolibri is engineered specifically for English and German enterprise and public sector applications.",
+  "Training utilized 24 trillion tokens across clusters in Germany and Finland with compliance tailored to the EU AI Act and GDPR."
+ ],
+ "body": "On October 3, 2026, German AI laboratory [Aleph Alpha released Kolibri](https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/), an open-weight mixture-of-experts (MoE) reasoning model developed for German and English. Kolibri carries 78.1 billion total parameters but activates only 3.46 billion per token during inference, balancing dense model capacity with lower operational compute costs. Published under the permissive Apache 2.0 license, the model provides an open-weight alternative tailored for regulated European sectors that demand sovereign infrastructure and strict regulatory alignment.\n\nAccording to [Aleph Alpha's model card on Hugging Face](https://huggingface.co/Aleph-Alpha/Kolibri-1), Kolibri is designed to perform structured data extraction, multi-step reasoning, coding, and retrieval-augmented generation (RAG) across long contexts. The architecture supports up to 1,048,576 tokens (1 million tokens), though the developers recommend serving sequences at or below 262,144 tokens for latency-sensitive or complex workloads.\n\n## Architecture and Tokenizer Design\n\nKolibri's underlying architecture comprises 50 transformer layers with a model width of 2,560. According to technical specifications detailed by [MarkTechPost](https://www.marktechpost.com/2026/10/04/aleph-alpha-releases-kolibri-a-78-1b-open-weight-english-german-moe-model-with-only-3-46b-active-parameters/), each MoE layer features 384 routed experts alongside one shared expert. Tokens are evaluated via a sigmoid router and dispatched to the top six routed experts plus the single shared expert, activating 4.4% of total parameters per token. Load balancing during pre-training was handled using Exact Quantile Balancing and Load-Error Injection.\n\nTo keep compute and memory manageable over extended context windows, Kolibri uses a 4:1 hybrid attention mechanism. Forty of the 50 layers employ sliding-window attention constrained to the preceding 512 tokens using Rotary Position Embeddings (RoPE), maintaining a fixed-size Key-Value (KV) cache. The remaining 10 layers (every fifth layer) execute full grouped-query attention (GQA) across the entire sequence length without positional encodings. Aleph Alpha notes that this hybrid attention scheme allows the model to process sequences four times longer than a standard full-attention architecture at matching compute budgets.\n\nThe model includes a custom UniBPE tokenizer with a vocabulary of 128,000 tokens. As reported by [MarkTechPost](https://www.marktechpost.com/2026/10/04/aleph-alpha-releases-kolibri-a-78-1b-open-weight-english-german-moe-model-with-only-3-46b-active-parameters/), the tokenizer achieves an efficiency of 4.90 bytes per token on German text, compared to 4.35 bytes per token for the GPT-5 tokenizer, yielding 11.2% fewer tokens on German web data while maintaining 4.58 bytes per token on English.\n\n[[FIG1]]\n\n## Iterative Pipeline and the Kolibri Origin Foundation\n\nKolibri’s development was preceded by Kolibri Origin, an internal 30.6-billion-parameter research model with 3.27 billion active parameters and a 65,536-token context window that was completed on June 11, 2026, but never released publicly. As explained on [Aleph Alpha's technical blog](https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/), Origin served as an end-to-end testbed to stabilize automated continuous integration, data shuffling, and ablation workflows.\n\nOver the three months between the completion of Origin and Kolibri's final pre-training on September 11, 2026, the lab scaled total parameters from 30.6B to 78.1B, expanded expert counts per layer from 128 to 384, and broadened context limits to 1M tokens. Total training volume increased from 7.51 trillion to 24 trillion tokens, comprising 20T pre-training tokens, 3.44T mid-training tokens at a 65,536-sequence length, and 201B tokens dedicated to extending context to 262,144 tokens.\n\nPre-training was conducted on 768 NVIDIA B200 GPUs across 96 HGX nodes over 21 days (392,000 GPU-hours), generating an estimated total training energy consumption of 950 MWh, according to [Aleph Alpha's Hugging Face repository](https://huggingface.co/Aleph-Alpha/Kolibri-1). The training corpus contained approximately 62.5% English, 23.9% German (over 2 trillion organic German tokens), and 13.6% source code, maintaining a knowledge cutoff date of June 18, 2026.\n\nPost-training combined supervised fine-tuning (SFT) using MergeMix with reinforcement learning across 1.2 million internal environments. Aleph Alpha also integrated its Merlin-Arthur protocol, training the model to intentionally abstain and output \"I don't know\" when retrieved context lacks sufficient evidence.\n\n## Benchmark Performance and Comparisons\n\nBenchmark evaluations reported by [MarkTechPost](https://www.marktechpost.com/2026/10/04/aleph-alpha-releases-kolibri-a-78-1b-open-weight-english-german-moe-model-with-only-3-46b-active-parameters/) place Kolibri at the top of its active-parameter class across several core benchmarks:\n\n* **Mathematics:** Kolibri scored 96.9 on AIME 2025 (87.5 in German) and 96.0 on AIME 2026 (90.0 in German), outpacing rivals like Qwen3.6 35B-A3B (84.6 on AIME 2025) and NVIDIA Nemotron 3 Super (91.7 on AIME 2025).\n* **Knowledge and Reasoning:** On English GPQA Diamond, Kolibri achieved 84.3 (81.3 in German), leading Qwen3.6 (83.4) and Nemotron 3 Super (78.0).\n* **Agentic Workflows:** Kolibri averaged 63.4 on English agentic tests and scored 61.4 on the Berkeley Function Calling Leaderboard (BFCL) v4, trailing Qwen3.6's 67.2.\n* **Overall Standings:** Kolibri recorded overall aggregate benchmark scores of 75.5 in English and 70.8 in German among 12 evaluated MoE models.\n\nAccording to an analysis by [hyper.ai](https://hyper.ai/en/stories/705923829357ad755424fab94ce12f84), Kolibri exhibits strong mathematical reasoning and enterprise RAG grounding, but shows comparative weaknesses in closed-book general knowledge retrieval, multi-turn tool calling, and mid-range context accuracy relative to dense alternatives.\n\n[[FIG2]]\n\n## Hardware Specs and Local Deployment\n\nKolibri's FP8 weights (formatted as `float8_e4m3fn` in 128×128 blocks with `bfloat16` embeddings and router layers) present a storage footprint of roughly 78 GB. [MindStudio's technical overview](https://www.mindstudio.ai/blog/kolibri-1-aleph-alpha-german-model) highlights that operational deployment requires additional VRAM to accommodate activations and the FP8 KV cache, with real-world tests measuring around 140 GB of VRAM utilization on dual-GPU configurations.\n\nAleph Alpha lists minimum serving hardware as two NVIDIA A100 80GB, two H100 SXM5, or a single H200, B200, or B300 GPU. Recommended hardware includes two H100 SXM5, two H200, or a single B200 or B300 GPU. The model is served via vLLM using the dedicated `aleph-alpha-inference` package:\n\n```bash\npip install 'aleph-alpha-inference>=1'\nvllm serve Aleph-Alpha/Kolibri-1 --kv-cache-dtype fp8 \\\n  --reasoning-parser kolibri1 \\\n  --tool-call-parser kolibri1 \\\n  --enable-auto-tool-choice\n```\n\nKolibri incorporates configurable reasoning modes. Developers can adjust reasoning intensity by supplying `none`, `low`, `medium`, or `high` via the chat template, or disable thinking entirely to reduce latency.\n\n## European Sovereignty and Enterprise Alignment\n\nAleph Alpha emphasizes European data sovereignty and regulatory compliance as foundational design priorities for Kolibri. As reported on [Aleph Alpha's corporate blog](https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/), the model was constructed end-to-end within Germany and Finland on European compute infrastructure, ensuring full traceability from data ingestion through pre-training.\n\nAs a signatory to the European Union's General-Purpose AI (GPAI) Code of Practice, Aleph Alpha designed Kolibri to align with the EU AI Act and GDPR guidelines. Pre-training data pipelines automatically redacted personal data, and the model's transparent Apache 2.0 open-weight release provides public administration, aerospace, manufacturing, and financial institutions with the ability to self-host without routing proprietary text through external third-party APIs.",
+ "faq": [
+  {
+   "q": "What is Kolibri's parameter size and architecture?",
+   "a": "Kolibri is a mixture-of-experts model containing 78.1 billion total parameters. It dynamically routes tokens across 384 routed experts and one shared expert per layer, activating approximately 3.46 billion parameters per token."
+  },
+  {
+   "q": "What context length does Kolibri support?",
+   "a": "Kolibri natively supports 262,144 tokens and has been validated up to 1,048,576 tokens (1M context window) using a hybrid sliding-window and full grouped-query attention structure."
+  },
+  {
+   "q": "Under what license is Kolibri released?",
+   "a": "Kolibri is released under the open-source Apache 2.0 license, allowing free commercial use, modification, and on-premise deployment."
+  },
+  {
+   "q": "What hardware is required to run Kolibri?",
+   "a": "Serving the FP8 model checkpoint requires a minimum of two NVIDIA A100 80GB, two H100 SXM5, or a single H200/B200/B300 GPU, with dual H100 SXM5 or H200 units recommended to accommodate KV caching overhead."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An expansive high-tech server datacenter in Northern Europe with glowing server racks illuminated in cool blue and amber LED lights, reflecting on polished dark floors, conveying high-performance sovereign computing infrastructure.",
+  "alt": "A server room representing sovereign European AI computing infrastructure",
+  "caption": "Illustration: High-performance data center infrastructure supporting sovereign open-weight model training.",
+  "src": "img/aleph-alpha-releases-kolibri-open-weight-moe/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 80224,
+  "small": "img/aleph-alpha-releases-kolibri-open-weight-moe/hero-640.webp",
+  "og": "img/aleph-alpha-releases-kolibri-open-weight-moe/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/aleph-alpha-releases-kolibri-open-weight-moe/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "Two AI research engineers in a brightly lit modern office collaborating over a large holographic network diagram showing sparse neural network routing paths and attention layers.",
+   "alt": "AI researchers examining a sparse neural network routing diagram",
+   "caption": "Illustration: Engineers developing sparse mixture-of-experts model architectures.",
+   "slot": "FIG1",
+   "src": "img/aleph-alpha-releases-kolibri-open-weight-moe/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 45838,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A modern European enterprise operations room where enterprise analysts review data across large ambient displays in an industrial manufacturing and public sector setting.",
+   "alt": "Enterprise professionals reviewing automated analysis in a control center",
+   "caption": "Illustration: Sovereign AI models deployed for document reasoning and analytical workflows in regulated industries.",
+   "slot": "FIG2",
+   "src": "img/aleph-alpha-releases-kolibri-open-weight-moe/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 50434,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+   "title": "Aleph-Alpha/Kolibri-1",
+   "site": "Hugging Face",
+   "published": 1790920442000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://www.marktechpost.com/2026/10/04/aleph-alpha-releases-kolibri-a-78-1b-open-weight-english-german-moe-model-with-only-3-46b-active-parameters/",
+   "title": "Aleph Alpha Releases Kolibri: A 78.1B Open-Weight English-German MoE Model With Only 3.46B Active Parameters",
+   "site": "marktechpost.com",
+   "published": 1791072000000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
+   "title": "Kolibri Has Landed: A Sovereign Open-Weight Model — Aleph Alpha",
+   "site": "Aleph Alpha",
+   "published": 1790985600000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.mindstudio.ai/blog/kolibri-1-aleph-alpha-german-model",
+   "title": "Kolibri-1: Aleph Alpha's Open-Weight German-English MoE Model",
+   "site": "MindStudio",
+   "published": 1791072000000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://hyper.ai/en/stories/705923829357ad755424fab94ce12f84",
+   "title": "Aleph Alpha Releases Kolibri 1: Sovereign German MoE LLM",
+   "site": "hyper.ai",
+   "published": null,
+   "official": false
+  }
+ ],
+ "publishedAt": 1791162902565,
+ "updatedAt": 1791162902565,
+ "foundVia": "Google News",
+ "check": {
+  "claims": 33,
+  "score": 10
+ },
+ "story": {
+  "id": "Pee472a02",
+  "score": 75,
+  "items": [
+   "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOTnFZc185NWlsRXF5UnJwaWJwMkFtRHVwZVd2VF94UW1PR19abkRRaXJEV2hwTkhZMGVoNzk1U0hEci1ENUhQMURnMmtLNnRleXRadmtfcXNWd19FQVphd1dHdzM5dFowZHJCRTc0Y0Z5Q2NEbXVoR1g4ZTR3SW1fYXV5MWRQR0dSTGNpb1BBUnlyZGxyaDN4eWhYdFFHOEVETVNkUFFJb09VcnQxY0R4R3JSaDNDQTZnTC1DdXdPWVBCalQ1U1Rfb2ZfLTBPczJNcmRiZlotaE9QZHg4T2Q1U0pB0gHiAUFVX3lxTE5OcVlzXzk1aWxFcXlScnBpYnAyQW1EdXBlV3ZUX3hRbU9HX1puRFFpckRXaHBOSFkwZWg3OTVTSERyLUQ1SFAxRGcya0s2dGV5dFp2a19xc1Z3X0VBWmF3V0d3Mzl0WjBkckJFNzRjRnlDY0RtdWhHWDhlNHdJbV9hdXkxZFBHR1JMY2lvUEFSeXJkbHJoM3h5aFh0UUc4RURNU2RQUUlvT1VydDFjRHhHclJoM0NBNmdMLUN1d09ZUEJqVDVTVF9vZl8tME9zMk1yZGJmWi1oT1BkeDhPZDVTSkE?oc=5",
+   "https://news.google.com/rss/articles/CBMikgFBVV95cUxNYVRCcVVZWTdKMVlBLUtGSXY3LUZ2akVYS2s2UTN0dS11VXVLQzBINHRXSlhHQ3hKZ0ZjT2ZaT0JEVWxjLURZMnVVU3JDN0I4ay1COE8tQjQ1dTVndTF5V3NJTlpKVzJrLU5wNFQxZzFGLUJmNjdwUEEwNHZDd2wxNnZ2ZV9XWXBRTUt6OXk2cmRiQQ?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
