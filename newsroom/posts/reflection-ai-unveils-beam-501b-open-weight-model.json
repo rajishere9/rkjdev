@@ -1,0 +1,192 @@
+{
+ "slug": "reflection-ai-unveils-beam-501b-open-weight-model",
+ "title": "Reflection AI Unveils Beam, a 501B Open-Weight Reasoning Model",
+ "seoTitle": "Reflection AI Debuts Beam 501B Open-Weight AI Model",
+ "description": "Reflection AI has debuted Beam, a 501B open-weight mixture-of-experts model designed to deliver frontier coding and reasoning at lower inference compute costs.",
+ "dek": "The Nvidia-backed startup is aiming its 501-billion-parameter mixture-of-experts model at enterprise coding, agentic workflows, and sovereign AI deployments.",
+ "category": "AI Models",
+ "tags": [
+  "Reflection AI",
+  "Beam",
+  "Open Weight",
+  "Mixture of Experts",
+  "Artificial Intelligence",
+  "Nvidia"
+ ],
+ "keyTakeaways": [
+  "Reflection AI introduced Beam, a sparse mixture-of-experts model with 501 billion total parameters and 23 billion active parameters per token.",
+  "The model was pretrained on 23.8 trillion tokens and refined through a four-week reinforcement learning run across 10,500 Nvidia GB300 GPUs.",
+  "Reflection claims Beam matches leading models like GLM 5.2 on advanced reasoning while using three to four times less inference compute.",
+  "Model weights, technical documentation, and fine-tuning tools are scheduled for release later in October 2026 under an Apache 2.0 license."
+ ],
+ "body": "Reflection AI introduced [Beam on October 5, 2026](https://reflection.ai/blog/introducing-beam), marking its debut open-weight model engineered for coding, multi-step reasoning, and agentic workflows. Built as a sparse mixture-of-experts architecture, Beam contains 501 billion total parameters but activates only 23 billion parameters per token. The Brooklyn-based startup positions the system as an efficient Western alternative to major closed systems and leading open-weight releases, promising high-tier reasoning capabilities at reduced compute overhead.\n\nThe launch represents the first in a planned series of releases from Reflection AI, founded in 2024 by former Google DeepMind researchers and backed by Nvidia, Sequoia Capital, and Lightspeed Venture Partners, according to [TechCrunch](https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/). The company plans to release the model weights, evaluation harnesses, and full technical documentation under an Apache 2.0 license later in October 2026 following final red-teaming.\n\n[[FIG1]]\n\n## Architecture and Pretraining Efficiency\n\nBeam relies on a sparse mixture-of-experts design that interleaves local and global attention across 52 layers, as outlined by [MarkTechPost](https://www.marktechpost.com/2026/10/05/reflection-ai-introduces-beam-a-501b-open-weight-moe-model-with-23b-active-parameters-for-coding-and-agentic-workloads/). Its foundation was pretrained on 23.8 trillion tokens drawn from web corpora, public repositories, and proprietary licensed datasets. The training pipeline filtered out roughly 95% of raw internet tokens, while Reflection AI said conventional filtering techniques would have missed roughly 1.8 trillion high-quality tokens it retained, including 87% of its curated web-code tokens.\n\nReflection completed the pretraining run in under four weeks on an infrastructure cluster of 6,144 Nvidia GB300 NVL72 GPUs. To maintain stability across the network, the engineering team implemented depth-based residual scaling, SandwichNorm, elementwise attention gating, and FP32 residual accumulation. Load balancing was adapted from DeepSeek-V3's auxiliary-loss-free method with the addition of cosine decay on expert-bias updates, resulting in near-uniform routing where the busiest expert load averaged 1.04 times the mean by the end of training.\n\nPretraining goodput reached 92.3% of wall-clock time despite nine semi-automatic rewinds prompted by gradient-norm spikes or suspected silent data corruption. A subsequent midtraining phase expanded Beam's effective context window to one million tokens.\n\n## High-Compute Reinforcement Learning and Emergent Skills\n\nTo develop task execution and multi-step reasoning capabilities, Reflection deployed a reinforcement learning campaign across 10,500 Nvidia GB300 GPUs over a four-week period, generating more than 100 million rollouts, according to [Unite.AI](https://www.unite.ai/reflection-ai-unveils-beam-a-501b-parameter-open-weight-model/). The team constructed an environment pool of nearly one million synthetic, proprietary, and open-source coding, agentic, and STEM tasks, executing roughly 1.3 billion training and grading sandboxes.\n\n[[FIG2]]\n\nThe training platform sustained an average of 110,000 concurrent rollouts using fully asynchronous policy gradients. Tokens were tagged with their generating policy version, allowing learning to remain numerically stable even when training on samples up to 107 versions (approximately 24 hours) behind the current model weights. The system handled 71 inference incidents without interrupting training runs, and updated weights propagated across inference nodes in a median of 12 seconds.\n\nDuring reinforcement learning, Reflection observed that Beam developed agentic capabilities outside its explicit training mixture. Although no browsing tasks were included in the RL mix, the model improved its web browsing performance and autonomously learned to query external models and employ text-recognition tools to parse documents. To manage resource consumption, Reflection incorporated a controllable length penalty, enabling users to adjust a reasoning effort parameter that balances token generation against task difficulty.\n\n## Benchmark Performance and Inference Efficiency\n\nAccording to benchmarks reported by [The Next Web](https://thenextweb.com/news/reflection-ai-beam-open-weight-model) and Reflection's technical post, Beam scored 80.9 on SWE-bench Verified and 80.1 on Terminal Bench v2.1. By comparison, Nvidia's Nemotron 3 Ultra scored 70.7 on SWE-bench Verified and 56.4 on Terminal Bench v2.1, while Thinking Machines Lab's Inkling registered 77.6 on SWE-bench Verified and 63.8 on Terminal Bench v2.1.\n\nAgainst leading international open models, Beam sits close to Z.ai's GLM-5.2 (81.0 on Terminal Bench v2.1) and approaches Alibaba's Qwen 3.8-Max, though Moonshot AI's Kimi K3 (88.3) and DeepSeek V4.1 Flash (90.6) maintain higher raw benchmark scores. Reflection highlighted that Beam achieves comparable scores to GLM-5.2 while requiring three to four times less inference compute on advanced reasoning benchmarks. Independent evaluation firm Artificial Analysis noted that the 23-billion active parameter configuration positions Beam among the most token-efficient open models evaluated for its intelligence tier, as reported by [24/7 Wall St.](https://247wallst.com/cards/xpost-01m46zmjey5afgm0wmzgxp545d).\n\n[[FIG3]]\n\n## Alignment, Enterprise Strategy, and Availability\n\nFor safety and alignment, Reflection trained a dedicated teacher model from the base checkpoint using deliberative alignment and multi-turn adversarial red-teaming, distilling it into the final policy alongside the reinforcement learning teacher. Co-founder and CEO Misha Laskin noted that both the US Center for Advancing Innovation and Standards for Super Intelligence and the UK AI Safety Institute are reviewing the model prior to public distribution.\n\nBeam forms the core of Reflection's commercial \"AI factory\" architecture, designed to let enterprises and sovereign entities train and host proprietary models locally. Reflection has already established infrastructure partnerships, including compute commitments totaling more than $7 billion with Nebius and SpaceX, a deployment partnership with Dell AI Factory, consortium participation in the US Department of Energy's Genesis Mission, and a 250-megawatt sovereign AI cloud initiative with South Korea's Shinsegae Group, according to [TechCrunch](https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/) and [Unite.AI](https://www.unite.ai/reflection-ai-unveils-beam-a-501b-parameter-open-weight-model/).\n\nWhile self-hosting weights will arrive later in October 2026 under the Apache 2.0 license, developer access is currently available via an early-access waitlist on Reflection's platform.",
+ "faq": [
+  {
+   "q": "What is Reflection AI Beam?",
+   "a": "Beam is a 501-billion-parameter sparse mixture-of-experts open-weight AI model developed by Reflection AI, activating 23 billion parameters per token for coding, reasoning, and agentic workflows."
+  },
+  {
+   "q": "When will Beam's weights and code be publicly released?",
+   "a": "Reflection AI plans to release the model weights, technical documentation, and fine-tuning tools later in October 2026 under the Apache 2.0 license, following completion of red-teaming evaluations."
+  },
+  {
+   "q": "How does Beam achieve lower inference costs?",
+   "a": "By using a sparse MoE architecture with only 23 billion active parameters per token and applying length penalties during reinforcement learning, Reflection AI estimates Beam uses 3x to 4x less generation compute than GLM-5.2 on advanced reasoning benchmarks based on its approximate calculations."
+  },
+  {
+   "q": "What hardware was used to train Beam?",
+   "a": "Beam was pretrained on 6,144 Nvidia GB300 NVL72 GPUs in under four weeks, followed by a four-week reinforcement learning run on 10,500 Nvidia GB300 GPUs."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern, dimly lit server room with glowing server racks connected by glowing fiber optic pathways, symbolizing high-performance distributed machine learning infrastructure, cinematic lighting, wide shot.",
+  "alt": "Illustration of a high-performance data center with illuminated compute clusters.",
+  "caption": "Illustration: High-scale compute clusters running distributed reinforcement learning workloads.",
+  "src": "img/reflection-ai-unveils-beam-501b-open-weight-model/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 90116,
+  "small": "img/reflection-ai-unveils-beam-501b-open-weight-model/hero-640.webp",
+  "og": "img/reflection-ai-unveils-beam-501b-open-weight-model/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/reflection-ai-unveils-beam-501b-open-weight-model/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A technical diagram-style illustration showing an abstract neural network routing paths through multiple specialized expert nodes, glowing connections on a dark background.",
+   "alt": "Illustration of a sparse mixture-of-experts model routing computation across specialized sub-networks.",
+   "caption": "Illustration: Sparse mixture-of-experts architectures selectively activate specialized neural pathways to reduce token inference compute.",
+   "slot": "FIG1",
+   "src": "img/reflection-ai-unveils-beam-501b-open-weight-model/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 59314,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "An AI researcher in a modern laboratory analyzing data streams and code visualizers across multiple ultra-wide holographic monitors, focused expression.",
+   "alt": "Illustration of a machine learning engineer monitoring large-scale reinforcement learning training runs.",
+   "caption": "Illustration: Asynchronous reinforcement learning systems coordinate training across hundreds of thousands of concurrent sandboxes.",
+   "slot": "FIG2",
+   "src": "img/reflection-ai-unveils-beam-501b-open-weight-model/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 47670,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "An abstract conceptual view of sovereign cloud infrastructure with architectural data domes and international connectivity lines spanning a digital globe.",
+   "alt": "Illustration of sovereign cloud infrastructure and enterprise data integration.",
+   "caption": "Illustration: Open-weight foundation models are increasingly deployed within dedicated enterprise and sovereign AI clouds.",
+   "slot": "FIG3",
+   "src": "img/reflection-ai-unveils-beam-501b-open-weight-model/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 60674,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://thenextweb.com/news/reflection-ai-beam-open-weight-model",
+   "title": "Nvidia-backed Reflection unveils Beam, its first open-weight model",
+   "site": "TNW | Artificial-intelligence",
+   "published": 1791237717000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://www.marktechpost.com/2026/10/05/reflection-ai-introduces-beam-a-501b-open-weight-moe-model-with-23b-active-parameters-for-coding-and-agentic-workloads/",
+   "title": "Reflection AI Introduces Beam: A 501B Open-Weight MoE Model With 23B Active Parameters for Coding and Agentic Workloads",
+   "site": "marktechpost.com",
+   "published": 1791158400000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/",
+   "title": "Reflection debuts Beam, an open-weight AI model to rival Chinese models at lower compute cost",
+   "site": "TechCrunch",
+   "published": 1791228833000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.unite.ai/reflection-ai-unveils-beam-a-501b-parameter-open-weight-model/",
+   "title": "Reflection AI Unveils Beam, a 501B-Parameter Open-Weight Model",
+   "site": "Unite.AI",
+   "published": 1791229563000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://247wallst.com/cards/xpost-01m46zmjey5afgm0wmzgxp545d",
+   "title": "Reflection's Beam model draws an independent token-efficiency verdict",
+   "site": "24/7 Wall St.",
+   "published": 1791235176000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://gizmodo.com/openai-and-anthropic-have-a-new-threat-to-worry-about-and-it-isnt-china-2000821705",
+   "title": "OpenAI and Anthropic Have a New Threat to Worry About—and It Isn't China",
+   "site": "gizmodo.com",
+   "published": 1791217800000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://reflection.ai/blog/introducing-beam",
+   "title": "Introducing Beam: Reflection’s 501B open-weight model — Reflection",
+   "site": "Reflection",
+   "published": null,
+   "official": false
+  }
+ ],
+ "publishedAt": 1791247168106,
+ "updatedAt": 1791247168106,
+ "foundVia": "Google News, Techmeme and Bluesky",
+ "check": {
+  "claims": 49,
+  "score": 10
+ },
+ "story": {
+  "id": "P0b1482b6",
+  "score": 88,
+  "items": [
+   "https://news.google.com/rss/articles/CBMiakFVX3lxTE5meUx1aTFnUHltcTFXRmNIWVhPbW9Nd0lZMXdQVlRuVFVNMW5xRG1QaFpnanA4YnpicU9VTnMwQlZuNzJ4M0lYV0haWnNsZjZGZzFnRkNfZkItbkg2a3BCZ1FEbHdqbEZHc0E?oc=5",
+   "https://news.google.com/rss/articles/CBMiowFBVV95cUxNeDdUMl9IVDhvZDZCR0RHX3NTX0dqQ1J5a3UwdEd6MjZneTB3bWZzYlJMOFZuNmJGWkFQOHJWUHlyTjNPOGN1VVlCTVYxOWNZb3hzczdmM0pLMkxUMzdfM2NwN0dZcUd6T296TTA5V1JPQ0RvaFZIQXpqM1NGUkZXcFJtUXF1eUVQM1Q3dzBJbHh3LUlFaW91U013eFlEel9OZmo0?oc=5",
+   "https://news.google.com/rss/articles/CBMifkFVX3lxTE15d0JfcUZLTi1JWlhhdkFEcDBBMERJbldmWk9wMWNpZlhvOU5QOTdXa2xhOEpWWFFJLXEtVlNhWGdPR2VSQi1LUUVaby0teHVlNG1Hajg2V1AxY1g5UXprb1dkcHJpUmlwYXhGVVlEVWktR0l0d3lZT29iRktkZw?oc=5",
+   "https://news.google.com/rss/articles/CBMiowFBVV95cUxPMnZhcjNtb0dQV0tkSXlGck9SQWJJMmFqbWZ1ZWhxMmdhU0pKQW5nSENGYjNsNUpWLXBvVHpXTXlqY1FKaVNrS0s2dzJQTjU2aGlBM0NrcmlLa3YxemJfM185SVB2Q0pzbmlmUzUwUE4yaHM0ekdHa0VqVmp1NkdPVTdndWRTWTg2Tl94NzZjTU5aX1hPLXB4aWg1N0JrM3lDRl9J?oc=5",
+   "https://www.techmeme.com/261004/p24#a261004p24",
+   "https://bsky.app/profile/timkellogg.me/post/3mx3irzvnzk2w",
+   "https://news.google.com/rss/articles/CBMirAFBVV95cUxPbGZFcjY4RVNtMWNPTldZSWpPeTd6RHFRR0tIMlFYZ1JGOEl2dUNMNHRwcmRyeEZpY0FPLXJBMmkxOWxtY21YQklRaURPQ0lraVZmcjZiYVU5VFVTZGVKWE5zaElsbEh2cEk4WTJnSW9ZSkhIaDdzQlFqWjNNaFliMHJOY2JWemg3LVhhVjM2b0lfcUpJSUFZbTczLUh0S0ZhMHNoaUNFQjAxQVVi?oc=5",
+   "https://www.reddit.com/r/LocalLLaMA/comments/1wy0jrc/reflection_ai_is_about_to_release_a_us_openweight/",
+   "https://archive.li/vPYs4",
+   "https://gizmodo.com/openai-and-anthropic-have-a-new-threat-to-worry-about-and-it-isnt-china-2000821705",
+   "https://news.google.com/rss/articles/CBMidkFVX3lxTFBfOURaUldkQW9fWTRyR2VRUUxuTElKUXpvQkhPa2E5TFJ5M1pJMU92VFk4TUF4Ri1XNnlFWHBsYXJpSnJGYzJPZVRNeHVILVRYZW1USEFGZks2NEZmaEllRDg2cWdmaWZXMHoxTVVZMXdMN200QkE?oc=5",
+   "https://www.techmeme.com/261005/p30#a261005p30",
+   "https://news.google.com/rss/articles/CBMibkFVX3lxTE4tbmNST2NleWM0SDRPSG5kYjBDQ2UtT0lzN21MQUd3eGtWcDF4RE1nNDZaQllIcXRwODAyVzNzclNyX1JPeU12M0lEN2c0ZkRuaDVsSHo5UUhaMzNBV2tIRlkxZktLNUlNd2R4cjZn?oc=5",
+   "https://news.google.com/rss/articles/CBMixAFBVV95cUxPSDZGMTF6bG9MakF5andodEYydVRONTZqckdURmpncmI1YzBzVmNBcXdoSDRrM3JmQ1dMWWlKbXZhV3lUcEtxSkRLdFNTYm4wNV9FeWdUUThQVGFpbUpiN05Bdms2cVh2NEI1N05FaWk5SkxNUEFvM0I1MVBmc3hFalJhcHJaMHpPejgxSS1fWTVQc3dRMTBWSlFjN3czNmJrLXlfTDYtbDJrN1A4UkQ3XzlNaXhDMWU3UE5nNVZ1dHRKUFlL?oc=5",
+   "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOblNKYm54TVp4cDZVTGVYV19NX0tiZjBYMUdVVlg3WElyWDc4TUFoN3VyVFlOWnpRVTNjbFNsd0RTdHBTN3Y3M19kZlRhUlVYa3FsZkU3aDFLZ1BZSzBsRjN5ZVQ5dEpSU1FtWm5USFRKMnAtb29ZTzQ4Qm1YZDZ3eTN5aTljUzBFdld3?oc=5",
+   "https://reflection.ai/blog/introducing-beam",
+   "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/",
+   "https://news.google.com/rss/articles/CBMid0FVX3lxTE5OMlNSTElWS19ObmJERUFmVzI1MHRpeXcybExyT29xd1hyM0J3UVBoUEViLTdrYnFCaEE1dnlGQzBKUkFidTZOVW9rQm54ajAweHVndzdDODlPNXM4QVA2SFZTOU5LXzlBZmY5dFVVUEtMSTJnNkxr?oc=5",
+   "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNSlVKdTJQNzZtN0ZiQ3dFNkdZMjYxVUxxeTVyNW5VV29uelNudmFLbjJNaEVBVHZuZ2JjWndHX0cxdTZTSFpFOUpNX1BQdzZabmxvM3U4WC12YVo4cC1Wa2IzelRUMWxRRU1uXzE3UTdaY280ekNnUGpib2wxaHhSOE1MYklVLTgwbEFFRk53VUJZNE8wMm5xbmp6S3Vld1JOUTRfTFdLTlZwWUZndFRsNnp6dGFlRkYzUWt4VnhXMWN3VWFDUHRrWUVkTXlkYkJ1MVNvem5yNXVybXE3SXhMV2pESmlGWW9VNnBWblFlcHHSAfABQVVfeXFMTUpVSnUyUDc2bTdGYkN3RTZHWTI2MVVMcXk1cjVuVVdvbnpTbnZhS24yTWhFQVR2bmdiY1p3R19HMXU2U0haRTlKTV9QUHc2Wm5sbzN1OFgtdmFaOHAtVmtiM3pUVDFsUUVNbl8xN1E3WmNvNHpDZ1BqYm9sMWh4UjhNTGJJVS04MGxBRUZOd1VCWTRPMDJucW5qekt1ZXdSTlE0X0xXS05WcFlGZ3RUbDZ6enRhZUZGM1FreFZ4VzFjd1VhQ1B0a1lFZE15ZGJCdTFTb3pucjV1cm1xN0l4TFdqREppRllvVTZwVm5RZXBx?oc=5",
+   "https://news.google.com/rss/articles/CBMimAFBVV95cUxNNGlucWtBcFg2Sk1mN0ctbVlQM1FUdDBLeHVJZ1FXQnktMmxwTlBBTllRclRnRmVYNlZ4ZXo3YUZWVmJsQjU0YnFEX1FvYXVXNG1XTEp1TXVXTmcyRjE3YWU5aWNxWVJBcExFUnJORkxsSzBDU0NxUm56bEx4Z0YzZnJHUVI2QjBEcUhGNTl3ckpsNlUyaG1Vcg?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
