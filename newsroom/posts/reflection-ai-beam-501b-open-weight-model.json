@@ -1,0 +1,141 @@
+{
+ "slug": "reflection-ai-beam-501b-open-weight-model",
+ "title": "Reflection AI Debuts Beam, a 501B Open-Weight Agent Model",
+ "seoTitle": "Reflection AI Unveils Beam Open-Source 501B Model",
+ "description": "Reflection AI has debuted Beam, a 501B parameter open-weight MoE model with 23B active parameters optimized for agentic coding and reasoning tasks.",
+ "dek": "The Nvidia-backed startup introduces a 501B MoE model with 23B active parameters, which Reflection AI claims matches GLM-5.2 on advanced reasoning benchmarks at 3-4x less inference compute, while trailing other Chinese models like Kimi K3 on raw capability.",
+ "category": "Open Source",
+ "tags": [
+  "Reflection AI",
+  "Beam",
+  "Open Source",
+  "Mixture of Experts",
+  "AI Models",
+  "Reinforcement Learning"
+ ],
+ "keyTakeaways": [
+  "Beam features 501 billion total parameters but activates only 23 billion per token, reducing inference compute requirements.",
+  "Trained on 23.8 trillion tokens using thousands of Nvidia GB300 GPUs across pretraining and reinforcement learning phases.",
+  "Weights will be released under an Apache 2.0 license later in October 2026 following final red-teaming and safety evaluations."
+ ],
+ "body": "Nvidia-backed AI startup Reflection AI announced Beam on October 5, 2026, marking its debut in the open-source artificial intelligence ecosystem. The system is a sparse Mixture-of-Experts (MoE) foundation model totaling 501 billion parameters, engineered specifically for software development, logical reasoning, and autonomous agent tasks. The model uses an active parameter routing mechanism to keep runtime resource demands manageable.\n\nAccording to an announcement covered by [The Next Web](https://thenextweb.com/news/reflection-ai-beam-open-weight-model), Beam activates only 23 billion parameters per token out of its 501 billion total and features a 1 million token context window.\n\n[[FIG1]]\n\n## Architecture and Pretraining Specs\n\nReflection AI built Beam as a text-only, 52-layer sparse Mixture-of-Experts architecture. Technical details compiled by [MarkTechPost](https://www.marktechpost.com/2026/10/05/reflection-ai-introduces-beam-a-501b-open-weight-moe-model-with-23b-active-parameters-for-coding-and-agentic-workloads/) highlight several design choices to maintain stability across large GPU clusters, including interleaved local and global attention, SandwichNorm, depth-based residual scaling, attention gating, and FP32 residual accumulation.\n\nThe model incorporates auxiliary-loss-free load balancing with cosine decay of expert-bias updates, keeping the average load on the busiest expert to 1.04 times the mean. Beam's base pretraining consumed 23.8 trillion tokens curated from web and commercial datasets, executed on 6,144 Nvidia GB300 NVL72 GPUs in under four weeks with a 92.3% goodput rate.\n\nData filtering removed roughly 95% of raw internet tokens while retaining approximately 1.8 trillion high-quality tokens—including 87% of curated web code tokens—that standard heuristic filters typically discard, according to [Unite.AI](https://www.unite.ai/reflection-ai-unveils-beam-a-501b-parameter-open-weight-model/). A subsequent midtraining phase expanded the effective context length to 1 million tokens.\n\n## Massive Reinforcement Learning Pipeline\n\nFollowing base pretraining, Reflection AI deployed an extensive reinforcement learning campaign spanning four weeks on 10,500 Nvidia GB300 GPUs. The company utilized approximately 1.3 billion sandboxes across nearly 1 million coding, STEM, and agentic environments.\n\nAs reported by [MarkTechPost](https://www.marktechpost.com/2026/10/05/reflection-ai-introduces-beam-a-501b-open-weight-moe-model-with-23b-active-parameters-for-coding-and-agentic-workloads/), the reinforcement learning infrastructure generated more than 100 million rollouts with context sizes reaching up to 256,000 tokens. The startup, which raised funding at a $25 billion valuation, previously signed compute agreements including a $6.3 billion deal with SpaceX and a $1 billion deal with Nebius.\n\nAccording to Reflection AI, during training, Beam demonstrated spontaneous cross-domain transfer: despite the absence of dedicated browsing tasks in its RL mixture, the model improved its web-navigation capabilities and independently learned to invoke optical character recognition APIs and query external models when given web access.\n\n[[FIG2]]\n\n## Benchmark Comparisons and Inference Efficiency\n\nReflection AI positioned Beam as a high-efficiency alternative to larger open-weight models, particularly those originating from Chinese research labs that have recently led open benchmarks.\n\nAccording to evaluation tables published by Reflection and detailed by [MarkTechPost](https://www.marktechpost.com/2026/10/05/reflection-ai-introduces-beam-a-501b-open-weight-moe-model-with-23b-active-parameters-for-coding-and-agentic-workloads/), Beam scored 80.1 on Terminal Bench v2.1, matching Z.ai's 753B parameter GLM 5.2 (81.0) and outperforming Nvidia's Nemotron 3 Ultra (56.4), though trailing Moonshot AI's 2.8-trillion parameter Kimi K3 (88.3) and DeepSeek V4.1 Flash (90.6).\n\nOn SWE-bench Verified, Reflection AI reported that Beam achieved 80.9, topping Nemotron 3 Ultra's 70.7 and Thinking Machines Lab's Inkling score of 77.6, though these scores have not been independently verified. The company noted that Beam matches GLM 5.2 reasoning scores while utilizing three to four times less inference compute, calculated based on active parameter counts and average generated tokens.\n\n## Safety Alignment and Release Schedule\n\nTo manage safety without degrading core reasoning performance, Reflection AI trained a separate safety and alignment teacher checkpoint using deliberative alignment principles. This model was subsequently merged into the primary policy using multi-teacher on-policy distillation.\n\nChief executive Misha Laskin stated that two government evaluation groups—the US Center for Advancing Innovation and Standards for Super Intelligence and the UK AI Safety Institute—are assessing Beam ahead of public availability. Beam is currently accessible to select users through a waitlist while undergoing final red-teaming.\n\nReflection AI plans to publish the model weights, evaluation tools, and technical documentation under a permissive Apache 2.0 license later in October 2026. The founders confirmed that training for their next-generation architecture is already underway.",
+ "faq": [
+  {
+   "q": "What is Reflection AI Beam?",
+   "a": "Beam is an open-weight mixture-of-experts artificial intelligence model developed by Reflection AI, featuring 501 billion total parameters and 23 billion active parameters per token."
+  },
+  {
+   "q": "When will Beam's weights be available to download?",
+   "a": "Reflection AI plans to release the model weights, model card, and fine-tuning stack under an Apache 2.0 license later in October 2026."
+  },
+  {
+   "q": "What hardware was used to train Beam?",
+   "a": "Beam was pretrained on 6,144 Nvidia GB300 NVL72 GPUs in under four weeks, followed by a four-week reinforcement learning run on 10,500 GB300 GPUs."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern, brightly lit high-performance supercomputing data center with rows of sleek black server racks glowing with subtle cyan and amber indicators, reflecting off a polished raised floor.",
+  "alt": "An illustration of a modern high-performance data center with illuminated server racks",
+  "caption": "Illustration: High-density server infrastructure powering large-scale artificial intelligence model training.",
+  "src": "img/reflection-ai-beam-501b-open-weight-model/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 51654,
+  "small": "img/reflection-ai-beam-501b-open-weight-model/hero-640.webp",
+  "og": "img/reflection-ai-beam-501b-open-weight-model/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/reflection-ai-beam-501b-open-weight-model/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An abstract visual representation of a sparse mixture-of-experts neural network, showing intricate glowing geometric routing nodes directing computational pathways across multi-layered digital structures.",
+   "alt": "An abstract conceptual illustration of dynamic routing pathways in a mixture-of-experts architecture",
+   "caption": "Illustration: Sparse mixture-of-experts routing selectively activates 23 billion parameters during generation.",
+   "slot": "FIG1",
+   "src": "img/reflection-ai-beam-501b-open-weight-model/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 61334,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "Two software engineers in casual attire standing in front of glass whiteboards in an open-plan engineering lab, reviewing complex reinforcement learning workflow diagrams and charts.",
+   "alt": "An illustration of engineers collaborating over reinforcement learning training workflows",
+   "caption": "Illustration: AI researchers analyzing large-scale reinforcement learning runs across distributed clusters.",
+   "slot": "FIG2",
+   "src": "img/reflection-ai-beam-501b-open-weight-model/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 38520,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://thenextweb.com/news/reflection-ai-beam-open-weight-model",
+   "title": "Nvidia-backed Reflection unveils Beam, its first open-weight model",
+   "site": "TNW | Artificial-intelligence",
+   "published": 1791237717000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://www.marktechpost.com/2026/10/05/reflection-ai-introduces-beam-a-501b-open-weight-moe-model-with-23b-active-parameters-for-coding-and-agentic-workloads/",
+   "title": "Reflection AI Introduces Beam: A 501B Open-Weight MoE Model With 23B Active Parameters for Coding and Agentic Workloads",
+   "site": "marktechpost.com",
+   "published": 1791158400000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://siliconangle.com/2026/10/05/reflection-ai-debuts-open-source-beam-model-with-501b-parameters/",
+   "title": "Reflection AI debuts open-source Beam model with 501B parameters",
+   "site": "SiliconANGLE",
+   "published": 1791247593000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.unite.ai/reflection-ai-unveils-beam-a-501b-parameter-open-weight-model/",
+   "title": "Reflection AI Unveils Beam, a 501B-Parameter Open-Weight Model",
+   "site": "Unite.AI",
+   "published": 1791229563000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://www.morningstar.com/news/marketwatch/20261005311/this-new-ai-model-could-help-america-close-a-technological-gap-with-china",
+   "title": "This new AI model could help America close a technological gap with China",
+   "site": "Morningstar, Inc.",
+   "published": 1791236580000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1791249054396,
+ "updatedAt": 1791249054396,
+ "foundVia": "Google News, Bluesky and siliconangle.com",
+ "check": {
+  "claims": 33,
+  "score": 10
+ },
+ "story": {
+  "id": "P540f3b72",
+  "score": 84,
+  "items": [
+   "https://news.google.com/rss/articles/CBMijAFBVV95cUxNcWw3bTQxTlc0cjlSSUFtTGxuSXZnOGZJYzMxSmI1clY3M1FpLWwzb1FLRlVnLTVRcDlwZE9fRkJmTHlBdWVBTDJNdHZ6T2JOLTRBejRsdXp2VkdMd3psOFR3QU9JRzJhMWkyYnhxZlhZTEMxQ05jLUY2elFTc0g4akVSZ01JWUpMNGVST9IBjAFBVV95cUxNcWw3bTQxTlc0cjlSSUFtTGxuSXZnOGZJYzMxSmI1clY3M1FpLWwzb1FLRlVnLTVRcDlwZE9fRkJmTHlBdWVBTDJNdHZ6T2JOLTRBejRsdXp2VkdMd3psOFR3QU9JRzJhMWkyYnhxZlhZTEMxQ05jLUY2elFTc0g4akVSZ01JWUpMNGVSTw?oc=5",
+   "https://bsky.app/profile/sungkim.bsky.social/post/3mx5ogamw7k24",
+   "https://siliconangle.com/2026/10/05/reflection-ai-debuts-open-source-beam-model-with-501b-parameters/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
