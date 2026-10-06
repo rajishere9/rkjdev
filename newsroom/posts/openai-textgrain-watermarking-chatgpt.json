@@ -1,0 +1,179 @@
+{
+ "slug": "openai-textgrain-watermarking-chatgpt",
+ "title": "OpenAI Launches textGrain Watermarking for ChatGPT in the EU",
+ "seoTitle": "OpenAI Launches textGrain Watermarking for EU ChatGPT",
+ "description": "OpenAI has introduced textGrain, an invisible text watermarking system for ChatGPT and Codex in the EU to comply with the EU AI Act.",
+ "dek": "OpenAI is rolling out invisible text watermarking in the European Union to comply with the EU AI Act while offering global API users an opt-in toggle.",
+ "category": "Policy",
+ "tags": [
+  "OpenAI",
+  "EU AI Act",
+  "textGrain",
+  "ChatGPT",
+  "Watermarking",
+  "AI Safety"
+ ],
+ "keyTakeaways": [
+  "OpenAI announced textGrain, an invisible statistical watermarking system for ChatGPT, Codex, and API text outputs.",
+  "The watermark will be enabled automatically only for eligible ChatGPT and Codex users in the EU, while API users globally can opt in.",
+  "Internal tests on the Astra model show negligible benchmark performance drops, though editing text significantly weakens detection rates.",
+  "Detector access is currently restricted to approved researchers and expert organizations via an application process."
+ ],
+ "body": "OpenAI announced on October 5, 2026, that it is implementing an invisible text watermarking system called textGrain for ChatGPT and Codex in response to the European Union's regulatory requirements. The rollout applies automatically to eligible ChatGPT and Codex text outputs across all tiers in the European Union over the coming weeks, as detailed in [OpenAI's official announcement](https://openai.com/index/eu-text-provenance/). Developers using the OpenAI API worldwide will also be able to opt in to watermarking on select models, where the feature remains disabled by default.\n\nThe move comes under Article 50 of the EU AI Act, which requires providers of generative AI systems to make artificial text outputs identifiable in a machine-readable format. While transparency regulations took effect on August 2, existing market entities have until December 2 to meet compliance obligations, as reported by [Engadget](https://www.engadget.com/2277866/openai-will-add-a-digital-watermark-to-text-and-code-generated-in-the-eu/).\n\n[[FIG1]]\n\n## How the textGrain Watermarking System Works\n\nUnlike metadata that can be removed, textGrain alters the underlying generation process. The system embeds an invisible statistical signal directly into the model's word choices using a secret key to sort next-word predictions, according to [TechCrunch](https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu/). The technical report supporting the release was co-authored with researchers from Yale University and the University of Pennsylvania, and OpenAI stated it plans to release the technology as open source so third parties can build upon it.\n\nOpenAI claims that textGrain matched or exceeded the performance of other approaches in internal testing, including Google DeepMind's SynthID for text. Because the signal is embedded into the syntax itself, the watermark persists when text is copied and pasted.\n\nTo ensure the statistical alterations do not degrade intelligence or reasoning, OpenAI evaluated textGrain across eight benchmarks on its frontier model, Astra. The results showed virtually identical scores across both conditions:\n\n* **GPQA Diamond:** 94.44% unwatermarked vs. 93.94% watermarked\n* **BrowseComp:** 87.92% unwatermarked vs. 87.35% watermarked\n* **DeepSWE v1.1:** 72.80% unwatermarked vs. 71.68% watermarked\n* **Terminal-Bench 4.0:** 53.90% unwatermarked vs. 56.06% watermarked\n* **Terminal-Bench Science 0.1:** 56.90% unwatermarked vs. 60.00% watermarked\n* **Artificial Analysis Intelligence Index:** 49.57 points unwatermarked vs. 49.76 points watermarked\n* **HealthBench Professional:** 64.27% unwatermarked vs. 64.60% watermarked\n* **AutomationBench:** 34.09% unwatermarked vs. 34.86% watermarked\n\n[[FIG2]]\n\n## Evasion, Editing, and Detection Limitations\n\nDespite baseline benchmark parity, OpenAI emphasized that text watermarking remains an early technology with substantial limitations. Detection reliability drops significantly depending on length, domain flexibility, and subsequent human editing.\n\nAt a fixed false-positive rate target of 1%, textGrain's detector recognized watermarked 400-token passages in open-ended fields like psychology roughly 95% of the time. When passage length fell to 200 tokens, accuracy dropped to about 80%, as noted by [The Decoder](https://the-decoder.com/openai-will-watermark-chatgpt-text-in-the-eu-but-makes-it-optional-for-api-users-worldwide/). In structured domains with constrained vocabulary, such as mathematics, detection rates fell sharply—reaching roughly 60% on 400-token passages.\n\nManual rewriting easily disrupts the statistical pattern. In tests using 400-token passages from the ELI5 dataset:\n\n* Replacing 10% of words with synonyms lowered detection accuracy from 92% to 66%.\n* Replacing 25% of words reduced detection accuracy to 17%.\n\nOpenAI highlighted several key caveats regarding what textGrain results mean. A watermark does not measure human contribution, establish copyright ownership, reveal user identities, or verify factual accuracy. Conversely, the absence of a detected watermark does not prove human authorship, as text may have been translated, shortened, heavily modified, or generated by competing models.\n\n## Restricted Detector Access and Global Rollout\n\nBecause of the risks associated with false positives and evasion, OpenAI is not releasing the detection tool to the general public, according to [9to5Mac](https://9to5mac.com/2026/10/05/openai-details-new-text-watermarking-system-for-chatgpt-codex-and-the-api/). Instead, access is restricted to approved researchers and expert organizations that apply under the EU Code of Practice framework. When queried, the detector only reports whether an OpenAI watermark is present and does not expose user accounts, prompts, or conversation history.\n\n[[FIG3]]\n\nThis regional rollout contrasts with Anthropic, which implemented mandatory global watermarking for Claude earlier this year using SynthID, drawing criticism from users who did not want their writing watermarked, as reported by [PCMag](https://www.pcmag.com/news/openai-to-add-watermarks-on-chatgpts-text-outputs-but-only-in-the-eu). OpenAI noted that restricting default watermarking to the EU allows it to evaluate real-world usage before considering wider deployments, while cloud partners like Microsoft Azure will support opt-in watermarking for OpenAI models in the coming weeks.",
+ "faq": [
+  {
+   "q": "What is textGrain?",
+   "a": "textGrain is an invisible watermarking technology developed by OpenAI that embeds a statistical pattern into a model's word choices, allowing detectors to identify AI-generated text."
+  },
+  {
+   "q": "Will all ChatGPT users have their text watermarked?",
+   "a": "No. The text watermark is enabled automatically only for eligible ChatGPT and Codex users located in the European Union. API customers globally can choose to opt in, but it remains off by default."
+  },
+  {
+   "q": "Can textGrain watermarks be removed by editing?",
+   "a": "Yes. OpenAI's evaluations showed that replacing 10% of words with synonyms reduces detection accuracy to 66%, while replacing 25% of words drops detection to 17%."
+  },
+  {
+   "q": "Who gets access to OpenAI's watermark detector tool?",
+   "a": "Access is currently restricted to approved researchers and expert organizations that apply through an official evaluation process in line with the EU Code of Practice."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An abstract digital illustration showing lines of glowing typography flowing across a sleek modern glass surface, with subtle mathematical nodes and subtle statistical data points floating between the words in a European corporate setting.",
+  "alt": "Digital illustration representing text watermarking algorithms embedded into floating words.",
+  "caption": "Illustration: OpenAI's textGrain embeds invisible statistical patterns into model word choices to comply with EU regulations.",
+  "src": "img/openai-textgrain-watermarking-chatgpt/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 79286,
+  "small": "img/openai-textgrain-watermarking-chatgpt/hero-640.webp",
+  "og": "img/openai-textgrain-watermarking-chatgpt/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/openai-textgrain-watermarking-chatgpt/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A modern European regulatory chamber with large glass windows and minimalist architectural design, showing officials in business suits reviewing data sheets and digital policy documents.",
+   "alt": "Illustration of European policymakers and legal experts in a modern government chamber.",
+   "caption": "Illustration: The rollout follows transparency mandates introduced under Article 50 of the EU AI Act.",
+   "slot": "FIG1",
+   "src": "img/openai-textgrain-watermarking-chatgpt/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 50702,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A research scientist in a clean technology lab examining a split digital visualization showing highlighted words in a text passage alongside probability graphs and statistical curves.",
+   "alt": "Illustration of a computer scientist analyzing vocabulary probability distributions on a display.",
+   "caption": "Illustration: OpenAI evaluations indicate that editing as little as 10% of text can significantly reduce watermark detection rates.",
+   "slot": "FIG2",
+   "src": "img/openai-textgrain-watermarking-chatgpt/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 41858,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "A group of software engineers and researchers seated around a conference table in an illuminated tech office, analyzing secure access portals on laptop screens.",
+   "alt": "Illustration of researchers and engineers collaborating in a secure laboratory setting.",
+   "caption": "Illustration: Detector access is initially restricted to approved research teams and specialist institutions.",
+   "slot": "FIG3",
+   "src": "img/openai-textgrain-watermarking-chatgpt/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 35916,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://openai.com/index/eu-text-provenance/",
+   "title": "Our approach to EU text provenance rules",
+   "site": "OpenAI",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://www.engadget.com/2277866/openai-will-add-a-digital-watermark-to-text-and-code-generated-in-the-eu/",
+   "title": "OpenAI Will Add A Digital Watermark To Text And Code Generated In The EU",
+   "site": "Engadget",
+   "published": 1791226540000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://9to5mac.com/2026/10/05/openai-details-new-text-watermarking-system-for-chatgpt-codex-and-the-api/",
+   "title": "OpenAI details new text watermarking system for ChatGPT, Codex, and the API",
+   "site": "9to5Mac",
+   "published": 1791233177000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://the-decoder.com/openai-will-watermark-chatgpt-text-in-the-eu-but-makes-it-optional-for-api-users-worldwide/",
+   "title": "OpenAI will watermark ChatGPT text in the EU but makes it optional for API users worldwide",
+   "site": "The Decoder",
+   "published": 1791221562000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1004880/openai-chatgpt-text-watermarks-eu-ai-act",
+   "title": "OpenAI is adding text watermarking in ChatGPT and Codex",
+   "site": "The Verge",
+   "published": 1791223719000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu/",
+   "title": "OpenAI will start watermarking ChatGPT’s text in the EU",
+   "site": "TechCrunch",
+   "published": 1791232608000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://www.pcmag.com/news/openai-to-add-watermarks-on-chatgpts-text-outputs-but-only-in-the-eu",
+   "title": "OpenAI to Add Watermarks on ChatGPT's Text Outputs, But Only in the EU",
+   "site": "PCMag",
+   "published": 1791229937000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1791245452556,
+ "updatedAt": 1791245452556,
+ "foundVia": "Techmeme, Google News and the-decoder.com",
+ "check": {
+  "claims": 22,
+  "score": 10
+ },
+ "story": {
+  "id": "P9215461e",
+  "score": 90,
+  "items": [
+   "https://www.techmeme.com/261005/p24#a261005p24",
+   "https://news.google.com/rss/articles/CBMijgFBVV95cUxQVk5ZRzM5LTkzMUJfbmc0bzVHcG9rRzl5Q1ljTGdLaXNtSW5sM2hreU4tX3VrZFdxSkI3d2ZvMlR0djAxZm9RVUlwWTQ2TXMyUFJSNXVFOWVxS2hjQ2pVWjN3RS14Vll3alFzendFR2E2c1RMTF94czJWNHNtMVI0Y05qbDNvVEJpdjdKT09B?oc=5",
+   "https://the-decoder.com/openai-will-watermark-chatgpt-text-in-the-eu-but-makes-it-optional-for-api-users-worldwide/",
+   "https://www.theverge.com/ai-artificial-intelligence/1004880/openai-chatgpt-text-watermarks-eu-ai-act",
+   "https://www.engadget.com/2277866/openai-will-add-a-digital-watermark-to-text-and-code-generated-in-the-eu/",
+   "https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu/",
+   "https://9to5mac.com/2026/10/05/openai-details-new-text-watermarking-system-for-chatgpt-codex-and-the-api/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
