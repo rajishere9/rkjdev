@@ -1,0 +1,168 @@
+{
+ "slug": "mistral-large-4-le-chonk-open-weight-release",
+ "title": "Mistral Releases Mistral Large 4 'Le Chonk' in Public Preview",
+ "seoTitle": "Mistral Large 4 Preview: 1-Trillion Parameter Model",
+ "description": "Mistral AI has launched Mistral Large 4 'Le Chonk', a 1-trillion-parameter model with 49B active parameters and weights releasing in late October 2026.",
+ "dek": "Paris-based Mistral AI launched a public preview API for Mistral Large 4, a 1-trillion-parameter model slated for full open-weight release on October 27.",
+ "category": "AI Models",
+ "tags": [
+  "Mistral AI",
+  "Mistral Large 4",
+  "Open Weights",
+  "Artificial Intelligence",
+  "Cybersecurity"
+ ],
+ "keyTakeaways": [
+  "Mistral Large 4 features 1 trillion total parameters and activates 49 billion parameters per token during inference.",
+  "The model is currently available as a preview API on Mistral Studio, with open model weights scheduled for release on October 27, 2026.",
+  "Trained in Europe on 3,800 to 4,000 Nvidia Grace Blackwell GPUs across more than 160 languages.",
+  "According to Mistral's internal evaluations, the model demonstrates leading scores among open models in cybersecurity, visual grounding, and enterprise agent workflows."
+ ],
+ "body": "Paris-based startup Mistral AI has officially unveiled Mistral Large 4, a 1-trillion-parameter multimodal model nicknamed \"Le Chonk.\" Announced on October 6, 2026, the model is available in public preview via the Mistral Studio API, with open model weights scheduled for public release on October 27, 2026. This official release provides technical specifications, benchmark evaluations across cybersecurity and coding, and deployment details for European and global enterprises.\n\nAccording to [Mistral's announcement](https://mistral.ai/news/mistral-large-4/), Mistral Large 4 (ML4) uses a sparse architecture that activates 49 billion parameters per token during inference. The company trained the model from scratch over two months on 3,800 to 4,000 Nvidia Grace Blackwell GPUs inside its own European data centers, drawing approximately 10 megawatts of power, as reported by [The Next Web](https://thenextweb.com/news/mistral-releases-large-4-a-1-trillion-parameter-open-weight-ai-model).\n\n[[FIG1]]\n\n## Architecture and Hardware Infrastructure\n\nMistral Large 4 is natively multimodal, accepting text and visual inputs such as documents, charts, technical drawings, and high-resolution satellite imagery while outputting text. According to [the model listing on Hugging Face](https://huggingface.co/mistralai/Mistral-Large-4.0-1T05-A52B), the parameter breakdown reaches 52 billion active parameters when accounting for input embeddings and output layers.\n\nThe training dataset spans more than 160 languages, including every official language of the European Union. Mistral developed ML4 using infrastructure supported by its €3 billion Series D equity round raised in September 2026 at a valuation exceeding €21 billion, as detailed by [VentureBeat](https://venturebeat.com/technology/mistral-debuts-large-4-le-chonk-a-1-trillion-parameter-text-output-model-with-high-benchmarks-planned-for-open-weights-release).\n\nMistral reports that the model's post-training reinforcement learning run remains active during the preview window. The current distributed setup generates tens of thousands of rollouts in parallel, producing roughly 33 billion tokens per day across a 3,000-GPU post-training cluster, yielding about 16 billion trainable completion tokens daily after filtering.\n\n## Benchmark Performance and Agentic Capabilities\n\nIn Mistral's self-reported evaluations on software development and autonomous agent benchmarks, Mistral Large 4 achieved competitive scores, though Mistral acknowledged the model still trails other frontier models in coding. On the DeepSWE v1.1 software engineering benchmark, ML4 registered a 61.7% score in Mistral's preview testing (rounded to 62% in companion reports). This placed it ahead of DeepSeek V4 Pro (57%), Qwen 3.8 Max (51%), and Reflection AI's Beam (44%), while closely matching GLM-5.3 (61%), according to data compiled by [The Next Web](https://thenextweb.com/news/mistral-releases-large-4-a-1-trillion-parameter-open-weight-ai-model).\n\nIn a blind human evaluation run in partnership with Surge AI, professional annotators rated ML4's coding quality at 3.74 out of 5, ranking second behind Claude Opus 5 (4.22) and ahead of GLM-5.3 (3.60), Kimi K3 (3.59), and GLM-5.2 (3.40).\n\n[[FIG2]]\n\nFor enterprise workflows, ML4 recorded 59.9% on AutomationBench—an assessment covering 657 tasks across tools including Google Sheets, Slack, and Salesforce. On the ACL 2026-accepted FinWorkBench (Finch) financial analysis benchmark, ML4 scored 67%, matching DeepSeek V4 Pro and exceeding GLM-5.3 (65%). On Harvey AI's Legal Agent evaluation, ML4 scored 15%, leading open-weight competitors such as Kimi K3 (12.92%) and GLM-5.3 (8.33%).\n\nIn visual grounding tasks, Mistral reported that ML4 scored 73% on the DIOR-RSVG remote-sensing benchmark, compared to 68% for GPT-6 Astra, while tying GPT-6 Astra at 42% on Dense200.\n\n## Cybersecurity Defense and Model Autonomy\n\nCybersecurity is a primary focus for the release. Mistral reported that ML4 achieved an 82% score on an Artificial Analysis Cyber Index test requiring a model to reproduce and patch vulnerabilities in open-source software. It also solved 93% of challenges on the Cybench security suite.\n\nIn an interview reported by [CNET](https://www.cnet.com/tech/services-and-software/mistrals-new-le-chonk-ai-model-is-big-open-and-built-for-agents/), Mistral Chief Scientist Guillaume Lample and VP of Science Pierre Stock explained that defensive security workflows require unhindered code auditing, log inspection, and exploit verification. Proprietary closed-source models often refuse these tasks due to broad safety filters.\n\n\"The cyber defense capabilities will enable enterprises and governments to defend themselves against threat actors that are jailbreaking closed models to perform cyber attacks,\" Lample told [Quartz](https://qz.com/mistral-large-4-open-weight-ai-model-launch-100626).\n\nTo balance defensive utility with safety, Mistral noted that ML4 resisted 93.3% of indirect prompt injections on Lakera's B3 AI Security Benchmark and scored 1.691 out of 2 on the KORA safety benchmark.\n\n[[FIG3]]\n\n## Availability and Sovereign Deployment\n\nDevelopers can access Mistral Large 4 through the Mistral Studio API during the preview period. Over the three-week window leading to the October 27 open-weights release, Mistral is conducting red-teaming with select cybersecurity organizations and government authorities, who will test versions with expanded cyber capabilities.\n\nOnce the open weights drop at the end of October under a custom Mistral license, organizations will be able to self-host the model on-premises or in private clouds. Mistral also provides hosted access via European data centers operated under European Union regulatory frameworks. The company plans to use Mistral Large 4 as the foundation for a subsequent family of specialized domain models.",
+ "faq": [
+  {
+   "q": "What are the parameter specifications of Mistral Large 4?",
+   "a": "Mistral Large 4 contains 1 trillion total parameters in a sparse architecture, activating 49 billion parameters per token during inference (52 billion including embedding and output layers)."
+  },
+  {
+   "q": "When will the open weights for Mistral Large 4 be released?",
+   "a": "Mistral plans to release the model weights on October 27, 2026, following a three-week testing and red-teaming period."
+  },
+  {
+   "q": "What hardware was used to train Mistral Large 4?",
+   "a": "The model was trained from scratch over two months on 3,800 to 4,000 Nvidia Grace Blackwell GPUs located in Mistral's European data centers."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern European server room illuminated with cool blue and amber LED lights, with rows of advanced computing racks humming quietly while a network engineer checks a digital diagnostic tablet.",
+  "alt": "An illuminated modern data center facility housing advanced GPU compute clusters.",
+  "caption": "Illustration: high-density GPU server racks in a European data center environment.",
+  "src": "img/mistral-large-4-le-chonk-open-weight-release/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 44752,
+  "small": "img/mistral-large-4-le-chonk-open-weight-release/hero-640.webp",
+  "og": "img/mistral-large-4-le-chonk-open-weight-release/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/mistral-large-4-le-chonk-open-weight-release/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An AI researcher in a brightly lit technical workspace examining complex neural network architecture diagrams displayed across multiple curved workstation monitors.",
+   "alt": "An AI researcher reviewing sparse neural network model designs on workstation screens.",
+   "caption": "Illustration: an engineer inspecting large-scale mixture-of-experts model architectures.",
+   "slot": "FIG1",
+   "src": "img/mistral-large-4-le-chonk-open-weight-release/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 44054,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A digital analytics room showing large screens displaying code verification routines, mathematical equations, and data parsing workflows.",
+   "alt": "Digital screens displaying software engineering benchmarks and automated reasoning workflows.",
+   "caption": "Illustration: automated evaluation workflows tracking software engineering benchmarks.",
+   "slot": "FIG2",
+   "src": "img/mistral-large-4-le-chonk-open-weight-release/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 40810,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "A cybersecurity specialist in a network operations security center monitoring complex threat graphs and vulnerability remediation data streams.",
+   "alt": "A cybersecurity operations analyst monitoring digital vulnerability response streams.",
+   "caption": "Illustration: a security operations center analyzing defensive code auditing tasks.",
+   "slot": "FIG3",
+   "src": "img/mistral-large-4-le-chonk-open-weight-release/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 30018,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://mistral.ai/research/",
+   "title": "AI Research | Mistral",
+   "site": "Mistral",
+   "published": 1790092041787,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://mistral.ai/news/mistral-large-4/",
+   "title": "Introducing Mistral Large 4",
+   "site": "Mistral",
+   "published": 1791288027000,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://huggingface.co/mistralai/Mistral-Large-4.0-1T05-A52B",
+   "title": "mistralai/Mistral-Large-4.0-1T05-A52B · Upcoming release · Hugging Face",
+   "site": "huggingface.co",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 4,
+   "url": "https://venturebeat.com/technology/mistral-debuts-large-4-le-chonk-a-1-trillion-parameter-text-output-model-with-high-benchmarks-planned-for-open-weights-release",
+   "title": "Mistral debuts Large 4 'Le Chonk', a 1-trillion parameter text output model with high benchmarks planned for open weights release",
+   "site": "venturebeat.com",
+   "published": 1791291600000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://thenextweb.com/news/mistral-releases-large-4-a-1-trillion-parameter-open-weight-ai-model",
+   "title": "Europe’s Mistral launches Large 4 to challenge China’s lead in open AI models",
+   "site": "TNW | Launch",
+   "published": 1791291645000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://www.cnet.com/tech/services-and-software/mistrals-new-le-chonk-ai-model-is-big-open-and-built-for-agents/",
+   "title": "Mistral’s New ‘Le Chonk’ AI Model Is Big, Open and Built for Agents - CNET",
+   "site": "CNET",
+   "published": 1791315337000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://qz.com/mistral-large-4-open-weight-ai-model-launch-100626",
+   "title": "Mistral launches Mistral Large 4 open-weight AI model",
+   "site": "qz.com",
+   "published": 1791244800000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1791337990224,
+ "updatedAt": 1791337990224,
+ "foundVia": "Reddit",
+ "check": {
+  "claims": 29,
+  "score": 10
+ },
+ "story": {
+  "id": "Pb613c96d",
+  "score": 93,
+  "items": [
+   "https://mistral.ai/research/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
