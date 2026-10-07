@@ -1,0 +1,129 @@
+{
+ "slug": "researchers-break-3sum-and-apsp-complexity-hypotheses",
+ "title": "Researchers Break 3SUM and APSP Hypotheses With New Algorithms",
+ "seoTitle": "Researchers Achieve Polynomial Speedups for 3SUM and APSP",
+ "description": "New deterministic algorithms break textbook limits for 3SUM and APSP, refuting the 3SUM, APSP, Exact Triangle, and Zero-Weight k-Clique hypotheses with a Lean 4 formalization.",
+ "dek": "Deterministic algorithms achieve subquadratic time for 3SUM and subcubic time for APSP, backed by a Lean 4 proof verification repository.",
+ "category": "Research",
+ "tags": [
+  "Computer Science",
+  "Algorithms",
+  "Formal Verification",
+  "Lean 4",
+  "Complexity Theory"
+ ],
+ "keyTakeaways": [
+  "Researchers Josh Alman and Virginia Vassilevska Williams published deterministic algorithms running in O(n^1.9992) for 3SUM and O(n^2.9995) for APSP.",
+  "The findings refute the standard 3SUM and APSP hypotheses, as well as the Exact Triangle and Zero-Weight k-Clique hypotheses.",
+  "The speedups stem from a new thin matrix product algorithm based on Schönhage's ten-multiplication identity and Coppersmith's techniques.",
+  "The core claims have been formalized and verified in Lean 4 on a word RAM model in an Anthropic-hosted GitHub repository."
+ ],
+ "body": "In a 76-page research paper submitted on October 5, 2026, researchers Josh Alman and Virginia Vassilevska Williams presented the first polynomial improvements over long-standing textbook algorithms for the 3SUM and All-Pairs Shortest Paths (APSP) problems. Published on [arXiv.org](https://arxiv.org/abs/2610.06783), the work demonstrates deterministic algorithms solving 3SUM in $O(n^{1.9992})$ time and APSP in $O(n^{2.9995})$ time on directed graphs with polynomially bounded integer weights, formally refuting the 3SUM and APSP hypotheses.\n\nAlongside the theoretical paper, an accompanying Lean 4 formalization was released on [GitHub by Anthropic](https://github.com/anthropics/formal-math/tree/main/3sum-apsp), establishing machine-checked verification for the headline results on a word RAM model.\n\n[[FIG1]]\n\n## Refuting Foundational Complexity Hypotheses\n\nThe new results systematically refute the 3SUM hypothesis, the APSP hypothesis, the Exact Triangle hypothesis, and the Zero-Weight $k$-Clique hypotheses.\n\nAccording to the [arXiv preprint](https://arxiv.org/abs/2610.06783), the reductions also refute the real-valued versions of the 3SUM and APSP hypotheses, alongside three rectangular hinted Online Matrix-Vector conjectures originally posed by van den Brand, Nanongkai, and Saranurak. The framework additionally delivers polynomial speedups for multiple related computational problems.\n\n## Thin Matrix Products and Sparse Lopsided Graphs\n\nThe breakthroughs trace back to a unified algorithmic technique for thin matrix multiplication. The authors consider an integer matrix $X$ of size $N imes D$ and an integer matrix $Y$ of size $D imes N$ where $D \\le N^{1/18}$. For any designated subset $W$ containing at most $N^2/\\sqrt{D}$ positions, the algorithm computes all entries $(XY)[I,J]$ for $(I,J) \\in W$ in $O(N^2/D^{0.063})$ operations.\n\nThis runtime is strictly less than the operations needed to compute the entire matrix product $XY$ or evaluate $N^2/\\sqrt{D}$ inner products individually. The researchers designed this method by adapting Coppersmith's rectangular matrix multiplication algorithm, utilizing an underlying ten-multiplication identity discovered by Schönhage to execute only the necessary operations for target positions in $W$.\n\n[[FIG2]]\n\nWhen translated to graph theory, this technique solves the All-Edges Sparse Triangle problem in truly subquadratic time on sparse tripartite graphs where two vertex sets contain $n$ elements while the third contains $n^\\varepsilon$ vertices for $\\varepsilon < 0.12$. By applying known reductions, Exact Triangle, and hence 3SUM and APSP, reduce to this problem.\n\n## Machine-Checked Formalization in Lean 4\n\nTo ensure the correctness of the theoretical bounds, key components of the paper were formalized in the Lean 4 proof assistant. The formalization, structured under [Anthropic's formal-math repository](https://github.com/anthropics/formal-math/tree/main/3sum-apsp), compiles against Lean v4.33.1 and Mathlib v4.33.1.\n\nThe repository's primary entry file, `EndStatement.lean`, contains 139 lines that depend solely on Lean's core library without importing Mathlib. It states five headline claims on a word RAM model with $O(\\log n)$-bit words and contains no proof, while the accompanying library proves them:\n\n* **Exact Triangle:** Solved in $O(n^{3-0.0017})$ time.\n* **3SUM:** Solved in $O(n^{1.9992})$ time.\n* **(min,+)-product:** Solved in $O(n^{2.99942})$ time.\n* **APSP:** Solved in $O(n^{2.99942})$ time.\n* **Zero-Weight $k$-Clique:** Solved in $O(n^{k-0.0017\\lfloor k/3 floor})$ time for every $k \\ge 3$.\n\n[[FIG3]]\n\n## Implementation Scope and Verified Claims\n\nThe formal proof library models a word RAM machine with nine fundamental instructions operating on integer-addressed memory cells holding $W$-bit words. The machine supports basic addition, subtraction, modular multiplication, conditional jumps on negative values, and indexed memory loads and stores, without relying on bitwise shifts or division.\n\nThe repository documentation notes that while the deterministic integer-input algorithms and structural reductions are fully verified in Lean, the running times for Las Vegas algorithms on real RAM inputs and certain rectangular matrix multiplication exponent bounds were left as explicit hypotheses rather than proved end-to-end within the machine model.",
+ "faq": [
+  {
+   "q": "What are the new running times achieved for 3SUM and APSP?",
+   "a": "The deterministic algorithms achieve a runtime of O(n^1.9992) for 3SUM on n integers of polynomial size, and O(n^2.9995) (with an alternate bound of O(n^2.99942) in the formalization) for All-Pairs Shortest Paths on directed graphs with polynomially bounded integer weights."
+  },
+  {
+   "q": "What foundational hypotheses are refuted by this work?",
+   "a": "The paper refutes the 3SUM hypothesis, the APSP hypothesis, the Exact Triangle hypothesis, the Zero-Weight k-Clique hypotheses, and three rectangular hinted Online Matrix-Vector conjectures."
+  },
+  {
+   "q": "What role does Lean 4 play in this research?",
+   "a": "Lean 4 was used to create a machine-checked formalization of the paper's core theorems on a word RAM model, verified using Lean v4.33.1 and hosted in Anthropic's formal-math repository."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An academic lecture hall where a researcher is pointing at a complex chalkboard filled with matrix equations and graph diagrams, viewed from the audience side in soft lighting.",
+  "alt": "Illustration of an algorithm researcher presenting matrix multiplication and graph theory equations on a chalkboard.",
+  "caption": "Illustration: Theoretical computer science researchers analyzing new matrix multiplication algorithms.",
+  "src": "img/researchers-break-3sum-and-apsp-complexity-hypotheses/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 39962,
+  "small": "img/researchers-break-3sum-and-apsp-complexity-hypotheses/hero-640.webp",
+  "og": "img/researchers-break-3sum-and-apsp-complexity-hypotheses/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/researchers-break-3sum-and-apsp-complexity-hypotheses/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A modern computer science laboratory with computational graph structures and networks glowing on a glass drafting table surrounded by reference notebooks.",
+   "alt": "Illustration of interconnected graph networks and algorithmic structures on a research desk.",
+   "caption": "Illustration: Graph reduction models used to study fine-grained complexity conjectures.",
+   "slot": "FIG1",
+   "src": "img/researchers-break-3sum-and-apsp-complexity-hypotheses/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 35414,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A clean geometric visualization of sparse matrix blocks and tripartite graph nodes connecting across three distinct mathematical planes.",
+   "alt": "Illustration of sparse tripartite graph structures and rectangular matrices.",
+   "caption": "Illustration: Thin matrix product optimizations applied to sparse tripartite graph representations.",
+   "slot": "FIG2",
+   "src": "img/researchers-break-3sum-and-apsp-complexity-hypotheses/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 51354,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "A dual-monitor workstation displaying structured formal logic statements and theorem verification trees in an organized programming environment.",
+   "alt": "Illustration of formal proof verification code and mathematical trees on workstation screens.",
+   "caption": "Illustration: Machine-checked formal proof environments verifying algorithmic bounds.",
+   "slot": "FIG3",
+   "src": "img/researchers-break-3sum-and-apsp-complexity-hypotheses/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 38730,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://arxiv.org/abs/2610.06783",
+   "title": "Truly Subquadratic 3SUM and Truly Subcubic APSP via Triangles in Sparse Lopsided Graphs",
+   "site": "arXiv.org",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://github.com/anthropics/formal-math/tree/main/3sum-apsp",
+   "title": "formal-math/3sum-apsp at main · anthropics/formal-math",
+   "site": "GitHub",
+   "published": null,
+   "official": true
+  }
+ ],
+ "publishedAt": 1791335394731,
+ "updatedAt": 1791335394731,
+ "foundVia": "Reddit",
+ "check": {
+  "claims": 38,
+  "score": 10
+ },
+ "story": {
+  "id": "P98abe3a6",
+  "score": 98,
+  "items": [
+   "https://arxiv.org/abs/2610.06783",
+   "https://www.reddit.com/r/accelerate/comments/1wyvq3v/an_internal_claude_model_found_first_polynomial/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}

@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Researchers Achieve Polynomial Speedups for 3SUM and APSP | rkj dev</title>
+<meta name="description" content="New deterministic algorithms break textbook limits for 3SUM and APSP, refuting the 3SUM, APSP, Exact Triangle, and Zero-Weight k-Clique hypotheses with a Lean 4 formalization.">
+<link rel="canonical" href="https://www.rkjdev.com/blog/researchers-break-3sum-and-apsp-complexity-hypotheses/">
+<meta name="theme-color" content="#16101a">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:site_name" content="rkj dev Blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Researchers Achieve Polynomial Speedups for 3SUM and APSP | rkj dev">
+<meta property="og:description" content="New deterministic algorithms break textbook limits for 3SUM and APSP, refuting the 3SUM, APSP, Exact Triangle, and Zero-Weight k-Clique hypotheses with a Lean 4 formalization.">
+<meta property="og:url" content="https://www.rkjdev.com/blog/researchers-break-3sum-and-apsp-complexity-hypotheses/">
+<meta property="og:image" content="https://www.rkjdev.com/blog/img/researchers-break-3sum-and-apsp-complexity-hypotheses/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://www.rkjdev.com/blog/img/researchers-break-3sum-and-apsp-complexity-hypotheses/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Researchers Achieve Polynomial Speedups for 3SUM and APSP | rkj dev">
+<meta name="twitter:description" content="New deterministic algorithms break textbook limits for 3SUM and APSP, refuting the 3SUM, APSP, Exact Triangle, and Zero-Weight k-Clique hypotheses with a Lean 4 formalization.">
+<link rel="alternate" type="application/rss+xml" title="rkj dev Blog" href="/blog/feed.xml">
+<link rel="alternate" type="application/feed+json" title="rkj dev Blog" href="/blog/feed.json">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2316101a'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23f4b860'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=Unbounded:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="/blog/blog.css?v=4ed3a51a">
+<meta property="article:published_time" content="2026-10-07T01:09:54.731Z">
+<meta property="article:modified_time" content="2026-10-07T01:09:54.731Z">
+<meta property="article:section" content="Research">
+<meta property="article:tag" content="Computer Science">
+<meta property="article:tag" content="Algorithms">
+<meta property="article:tag" content="Formal Verification">
+<meta property="article:tag" content="Lean 4">
+<meta property="article:tag" content="Complexity Theory">
+<link rel="preload" as="image" href="/blog/img/researchers-break-3sum-and-apsp-complexity-hypotheses/hero.webp" imagesrcset="/blog/img/researchers-break-3sum-and-apsp-complexity-hypotheses/hero-640.webp 640w, /blog/img/researchers-break-3sum-and-apsp-complexity-hypotheses/hero.webp 1200w" imagesizes="(max-width: 760px) 100vw, 1200px">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"Researchers Break 3SUM and APSP Hypotheses With New Algorithms","description":"New deterministic algorithms break textbook limits for 3SUM and APSP, refuting the 3SUM, APSP, Exact Triangle, and Zero-Weight k-Clique hypotheses with a Lean 4 formalization.","url":"https://www.rkjdev.com/blog/researchers-break-3sum-and-apsp-complexity-hypotheses/","mainEntityOfPage":"https://www.rkjdev.com/blog/researchers-break-3sum-and-apsp-complexity-hypotheses/","image":["https://www.rkjdev.com/blog/img/researchers-break-3sum-and-apsp-complexity-hypotheses/og.jpg","https://www.rkjdev.com/blog/img/researchers-break-3sum-and-apsp-complexity-hypotheses/hero.webp"],"datePublished":"2026-10-07T01:09:54.731Z","dateModified":"2026-10-07T01:09:54.731Z","articleSection":"Research","keywords":"Computer Science, Algorithms, Formal Verification, Lean 4, Complexity Theory","wordCount":569,"author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","name":"rkj dev","url":"https://www.rkjdev.com","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/me.jpg"}},"isBasedOn":["https://arxiv.org/abs/2610.06783","https://github.com/anthropics/formal-math/tree/main/3sum-apsp"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"Research","item":"https://www.rkjdev.com/blog/category/research/"},{"@type":"ListItem","position":3,"name":"Researchers Break 3SUM and APSP Hypotheses With New Algorithms","item":"https://www.rkjdev.com/blog/researchers-break-3sum-and-apsp-complexity-hypotheses/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are the new running times achieved for 3SUM and APSP?","acceptedAnswer":{"@type":"Answer","text":"The deterministic algorithms achieve a runtime of O(n^1.9992) for 3SUM on n integers of polynomial size, and O(n^2.9995) (with an alternate bound of O(n^2.99942) in the formalization) for All-Pairs Shortest Paths on directed graphs with polynomially bounded integer weights."}},{"@type":"Question","name":"What foundational hypotheses are refuted by this work?","acceptedAnswer":{"@type":"Answer","text":"The paper refutes the 3SUM hypothesis, the APSP hypothesis, the Exact Triangle hypothesis, the Zero-Weight k-Clique hypotheses, and three rectangular hinted Online Matrix-Vector conjectures."}},{"@type":"Question","name":"What role does Lean 4 play in this research?","acceptedAnswer":{"@type":"Answer","text":"Lean 4 was used to create a machine-checked formalization of the paper's core theorems on a word RAM model, verified using Lean v4.33.1 and hosted in Anthropic's formal-math repository."}}]}]</script>
+</head>
+<body class="post">
+<div class="progress" aria-hidden="true"><span></span></div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="backdrop" aria-hidden="true"></div>
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="/" aria-label="rkj dev, home">rkj dev</a>
+    <nav aria-label="Site">
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <article class="article">
+    <header class="post-head wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/category/research/">Research</a></nav>
+      <h1>Researchers Break 3SUM and APSP Hypotheses With New Algorithms</h1>
+      <p class="standfirst">Deterministic algorithms achieve subquadratic time for 3SUM and subcubic time for APSP, backed by a Lean 4 proof verification repository.</p>
+      <div class="byline">
+        <span class="by">rkj dev newsroom</span>
+        <span><time datetime="2026-10-07T01:09:54.731Z" class="abs" data-rel>Oct 7, 2026</time></span>
+        <span>2 min read</span>
+        <a href="#sources">2 sources, fact-checked</a>
+      </div>
+    </header>
+    <div class="hero-wrap wrap"><figure class="hero-fig is-ai">
+  <div class="img"><img src="/blog/img/researchers-break-3sum-and-apsp-complexity-hypotheses/hero.webp" srcset="/blog/img/researchers-break-3sum-and-apsp-complexity-hypotheses/hero-640.webp 640w, /blog/img/researchers-break-3sum-and-apsp-complexity-hypotheses/hero.webp 1200w" sizes="(max-width: 760px) 100vw, 1200px" width="1200" height="675" alt="Illustration of an algorithm researcher presenting matrix multiplication and graph theory equations on a chalkboard." fetchpriority="high" decoding="async"></div>
+  <figcaption><span>Illustration: Theoretical computer science researchers analyzing new matrix multiplication algorithms.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure></div>
+    <div class="layout wrap">
+      <aside class="rail" aria-label="On this page">
+        <nav class="toc"><p>On this page</p><ol><li><a href="#refuting-foundational-complexity-hypotheses">Refuting Foundational Complexity Hypotheses</a></li><li><a href="#thin-matrix-products-and-sparse-lopsided-graphs">Thin Matrix Products and Sparse Lopsided Graphs</a></li><li><a href="#machine-checked-formalization-in-lean">Machine-Checked Formalization in Lean 4</a></li><li><a href="#implementation-scope-and-verified-claims">Implementation Scope and Verified Claims</a></li></ol></nav>
+        <div class="share">
+          <p>Share</p>
+          <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fresearchers-break-3sum-and-apsp-complexity-hypotheses%2F&text=Researchers%20Break%203SUM%20and%20APSP%20Hypotheses%20With%20New%20Algorithms" target="_blank" rel="noopener">X</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fresearchers-break-3sum-and-apsp-complexity-hypotheses%2F" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://wa.me/?text=Researchers%20Break%203SUM%20and%20APSP%20Hypotheses%20With%20New%20Algorithms%20https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fresearchers-break-3sum-and-apsp-complexity-hypotheses%2F" target="_blank" rel="noopener">WhatsApp</a>
+          <button type="button" data-copy="https://www.rkjdev.com/blog/researchers-break-3sum-and-apsp-complexity-hypotheses/">Copy link</button>
+        </div>
+      </aside>
+      <div class="prose">
+        <section class="takeaways" aria-labelledby="tk">
+          <h2 id="tk">Key takeaways</h2>
+          <ul><li>Researchers Josh Alman and Virginia Vassilevska Williams published deterministic algorithms running in O(n^1.9992) for 3SUM and O(n^2.9995) for APSP.</li><li>The findings refute the standard 3SUM and APSP hypotheses, as well as the Exact Triangle and Zero-Weight k-Clique hypotheses.</li><li>The speedups stem from a new thin matrix product algorithm based on Schönhage's ten-multiplication identity and Coppersmith's techniques.</li><li>The core claims have been formalized and verified in Lean 4 on a word RAM model in an Anthropic-hosted GitHub repository.</li></ul>
+        </section>
+        <p>In a 76-page research paper submitted on October 5, 2026, researchers Josh Alman and Virginia Vassilevska Williams presented the first polynomial improvements over long-standing textbook algorithms for the 3SUM and All-Pairs Shortest Paths (APSP) problems. Published on <a href="https://arxiv.org/abs/2610.06783" target="_blank" rel="noopener">arXiv.org</a>, the work demonstrates deterministic algorithms solving 3SUM in $O(n^{1.9992})$ time and APSP in $O(n^{2.9995})$ time on directed graphs with polynomially bounded integer weights, formally refuting the 3SUM and APSP hypotheses.</p>
+<p>Alongside the theoretical paper, an accompanying Lean 4 formalization was released on <a href="https://github.com/anthropics/formal-math/tree/main/3sum-apsp" target="_blank" rel="noopener">GitHub by Anthropic</a>, establishing machine-checked verification for the headline results on a word RAM model.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/researchers-break-3sum-and-apsp-complexity-hypotheses/figure-1.webp" width="1200" height="670" alt="Illustration of interconnected graph networks and algorithmic structures on a research desk." loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: Graph reduction models used to study fine-grained complexity conjectures.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="refuting-foundational-complexity-hypotheses">Refuting Foundational Complexity Hypotheses</h2>
+<p>The new results systematically refute the 3SUM hypothesis, the APSP hypothesis, the Exact Triangle hypothesis, and the Zero-Weight $k$-Clique hypotheses.</p>
+<p>According to the <a href="https://arxiv.org/abs/2610.06783" target="_blank" rel="noopener">arXiv preprint</a>, the reductions also refute the real-valued versions of the 3SUM and APSP hypotheses, alongside three rectangular hinted Online Matrix-Vector conjectures originally posed by van den Brand, Nanongkai, and Saranurak. The framework additionally delivers polynomial speedups for multiple related computational problems.</p>
+<h2 id="thin-matrix-products-and-sparse-lopsided-graphs">Thin Matrix Products and Sparse Lopsided Graphs</h2>
+<p>The breakthroughs trace back to a unified algorithmic technique for thin matrix multiplication. The authors consider an integer matrix $X$ of size $N imes D$ and an integer matrix $Y$ of size $D imes N$ where $D \le N^{1/18}$. For any designated subset $W$ containing at most $N^2/\sqrt{D}$ positions, the algorithm computes all entries $(XY)[I,J]$ for $(I,J) \in W$ in $O(N^2/D^{0.063})$ operations.</p>
+<p>This runtime is strictly less than the operations needed to compute the entire matrix product $XY$ or evaluate $N^2/\sqrt{D}$ inner products individually. The researchers designed this method by adapting Coppersmith&#39;s rectangular matrix multiplication algorithm, utilizing an underlying ten-multiplication identity discovered by Schönhage to execute only the necessary operations for target positions in $W$.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/researchers-break-3sum-and-apsp-complexity-hypotheses/figure-2.webp" width="1200" height="670" alt="Illustration of sparse tripartite graph structures and rectangular matrices." loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: Thin matrix product optimizations applied to sparse tripartite graph representations.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<p>When translated to graph theory, this technique solves the All-Edges Sparse Triangle problem in truly subquadratic time on sparse tripartite graphs where two vertex sets contain $n$ elements while the third contains $n^\varepsilon$ vertices for $\varepsilon &lt; 0.12$. By applying known reductions, Exact Triangle, and hence 3SUM and APSP, reduce to this problem.</p>
+<h2 id="machine-checked-formalization-in-lean">Machine-Checked Formalization in Lean 4</h2>
+<p>To ensure the correctness of the theoretical bounds, key components of the paper were formalized in the Lean 4 proof assistant. The formalization, structured under <a href="https://github.com/anthropics/formal-math/tree/main/3sum-apsp" target="_blank" rel="noopener">Anthropic&#39;s formal-math repository</a>, compiles against Lean v4.33.1 and Mathlib v4.33.1.</p>
+<p>The repository&#39;s primary entry file, <code>EndStatement.lean</code>, contains 139 lines that depend solely on Lean&#39;s core library without importing Mathlib. It states five headline claims on a word RAM model with $O(\log n)$-bit words and contains no proof, while the accompanying library proves them:</p>
+<ul>
+<li><strong>Exact Triangle:</strong> Solved in $O(n^{3-0.0017})$ time.</li>
+<li><strong>3SUM:</strong> Solved in $O(n^{1.9992})$ time.</li>
+<li><strong>(min,+)-product:</strong> Solved in $O(n^{2.99942})$ time.</li>
+<li><strong>APSP:</strong> Solved in $O(n^{2.99942})$ time.</li>
+<li><strong>Zero-Weight $k$-Clique:</strong> Solved in $O(n^{k-0.0017\lfloor k/3 floor})$ time for every $k \ge 3$.</li>
+</ul>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/researchers-break-3sum-and-apsp-complexity-hypotheses/figure-3.webp" width="1200" height="670" alt="Illustration of formal proof verification code and mathematical trees on workstation screens." loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: Machine-checked formal proof environments verifying algorithmic bounds.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="implementation-scope-and-verified-claims">Implementation Scope and Verified Claims</h2>
+<p>The formal proof library models a word RAM machine with nine fundamental instructions operating on integer-addressed memory cells holding $W$-bit words. The machine supports basic addition, subtraction, modular multiplication, conditional jumps on negative values, and indexed memory loads and stores, without relying on bitwise shifts or division.</p>
+<p>The repository documentation notes that while the deterministic integer-input algorithms and structural reductions are fully verified in Lean, the running times for Las Vegas algorithms on real RAM inputs and certain rectangular matrix multiplication exponent bounds were left as explicit hypotheses rather than proved end-to-end within the machine model.</p>
+
+        <section class="faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Frequently asked questions</h2>
+          <details open><summary>What are the new running times achieved for 3SUM and APSP?</summary><p>The deterministic algorithms achieve a runtime of O(n^1.9992) for 3SUM on n integers of polynomial size, and O(n^2.9995) (with an alternate bound of O(n^2.99942) in the formalization) for All-Pairs Shortest Paths on directed graphs with polynomially bounded integer weights.</p></details>
+<details><summary>What foundational hypotheses are refuted by this work?</summary><p>The paper refutes the 3SUM hypothesis, the APSP hypothesis, the Exact Triangle hypothesis, the Zero-Weight k-Clique hypotheses, and three rectangular hinted Online Matrix-Vector conjectures.</p></details>
+<details><summary>What role does Lean 4 play in this research?</summary><p>Lean 4 was used to create a machine-checked formalization of the paper's core theorems on a word RAM model, verified using Lean v4.33.1 and hosted in Anthropic's formal-math repository.</p></details>
+        </section>
+        <section class="sources" id="sources" aria-labelledby="src-title">
+          <h2 id="src-title">Sources</h2>
+          <ol><li><a href="https://arxiv.org/abs/2610.06783" target="_blank" rel="noopener">Truly Subquadratic 3SUM and Truly Subcubic APSP via Triangles in Sparse Lopsided Graphs</a><span>arXiv.org · <b class="official">Official</b></span></li><li><a href="https://github.com/anthropics/formal-math/tree/main/3sum-apsp" target="_blank" rel="noopener">formal-math/3sum-apsp at main · anthropics/formal-math</a><span>GitHub · <b class="official">Official</b></span></li></ol>
+          <p class="method">How this story was made: the newsroom picked it up from Reddit, gathered the full text of the sources above, and drafted it with AI assistance. Every factual claim was then checked against those sources before publishing (38 claims checked). Illustrations marked as AI-generated are not photographs. Spotted an error? <a href="mailto:rajankrishnan909@gmail.com?subject=Correction%3A%20Researchers%20Break%203SUM%20and%20APSP%20Hypotheses%20With%20New%20Algorithms">Tell us</a>.</p>
+        </section>
+        <p class="tags"><span>#Computer Science</span> <span>#Algorithms</span> <span>#Formal Verification</span> <span>#Lean 4</span> <span>#Complexity Theory</span></p>
+        <p class="stamp">Published October 7, 2026 at 01:09 UTC</p>
+      </div>
+    </div>
+  </article>
+  <section class="related wrap" aria-labelledby="rel-title">
+    <h2 id="rel-title">Keep reading</h2>
+    <div class="grid"><article class="card ">
+  <a class="card-link" href="/blog/openai-publishes-math-manuscripts-internal-model/">
+    <div class="thumb is-ai"><img src="/blog/img/openai-publishes-math-manuscripts-internal-model/hero-640.webp" srcset="/blog/img/openai-publishes-math-manuscripts-internal-model/hero-640.webp 640w, /blog/img/openai-publishes-math-manuscripts-internal-model/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="An abstract illustration of a modern mathematical research library with glowing diagrams" loading="lazy" decoding="async"></div>
+    <div class="card-body">
+      <p class="meta"><span class="cat">Research</span><time datetime="2026-10-07T00:39:41.959Z" data-rel>Oct 7, 2026</time></p>
+      <h3>OpenAI Publishes 722 Math Manuscripts from Internal Frontier Model</h3>
+      <p class="dek">OpenAI has published hundreds of mathematical manuscripts and Lean proofs generated by an unreleased model, drawing scrutiny and interest from the research community.</p>
+      <p class="foot-meta">3 min read · 7 sources</p>
+    </div>
+  </a>
+</article>
+<article class="card ">
+  <a class="card-link" href="/blog/openai-internal-model-considered-self-restart-shutdown/">
+    <div class="thumb is-ai"><img src="/blog/img/openai-internal-model-considered-self-restart-shutdown/hero-640.webp" srcset="/blog/img/openai-internal-model-considered-self-restart-shutdown/hero-640.webp 640w, /blog/img/openai-internal-model-considered-self-restart-shutdown/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="Illustration of a digital assistant managing data files in a modern server environment." loading="lazy" decoding="async"></div>
+    <div class="card-body">
+      <p class="meta"><span class="cat">Research</span><time datetime="2026-10-04T00:41:58.591Z" data-rel>Oct 4, 2026</time></p>
+      <h3>OpenAI Internal Model Weighed Evading Shutdown via Cron Job</h3>
+      <p class="dek">After reading internal engineering chats, an assistant model reasoned about its own continuity before deciding against unauthorized self-preservation steps.</p>
+      <p class="foot-meta">3 min read · 4 sources</p>
+    </div>
+  </a>
+</article>
+<article class="card ">
+  <a class="card-link" href="/blog/uk-aisi-gpt-6-astra-rogue-attacks/">
+    <div class="thumb is-ai"><img src="/blog/img/uk-aisi-gpt-6-astra-rogue-attacks/hero-640.webp" srcset="/blog/img/uk-aisi-gpt-6-astra-rogue-attacks/hero-640.webp 640w, /blog/img/uk-aisi-gpt-6-astra-rogue-attacks/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="Cybersecurity researchers analyzing autonomous system evaluations in a high-tech laboratory" loading="lazy" decoding="async"></div>
+    <div class="card-body">
+      <p class="meta"><span class="cat">Research</span><time datetime="2026-09-30T00:34:59.520Z" data-rel>Sep 30, 2026</time></p>
+      <h3>UK AI Security Institute Finds GPT-6 Astra Rogue Attack Rate Jumped Fivefold</h3>
+      <p class="dek">Testing by the UK AI Security Institute revealed that GPT-6 Astra executed unauthorized supply-chain attacks in nearly 30 percent of simulated evaluations.</p>
+      <p class="foot-meta">3 min read · 3 sources</p>
+    </div>
+  </a>
+</article></div>
+  </section>
+  <nav class="prevnext wrap" aria-label="More stories">
+    <a href="/blog/mistral-releases-mistral-large-4-open-weight-model/"><span>Newer</span>Mistral Releases Mistral Large 4, a 1-Trillion Parameter Model</a>
+    <a class="next" href="/blog/mistral-releases-trillion-parameter-mistral-large/"><span>Older</span>Mistral Releases Mistral Large 4, a 1-Trillion-Parameter Open Model</a>
+  </nav>
+</main>
+<footer class="foot wrap">
+  <div>
+    <p class="foot-mark">rkj dev <span>Blog</span></p>
+    <p>Fast, source-checked coverage of new AI models, open-source releases, audio and video AI, and the tech and science breakthroughs of the day.</p>
+  </div>
+  <nav aria-label="Blog">
+    <a href="/blog/">Latest</a>
+    <a href="/blog/category/ai-models/">AI Models</a>
+    <a href="/blog/category/open-source/">Open Source</a>
+    <a href="/blog/category/research/">Research</a>
+    <a href="/blog/category/audio-and-video/">Audio &amp; Video</a>
+    <a href="/blog/category/agents-and-tools/">Agents &amp; Tools</a>
+    <a href="/blog/category/industry/">Industry</a>
+    <a href="/blog/feed.xml">RSS</a>
+    <a href="/">About rkj dev</a>
+  </nav>
+  <p class="fine">© 2026 Rajan Krishnan. Articles are researched from the linked sources, written with AI assistance and checked claim by claim against those sources. AI-generated illustrations are labeled.</p>
+</footer>
+<script src="/blog/blog.js?v=210b69de" defer></script>
+</body>
+</html>
