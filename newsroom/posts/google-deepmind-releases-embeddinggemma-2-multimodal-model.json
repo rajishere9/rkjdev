@@ -1,0 +1,172 @@
+{
+ "slug": "google-deepmind-releases-embeddinggemma-2-multimodal-model",
+ "title": "Google DeepMind Releases EmbeddingGemma 2 Open Multimodal Model",
+ "seoTitle": "Google DeepMind Launches EmbeddingGemma 2 Multimodal Model",
+ "description": "Google DeepMind has launched EmbeddingGemma 2, an open 740M parameter multimodal embedding model running locally across text, images, video, and audio.",
+ "dek": "The sub-1B parameter open-weight model maps text, code, vision, and audio into a unified vector space for privacy-first, on-device semantic search.",
+ "category": "AI Models",
+ "tags": [
+  "Google DeepMind",
+  "EmbeddingGemma 2",
+  "Multimodal AI",
+  "On-Device AI",
+  "Open Source",
+  "Gemma 4"
+ ],
+ "keyTakeaways": [
+  "EmbeddingGemma 2 features a 740M parameter footprint designed to map text, code, images, video, and audio into a single 768-dimensional vector space.",
+  "The model is released under a permissive Apache 2.0 license and supports modular loading, operating as a 270M parameter base for text and code workloads.",
+  "Quantized builds require approximately 191MB of active RAM for text weights and 567MB for full multimodal capabilities on a Google Pixel 11 Pro.",
+  "Matryoshka Representation Learning allows vector truncation from 768 dimensions down to 128 dimensions, enabling up to a 6x storage reduction."
+ ],
+ "body": "On October 6, 2026, Google DeepMind launched [EmbeddingGemma 2](https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/), an open-weight multimodal embedding model designed to run on consumer hardware such as smartphones and laptops. Building on the Gemma 4 architecture released earlier in the year, the model natively maps text, code, visual documents, images, video frames, and audio into a unified 768-dimensional vector space. Released under a commercially permissive Apache 2.0 license, the sub-1-billion parameter release expands on the original text-only EmbeddingGemma introduced in September 2025.\n\nThe initial EmbeddingGemma model achieved more than 20 million downloads, according to [Google DeepMind research engineers Sahil Dua and Henrique Schechter Vera](https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/). By expanding to vision and audio while keeping resource footprints low, EmbeddingGemma 2 aims to eliminate the latency and memory overhead typically caused by chaining separate speech-to-text, vision captioning, and text embedding models.\n\n## Modular Architecture and On-Device Efficiency\n\nEmbeddingGemma 2 contains 740 million total parameters structured around a modular backbone. The base text and code model consists of 270 million parameters (130 million backbone parameters plus a 140 million embedder), augmented by an optional 170 million parameter vision encoder and a 300 million parameter audio encoder. Developers can selectively load only the required modalities at runtime, as outlined in [Google's developer guide](https://developers.googleblog.com/embeddinggemma-2-the-developer-guide/).\n\n[[FIG1]]\n\nThis modularity translates to low resource consumption on edge devices. According to the [Google AI Edge team](https://developers.googleblog.com/google-ai-edge-with-embeddinggemma-2/), running quantized builds on a Google Pixel 11 Pro consumes approximately 191MB of active RAM for text-only weights and roughly 567MB for the full multimodal model. Inference speed measurements on a MacBook M5 Pro GPU demonstrate visual embedding latencies as low as 37.3 ms per image (about 26.9 images per second) at a budget of 70 vision tokens.\n\nThe model features an 8,192-token context window—a fourfold increase over its predecessor. This expanded capacity accommodates up to 5.5 minutes of 16 kHz mono audio (at 25 tokens per second), 29 images (at default 280 tokens per image), or 58 video frames (at 1 frame per second and 140 tokens per frame), as well as interleaved multimodal sequences containing text and media placeholder tokens.\n\n## Benchmark Performance and Matryoshka Compression\n\nIn standard evaluations detailed in the [EmbeddingGemma 2 model card](https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2), the model posted major gains in code search, jumping 9.92 points from 68.76 on EmbeddingGemma 1 to 78.68 on the Massive Text Embedding Benchmark (MTEB Code v1, NDCG@10). Its multilingual text performance held steady at 61.36 on MTEB multilingual v2, matching the previous generation's 61.15 across more than 100 languages.\n\nFor non-text modalities, EmbeddingGemma 2 scored 64.64 on the Massive Image Embedding Benchmark (MIEB lite), 57.28 Hit@1 on MMEB v2 Image, 67.84 NDCG@5 on visual documents, 50.67 Hit@1 on video, 69.54 MRR@10 on the Massive Sound Embedding Benchmark (MSEB Retrieval), and 49.39 on the Massive Audio Embedding Benchmark (MAEB).\n\n[[FIG2]]\n\nTo manage storage footprint in local vector databases, EmbeddingGemma 2 supports Matryoshka Representation Learning (MRL). Developers can dynamically truncate the default 768-dimensional vectors to 512, 256, or 128 dimensions followed by L2 re-normalization. At 256 dimensions, storage needs shrink by 3x while retaining around 95% of full quality on image, video, and speech retrieval. Truncating to 128 dimensions yields a 6x compression ratio (reducing a 1-million vector index from roughly 1.5 GB to 250 MB in bfloat16), though Google notes that multimodal recall drops to around 75% at 128 dimensions.\n\n## Developer Tooling and Applications\n\nTo showcase practical edge capabilities, Google updated the Google AI Edge Gallery app on Android and iOS with two interactive showcases: Instant Media Search, which performs search-as-you-type indexing in local SQLite databases, and Video Moments Finder, which identifies timestamps for actions like \"kids laughing\" without generating intermediate text transcripts, according to [developers.googleblog.com](https://developers.googleblog.com/google-ai-edge-with-embeddinggemma-2/).\n\nOn macOS, Google launched an experimental app called [Google AI Edge Foresight](https://9to5google.com/2026/10/06/google-ai-edge-foresight/). Foresight acts as an offline meeting companion that pairs EmbeddingGemma 2 with Gemma 4 models. Because EmbeddingGemma 2 shares its text tokenizer and audio encoder architecture with Gemma 4, running both models together reduces overall memory overhead. The app indexes live system microphone audio and meeting transcripts locally to turn shorthand notes into comprehensive summaries without transmitting voice data to cloud servers.\n\nFor cross-platform software engineering, MediaPipe Tasks provides turnkey Universal Embedder, Semantic Retriever, and Decision Task components for Web, iOS, macOS, Windows, and Linux. Google also confirmed that Android developers will gain native access through ML Kit in coming weeks, incorporating NPU hardware acceleration.\n\n## Availability and Technical Guidelines\n\nEmbeddingGemma 2 model weights are available immediately under the Apache 2.0 license across [Hugging Face and Kaggle](https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/), with deployment planned for the Gemini Enterprise Agent Platform Model Garden. The model is supported by serving frameworks including sentence-transformers (v6.1.0+), Hugging Face Transformers, LiteRT, vLLM, llama.cpp, Ollama, SGLang, and MLX, with fine-tuning support available via Unsloth and vector indexing via Qdrant.\n\nGoogle advises developers to run inference in bfloat16 or float32, cautioning that float16 dynamic range limitations can produce NaN values or silent quality degradation. Additionally, the pre-trained embedding model did not undergo post-training safety alignment or output moderation; safety mitigations were applied exclusively during pre-training data curation, requiring developers to implement application-level filtering downstream.",
+ "faq": [
+  {
+   "q": "What modalities are supported by EmbeddingGemma 2?",
+   "a": "EmbeddingGemma 2 natively maps text, source code, images, video frames, and audio into a shared 768-dimensional embedding space."
+  },
+  {
+   "q": "How much memory does EmbeddingGemma 2 require on mobile devices?",
+   "a": "When quantized on a Google Pixel 11 Pro, the 270M parameter text core requires roughly 191MB of active RAM, while the full 740M parameter multimodal model uses about 567MB."
+  },
+  {
+   "q": "What license is EmbeddingGemma 2 released under?",
+   "a": "EmbeddingGemma 2 is released under a commercially permissive Apache 2.0 license with model weights hosted on Hugging Face and Kaggle."
+  },
+  {
+   "q": "How does Matryoshka Representation Learning help with vector storage?",
+   "a": "MRL allows output vectors to be sliced from 768 dimensions down to 512, 256, or 128 dimensions. Truncating to 128 dimensions delivers up to a 6x reduction in vector database storage."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern smartphone resting on a wooden desk, surrounded by abstract glowing geometric vector diagrams connecting icons of soundwaves, film frames, photographs, and lines of code in soft ambient studio lighting",
+  "alt": "Conceptual illustration of multimodal embeddings connecting text, audio, images, and video on a mobile device",
+  "caption": "Illustration: EmbeddingGemma 2 unites multiple data modalities directly on consumer hardware.",
+  "src": "img/google-deepmind-releases-embeddinggemma-2-multimodal-model/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 55848,
+  "small": "img/google-deepmind-releases-embeddinggemma-2-multimodal-model/hero-640.webp",
+  "og": "img/google-deepmind-releases-embeddinggemma-2-multimodal-model/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/google-deepmind-releases-embeddinggemma-2-multimodal-model/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A software engineer sitting in a minimalist workspace looking at a laptop displaying modular visual blocks representing text, vision, and audio neural network layers",
+   "alt": "Illustration of a software developer configuring modular AI encoders",
+   "caption": "Illustration: The modular architecture allows loading only the required modality encoders to minimize memory usage.",
+   "slot": "FIG1",
+   "src": "img/google-deepmind-releases-embeddinggemma-2-multimodal-model/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 26554,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "An abstract visual representation of layered, nested Russian Matryoshka dolls made of translucent digital light and data points compressing into smaller dimensions",
+   "alt": "Abstract digital graphic representing Matryoshka representation learning vector dimension truncation",
+   "caption": "Illustration: Matryoshka dimension truncation enables developers to compress vector storage by up to six times.",
+   "slot": "FIG2",
+   "src": "img/google-deepmind-releases-embeddinggemma-2-multimodal-model/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 31812,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://developers.googleblog.com/google-ai-edge-with-embeddinggemma-2/",
+   "title": "Bring multimodal semantic search to the edge with EmbeddingGemma 2",
+   "site": "developers.googleblog.com",
+   "published": 1791244800000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://developers.googleblog.com/embeddinggemma-2-the-developer-guide/",
+   "title": "EmbeddingGemma 2: The Developer Guide",
+   "site": "developers.googleblog.com",
+   "published": 1791244800000,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
+   "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
+   "site": "Google",
+   "published": 1791244800000,
+   "official": true
+  },
+  {
+   "n": 4,
+   "url": "https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2",
+   "title": "EmbeddingGemma 2 model card | Google AI for Developers",
+   "site": "ai.google.dev",
+   "published": 1791244800000,
+   "official": true
+  },
+  {
+   "n": 5,
+   "url": "https://siliconangle.com/2026/10/06/google-expands-embeddinggemma-beyond-text-to-images-audio-and-video/",
+   "title": "Google expands EmbeddingGemma beyond text to images, audio and video",
+   "site": "SiliconANGLE",
+   "published": 1791325084000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://thenextweb.com/news/embeddinggemma-2-on-device-europe",
+   "title": "Google launches EmbeddingGemma 2, an open multimodal embedding model for devices",
+   "site": "TNW | Artificial-intelligence",
+   "published": 1791314130000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://9to5google.com/2026/10/06/google-ai-edge-foresight/",
+   "title": "Google AI Edge Foresight for Mac turns scribbles into full notes using offline recordings",
+   "site": "9to5Google",
+   "published": 1791306919000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1791338801987,
+ "updatedAt": 1791338801987,
+ "foundVia": "developers.googleblog.com, Techmeme and Google News",
+ "check": {
+  "claims": 47,
+  "score": 10
+ },
+ "story": {
+  "id": "Pd3197677",
+  "score": 91,
+  "items": [
+   "https://developers.googleblog.com/google-ai-edge-with-embeddinggemma-2/",
+   "https://developers.googleblog.com/embeddinggemma-2-the-developer-guide/",
+   "https://www.techmeme.com/261006/p25#a261006p25",
+   "https://news.google.com/rss/articles/CBMipgFBVV95cUxOd1ZmVmtZblIyUHdYWWo0b0MxT2FsRllHRVFlSDhxYzl0MDBiY2tCbU9NSlJCV3N5eGdMTEdpQXRiamU2NzBzRnhnRzRlWVdnbW13UktSeWp3cTJHdXpWWkxJTmNBRFQ4dEpFajNpaHpWYXhFTXRSblJXVlk0bnJiM3JsWV8tZGo1cDZYZDV1by14cE5WTk10aS1sZHBfd0VFOGtLT3B3?oc=5",
+   "https://news.google.com/rss/articles/CBMixwFBVV95cUxNS2hVTFRoaFVuS1J6dmVjYnQ3T29yUk00dDczU0RNZElkWmQ3OTJRd0daejF3NU8xMllSNEVqdDVvV2FYQWRjN3JzejlMYUZ0NXI0eS1Kc3RUd2lxUERoVWFSZUdhQTNCZzktZ0Q0WW42V2M1ZDk2ckRhSDVvRFY3NmxBZEkyZmJsX2tuQVhuTkw0Rkk5Y0c3WnprOTl5Ujd5d0p0T21HRmwxQ1ZQLWsxU2ZWWG1CcmRzSElCUG1mMThnRzRIY25v?oc=5",
+   "https://9to5google.com/2026/10/06/google-ai-edge-foresight/",
+   "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
+   "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQZnFld2xRdDVNUloweENSSVlzYXVZQ1ZUM2F3RXFFdl8yOHhudlZiUnkxdEJBcEtaWnJYcFh3UnI5QkFnbWRpVldxa1RjYTQzNVFhUzZHaE1OZllLWUoyVjZvLWhudjlZdTEzdkJWZW5TUTBHZGhkMS1KemlhbjkzaWVtN1BxQ2RHcGJn?oc=5",
+   "https://the-decoder.com/google-claims-embeddinggemma-2-outperforms-rival-embedding-models-twice-its-size/",
+   "https://www.reddit.com/r/LocalLLaMA/comments/1wz6uxn/embeddinggemma_2_running_locally_inbrowser_on/",
+   "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
+   "https://simonwillison.net/2026/Oct/6/hn-49983751/",
+   "https://siliconangle.com/2026/10/06/google-expands-embeddinggemma-beyond-text-to-images-audio-and-video/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
