@@ -1,0 +1,184 @@
+{
+ "slug": "mistral-large-4-preview-open-weights",
+ "title": "Mistral Releases Trillion-Parameter Mistral Large 4 Preview",
+ "seoTitle": "Mistral Large 4: Specs, Pricing, and Benchmark Details",
+ "description": "Mistral AI has debuted Mistral Large 4, a 1-trillion parameter multimodal model. Explore benchmark results, architecture details, API pricing, and release dates.",
+ "dek": "Nicknamed 'Le Chonk,' the multimodal model features a 1-trillion parameter architecture and aims to rival leading American and Chinese AI systems.",
+ "category": "AI Models",
+ "tags": [
+  "Mistral AI",
+  "Mistral Large 4",
+  "Open Weights",
+  "Mixture of Experts",
+  "Cybersecurity",
+  "Multimodal AI"
+ ],
+ "keyTakeaways": [
+  "Mistral Large 4 features a granular Mixture-of-Experts architecture with 1.05 trillion total parameters and 49 billion active parameters per token.",
+  "The model is currently accessible in public preview via the Mistral API and Mistral Studio, with open weights scheduled for download on October 31, 2026.",
+  "Trained on 3,800 NVIDIA Grace Blackwell GPUs in Europe, the model demonstrates standout scores in cybersecurity, visual grounding, and enterprise agent workflows.",
+  "API pricing is set at $0.68 per million input tokens, $0.07 per million cached input tokens, and $2.09 per million output tokens."
+ ],
+ "body": "French AI developer Mistral AI has launched a public preview of [Mistral Large 4](https://mistral.ai/news/mistral-large-4/), a 1-trillion parameter open-weight multimodal model nicknamed \"Le Chonk.\" Released on October 6, 2026, the model is available to developers through Mistral Studio and company APIs, with the full open weights scheduled for release at the end of the month. Mistral frames the launch as a substantial step forward for European AI development, offering organizations an open-weight alternative designed to compete with closed systems from American labs and open offerings from China.\n\n[[FIG1]]\n\n## Granular MoE Architecture and Core Specifications\n\nAccording to [Mistral's official technical documentation](https://docs.mistral.ai/models/mistral-large-4-0), Mistral Large 4 is built on a granular Mixture-of-Experts (MoE) architecture. The model contains 1.05 trillion total parameters, with 49 billion parameters active per token during computation, or 52 billion active parameters when accounting for embeddings and output layers. The vision capability is powered by an integrated 1.6-billion parameter vision encoder, and the model supports a context window of up to 1 million tokens.\n\nAccording to [Mistral's model card on Hugging Face](https://huggingface.co/mistralai/Mistral-Large-4.0-1T05-A52B), the open weights are listed as artifact `mistralai/Mistral-Large-4.0-1T05-A52B` with a target release date of October 31, 2026. The preview API supports two discrete reasoning levels: \"none\" and \"high,\" as detailed in [developer testing on Simon Willison's Weblog](https://simonwillison.net/2026/Oct/6/le-chonk/). The model's training data spans more than 160 languages, covering every official language of the European Union.\n\n## Cybersecurity, Multimodal Grounding, and Benchmark Performance\n\nMistral has oriented the model toward specialized domains, including software engineering, visual analysis, finance, and cyberdefense. According to [reporting by SiliconANGLE](https://siliconangle.com/2026/10/06/mistral-launches-open-source-mistral-large-4-details-ai-roadmap/), Mistral Large 4 ranked among the top five systems globally on the Artificial Analysis Cyber Index, achieving an 82% score on a test requiring the model to reproduce and patch real open-source vulnerabilities. On Cybench, a suite of 40 cybersecurity competition challenges, the model solved 93% of the tasks.\n\nMistral highlighted that closed-source models such as Claude Opus 5.5 and GPT-6 Astra frequently refuse these vulnerability reproduction tasks due to safety guardrails. In contrast, Mistral intends to give defensive security teams auditable systems that can analyze malware, prioritize software flaws, and generate detection rules without encountering provider-level refusals.\n\n[[FIG2]]\n\nIn multimodal evaluations reported by Mistral, the model scored 42% on the Dense 200 visual grounding benchmark, compared to 41% for GPT-6 Astra. The company demonstrated its use in parsing high-resolution geospatial imagery and verifying mechanical components in engineering schematics.\n\nFor coding and enterprise workflows, Mistral Large 4 scored 49.8% on the Coding Agent Index, putting it ahead of DeepSeek V4 Pro 0813 and Qwen3.8 Max. On AutomationBench—which tests 657 tasks across platforms such as Gmail, Slack, and Salesforce—it reached 59.9%. On the AA-Briefcase benchmark evaluating multi-step knowledge work, the model achieved a 1,393 Elo rating.\n\n## Training Infrastructure and Reinforcement Learning Pipeline\n\nMistral trained Large 4 from scratch in European data centers using a cluster of 3,800 NVIDIA Grace Blackwell accelerators. Each accelerator combines two Blackwell graphics cards with one central processing unit. According to [WIRED](https://www.wired.com/story/mistral-new-model-le-chonk-open-source-china-us-frontier/), Mistral claims to have trained its model from scratch, in contrast to Chinese labs accused of using distillation.\n\nTo power post-training, Mistral deployed an asynchronous reinforcement learning pipeline capable of running tens of thousands of parallel rollouts. The setup combines sandboxed coding environments, automated web search, and static verification checkers. The company reported that the system generates approximately 33 billion tokens daily, yielding 16 billion trainable completion tokens. Mistral noted that reinforcement learning for the model remains ongoing, with further checkpoints planned.\n\n## Enterprise Sovereignty, Availability, and API Pricing\n\nThe launch of Mistral Large 4 follows Mistral's September 2026 Series D funding round of €3 billion ($3.3 billion), which valued the company at $24 billion. European policy analysts and enterprise leaders have increasingly focused on AI autonomy amid geopolitical uncertainties and export restrictions on proprietary frontier systems.\n\n[[FIG3]]\n\nAccording to Mistral's developer portal, the preview API endpoints (`/v1/chat/completions`, `/v1/conversations`, `/v1/agents`, and `/v1/batch`) support structured outputs, function calling, document Q&A, and tool calling. The company has published the following pricing tiers:\n\n* **Input tokens:** $0.68 per million tokens (discounted from $1.36)\n* **Cached input tokens:** $0.07 per million tokens (discounted from $0.14)\n* **Output tokens:** $2.09 per million tokens (discounted from $4.18)\n\nWeights will be released freely for self-hosting on private clouds or on-premise infrastructure at the end of October 2026, allowing security and enterprise teams to run the system under their own internal policies.",
+ "faq": [
+  {
+   "q": "What is the parameter size of Mistral Large 4?",
+   "a": "Mistral Large 4 contains 1.05 trillion total parameters with a granular Mixture-of-Experts architecture. It activates 49 billion parameters per token (52 billion including embeddings and output layers) and features a 1.6-billion parameter vision encoder."
+  },
+  {
+   "q": "When will the Mistral Large 4 model weights be released?",
+   "a": "The model is currently accessible in public preview through Mistral's API and Mistral Studio. Mistral has scheduled the public release of the weights on Hugging Face for October 31, 2026."
+  },
+  {
+   "q": "What hardware was used to train Mistral Large 4?",
+   "a": "Mistral Large 4 was trained from scratch in European data centers on an internal cluster of 3,800 NVIDIA Grace Blackwell GPUs."
+  },
+  {
+   "q": "How much does the Mistral Large 4 API cost?",
+   "a": "Pricing on Mistral's platform is set at $0.68 per million input tokens, $0.07 per million cached input tokens, and $2.09 per million output tokens."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An expansive modern European data center server room illuminated with cool blue and amber LED indicator lights, showing long rows of sleek computational rack units and overhead fiber optic cables.",
+  "alt": "Illustration of high-performance server racks in a modern data center.",
+  "caption": "Illustration: High-performance computational infrastructure supporting large-scale AI training runs.",
+  "src": "img/mistral-large-4-preview-open-weights/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 64680,
+  "small": "img/mistral-large-4-preview-open-weights/hero-640.webp",
+  "og": "img/mistral-large-4-preview-open-weights/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/mistral-large-4-preview-open-weights/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An AI researcher in business casual attire analyzing complex neural network diagrams and parameter distribution metrics displayed on transparent holographic glass screens.",
+   "alt": "Illustration of an AI researcher reviewing model parameter metrics on interactive displays.",
+   "caption": "Illustration: Engineers examining the architecture of trillion-parameter neural networks.",
+   "slot": "FIG1",
+   "src": "img/mistral-large-4-preview-open-weights/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 42612,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A cybersecurity analyst examining automated code patching workflows and software vulnerability traces across multi-monitor terminal setups in a security operations center.",
+   "alt": "Illustration of a software security analyst auditing vulnerability reports in an operations room.",
+   "caption": "Illustration: Security teams auditing automated vulnerability reproduction and remediation.",
+   "slot": "FIG2",
+   "src": "img/mistral-large-4-preview-open-weights/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 33706,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "A modern European corporate boardroom with technology executives discussing sovereign cloud deployment strategies in front of high-tech data visualization panels.",
+   "alt": "Illustration of executives and software architects collaborating around cloud deployment planning.",
+   "caption": "Illustration: Enterprise leaders planning self-hosted and sovereign AI infrastructure.",
+   "slot": "FIG3",
+   "src": "img/mistral-large-4-preview-open-weights/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 38310,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://docs.mistral.ai/models/mistral-large-4-0",
+   "title": "Mistral Large 4 - Mistral AI | Mistral Docs",
+   "site": "docs.mistral.ai",
+   "published": 1791244800000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://mistral.ai/news/mistral-large-4/",
+   "title": "Introducing Mistral Large 4",
+   "site": "Mistral",
+   "published": 1791288027000,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://huggingface.co/mistralai/Mistral-Large-4.0-1T05-A52B",
+   "title": "mistralai/Mistral-Large-4.0-1T05-A52B · Upcoming release · Hugging Face",
+   "site": "huggingface.co",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 4,
+   "url": "https://simonwillison.net/2026/Oct/6/le-chonk/",
+   "title": "Introducing Mistral Large 4: Le chonk",
+   "site": "Simon Willison’s Weblog",
+   "published": null,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://www.wired.com/story/mistral-new-model-le-chonk-open-source-china-us-frontier/",
+   "title": "Mistral Says Its New AI Model ‘Le Chonk’ Is the Best Open-Weight Offering Outside of China",
+   "site": "WIRED",
+   "published": 1791292523514,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://siliconangle.com/2026/10/06/mistral-launches-open-source-mistral-large-4-details-ai-roadmap/",
+   "title": "Mistral launches open-source Mistral Large 4, details AI roadmap",
+   "site": "SiliconANGLE",
+   "published": 1791318533000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1791332397018,
+ "updatedAt": 1791332397018,
+ "foundVia": "Hacker News, mistral.ai and Google News",
+ "check": {
+  "claims": 27,
+  "score": 10
+ },
+ "story": {
+  "id": "Pbe084322",
+  "score": 103,
+  "items": [
+   "https://docs.mistral.ai/models/mistral-large-4-0",
+   "https://mistral.ai/news/mistral-large-4/",
+   "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNcjVFRUV6ZzZmeXFiN3NIWmZwUTBGWTR3ZUx1UUhjLWRLMC0wZThtLW00a1FYNjloa3BiSTFveFdZZFkxWnd5d283Qi04MnU1UC1IUl9KdlBkX2o2X3JpQ0pUZVRZQzJ3Uk1fRzR5VnJIdGhwVGI3Q0JWc2RWOGtBZTZzek4tcWQxRTAxZnB3eWJyV2gzY2FlNjdYVk95b2lQX2UtLVNWandvMDA?oc=5",
+   "https://news.google.com/rss/articles/CBMipAFBVV95cUxNUmJKLWJQUjNPSE5jRU1zWFZzNmFFdmZBdzNmeXBkb3JELWVKbTNKVHp6Q0dBWWxoUEZ5alZJQVJ0a0RyYnhhWkQxWlY2bmFDRnZ0a1RVYlhnU3hRTF9ldEpfSlNMcE1mMkJjNkRKanFLdmVKRXh2T3U0allxVEw0YmFkeVJfX1NCZGlUZHI5czhFNWU3TzlOZkRyVGpQQXRkYzZvYQ?oc=5",
+   "https://news.google.com/rss/articles/CBMib0FVX3lxTE5FTlJ6SWZzT0xiYi1RR3MtSFpJVk0yS2cwNGJUelJmcEVHVHkwUVFGZDZULWtXSHBXNndQbWJ0S1lPVjZoZDJQR3A0QlJvT1ppU2lMTlJiRWx3bjI4c2NrX28xM0VwMW1iSV9XZnMtQdIBdEFVX3lxTE1tMDVOZG9acWpaNEhUcnhLM01pNkJ0eFVkZFJGWWRoSVpvN2FDTVNKMkl5akJ4dnhSMko2bi1aendmaFVnSmJxU3ZqNE5LcXlWSWVfMVdSR2FmQ1VvdXY4X0ZLa2FzSXdfQldUc21WaWRzYXVK?oc=5",
+   "https://www.techmeme.com/261006/p22#a261006p22",
+   "https://www.wired.com/story/mistral-new-model-le-chonk-open-source-china-us-frontier/",
+   "https://news.google.com/rss/articles/CBMijgFBVV95cUxOTjJzSU96N3RCc183d1UtUXZuMi1GWHhMN1NqN1FLV3hxMnJ2eGVUbUM4RHFpM0JIMTNvZkczSVpnUWtyMmpwaFI5QWlVclhsWVo0WTJtWkxyMjA4eGtJcXhpY0djeEZ4ZnhJX3NBdUV3TGtZYW9DZHhpTEdLN3d4SGl0NFY4WWtickFBUGFn?oc=5",
+   "https://news.google.com/rss/articles/CBMixAFBVV95cUxPc1hBSE1FRHRDR29EcjFNV3lwWXZXYmJDcU5VcDBnXzQwTU01SHE1cnJ3WDhJbWJIUlBIZkM4enlJSWUxWU9Tb2RRWF83VXlFNDE0UEhxaUlfWlNjOXhVaklHTjY1VkNZXy1sMjhtOGlMdk1pVVBCMW5jYWwzNW55VFJ4SXdjaElIcUVHbjE0c3dQbWhIQS0zUU55MERZa2JPZzFsem90NGNJd1ZMX0pucUtSbm12THMwZXVRQ0cwR2xtcTkx?oc=5",
+   "https://twitter.com/MistralAI/status/2107456586813730854",
+   "https://x.com/MistralAI/status/2107456586813730854",
+   "https://www.reddit.com/r/LocalLLaMA/comments/1wz2lte/le_chonk_strikes_back/",
+   "https://www.reddit.com/r/LocalLLaMA/comments/1wz2bsn/mistral_large_4_benchmarks/",
+   "https://x.com/MistralAI/status/2107457414387622310?s=20",
+   "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNSzNNZTh3aGNlNVhVV1JKWkJ4UDRtbl9sTzk4SlZPWlBjLVBCNURGblVQNzVnQmFTMWk5OE52YVZ4SWxYSk5lVU94UVJWRkJ4YTVqOUd1MFFlWjhPWG9JWGN0Ml9sdG5DWXU2LUpPbHB6TEpVeUFueGx2UEk3cTNyNUwwamJfR01uZDAwNzk5bFlGd19jWWJTbl9yanU0YVRIb2RqNXFqazJ3WjJSUEhvOEZPSkNGUzdaYWNpQUVieWRWbS1BZGpibk1WbmtIcjlPRzl5ZUc3VEYwVjlvbzN6aFhGSHlmM2EtLW9GWUJSYUNNUnM?oc=5",
+   "https://news.google.com/rss/articles/CBMimgFBVV95cUxQWmJBY2JCWFhmTmNONnAzQVVubk9pR2s4NDB0M0xyMURhckRDZU1JS0VZWjd4czloMnBFSnl2NFVLcjJWamo4NnhmZ1JGZExKWmQycUI5Yl9pWU52Y3dibEdPU1pQSWx6NmZzMWZtbkgxb3B3MXJzT0ZZOERVV1RXT0xadVZ5YUhLVThTeFlRV3JheEdGdTkxT1hR?oc=5",
+   "https://news.google.com/rss/articles/CBMimgFBVV95cUxOQ3BSendCa1FtSDVpSDZXNk1wNjc3OGxPU2p6WWdST3dJalNvVG5FaTQxWkl2LWNacERCdC0tSHFEZHJLcUZFQnZqdXBUcVAzdzVZOHpnaTZ1OXdnUnlwNEEwVkQwMWwybHRBcG45Q2h3YzZQZVFQajhKcVdvQWpHZE5BN3VJdXc4WkhSeF82ZnZWV0puT1VjOUZn?oc=5",
+   "https://news.google.com/rss/articles/CBMizAFBVV95cUxOQ2NSa0ZLdTgwbk92SGU4NFhOUlYzd0EzUm5mSmprb2htMmd2NGx5WkdydlJ0MHZqc2V4aFpPdUJlc3RlMTAybXNHNkptcnlQUU5pUlBWekwtZ0RvV29SMk9ZZVN5VUVkUTJMUzJzVlJGQkIxZ1FfdVdSeWJrdHdjajg0TTBvRU8ydGRvazhxdGNTU1NfeDRfS2NKRURDei1HS1pDbEQxRHZSM0dBYXE2SG1ISXotSm5WaDJpeXZQZHd1SzlLRnhPVmNKS2_SAdIBQVVfeXFMUFhxUWt6R1ZDX1RWUVY0OWtBNncyVF9td1NkN1FOZFJZYV8yTlg4cFB5LS0yX3JSYUFjUnlzbjAtSEFBUW9TRlVtOXc3a3pWNmlLUWZSbmlGSVRnMXBlTHdiYXByQUlBMGx5SlFGb3g0MXZNeV9ySzFyc0ZQMkVpQUhhdWxmM3U5MlBjVEM0UnN4RUtfeDVTTEFQQWJPZTFlZUpTS0JjNlRuZkQ3dVBoVlV4Sl9lNlZuSl9Ia1Zac2VmeTlBbzBPaXdJblZaR05BN0l3?oc=5",
+   "https://news.google.com/rss/articles/CBMieEFVX3lxTE9XZUwzWGktYWtmdkZEUDcxTGNsTFhXVEMyRENhRXEtV2dZMDZkTENHdGJoSG96S1NzNkhmLXkwU0FjQ19CbFNrcl9VRnZTQ1ZUQ0pRSjNRQ2VKTlVjNlRTMGV1cGxMbUtCR2luZjBsaVdHV3Q0R2VvOQ?oc=5",
+   "https://mistral.ai/news/mistral-large-4/\\"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
