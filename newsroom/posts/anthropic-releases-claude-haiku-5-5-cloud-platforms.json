@@ -1,0 +1,179 @@
+{
+ "slug": "anthropic-releases-claude-haiku-5-5-cloud-platforms",
+ "title": "Anthropic Releases Claude Haiku 5.5 With Effort Controls and Lower Pricing",
+ "seoTitle": "Anthropic Launches Claude Haiku 5.5 Across Major Clouds",
+ "description": "Anthropic launched Claude Haiku 5.5 on October 7, 2026, which according to Anthropic costs around 75% less on average to run than Claude Haiku 4.5, introducing reasoning effort controls, and rolling out across AWS and Google Cloud.",
+ "dek": "The lightweight model arrives with major agentic performance gains, adjustable effort controls, and immediate deployment across AWS, Google Cloud, and Azure.",
+ "category": "AI Models",
+ "tags": [
+  "Anthropic",
+  "Claude Haiku 5.5",
+  "Amazon Bedrock",
+  "Google Cloud",
+  "AI Benchmarks",
+  "Cloud Computing"
+ ],
+ "keyTakeaways": [
+  "Anthropic states the model costs around 75% less on average to run compared to Haiku 4.5, pricing standard prompts up to 100,000 tokens at $0.10 per million input tokens.",
+  "The release marks the first Haiku model with adjustable effort settings, enabling developers to balance speed, cost, and reasoning depth.",
+  "Anthropic launched the model simultaneously on the Claude Platform, Amazon Bedrock, Google Cloud, and Microsoft Azure on October 7, 2026.",
+  "Companion updates include a 50% price cut for Claude Sonnet 5.5 cache reads and new monthly API credits for Claude Max and Team subscribers."
+ ],
+ "body": "On October 7, 2026, [Anthropic announced Claude Haiku 5.5](https://www.anthropic.com/claude-haiku-5-5), introducing the latest edition of its lightweight, fast model family. Billed as the fastest and most efficient model in the Claude 5.5 lineup, Haiku 5.5 delivers substantial benchmark improvements across agentic coding, computer use, and knowledge extraction. Anthropic reported that the model costs roughly 75% less to run on average than Claude Haiku 4.5, directly targeting high-volume workflows, repetitive enterprise operations, and real-time subagent routing.\n\nThe launch immediately rolled out across major cloud platforms. Alongside direct API access, Claude Haiku 5.5 is generally available on [Amazon Web Services via Amazon Bedrock](https://aws.amazon.com/blogs/machine-learning/introducing-claude-haiku-5-5-on-aws/), [Google Cloud](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/haiku-5-5), and Microsoft Azure, with AWS Bedrock and Google Cloud backing the deployment with retirement commitments extending no earlier than October 7, 2027.\n\n[[FIG1]]\n\n## Technical Specs and the Addition of Effort Controls\n\nClaude Haiku 5.5 includes a 1-million-token context window and supports up to 128,000 maximum output tokens, according to technical documentation published by [AWS Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-haiku-5-5.html) and [Google Cloud](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/haiku-5-5). Supported input modalities include text, images, and documents such as PDFs, with text output capabilities.\n\nFor the first time in the Haiku product tier, Anthropic introduced configurable effort controls. Adaptive thinking is active by default and can be calibrated across low, medium, high, xhigh, and max levels, defaulting to medium. If reasoning is disabled, the effort setting is capped at high. This functionality allows developers to adjust the balance between reasoning depth and execution costs per task rather than applying a blanket standard across an entire system.\n\nIn testing documented by [Simon Willison](https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/), a low-effort prompt generating SVG graphics completed in 7 seconds at a cost of 0.0936 cents, while a max-effort run with expanded reasoning traces took 5 minutes and 9 seconds, costing 3.3826 cents. Willison also observed that Haiku 5.5 adopts a modified tokenizer, which processes approximately 1.25 times as many tokens for identical prompts compared to Haiku 4.5.\n\n## Benchmark Performance Across Agentic Tasks\n\nAnthropic highlighted significant performance gains over Claude Haiku 4.5 and competitive positioning against OpenAI's GPT-6 Luna across evaluation suites outlined in the [Anthropic announcement](https://www.anthropic.com/claude-haiku-5-5):\n\n* **Computer Use (OSWorld 2.1 offline subset):** Haiku 5.5 achieved 72.4%, up from 15.7% on Haiku 4.5, surpassing GPT-6 Luna's 48.9% and approaching Sonnet 5.5's 83.9%.\n* **Agentic Coding (Terminal-Bench 4.0):** Haiku 5.5 scored 39.2%, compared to 0.0% for Haiku 4.5 and 16.4% for GPT-6 Luna. Claude Sonnet 5.5 posted 70.6% on the same benchmark.\n* **Multidisciplinary Reasoning (Humanity's Last Exam):** Haiku 5.5 recorded 45.9% without tools and 57.4% with tools, improving over Haiku 4.5's 10.2% without tools and 18.7% with tools.\n* **Knowledge Work (GDPval-AA v2.1):** The model reached 1,620, higher than Haiku 4.5 (735) and GPT-6 Luna (1,437).\n* **Visual Reasoning (Chartography without tools):** Haiku 5.5 reached 46.4%, up from 6.4% on Haiku 4.5 and 29.1% on GPT-6 Luna.\n\nAnthropic shared testing feedback from enterprise software firm Asana. Staff software engineer Aaron Vinh reported that integrating Haiku 5.5 into Asana's AI Teammates product line resulted in an inference speedup of up to 2.5 times per agent turn and reduced task-completion latency by over 30% during bug triaging and project portfolio monitoring.\n\n[[FIG2]]\n\n## Tiered Pricing and Ecosystem Updates\n\nAnthropic structured the pricing for Claude Haiku 5.5 around prompt length thresholds, reported by [Anthropic](https://www.anthropic.com/claude-haiku-5-5) and analyzed by [Simon Willison](https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/):\n\n* **Prompts up to 100,000 tokens:** $0.10 per million input tokens, $0.50 per million output tokens, $0.01 per million cache reads, and $0.125 per million cache writes.\n* **Prompts exceeding 100,000 tokens:** $0.50 per million input tokens, $2.50 per million output tokens, $0.05 per million cache reads, and $0.625 per million cache writes.\n\nAnthropic stated that roughly 90% of requests handled by the previous Haiku model fell under the 100,000-token threshold. For comparison, Haiku 4.5 was priced flatly at $1.00 per million input tokens, $5.00 per million output tokens, $0.10 per million cache reads, and $1.25 per million cache writes.\n\nConcurrent with the release, Anthropic halved the cache read pricing for Claude Sonnet 5.5 from $0.20 down to $0.10 per million tokens. The company stated this change lowers the total operational expense of running Sonnet 5.5 on most multi-turn agentic workflows by around 20%.\n\nAdditionally, Anthropic introduced recurring monthly API credits for subscribers using the Claude Platform. Max 5x subscribers receive $100 per month, Max 20x subscribers receive $200 per month, and Team tier organizations receive up to $500 per month pooled across members. These credits correspond to the monthly subscription fees, do not roll over month-to-month, and can be applied toward any model on the platform.\n\nAnthropic also released beta updates to its official Python and TypeScript software development kits, adding direct integration for computer use and browser automation workflows.\n\n## Safety Safeguards and Cloud Availability\n\nEvaluations outlined by Anthropic show fewer instances of misaligned behaviors and reduced willingness to cooperate with misuse compared to Haiku 4.5. On cybersecurity boundaries, Anthropic stated that Haiku 5.5 enforces stricter rules than Haiku 4.5 while permitting more defensive diagnostic operations than Sonnet 5.5. Active penetration testing tools and techniques favored by attackers remain blocked. Safeguards surrounding biological research mirror Sonnet 5, Sonnet 5.5, and Opus 5, with expanded access reserved for verified entities enrolled in Anthropic's Cyber and Life Sciences verification programs.\n\nAccording to [AWS](https://aws.amazon.com/blogs/machine-learning/introducing-claude-haiku-5-5-on-aws/) and [9to5Mac](https://9to5mac.com/2026/10/07/anthropic-upgrades-claude-with-new-haiku-5-5-model-details-here/), Haiku 5.5 is designed to function effectively alongside Claude Opus 5.5 and Sonnet 5.5. Under this architectural pattern, larger models manage overarching task decomposition, system planning, and code review, while fleets of parallel Haiku 5.5 subagents execute focused classification, file transformations, database queries, and document compaction.\n\nOn Amazon Bedrock, developers can deploy Haiku 5.5 via regional, geographic cross-region, and global inference profiles, with full support on AWS GovCloud endpoints. On Google Cloud, the model is available generally through Agent Studio and Model Garden under multi-region and global endpoints with processing limits up to 30 million input tokens per minute.",
+ "faq": [
+  {
+   "q": "How does Claude Haiku 5.5 pricing compare to Haiku 4.5?",
+   "a": "For prompts up to 100,000 tokens, Claude Haiku 5.5 costs $0.10 per million input tokens and $0.50 per million output tokens, representing a 90% price reduction from Haiku 4.5 ($1.00 input and $5.00 output per million tokens), while Anthropic states the model costs around 75% less to run on average overall across workloads."
+  },
+  {
+   "q": "What are effort controls on Claude Haiku 5.5?",
+   "a": "Effort controls allow developers to configure reasoning depth across low, medium, high, xhigh, and max levels. Medium is the default setting, enabling teams to balance response latency and cost against task complexity."
+  },
+  {
+   "q": "Where is Claude Haiku 5.5 currently available?",
+   "a": "Claude Haiku 5.5 is available on the Claude Platform API, Amazon Web Services via Amazon Bedrock, Google Cloud via Agent Studio and Model Garden, and Microsoft Azure."
+  },
+  {
+   "q": "What adjustments were made to Claude Sonnet 5.5 pricing?",
+   "a": "Anthropic cut the cost of prompt cache reads for Claude Sonnet 5.5 by 50%, reducing the rate from $0.20 to $0.10 per million tokens, which decreases overall agentic workload costs by approximately 20%."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern, minimalist server facility with racks of optical servers glowing softly in cyan and blue lights, while network cables form clean, organized rows in an airy architectural data center.",
+  "alt": "Modern enterprise data center with illuminated optical server racks",
+  "caption": "",
+  "src": "img/anthropic-releases-claude-haiku-5-5-cloud-platforms/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 80914,
+  "small": "img/anthropic-releases-claude-haiku-5-5-cloud-platforms/hero-640.webp",
+  "og": "img/anthropic-releases-claude-haiku-5-5-cloud-platforms/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/anthropic-releases-claude-haiku-5-5-cloud-platforms/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A software engineer working at an ultra-wide monitor in a brightly lit modern office, analyzing visual multi-tiered network graphs and latency metrics displayed on screen.",
+   "alt": "Software developer reviewing performance metrics and latency telemetry on an office display",
+   "caption": "",
+   "slot": "FIG1",
+   "src": "img/anthropic-releases-claude-haiku-5-5-cloud-platforms/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 39304,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "An abstract visualization of interconnected digital workflows, showing a central reasoning node delegating smaller computational tasks to multiple rapid subagents across light-filled pathways.",
+   "alt": "Abstract diagram of primary reasoning hub delegating work to smaller subagent streams",
+   "caption": "",
+   "slot": "FIG2",
+   "src": "img/anthropic-releases-claude-haiku-5-5-cloud-platforms/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 61048,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://www.anthropic.com/claude-haiku-5-5",
+   "title": "Introducing Claude Haiku 5.5",
+   "site": "anthropic.com",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://aws.amazon.com/blogs/machine-learning/introducing-claude-haiku-5-5-on-aws/",
+   "title": "Introducing Claude Haiku 5.5 on AWS | Amazon Web Services",
+   "site": "Amazon Web Services",
+   "published": 1791399130000,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://www-cdn.anthropic.com/e1080d6bf5ae2018ea3c2f414064be03232f5be5/Claude%20Haiku%205.5%20System%20Card.pdf",
+   "title": "",
+   "site": "www-cdn.anthropic.com",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 4,
+   "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-haiku-5-5.html",
+   "title": "Claude Haiku 5.5 - Amazon Bedrock",
+   "site": "docs.aws.amazon.com",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 5,
+   "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/haiku-5-5",
+   "title": "Claude Haiku 5.5 on Google Cloud",
+   "site": "Google Cloud Documentation",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 6,
+   "url": "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/",
+   "title": "Claude Haiku 5.5",
+   "site": "Simon Willison’s Weblog",
+   "published": null,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://9to5mac.com/2026/10/07/anthropic-upgrades-claude-with-new-haiku-5-5-model-details-here/",
+   "title": "Anthropic upgrades Claude with new Haiku 5.5 model, details here",
+   "site": "9to5Mac",
+   "published": 1791396853000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1791421163028,
+ "updatedAt": 1791421163028,
+ "foundVia": "Hacker News, Google News and Techmeme",
+ "check": {
+  "claims": 29,
+  "score": 10
+ },
+ "story": {
+  "id": "P32dcf668",
+  "score": 98,
+  "items": [
+   "https://www.anthropic.com/claude-haiku-5-5",
+   "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPbENadk1Lcm1iLUZOd0hYSmRZLWJHLTd0YjAwTExuMVozWW9McllnVWJuTHdPY3ZfRWJwVGdzMmpVaHhvODVVMkFMd0U0ejdyRjQxcEJMVzRqcTJqbWVaLXI5QnM1ckRSYmZVYjlBR2NqRTZaaW42QjFZMC00ZmxKOF9Fal9EODV2dEZnb1BPUDBlSFJrRDVtWkNLTWhacE04b3dyemlvckZTR3JmR0xONmxGb19hNU1tWFJMcVlJajNYUQ?oc=5",
+   "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBROXVUc29Pb3I2bTdHTDRZaXVjQzM3Z2pCd05nbHFhbUhZdDVGaG0yVFVXdlYtLUMyVzRCWTNvY3RzOVRVbFk5c21HeFk2NmFxYTJUOWR1b0JUSWVKU0hV?oc=5",
+   "https://news.google.com/rss/articles/CBMi5AFBVV95cUxObDU2eGZ2ejhVQXVNQ2FPV0d0TmZBdGZlZ0IzUmdZUzlnRzBLMHViRGd0STUwT084Uk9sQkIxYVVJVVRaOXg2c0o4d0w3c1pVQ3hFM0FOMjl2dXNySURfcW1rZlB6ZzhtTEFxTEtESVlGSU1QRW16bmZNWVdJSlVmenc2UnZ5YzRsV09Ua1p6UmR0RmphMUc0SEpKd3hNa3RPX2pkN29ySXgyQ1RpVXV3cEI2YTE3bG9TNms4QXNxbHU5MWlaazlBV1o0MHNHU0lhNzBiZ21EZjk3QzhZMWFMaDZ6VVg?oc=5",
+   "https://news.google.com/rss/articles/CBMiugFBVV95cUxNOTFMTVFQOTJ2SmdCSGdjR2Z4Q2ZYMF9ncldZM3NUNTlEWUVOUERVUVVpdHdfQno4c3F3aWJ1WnIybnpYNGxnMmk5d3FCaUlkdkhCeHpPMENmRG81MEpBcGx5Y1kxY25GY3oxb3gzNGk1bDdOS0JwMkxFZ1hkUFI2M21GMWowTzc4VVJaLUNaajc5MGJrMTdtcXNJem93Q2lpSGFvYXJCbEFwN2hMTnY4bzcxdEswa29DWFE?oc=5",
+   "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQS3ZZdFl2LUN3aElReEFIdzdnclY0TVRmd3BHOW9HdmNLbW9KNXhYLTgtX2VIS2dPSFVKeXpmVzZZLWNoNk5HeTRyX1pQOTU0S3pnVVh4RjJSdl9vRWNIYmhjQ240azVxRGRMYjVodl9jTDh5bkJfU3YxaUJ6R1BpRU1tblMtXzVJaWc2ZVZOWjJEbWUyRkxteTl4QktyRjh5Qkd3UDdVYXAwU0NXbUpNV3VOTnE2SzBYZWl2bndEMHphdw?oc=5",
+   "https://www.techmeme.com/261007/p31#a261007p31",
+   "https://9to5mac.com/2026/10/07/anthropic-upgrades-claude-with-new-haiku-5-5-model-details-here/",
+   "https://www.reddit.com/r/ClaudeAI/comments/1x0367g/well_if_it_matches_gpt_61_sol_at_luna_pricing/",
+   "https://aws.amazon.com/blogs/machine-learning/introducing-claude-haiku-5-5-on-aws/",
+   "https://www.techmeme.com/261007/p33#a261007p33",
+   "https://the-decoder.com/claude-haiku-5-5-arrives-with-massive-price-cuts-proving-the-ai-pricing-arms-race-is-far-from-over/",
+   "https://news.google.com/rss/articles/CBMicEFVX3lxTE1BZnBYSzExT3FCdVU4cm54ckRtSC1vMTdNQkFtMnJzWVBlSm1MWjhaN2JTUmJrNHQ0dlJvaFNNcVQ2N1Ftc0RvYU1IZmdQa3IzbE42aGkzdGEtTmxFTlJ6azFKUjZWamVtR0JKeUtlQnI?oc=5",
+   "https://news.google.com/rss/articles/CBMihwFBVV95cUxNeEMtYzBKbFV3YkU0dUlMSFYxQl9EMmpXS2Z3MjUya0llWXNpOTZqNDYtcExydHlFY2w0Y0lGTWpxSWxhdWpSdnoxc2ktOTBMRjN6N3o2MGVRQ1V1UlVGcTA0QlhPaVN2S2duTkpBZGlmaVVvTExMMkQ0YXh3bVc5SWdFMnhrR2c?oc=5",
+   "https://www.techmeme.com/261007/p34#a261007p34",
+   "https://www.reddit.com/r/ClaudeAI/comments/1x03k4j/introducing_claude_haiku_55_the_cheapest_fastest/",
+   "https://x.com/claudeai/status/2107894039626277339",
+   "https://news.google.com/rss/articles/CBMiggJBVV95cUxQSE1wcXJ3YmdWb1dSd1Y1V2xCcDhBTlF3VElYVjY2ZEtsOHZkTU11a2JCLVA3ZmNfYkk4ai1lTXZjZEI0WmRFbEhfOFNGOFRNSlozMUM4UkF4eVBzWTd2OGZzaFRyamt2VFRVUm1BRFUyMzJ1SFlSc0FyWHFucm1jUzc1NHVWcEp4QW80czJCOTVPY29GNzJnSUJleWRfUGg3YXp0VzlZcXpNTzlERkhUTXYySWlrSnhPYjZtOVlwZFlTNktMV2JIRkxkOXhhSFI4N28ySm9nTmY2cWUwc09nS0lMZ2NPWHR1anREMHpvQlYyRTdsbkdad3RReWswTFRvdEHSAfsBQVVfeXFMTXJsa1lVeFpyNXZRME1sWWc2ckJRdDd2T1JRYmlKbVktYWtpaVdJdnV2S0NVWUtLY3lvaWF0T2Y0bXhSM2ZLWnZXTno1Mzl6NTBxMVhfNTRua0tTakduaVVSUnFDaVdFOTFOMjJNczdWMFRvYUNXeURaelNUdEYzNDVvbnRUQmxmajM2djhCVktmNVc3S2dqX1haOVlFbTBwVExLTFpsUk84TGlzVmh2WnEtZkdaU3pGMEpDMExYY2xNc0tGQ1N2VllhQXVpYzRVb0lSY0lZMElnTXRmMHlOeGlmZDl5NEhjVTgtdk9IaDVEUEo0SklUbkxUakk?oc=5",
+   "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9WUXNEb0dVTGZPNThXNmFkbTNUWWdBbmpENFdWRXFIWUVzSUI4NmJsZjhDTWZCWE5WbkFpMTBpRzEwZHM0WC00OVVjMVhoNWhzUE54clNhajlXcEtSdHc?oc=5",
+   "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNdlNoMEQyMTA3NlhsVHNMczNYMHUzcFRlNkRLbk42TVVrMGFJTUk2OVpkUG0xZG94ZmU0ZjQ4RDRtLTNmUGpWeDJjVFRqSGRkLUlQLWpBZ0JOY3o0ZThmbWdkbDB1dkhuRVAxQkZqMm9sUVJYT3pWSXVDZzY2cW5PZ1pBenNvZjJXM2Q4R2JLUzljOEdLZEY1QkpULVNVS2l3MkdReWdTNjNMR0loMEhjcUZZWmpmTldTZncyZ1FGYjZ4dkhyTnpSNWsyZy1pdnFBdThjZkZiTTLSAd4BQVVfeXFMTUotcmNOYkNyLXVObW53dkhPMkRrbFFEQ1dhdXp4cWVXNXNKY3IzR3lpSnZOQURRdXR4a1dMSWlqdngxTjQ1YWNMQTFDMW9XcW9lajkzZmFJWTBaeFAyaGRENmFVeWktanFFVTRhSHVMYzFuUmtOR1VxNjlZZUtmR1JjMHlOZG1uamRvb1MzaUdRdWVmQzcxalZfWTF2Q3lhOWRJeWdjSnhXQ0J3VEFLNVo1V2FKY2tzU1F6d19TVG9PZzFIb09SVmFGUHI1VHhpazJQdWhHNkR1UUpVN01R?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
