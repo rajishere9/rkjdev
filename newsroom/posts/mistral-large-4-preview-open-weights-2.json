@@ -1,0 +1,163 @@
+{
+ "slug": "mistral-large-4-preview-open-weights-2",
+ "title": "Mistral Large 4 Launches in Public Preview as a 1-Trillion Parameter MoE",
+ "seoTitle": "Mistral Large 4 Preview: Specs, Benchmarks, and Pricing",
+ "description": "Mistral AI unveiled Mistral Large 4, a 1-trillion parameter multimodal model. With weights due October 27, 2026, preview API access is live now.",
+ "dek": "Nicknamed 'Le Chonk,' the European AI lab's flagship mixture-of-experts model pairs 49 billion active parameters with enterprise cybersecurity and multimodal reasoning.",
+ "category": "AI Models",
+ "tags": [
+  "Mistral AI",
+  "Mistral Large 4",
+  "Open Weights",
+  "Mixture of Experts",
+  "Multimodal AI",
+  "Enterprise AI"
+ ],
+ "keyTakeaways": [
+  "Mistral Large 4 features roughly 1 trillion total parameters and activates 49 billion parameters per token via a sparse mixture-of-experts architecture.",
+  "The model is available in public preview through Mistral's API, with weights scheduled for general release on October 27, 2026.",
+  "API pricing is set at $1.36 per 1 million input tokens, $4.18 per 1 million output tokens, and $0.14 per 1 million cached tokens.",
+  "Training took place over two months in European data centers using 3,800 to 4,000 Nvidia Grace Blackwell GPUs."
+ ],
+ "body": "On October 6, 2026, Paris-based AI company Mistral AI announced the public preview of Mistral Large 4, a trillion-parameter natively multimodal model built to rival leading frontier systems while preparing for an open-weight release. Codenamed unofficially as ML4 and given the official internal nickname \"Le Chonk,\" the model introduces significant architectural scale for the European developer. This official preview launch makes the system directly accessible through Mistral's cloud API ahead of a full open-weight release scheduled for October 27, 2026.\n\nAccording to [Mistral's official announcement](https://mistral.ai/news/mistral-large-4/), the model was trained from scratch in European data centers on Nvidia Grace Blackwell GPUs. The company is positioning ML4 as a sovereign, self-hostable alternative to closed proprietary systems, emphasizing dual-use cybersecurity workloads, document-level reasoning, and agentic code execution.\n\n[[FIG1]]\n\n## Mistral Large 4 Architecture and Training Hardware\n\nMistral Large 4 is built as a granular mixture-of-experts (MoE) system designed to process multimodal inputs and generate text. The total parameter count stands at approximately 1 trillion parameters—with [Marktechpost reporting](https://www.marktechpost.com/2026/10/06/mistral-ai-releases-mistral-large-4-le-chonk-a-1-05t-parameter-open-weight-multimodal-moe/) an exact count of 1.05 trillion—while activating roughly 49 billion parameters per token. In its own blog post, Mistral noted 52 billion active parameters. The architecture incorporates a 1.6-billion-parameter vision encoder and supports a context window of 1 million tokens.\n\nBecause of the MoE layout, roughly 4.7 percent of the network's weights activate on any individual token, lowering compute demands during inference even though the full parameter set must reside in memory. Details such as the expert count, top-k routing parameters, and specific layer distribution will be released when weights drop at the end of the month.\n\nTraining the model required roughly two months in Mistral's European facilities. Hardware counts vary slightly between reports: Mistral cited 3,800 Nvidia Grace Blackwell GPUs, while [VentureBeat reported](https://venturebeat.com/technology/mistral-debuts-large-4-le-chonk-a-1-trillion-parameter-text-output-model-with-high-benchmarks-planned-for-open-weights-release/) approximately 4,000 GPUs consuming around 10 megawatts of power, according to [The Next Web](https://thenextweb.com/news/mistral-releases-large-4-a-1-trillion-parameter-open-weight-ai-model). The pretraining corpus was heavily multilingual, covering over 160 languages, including all official European Union languages. Reinforcement learning post-training remains underway on an infrastructure fleet processing 33 billion tokens daily.\n\nThe model's lighthearted moniker originated from a fictional internet meme in June 2026 dubbed \"Le Chaton Fat,\" which CEO Arthur Mensch humorously referenced on social media before the lab formally embraced \"Le Chonk.\"\n\n## Benchmark Performance Across Coding and Workflows\n\nPerformance metrics published by Mistral highlight targeted strength across agentic coding, professional enterprise workflows, and visual grounding tasks.\n\nOn the DeepSWE v1.1 software engineering evaluation, ML4 scored 61.7 percent (rounded to 62 percent in several disclosures). This places it ahead of DeepSeek V4 Pro 0813 at 57 percent, Qwen 3.8 Max at 51 percent, and Reflection AI's Beam at 44 percent, while running closely alongside GLM-5.3 at 61 percent. Mistral's overall Coding Agent Index score stood at 49.8 percent, supplemented by a 59.4 percent result on SWE-Atlas-QnA and 28.3 percent on Terminal-Bench 4.0.\n\nIn blind human evaluations conducted by Surge AI, annotators rated model outputs on a scale from 1 to 5. ML4 achieved an average rating of 3.74, ranking second among five evaluated systems, behind Claude Opus 5 at 4.22, but ahead of GLM-5.3 at 3.60 and Kimi K3 at 3.59.\n\n[[FIG2]]\n\nFor enterprise tasks, ML4 scored 67 percent on the FinWorkBench (Finch) financial benchmark, matching DeepSeek V4 Pro and exceeding GLM-5.3 (65 percent). On Harvey's Legal Agent benchmark, ML4 registered a 15 percent task-pass rate, surpassing open-weight peers such as Kimi K3 at 12.92 percent and GLM-5.3 at 8.33 percent.\n\nVisual grounding benchmarks show the model locating specific objects in complex visual inputs. ML4 reached 42 percent on the Dense200 benchmark—a score shared with OpenAI's GPT-6 Astra—and posted 73 percent on the DIOR-RSVG remote-sensing test, outperforming GPT-6 Astra's reported 68 percent.\n\n## Cybersecurity Defenses and Self-Hosted Operations\n\nA primary focus of the ML4 rollout centers on defensive cybersecurity operations. In evaluations on the Artificial Analysis Cyber Index, ML4 placed in the global top five. On CyberGym-E2E, which requires models to reproduce and patch real-world software flaws, ML4 scored 82 percent. It resolved 93 percent of tasks on Cybench, an evaluation of 40 cybersecurity challenges.\n\nMistral noted that several closed models score near zero on specific reproduction tasks due to safety guardrails refusing vulnerability generation. Defending internal infrastructure requires validating whether flaws exist, a workflow that rigid refusal policies can obstruct. Because ML4 weights can be deployed on private servers, security teams can conduct code auditing and patch creation without external intervention.\n\nAt the same time, the lab reported safety protections against misuse. On Lakera's B3 benchmark, ML4 resisted 93.3 percent of indirect prompt injection attacks, and achieved a 1.691 score out of 2.0 on KORABench.\n\nCybersecurity resilience remains urgent for enterprise platforms. In May 2026, Mistral encountered the Shai-Hulud supply-chain attack via the TanStack library compromise, which temporarily forced the invalidation of affected npm and PyPi packages, according to [Inc.](https://www.inc.com/sage-swaby/mistral-just-revealed-a-1-trillion-parameter-ai-model-it-has-a-very-funny-nickname/91415474). Threat researchers at Cisco Talos have separately monitored automated toolkits such as CLOSEDQUORUM that attempt to query multi-model consensus networks for malicious decisions.\n\n[[FIG3]]\n\n## Availability, API Pricing, and European Sovereignty\n\nMistral Large 4 is currently accessible via Mistral Studio API endpoints. Standard API rates are $1.36 per 1 million input tokens and $4.18 per 1 million output tokens, with cached input queries billed at $0.14 per 1 million tokens. Supported capabilities include structured outputs, function calling, batch processing, document Q&A, and agent endpoints.\n\nFull model weights are scheduled to be published on October 27, 2026. Prior to release, vetted government authorities, cybersecurity partners, and enterprise developers are conducting red-teaming with reduced safety filtering to assess security workflows.\n\nDevelopment was backed by Mistral's €3 billion Series D funding round completed in September 2026, which valued the company at over €21 billion (approximately $24 billion). Pierre Stock, Mistral's vice president of science, stated at a recent press briefing that the startup is \"definitely closing the gap\" with global rivals. With over 125 enterprise clients including ASML, Airbus, and HSBC, Mistral plans to expand its data center compute through the first half of 2027 and use ML4 as the base for specialized and optimized Mistral models.",
+ "faq": [
+  {
+   "q": "When will Mistral Large 4 weights be available for download?",
+   "a": "Mistral AI plans to release the model weights on October 27, 2026, following a three-week red-teaming and testing phase."
+  },
+  {
+   "q": "What are the parameter counts for Mistral Large 4?",
+   "a": "The model has approximately 1 trillion total parameters (reported as 1.05 trillion) and activates 49 billion parameters per token (with Mistral citing 52 billion active parameters)."
+  },
+  {
+   "q": "How much does Mistral Large 4 cost on the API?",
+   "a": "The preview API is priced at $1.36 per 1 million input tokens, $4.18 per 1 million output tokens, and $0.14 per 1 million cached input tokens."
+  },
+  {
+   "q": "What hardware was used to train the model?",
+   "a": "Mistral trained the model over two months using between 3,800 and 4,000 Nvidia Grace Blackwell GPUs in its European data centers."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An AI researcher in modern attire working late in a sleek European data center control room, observing server cluster status monitors illuminated by soft blue and amber ambient light.",
+  "alt": "An AI researcher inspecting server status screens inside a European data center control room.",
+  "caption": "Illustration: Mistral's new trillion-parameter model was trained and deployed inside the company's European data center facilities.",
+  "src": "img/mistral-large-4-preview-open-weights-2/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 41086,
+  "small": "img/mistral-large-4-preview-open-weights-2/hero-640.webp",
+  "og": "img/mistral-large-4-preview-open-weights-2/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/mistral-large-4-preview-open-weights-2/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A conceptual digital illustration of a mixture-of-experts neural network routing pathways, showing interconnected sparse nodes glowing in green and blue across layered geometric planes.",
+   "alt": "Abstract digital rendering of sparse mixture-of-experts model architecture routing data through selective nodes.",
+   "caption": "Illustration: Mistral Large 4 activates roughly 49 billion of its 1 trillion parameters during inference.",
+   "slot": "FIG1",
+   "src": "img/mistral-large-4-preview-open-weights-2/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 35634,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A software engineer examining multi-monitor code and system vulnerability graphs in a cybersecurity operations center with digital network maps in the background.",
+   "alt": "A software developer reviewing lines of security code on multiple screens in a security operations center.",
+   "caption": "Illustration: Mistral designed ML4 to handle vulnerability patching and defensive cybersecurity tasks without provider refusals.",
+   "slot": "FIG2",
+   "src": "img/mistral-large-4-preview-open-weights-2/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 38384,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "A high-level business technology meeting in a glass-walled conference room overlooking a European city skyline, discussing sovereign computing infrastructure on interactive display boards.",
+   "alt": "Corporate professionals in a modern glass conference room reviewing enterprise technology deployment plans.",
+   "caption": "Illustration: Mistral positions its open-weight architecture to give enterprises local control under European data protections.",
+   "slot": "FIG3",
+   "src": "img/mistral-large-4-preview-open-weights-2/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 35136,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://mistral.ai/news/mistral-large-4/",
+   "title": "Introducing Mistral Large 4",
+   "site": "Mistral",
+   "published": 1791288027000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://venturebeat.com/technology/mistral-debuts-large-4-le-chonk-a-1-trillion-parameter-text-output-model-with-high-benchmarks-planned-for-open-weights-release",
+   "title": "Mistral debuts Large 4 'Le Chonk', a 1-trillion parameter text output model with high benchmarks planned for open weights release",
+   "site": "venturebeat.com",
+   "published": 1791244800000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://thenextweb.com/news/mistral-releases-large-4-a-1-trillion-parameter-open-weight-ai-model",
+   "title": "Europe’s Mistral launches Large 4 to challenge China’s lead in open AI models",
+   "site": "TNW | Launch",
+   "published": 1791291645000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.marktechpost.com/2026/10/06/mistral-ai-releases-mistral-large-4-le-chonk-a-1-05t-parameter-open-weight-multimodal-moe/",
+   "title": "Mistral AI Releases Mistral Large 4 (Le Chonk): A 1.05T Parameter Open-Weight Multimodal MoE",
+   "site": "marktechpost.com",
+   "published": 1791244800000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://www.inc.com/sage-swaby/mistral-just-revealed-a-1-trillion-parameter-ai-model-it-has-a-very-funny-nickname/91415474",
+   "title": "Mistral Just Revealed a 1-Trillion-Parameter AI Model. It Has a Very Funny Nickname",
+   "site": "inc.com",
+   "published": 1791331200000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1791425352807,
+ "updatedAt": 1791425352807,
+ "foundVia": "Google News",
+ "check": {
+  "claims": 33,
+  "score": 10
+ },
+ "story": {
+  "id": "P42dd256c",
+  "score": 90,
+  "items": [
+   "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNaUlFTGk2UFJDUmhzd1JMcXdzTEZkQW4yWTBIRm1zekNDVXFjczJaaEZsR2V0RXpLWkNXLUhhSmRPVnJ4SEdYdmxsMDVJRTgzb0RPNDhhSmY4Q3FHZmFmM3N5OUpXeTR3TGRlT3lPbGJBblJRZGc1XzRSNlBRVHM2VWhiNmpKaXVMLXpVT3FYdFgtZjNkOTB0Nk4tZmhnNG9DcHEzZFBKMXNFRW85UjdvTndiVG40ZXhYanVLelp1cmZZRUxrU0szNTNma3pSWV9y0gHXAUFVX3lxTE5EZTdGM1dRYlFFLWpaN1RmWm1JSDU5MVNLMUwyVmhpZ01jenBTYWpqNVVmdlBvUEt4cWJWWDZNMXRybFN2MnBWcTAwWG1HVDVHX09FZlBQVTVDZWtlTk1kZXJQblVNemhTd1FJbEpLeG9PbmlHV2VqTUo4NEVPV1k1dlk1R1p6UVVtX0xleTctd2VPWjNZUTAxUnlWRTNkakRRaXZNX2lSaDJWdjB0TzNDR0Nfdm5RZmhic2FYTVI5dGdYM19XWG5pYURfdkR0RXFkeVVCcTE4?oc=5",
+   "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNGtzazJieDFIZzhoLU1WRjdSdU90ZkxHUXFWXzlGMVFSeXY2c2c3X0syVXU2Mng5TVdQVlJiUnFSaUx0UEJsWUNIcEI3dXFtdDZEMi1SWmRFUGExME02cnJSS1Q1VUhtNGIwcU1OSXpLQ3prRFhveGZ5aXJEQldYZmdubnJtdExFek0ybm1FNHRSZjFXeE9FWlhvQkVxbW5Bc1BsQzNtaTlXNjJrdnd0Q2tEWGNnWDZi?oc=5",
+   "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOR1BJbDFGWi1VYm81UzJ3bFpDYUJmUEprQWdZOUpFeFZ2Q3BnZDdiYTdVaW5sOVBxcjhPakRJeHZ2SFJoZUxodHR5clVGMzNYN21JNy1kdFJQOFJmMEw5dExfenhZZ3ktdmJ2QzFZWjZod09RbXdOT1NrREkzVkdjNjdFaXpkaVNJ?oc=5",
+   "https://news.google.com/rss/articles/CBMi1wFBVV95cUxORGU3RjNXUWJRRS1qWjdUZlptSUg1OTFTSzFMMlZoaWdNY3pwU2FqajVVZnZQb1BLeHFiVlg2TTF0cmxTdjJwVnEwMFhtR1Q1R19PRWZQUFU1Q2VrZU5NZGVyUG5VTXpoU3dRSWxKS3hvT25pR1dlak1KODRFT1dZNXZZNUdaelFVbV9MZXk3LXdlT1ozWVEwMVJ5VkUzZGpEUWl2TV9pUmgyVnYwdE8zQ0dDX3ZuUWZoYnNhWE1SOXRnWDNfV1huaWFEX3ZEdEVxZHlVQnExONIB1wFBVV95cUxORGU3RjNXUWJRRS1qWjdUZlptSUg1OTFTSzFMMlZoaWdNY3pwU2FqajVVZnZQb1BLeHFiVlg2TTF0cmxTdjJwVnEwMFhtR1Q1R19PRWZQUFU1Q2VrZU5NZGVyUG5VTXpoU3dRSWxKS3hvT25pR1dlak1KODRFT1dZNXZZNUdaelFVbV9MZXk3LXdlT1ozWVEwMVJ5VkUzZGpEUWl2TV9pUmgyVnYwdE8zQ0dDX3ZuUWZoYnNhWE1SOXRnWDNfV1huaWFEX3ZEdEVxZHlVQnExOA?oc=5",
+   "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOZW43cTJBUDZleUhSeW5oeFktVFI1d1M4a1Y3cVR4NWVtQlZEWEltY01uTldtWVlCMmIwX0h4b3kxc0VfbS1WakVNbHU4MG9Wc18zQldnZFRCQ2ZjYTRhTVlrcWFTekVJUFh4ZlFLQm5GSnI3VThPdWc4ZzZlMU91eHp2WEl6OHJNd21XT0xSVW0xMVIwYWJtUGZxOXlTMklKSl9mVE1yN1A2VVZ6cmQwM2N4clV4N1U1QmZfSnpBNXZDOVZKQjZKV1IwaTM0QUphaFFZTTE0dw?oc=5",
+   "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1iZ2NOMkJxUG8zSkZqQmJzUmxoblVkWlFtSk8yMHd3VUs2NTJBWFBTT2YtenV5LXhhNXp1dHF0NVY1VU5KWlhOOGgteGJQVHdyZTlzbzZHRERreDFV?oc=5",
+   "https://news.google.com/rss/articles/CBMie0FVX3lxTE9RbEJPcVBjUnM5blRhamItR1JKMWZ5LUNIOGFVZHJ3RUJWVVQyYnRWSlZ2ZEJfUmY5emYwMU41aTU5T0o5ZGVEM0JnaFVPYlB5U19BQU8zMmJPdzRpYnZvMTNUS1E2RVhqX0g0TzlkV3ZrM3VGUmFZaV84UQ?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}

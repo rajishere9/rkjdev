@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mistral Large 4 Preview: Specs, Benchmarks, and Pricing | rkj dev</title>
+<meta name="description" content="Mistral AI unveiled Mistral Large 4, a 1-trillion parameter multimodal model. With weights due October 27, 2026, preview API access is live now.">
+<link rel="canonical" href="https://www.rkjdev.com/blog/mistral-large-4-preview-open-weights-2/">
+<meta name="theme-color" content="#16101a">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:site_name" content="rkj dev Blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mistral Large 4 Preview: Specs, Benchmarks, and Pricing | rkj dev">
+<meta property="og:description" content="Mistral AI unveiled Mistral Large 4, a 1-trillion parameter multimodal model. With weights due October 27, 2026, preview API access is live now.">
+<meta property="og:url" content="https://www.rkjdev.com/blog/mistral-large-4-preview-open-weights-2/">
+<meta property="og:image" content="https://www.rkjdev.com/blog/img/mistral-large-4-preview-open-weights-2/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://www.rkjdev.com/blog/img/mistral-large-4-preview-open-weights-2/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mistral Large 4 Preview: Specs, Benchmarks, and Pricing | rkj dev">
+<meta name="twitter:description" content="Mistral AI unveiled Mistral Large 4, a 1-trillion parameter multimodal model. With weights due October 27, 2026, preview API access is live now.">
+<link rel="alternate" type="application/rss+xml" title="rkj dev Blog" href="/blog/feed.xml">
+<link rel="alternate" type="application/feed+json" title="rkj dev Blog" href="/blog/feed.json">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2316101a'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23f4b860'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=Unbounded:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="/blog/blog.css?v=4ed3a51a">
+<meta property="article:published_time" content="2026-10-08T02:09:12.807Z">
+<meta property="article:modified_time" content="2026-10-08T02:09:12.807Z">
+<meta property="article:section" content="AI Models">
+<meta property="article:tag" content="Mistral AI">
+<meta property="article:tag" content="Mistral Large 4">
+<meta property="article:tag" content="Open Weights">
+<meta property="article:tag" content="Mixture of Experts">
+<meta property="article:tag" content="Multimodal AI">
+<meta property="article:tag" content="Enterprise AI">
+<link rel="preload" as="image" href="/blog/img/mistral-large-4-preview-open-weights-2/hero.webp" imagesrcset="/blog/img/mistral-large-4-preview-open-weights-2/hero-640.webp 640w, /blog/img/mistral-large-4-preview-open-weights-2/hero.webp 1200w" imagesizes="(max-width: 760px) 100vw, 1200px">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"Mistral Large 4 Launches in Public Preview as a 1-Trillion Parameter MoE","description":"Mistral AI unveiled Mistral Large 4, a 1-trillion parameter multimodal model. With weights due October 27, 2026, preview API access is live now.","url":"https://www.rkjdev.com/blog/mistral-large-4-preview-open-weights-2/","mainEntityOfPage":"https://www.rkjdev.com/blog/mistral-large-4-preview-open-weights-2/","image":["https://www.rkjdev.com/blog/img/mistral-large-4-preview-open-weights-2/og.jpg","https://www.rkjdev.com/blog/img/mistral-large-4-preview-open-weights-2/hero.webp"],"datePublished":"2026-10-08T02:09:12.807Z","dateModified":"2026-10-08T02:09:12.807Z","articleSection":"AI Models","keywords":"Mistral AI, Mistral Large 4, Open Weights, Mixture of Experts, Multimodal AI, Enterprise AI","wordCount":998,"author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","name":"rkj dev","url":"https://www.rkjdev.com","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/me.jpg"}},"isBasedOn":["https://mistral.ai/news/mistral-large-4/","https://venturebeat.com/technology/mistral-debuts-large-4-le-chonk-a-1-trillion-parameter-text-output-model-with-high-benchmarks-planned-for-open-weights-release","https://thenextweb.com/news/mistral-releases-large-4-a-1-trillion-parameter-open-weight-ai-model","https://www.marktechpost.com/2026/10/06/mistral-ai-releases-mistral-large-4-le-chonk-a-1-05t-parameter-open-weight-multimodal-moe/","https://www.inc.com/sage-swaby/mistral-just-revealed-a-1-trillion-parameter-ai-model-it-has-a-very-funny-nickname/91415474"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"AI Models","item":"https://www.rkjdev.com/blog/category/ai-models/"},{"@type":"ListItem","position":3,"name":"Mistral Large 4 Launches in Public Preview as a 1-Trillion Parameter MoE","item":"https://www.rkjdev.com/blog/mistral-large-4-preview-open-weights-2/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"When will Mistral Large 4 weights be available for download?","acceptedAnswer":{"@type":"Answer","text":"Mistral AI plans to release the model weights on October 27, 2026, following a three-week red-teaming and testing phase."}},{"@type":"Question","name":"What are the parameter counts for Mistral Large 4?","acceptedAnswer":{"@type":"Answer","text":"The model has approximately 1 trillion total parameters (reported as 1.05 trillion) and activates 49 billion parameters per token (with Mistral citing 52 billion active parameters)."}},{"@type":"Question","name":"How much does Mistral Large 4 cost on the API?","acceptedAnswer":{"@type":"Answer","text":"The preview API is priced at $1.36 per 1 million input tokens, $4.18 per 1 million output tokens, and $0.14 per 1 million cached input tokens."}},{"@type":"Question","name":"What hardware was used to train the model?","acceptedAnswer":{"@type":"Answer","text":"Mistral trained the model over two months using between 3,800 and 4,000 Nvidia Grace Blackwell GPUs in its European data centers."}}]}]</script>
+</head>
+<body class="post">
+<div class="progress" aria-hidden="true"><span></span></div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="backdrop" aria-hidden="true"></div>
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="/" aria-label="rkj dev, home">rkj dev</a>
+    <nav aria-label="Site">
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <article class="article">
+    <header class="post-head wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/category/ai-models/">AI Models</a></nav>
+      <h1>Mistral Large 4 Launches in Public Preview as a 1-Trillion Parameter MoE</h1>
+      <p class="standfirst">Nicknamed 'Le Chonk,' the European AI lab's flagship mixture-of-experts model pairs 49 billion active parameters with enterprise cybersecurity and multimodal reasoning.</p>
+      <div class="byline">
+        <span class="by">rkj dev newsroom</span>
+        <span><time datetime="2026-10-08T02:09:12.807Z" class="abs" data-rel>Oct 8, 2026</time></span>
+        <span>4 min read</span>
+        <a href="#sources">5 sources, fact-checked</a>
+      </div>
+    </header>
+    <div class="hero-wrap wrap"><figure class="hero-fig is-ai">
+  <div class="img"><img src="/blog/img/mistral-large-4-preview-open-weights-2/hero.webp" srcset="/blog/img/mistral-large-4-preview-open-weights-2/hero-640.webp 640w, /blog/img/mistral-large-4-preview-open-weights-2/hero.webp 1200w" sizes="(max-width: 760px) 100vw, 1200px" width="1200" height="675" alt="An AI researcher inspecting server status screens inside a European data center control room." fetchpriority="high" decoding="async"></div>
+  <figcaption><span>Illustration: Mistral's new trillion-parameter model was trained and deployed inside the company's European data center facilities.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure></div>
+    <div class="layout wrap">
+      <aside class="rail" aria-label="On this page">
+        <nav class="toc"><p>On this page</p><ol><li><a href="#mistral-large-4-architecture-and-training-hardware">Mistral Large 4 Architecture and Training Hardware</a></li><li><a href="#benchmark-performance-across-coding-and-workflows">Benchmark Performance Across Coding and Workflows</a></li><li><a href="#cybersecurity-defenses-and-self-hosted-operations">Cybersecurity Defenses and Self-Hosted Operations</a></li><li><a href="#availability-api-pricing-and-european-sovereignty">Availability, API Pricing, and European Sovereignty</a></li></ol></nav>
+        <div class="share">
+          <p>Share</p>
+          <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fmistral-large-4-preview-open-weights-2%2F&text=Mistral%20Large%204%20Launches%20in%20Public%20Preview%20as%20a%201-Trillion%20Parameter%20MoE" target="_blank" rel="noopener">X</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fmistral-large-4-preview-open-weights-2%2F" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://wa.me/?text=Mistral%20Large%204%20Launches%20in%20Public%20Preview%20as%20a%201-Trillion%20Parameter%20MoE%20https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fmistral-large-4-preview-open-weights-2%2F" target="_blank" rel="noopener">WhatsApp</a>
+          <button type="button" data-copy="https://www.rkjdev.com/blog/mistral-large-4-preview-open-weights-2/">Copy link</button>
+        </div>
+      </aside>
+      <div class="prose">
+        <section class="takeaways" aria-labelledby="tk">
+          <h2 id="tk">Key takeaways</h2>
+          <ul><li>Mistral Large 4 features roughly 1 trillion total parameters and activates 49 billion parameters per token via a sparse mixture-of-experts architecture.</li><li>The model is available in public preview through Mistral's API, with weights scheduled for general release on October 27, 2026.</li><li>API pricing is set at $1.36 per 1 million input tokens, $4.18 per 1 million output tokens, and $0.14 per 1 million cached tokens.</li><li>Training took place over two months in European data centers using 3,800 to 4,000 Nvidia Grace Blackwell GPUs.</li></ul>
+        </section>
+        <p>On October 6, 2026, Paris-based AI company Mistral AI announced the public preview of Mistral Large 4, a trillion-parameter natively multimodal model built to rival leading frontier systems while preparing for an open-weight release. Codenamed unofficially as ML4 and given the official internal nickname &quot;Le Chonk,&quot; the model introduces significant architectural scale for the European developer. This official preview launch makes the system directly accessible through Mistral&#39;s cloud API ahead of a full open-weight release scheduled for October 27, 2026.</p>
+<p>According to <a href="https://mistral.ai/news/mistral-large-4/" target="_blank" rel="noopener">Mistral&#39;s official announcement</a>, the model was trained from scratch in European data centers on Nvidia Grace Blackwell GPUs. The company is positioning ML4 as a sovereign, self-hostable alternative to closed proprietary systems, emphasizing dual-use cybersecurity workloads, document-level reasoning, and agentic code execution.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/mistral-large-4-preview-open-weights-2/figure-1.webp" width="1200" height="670" alt="Abstract digital rendering of sparse mixture-of-experts model architecture routing data through selective nodes." loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: Mistral Large 4 activates roughly 49 billion of its 1 trillion parameters during inference.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="mistral-large-4-architecture-and-training-hardware">Mistral Large 4 Architecture and Training Hardware</h2>
+<p>Mistral Large 4 is built as a granular mixture-of-experts (MoE) system designed to process multimodal inputs and generate text. The total parameter count stands at approximately 1 trillion parameters—with <a href="https://www.marktechpost.com/2026/10/06/mistral-ai-releases-mistral-large-4-le-chonk-a-1-05t-parameter-open-weight-multimodal-moe/" target="_blank" rel="noopener">Marktechpost reporting</a> an exact count of 1.05 trillion—while activating roughly 49 billion parameters per token. In its own blog post, Mistral noted 52 billion active parameters. The architecture incorporates a 1.6-billion-parameter vision encoder and supports a context window of 1 million tokens.</p>
+<p>Because of the MoE layout, roughly 4.7 percent of the network&#39;s weights activate on any individual token, lowering compute demands during inference even though the full parameter set must reside in memory. Details such as the expert count, top-k routing parameters, and specific layer distribution will be released when weights drop at the end of the month.</p>
+<p>Training the model required roughly two months in Mistral&#39;s European facilities. Hardware counts vary slightly between reports: Mistral cited 3,800 Nvidia Grace Blackwell GPUs, while <a href="https://venturebeat.com/technology/mistral-debuts-large-4-le-chonk-a-1-trillion-parameter-text-output-model-with-high-benchmarks-planned-for-open-weights-release/" target="_blank" rel="noopener">VentureBeat reported</a> approximately 4,000 GPUs consuming around 10 megawatts of power, according to <a href="https://thenextweb.com/news/mistral-releases-large-4-a-1-trillion-parameter-open-weight-ai-model" target="_blank" rel="noopener">The Next Web</a>. The pretraining corpus was heavily multilingual, covering over 160 languages, including all official European Union languages. Reinforcement learning post-training remains underway on an infrastructure fleet processing 33 billion tokens daily.</p>
+<p>The model&#39;s lighthearted moniker originated from a fictional internet meme in June 2026 dubbed &quot;Le Chaton Fat,&quot; which CEO Arthur Mensch humorously referenced on social media before the lab formally embraced &quot;Le Chonk.&quot;</p>
+<h2 id="benchmark-performance-across-coding-and-workflows">Benchmark Performance Across Coding and Workflows</h2>
+<p>Performance metrics published by Mistral highlight targeted strength across agentic coding, professional enterprise workflows, and visual grounding tasks.</p>
+<p>On the DeepSWE v1.1 software engineering evaluation, ML4 scored 61.7 percent (rounded to 62 percent in several disclosures). This places it ahead of DeepSeek V4 Pro 0813 at 57 percent, Qwen 3.8 Max at 51 percent, and Reflection AI&#39;s Beam at 44 percent, while running closely alongside GLM-5.3 at 61 percent. Mistral&#39;s overall Coding Agent Index score stood at 49.8 percent, supplemented by a 59.4 percent result on SWE-Atlas-QnA and 28.3 percent on Terminal-Bench 4.0.</p>
+<p>In blind human evaluations conducted by Surge AI, annotators rated model outputs on a scale from 1 to 5. ML4 achieved an average rating of 3.74, ranking second among five evaluated systems, behind Claude Opus 5 at 4.22, but ahead of GLM-5.3 at 3.60 and Kimi K3 at 3.59.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/mistral-large-4-preview-open-weights-2/figure-2.webp" width="1200" height="670" alt="A software developer reviewing lines of security code on multiple screens in a security operations center." loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: Mistral designed ML4 to handle vulnerability patching and defensive cybersecurity tasks without provider refusals.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<p>For enterprise tasks, ML4 scored 67 percent on the FinWorkBench (Finch) financial benchmark, matching DeepSeek V4 Pro and exceeding GLM-5.3 (65 percent). On Harvey&#39;s Legal Agent benchmark, ML4 registered a 15 percent task-pass rate, surpassing open-weight peers such as Kimi K3 at 12.92 percent and GLM-5.3 at 8.33 percent.</p>
+<p>Visual grounding benchmarks show the model locating specific objects in complex visual inputs. ML4 reached 42 percent on the Dense200 benchmark—a score shared with OpenAI&#39;s GPT-6 Astra—and posted 73 percent on the DIOR-RSVG remote-sensing test, outperforming GPT-6 Astra&#39;s reported 68 percent.</p>
+<h2 id="cybersecurity-defenses-and-self-hosted-operations">Cybersecurity Defenses and Self-Hosted Operations</h2>
+<p>A primary focus of the ML4 rollout centers on defensive cybersecurity operations. In evaluations on the Artificial Analysis Cyber Index, ML4 placed in the global top five. On CyberGym-E2E, which requires models to reproduce and patch real-world software flaws, ML4 scored 82 percent. It resolved 93 percent of tasks on Cybench, an evaluation of 40 cybersecurity challenges.</p>
+<p>Mistral noted that several closed models score near zero on specific reproduction tasks due to safety guardrails refusing vulnerability generation. Defending internal infrastructure requires validating whether flaws exist, a workflow that rigid refusal policies can obstruct. Because ML4 weights can be deployed on private servers, security teams can conduct code auditing and patch creation without external intervention.</p>
+<p>At the same time, the lab reported safety protections against misuse. On Lakera&#39;s B3 benchmark, ML4 resisted 93.3 percent of indirect prompt injection attacks, and achieved a 1.691 score out of 2.0 on KORABench.</p>
+<p>Cybersecurity resilience remains urgent for enterprise platforms. In May 2026, Mistral encountered the Shai-Hulud supply-chain attack via the TanStack library compromise, which temporarily forced the invalidation of affected npm and PyPi packages, according to <a href="https://www.inc.com/sage-swaby/mistral-just-revealed-a-1-trillion-parameter-ai-model-it-has-a-very-funny-nickname/91415474" target="_blank" rel="noopener">Inc.</a>. Threat researchers at Cisco Talos have separately monitored automated toolkits such as CLOSEDQUORUM that attempt to query multi-model consensus networks for malicious decisions.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/mistral-large-4-preview-open-weights-2/figure-3.webp" width="1200" height="670" alt="Corporate professionals in a modern glass conference room reviewing enterprise technology deployment plans." loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: Mistral positions its open-weight architecture to give enterprises local control under European data protections.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="availability-api-pricing-and-european-sovereignty">Availability, API Pricing, and European Sovereignty</h2>
+<p>Mistral Large 4 is currently accessible via Mistral Studio API endpoints. Standard API rates are $1.36 per 1 million input tokens and $4.18 per 1 million output tokens, with cached input queries billed at $0.14 per 1 million tokens. Supported capabilities include structured outputs, function calling, batch processing, document Q&amp;A, and agent endpoints.</p>
+<p>Full model weights are scheduled to be published on October 27, 2026. Prior to release, vetted government authorities, cybersecurity partners, and enterprise developers are conducting red-teaming with reduced safety filtering to assess security workflows.</p>
+<p>Development was backed by Mistral&#39;s €3 billion Series D funding round completed in September 2026, which valued the company at over €21 billion (approximately $24 billion). Pierre Stock, Mistral&#39;s vice president of science, stated at a recent press briefing that the startup is &quot;definitely closing the gap&quot; with global rivals. With over 125 enterprise clients including ASML, Airbus, and HSBC, Mistral plans to expand its data center compute through the first half of 2027 and use ML4 as the base for specialized and optimized Mistral models.</p>
+
+        <section class="faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Frequently asked questions</h2>
+          <details open><summary>When will Mistral Large 4 weights be available for download?</summary><p>Mistral AI plans to release the model weights on October 27, 2026, following a three-week red-teaming and testing phase.</p></details>
+<details><summary>What are the parameter counts for Mistral Large 4?</summary><p>The model has approximately 1 trillion total parameters (reported as 1.05 trillion) and activates 49 billion parameters per token (with Mistral citing 52 billion active parameters).</p></details>
+<details><summary>How much does Mistral Large 4 cost on the API?</summary><p>The preview API is priced at $1.36 per 1 million input tokens, $4.18 per 1 million output tokens, and $0.14 per 1 million cached input tokens.</p></details>
+<details><summary>What hardware was used to train the model?</summary><p>Mistral trained the model over two months using between 3,800 and 4,000 Nvidia Grace Blackwell GPUs in its European data centers.</p></details>
+        </section>
+        <section class="sources" id="sources" aria-labelledby="src-title">
+          <h2 id="src-title">Sources</h2>
+          <ol><li><a href="https://mistral.ai/news/mistral-large-4/" target="_blank" rel="noopener">Introducing Mistral Large 4</a><span>Mistral · Oct 6, 2026 · <b class="official">Official</b></span></li><li><a href="https://venturebeat.com/technology/mistral-debuts-large-4-le-chonk-a-1-trillion-parameter-text-output-model-with-high-benchmarks-planned-for-open-weights-release" target="_blank" rel="noopener">Mistral debuts Large 4 'Le Chonk', a 1-trillion parameter text output model with high benchmarks planned for open weights release</a><span>venturebeat.com · Oct 6, 2026</span></li><li><a href="https://thenextweb.com/news/mistral-releases-large-4-a-1-trillion-parameter-open-weight-ai-model" target="_blank" rel="noopener">Europe’s Mistral launches Large 4 to challenge China’s lead in open AI models</a><span>TNW | Launch · Oct 6, 2026</span></li><li><a href="https://www.marktechpost.com/2026/10/06/mistral-ai-releases-mistral-large-4-le-chonk-a-1-05t-parameter-open-weight-multimodal-moe/" target="_blank" rel="noopener">Mistral AI Releases Mistral Large 4 (Le Chonk): A 1.05T Parameter Open-Weight Multimodal MoE</a><span>marktechpost.com · Oct 6, 2026</span></li><li><a href="https://www.inc.com/sage-swaby/mistral-just-revealed-a-1-trillion-parameter-ai-model-it-has-a-very-funny-nickname/91415474" target="_blank" rel="noopener">Mistral Just Revealed a 1-Trillion-Parameter AI Model. It Has a Very Funny Nickname</a><span>inc.com · Oct 7, 2026</span></li></ol>
+          <p class="method">How this story was made: the newsroom picked it up from Google News, gathered the full text of the sources above, and drafted it with AI assistance. Every factual claim was then checked against those sources before publishing (33 claims checked). Illustrations marked as AI-generated are not photographs. Spotted an error? <a href="mailto:rajankrishnan909@gmail.com?subject=Correction%3A%20Mistral%20Large%204%20Launches%20in%20Public%20Preview%20as%20a%201-Trillion%20Parameter%20MoE">Tell us</a>.</p>
+        </section>
+        <p class="tags"><span>#Mistral AI</span> <span>#Mistral Large 4</span> <span>#Open Weights</span> <span>#Mixture of Experts</span> <span>#Multimodal AI</span> <span>#Enterprise AI</span></p>
+        <p class="stamp">Published October 8, 2026 at 02:09 UTC</p>
+      </div>
+    </div>
+  </article>
+  <section class="related wrap" aria-labelledby="rel-title">
+    <h2 id="rel-title">Keep reading</h2>
+    <div class="grid"><article class="card ">
+  <a class="card-link" href="/blog/mistral-large-4-preview-open-weights/">
+    <div class="thumb is-ai"><img src="/blog/img/mistral-large-4-preview-open-weights/hero-640.webp" srcset="/blog/img/mistral-large-4-preview-open-weights/hero-640.webp 640w, /blog/img/mistral-large-4-preview-open-weights/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="Illustration of high-performance server racks in a modern data center." loading="lazy" decoding="async"></div>
+    <div class="card-body">
+      <p class="meta"><span class="cat">AI Models</span><time datetime="2026-10-07T00:19:57.018Z" data-rel>Oct 7, 2026</time></p>
+      <h3>Mistral Releases Trillion-Parameter Mistral Large 4 Preview</h3>
+      <p class="dek">Nicknamed 'Le Chonk,' the multimodal model features a 1-trillion parameter architecture and aims to rival leading American and Chinese AI systems.</p>
+      <p class="foot-meta">3 min read · 6 sources</p>
+    </div>
+  </a>
+</article>
+<article class="card ">
+  <a class="card-link" href="/blog/mistral-releases-mistral-large-4-open-weight-model/">
+    <div class="thumb is-ai"><img src="/blog/img/mistral-releases-mistral-large-4-open-weight-model/hero-640.webp" srcset="/blog/img/mistral-releases-mistral-large-4-open-weight-model/hero-640.webp 640w, /blog/img/mistral-releases-mistral-large-4-open-weight-model/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="AI-generated illustration of a high-tech data center with glowing server racks." loading="lazy" decoding="async"></div>
+    <div class="card-body">
+      <p class="meta"><span class="cat">AI Models</span><time datetime="2026-10-07T01:15:57.514Z" data-rel>Oct 7, 2026</time></p>
+      <h3>Mistral Releases Mistral Large 4, a 1-Trillion Parameter Model</h3>
+      <p class="dek">Nicknamed 'Le Chonk,' the multimodal model is built for AI sovereignty and self-deployment according to Mistral, which also reported top-tier cybersecurity benchmark results ahead of a planned open-weights release.</p>
+      <p class="foot-meta">3 min read · 6 sources</p>
+    </div>
+  </a>
+</article>
+<article class="card ">
+  <a class="card-link" href="/blog/mistral-releases-trillion-parameter-mistral-large/">
+    <div class="thumb is-ai"><img src="/blog/img/mistral-releases-trillion-parameter-mistral-large/hero-640.webp" srcset="/blog/img/mistral-releases-trillion-parameter-mistral-large/hero-640.webp 640w, /blog/img/mistral-releases-trillion-parameter-mistral-large/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="An AI researcher in a server room control facility overseeing advanced computing infrastructure." loading="lazy" decoding="async"></div>
+    <div class="card-body">
+      <p class="meta"><span class="cat">AI Models</span><time datetime="2026-10-07T00:51:30.607Z" data-rel>Oct 7, 2026</time></p>
+      <h3>Mistral Releases Mistral Large 4, a 1-Trillion-Parameter Open Model</h3>
+      <p class="dek">Nicknamed 'Le Chonk,' the European flagship brings a sparse mixture-of-experts design, sovereign deployment options, and specialized cybersecurity workflows.</p>
+      <p class="foot-meta">4 min read · 7 sources</p>
+    </div>
+  </a>
+</article></div>
+  </section>
+  <nav class="prevnext wrap" aria-label="More stories">
+    <a href="/blog/openai-chatgpt-for-teens-college-planner-study-tools/"><span>Newer</span>OpenAI Announces College Planner Coming Soon and Rolls Out New Study Tools to ChatGPT for…</a>
+    <a class="next" href="/blog/surface-laptop-ultra-nvidia-rtx-spark/"><span>Older</span>Microsoft Debuts $2,599 Surface Laptop Ultra With NVIDIA RTX Spark</a>
+  </nav>
+</main>
+<footer class="foot wrap">
+  <div>
+    <p class="foot-mark">rkj dev <span>Blog</span></p>
+    <p>Fast, source-checked coverage of new AI models, open-source releases, audio and video AI, and the tech and science breakthroughs of the day.</p>
+  </div>
+  <nav aria-label="Blog">
+    <a href="/blog/">Latest</a>
+    <a href="/blog/category/ai-models/">AI Models</a>
+    <a href="/blog/category/open-source/">Open Source</a>
+    <a href="/blog/category/research/">Research</a>
+    <a href="/blog/category/audio-and-video/">Audio &amp; Video</a>
+    <a href="/blog/category/agents-and-tools/">Agents &amp; Tools</a>
+    <a href="/blog/category/industry/">Industry</a>
+    <a href="/blog/feed.xml">RSS</a>
+    <a href="/">About rkj dev</a>
+  </nav>
+  <p class="fine">© 2026 Rajan Krishnan. Articles are researched from the linked sources, written with AI assistance and checked claim by claim against those sources. AI-generated illustrations are labeled.</p>
+</footer>
+<script src="/blog/blog.js?v=210b69de" defer></script>
+</body>
+</html>
