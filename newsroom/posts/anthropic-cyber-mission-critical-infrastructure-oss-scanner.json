@@ -1,0 +1,184 @@
+{
+ "slug": "anthropic-cyber-mission-critical-infrastructure-oss-scanner",
+ "title": "Anthropic Unveils Critical Infrastructure Defense and Free OSS Scanner",
+ "seoTitle": "Anthropic Launches Cyber Mission for Infrastructure and OSS",
+ "description": "Anthropic launched the Cyber Mission, deploying on-site engineers for critical infrastructure and releasing a free automated security scanner for open source.",
+ "dek": "The Anthropic Cyber Mission pairs frontier models and engineers with 11 industry partners while providing free vulnerability scans to open-source maintainers.",
+ "category": "Industry",
+ "tags": [
+  "Anthropic",
+  "Cybersecurity",
+  "Critical Infrastructure",
+  "Open Source",
+  "Claude"
+ ],
+ "keyTakeaways": [
+  "Anthropic launched the Cyber Mission, featuring the Critical Infrastructure Defense Program and a free automated OSS Scanner.",
+  "Eleven founding partners, including CrowdStrike, Palo Alto Networks, and Rockwell Automation, will work with on-site Anthropic engineers to protect operational technology.",
+  "OSS Scanner delivers automated, unverified vulnerability reports with proof-of-concept exploits and patches to eligible open-source maintainers.",
+  "Early evaluations across 48 open-source projects yielded an 88% verification rate for critical and high-severity findings, with only one false positive.",
+  "Project Glasswing has been formally merged into Anthropic's expanded Cyber Verification Program."
+ ],
+ "body": "Anthropic has introduced the Anthropic Cyber Mission, an initiative targeted at protecting public utilities, transportation networks, and open-source software repositories from automated software exploits. Announced on October 8, 2026, the program is designed to deliver frontier artificial intelligence models, dedicated engineering personnel, and free security scanning tools directly to defenders of essential digital infrastructure.\n\nAccording to [Anthropic's official announcement](https://www.anthropic.com/news/anthropic-cyber-mission), the initiative focuses on two distinct areas: hardening operational technology (OT) through the new Critical Infrastructure Defense Program (CIDP), and scanning widely used repositories through OSS Scanner, an opt-in vulnerability auditing service provided at no cost to open-source maintainers.\n\n[[FIG1]]\n\n## Protecting Operational Technology Across Critical Infrastructure\n\nThe Critical Infrastructure Defense Program focuses on defending the proprietary software and industrial controllers that operate power grids, municipal water facilities, manufacturing plants, and transit networks. These systems rely heavily on operational technology built to operate for decades without interruption. Operators rarely take these environments offline to patch software bugs, meaning known vulnerabilities often linger unresolved in active deployments.\n\nTo protect these systems, Anthropic has assembled an initial cohort of 11 founding partners: Accenture, Booz Allen, CrowdStrike, Deloitte, Dragos, Hitachi, Insane Cyber, Nozomi Networks, Palo Alto Networks, PwC, and Rockwell Automation. Rather than offering basic API access, Anthropic is dispatching on-site engineers, threat research personnel, and frontier Claude models directly to these organizations, as reported by [AI Weekly](https://aiweekly.co/alerts/anthropic-launches-cyber-mission-with-11-founding-partners).\n\nIndustrial cybersecurity providers note that AI-enabled offensive tactics have made speed imperative. Palo Alto Networks stated that it is combining its Unit 42 threat intelligence with Anthropic models to defend operators, while CrowdStrike emphasized that industrial networks facing machine-speed attacks require defenses capable of matching that velocity. The program expands on Anthropic's previous public-sector work from June 2026, which provided defensive AI support to public infrastructure operators and more than half of all U.S. states, according to reporting from [CyberScoop](https://cyberscoop.com/anthropic-cybersecurity-program-critical-infrastructure-open-source/).\n\n[[FIG2]]\n\n## Fast-Track Vulnerability Audits With OSS Scanner\n\nThe second major component of the Cyber Mission is OSS Scanner, a free scanning pipeline inspired by Google's OSS-Fuzz. While enterprise users access code auditing capabilities through the commercial Claude Security product, OSS Scanner is tailored specifically for the open-source software ecosystem.\n\nAs detailed in [Anthropic's research announcement](https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source), the company spent the last six months testing frontier models across major repositories. The scans discovered over 29,000 candidate vulnerabilities, but human analysts could only manually verify and triage approximately 6,000 of them. Because the review process created an operational bottleneck, maintainers frequently asked Anthropic to deliver raw, unverified reports in bulk so they could evaluate the findings internally.\n\nOSS Scanner addresses that request by offering a fast track that bypasses manual review. Eligible projects receive periodic, fully model-generated audits powered by Anthropic's strongest models, including Claude Mythos. Each delivered report contains a technical explanation of the issue, a bisection indicating when the defect entered the codebase, an actionable proof-of-concept reproducer, and a suggested patch when possible.\n\nAnthropic projects an overall true-positive rate above 90% for the scanner. In a benchmark evaluation of 97 critical and high-severity findings across 48 projects, human penetration testers determined that 85 issues (88%) satisfied coordinated disclosure standards. Eleven of the remaining reports pointed to genuine defects that duplicated known flaws, and only one report was classified as a false positive.\n\nEarly adopters in the open-source community report notable gains in triage speed. Noah Misch of PostgreSQL confirmed that several findings included fixes suitable for production use, allowing maintainers to resolve flaws before releases. OpenSSL Corporation maintainer Anton Arapov noted that the model-generated reports rivaled findings submitted by human researchers, while Todd Ouska of wolfSSL stated that 72 of 74 reports received were valid, resulting in five CVE assignments.\n\n[[FIG3]]\n\n## Eligibility, Integration, and the Defensive Balance\n\nMaintainers who wish to join the service must meet criteria modeled on OSS-Fuzz, focusing on software that has a critical influence on infrastructure and user security. According to the [OSS Scanner technical documentation](https://red.anthropic.com/oss-scanner/), core maintainers can register by opening a pull request on the project's public GitHub repository containing a `project.yaml` file, a build `Dockerfile`, and an optional threat model document outlining severity preferences and out-of-scope code.\n\nTo ensure maintainers are not burdened by disclosure timelines, Anthropic does not enforce a 90-day coordinated disclosure clock on automated, unverified reports. Scans execute inside hardened, offline sandboxes, and projects that lack the resources to handle bulk automated feeds will continue to receive human-reviewed reports through Anthropic's standard vulnerability disclosure process. Maintainers can also access free Claude Max 20x subscriptions under the Claude for Open Source initiative.\n\nThe Cyber Mission builds directly on Project Glasswing, an industry initiative introduced on April 7, 2026, alongside partners such as Amazon Web Services, Google, Apple, and Microsoft. As detailed by [Unite.AI](https://www.unite.ai/anthropic-launches-cyber-mission-for-critical-infrastructure-open-source/), Glasswing has now been folded into Anthropic's three-tier Cyber Verification Program, transitioning existing participants into its Specialized Access tier. Direct donations and pilot efforts continue through the Defender Advantage Fund, which was established in August 2026 to support entities like the Python Software Foundation, the Apache Software Foundation, Alpha-Omega, and OpenSSF.\n\nAnthropic estimates that within two years, artificial intelligence will tilt the balance toward defense by making it easier to discover flaws prior to deployment and verify secure code at scale. However, the company warns that the near term remains volatile because defensive remediation and physical OT patching continue to move slower than automated exploitation tools.",
+ "faq": [
+  {
+   "q": "What is the Critical Infrastructure Defense Program?",
+   "a": "It is an Anthropic initiative that pairs frontier Claude models, threat intelligence, and on-site Anthropic engineers with 11 founding security and industrial partners to protect operational technology running power grids, water networks, transit systems, and government facilities."
+  },
+  {
+   "q": "How does OSS Scanner differ from Claude Security?",
+   "a": "Claude Security is a commercial enterprise scanning product, whereas OSS Scanner is a free, opt-in service for critical open-source software projects that delivers automated vulnerability reports, reproducers, and patches directly from Anthropic's strongest models."
+  },
+  {
+   "q": "How can open-source maintainers apply for OSS Scanner?",
+   "a": "Core maintainers of eligible projects can enroll by submitting a pull request to Anthropic's open-source GitHub repository with a configuration file, Dockerfile, and optional threat model description."
+  },
+  {
+   "q": "Are reports from OSS Scanner subject to a 90-day disclosure deadline?",
+   "a": "No. Anthropic does not impose a 90-day public disclosure deadline on unverified, automated reports from OSS Scanner, allowing maintainers to review findings without forced deadlines."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An industrial control room at dusk with security engineers monitoring network maps and critical infrastructure displays showing electrical grids and water treatment systems, surrounded by soft blue and amber digital illumination, realistic cinematic lighting.",
+  "alt": "An industrial control room with engineers monitoring utility grids and control systems.",
+  "caption": "Illustration: Engineers monitoring utility operational technology and digital infrastructure networks.",
+  "src": "img/anthropic-cyber-mission-critical-infrastructure-oss-scanner/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 66540,
+  "small": "img/anthropic-cyber-mission-critical-infrastructure-oss-scanner/hero-640.webp",
+  "og": "img/anthropic-cyber-mission-critical-infrastructure-oss-scanner/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/anthropic-cyber-mission-critical-infrastructure-oss-scanner/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An outdoor electrical substation and municipal water utility pumps connected by stylized glowing circuitry and data streams representing physical operational technology networks, high resolution, industrial realism.",
+   "alt": "Industrial power substation and water pumps showing physical operational technology systems.",
+   "caption": "Illustration: Operational technology networks powering essential utilities and municipal services.",
+   "slot": "FIG1",
+   "src": "img/anthropic-cyber-mission-critical-infrastructure-oss-scanner/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 81558,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A modern software development workspace with multiple monitors displaying open-source code repositories, debugging traces, and vulnerability scan reports, cinematic atmospheric lighting.",
+   "alt": "Software developer workspace displaying automated code audit findings and patch suggestions.",
+   "caption": "Illustration: Automated vulnerability detection analyzing open-source software codebases.",
+   "slot": "FIG2",
+   "src": "img/anthropic-cyber-mission-critical-infrastructure-oss-scanner/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 36518,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "A group of cybersecurity analysts collaborating around a conference table with network diagnostic displays, reviewing incident response logs and architectural diagrams in an operations center.",
+   "alt": "Cybersecurity analysts collaborating on defensive patch verification and threat research.",
+   "caption": "Illustration: Security professionals coordinating defensive audits and patch verification.",
+   "slot": "FIG3",
+   "src": "img/anthropic-cyber-mission-critical-infrastructure-oss-scanner/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 47610,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://www.anthropic.com/news/anthropic-cyber-mission",
+   "title": "Introducing the Anthropic Cyber Mission",
+   "site": "Anthropic",
+   "published": 1791450256632,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source",
+   "title": "Launching an opt-in vulnerability-finding service for open-source software",
+   "site": "Anthropic",
+   "published": 1791486000000,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://red.anthropic.com/oss-scanner/",
+   "title": "OSS Scanner",
+   "site": "red.anthropic.com",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 5,
+   "url": "https://cyberscoop.com/anthropic-cybersecurity-program-critical-infrastructure-open-source/",
+   "title": "Anthropic rolls out program for ‘long-term commitment’ to secure critical infrastructure, open source software",
+   "site": "CyberScoop",
+   "published": 1791495160000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://www.unite.ai/anthropic-launches-cyber-mission-for-critical-infrastructure-open-source/",
+   "title": "Anthropic Launches Cyber Mission for Critical Infrastructure, Open Source",
+   "site": "Unite.AI",
+   "published": 1791487863000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://aiweekly.co/alerts/anthropic-launches-cyber-mission-with-11-founding-partners",
+   "title": "Anthropic Launches Cyber Mission With 11 Founding Partners",
+   "site": "AI Weekly",
+   "published": 1791489905000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1791508023020,
+ "updatedAt": 1791508023020,
+ "foundVia": "Google News, latent.space and producthunt.com",
+ "check": {
+  "claims": 44,
+  "score": 10
+ },
+ "story": {
+  "id": "Pfb1f7926",
+  "score": 88,
+  "items": [
+   "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOX0c3VW9NdkQtcjl6cnlTZDRrZFNYQ3VwSENYVDVoNTB0SmJnYXRWWnBySzRIR0ZZNWpjeGttbjJtVnFRd0NKVzN2ZTR6TFUtNGlVSnd0U0FXQjVOVHJyVFFoeXY5cjFfRTdWRDFWY3NhYXYyRlZYcUdOUVR2dnlyWXFFMXQwODc3aEVSQXN3RDAwb0syZ1NkdERMQWxvbmJBemY2NG14aWFtNjBXUC1pdFJiYjJTcDVBSkFSNGhXVlpUUEk1UVYwclZ1SFlpWEtzOTUxU3NpMVQxRXJCUFB1bmZoSkRRUTjSAecBQVVfeXFMTl9HN1VvTXZELXI5enJ5U2Q0a2RTWEN1cEhDWFQ1aDUwdEpiZ2F0Vlpwcks0SEdGWTVqY3hrbW4ybVZxUXdDSlczdmU0ekxVLTRpVUp3dFNBV0I1TlRyclRRaHl2OXIxX0U3VkQxVmNzYWF2MkZWWHFHTlFUdnZ5cllxRTF0MDg3N2hFUkFzd0QwMG9LMmdTZHRETEFsb25iQXpmNjRteGlhbTYwV1AtaXRSYmIyU3A1QUpBUjRoV1ZaVFBJNVFWMHJWdUhZaVhLczk1MVNzaTFUMUVyQlBQdW5maEpEUVE4?oc=5",
+   "https://news.google.com/rss/articles/CBMiekFVX3lxTE5leHZaNlN1ZkVHVVNXckxrdVlhWkJlemRtSTdnM3FLZThoS2RYYkY3RDNBMEQ0eXY3aF9GR2VTeXJmNi1fbmlFYUVINVA2cHVBNzk1N0pTRlBoS2tFeHBOVldLX3NUcnFPbm0yT1BnNm82ME5VSEtrRUlR0gGOAUFVX3lxTFBqVlF2eDE1VGx6UTdVSGxTeHdTSmxzcHlLWmJJWWN5RTduQzZSZUdLLVRzMUV5dTdLcHRPYXlUQUtXbkN5d2VGcTJ2cXY0LV9fUmpLUktpS1pYUzIxVnZIM1poQ3g5OXBjZXAtcUpXbTVodHNpYmU3ZkZEUWoxRS12LWdqaVNxNlQxcG1FS3c?oc=5",
+   "https://news.google.com/rss/articles/CBMimwFBVV95cUxOMllnTmhDblozdnBnQWpUUkdjQTVFeFBmX3oxMU14RUdzd0Q2Z1YwZ0U2aExZaDhYQWx3MUxXRDdwUlF1TjcwcWpBbmY2WkhnSmhOdkUwVXByTjNQMFU5MmhIUXEzazBhNUlvNHU4SHVzb1I3WHpyeXhlTnhNemd4VTZ1OUtfU2liN1RNSW02TDVhUmtTbGRZX0Z4QQ?oc=5",
+   "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNNUttOFlJT2dJLWtBalhIdjBLbHBEcGwzQThQeE1UdGpNNDBaYTM1ZEYxb2ZRbXpGbmFSeFlHZEhtOThFQlBxQlI3Q1N5c3dacHdnaFM1a0I3dVU3WmtXR2lQd0dzZmtpNzNRWGZGY3FycDFGcWR3blRIQVBlMnJ4bFZCMXpIZXh5WFBmcGJSdzVlelpVeVFvVUFyZ3gwZ3ZmekNqTGtYdzAtMFNGZGtYbHlBUzBlRGZRb1ZxNnpORmZ1NFRsdmJ5ME1qSW9Nb2hXQXVzd3VR0gHbAUFVX3lxTE9rc3YxZ1B5bEEyeXNROVY3eWNIWGtaYTRqVmtDcmdWQ25DWW5wVEpuMWNhcmdkN0k0UmczUlNtRHlIZ3N6T0otVm5SalF2YW1MU3Z2S2o0ZXRBdUtxWG9mR1YtZ3g3dElmQkluRTBWbFdFWW5RVHoxa3FDWnlnRlhCZll5Z1pmZ0ZTbjBzSHM2MlZoemtBWWE0YlB5cWh5eS1DbDRyTUJLVDM2YkcxY3oxaEwyQUpfVm9QVnp3VmtKd0dPZHZSVzF4U3hsdHhVeEwwTlRPd1ZnUERFaw?oc=5",
+   "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQjRoZHRKc0o2cGdiVXJOU2Zwb3VrTjVZcHlXWFZjc0hOWlJpWjMxT0tpaG83WjlKUjdPUXFMM3NlaTdaNkltX05JS2RibmZ0NUdBNmRGUklGaWJMUEN6cHZGWVd4TUtQMWhMUzY0Sk5keDZlaGlDWnJSWUhacmF1Z3BncHBOVDloUDkyajY3VkV2b3RIM3FPWnVuOHZMU0x6cDhUckFKU2lielMxenNtWGhaekZxTm1JRGNz?oc=5",
+   "https://news.google.com/rss/articles/CBMijgFBVV95cUxNTUpuTE15c2tzWUpjeC1VWVhUdjBYX2NhV2RmQkQtQkdIMnUtcW8wZ1ZGaWFSekZfdjlRRVNlWEZFWGQzUkl2VmdJd1dTN3REMXRhZlRHN3lXUzdsa0RMcjhPcFVDWmVCOUtfUjBnOXRvNmU5NG15WnBTel80d0lPUjgweDhwN0E2ekJNNXBR?oc=5",
+   "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNSk84ZWpzbVB1OTlHZzdYRkF6MEZlMFRNVUdpNndTUkU5TDljNlpFT25lZUZMaTh1SV8yZ3FLQ202elZJQVdoeWFQelJGT1pPeXNZUG9iOWJBSEEzcGc3OUowVDVuQzdiTlZKUEpQOGRnQlFoU19paXFEZUMtYl9GM2phV3Qtay04SEpiYk42Y1pyd0psa0RSMkp5eTNzX2VpYW5zdWlRZF9CcERHZ1lnRF9VcFJLVXNLWlZwaUJaRW5mSTh1SXZWaDU0ZFFzWkFpT25yN2psQmNhQVdMdERhY2h1R3I0c2lLRVU3SNIB8gFBVV95cUxOZWFfVWQtY3BGVmlDektjVkVvVGZNUXo0Y2FtMGFlckdVWk8xbkduaEpCWDVSRW1mY3lnS0FmMFRTZ3U0Mm5PQVEzT1BDM1VWbHM2VW9jbDdJNUs3dE5iU1ZIYVp6TGxuSWlVSkFMOTN0WlA0N1lUNVZSMUlCY1l2MmtEdnVhMnRYTFNaRmVFSHd3U19kZkg0aFVFU3lPQjJ0Nk5DUk9MWGJzZkxYTjZRamRYZU1PMldMbGJGeVh0a2JQZE9UMV9XRkVWYzFVVGdNRGgtMFlCZFdfQUh5S2Z3V0pVWXc5VE1VRFhnamU1MlVnQQ?oc=5",
+   "https://news.google.com/rss/articles/CBMijAFBVV95cUxONGdHTlVKUzVlanRQelh2MUp4TU5jVEV1U0pCT3hWUWE3SFV1QVdiYy1CcDlHczJuQjcxcjNRNkJNa2FwNmpTd2E0eXd1cXNtMlY5SHlkVjFpeFQ1WkFUc0tIb1JfZ1JycloxVWNPbjcxenJUd0RkM1lzdGRwdmVZLVdmOXRha2VhSWp5Zw?oc=5",
+   "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOdDhFeHg4Z2p5MHg4elRka3QzdXdETm1rNkhleGVQNjB2cnpaLUFNa0hXblFpYThNV0w3dEI1ZGhvVmUxLXM0MUc5SERMWjNFYzdCTHFnQTh0VDR3cUdsWlBQeGFmWk4zeGx4ZjNVSVdkb1Z0LVhnalQxM3RSb1d3WGY1b0VJN2VyOVhIMXFlVTlqcFFfOUhqS0FwNHlZT3VZM3hVZUtYNWFOc0ZjTDFzY2RIdUNENG8wTjhQRTFBMThubUYxd1k4UWxkNDBWb0VlYXc?oc=5",
+   "https://news.google.com/rss/articles/CBMidkFVX3lxTE9iYldXajY3ZlBVZVNaaERER254Znc3Smc3RENTd0lwZjRRYXJNYU9uU0Z2NjNEOTdrb2JIVmx0TE9JV3d5dDI5eUdaUXIxaDJFazRkaWJDczhCcUthQTJsWjYzNDY1ZHdsblZicXF4Z3VhS3JnaEE?oc=5",
+   "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPa3N2MWdQeWxBMnlzUTlWN3ljSFhrWmE0alZrQ3JnVkNuQ1lucFRKbjFjYXJnZDdJNFJnM1JTbUR5SGdzek9KLVZuUmpRdmFtTFN2dktqNGV0QXVLcVhvZkdWLWd4N3RJZkJJbkUwVmxXRVluUVR6MWtxQ1p5Z0ZYQmZZeWdaZmdGU24wc0hzNjJWaHprQVlhNGJQeXFoeXktQ2w0ck1CS1QzNmJHMWN6MWhMMkFKX1ZvUFZ6d1ZrSndHT2R2UlcxeFN4bHR4VXhMME5UT3dWZ1BERWvSAdsBQVVfeXFMT2tzdjFnUHlsQTJ5c1E5Vjd5Y0hYa1phNGpWa0NyZ1ZDbkNZbnBUSm4xY2FyZ2Q3STRSZzNSU21EeUhnc3pPSi1WblJqUXZhbUxTdnZLajRldEF1S3FYb2ZHVi1neDd0SWZCSW5FMFZsV0VZblFUejFrcUNaeWdGWEJmWXlnWmZnRlNuMHNIczYyVmh6a0FZYTRiUHlxaHl5LUNsNHJNQktUMzZiRzFjejFoTDJBSl9Wb1BWendWa0p3R09kdlJXMXhTeGx0eFV4TDBOVE93VmdQREVr?oc=5",
+   "https://news.google.com/rss/articles/CBMixAFBVV95cUxPbVRVQVJ2M2Zmdk5QN2xxWGJRdFQwZmNVVVIzVDZUYmE2TjI5NkIydlY4eS1WZllkRllVYkc3cnQxcDhScGtmSjdvSVEtLUZDRWR4RzlCdzRaWUlPZlF0OXUzQ0p1S1ZtU3Q1RDBaWjhLVUdJMG9HNFZTUXlVQ3UyZklHeUxCZ0ZNS21PYTR3dmg5LWt1VTR1MXZuZEdid2pZQ2l1RHZvVGVlU211d0ZraTNTQ3dLeGV1cnVERDBMVzI4Y0hz0gHKAUFVX3lxTE5CcnZDRzZXUzVSaFlSS3p0X3YyaGJob1hMOTdqS29jT3ZoSmlTNk5UZkVCMnBHdGt6anQzN2ZQa1pGYzBqbHJfVVBuSzNpVElQX3JaQXQ0WnZxQmVKdGlnZnBrSUUxVi1fOGktSm5rZVFvX0c3eDBMbDAzVk9lQXVjOEJsM3l5aklJdUpIV2xyNC1JSG5uMXB3MDNST011QXVrLXNydmp4bU1wblZ1aGpiMHNJOTJZQzZWOHZMZFIwTkVYQnBOWnhQc1E?oc=5",
+   "https://www.latent.space/p/ainews-claude-haiku-55-better-than",
+   "https://www.producthunt.com/products/claude-haiku-5-5",
+   "https://www.reddit.com/r/DeepSeek/comments/1x04q36/claude_haiku_55/",
+   "https://news.google.com/rss/articles/CBMipgFBVV95cUxQaWg2TktJNjZKdlZFN29EZmtIYTl3TURkV2NiQXZzU3o2N3ZNZ05ndktIVDgySEtOVjJsbC1YcEZfb2NzancwbTU1VGtGaWRGMEQtck9nS1RVT21xeHhxVUtuR0RLQU1QcUtDdWtoNkJDUzdLel84RU5ZcVdGOWZnYmJ0ZHZ5dDNwaHFkY2tvWDVJRU45ck1lelZlYmlkV05odU9vZWhn0gGrAUFVX3lxTE1GbThBNmUtMENTR295a2dTMGw4bl9hc2laNVNEU3BUOW0yYVVnODFPV1o2R19OdG9HRmNlYnNiNUVHaGZfZW45T2tUYnFGc2lpMllsUDlhck1jMXBZeXdaQnRhQy16LTc4VjFMY3lhZnFKMXU4YVlTZk91cW81UFQtaGdqUmJwb0FQd2VHX2VJbGVLRkpiT2JZcGFITVJCd21menVodEV5UXByWQ?oc=5",
+   "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNdzNwNGJUcmdXc0xTWTdxekdHdXFseUhBRFh6cmE4MzlNek01TVpGQTR6Si11UGVza1FQWWR1Y0U0RTVDUVB1QVZQUmRhMGtBNFBlUHdSV0E2STFtaW85NGZLNkNqRTlibWVhNUFwLXJKazlrQTRrWmt4RmlDU2VBLTA5OU5wNE03MTVwRnlfcXkydlRuWDJCVW1GR0tlVW9JNDc5M3EwU2IzV3JkdUdLSW5temtnOE5ETEZTQ1RnQ0Q5YUF4VVVmRW5mYzZNNFNTT0JtWUI1UnVjWjDSAeABQVVfeXFMT1U5bDBZaTNHcmdWSUw0VDdhMzZ4eWtibGNWNTZqTnJmcDFBc2M5NHV1cThNMXZ2cVFidEVQV3VXNGZDM0d4MTZJRjhhZDZFMnhHeEZYSG5pY0tuMlVaXzJZZjFZR2sxMW9Hbko5VTgxUThDNktRVFZtOUtQVlF4VnM2aW53NzJxNEgwSHZYZHBCS2tMaml0cW9USXg1ZUU0YkxrOHlPWDZmOWNIdVA1X2xLcTh3NjRGZVE0ay1YSkkybDRfSkJkQW4wZTJlcEhkTExSZFc4VVk0Qng2cWYwcHM?oc=5",
+   "https://www.helpnetsecurity.com/2026/10/08/anthropic-claude-haiku-5-5/",
+   "https://news.google.com/rss/articles/CBMieEFVX3lxTE9MQzR6ZE9wclNDdDIxVTk2U0JuOUVPc2gzbVNGTWhSYjhYVUpNNjZXWk5kakJ0NnBCY1lEaEhBcEY4emhBYmRVQUZoOUsweG10ZUMwZkR6M0RmNHR3TF9wTVVDdFpLTFpfamIzZktKYzdaaDdWTy14eQ?oc=5",
+   "https://news.google.com/rss/articles/CBMixwFBVV95cUxQQkxxVEhFTllsZmt4YWVJX1pKWlFUaV9uV3FYaHpOWS1OcElId0NCZWRFUU8tX2hoRE9JNWtPQ3NRMkI1VE1zbTBFS3VIMVc0a3JpemtHLTk3WC1mQjVlc1JwVGdzeURES0tJaXNDcGhGQTdzSHM0QW4yVmc4dTlqUXdReXpZRU9SYjkzRVAwaFJUVGlDT3lBM0xUTU1Pblg4dnhWdDdWNjhmX2xESTBraFh1bU5wd0FCcXVXaU5qQk5GTE0zN3Y40gHMAUFVX3lxTE50QlhjMWJWellKMTZkNzNzekpYS0hXWW9BQXBTY0Rxd1NkWlJVRW1hbjhzcmI4SHJMTEQwM1FtX3F0V0o2ek04TlFibHpzdFRaVXNqMC1OWHljREEyMUdjX1NyNEgyTGxVcm9DenZMc1I5cG03MTg1ZU13Sm5MSmVRZVptZkJZbnBaMzQwOEUyZkVxV1dPLUFUVUFfUXlfUDJ4U2Z5MDB2SDVMZE14MmlFZmpnaWVwVUFlaThIQktva1c2YldmY2FTYnExYw?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
