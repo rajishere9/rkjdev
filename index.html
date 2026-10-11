@@ -17,18 +17,34 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Unbounded:wght@300;400;500&display=swap">
 <link rel="alternate" type="application/rss+xml" title="rkj dev Blog" href="/blog/feed.xml">
-<link rel="stylesheet" href="home.css?v=e2c4d3c9">
+<link rel="stylesheet" href="home.css?v=3fcfbab3">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Rajan Krishnan",
-  "alternateName": "rkj dev",
-  "url": "https://www.rkjdev.com/",
-  "email": "mailto:rajankrishnan909@gmail.com",
-  "jobTitle": "Developer",
-  "alumniOf": "Pranveer Singh Institute of Technology",
-  "sameAs": ["https://www.linkedin.com/in/rajan-krishnan/"]
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.rkjdev.com/#rajan",
+      "name": "Rajan Krishnan",
+      "alternateName": "rkj dev",
+      "url": "https://www.rkjdev.com/",
+      "email": "mailto:rajankrishnan909@gmail.com",
+      "jobTitle": "Developer",
+      "alumniOf": "Pranveer Singh Institute of Technology",
+      "worksFor": { "@id": "https://www.rkjdev.com/#labs" },
+      "sameAs": ["https://www.linkedin.com/in/rajan-krishnan/"]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.rkjdev.com/#labs",
+      "name": "RKJDEV Labs",
+      "url": "https://www.rkjdev.com/",
+      "email": "mailto:rajankrishnan909@gmail.com",
+      "founder": { "@id": "https://www.rkjdev.com/#rajan" },
+      "foundingDate": "2026-10-10",
+      "identifier": { "@type": "PropertyValue", "propertyID": "Udyam Registration Number", "value": "UDYAM-BR-26-0254766" }
+    }
+  ]
 }
 </script>
 </head>
@@ -243,14 +259,15 @@
   </main>
 
   <footer class="foot">
-    <p>© 2026 Rajan Krishnan. rkj dev is the name I publish my apps and games under.</p>
-    <nav aria-label="CandleDeep support and policies">
-      <span>CandleDeep</span>
-      <a href="candledeep/#contact">Support</a>
-      <a href="candledeep/privacy.html">Privacy</a>
-      <a href="candledeep/terms.html">Terms</a>
-      <a href="candledeep/refund.html">Refunds</a>
-      <a href="candledeep/delivery.html">Delivery</a>
+    <div class="biz">
+      <p class="biz-name">RKJDEV Labs</p>
+      <p>© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan</p>
+      <p>Udyam registered MSME, India · <span class="nowrap">UDYAM-BR-26-0254766</span></p>
+      <p><a href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a></p>
+    </div>
+    <nav aria-label="Legal">
+      <a href="/privacy/">Privacy Policy</a>
+      <a href="#contact">Contact</a>
     </nav>
   </footer>
 </div>

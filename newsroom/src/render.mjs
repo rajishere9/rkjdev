@@ -124,8 +124,9 @@ function footer(js) {
     ${CATEGORIES.slice(0, 6).map((c) => `<a href="${B}/category/${catSlug(c)}/">${esc(c)}</a>`).join("\n    ")}
     <a href="${B}/feed.xml">RSS</a>
     <a href="/">About rkj dev</a>
+    <a href="/privacy/">Privacy</a>
   </nav>
-  <p class="fine">© ${new Date().getUTCFullYear()} Rajan Krishnan. Articles are researched from the linked sources, written with AI assistance and checked claim by claim against those sources. AI-generated illustrations are labeled.</p>
+  <p class="fine">© ${new Date().getUTCFullYear()} RKJDEV Labs, Proprietor: Rajan Krishnan. Articles are researched from the linked sources, written with AI assistance and checked claim by claim against those sources. AI-generated illustrations are labeled.</p>
 </footer>
 <script src="${B}/blog.js?v=${js}" defer></script>
 </body>

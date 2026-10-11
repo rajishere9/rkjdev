@@ -346,8 +346,12 @@ a { color: inherit; }
   padding: 28px 0 44px; border-top: 1px solid var(--wick); color: var(--ash); font-size: 14px;
 }
 .foot p { margin: 0; max-width: 34em; }
-.foot nav { display: flex; flex-wrap: wrap; gap: 4px 18px; }
-.foot nav span { color: var(--bone); }
+.foot .biz { display: grid; gap: 4px; }
+.foot .nowrap { white-space: nowrap; }
+.foot .biz-name { font: 500 16px/1.2 var(--display); color: var(--bone); margin-bottom: 6px; }
+.foot .biz a { color: var(--ash); transition: color .25s ease; }
+.foot .biz a:hover { color: var(--bone); }
+.foot nav { display: flex; flex-wrap: wrap; gap: 4px 18px; align-content: start; }
 .foot nav a { color: var(--ash); padding: 4px 0; transition: color .25s ease; }
 .foot nav a:hover { color: var(--bone); }
 
