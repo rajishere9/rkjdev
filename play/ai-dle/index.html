@@ -6,7 +6,8 @@
 <title>AI-dle: the daily AI news guessing game</title>
 <meta name="description" content="Identify today's mystery AI company or model from six clues drawn from the week's real AI news. A new case every day, free, no sign-up.">
 <link rel="canonical" href="https://www.rkjdev.com/play/ai-dle/">
-<meta name="theme-color" content="#16101a">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#110b14">
 <meta property="og:type" content="website">
 <meta property="og:title" content="AI-dle: the daily AI news guessing game">
 <meta property="og:description" content="One mystery AI company or model a day. Six redacted clues from real news. How many do you need?">
@@ -16,23 +17,27 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23e9ece6'/%3E%3Crect x='6' y='9' width='20' height='5' fill='%231d2530'/%3E%3Crect x='6' y='18' width='13' height='5' fill='%231d2530'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,800;0,900;1,400&family=Hanken+Grotesk:wght@400;500;600&family=Unbounded:wght@500&display=swap">
-<link rel="stylesheet" href="../play.css?v=d22a7100">
-<link rel="stylesheet" href="aidle.css?v=4d5a1056">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,800;0,900;1,400&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,40;1,9..144,400..600,40&family=Schibsted+Grotesk:ital,wght@0,400..600;1,400..600&display=swap">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=ffe10b2c">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/site.css?v=e85724ed">
+<link rel="stylesheet" href="../play.css?v=cbf09fb8">
+<link rel="stylesheet" href="aidle.css?v=2ee1e5e1">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"VideoGame","name":"AI-dle","url":"https://www.rkjdev.com/play/ai-dle/","description":"A daily guessing game: identify the mystery AI company or model from six clues drawn from real AI news.","gamePlatform":"Web browser","applicationCategory":"Game","genre":["Puzzle","Trivia"],"isAccessibleForFree":true,"author":{"@type":"Person","name":"Rajan Krishnan","url":"https://www.rkjdev.com/"}}
 </script>
 </head>
 <body class="desk">
 <a class="skip" href="#guess-input">Skip to the guess box</a>
-<header class="top">
+<header class="site-head">
   <div class="wrap">
-    <a class="mark" href="/" aria-label="rkj dev, home">rkj dev</a>
+    <a class="mark" href="/">rkj dev</a>
     <nav aria-label="Site">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
       <a href="/blog/">Blog</a>
       <a href="/play/" aria-current="page">Play</a>
-      <a class="opt" href="/#work">Work</a>
-      <a class="opt" href="/#about">About</a>
+      <a href="/#contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -85,6 +90,24 @@
   </article>
   <p class="provenance">Clues come only from <a href="/blog/">rkj dev Blog</a> stories, which are checked against their sources, and each clue is fact-checked again before it's used.</p>
 </main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="biz">
+      <p class="biz-name">RKJDEV Labs</p>
+      <p>© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan</p>
+      <p>Udyam registered MSME, India, <span class="nowrap">UDYAM-BR-26-0254766</span></p>
+      <p><a href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a></p>
+    </div>
+    <nav aria-label="Site">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/blog/feed.xml">RSS</a>
+    </nav>
+    <p class="fine">No trackers. The game saves your progress only in your own browser.</p>
+  </div>
+</footer>
 
 <dialog class="memo" id="help" aria-labelledby="help-title">
   <form method="dialog" class="memo-in">
@@ -120,6 +143,6 @@
 </dialog>
 
 <div class="toast" role="status" aria-live="polite"></div>
-<script src="aidle.js?v=bc5906d1" defer></script>
+<script src="aidle.js?v=807bd2ae" defer></script>
 </body>
 </html>

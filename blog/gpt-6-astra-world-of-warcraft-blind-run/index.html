@@ -6,7 +6,8 @@
 <title>GPT-6 Astra Clears WoW Starting Zone Blind | rkj dev</title>
 <meta name="description" content="OpenAI's GPT-6 Astra cleared the World of Warcraft Orc starter zone in 40 minutes with zero deaths by parsing raw server packets and database files.">
 <link rel="canonical" href="https://www.rkjdev.com/blog/gpt-6-astra-world-of-warcraft-blind-run/">
-<meta name="theme-color" content="#16101a">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#110b14">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta property="og:site_name" content="rkj dev Blog">
 <meta property="og:type" content="article">
@@ -22,11 +23,14 @@
 <meta name="twitter:description" content="OpenAI's GPT-6 Astra cleared the World of Warcraft Orc starter zone in 40 minutes with zero deaths by parsing raw server packets and database files.">
 <link rel="alternate" type="application/rss+xml" title="rkj dev Blog" href="/blog/feed.xml">
 <link rel="alternate" type="application/feed+json" title="rkj dev Blog" href="/blog/feed.json">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2316101a'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23f4b860'/%3E%3C/svg%3E">
+<link rel="icon" href="/favicon.svg?v=bdff7dc5" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=Unbounded:wght@300;400;500&display=swap">
-<link rel="stylesheet" href="/blog/blog.css?v=4ed3a51a">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,40;1,9..144,400..600,40&family=Schibsted+Grotesk:ital,wght@0,400..600;1,400..600&display=swap">
+<link rel="stylesheet" href="/site.css?v=e85724ed">
+<link rel="stylesheet" href="/blog/blog.css?v=7ad332ef">
 <meta property="article:published_time" content="2026-10-04T01:06:19.915Z">
 <meta property="article:modified_time" content="2026-10-04T01:06:19.915Z">
 <meta property="article:section" content="AI Models">
@@ -36,20 +40,19 @@
 <meta property="article:tag" content="agent-wow">
 <meta property="article:tag" content="AzerothCore">
 <link rel="preload" as="image" href="/blog/img/gpt-6-astra-world-of-warcraft-blind-run/hero.webp" imagesrcset="/blog/img/gpt-6-astra-world-of-warcraft-blind-run/hero-640.webp 640w, /blog/img/gpt-6-astra-world-of-warcraft-blind-run/hero.webp 1200w" imagesizes="(max-width: 760px) 100vw, 1200px">
-<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"GPT-6 Astra Clears WoW Starting Zone Blind in 40 Minutes","description":"OpenAI's GPT-6 Astra cleared the World of Warcraft Orc starter zone in 40 minutes with zero deaths by parsing raw server packets and database files.","url":"https://www.rkjdev.com/blog/gpt-6-astra-world-of-warcraft-blind-run/","mainEntityOfPage":"https://www.rkjdev.com/blog/gpt-6-astra-world-of-warcraft-blind-run/","image":["https://www.rkjdev.com/blog/img/gpt-6-astra-world-of-warcraft-blind-run/og.jpg","https://www.rkjdev.com/blog/img/gpt-6-astra-world-of-warcraft-blind-run/hero.webp"],"datePublished":"2026-10-04T01:06:19.915Z","dateModified":"2026-10-04T01:06:19.915Z","articleSection":"AI Models","keywords":"GPT-6 Astra, World of Warcraft, OpenAI Codex, agent-wow, AzerothCore","wordCount":560,"author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","name":"rkj dev","url":"https://www.rkjdev.com","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/me.jpg"}},"isBasedOn":["https://github.com/agent-wow/agent-wow","https://www.tomshardware.com/tech-industry/artificial-intelligence/gpt-6-astra-plays-world-of-warcraft-blind-and-clears-the-orc-starting-zone-in-40-minutes-with-no-deaths-ai-agent-navigates-by-server-network-traffic-with-pulled-quest-data","https://en.softonic.com/articles/world-of-warcraft-gpt-6-astra-clears-the-orc-starting-zone-without-dying","https://techspeeltuin.nl/technieuws/1352/gpt-6-astra-voltooit-wow-zone-zonder-doden-in-40-minuten","https://fr.softonic.com/articles/world-of-warcraft-une-ia-boucle-la-zone-des-orcs-en-40-minutes-sans-mourir"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"AI Models","item":"https://www.rkjdev.com/blog/category/ai-models/"},{"@type":"ListItem","position":3,"name":"GPT-6 Astra Clears WoW Starting Zone Blind in 40 Minutes","item":"https://www.rkjdev.com/blog/gpt-6-astra-world-of-warcraft-blind-run/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Did GPT-6 Astra play on official Blizzard World of Warcraft servers?","acceptedAnswer":{"@type":"Answer","text":"No. The demonstration ran entirely on a private AzerothCore server using version 3.3.5a of the game and the open-source agent-wow client."}},{"@type":"Question","name":"How did the model navigate without looking at the game screen?","acceptedAnswer":{"@type":"Answer","text":"The model parsed 28 types of raw server network packets and read AzerothCore SQL database tables, using a custom C++ helper running the Detour library on navigation meshes to compute waypoints."}},{"@type":"Question","name":"What reasoning setting was used for the run?","acceptedAnswer":{"@type":"Answer","text":"The run was executed using GPT-6 Astra configured with an 'extra high' reasoning effort setting, one level below the maximum available tier."}}]}]</script>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"GPT-6 Astra Clears WoW Starting Zone Blind in 40 Minutes","description":"OpenAI's GPT-6 Astra cleared the World of Warcraft Orc starter zone in 40 minutes with zero deaths by parsing raw server packets and database files.","url":"https://www.rkjdev.com/blog/gpt-6-astra-world-of-warcraft-blind-run/","mainEntityOfPage":"https://www.rkjdev.com/blog/gpt-6-astra-world-of-warcraft-blind-run/","image":["https://www.rkjdev.com/blog/img/gpt-6-astra-world-of-warcraft-blind-run/og.jpg","https://www.rkjdev.com/blog/img/gpt-6-astra-world-of-warcraft-blind-run/hero.webp"],"datePublished":"2026-10-04T01:06:19.915Z","dateModified":"2026-10-04T01:06:19.915Z","articleSection":"AI Models","keywords":"GPT-6 Astra, World of Warcraft, OpenAI Codex, agent-wow, AzerothCore","wordCount":560,"author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","name":"RKJDEV Labs","url":"https://www.rkjdev.com","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/apple-touch-icon.png"}},"isBasedOn":["https://github.com/agent-wow/agent-wow","https://www.tomshardware.com/tech-industry/artificial-intelligence/gpt-6-astra-plays-world-of-warcraft-blind-and-clears-the-orc-starting-zone-in-40-minutes-with-no-deaths-ai-agent-navigates-by-server-network-traffic-with-pulled-quest-data","https://en.softonic.com/articles/world-of-warcraft-gpt-6-astra-clears-the-orc-starting-zone-without-dying","https://techspeeltuin.nl/technieuws/1352/gpt-6-astra-voltooit-wow-zone-zonder-doden-in-40-minuten","https://fr.softonic.com/articles/world-of-warcraft-une-ia-boucle-la-zone-des-orcs-en-40-minutes-sans-mourir"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"AI Models","item":"https://www.rkjdev.com/blog/category/ai-models/"},{"@type":"ListItem","position":3,"name":"GPT-6 Astra Clears WoW Starting Zone Blind in 40 Minutes","item":"https://www.rkjdev.com/blog/gpt-6-astra-world-of-warcraft-blind-run/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Did GPT-6 Astra play on official Blizzard World of Warcraft servers?","acceptedAnswer":{"@type":"Answer","text":"No. The demonstration ran entirely on a private AzerothCore server using version 3.3.5a of the game and the open-source agent-wow client."}},{"@type":"Question","name":"How did the model navigate without looking at the game screen?","acceptedAnswer":{"@type":"Answer","text":"The model parsed 28 types of raw server network packets and read AzerothCore SQL database tables, using a custom C++ helper running the Detour library on navigation meshes to compute waypoints."}},{"@type":"Question","name":"What reasoning setting was used for the run?","acceptedAnswer":{"@type":"Answer","text":"The run was executed using GPT-6 Astra configured with an 'extra high' reasoning effort setting, one level below the maximum available tier."}}]}]</script>
 </head>
 <body class="post">
 <div class="progress" aria-hidden="true"><span></span></div>
 <a class="skip" href="#main">Skip to content</a>
-<div class="backdrop" aria-hidden="true"></div>
-<header class="top">
+<header class="site-head">
   <div class="wrap">
-    <a class="mark" href="/" aria-label="rkj dev, home">rkj dev</a>
+    <a class="mark" href="/">rkj dev</a>
     <nav aria-label="Site">
-      <a href="/blog/" aria-current="page">Blog</a>
-      <a href="/play/">Play</a>
       <a href="/#work">Work</a>
       <a href="/#about">About</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/play/">Play</a>
       <a href="/#contact">Contact</a>
     </nav>
   </div>
@@ -73,7 +76,7 @@
 </figure></div>
     <div class="layout wrap">
       <aside class="rail" aria-label="On this page">
-        <nav class="toc"><p>On this page</p><ol><li><a href="#direct-protocol-parsing-without-visual-input">Direct Protocol Parsing Without Visual Input</a></li><li><a href="#custom-modules-and-detour-pathfinding">Custom Modules and Detour Pathfinding</a></li><li><a href="#tactical-planning-and-model-configuration">Tactical Planning and Model Configuration</a></li><li><a href="#outlook-for-autonomous-mmo-agents">Outlook for Autonomous MMO Agents</a></li></ol></nav>
+        <nav class="toc"><p>Contents</p><ol><li><a href="#direct-protocol-parsing-without-visual-input">Direct Protocol Parsing Without Visual Input</a></li><li><a href="#custom-modules-and-detour-pathfinding">Custom Modules and Detour Pathfinding</a></li><li><a href="#tactical-planning-and-model-configuration">Tactical Planning and Model Configuration</a></li><li><a href="#outlook-for-autonomous-mmo-agents">Outlook for Autonomous MMO Agents</a></li></ol></nav>
         <div class="share">
           <p>Share</p>
           <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fgpt-6-astra-world-of-warcraft-blind-run%2F&text=GPT-6%20Astra%20Clears%20WoW%20Starting%20Zone%20Blind%20in%2040%20Minutes" target="_blank" rel="noopener">X</a>
@@ -83,8 +86,8 @@
         </div>
       </aside>
       <div class="prose">
-        <section class="takeaways" aria-labelledby="tk">
-          <h2 id="tk">Key takeaways</h2>
+        <section class="inshort" aria-labelledby="tk">
+          <h2 id="tk">In short</h2>
           <ul><li>OpenAI's GPT-6 Astra cleared every quest in the Valley of Trials and reached Sen'jin Village in 40 minutes with zero deaths.</li><li>The AI operated completely blind, reading raw network packets and SQL database files rather than visual frames or screenshots.</li><li>The agent built its own C++ pathfinder using Detour navigation meshes and handled 28 server opcode types via the open-source agent-wow client on an AzerothCore 3.3.5a private server.</li></ul>
         </section>
         <p>OpenAI&#39;s flagship AI model, GPT-6 Astra, successfully navigated and cleared the World of Warcraft Orc starting zone in 40 minutes with zero character deaths during an autonomous demonstration on October 3, 2026. The run was initiated through a single prompt in OpenAI&#39;s Codex interface, directing the model to manage questing, inventory, navigation, and combat without viewing rendered graphics or screen captures.</p>
@@ -111,14 +114,14 @@
 <p>The project creator stated that World of Warcraft was chosen because it requires both long-term strategic scheduling and short-term tactical execution. Immediate next steps for the project include testing whether a single agent can progress to level 80 autonomously and evaluating collaborative multi-agent communication through in-game social channels. The developer&#39;s stated long-term objective is to populate an entire private server with autonomous agents to determine if they can successfully complete the Icecrown Citadel raid on heroic difficulty.</p>
 
         <section class="faq" aria-labelledby="faq-title">
-          <h2 id="faq-title">Frequently asked questions</h2>
+          <h2 id="faq-title">Questions people ask</h2>
           <details open><summary>Did GPT-6 Astra play on official Blizzard World of Warcraft servers?</summary><p>No. The demonstration ran entirely on a private AzerothCore server using version 3.3.5a of the game and the open-source agent-wow client.</p></details>
 <details><summary>How did the model navigate without looking at the game screen?</summary><p>The model parsed 28 types of raw server network packets and read AzerothCore SQL database tables, using a custom C++ helper running the Detour library on navigation meshes to compute waypoints.</p></details>
 <details><summary>What reasoning setting was used for the run?</summary><p>The run was executed using GPT-6 Astra configured with an 'extra high' reasoning effort setting, one level below the maximum available tier.</p></details>
         </section>
         <section class="sources" id="sources" aria-labelledby="src-title">
           <h2 id="src-title">Sources</h2>
-          <ol><li><a href="https://github.com/agent-wow/agent-wow" target="_blank" rel="noopener">agent-wow/agent-wow</a><span>GitHub · Sep 26, 2026 · <b class="official">Official</b></span></li><li><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/gpt-6-astra-plays-world-of-warcraft-blind-and-clears-the-orc-starting-zone-in-40-minutes-with-no-deaths-ai-agent-navigates-by-server-network-traffic-with-pulled-quest-data" target="_blank" rel="noopener">ChatGPT-6 Astra plays World of Warcraft 'blind' and clears the orc starting zone in 40 minutes with no deaths — AI agent navigates by parsing raw server network packets and SQL files</a><span>tomshardware.com · Oct 3, 2026</span></li><li><a href="https://en.softonic.com/articles/world-of-warcraft-gpt-6-astra-clears-the-orc-starting-zone-without-dying" target="_blank" rel="noopener">World of Warcraft: GPT-6 Astra clears the Orc starting zone without dying</a><span>Softonic EN · Oct 3, 2026</span></li><li><a href="https://techspeeltuin.nl/technieuws/1352/gpt-6-astra-voltooit-wow-zone-zonder-doden-in-40-minuten" target="_blank" rel="noopener">GPT-6 Astra rondt WoW-startgebied blind af in 40 minuten</a><span>TechSpeeltuin · Oct 3, 2026</span></li><li><a href="https://fr.softonic.com/articles/world-of-warcraft-une-ia-boucle-la-zone-des-orcs-en-40-minutes-sans-mourir" target="_blank" rel="noopener">World of Warcraft: une IA boucle la zone des orcs en 40 minutes sans mourir</a><span>Softonic · Oct 3, 2026</span></li></ol>
+          <ol><li><a href="https://github.com/agent-wow/agent-wow" target="_blank" rel="noopener">agent-wow/agent-wow</a><span>GitHub, Sep 26, 2026, <b class="official">official source</b></span></li><li><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/gpt-6-astra-plays-world-of-warcraft-blind-and-clears-the-orc-starting-zone-in-40-minutes-with-no-deaths-ai-agent-navigates-by-server-network-traffic-with-pulled-quest-data" target="_blank" rel="noopener">ChatGPT-6 Astra plays World of Warcraft 'blind' and clears the orc starting zone in 40 minutes with no deaths — AI agent navigates by parsing raw server network packets and SQL files</a><span>tomshardware.com, Oct 3, 2026</span></li><li><a href="https://en.softonic.com/articles/world-of-warcraft-gpt-6-astra-clears-the-orc-starting-zone-without-dying" target="_blank" rel="noopener">World of Warcraft: GPT-6 Astra clears the Orc starting zone without dying</a><span>Softonic EN, Oct 3, 2026</span></li><li><a href="https://techspeeltuin.nl/technieuws/1352/gpt-6-astra-voltooit-wow-zone-zonder-doden-in-40-minuten" target="_blank" rel="noopener">GPT-6 Astra rondt WoW-startgebied blind af in 40 minuten</a><span>TechSpeeltuin, Oct 3, 2026</span></li><li><a href="https://fr.softonic.com/articles/world-of-warcraft-une-ia-boucle-la-zone-des-orcs-en-40-minutes-sans-mourir" target="_blank" rel="noopener">World of Warcraft: une IA boucle la zone des orcs en 40 minutes sans mourir</a><span>Softonic, Oct 3, 2026</span></li></ol>
           <p class="method">How this story was made: the newsroom picked it up from tomshardware.com, gathered the full text of the sources above, and drafted it with AI assistance. Every factual claim was then checked against those sources before publishing (20 claims checked). Illustrations marked as AI-generated are not photographs. Spotted an error? <a href="mailto:rajankrishnan909@gmail.com?subject=Correction%3A%20GPT-6%20Astra%20Clears%20WoW%20Starting%20Zone%20Blind%20in%2040%20Minutes">Tell us</a>.</p>
         </section>
         <p class="tags"><span>#GPT-6 Astra</span> <span>#World of Warcraft</span> <span>#OpenAI Codex</span> <span>#agent-wow</span> <span>#AzerothCore</span></p>
@@ -128,37 +131,37 @@
   </article>
   <section class="related wrap" aria-labelledby="rel-title">
     <h2 id="rel-title">Keep reading</h2>
-    <div class="grid"><article class="card ">
-  <a class="card-link" href="/blog/gpt-6-astra-napoleonic-cipher-cracked/">
-    <div class="thumb is-ai"><img src="/blog/img/gpt-6-astra-napoleonic-cipher-cracked/hero-640.webp" srcset="/blog/img/gpt-6-astra-napoleonic-cipher-cracked/hero-640.webp 640w, /blog/img/gpt-6-astra-napoleonic-cipher-cracked/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="Illustration of an early 19th-century military officer examining an encrypted parchment document in a field tent" loading="lazy" decoding="async"></div>
-    <div class="card-body">
-      <p class="meta"><span class="cat">AI Models</span><time datetime="2026-10-05T01:01:52.976Z" data-rel>Oct 5, 2026</time></p>
+    <div class="rows"><article class="story row">
+  <a class="story-link" href="/blog/gpt-6-astra-napoleonic-cipher-cracked/">
+    <span class="pic"><img src="/blog/img/gpt-6-astra-napoleonic-cipher-cracked/hero-640.webp" srcset="/blog/img/gpt-6-astra-napoleonic-cipher-cracked/hero-640.webp 640w, /blog/img/gpt-6-astra-napoleonic-cipher-cracked/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Illustration of an early 19th-century military officer examining an encrypted parchment document in a field tent" loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-10-05T01:01:52.976Z" data-rel>Oct 5, 2026</time></span>
       <h3>GPT-6 Astra Decodes 217-Year-Old Napoleonic Cipher in Six Hours</h3>
-      <p class="dek">A SentinelOne engineer used OpenAI's multimodal model to autonomously transcribe and solve an unread 1809 military letter to General Marmont.</p>
-      <p class="foot-meta">2 min read · 3 sources</p>
-    </div>
+      <span class="dek">A SentinelOne engineer used OpenAI's multimodal model to autonomously transcribe and solve an unread 1809 military letter to General Marmont.</span>
+      
+    </span>
   </a>
 </article>
-<article class="card ">
-  <a class="card-link" href="/blog/cloudflare-releases-multimodal-clef-omni-decision-model/">
-    <div class="thumb is-ai"><img src="/blog/img/cloudflare-releases-multimodal-clef-omni-decision-model/hero-640.webp" srcset="/blog/img/cloudflare-releases-multimodal-clef-omni-decision-model/hero-640.webp 640w, /blog/img/cloudflare-releases-multimodal-clef-omni-decision-model/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="An illustration depicting visual, audio, and text data streams converging into a single processing core." loading="lazy" decoding="async"></div>
-    <div class="card-body">
-      <p class="meta"><span class="cat">AI Models</span><time datetime="2026-10-11T01:11:34.086Z" data-rel>Oct 11, 2026</time></p>
+<article class="story row">
+  <a class="story-link" href="/blog/cloudflare-releases-multimodal-clef-omni-decision-model/">
+    <span class="pic"><img src="/blog/img/cloudflare-releases-multimodal-clef-omni-decision-model/hero-640.webp" srcset="/blog/img/cloudflare-releases-multimodal-clef-omni-decision-model/hero-640.webp 640w, /blog/img/cloudflare-releases-multimodal-clef-omni-decision-model/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="An illustration depicting visual, audio, and text data streams converging into a single processing core." loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-10-11T01:11:34.086Z" data-rel>Oct 11, 2026</time></span>
       <h3>Cloudflare Releases Multimodal Clef-Omni Decision Model</h3>
-      <p class="dek">The mixture-of-experts model processes text, imagery, audio, and video in a single forward pass, accompanied by a major price drop for Clef-Flash.</p>
-      <p class="foot-meta">4 min read · 6 sources</p>
-    </div>
+      <span class="dek">The mixture-of-experts model processes text, imagery, audio, and video in a single forward pass, accompanied by a major price drop for Clef-Flash.</span>
+      
+    </span>
   </a>
 </article>
-<article class="card ">
-  <a class="card-link" href="/blog/alibaba-qwen-image-2-1-turbo-release/">
-    <div class="thumb is-ai"><img src="/blog/img/alibaba-qwen-image-2-1-turbo-release/hero-640.webp" srcset="/blog/img/alibaba-qwen-image-2-1-turbo-release/hero-640.webp 640w, /blog/img/alibaba-qwen-image-2-1-turbo-release/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="A software engineer examining digital graphics renders on a computer monitor in a compute lab." loading="lazy" decoding="async"></div>
-    <div class="card-body">
-      <p class="meta"><span class="cat">AI Models</span><time datetime="2026-10-11T00:12:04.608Z" data-rel>Oct 11, 2026</time></p>
+<article class="story row">
+  <a class="story-link" href="/blog/alibaba-qwen-image-2-1-turbo-release/">
+    <span class="pic"><img src="/blog/img/alibaba-qwen-image-2-1-turbo-release/hero-640.webp" srcset="/blog/img/alibaba-qwen-image-2-1-turbo-release/hero-640.webp 640w, /blog/img/alibaba-qwen-image-2-1-turbo-release/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="A software engineer examining digital graphics renders on a computer monitor in a compute lab." loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-10-11T00:12:04.608Z" data-rel>Oct 11, 2026</time></span>
       <h3>Alibaba Releases Qwen-Image-2.1-Turbo 8-Step Visual Generation Model</h3>
-      <p class="dek">Alibaba's open-weight visual generator compresses generation to eight denoising steps while launching paired cloud APIs.</p>
-      <p class="foot-meta">3 min read · 7 sources</p>
-    </div>
+      <span class="dek">Alibaba's open-weight visual generator compresses generation to eight denoising steps while launching paired cloud APIs.</span>
+      
+    </span>
   </a>
 </article></div>
   </section>
@@ -167,25 +170,24 @@
     <a class="next" href="/blog/openai-internal-model-considered-self-restart-shutdown/"><span>Older</span>OpenAI Internal Model Weighed Evading Shutdown via Cron Job</a>
   </nav>
 </main>
-<footer class="foot wrap">
-  <div>
-    <p class="foot-mark">rkj dev <span>Blog</span></p>
-    <p>Fast, source-checked coverage of new AI models, open-source releases, audio and video AI, and the tech and science breakthroughs of the day.</p>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="biz">
+      <p class="biz-name">RKJDEV Labs</p>
+      <p>© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan</p>
+      <p>Udyam registered MSME, India, <span class="nowrap">UDYAM-BR-26-0254766</span></p>
+      <p><a href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a></p>
+    </div>
+    <nav aria-label="Site">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/blog/feed.xml">RSS</a>
+    </nav>
+    <p class="fine">Stories are researched from the linked sources, written with AI assistance and checked claim by claim against those sources before publishing. AI-generated illustrations are labeled.</p>
   </div>
-  <nav aria-label="Blog">
-    <a href="/blog/">Latest</a>
-    <a href="/blog/category/ai-models/">AI Models</a>
-    <a href="/blog/category/open-source/">Open Source</a>
-    <a href="/blog/category/research/">Research</a>
-    <a href="/blog/category/audio-and-video/">Audio &amp; Video</a>
-    <a href="/blog/category/agents-and-tools/">Agents &amp; Tools</a>
-    <a href="/blog/category/industry/">Industry</a>
-    <a href="/blog/feed.xml">RSS</a>
-    <a href="/">About rkj dev</a>
-    <a href="/privacy/">Privacy</a>
-  </nav>
-  <p class="fine">© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan. Articles are researched from the linked sources, written with AI assistance and checked claim by claim against those sources. AI-generated illustrations are labeled.</p>
 </footer>
-<script src="/blog/blog.js?v=210b69de" defer></script>
+<script src="/blog/blog.js?v=45c7aef4" defer></script>
 </body>
 </html>

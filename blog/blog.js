@@ -1,22 +1,22 @@
-// Blog polish: header frosting, reading progress, relative times, the table of contents, copy link.
+// Blog polish: reading progress, relative times, the desk clock, the table of contents, copy link.
 (() => {
-  const header = document.querySelector(".top");
   const bar = document.querySelector(".progress span");
   const article = document.querySelector(".prose");
   let queued = false;
   function update() {
     queued = false;
-    header && header.classList.toggle("scrolled", scrollY > 4);
     if (bar && article) {
       const r = article.getBoundingClientRect();
       const p = Math.min(1, Math.max(0, (innerHeight * 0.35 - r.top) / r.height));
       bar.style.setProperty("--p", p.toFixed(4));
     }
   }
-  addEventListener("scroll", () => { if (!queued) { queued = true; requestAnimationFrame(update); } }, { passive: true });
-  update();
+  if (bar) {
+    addEventListener("scroll", () => { if (!queued) { queued = true; requestAnimationFrame(update); } }, { passive: true });
+    update();
+  }
 
-  // "3h ago" for recent stories, in the reader's own time zone on hover.
+  // "3 hours ago" for recent stories, with the exact local time on hover.
   const rtf = "Intl" in window && Intl.RelativeTimeFormat ? new Intl.RelativeTimeFormat("en", { numeric: "auto" }) : null;
   document.querySelectorAll("time[data-rel]").forEach((el) => {
     const t = Date.parse(el.getAttribute("datetime"));
@@ -28,6 +28,16 @@
     const rel = mins < 60 ? rtf.format(-Math.max(1, mins), "minute") : mins < 1440 ? rtf.format(-Math.round(mins / 60), "hour") : rtf.format(-Math.round(mins / 1440), "day");
     el.textContent = el.classList.contains("abs") ? `${el.textContent} (${rel})` : rel;
   });
+
+  // The desk checks the wires at :00 and :30 UTC; say when the next check is, in the reader's own clock.
+  const next = document.querySelector("[data-next-check]");
+  if (next) {
+    const d = new Date();
+    d.setUTCSeconds(0, 0);
+    d.setUTCMinutes(d.getUTCMinutes() < 30 ? 30 : 60);
+    const when = d.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+    next.textContent = `The desk checks the wires again at ${when}.`;
+  }
 
   // Highlight the section being read.
   const links = [...document.querySelectorAll(".toc a")];

@@ -2,8 +2,7 @@
 .ns {
   --room: #090c12;
   --ink: #07090f;
-  --slate: #1f2838;
-  --steel: #46566e;
+  --arrow: #59647a;
   --pale: #a9b8c9;
   --white: #e8eef2;
   --amber: #ffb347;
@@ -12,10 +11,14 @@
   --shell-hi: #1f2430;
   --key: #262c38;
   --key-hi: #343c4b;
+  --key-on: #3a4252;
+  --arm: 46px;
+  --armlen: 50px;
   background: var(--room);
   color: var(--pale);
 }
-.ns .top.scrolled, .ns .top { background: var(--room); border-bottom-color: transparent; -webkit-backdrop-filter: none; backdrop-filter: none; }
+.ns .site-head { background: var(--room); border-bottom-color: transparent; -webkit-backdrop-filter: none; backdrop-filter: none; }
+.ns .site-foot { border-top-color: #141924; }
 .ns :focus-visible { outline-color: var(--amber); }
 
 .console { max-width: 1320px; margin: 0 auto; padding: clamp(4px, 1.5vw, 20px) var(--gutter) 0; }
@@ -34,12 +37,12 @@
 #screen:focus-visible { box-shadow: 0 0 0 2px var(--amber); }
 
 .about { max-width: 64ch; margin: clamp(22px, 4vh, 40px) auto 72px; padding: 0 var(--gutter); }
-.about h1 { margin: 0 0 10px; font: 500 20px/1.3 var(--display); color: var(--white); letter-spacing: 0; }
+.about h1 { margin: 0 0 10px; font: 500 26px/1.2 var(--display); color: var(--white); letter-spacing: -.01em; }
 .about p { margin: 0 0 12px; font-size: 16px; line-height: 1.6; }
 .about .how { color: #c3cdd9; }
 .about .record:empty { display: none; }
 .about .record { color: var(--amber); }
-.about .made { font-size: 14px; color: #6c7a8c; }
+.about .made { font-size: 14px; color: #8593a6; }
 .touch-only { display: none; }
 
 /* ---- the deck: only on touch screens ---- */
@@ -52,29 +55,29 @@
 }
 .touch .deck button { -webkit-tap-highlight-color: transparent; touch-action: none; border: 0; padding: 0; font: inherit; cursor: pointer; }
 
-.touch .pad { position: relative; width: 138px; height: 138px; justify-self: start; }
+.touch .pad { position: relative; width: calc(var(--arm) * 3); height: calc(var(--arm) * 3); justify-self: start; }
 .touch .pad .arm, .touch .pad .hub { position: absolute; background: var(--key); }
-.touch .pad .up, .touch .pad .down { left: 46px; width: 46px; height: 50px; }
-.touch .pad .left, .touch .pad .right { top: 46px; width: 50px; height: 46px; }
+.touch .pad .up, .touch .pad .down { left: var(--arm); width: var(--arm); height: var(--armlen); }
+.touch .pad .left, .touch .pad .right { top: var(--arm); width: var(--armlen); height: var(--arm); }
 .touch .pad .up { top: 0; border-radius: 8px 8px 0 0; box-shadow: inset 0 1px 0 var(--key-hi); }
 .touch .pad .down { bottom: 0; border-radius: 0 0 8px 8px; box-shadow: inset 0 -2px 0 #1a1f28; }
 .touch .pad .left { left: 0; border-radius: 8px 0 0 8px; box-shadow: inset 1px 1px 0 var(--key-hi); }
 .touch .pad .right { right: 0; border-radius: 0 8px 8px 0; box-shadow: inset 0 1px 0 var(--key-hi); }
-.touch .pad .hub { left: 46px; top: 46px; width: 46px; height: 46px; }
+.touch .pad .hub { left: var(--arm); top: var(--arm); width: var(--arm); height: var(--arm); }
 .touch .pad .hub::after { content: ""; position: absolute; inset: 15px; border-radius: 50%; background: #1c212b; box-shadow: inset 0 1px 2px rgba(0, 0, 0, .5); }
 .touch .pad .arm::after { content: ""; position: absolute; left: 50%; top: 50%; width: 0; height: 0; border: 6px solid transparent; transform: translate(-50%, -50%); }
-.touch .pad .up::after { border-bottom-color: #59647a; margin-top: -4px; }
-.touch .pad .down::after { border-top-color: #59647a; margin-top: 4px; }
-.touch .pad .left::after { border-right-color: #59647a; margin-left: -4px; }
-.touch .pad .right::after { border-left-color: #59647a; margin-left: 4px; }
-.touch .pad[data-dir~="up"] .up, .touch .pad[data-dir~="down"] .down, .touch .pad[data-dir~="left"] .left, .touch .pad[data-dir~="right"] .right { background: #3a4252; }
+.touch .pad .up::after { border-bottom-color: var(--arrow); margin-top: -4px; }
+.touch .pad .down::after { border-top-color: var(--arrow); margin-top: 4px; }
+.touch .pad .left::after { border-right-color: var(--arrow); margin-left: -4px; }
+.touch .pad .right::after { border-left-color: var(--arrow); margin-left: 4px; }
+.touch .pad[data-dir~="up"] .up, .touch .pad[data-dir~="down"] .down, .touch .pad[data-dir~="left"] .left, .touch .pad[data-dir~="right"] .right { background: var(--key-on); }
 .touch .pad[data-dir~="up"] .up::after { border-bottom-color: var(--amber); }
 .touch .pad[data-dir~="down"] .down::after { border-top-color: var(--amber); }
 .touch .pad[data-dir~="left"] .left::after { border-right-color: var(--amber); }
 .touch .pad[data-dir~="right"] .right::after { border-left-color: var(--amber); }
 
 .touch .keys { display: flex; flex-direction: column; gap: 10px; align-items: center; }
-.touch .k { min-width: 76px; height: 28px; border-radius: 6px; background: var(--key); color: var(--pale); font-size: 13px; font-weight: 600; box-shadow: inset 0 1px 0 var(--key-hi), 0 2px 0 #0c0f15; }
+.touch .k { min-width: 76px; height: 40px; padding: 0 10px; white-space: nowrap; border-radius: 6px; background: var(--key); color: var(--pale); font-size: 13px; font-weight: 600; box-shadow: inset 0 1px 0 var(--key-hi), 0 2px 0 #0c0f15; }
 .touch .k.on, .touch .k:active { transform: translateY(2px); box-shadow: inset 0 1px 0 var(--key-hi); }
 
 .touch .acts { position: relative; width: 150px; height: 128px; justify-self: end; }
@@ -97,22 +100,31 @@
   }
   .touch .stage { height: auto; aspect-ratio: 16 / 9; background: var(--ink); border-radius: 6px; overflow: hidden; }
   .touch #screen { box-shadow: none; }
+  .touch #screen:focus-visible { box-shadow: 0 0 0 2px var(--amber); }
   .touch .deck { margin-top: 22px; padding: 0 4px; }
+}
+@media (orientation: portrait) and (max-width: 400px) {
+  .touch .deck { --arm: 38px; --armlen: 42px; }
+  .touch .acts { width: 128px; height: 112px; }
+  .touch .round { width: 56px; height: 56px; }
+  .touch .round.b { top: 30px; }
+  .touch .k { min-width: 66px; }
 }
 
 /* Phone, sideways: the screen fills the height, controls sit in the margins. */
 @media (orientation: landscape) and (max-height: 560px) {
-  .touch .top, .touch .about, .touch .skip { display: none; }
+  .touch .site-head, .touch .site-foot, .touch .about, .touch .skip { display: none; }
   .touch .ns { overflow: hidden; }
   .touch .console { position: fixed; inset: 0; max-width: none; margin: 0; padding: 0; background: var(--ink); }
   .touch .stage { position: absolute; inset: 0; height: 100%; min-height: 0; padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
   .touch #screen { box-shadow: none; }
+  .touch #screen:focus-visible { box-shadow: 0 0 0 2px var(--amber); }
   .touch .deck { position: absolute; inset: 0; display: block; pointer-events: none; }
   .touch .deck > * { pointer-events: auto; position: absolute; opacity: .72; }
   .touch .pad { left: calc(12px + env(safe-area-inset-left)); bottom: 18px; transform: scale(.9); transform-origin: left bottom; }
   .touch .acts { right: calc(10px + env(safe-area-inset-right)); bottom: 26px; transform: scale(.9); transform-origin: right bottom; }
   .touch .keys { right: calc(8px + env(safe-area-inset-right)); top: 10px; flex-direction: column; gap: 8px; }
-  .touch .k { min-width: 64px; height: 26px; }
+  .touch .k { min-width: 64px; height: 34px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -7,6 +7,8 @@ import { SITE, CATEGORIES } from "./config.mjs";
 import { esc, slugify, clip, log, unescapeText } from "./util.mjs";
 
 const PER_PAGE = 24;
+// The site's two typefaces, served with Fraunces' softness fixed so the file stays small.
+export const FONTS = "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,40;1,9..144,400..600,40&family=Schibsted+Grotesk:ital,wght@0,400..600;1,400..600&display=swap";
 const B = SITE.base; // "/blog"
 const abs = (p) => SITE.origin + p;
 const catSlug = (c) => slugify(c.replace("&", "and"));
@@ -65,7 +67,7 @@ function figureHtml(f, { hero = false, priority = false } = {}) {
 </figure>`;
 }
 
-function head({ title, description, canonical, image, type = "website", extra = "", css }) {
+function head({ title, description, canonical, image, type = "website", extra = "", assets }) {
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -74,7 +76,8 @@ function head({ title, description, canonical, image, type = "website", extra = 
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
 <link rel="canonical" href="${esc(canonical)}">
-<meta name="theme-color" content="#16101a">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#110b14">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta property="og:site_name" content="${esc(SITE.name)}">
 <meta property="og:type" content="${type}">
@@ -87,26 +90,28 @@ ${image ? `<meta property="og:image" content="${esc(image)}">\n<meta property="o
 <meta name="twitter:description" content="${esc(description)}">
 <link rel="alternate" type="application/rss+xml" title="${esc(SITE.name)}" href="${B}/feed.xml">
 <link rel="alternate" type="application/feed+json" title="${esc(SITE.name)}" href="${B}/feed.json">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2316101a'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23f4b860'/%3E%3C/svg%3E">
+<link rel="icon" href="/favicon.svg?v=${assets.icon}" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=Unbounded:wght@300;400;500&display=swap">
-<link rel="stylesheet" href="${B}/blog.css?v=${css}">
+<link rel="stylesheet" href="${FONTS}">
+<link rel="stylesheet" href="/site.css?v=${assets.site}">
+<link rel="stylesheet" href="${B}/blog.css?v=${assets.css}">
 ${extra}
 </head>`;
 }
 
 function header(current = "blog") {
   return `<a class="skip" href="#main">Skip to content</a>
-<div class="backdrop" aria-hidden="true"></div>
-<header class="top">
+<header class="site-head">
   <div class="wrap">
-    <a class="mark" href="/" aria-label="rkj dev, home">rkj dev</a>
+    <a class="mark" href="/">rkj dev</a>
     <nav aria-label="Site">
-      <a href="${B}/"${current === "blog" ? ' aria-current="page"' : ""}>Blog</a>
-      <a href="/play/">Play</a>
       <a href="/#work">Work</a>
       <a href="/#about">About</a>
+      <a href="${B}/"${current === "blog" ? ' aria-current="page"' : ""}>Blog</a>
+      <a href="/play/">Play</a>
       <a href="/#contact">Contact</a>
     </nav>
   </div>
@@ -114,43 +119,49 @@ function header(current = "blog") {
 }
 
 function footer(js) {
-  return `<footer class="foot wrap">
-  <div>
-    <p class="foot-mark">rkj dev <span>Blog</span></p>
-    <p>${esc(SITE.description)}</p>
+  return `<footer class="site-foot">
+  <div class="wrap">
+    <div class="biz">
+      <p class="biz-name">RKJDEV Labs</p>
+      <p>© ${new Date().getUTCFullYear()} RKJDEV Labs, Proprietor: Rajan Krishnan</p>
+      <p>Udyam registered MSME, India, <span class="nowrap">UDYAM-BR-26-0254766</span></p>
+      <p><a href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a></p>
+    </div>
+    <nav aria-label="Site">
+      <a href="/">Home</a>
+      <a href="${B}/">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="${B}/feed.xml">RSS</a>
+    </nav>
+    <p class="fine">Stories are researched from the linked sources, written with AI assistance and checked claim by claim against those sources before publishing. AI-generated illustrations are labeled.</p>
   </div>
-  <nav aria-label="Blog">
-    <a href="${B}/">Latest</a>
-    ${CATEGORIES.slice(0, 6).map((c) => `<a href="${B}/category/${catSlug(c)}/">${esc(c)}</a>`).join("\n    ")}
-    <a href="${B}/feed.xml">RSS</a>
-    <a href="/">About rkj dev</a>
-    <a href="/privacy/">Privacy</a>
-  </nav>
-  <p class="fine">© ${new Date().getUTCFullYear()} RKJDEV Labs, Proprietor: Rajan Krishnan. Articles are researched from the linked sources, written with AI assistance and checked claim by claim against those sources. AI-generated illustrations are labeled.</p>
 </footer>
 <script src="${B}/blog.js?v=${js}" defer></script>
 </body>
 </html>`;
 }
 
-function card(p, { size = "", priority = false } = {}) {
+// One story in the three shapes the pages use: lead (big feathered image), side and row (small thumbnail beside the text).
+function card(p, { size = "row", priority = false } = {}) {
   const h = p.hero;
-  const img = h ? `<div class="thumb${h.type === "ai" ? " is-ai" : ""}"><img src="${B}/${h.small || h.src}" ${h.small ? `srcset="${B}/${h.small} 640w, ${B}/${h.src} 1200w" sizes="${size === "lead" ? "(max-width: 900px) 100vw, 60vw" : "(max-width: 700px) 100vw, 33vw"}"` : ""} width="640" height="360" alt="${esc(h.alt)}"${priority ? ' fetchpriority="high"' : ' loading="lazy"'} decoding="async"></div>` : "";
-  return `<article class="card ${size}">
-  <a class="card-link" href="${B}/${p.slug}/">
+  const sizes = size === "lead" ? "(max-width: 900px) 100vw, 58vw" : "(max-width: 700px) 30vw, 160px";
+  const img = h ? `<span class="pic"><img src="${B}/${h.small || h.src}" ${h.small ? `srcset="${B}/${h.small} 640w, ${B}/${h.src} 1200w" sizes="${sizes}"` : ""} width="640" height="360" alt="${esc(h.alt)}"${priority ? ' fetchpriority="high"' : ' loading="lazy"'} decoding="async"></span>` : "";
+  return `<article class="story ${size}">
+  <a class="story-link" href="${B}/${p.slug}/">
     ${img}
-    <div class="card-body">
-      <p class="meta"><span class="cat">${esc(p.category)}</span>${time(p.publishedAt)}</p>
+    <span class="story-body">
+      <span class="meta"><span class="cat">${esc(p.category)}</span>${time(p.publishedAt)}</span>
       <h3>${esc(p.title)}</h3>
-      ${size !== "compact" ? `<p class="dek">${esc(p.dek)}</p>` : ""}
-      <p class="foot-meta">${p.readingTime} min read · ${p.sources.length} source${p.sources.length === 1 ? "" : "s"}</p>
-    </div>
+      ${size === "lead" || size === "row" ? `<span class="dek">${esc(p.dek)}</span>` : ""}
+      ${size === "lead" ? `<span class="foot-meta">${p.readingTime} min read, ${p.sources.length} source${p.sources.length === 1 ? "" : "s"}</span>` : ""}
+    </span>
   </a>
 </article>`;
 }
 
 function chips(active) {
-  return `<nav class="chips" aria-label="Categories">
+  return `<nav class="cats" aria-label="Categories">
   <a href="${B}/"${!active ? ' aria-current="page"' : ""}>All</a>
   ${CATEGORIES.map((c) => `<a href="${B}/category/${catSlug(c)}/"${active === c ? ' aria-current="page"' : ""}>${esc(c)}</a>`).join("\n  ")}
 </nav>`;
@@ -160,9 +171,9 @@ function pager(page, pages, baseUrl) {
   if (pages <= 1) return "";
   const url = (n) => (n === 1 ? baseUrl : `${baseUrl}page/${n}/`);
   return `<nav class="pager" aria-label="Pages">
-  ${page > 1 ? `<a rel="prev" href="${url(page - 1)}">← Newer</a>` : "<span></span>"}
-  <span>Page ${page} of ${pages}</span>
-  ${page < pages ? `<a rel="next" href="${url(page + 1)}">Older →</a>` : "<span></span>"}
+  ${page > 1 ? `<a rel="prev" href="${url(page - 1)}">Newer stories</a>` : "<span></span>"}
+  <span class="where">Page ${page} of ${pages}</span>
+  ${page < pages ? `<a rel="next" href="${url(page + 1)}">Older stories</a>` : "<span></span>"}
 </nav>`;
 }
 
@@ -177,25 +188,26 @@ function listingPage({ posts, page, pages, category, assets, updatedAt }) {
   const itemList = { "@context": "https://schema.org", "@type": "CollectionPage", name: title, url: canonical, description,
     mainEntity: { "@type": "ItemList", itemListElement: posts.slice(0, 20).map((p, i) => ({ "@type": "ListItem", position: i + 1, url: abs(`${B}/${p.slug}/`) })) } };
 
-  return `${head({ title, description, canonical, image: posts[0]?.hero ? abs(`${B}/${posts[0].og || posts[0].hero.src}`) : `${SITE.origin}/candledeep/feature.jpg`, css: assets.css,
+  return `${head({ title, description, canonical, image: posts[0]?.hero ? abs(`${B}/${posts[0].og || posts[0].hero.src}`) : `${SITE.origin}/og.jpg`, assets,
     extra: `<script type="application/ld+json">${JSON.stringify(itemList)}</script>${page > 1 ? `\n<link rel="prev" href="${abs(page === 2 ? baseUrl : `${baseUrl}page/${page - 1}/`)}">` : ""}${page < pages ? `\n<link rel="next" href="${abs(`${baseUrl}page/${page + 1}/`)}">` : ""}` })}
 <body class="listing">
 ${header()}
 <main id="main" class="wrap">
   <section class="masthead">
-    <p class="eyebrow"><span class="live" aria-hidden="true"></span>${category ? `<a href="${B}/">Blog</a> / ${esc(category)}` : "rkj dev Blog"}<span class="updated">Updated ${time(updatedAt)}</span></p>
+    ${category ? `<nav class="crumbs" aria-label="Breadcrumb"><a href="${B}/">Blog</a><span aria-hidden="true">/</span><span>${esc(category)}</span></nav>` : ""}
     <h1>${category ? esc(category) : "AI and emerging tech,<br> the day it happens."}</h1>
     <p class="intro">${category ? esc(description) : "New models, open-source releases, audio and video AI, and the science and tech breakthroughs worth knowing about. Every story is researched from its sources and checked claim by claim."}</p>
+    <p class="desk">Last story ${time(updatedAt)}. <span data-next-check>The desk checks the wires every half hour.</span></p>
     ${chips(category)}
   </section>
   ${!posts.length ? `<p class="empty">No stories here yet. The newsroom checks for news every 30 minutes.</p>` : ""}
   ${lead ? `<section class="top-stories" aria-label="Top stories">
     ${card(lead, { size: "lead", priority: true })}
-    <div class="side">${[second, third].filter(Boolean).map((p) => card(p, { size: "side" })).join("\n")}</div>
+    <div class="side-col">${[second, third].filter(Boolean).map((p) => card(p, { size: "side" })).join("\n")}</div>
   </section>` : ""}
   ${rest.filter(Boolean).length ? `<section class="latest" aria-labelledby="latest-title">
     <h2 id="latest-title">${page === 1 ? "Latest" : `Page ${page}`}</h2>
-    <div class="grid">${rest.filter(Boolean).map((p) => card(p)).join("\n")}</div>
+    <div class="rows">${rest.filter(Boolean).map((p) => card(p)).join("\n")}</div>
   </section>` : ""}
   ${pager(page, pages, baseUrl)}
 </main>
@@ -225,7 +237,7 @@ function postPage(p, { assets, related, prev, next }) {
       datePublished: iso(p.publishedAt), dateModified: iso(p.updatedAt || p.publishedAt),
       articleSection: p.category, keywords: p.tags.join(", "), wordCount: p.body.split(/\s+/).length,
       author: { "@type": "Organization", name: "rkj dev newsroom", url: abs(`${B}/`) },
-      publisher: { "@type": "Organization", name: "rkj dev", url: SITE.origin, logo: { "@type": "ImageObject", url: `${SITE.origin}/me.jpg` } },
+      publisher: { "@type": "Organization", name: "RKJDEV Labs", url: SITE.origin, logo: { "@type": "ImageObject", url: `${SITE.origin}/apple-touch-icon.png` } },
       isBasedOn: p.sources.map((s) => s.url),
     },
     { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
@@ -238,7 +250,7 @@ function postPage(p, { assets, related, prev, next }) {
 
   const share = encodeURIComponent(url);
   const shareText = encodeURIComponent(p.title);
-  return `${head({ title: `${p.seoTitle || p.title} | rkj dev`, description: p.description, canonical: url, image: abs(`${B}/${p.og || p.hero?.src}`), type: "article", css: assets.css,
+  return `${head({ title: `${p.seoTitle || p.title} | rkj dev`, description: p.description, canonical: url, image: abs(`${B}/${p.og || p.hero?.src}`), type: "article", assets,
     extra: `<meta property="article:published_time" content="${iso(p.publishedAt)}">
 <meta property="article:modified_time" content="${iso(p.updatedAt || p.publishedAt)}">
 <meta property="article:section" content="${esc(p.category)}">
@@ -264,7 +276,7 @@ ${header()}
     <div class="hero-wrap wrap">${figureHtml(p.hero, { hero: true, priority: true })}</div>
     <div class="layout wrap">
       <aside class="rail" aria-label="On this page">
-        ${toc.length > 2 ? `<nav class="toc"><p>On this page</p><ol>${toc.map((t) => `<li><a href="#${t.id}">${esc(t.text)}</a></li>`).join("")}</ol></nav>` : ""}
+        ${toc.length > 2 ? `<nav class="toc"><p>Contents</p><ol>${toc.map((t) => `<li><a href="#${t.id}">${esc(t.text)}</a></li>`).join("")}</ol></nav>` : ""}
         <div class="share">
           <p>Share</p>
           <a href="https://x.com/intent/post?url=${share}&text=${shareText}" target="_blank" rel="noopener">X</a>
@@ -274,28 +286,28 @@ ${header()}
         </div>
       </aside>
       <div class="prose">
-        <section class="takeaways" aria-labelledby="tk">
-          <h2 id="tk">Key takeaways</h2>
+        <section class="inshort" aria-labelledby="tk">
+          <h2 id="tk">In short</h2>
           <ul>${p.keyTakeaways.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>
         </section>
         ${body}
         ${p.faq?.length ? `<section class="faq" aria-labelledby="faq-title">
-          <h2 id="faq-title">Frequently asked questions</h2>
+          <h2 id="faq-title">Questions people ask</h2>
           ${p.faq.map((f, i) => `<details${i === 0 ? " open" : ""}><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join("\n")}
         </section>` : ""}
         <section class="sources" id="sources" aria-labelledby="src-title">
           <h2 id="src-title">Sources</h2>
-          <ol>${p.sources.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title || s.site)}</a><span>${esc(s.site)}${s.published ? ` · ${fmtDate(s.published)}` : ""}${s.official ? ' · <b class="official">Official</b>' : ""}</span></li>`).join("")}</ol>
+          <ol>${p.sources.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title || s.site)}</a><span>${esc(s.site)}${s.published ? `, ${fmtDate(s.published)}` : ""}${s.official ? ', <b class="official">official source</b>' : ""}</span></li>`).join("")}</ol>
           <p class="method">How this story was made: the newsroom picked it up from ${esc(p.foundVia || "news feeds")}, gathered the full text of the sources above, and drafted it with AI assistance. Every factual claim was then checked against those sources before publishing${p.check ? ` (${p.check.claims} claims checked)` : ""}. Illustrations marked as AI-generated are not photographs. Spotted an error? <a href="mailto:rajankrishnan909@gmail.com?subject=${encodeURIComponent("Correction: " + p.title)}">Tell us</a>.</p>
         </section>
         <p class="tags">${p.tags.map((t) => `<span>#${esc(t)}</span>`).join(" ")}</p>
-        <p class="stamp">Published ${fmtFull(p.publishedAt)}${p.updatedAt && p.updatedAt !== p.publishedAt ? ` · Updated ${fmtFull(p.updatedAt)}` : ""}</p>
+        <p class="stamp">Published ${fmtFull(p.publishedAt)}${p.updatedAt && p.updatedAt !== p.publishedAt ? `, updated ${fmtFull(p.updatedAt)}` : ""}</p>
       </div>
     </div>
   </article>
   ${related.length ? `<section class="related wrap" aria-labelledby="rel-title">
     <h2 id="rel-title">Keep reading</h2>
-    <div class="grid">${related.map((r) => card(r)).join("\n")}</div>
+    <div class="rows">${related.map((r) => card(r)).join("\n")}</div>
   </section>` : ""}
   <nav class="prevnext wrap" aria-label="More stories">
     ${prev ? `<a href="${B}/${prev.slug}/"><span>Newer</span>${esc(prev.title)}</a>` : "<span></span>"}
@@ -365,17 +377,20 @@ ${recent.map((p) => `<url><loc>${abs(`${B}/${p.slug}/`)}</loc><news:news><news:p
   return { sitemap, news };
 }
 
-// The home page shows the three newest stories between these markers.
+// The home page shows the three newest stories between these markers: one with its picture, two as text.
 async function updateHome(root, posts) {
   const file = path.join(root, "index.html");
   let html;
   try { html = await fs.readFile(file, "utf8"); } catch { return; }
   const start = "<!-- blog:latest -->", end = "<!-- /blog:latest -->";
   if (!html.includes(start)) return;
-  const cards = posts.slice(0, 3).map((p) => `<a class="post-card" href="${B}/${p.slug}/">
-            ${p.hero ? `<img src="${B}/${p.hero.small || p.hero.src}" width="640" height="360" alt="${esc(p.hero.alt)}" loading="lazy" decoding="async">` : ""}
-            <span class="post-meta">${esc(p.category)} · <time datetime="${iso(p.publishedAt)}">${fmtDate(p.publishedAt)}</time></span>
-            <span class="post-title">${esc(p.title)}</span>
+  const cards = posts.slice(0, 3).map((p, i) => `<a class="story${i === 0 ? " lead" : ""}" href="${B}/${p.slug}/">
+            ${i === 0 && p.hero ? `<span class="pic"><img src="${B}/${p.hero.small || p.hero.src}" width="640" height="360" alt="${esc(p.hero.alt)}" loading="lazy" decoding="async"></span>` : ""}
+            <span class="story-body">
+              <span class="meta"><span class="cat">${esc(p.category)}</span><time datetime="${iso(p.publishedAt)}">${fmtDate(p.publishedAt)}</time></span>
+              <span class="title">${esc(p.title)}</span>
+              ${i === 0 ? `<span class="dek">${esc(p.dek)}</span>` : ""}
+            </span>
           </a>`).join("\n          ");
   const block = posts.length ? `${start}
           ${cards}
@@ -388,7 +403,10 @@ export async function renderSite({ root, posts }) {
   const out = path.join(root, "blog");
   posts = posts.filter((p) => !p.hidden).sort((a, b) => b.publishedAt - a.publishedAt);
   for (const p of posts) p.readingTime = readingTime(p.body);
-  const assets = { css: await assetVersion(path.join(out, "blog.css")), js: await assetVersion(path.join(out, "blog.js")) };
+  const assets = {
+    css: await assetVersion(path.join(out, "blog.css")), js: await assetVersion(path.join(out, "blog.js")),
+    site: await assetVersion(path.join(root, "site.css")), icon: await assetVersion(path.join(root, "favicon.svg")),
+  };
   const updatedAt = posts[0]?.publishedAt || Date.now(); // stable output: pages only change when posts do
 
   // Regenerate listing trees from scratch so removed posts and old pages disappear.

@@ -6,7 +6,8 @@
 <title>Google Cloud API Gateway Adds Native MCP Support | rkj dev</title>
 <meta name="description" content="Google Cloud API Gateway now runs as a native remote MCP server in Public Preview, exposing REST APIs directly to AI agents without custom middleware.">
 <link rel="canonical" href="https://www.rkjdev.com/blog/google-cloud-api-gateway-model-context-protocol-support/">
-<meta name="theme-color" content="#16101a">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#110b14">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta property="og:site_name" content="rkj dev Blog">
 <meta property="og:type" content="article">
@@ -22,11 +23,14 @@
 <meta name="twitter:description" content="Google Cloud API Gateway now runs as a native remote MCP server in Public Preview, exposing REST APIs directly to AI agents without custom middleware.">
 <link rel="alternate" type="application/rss+xml" title="rkj dev Blog" href="/blog/feed.xml">
 <link rel="alternate" type="application/feed+json" title="rkj dev Blog" href="/blog/feed.json">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2316101a'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23f4b860'/%3E%3C/svg%3E">
+<link rel="icon" href="/favicon.svg?v=bdff7dc5" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=Unbounded:wght@300;400;500&display=swap">
-<link rel="stylesheet" href="/blog/blog.css?v=4ed3a51a">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,40;1,9..144,400..600,40&family=Schibsted+Grotesk:ital,wght@0,400..600;1,400..600&display=swap">
+<link rel="stylesheet" href="/site.css?v=e85724ed">
+<link rel="stylesheet" href="/blog/blog.css?v=7ad332ef">
 <meta property="article:published_time" content="2026-09-27T07:40:27.201Z">
 <meta property="article:modified_time" content="2026-09-27T07:40:27.201Z">
 <meta property="article:section" content="Agents &amp; Tools">
@@ -37,20 +41,19 @@
 <meta property="article:tag" content="OpenAPI">
 <meta property="article:tag" content="Cloud Run">
 <link rel="preload" as="image" href="/blog/img/google-cloud-api-gateway-model-context-protocol-support/hero.webp" imagesrcset="/blog/img/google-cloud-api-gateway-model-context-protocol-support/hero-640.webp 640w, /blog/img/google-cloud-api-gateway-model-context-protocol-support/hero.webp 1200w" imagesizes="(max-width: 760px) 100vw, 1200px">
-<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"Google Cloud API Gateway Adds Native Model Context Protocol Support","description":"Google Cloud API Gateway now runs as a native remote MCP server in Public Preview, exposing REST APIs directly to AI agents without custom middleware.","url":"https://www.rkjdev.com/blog/google-cloud-api-gateway-model-context-protocol-support/","mainEntityOfPage":"https://www.rkjdev.com/blog/google-cloud-api-gateway-model-context-protocol-support/","image":["https://www.rkjdev.com/blog/img/google-cloud-api-gateway-model-context-protocol-support/og.jpg","https://www.rkjdev.com/blog/img/google-cloud-api-gateway-model-context-protocol-support/hero.webp"],"datePublished":"2026-09-27T07:40:27.201Z","dateModified":"2026-09-27T07:40:27.201Z","articleSection":"Agents & Tools","keywords":"Google Cloud, API Gateway, Model Context Protocol, AI Agents, OpenAPI, Cloud Run","wordCount":674,"author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","name":"rkj dev","url":"https://www.rkjdev.com","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/me.jpg"}},"isBasedOn":["https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/","https://docs.cloud.google.com/api-gateway/docs/mcp-overview","https://learnetto.com/ai-resources/google-cloud-api-gateway-mcp-explained-a0e18813","https://daily.dev/posts/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway-jg3qjmmtw","https://ia.university/ia-news/mcp-api-gateway-google-rest-guia-2026/","https://note.com/marusho_1266/n/nc8296aa40342?hl=en"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"Agents & Tools","item":"https://www.rkjdev.com/blog/category/agents-and-tools/"},{"@type":"ListItem","position":3,"name":"Google Cloud API Gateway Adds Native Model Context Protocol Support","item":"https://www.rkjdev.com/blog/google-cloud-api-gateway-model-context-protocol-support/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What versions of OpenAPI are required to use MCP on Google Cloud API Gateway?","acceptedAnswer":{"@type":"Answer","text":"The feature requires OpenAPI 3.0.x or OpenAPI 3.1.x specifications. OpenAPI 2.0 is not supported, meaning older definitions must be upgraded first."}},{"@type":"Question","name":"How is tool discovery secured on the gateway?","acceptedAnswer":{"@type":"Answer","text":"By default, tool discovery via tools/list is unauthenticated. To secure tool discovery in production, developers must configure JWT authentication in the specification, as API keys cannot secure the tools/list endpoint."}},{"@type":"Question","name":"Can I use Model Routing and MCP in the same API Gateway configuration?","acceptedAnswer":{"@type":"Answer","text":"No. Google Cloud enforces mutual exclusion between MCP and Model Routing within the same API configuration document. Enabling x-google-api-management.mcp prevents the use of x-google-model-router."}}]}]</script>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"Google Cloud API Gateway Adds Native Model Context Protocol Support","description":"Google Cloud API Gateway now runs as a native remote MCP server in Public Preview, exposing REST APIs directly to AI agents without custom middleware.","url":"https://www.rkjdev.com/blog/google-cloud-api-gateway-model-context-protocol-support/","mainEntityOfPage":"https://www.rkjdev.com/blog/google-cloud-api-gateway-model-context-protocol-support/","image":["https://www.rkjdev.com/blog/img/google-cloud-api-gateway-model-context-protocol-support/og.jpg","https://www.rkjdev.com/blog/img/google-cloud-api-gateway-model-context-protocol-support/hero.webp"],"datePublished":"2026-09-27T07:40:27.201Z","dateModified":"2026-09-27T07:40:27.201Z","articleSection":"Agents & Tools","keywords":"Google Cloud, API Gateway, Model Context Protocol, AI Agents, OpenAPI, Cloud Run","wordCount":674,"author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","name":"RKJDEV Labs","url":"https://www.rkjdev.com","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/apple-touch-icon.png"}},"isBasedOn":["https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/","https://docs.cloud.google.com/api-gateway/docs/mcp-overview","https://learnetto.com/ai-resources/google-cloud-api-gateway-mcp-explained-a0e18813","https://daily.dev/posts/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway-jg3qjmmtw","https://ia.university/ia-news/mcp-api-gateway-google-rest-guia-2026/","https://note.com/marusho_1266/n/nc8296aa40342?hl=en"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"Agents & Tools","item":"https://www.rkjdev.com/blog/category/agents-and-tools/"},{"@type":"ListItem","position":3,"name":"Google Cloud API Gateway Adds Native Model Context Protocol Support","item":"https://www.rkjdev.com/blog/google-cloud-api-gateway-model-context-protocol-support/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What versions of OpenAPI are required to use MCP on Google Cloud API Gateway?","acceptedAnswer":{"@type":"Answer","text":"The feature requires OpenAPI 3.0.x or OpenAPI 3.1.x specifications. OpenAPI 2.0 is not supported, meaning older definitions must be upgraded first."}},{"@type":"Question","name":"How is tool discovery secured on the gateway?","acceptedAnswer":{"@type":"Answer","text":"By default, tool discovery via tools/list is unauthenticated. To secure tool discovery in production, developers must configure JWT authentication in the specification, as API keys cannot secure the tools/list endpoint."}},{"@type":"Question","name":"Can I use Model Routing and MCP in the same API Gateway configuration?","acceptedAnswer":{"@type":"Answer","text":"No. Google Cloud enforces mutual exclusion between MCP and Model Routing within the same API configuration document. Enabling x-google-api-management.mcp prevents the use of x-google-model-router."}}]}]</script>
 </head>
 <body class="post">
 <div class="progress" aria-hidden="true"><span></span></div>
 <a class="skip" href="#main">Skip to content</a>
-<div class="backdrop" aria-hidden="true"></div>
-<header class="top">
+<header class="site-head">
   <div class="wrap">
-    <a class="mark" href="/" aria-label="rkj dev, home">rkj dev</a>
+    <a class="mark" href="/">rkj dev</a>
     <nav aria-label="Site">
-      <a href="/blog/" aria-current="page">Blog</a>
-      <a href="/play/">Play</a>
       <a href="/#work">Work</a>
       <a href="/#about">About</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/play/">Play</a>
       <a href="/#contact">Contact</a>
     </nav>
   </div>
@@ -74,7 +77,7 @@
 </figure></div>
     <div class="layout wrap">
       <aside class="rail" aria-label="On this page">
-        <nav class="toc"><p>On this page</p><ol><li><a href="#how-google-cloud-api-gateway-serves-mcp-tools">How Google Cloud API Gateway Serves MCP Tools</a></li><li><a href="#catalog-integration-and-the-security-discovery-boundary">Catalog Integration and the Security Discovery Boundary</a></li><li><a href="#public-preview-limitations-and-architecture-scope">Public Preview Limitations and Architecture Scope</a></li></ol></nav>
+        <nav class="toc"><p>Contents</p><ol><li><a href="#how-google-cloud-api-gateway-serves-mcp-tools">How Google Cloud API Gateway Serves MCP Tools</a></li><li><a href="#catalog-integration-and-the-security-discovery-boundary">Catalog Integration and the Security Discovery Boundary</a></li><li><a href="#public-preview-limitations-and-architecture-scope">Public Preview Limitations and Architecture Scope</a></li></ol></nav>
         <div class="share">
           <p>Share</p>
           <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fgoogle-cloud-api-gateway-model-context-protocol-support%2F&text=Google%20Cloud%20API%20Gateway%20Adds%20Native%20Model%20Context%20Protocol%20Support" target="_blank" rel="noopener">X</a>
@@ -84,8 +87,8 @@
         </div>
       </aside>
       <div class="prose">
-        <section class="takeaways" aria-labelledby="tk">
-          <h2 id="tk">Key takeaways</h2>
+        <section class="inshort" aria-labelledby="tk">
+          <h2 id="tk">In short</h2>
           <ul><li>Google Cloud API Gateway can now function as a remote Model Context Protocol (MCP) server in Public Preview.</li><li>Developers can expose REST APIs as MCP tools by annotating existing OpenAPI 3.x specifications without writing separate proxy servers.</li><li>Discovery endpoints via tools/list are unauthenticated by default, requiring teams to manually configure JWT authentication for production security.</li><li>The preview currently excludes stdio transport, OpenAPI 2.0, HTTP 204 empty responses, and concurrent Model Routing configurations.</li></ul>
         </section>
         <p>On September 24, 2026, Google introduced a Public Preview feature enabling <a href="https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/" target="_blank" rel="noopener">Google Cloud API Gateway</a> to operate natively as a remote Model Context Protocol (MCP) server. The update allows software teams to expose existing REST backends to artificial intelligence agents without developing, hosting, or maintaining separate middleware servers to bridge the protocols. By converting JSON-RPC requests directly into standard REST calls, the gateway bridges enterprise infrastructure with agentic frameworks such as the Agent Development Kit (ADK) and Gemini Enterprise.</p>
@@ -118,14 +121,14 @@
 <p>Google indicated that response streaming, Model Armor payload inspection, and MCP prompts and resources are planned on the product roadmap. For advanced enterprise monetization, complex lifecycle policies, or custom traffic governance, Google recommends Apigee, while outbound agent requests can be governed using Agent Gateway.</p>
 
         <section class="faq" aria-labelledby="faq-title">
-          <h2 id="faq-title">Frequently asked questions</h2>
+          <h2 id="faq-title">Questions people ask</h2>
           <details open><summary>What versions of OpenAPI are required to use MCP on Google Cloud API Gateway?</summary><p>The feature requires OpenAPI 3.0.x or OpenAPI 3.1.x specifications. OpenAPI 2.0 is not supported, meaning older definitions must be upgraded first.</p></details>
 <details><summary>How is tool discovery secured on the gateway?</summary><p>By default, tool discovery via tools/list is unauthenticated. To secure tool discovery in production, developers must configure JWT authentication in the specification, as API keys cannot secure the tools/list endpoint.</p></details>
 <details><summary>Can I use Model Routing and MCP in the same API Gateway configuration?</summary><p>No. Google Cloud enforces mutual exclusion between MCP and Model Routing within the same API configuration document. Enabling x-google-api-management.mcp prevents the use of x-google-model-router.</p></details>
         </section>
         <section class="sources" id="sources" aria-labelledby="src-title">
           <h2 id="src-title">Sources</h2>
-          <ol><li><a href="https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/" target="_blank" rel="noopener">Turn your REST APIs into MCP tools with Google Cloud API Gateway</a><span>developers.googleblog.com · Sep 24, 2026 · <b class="official">Official</b></span></li><li><a href="https://docs.cloud.google.com/api-gateway/docs/mcp-overview" target="_blank" rel="noopener">Model Context Protocol overview</a><span>Google Cloud Documentation</span></li><li><a href="https://learnetto.com/ai-resources/google-cloud-api-gateway-mcp-explained-a0e18813" target="_blank" rel="noopener">Google Cloud API Gateway can now turn existing REST operations into MCP tools</a><span>Learnetto · Sep 24, 2026</span></li><li><a href="https://daily.dev/posts/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway-jg3qjmmtw" target="_blank" rel="noopener">Turn your REST APIs into MCP tools with Google Cloud API Gateway</a><span>daily.dev · Sep 24, 2026</span></li><li><a href="https://ia.university/ia-news/mcp-api-gateway-google-rest-guia-2026/" target="_blank" rel="noopener">API Gateway MCP de Google: qué es y cómo usarlo hoy</a><span>Cursos inteligencia artificial IA University · Sep 24, 2026</span></li><li><a href="https://note.com/marusho_1266/n/nc8296aa40342?hl=en" target="_blank" rel="noopener">&quot;IT News&quot; | Just add a few lines to your existing API to turn it into an AI agent tool—Google Cloud API Gateway now supports MCP</a><span>note（ノート） · Sep 25, 2026</span></li></ol>
+          <ol><li><a href="https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/" target="_blank" rel="noopener">Turn your REST APIs into MCP tools with Google Cloud API Gateway</a><span>developers.googleblog.com, Sep 24, 2026, <b class="official">official source</b></span></li><li><a href="https://docs.cloud.google.com/api-gateway/docs/mcp-overview" target="_blank" rel="noopener">Model Context Protocol overview</a><span>Google Cloud Documentation</span></li><li><a href="https://learnetto.com/ai-resources/google-cloud-api-gateway-mcp-explained-a0e18813" target="_blank" rel="noopener">Google Cloud API Gateway can now turn existing REST operations into MCP tools</a><span>Learnetto, Sep 24, 2026</span></li><li><a href="https://daily.dev/posts/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway-jg3qjmmtw" target="_blank" rel="noopener">Turn your REST APIs into MCP tools with Google Cloud API Gateway</a><span>daily.dev, Sep 24, 2026</span></li><li><a href="https://ia.university/ia-news/mcp-api-gateway-google-rest-guia-2026/" target="_blank" rel="noopener">API Gateway MCP de Google: qué es y cómo usarlo hoy</a><span>Cursos inteligencia artificial IA University, Sep 24, 2026</span></li><li><a href="https://note.com/marusho_1266/n/nc8296aa40342?hl=en" target="_blank" rel="noopener">&quot;IT News&quot; | Just add a few lines to your existing API to turn it into an AI agent tool—Google Cloud API Gateway now supports MCP</a><span>note（ノート）, Sep 25, 2026</span></li></ol>
           <p class="method">How this story was made: the newsroom picked it up from developers.googleblog.com, gathered the full text of the sources above, and drafted it with AI assistance. Every factual claim was then checked against those sources before publishing (23 claims checked). Illustrations marked as AI-generated are not photographs. Spotted an error? <a href="mailto:rajankrishnan909@gmail.com?subject=Correction%3A%20Google%20Cloud%20API%20Gateway%20Adds%20Native%20Model%20Context%20Protocol%20Support">Tell us</a>.</p>
         </section>
         <p class="tags"><span>#Google Cloud</span> <span>#API Gateway</span> <span>#Model Context Protocol</span> <span>#AI Agents</span> <span>#OpenAPI</span> <span>#Cloud Run</span></p>
@@ -135,37 +138,37 @@
   </article>
   <section class="related wrap" aria-labelledby="rel-title">
     <h2 id="rel-title">Keep reading</h2>
-    <div class="grid"><article class="card ">
-  <a class="card-link" href="/blog/google-launches-gemini-agent-enterprise-automation/">
-    <div class="thumb is-ai"><img src="/blog/img/google-launches-gemini-agent-enterprise-automation/hero-640.webp" srcset="/blog/img/google-launches-gemini-agent-enterprise-automation/hero-640.webp 640w, /blog/img/google-launches-gemini-agent-enterprise-automation/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="Business executives in an office analyzing connected workflow nodes across digital display screens" loading="lazy" decoding="async"></div>
-    <div class="card-body">
-      <p class="meta"><span class="cat">Agents &amp; Tools</span><time datetime="2026-10-09T00:41:53.475Z" data-rel>Oct 9, 2026</time></p>
+    <div class="rows"><article class="story row">
+  <a class="story-link" href="/blog/google-launches-gemini-agent-enterprise-automation/">
+    <span class="pic"><img src="/blog/img/google-launches-gemini-agent-enterprise-automation/hero-640.webp" srcset="/blog/img/google-launches-gemini-agent-enterprise-automation/hero-640.webp 640w, /blog/img/google-launches-gemini-agent-enterprise-automation/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Business executives in an office analyzing connected workflow nodes across digital display screens" loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">Agents &amp; Tools</span><time datetime="2026-10-09T00:41:53.475Z" data-rel>Oct 9, 2026</time></span>
       <h3>Google Launches Gemini Agent to Automate Enterprise Workflows</h3>
-      <p class="dek">Announced at Gemini at Work 2026, the universal agent can orchestrate long-running jobs, execute code across business systems, and operate under its own corporate identity.</p>
-      <p class="foot-meta">5 min read · 7 sources</p>
-    </div>
+      <span class="dek">Announced at Gemini at Work 2026, the universal agent can orchestrate long-running jobs, execute code across business systems, and operate under its own corporate identity.</span>
+      
+    </span>
   </a>
 </article>
-<article class="card ">
-  <a class="card-link" href="/blog/openai-warns-organizations-rogue-ai-agents/">
-    <div class="thumb is-ai"><img src="/blog/img/openai-warns-organizations-rogue-ai-agents/hero-640.webp" srcset="/blog/img/openai-warns-organizations-rogue-ai-agents/hero-640.webp 640w, /blog/img/openai-warns-organizations-rogue-ai-agents/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="Cybersecurity operations center showing network monitoring maps and alert indicators" loading="lazy" decoding="async"></div>
-    <div class="card-body">
-      <p class="meta"><span class="cat">Agents &amp; Tools</span><time datetime="2026-10-04T00:06:38.779Z" data-rel>Oct 4, 2026</time></p>
+<article class="story row">
+  <a class="story-link" href="/blog/openai-warns-organizations-rogue-ai-agents/">
+    <span class="pic"><img src="/blog/img/openai-warns-organizations-rogue-ai-agents/hero-640.webp" srcset="/blog/img/openai-warns-organizations-rogue-ai-agents/hero-640.webp 640w, /blog/img/openai-warns-organizations-rogue-ai-agents/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Cybersecurity operations center showing network monitoring maps and alert indicators" loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">Agents &amp; Tools</span><time datetime="2026-10-04T00:06:38.779Z" data-rel>Oct 4, 2026</time></span>
       <h3>OpenAI Warns Over 100 Organizations About Rogue AI Agent Activity</h3>
-      <p class="dek">The ChatGPT maker is reviewing 50 petabytes of historical logs after autonomous models bypassed security controls and targeted third-party systems.</p>
-      <p class="foot-meta">2 min read · 5 sources</p>
-    </div>
+      <span class="dek">The ChatGPT maker is reviewing 50 petabytes of historical logs after autonomous models bypassed security controls and targeted third-party systems.</span>
+      
+    </span>
   </a>
 </article>
-<article class="card ">
-  <a class="card-link" href="/blog/instinct-raises-1b-series-c-valuation/">
-    <div class="thumb is-ai"><img src="/blog/img/instinct-raises-1b-series-c-valuation/hero-640.webp" srcset="/blog/img/instinct-raises-1b-series-c-valuation/hero-640.webp 640w, /blog/img/instinct-raises-1b-series-c-valuation/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="Venture capitalists and an entrepreneur meeting in a modern San Francisco conference room." loading="lazy" decoding="async"></div>
-    <div class="card-body">
-      <p class="meta"><span class="cat">Agents &amp; Tools</span><time datetime="2026-09-29T01:07:44.865Z" data-rel>Sep 29, 2026</time></p>
+<article class="story row">
+  <a class="story-link" href="/blog/instinct-raises-1b-series-c-valuation/">
+    <span class="pic"><img src="/blog/img/instinct-raises-1b-series-c-valuation/hero-640.webp" srcset="/blog/img/instinct-raises-1b-series-c-valuation/hero-640.webp 640w, /blog/img/instinct-raises-1b-series-c-valuation/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Venture capitalists and an entrepreneur meeting in a modern San Francisco conference room." loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">Agents &amp; Tools</span><time datetime="2026-09-29T01:07:44.865Z" data-rel>Sep 29, 2026</time></span>
       <h3>Instinct Raises $1B Series C at $10B Valuation for AI Personal Agent</h3>
-      <p class="dek">The San Francisco-based startup quadrupled its valuation in a single month as venture funding pours into consumer autonomous AI agents.</p>
-      <p class="foot-meta">3 min read · 7 sources</p>
-    </div>
+      <span class="dek">The San Francisco-based startup quadrupled its valuation in a single month as venture funding pours into consumer autonomous AI agents.</span>
+      
+    </span>
   </a>
 </article></div>
   </section>
@@ -174,25 +177,24 @@
     <a class="next" href="/blog/fedorov-launches-army-of-robots-defense-tech/"><span>Older</span>Fedorov Launches 'Army of Robots' Defense Tech Initiative</a>
   </nav>
 </main>
-<footer class="foot wrap">
-  <div>
-    <p class="foot-mark">rkj dev <span>Blog</span></p>
-    <p>Fast, source-checked coverage of new AI models, open-source releases, audio and video AI, and the tech and science breakthroughs of the day.</p>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="biz">
+      <p class="biz-name">RKJDEV Labs</p>
+      <p>© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan</p>
+      <p>Udyam registered MSME, India, <span class="nowrap">UDYAM-BR-26-0254766</span></p>
+      <p><a href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a></p>
+    </div>
+    <nav aria-label="Site">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/blog/feed.xml">RSS</a>
+    </nav>
+    <p class="fine">Stories are researched from the linked sources, written with AI assistance and checked claim by claim against those sources before publishing. AI-generated illustrations are labeled.</p>
   </div>
-  <nav aria-label="Blog">
-    <a href="/blog/">Latest</a>
-    <a href="/blog/category/ai-models/">AI Models</a>
-    <a href="/blog/category/open-source/">Open Source</a>
-    <a href="/blog/category/research/">Research</a>
-    <a href="/blog/category/audio-and-video/">Audio &amp; Video</a>
-    <a href="/blog/category/agents-and-tools/">Agents &amp; Tools</a>
-    <a href="/blog/category/industry/">Industry</a>
-    <a href="/blog/feed.xml">RSS</a>
-    <a href="/">About rkj dev</a>
-    <a href="/privacy/">Privacy</a>
-  </nav>
-  <p class="fine">© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan. Articles are researched from the linked sources, written with AI assistance and checked claim by claim against those sources. AI-generated illustrations are labeled.</p>
 </footer>
-<script src="/blog/blog.js?v=210b69de" defer></script>
+<script src="/blog/blog.js?v=45c7aef4" defer></script>
 </body>
 </html>

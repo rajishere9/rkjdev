@@ -6,7 +6,8 @@
 <title>Aleph Alpha Releases Kolibri 78.1B MoE Model | rkj dev</title>
 <meta name="description" content="Aleph Alpha has launched Kolibri, a 78.1B parameter open-weight MoE model for German and English with 3.46B active parameters and 1M token context.">
 <link rel="canonical" href="https://www.rkjdev.com/blog/aleph-alpha-releases-kolibri-open-weight-moe/">
-<meta name="theme-color" content="#16101a">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#110b14">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta property="og:site_name" content="rkj dev Blog">
 <meta property="og:type" content="article">
@@ -22,11 +23,14 @@
 <meta name="twitter:description" content="Aleph Alpha has launched Kolibri, a 78.1B parameter open-weight MoE model for German and English with 3.46B active parameters and 1M token context.">
 <link rel="alternate" type="application/rss+xml" title="rkj dev Blog" href="/blog/feed.xml">
 <link rel="alternate" type="application/feed+json" title="rkj dev Blog" href="/blog/feed.json">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2316101a'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23f4b860'/%3E%3C/svg%3E">
+<link rel="icon" href="/favicon.svg?v=bdff7dc5" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=Unbounded:wght@300;400;500&display=swap">
-<link rel="stylesheet" href="/blog/blog.css?v=4ed3a51a">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,40;1,9..144,400..600,40&family=Schibsted+Grotesk:ital,wght@0,400..600;1,400..600&display=swap">
+<link rel="stylesheet" href="/site.css?v=e85724ed">
+<link rel="stylesheet" href="/blog/blog.css?v=7ad332ef">
 <meta property="article:published_time" content="2026-10-05T01:15:02.565Z">
 <meta property="article:modified_time" content="2026-10-05T01:15:02.565Z">
 <meta property="article:section" content="AI Models">
@@ -36,20 +40,19 @@
 <meta property="article:tag" content="Mixture of Experts">
 <meta property="article:tag" content="Large Language Models">
 <link rel="preload" as="image" href="/blog/img/aleph-alpha-releases-kolibri-open-weight-moe/hero.webp" imagesrcset="/blog/img/aleph-alpha-releases-kolibri-open-weight-moe/hero-640.webp 640w, /blog/img/aleph-alpha-releases-kolibri-open-weight-moe/hero.webp 1200w" imagesizes="(max-width: 760px) 100vw, 1200px">
-<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"Aleph Alpha Releases Kolibri, an Open-Weight 78.1B MoE Model","description":"Aleph Alpha has launched Kolibri, a 78.1B parameter open-weight MoE model for German and English with 3.46B active parameters and 1M token context.","url":"https://www.rkjdev.com/blog/aleph-alpha-releases-kolibri-open-weight-moe/","mainEntityOfPage":"https://www.rkjdev.com/blog/aleph-alpha-releases-kolibri-open-weight-moe/","image":["https://www.rkjdev.com/blog/img/aleph-alpha-releases-kolibri-open-weight-moe/og.jpg","https://www.rkjdev.com/blog/img/aleph-alpha-releases-kolibri-open-weight-moe/hero.webp"],"datePublished":"2026-10-05T01:15:02.565Z","dateModified":"2026-10-05T01:15:02.565Z","articleSection":"AI Models","keywords":"Aleph Alpha, Kolibri, Open Source AI, Mixture of Experts, Large Language Models","wordCount":1015,"author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","name":"rkj dev","url":"https://www.rkjdev.com","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/me.jpg"}},"isBasedOn":["https://huggingface.co/Aleph-Alpha/Kolibri-1","https://www.marktechpost.com/2026/10/04/aleph-alpha-releases-kolibri-a-78-1b-open-weight-english-german-moe-model-with-only-3-46b-active-parameters/","https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/","https://www.mindstudio.ai/blog/kolibri-1-aleph-alpha-german-model","https://hyper.ai/en/stories/705923829357ad755424fab94ce12f84"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"AI Models","item":"https://www.rkjdev.com/blog/category/ai-models/"},{"@type":"ListItem","position":3,"name":"Aleph Alpha Releases Kolibri, an Open-Weight 78.1B MoE Model","item":"https://www.rkjdev.com/blog/aleph-alpha-releases-kolibri-open-weight-moe/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Kolibri's parameter size and architecture?","acceptedAnswer":{"@type":"Answer","text":"Kolibri is a mixture-of-experts model containing 78.1 billion total parameters. It dynamically routes tokens across 384 routed experts and one shared expert per layer, activating approximately 3.46 billion parameters per token."}},{"@type":"Question","name":"What context length does Kolibri support?","acceptedAnswer":{"@type":"Answer","text":"Kolibri natively supports 262,144 tokens and has been validated up to 1,048,576 tokens (1M context window) using a hybrid sliding-window and full grouped-query attention structure."}},{"@type":"Question","name":"Under what license is Kolibri released?","acceptedAnswer":{"@type":"Answer","text":"Kolibri is released under the open-source Apache 2.0 license, allowing free commercial use, modification, and on-premise deployment."}},{"@type":"Question","name":"What hardware is required to run Kolibri?","acceptedAnswer":{"@type":"Answer","text":"Serving the FP8 model checkpoint requires a minimum of two NVIDIA A100 80GB, two H100 SXM5, or a single H200/B200/B300 GPU, with dual H100 SXM5 or H200 units recommended to accommodate KV caching overhead."}}]}]</script>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"Aleph Alpha Releases Kolibri, an Open-Weight 78.1B MoE Model","description":"Aleph Alpha has launched Kolibri, a 78.1B parameter open-weight MoE model for German and English with 3.46B active parameters and 1M token context.","url":"https://www.rkjdev.com/blog/aleph-alpha-releases-kolibri-open-weight-moe/","mainEntityOfPage":"https://www.rkjdev.com/blog/aleph-alpha-releases-kolibri-open-weight-moe/","image":["https://www.rkjdev.com/blog/img/aleph-alpha-releases-kolibri-open-weight-moe/og.jpg","https://www.rkjdev.com/blog/img/aleph-alpha-releases-kolibri-open-weight-moe/hero.webp"],"datePublished":"2026-10-05T01:15:02.565Z","dateModified":"2026-10-05T01:15:02.565Z","articleSection":"AI Models","keywords":"Aleph Alpha, Kolibri, Open Source AI, Mixture of Experts, Large Language Models","wordCount":1015,"author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","name":"RKJDEV Labs","url":"https://www.rkjdev.com","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/apple-touch-icon.png"}},"isBasedOn":["https://huggingface.co/Aleph-Alpha/Kolibri-1","https://www.marktechpost.com/2026/10/04/aleph-alpha-releases-kolibri-a-78-1b-open-weight-english-german-moe-model-with-only-3-46b-active-parameters/","https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/","https://www.mindstudio.ai/blog/kolibri-1-aleph-alpha-german-model","https://hyper.ai/en/stories/705923829357ad755424fab94ce12f84"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"AI Models","item":"https://www.rkjdev.com/blog/category/ai-models/"},{"@type":"ListItem","position":3,"name":"Aleph Alpha Releases Kolibri, an Open-Weight 78.1B MoE Model","item":"https://www.rkjdev.com/blog/aleph-alpha-releases-kolibri-open-weight-moe/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Kolibri's parameter size and architecture?","acceptedAnswer":{"@type":"Answer","text":"Kolibri is a mixture-of-experts model containing 78.1 billion total parameters. It dynamically routes tokens across 384 routed experts and one shared expert per layer, activating approximately 3.46 billion parameters per token."}},{"@type":"Question","name":"What context length does Kolibri support?","acceptedAnswer":{"@type":"Answer","text":"Kolibri natively supports 262,144 tokens and has been validated up to 1,048,576 tokens (1M context window) using a hybrid sliding-window and full grouped-query attention structure."}},{"@type":"Question","name":"Under what license is Kolibri released?","acceptedAnswer":{"@type":"Answer","text":"Kolibri is released under the open-source Apache 2.0 license, allowing free commercial use, modification, and on-premise deployment."}},{"@type":"Question","name":"What hardware is required to run Kolibri?","acceptedAnswer":{"@type":"Answer","text":"Serving the FP8 model checkpoint requires a minimum of two NVIDIA A100 80GB, two H100 SXM5, or a single H200/B200/B300 GPU, with dual H100 SXM5 or H200 units recommended to accommodate KV caching overhead."}}]}]</script>
 </head>
 <body class="post">
 <div class="progress" aria-hidden="true"><span></span></div>
 <a class="skip" href="#main">Skip to content</a>
-<div class="backdrop" aria-hidden="true"></div>
-<header class="top">
+<header class="site-head">
   <div class="wrap">
-    <a class="mark" href="/" aria-label="rkj dev, home">rkj dev</a>
+    <a class="mark" href="/">rkj dev</a>
     <nav aria-label="Site">
-      <a href="/blog/" aria-current="page">Blog</a>
-      <a href="/play/">Play</a>
       <a href="/#work">Work</a>
       <a href="/#about">About</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/play/">Play</a>
       <a href="/#contact">Contact</a>
     </nav>
   </div>
@@ -73,7 +76,7 @@
 </figure></div>
     <div class="layout wrap">
       <aside class="rail" aria-label="On this page">
-        <nav class="toc"><p>On this page</p><ol><li><a href="#architecture-and-tokenizer-design">Architecture and Tokenizer Design</a></li><li><a href="#iterative-pipeline-and-the-kolibri-origin-foundation">Iterative Pipeline and the Kolibri Origin Foundation</a></li><li><a href="#benchmark-performance-and-comparisons">Benchmark Performance and Comparisons</a></li><li><a href="#hardware-specs-and-local-deployment">Hardware Specs and Local Deployment</a></li><li><a href="#european-sovereignty-and-enterprise-alignment">European Sovereignty and Enterprise Alignment</a></li></ol></nav>
+        <nav class="toc"><p>Contents</p><ol><li><a href="#architecture-and-tokenizer-design">Architecture and Tokenizer Design</a></li><li><a href="#iterative-pipeline-and-the-kolibri-origin-foundation">Iterative Pipeline and the Kolibri Origin Foundation</a></li><li><a href="#benchmark-performance-and-comparisons">Benchmark Performance and Comparisons</a></li><li><a href="#hardware-specs-and-local-deployment">Hardware Specs and Local Deployment</a></li><li><a href="#european-sovereignty-and-enterprise-alignment">European Sovereignty and Enterprise Alignment</a></li></ol></nav>
         <div class="share">
           <p>Share</p>
           <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Faleph-alpha-releases-kolibri-open-weight-moe%2F&text=Aleph%20Alpha%20Releases%20Kolibri%2C%20an%20Open-Weight%2078.1B%20MoE%20Model" target="_blank" rel="noopener">X</a>
@@ -83,8 +86,8 @@
         </div>
       </aside>
       <div class="prose">
-        <section class="takeaways" aria-labelledby="tk">
-          <h2 id="tk">Key takeaways</h2>
+        <section class="inshort" aria-labelledby="tk">
+          <h2 id="tk">In short</h2>
           <ul><li>Kolibri features 78.1 billion total parameters but activates only 3.46 billion parameters per token across 50 transformer layers.</li><li>The model supports context lengths up to 1,048,576 tokens, with native training at 262,144 tokens using hybrid sliding-window and full attention.</li><li>Released under an Apache 2.0 license, Kolibri is engineered specifically for English and German enterprise and public sector applications.</li><li>Training utilized 24 trillion tokens across clusters in Germany and Finland with compliance tailored to the EU AI Act and GDPR.</li></ul>
         </section>
         <p>On October 3, 2026, German AI laboratory <a href="https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/" target="_blank" rel="noopener">Aleph Alpha released Kolibri</a>, an open-weight mixture-of-experts (MoE) reasoning model developed for German and English. Kolibri carries 78.1 billion total parameters but activates only 3.46 billion per token during inference, balancing dense model capacity with lower operational compute costs. Published under the permissive Apache 2.0 license, the model provides an open-weight alternative tailored for regulated European sectors that demand sovereign infrastructure and strict regulatory alignment.</p>
@@ -130,7 +133,7 @@ vllm serve Aleph-Alpha/Kolibri-1 --kv-cache-dtype fp8 \
 <p>As a signatory to the European Union&#39;s General-Purpose AI (GPAI) Code of Practice, Aleph Alpha designed Kolibri to align with the EU AI Act and GDPR guidelines. Pre-training data pipelines automatically redacted personal data, and the model&#39;s transparent Apache 2.0 open-weight release provides public administration, aerospace, manufacturing, and financial institutions with the ability to self-host without routing proprietary text through external third-party APIs.</p>
 
         <section class="faq" aria-labelledby="faq-title">
-          <h2 id="faq-title">Frequently asked questions</h2>
+          <h2 id="faq-title">Questions people ask</h2>
           <details open><summary>What is Kolibri's parameter size and architecture?</summary><p>Kolibri is a mixture-of-experts model containing 78.1 billion total parameters. It dynamically routes tokens across 384 routed experts and one shared expert per layer, activating approximately 3.46 billion parameters per token.</p></details>
 <details><summary>What context length does Kolibri support?</summary><p>Kolibri natively supports 262,144 tokens and has been validated up to 1,048,576 tokens (1M context window) using a hybrid sliding-window and full grouped-query attention structure.</p></details>
 <details><summary>Under what license is Kolibri released?</summary><p>Kolibri is released under the open-source Apache 2.0 license, allowing free commercial use, modification, and on-premise deployment.</p></details>
@@ -138,7 +141,7 @@ vllm serve Aleph-Alpha/Kolibri-1 --kv-cache-dtype fp8 \
         </section>
         <section class="sources" id="sources" aria-labelledby="src-title">
           <h2 id="src-title">Sources</h2>
-          <ol><li><a href="https://huggingface.co/Aleph-Alpha/Kolibri-1" target="_blank" rel="noopener">Aleph-Alpha/Kolibri-1</a><span>Hugging Face · Oct 2, 2026 · <b class="official">Official</b></span></li><li><a href="https://www.marktechpost.com/2026/10/04/aleph-alpha-releases-kolibri-a-78-1b-open-weight-english-german-moe-model-with-only-3-46b-active-parameters/" target="_blank" rel="noopener">Aleph Alpha Releases Kolibri: A 78.1B Open-Weight English-German MoE Model With Only 3.46B Active Parameters</a><span>marktechpost.com · Oct 4, 2026</span></li><li><a href="https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/" target="_blank" rel="noopener">Kolibri Has Landed: A Sovereign Open-Weight Model — Aleph Alpha</a><span>Aleph Alpha · Oct 3, 2026</span></li><li><a href="https://www.mindstudio.ai/blog/kolibri-1-aleph-alpha-german-model" target="_blank" rel="noopener">Kolibri-1: Aleph Alpha's Open-Weight German-English MoE Model</a><span>MindStudio · Oct 4, 2026</span></li><li><a href="https://hyper.ai/en/stories/705923829357ad755424fab94ce12f84" target="_blank" rel="noopener">Aleph Alpha Releases Kolibri 1: Sovereign German MoE LLM</a><span>hyper.ai</span></li></ol>
+          <ol><li><a href="https://huggingface.co/Aleph-Alpha/Kolibri-1" target="_blank" rel="noopener">Aleph-Alpha/Kolibri-1</a><span>Hugging Face, Oct 2, 2026, <b class="official">official source</b></span></li><li><a href="https://www.marktechpost.com/2026/10/04/aleph-alpha-releases-kolibri-a-78-1b-open-weight-english-german-moe-model-with-only-3-46b-active-parameters/" target="_blank" rel="noopener">Aleph Alpha Releases Kolibri: A 78.1B Open-Weight English-German MoE Model With Only 3.46B Active Parameters</a><span>marktechpost.com, Oct 4, 2026</span></li><li><a href="https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/" target="_blank" rel="noopener">Kolibri Has Landed: A Sovereign Open-Weight Model — Aleph Alpha</a><span>Aleph Alpha, Oct 3, 2026</span></li><li><a href="https://www.mindstudio.ai/blog/kolibri-1-aleph-alpha-german-model" target="_blank" rel="noopener">Kolibri-1: Aleph Alpha's Open-Weight German-English MoE Model</a><span>MindStudio, Oct 4, 2026</span></li><li><a href="https://hyper.ai/en/stories/705923829357ad755424fab94ce12f84" target="_blank" rel="noopener">Aleph Alpha Releases Kolibri 1: Sovereign German MoE LLM</a><span>hyper.ai</span></li></ol>
           <p class="method">How this story was made: the newsroom picked it up from Google News, gathered the full text of the sources above, and drafted it with AI assistance. Every factual claim was then checked against those sources before publishing (33 claims checked). Illustrations marked as AI-generated are not photographs. Spotted an error? <a href="mailto:rajankrishnan909@gmail.com?subject=Correction%3A%20Aleph%20Alpha%20Releases%20Kolibri%2C%20an%20Open-Weight%2078.1B%20MoE%20Model">Tell us</a>.</p>
         </section>
         <p class="tags"><span>#Aleph Alpha</span> <span>#Kolibri</span> <span>#Open Source AI</span> <span>#Mixture of Experts</span> <span>#Large Language Models</span></p>
@@ -148,37 +151,37 @@ vllm serve Aleph-Alpha/Kolibri-1 --kv-cache-dtype fp8 \
   </article>
   <section class="related wrap" aria-labelledby="rel-title">
     <h2 id="rel-title">Keep reading</h2>
-    <div class="grid"><article class="card ">
-  <a class="card-link" href="/blog/aleph-alpha-releases-kolibri-1-open-weights-model/">
-    <div class="thumb is-ai"><img src="/blog/img/aleph-alpha-releases-kolibri-1-open-weights-model/hero-640.webp" srcset="/blog/img/aleph-alpha-releases-kolibri-1-open-weights-model/hero-640.webp 640w, /blog/img/aleph-alpha-releases-kolibri-1-open-weights-model/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="Illustration of modern data center infrastructure and research environment" loading="lazy" decoding="async"></div>
-    <div class="card-body">
-      <p class="meta"><span class="cat">AI Models</span><time datetime="2026-10-04T00:05:17.354Z" data-rel>Oct 4, 2026</time></p>
+    <div class="rows"><article class="story row">
+  <a class="story-link" href="/blog/aleph-alpha-releases-kolibri-1-open-weights-model/">
+    <span class="pic"><img src="/blog/img/aleph-alpha-releases-kolibri-1-open-weights-model/hero-640.webp" srcset="/blog/img/aleph-alpha-releases-kolibri-1-open-weights-model/hero-640.webp 640w, /blog/img/aleph-alpha-releases-kolibri-1-open-weights-model/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Illustration of modern data center infrastructure and research environment" loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-10-04T00:05:17.354Z" data-rel>Oct 4, 2026</time></span>
       <h3>Aleph Alpha Releases Kolibri-1 Open-Weights Model Under Apache 2.0</h3>
-      <p class="dek">The German AI lab has published the full weights for its 78-billion-parameter bilingual mixture-of-experts model under a permissive open-source license.</p>
-      <p class="foot-meta">3 min read · 5 sources</p>
-    </div>
+      <span class="dek">The German AI lab has published the full weights for its 78-billion-parameter bilingual mixture-of-experts model under a permissive open-source license.</span>
+      
+    </span>
   </a>
 </article>
-<article class="card ">
-  <a class="card-link" href="/blog/mistral-large-4-preview-open-weights-2/">
-    <div class="thumb is-ai"><img src="/blog/img/mistral-large-4-preview-open-weights-2/hero-640.webp" srcset="/blog/img/mistral-large-4-preview-open-weights-2/hero-640.webp 640w, /blog/img/mistral-large-4-preview-open-weights-2/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="An AI researcher inspecting server status screens inside a European data center control room." loading="lazy" decoding="async"></div>
-    <div class="card-body">
-      <p class="meta"><span class="cat">AI Models</span><time datetime="2026-10-08T02:09:12.807Z" data-rel>Oct 8, 2026</time></p>
+<article class="story row">
+  <a class="story-link" href="/blog/mistral-large-4-preview-open-weights-2/">
+    <span class="pic"><img src="/blog/img/mistral-large-4-preview-open-weights-2/hero-640.webp" srcset="/blog/img/mistral-large-4-preview-open-weights-2/hero-640.webp 640w, /blog/img/mistral-large-4-preview-open-weights-2/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="An AI researcher inspecting server status screens inside a European data center control room." loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-10-08T02:09:12.807Z" data-rel>Oct 8, 2026</time></span>
       <h3>Mistral Large 4 Launches in Public Preview as a 1-Trillion Parameter MoE</h3>
-      <p class="dek">Nicknamed 'Le Chonk,' the European AI lab's flagship mixture-of-experts model pairs 49 billion active parameters with enterprise cybersecurity and multimodal reasoning.</p>
-      <p class="foot-meta">4 min read · 5 sources</p>
-    </div>
+      <span class="dek">Nicknamed 'Le Chonk,' the European AI lab's flagship mixture-of-experts model pairs 49 billion active parameters with enterprise cybersecurity and multimodal reasoning.</span>
+      
+    </span>
   </a>
 </article>
-<article class="card ">
-  <a class="card-link" href="/blog/mistral-large-4-preview-open-weights/">
-    <div class="thumb is-ai"><img src="/blog/img/mistral-large-4-preview-open-weights/hero-640.webp" srcset="/blog/img/mistral-large-4-preview-open-weights/hero-640.webp 640w, /blog/img/mistral-large-4-preview-open-weights/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="Illustration of high-performance server racks in a modern data center." loading="lazy" decoding="async"></div>
-    <div class="card-body">
-      <p class="meta"><span class="cat">AI Models</span><time datetime="2026-10-07T00:19:57.018Z" data-rel>Oct 7, 2026</time></p>
+<article class="story row">
+  <a class="story-link" href="/blog/mistral-large-4-preview-open-weights/">
+    <span class="pic"><img src="/blog/img/mistral-large-4-preview-open-weights/hero-640.webp" srcset="/blog/img/mistral-large-4-preview-open-weights/hero-640.webp 640w, /blog/img/mistral-large-4-preview-open-weights/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Illustration of high-performance server racks in a modern data center." loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-10-07T00:19:57.018Z" data-rel>Oct 7, 2026</time></span>
       <h3>Mistral Releases Trillion-Parameter Mistral Large 4 Preview</h3>
-      <p class="dek">Nicknamed 'Le Chonk,' the multimodal model features a 1-trillion parameter architecture and aims to rival leading American and Chinese AI systems.</p>
-      <p class="foot-meta">3 min read · 6 sources</p>
-    </div>
+      <span class="dek">Nicknamed 'Le Chonk,' the multimodal model features a 1-trillion parameter architecture and aims to rival leading American and Chinese AI systems.</span>
+      
+    </span>
   </a>
 </article></div>
   </section>
@@ -187,25 +190,24 @@ vllm serve Aleph-Alpha/Kolibri-1 --kv-cache-dtype fp8 \
     <a class="next" href="/blog/anthropic-claude-frontier-academy-enterprise-engineers/"><span>Older</span>Anthropic Commits $100M to Train 10,000 Enterprise AI Engineers</a>
   </nav>
 </main>
-<footer class="foot wrap">
-  <div>
-    <p class="foot-mark">rkj dev <span>Blog</span></p>
-    <p>Fast, source-checked coverage of new AI models, open-source releases, audio and video AI, and the tech and science breakthroughs of the day.</p>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="biz">
+      <p class="biz-name">RKJDEV Labs</p>
+      <p>© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan</p>
+      <p>Udyam registered MSME, India, <span class="nowrap">UDYAM-BR-26-0254766</span></p>
+      <p><a href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a></p>
+    </div>
+    <nav aria-label="Site">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/blog/feed.xml">RSS</a>
+    </nav>
+    <p class="fine">Stories are researched from the linked sources, written with AI assistance and checked claim by claim against those sources before publishing. AI-generated illustrations are labeled.</p>
   </div>
-  <nav aria-label="Blog">
-    <a href="/blog/">Latest</a>
-    <a href="/blog/category/ai-models/">AI Models</a>
-    <a href="/blog/category/open-source/">Open Source</a>
-    <a href="/blog/category/research/">Research</a>
-    <a href="/blog/category/audio-and-video/">Audio &amp; Video</a>
-    <a href="/blog/category/agents-and-tools/">Agents &amp; Tools</a>
-    <a href="/blog/category/industry/">Industry</a>
-    <a href="/blog/feed.xml">RSS</a>
-    <a href="/">About rkj dev</a>
-    <a href="/privacy/">Privacy</a>
-  </nav>
-  <p class="fine">© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan. Articles are researched from the linked sources, written with AI assistance and checked claim by claim against those sources. AI-generated illustrations are labeled.</p>
 </footer>
-<script src="/blog/blog.js?v=210b69de" defer></script>
+<script src="/blog/blog.js?v=45c7aef4" defer></script>
 </body>
 </html>

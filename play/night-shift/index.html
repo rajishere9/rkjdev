@@ -6,6 +6,7 @@
 <title>Night Shift: a pixel mystery at a datacenter</title>
 <meta name="description" content="It's 3am at a datacenter and something is using the cluster, 17 minutes at a time. A free pixel-art adventure with three endings, playable in your browser on desktop and phones.">
 <link rel="canonical" href="https://www.rkjdev.com/play/night-shift/">
+<meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#07090f">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Night Shift">
@@ -16,9 +17,12 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' shape-rendering='crispEdges'%3E%3Crect width='32' height='32' fill='%2307090f'/%3E%3Crect x='8' y='4' width='16' height='24' fill='%231b2230'/%3E%3Crect x='10' y='8' width='2' height='2' fill='%2337d67a'/%3E%3Crect x='10' y='13' width='2' height='2' fill='%2337d67a'/%3E%3Crect x='10' y='18' width='2' height='2' fill='%23ffb347'/%3E%3Crect x='10' y='23' width='2' height='2' fill='%2337d67a'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Unbounded:wght@500&display=swap">
-<link rel="stylesheet" href="../play.css?v=d22a7100">
-<link rel="stylesheet" href="night.css?v=28930649">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,40;1,9..144,400..600,40&family=Schibsted+Grotesk:ital,wght@0,400..600;1,400..600&display=swap">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=ffe10b2c">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/site.css?v=e85724ed">
+<link rel="stylesheet" href="../play.css?v=cbf09fb8">
+<link rel="stylesheet" href="night.css?v=8f1eebb5">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"VideoGame","name":"Night Shift","url":"https://www.rkjdev.com/play/night-shift/","description":"A pixel-art mystery adventure set on the night shift at a datacenter, with three endings.","genre":["Adventure","Puzzle"],"gamePlatform":"Web browser","applicationCategory":"Game","playMode":"SinglePlayer","isAccessibleForFree":true,"author":{"@type":"Person","name":"Rajan Krishnan","url":"https://www.rkjdev.com/"}}
 </script>
@@ -26,14 +30,15 @@
 <body class="ns">
 <script>if (matchMedia("(pointer: coarse)").matches || location.search.includes("touch")) document.documentElement.classList.add("touch");</script>
 <a class="skip" href="#screen">Skip to the game</a>
-<header class="top">
+<header class="site-head">
   <div class="wrap">
-    <a class="mark" href="/" aria-label="rkj dev, home">rkj dev</a>
+    <a class="mark" href="/">rkj dev</a>
     <nav aria-label="Site">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
       <a href="/blog/">Blog</a>
       <a href="/play/" aria-current="page">Play</a>
-      <a class="opt" href="/#work">Work</a>
-      <a class="opt" href="/#about">About</a>
+      <a href="/#contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -66,6 +71,24 @@
     <p class="made">Every pixel and every sound is made in code as you play: no image or audio files. Sound is best with headphones.</p>
   </section>
 </main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="biz">
+      <p class="biz-name">RKJDEV Labs</p>
+      <p>© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan</p>
+      <p>Udyam registered MSME, India, <span class="nowrap">UDYAM-BR-26-0254766</span></p>
+      <p><a href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a></p>
+    </div>
+    <nav aria-label="Site">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/blog/feed.xml">RSS</a>
+    </nav>
+    <p class="fine">No trackers. The game saves your progress only in your own browser.</p>
+  </div>
+</footer>
 
 <div id="live" class="sr" aria-live="polite"></div>
 <script>

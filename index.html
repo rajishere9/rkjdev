@@ -4,20 +4,31 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rajan Krishnan, rkj dev</title>
-<meta name="description" content="Rajan Krishnan (rkj dev) builds games, mobile apps and web products with emerging tech. Latest: CandleDeep for Android.">
+<meta name="description" content="Rajan Krishnan (rkj dev) builds games, mobile apps and web products with emerging tech, as RKJDEV Labs. Latest: CandleDeep for Android.">
 <link rel="canonical" href="https://www.rkjdev.com/">
-<meta name="theme-color" content="#16101a">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#110b14">
 <meta property="og:type" content="profile">
+<meta property="og:site_name" content="rkj dev">
 <meta property="og:title" content="Rajan Krishnan, rkj dev">
-<meta property="og:description" content="Games, mobile apps and web products, built with emerging tech.">
+<meta property="og:description" content="Games, mobile apps and web products, built with emerging tech. Plus a fact-checked AI newsroom and small browser games.">
 <meta property="og:url" content="https://www.rkjdev.com/">
-<meta property="og:image" content="https://www.rkjdev.com/candledeep/feature.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2316101a'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23f4b860'/%3E%3C/svg%3E">
+<meta property="og:image" content="https://www.rkjdev.com/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rajan Krishnan, rkj dev">
+<meta name="twitter:description" content="Games, mobile apps and web products, built with emerging tech.">
+<meta name="twitter:image" content="https://www.rkjdev.com/og.jpg">
+<link rel="icon" href="/favicon.svg?v=bdff7dc5" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=ffe10b2c">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Unbounded:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,40;1,9..144,400..600,40&family=Schibsted+Grotesk:ital,wght@0,400..600;1,400..600&display=swap">
 <link rel="alternate" type="application/rss+xml" title="rkj dev Blog" href="/blog/feed.xml">
-<link rel="stylesheet" href="home.css?v=3fcfbab3">
+<link rel="stylesheet" href="/site.css?v=e85724ed">
+<link rel="stylesheet" href="home.css?v=33d6f251">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -39,6 +50,7 @@
       "@id": "https://www.rkjdev.com/#labs",
       "name": "RKJDEV Labs",
       "url": "https://www.rkjdev.com/",
+      "logo": "https://www.rkjdev.com/apple-touch-icon.png",
       "email": "mailto:rajankrishnan909@gmail.com",
       "founder": { "@id": "https://www.rkjdev.com/#rajan" },
       "foundingDate": "2026-10-10",
@@ -48,30 +60,31 @@
 }
 </script>
 </head>
-<body>
-<a class="skip" href="#work">Skip to work</a>
-<div class="backdrop" aria-hidden="true"></div>
-<div class="light" aria-hidden="true"></div>
-<div class="lantern" aria-hidden="true"></div>
+<body class="home">
+<a class="skip" href="#main">Skip to content</a>
+<div class="glow" aria-hidden="true"></div>
 
-<header class="top">
+<header class="site-head">
   <div class="wrap">
-    <a class="mark" href="/" aria-label="rkj dev, home">rkj dev</a>
-    <nav aria-label="Sections">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
+    <a class="mark" href="/">rkj dev</a>
+    <nav aria-label="Site">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
       <a href="/blog/">Blog</a>
       <a href="/play/">Play</a>
-      <a href="#contact">Contact</a>
+      <a href="/#contact">Contact</a>
     </nav>
   </div>
 </header>
 
-<div class="wrap">
-  <main>
-    <section class="hero" aria-labelledby="name">
-      <div class="hero-text">
-      <h1 id="name"><span class="line"><span>Rajan</span></span><span class="line"><span>Krishnan</span></span></h1>
+<main id="main" class="wrap">
+  <section class="hero" aria-labelledby="name">
+    <div class="candle" aria-hidden="true">
+      <div class="flame"><canvas width="96" height="192"></canvas></div>
+      <div class="wax"></div>
+    </div>
+    <div class="hero-text">
+      <h1 id="name"><span>Rajan</span><span>Krishnan</span></h1>
       <p class="lede">I build games, mobile apps and web products, and I like working with technology while it is still new.</p>
       <p class="where">Full-stack developer. I publish my own apps and games as rkj dev.</p>
       <div class="actions">
@@ -80,197 +93,221 @@
         <a class="textlink" href="#work">See my work</a>
       </div>
       <p class="now">Now: <a href="candledeep/">CandleDeep</a>, my first game for Android, is in testing on Google Play.</p>
-      </div>
+    </div>
+  </section>
+
+  <section class="section" id="work" aria-labelledby="work-title">
+    <div class="section-head"><h2 id="work-title">Work</h2></div>
+    <ol class="timeline">
+      <li class="entry lit">
+        <div class="when"><time datetime="2026-09">Sep 2026</time><span>Android game</span></div>
+        <article class="body">
+          <h3>CandleDeep</h3>
+          <p class="role">Independent release under rkj dev. Design, code and publishing.</p>
+          <p class="what">A pixel-art survivor roguelite. You wake at the gate of the Hollow with one candle of time: hold off the horde until it burns out, carry your gold back up, and go deeper. Played one-handed in portrait.</p>
+          <p class="proof">2 stages, 20 enemies, 8 weapons, 7 heroes</p>
+          <p class="stack">Godot 4 and GDScript, Google Play Billing, AdMob with consent messages for EU and US privacy rules.</p>
+          <div class="links">
+            <a class="textlink" href="candledeep/">Game page</a>
+            <a class="textlink" href="candledeep/#products">Items and prices</a>
+          </div>
+          <figure class="media feature">
+            <img src="candledeep/feature.jpg?v=2257c96b" width="1024" height="500" alt="CandleDeep: a knight holding a candle in a dark dungeon, with the words Survive until the candle burns out.">
+            <div class="phones">
+              <img src="candledeep/shot_1.jpg?v=b2d8b7ba" width="540" height="960" alt="Fighting the Slime King boss" loading="lazy">
+              <img src="candledeep/shot_3.jpg?v=16ae1d95" width="540" height="960" alt="Choosing an upgrade at level-up" loading="lazy">
+              <img src="candledeep/shot_5.jpg?v=2cd3dc14" width="540" height="960" alt="The heroes screen" loading="lazy">
+            </div>
+          </figure>
+        </article>
+      </li>
+
+      <li class="entry">
+        <div class="when"><time datetime="2026-08">Aug 2026</time><span>Web platform</span></div>
+        <article class="body">
+          <h3>AvsarIQ <span class="status">No longer maintained</span></h3>
+          <p class="role">Designed and built end to end.</p>
+          <p class="what">A calmer way to follow Indian government job openings. It brings official notifications, eligibility, deadlines and application links into one place, lets people compare their profile with each post's requirements, and keeps the official source beside every detail.</p>
+          <p class="stack">Next.js, React, TypeScript, Supabase and PostgreSQL on Vercel. Accounts and onboarding, saved and applied tracking, SEO and performance work.</p>
+          <figure class="media browser">
+            <figcaption>avsariq.com<span>Scrolling through the home page</span></figcaption>
+            <div class="viewport"><img src="work/avsariq.jpg?v=835c519d" width="1200" height="2167" alt="AvsarIQ home page: A calmer way to decide what to apply for next." loading="lazy"></div>
+          </figure>
+        </article>
+      </li>
+
+      <li class="entry">
+        <div class="when"><time datetime="2026-07">Jul 2026</time><span>Android app</span></div>
+        <article class="body">
+          <h3>PranArog</h3>
+          <p class="role">Designed and built. Coming soon to Google Play.</p>
+          <p class="what">A calm medication tracker. Precise reminders built on Android's exact alarms that don't drain the battery, Gemini-powered summaries of your schedule, dietary notes and possible interaction flags, and one tap to wipe your data and leave.</p>
+          <p class="stack">Android, Firebase and Cloud Firestore, Gemini API.</p>
+          <div class="links"><a class="textlink" href="https://pranarog.web.app/">Visit pranarog.web.app</a></div>
+          <figure class="media browser">
+            <figcaption>pranarog.web.app<span>Scrolling through the home page</span></figcaption>
+            <div class="viewport"><img src="work/pranarog.jpg?v=95b0e38c" width="1200" height="1936" alt="PranArog home page: A serene space for medication tracking, beside the app's Today screen." loading="lazy"></div>
+          </figure>
+        </article>
+      </li>
+
+      <li class="entry">
+        <div class="when"><time datetime="2025-01">2025 to 2026</time><span>Android app</span></div>
+        <article class="body">
+          <h3><img src="work/socialg.png?v=77431aa8" width="96" height="96" alt="">SocialG</h3>
+          <p class="role">Application developer, January 2025 to June 2026.</p>
+          <p class="what">A cloud gaming app: people play popular games without downloading them and earn rewards for playing, competing and inviting friends. Alongside building the app, I took on startup leadership and team management.</p>
+          <p class="proof">100K+ downloads on Google Play</p>
+          <div class="links"><a class="textlink" href="https://play.google.com/store/apps/details?id=com.remedez.magic">Open on Google Play</a></div>
+        </article>
+      </li>
+
+      <li class="entry">
+        <div class="when"><time datetime="2024-10">Oct 2024</time><span>Website</span></div>
+        <article class="body">
+          <h3>Shrutim</h3>
+          <p class="role">Built with Shivam.</p>
+          <p class="what">A home for mantras and stotrams, with their lyrics, meaning and proper translations, made for devotees reading on their phones.</p>
+          <p class="proof">500K+ organic search impressions</p>
+          <p class="stack">Next.js, React, Firebase, MongoDB and AWS, with search engine optimisation at the centre.</p>
+          <div class="links"><a class="textlink" href="https://www.shrutim.com/">Visit shrutim.com</a></div>
+          <figure class="media browser">
+            <figcaption>shrutim.com<span>Scrolling through the home page</span></figcaption>
+            <div class="viewport"><img src="work/shrutim.jpg?v=18fb6ba1" width="1200" height="2167" alt="Shrutim home page: Discover the wisdom of Vedic mantras and stotrams." loading="lazy"></div>
+          </figure>
+        </article>
+      </li>
+
+      <li class="entry">
+        <div class="when"><time datetime="2022-09">2022 to 2023</time><span>Android app</span></div>
+        <article class="body">
+          <h3>Magic</h3>
+          <p class="role">Co-founder. Product, Android development and the team.</p>
+          <p class="what">The cloud gaming and rewards platform that later became SocialG. Games streamed from the cloud, so nothing to download, with prizes and gift cards for playing, completing missions and inviting friends.</p>
+          <p class="proof">350K+ users</p>
+        </article>
+      </li>
+    </ol>
+  </section>
+
+  <section class="section" id="blog" aria-labelledby="blog-title">
+    <div class="section-head">
+      <h2 id="blog-title">From the blog</h2>
+      <p class="sub">AI and emerging tech news, researched from the sources and fact-checked as it happens. The newsroom runs every half hour.</p>
+    </div>
+    <div class="stories">
+          <!-- blog:latest -->
+          <a class="story lead" href="/blog/nvidia-talks-acquire-reflection-ai-open-weights/">
+            <span class="pic"><img src="/blog/img/nvidia-talks-acquire-reflection-ai-open-weights/hero-640.webp" width="640" height="360" alt="Business executives negotiating in a corporate high-rise boardroom overlooking city lights" loading="lazy" decoding="async"></span>
+            <span class="story-body">
+              <span class="meta"><span class="cat">Industry</span><time datetime="2026-10-11T02:41:41.654Z">Oct 11, 2026</time></span>
+              <span class="title">Nvidia Explores Potential Deal to Acquire Open-Model Startup Reflection AI</span>
+              <span class="dek">Early discussions between the chipmaker and the $25 billion open-weights startup could take the form of an acqui-hire or expanded equity stake.</span>
+            </span>
+          </a>
+          <a class="story" href="/blog/mathematicians-react-openai-math-paper-dump/">
+            
+            <span class="story-body">
+              <span class="meta"><span class="cat">Research</span><time datetime="2026-10-11T02:20:54.499Z">Oct 11, 2026</time></span>
+              <span class="title">OpenAI Math Paper Release Sparks Shock and Grief Across Academia</span>
+              
+            </span>
+          </a>
+          <a class="story" href="/blog/openai-fires-safety-researchers-policy-dispute/">
+            
+            <span class="story-body">
+              <span class="meta"><span class="cat">Industry</span><time datetime="2026-10-11T01:47:14.510Z">Oct 11, 2026</time></span>
+              <span class="title">OpenAI Fires Three Safety Researchers, Citing Sensitive Data Policies</span>
+              
+            </span>
+          </a>
+          <!-- /blog:latest -->
+    </div>
+    <a class="textlink" href="/blog/">All stories</a>
+  </section>
+
+  <section class="section" id="play" aria-labelledby="play-title">
+    <div class="section-head">
+      <h2 id="play-title">Play</h2>
+      <p class="sub">Small browser games about AI, built on real data. Free, no sign-up, and your scores stay on your device.</p>
+    </div>
+    <div class="games">
+      <a class="game" href="/play/ai-dle/">
+        <img src="play/ai-dle/thumb.webp?v=bf20198d" width="640" height="400" alt="The AI-dle case sheet with redacted clues" loading="lazy" decoding="async">
+        <span class="game-body">
+          <span class="kind">Daily puzzle</span>
+          <span class="title">AI-dle</span>
+          <span class="line">Identify the AI company or model behind six redacted clues from the week's news. A new case every day.</span>
+        </span>
+      </a>
+      <a class="game" href="/play/scale-of-ai/">
+        <img src="play/scale-of-ai/thumb.webp?v=cdaa4a1b" width="640" height="400" alt="The Scale of AI title screen" loading="lazy" decoding="async">
+        <span class="game-body">
+          <span class="kind">Interactive</span>
+          <span class="title">The Scale of AI</span>
+          <span class="line">Fall from one calculation to the biggest training runs ever, past every notable model since 1950.</span>
+        </span>
+      </a>
+      <a class="game" href="/play/night-shift/">
+        <img src="play/night-shift/thumb.webp?v=b94dd3c9" width="640" height="400" alt="Night Shift: the break room at night, with the night tech and MOP-E the cleaning robot" loading="lazy" decoding="async">
+        <span class="game-body">
+          <span class="kind">Adventure</span>
+          <span class="title">Night Shift</span>
+          <span class="line">A pixel mystery on the night shift at a datacenter. Seven puzzles, three endings, about half an hour.</span>
+        </span>
+      </a>
+    </div>
+    <a class="textlink" href="/play/">All games</a>
+  </section>
+
+  <section class="section" id="about" aria-labelledby="about-title">
+    <div class="section-head"><h2 id="about-title">About</h2></div>
+    <div class="about-grid">
       <figure class="portrait">
         <div class="frame"><img src="me.jpg?v=16f8a391" width="500" height="625" alt="Rajan Krishnan"></div>
       </figure>
-    </section>
-
-    <section class="section" id="work" aria-labelledby="work-title">
-      <h2 id="work-title">Work<small>Newest first.</small></h2>
-
-      <div class="tl">
-      <div class="burn" aria-hidden="true"></div>
-      <ol class="timeline">
-        <li class="entry reached">
-          <div class="when"><time datetime="2026-09">Sep 2026</time><span>Android game</span></div>
-          <article class="body">
-            <h3>CandleDeep</h3>
-            <p class="role">Independent release under rkj dev. Design, code and publishing.</p>
-            <p class="what">A pixel-art survivor roguelite. You wake at the gate of the Hollow with one candle of time: hold off the horde until it burns out, carry your gold back up, and go deeper. Played one-handed in portrait.</p>
-            <p class="proof">2 stages, 20 enemies, 8 weapons, 7 heroes</p>
-            <p class="stack">Godot 4 and GDScript, Google Play Billing, AdMob with consent messages for EU and US privacy rules.</p>
-            <div class="links">
-              <a class="textlink" href="candledeep/">Game page</a>
-              <a class="textlink" href="candledeep/#products">Items and prices</a>
-            </div>
-            <figure class="media feature">
-              <img src="candledeep/feature.jpg?v=2257c96b" width="1024" height="500" alt="CandleDeep: a knight holding a candle in a dark dungeon, with the words Survive until the candle burns out.">
-              <div class="phones">
-                <img src="candledeep/shot_1.jpg?v=b2d8b7ba" width="540" height="960" alt="Fighting the Slime King boss" loading="lazy">
-                <img src="candledeep/shot_3.jpg?v=16ae1d95" width="540" height="960" alt="Choosing an upgrade at level-up" loading="lazy">
-                <img src="candledeep/shot_5.jpg?v=2cd3dc14" width="540" height="960" alt="The heroes screen" loading="lazy">
-              </div>
-            </figure>
-          </article>
-        </li>
-
-        <li class="entry">
-          <div class="when"><time datetime="2026-08">Aug 2026</time><span>Web platform</span></div>
-          <article class="body">
-            <h3>AvsarIQ <span class="status">No longer maintained</span></h3>
-            <p class="role">Designed and built end to end.</p>
-            <p class="what">A calmer way to follow Indian government job openings. It brings official notifications, eligibility, deadlines and application links into one place, lets people compare their profile with each post's requirements, and keeps the official source beside every detail.</p>
-            <p class="stack">Next.js, React, TypeScript, Supabase and PostgreSQL on Vercel. Accounts and onboarding, saved and applied tracking, SEO and performance work.</p>
-            <figure class="media browser">
-              <figcaption>avsariq.com<span>Scrolling through the home page</span></figcaption>
-              <div class="viewport"><img src="work/avsariq.jpg?v=835c519d" width="1200" height="2167" alt="AvsarIQ home page: A calmer way to decide what to apply for next." loading="lazy"></div>
-            </figure>
-          </article>
-        </li>
-
-        <li class="entry">
-          <div class="when"><time datetime="2026-07">Jul 2026</time><span>Android app</span></div>
-          <article class="body">
-            <h3>PranArog</h3>
-            <p class="role">Designed and built. Coming soon to Google Play.</p>
-            <p class="what">A calm medication tracker. Precise reminders built on Android's exact alarms that don't drain the battery, Gemini-powered summaries of your schedule, dietary notes and possible interaction flags, and one tap to wipe your data and leave.</p>
-            <p class="stack">Android, Firebase and Cloud Firestore, Gemini API.</p>
-            <div class="links"><a class="textlink" href="https://pranarog.web.app/">Visit pranarog.web.app</a></div>
-            <figure class="media browser">
-              <figcaption>pranarog.web.app<span>Scrolling through the home page</span></figcaption>
-              <div class="viewport"><img src="work/pranarog.jpg?v=95b0e38c" width="1200" height="1936" alt="PranArog home page: A serene space for medication tracking, beside the app's Today screen." loading="lazy"></div>
-            </figure>
-          </article>
-        </li>
-
-        <li class="entry">
-          <div class="when"><time datetime="2025-01">2025 to 2026</time><span>Android app</span></div>
-          <article class="body">
-            <h3><img src="work/socialg.png?v=77431aa8" width="96" height="96" alt="">SocialG</h3>
-            <p class="role">Application developer, January 2025 to June 2026.</p>
-            <p class="what">A cloud gaming app: people play popular games without downloading them and earn rewards for playing, competing and inviting friends. Alongside building the app, I took on startup leadership and team management.</p>
-            <p class="proof">100K+ downloads on Google Play</p>
-            <div class="links"><a class="textlink" href="https://play.google.com/store/apps/details?id=com.remedez.magic">Open on Google Play</a></div>
-          </article>
-        </li>
-
-        <li class="entry">
-          <div class="when"><time datetime="2024-10">Oct 2024</time><span>Website</span></div>
-          <article class="body">
-            <h3>Shrutim</h3>
-            <p class="role">Built with Shivam.</p>
-            <p class="what">A home for mantras and stotrams, with their lyrics, meaning and proper translations, made for devotees reading on their phones.</p>
-            <p class="proof">500K+ organic search impressions</p>
-            <p class="stack">Next.js, React, Firebase, MongoDB and AWS, with search engine optimisation at the centre.</p>
-            <div class="links"><a class="textlink" href="https://www.shrutim.com/">Visit shrutim.com</a></div>
-            <figure class="media browser">
-              <figcaption>shrutim.com<span>Scrolling through the home page</span></figcaption>
-              <div class="viewport"><img src="work/shrutim.jpg?v=18fb6ba1" width="1200" height="2167" alt="Shrutim home page: Discover the wisdom of Vedic mantras and stotrams." loading="lazy"></div>
-            </figure>
-          </article>
-        </li>
-
-        <li class="entry">
-          <div class="when"><time datetime="2022-09">2022 to 2023</time><span>Android app</span></div>
-          <article class="body">
-            <h3>Magic</h3>
-            <p class="role">Co-founder. Product, Android development and the team.</p>
-            <p class="what">The cloud gaming and rewards platform that later became SocialG. Games streamed from the cloud, so nothing to download, with prizes and gift cards for playing, completing missions and inviting friends.</p>
-            <p class="proof">350K+ users</p>
-          </article>
-        </li>
-      </ol>
+      <div class="about-text">
+        <p>I'm a full-stack developer with a deep interest in emerging technology. I've co-founded a startup, shipped Android apps used by hundreds of thousands of people, built web platforms that rank on search, and now make apps and games of my own.</p>
+        <p>I like owning the whole path of a product: the idea, the interface, the code, the store listing, and what happens after launch.</p>
+        <ul class="background" aria-label="Background">
+          <li><time datetime="2025">2025</time><span>B.Tech in Computer Science (Internet of Things), Pranveer Singh Institute of Technology</span></li>
+          <li><time datetime="2023">2023</time><span>First prize, Ideathon Innovation Blitz</span></li>
+          <li><time datetime="2022">2022</time><span><a href="https://www.hackerrank.com/certificates/a331f28920cc">HackerRank certificate</a></span></li>
+        </ul>
       </div>
-    </section>
+      <dl class="crafts">
+        <div><dt>Games</dt><dd>Godot, Android releases, in-app purchases and ads that respect players' privacy choices.</dd></div>
+        <div><dt>Mobile apps</dt><dd>Android development, Google Play launches and app store optimisation.</dd></div>
+        <div><dt>Web apps</dt><dd>Next.js, React, TypeScript, Supabase, Firebase, PostgreSQL and MongoDB, deployed on Vercel, AWS and Google Cloud.</dd></div>
+        <div><dt>Emerging tech</dt><dd>AI-assisted products, IoT with Arduino, Raspberry Pi, sensors and MQTT, and early work with blockchain.</dd></div>
+      </dl>
+    </div>
+  </section>
 
-    <section class="section" id="blog" aria-labelledby="blog-title">
-      <h2 id="blog-title">From the blog<small>AI and emerging tech news, researched from the sources and fact-checked as it happens.</small></h2>
-      <div class="posts">
-          <!-- blog:latest -->
-          <a class="post-card" href="/blog/nvidia-talks-acquire-reflection-ai-open-weights/">
-            <img src="/blog/img/nvidia-talks-acquire-reflection-ai-open-weights/hero-640.webp" width="640" height="360" alt="Business executives negotiating in a corporate high-rise boardroom overlooking city lights" loading="lazy" decoding="async">
-            <span class="post-meta">Industry · <time datetime="2026-10-11T02:41:41.654Z">Oct 11, 2026</time></span>
-            <span class="post-title">Nvidia Explores Potential Deal to Acquire Open-Model Startup Reflection AI</span>
-          </a>
-          <a class="post-card" href="/blog/mathematicians-react-openai-math-paper-dump/">
-            <img src="/blog/img/mathematicians-react-openai-math-paper-dump/hero-640.webp" width="640" height="360" alt="An academic professor standing alone before a large chalkboard covered in mathematical equations in a quiet lecture hall." loading="lazy" decoding="async">
-            <span class="post-meta">Research · <time datetime="2026-10-11T02:20:54.499Z">Oct 11, 2026</time></span>
-            <span class="post-title">OpenAI Math Paper Release Sparks Shock and Grief Across Academia</span>
-          </a>
-          <a class="post-card" href="/blog/openai-fires-safety-researchers-policy-dispute/">
-            <img src="/blog/img/openai-fires-safety-researchers-policy-dispute/hero-640.webp" width="640" height="360" alt="An AI researcher in an office observing data charts at dusk." loading="lazy" decoding="async">
-            <span class="post-meta">Industry · <time datetime="2026-10-11T01:47:14.510Z">Oct 11, 2026</time></span>
-            <span class="post-title">OpenAI Fires Three Safety Researchers, Citing Sensitive Data Policies</span>
-          </a>
-          <!-- /blog:latest -->
-      </div>
-      <a class="textlink" href="/blog/">All stories</a>
-    </section>
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Have something to build?</h2>
+    <p>Tell me about it. I reply to every email, usually within a few days.</p>
+    <a class="mail" href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a>
+  </section>
+</main>
 
-    <section class="section" id="play" aria-labelledby="play-title">
-      <h2 id="play-title">Play<small>Small browser games about AI, built on real data. Free, no sign-up.</small></h2>
-      <div class="posts">
-          <a class="post-card" href="/play/ai-dle/">
-            <img src="play/ai-dle/thumb.webp?v=bf20198d" width="640" height="400" alt="The AI-dle case sheet with redacted clues" loading="lazy" decoding="async">
-            <span class="post-meta">Daily puzzle</span>
-            <span class="post-title">AI-dle: identify the AI company or model behind six redacted clues from the news</span>
-          </a>
-          <a class="post-card" href="/play/scale-of-ai/">
-            <img src="play/scale-of-ai/thumb.webp?v=cdaa4a1b" width="640" height="400" alt="The Scale of AI title screen" loading="lazy" decoding="async">
-            <span class="post-meta">Interactive</span>
-            <span class="post-title">The Scale of AI: fall from one calculation to the biggest training runs ever</span>
-          </a>
-          <a class="post-card" href="/play/night-shift/">
-            <img src="play/night-shift/thumb.webp?v=b94dd3c9" width="640" height="400" alt="Night Shift: the break room at night, with the night tech and MOP-E the cleaning robot" loading="lazy" decoding="async">
-            <span class="post-meta">Adventure</span>
-            <span class="post-title">Night Shift: a pixel mystery on the night shift at a datacenter, with three endings</span>
-          </a>
-      </div>
-      <a class="textlink" href="/play/">All games</a>
-    </section>
-
-    <section class="section" id="about" aria-labelledby="about-title">
-      <h2 id="about-title">About</h2>
-      <div class="about-grid">
-        <div>
-          <p>I'm a full-stack developer with a deep interest in emerging technology. I've co-founded a startup, shipped Android apps used by hundreds of thousands of people, built web platforms that rank on search, and now make apps and games of my own.</p>
-          <p>I like owning the whole path of a product: the idea, the interface, the code, the store listing, and what happens after launch.</p>
-          <ul class="background" aria-label="Background">
-            <li><time datetime="2025">2025</time><span>B.Tech in Computer Science (Internet of Things), Pranveer Singh Institute of Technology</span></li>
-            <li><time datetime="2023">2023</time><span>First prize, Ideathon Innovation Blitz</span></li>
-            <li><time datetime="2022">2022</time><span><a href="https://www.hackerrank.com/certificates/a331f28920cc">HackerRank certificate</a></span></li>
-          </ul>
-        </div>
-        <dl class="crafts">
-          <div><dt>Games</dt><dd>Godot, Android releases, in-app purchases and ads that respect players' privacy choices.</dd></div>
-          <div><dt>Mobile apps</dt><dd>Android development, Google Play launches and app store optimisation.</dd></div>
-          <div><dt>Web apps</dt><dd>Next.js, React, TypeScript, Supabase, Firebase, PostgreSQL and MongoDB, deployed on Vercel, AWS and Google Cloud.</dd></div>
-          <div><dt>Emerging tech</dt><dd>AI-assisted products, IoT with Arduino, Raspberry Pi, sensors and MQTT, and early work with blockchain.</dd></div>
-        </dl>
-      </div>
-    </section>
-
-    <section class="contact" id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Have something to build?</h2>
-      <p>Tell me about it. I reply to every email, usually within a few days.</p>
-      <a class="mail" href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a>
-    </section>
-  </main>
-
-  <footer class="foot">
+<footer class="site-foot">
+  <div class="wrap">
     <div class="biz">
       <p class="biz-name">RKJDEV Labs</p>
       <p>© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan</p>
-      <p>Udyam registered MSME, India · <span class="nowrap">UDYAM-BR-26-0254766</span></p>
+      <p>Udyam registered MSME, India, <span class="nowrap">UDYAM-BR-26-0254766</span></p>
       <p><a href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a></p>
     </div>
-    <nav aria-label="Legal">
-      <a href="/privacy/">Privacy Policy</a>
-      <a href="#contact">Contact</a>
+    <nav aria-label="Site">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/blog/feed.xml">RSS</a>
     </nav>
-  </footer>
-</div>
-<script src="home.js?v=5035e7b2" defer></script>
+  </div>
+</footer>
+<script src="home.js?v=2f1c8182" defer></script>
 </body>
 </html>

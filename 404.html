@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found, rkj dev</title>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#110b14">
+<link rel="icon" href="/favicon.svg?v=bdff7dc5" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=ffe10b2c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,40;1,9..144,400..600,40&family=Schibsted+Grotesk:ital,wght@0,400..600;1,400..600&display=swap">
+<link rel="stylesheet" href="/site.css?v=e85724ed">
+<style>
+  /* The candle here has gone out. Only the smoke moves, and only once. */
+  :root { --li: .25; }
+  .lost { max-width: 720px; padding-top: clamp(48px, 12vh, 140px); padding-bottom: 40px; }
+  .out { width: 96px; height: 160px; margin-bottom: 28px; }
+  .out svg { width: 100%; height: 100%; }
+  .lost h1 { font-size: clamp(40px, 6vw, 72px); line-height: 1; letter-spacing: -.02em; }
+  .lost p { margin-top: 20px; max-width: 32em; font-size: 19px; line-height: 1.5; color: var(--ash); }
+  .lost nav { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 32px; }
+  @media (prefers-reduced-motion: no-preference) {
+    .smoke { animation: rise 6s ease-out .4s both; }
+    @keyframes rise { from { opacity: 0; transform: translateY(6px); } 30% { opacity: .7; } to { opacity: .25; transform: translateY(-4px); } }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="mark" href="/">rkj dev</a>
+    <nav aria-label="Site">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/blog/">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap lost">
+  <div class="out" aria-hidden="true">
+    <svg viewBox="0 0 24 40" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+      <g class="smoke" fill="#8d8390">
+        <path opacity=".9" d="M12 14h1v1h-1zM11 12h1v2h-1zM12 10h1v2h-1zM13 8h1v2h-1zM12 6h1v2h-1zM11 4h1v2h-1zM12 2h1v2h-1z"/>
+        <path opacity=".45" d="M13 11h1v1h-1zM10 9h1v1h-1zM14 5h1v1h-1z"/>
+      </g>
+      <path fill="#3a2a22" d="M12 15h1v3h-1z"/>
+      <path fill="#c24a2a" d="M12 15h1v1h-1z"/>
+      <path fill="#f2eadf" d="M7 18h11v22H7z"/>
+      <path fill="#fff3d6" d="M7 18h1v22H7z"/>
+      <path fill="#d9ccbd" d="M16 18h2v22h-2z"/>
+      <path fill="#e8dccb" d="M9 18h7v1H9z"/>
+    </svg>
+  </div>
+  <h1>This page has gone out.</h1>
+  <p>There is nothing at this address. It may have moved, or the link may have a typo. Here is where the light still is.</p>
+  <nav aria-label="Where to go">
+    <a class="btn" href="/">Home</a>
+    <a class="textlink" href="/blog/">The blog</a>
+    <a class="textlink" href="/play/">The games</a>
+  </nav>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="biz">
+      <p class="biz-name">RKJDEV Labs</p>
+      <p>© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan</p>
+      <p>Udyam registered MSME, India, <span class="nowrap">UDYAM-BR-26-0254766</span></p>
+      <p><a href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a></p>
+    </div>
+    <nav aria-label="Site">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/blog/feed.xml">RSS</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
