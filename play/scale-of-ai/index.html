@@ -6,7 +6,8 @@
 <title>The Scale of AI: from 1 calculation to the largest AI models</title>
 <meta name="description" content="Scroll from a single calculation to the largest AI training runs ever, past every notable AI model since 1950. Real data from Epoch AI, with human-scale comparisons.">
 <link rel="canonical" href="https://www.rkjdev.com/play/scale-of-ai/">
-<meta name="theme-color" content="#120d16">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#110b14">
 <meta property="og:type" content="website">
 <meta property="og:title" content="The Scale of AI">
 <meta property="og:description" content="Fall through 25 orders of magnitude, from a 1950 robot mouse to today's frontier models.">
@@ -16,9 +17,12 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23120d16'/%3E%3Cpath d='M8 4v24M8 6h6M8 11h4M8 16h8M8 21h4M8 26h6' stroke='%23f2b45c' stroke-width='2'/%3E%3Ccircle cx='22' cy='22' r='4' fill='%23f2b45c'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Unbounded:wght@500&family=Hanken+Grotesk:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../play.css?v=d22a7100">
-<link rel="stylesheet" href="scale.css?v=856f6c7a">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,40;1,9..144,400..600,40&family=Schibsted+Grotesk:ital,wght@0,400..600;1,400..600&display=swap">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=ffe10b2c">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/site.css?v=e85724ed">
+<link rel="stylesheet" href="../play.css?v=cbf09fb8">
+<link rel="stylesheet" href="scale.css?v=51ab136c">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","name":"The Scale of AI","url":"https://www.rkjdev.com/play/scale-of-ai/","description":"An interactive scroll through the training compute of every notable AI model since 1950.","isBasedOn":{"@type":"Dataset","name":"Data on Notable AI Models","creator":{"@type":"Organization","name":"Epoch AI"},"url":"https://epoch.ai/data/notable-ai-models","license":"https://creativecommons.org/licenses/by/4.0/"},"author":{"@type":"Person","name":"Rajan Krishnan","url":"https://www.rkjdev.com/"}}
 </script>
@@ -26,14 +30,15 @@
 <body class="scale">
 <a class="skip" href="#stage">Skip to the chart</a>
 <div class="heat" aria-hidden="true"></div>
-<header class="top">
+<header class="site-head">
   <div class="wrap">
-    <a class="mark" href="/" aria-label="rkj dev, home">rkj dev</a>
+    <a class="mark" href="/">rkj dev</a>
     <nav aria-label="Site">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
       <a href="/blog/">Blog</a>
       <a href="/play/" aria-current="page">Play</a>
-      <a class="opt" href="/#work">Work</a>
-      <a class="opt" href="/#about">About</a>
+      <a href="/#contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -52,7 +57,7 @@
   <div class="tools" id="tools">
     <label class="find">
       <span class="sr">Find a model</span>
-      <input id="find" type="search" placeholder="Find a model" autocomplete="off" spellcheck="false">
+      <input id="find" type="search" placeholder="Find a model" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="find-list">
       <ul id="find-list" class="find-list" role="listbox" hidden></ul>
     </label>
     <div class="legend" id="legend" role="group" aria-label="Show fields"></div>
@@ -84,6 +89,24 @@
     </details>
   </section>
 </main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="biz">
+      <p class="biz-name">RKJDEV Labs</p>
+      <p>© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan</p>
+      <p>Udyam registered MSME, India, <span class="nowrap">UDYAM-BR-26-0254766</span></p>
+      <p><a href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a></p>
+    </div>
+    <nav aria-label="Site">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/blog/feed.xml">RSS</a>
+    </nav>
+    <p class="fine">No trackers. The game saves your progress only in your own browser.</p>
+  </div>
+</footer>
 
 <div class="reading" id="reading" aria-hidden="true">
   <div class="gauge"><b id="exp">10⁰</b><span id="words">1 calculation</span></div>
@@ -97,6 +120,6 @@
 
 <div class="card" id="card" role="dialog" aria-modal="false" aria-labelledby="card-name" hidden></div>
 <div class="toast" role="status" aria-live="polite"></div>
-<script src="scale.js?v=b34621e3" defer></script>
+<script src="scale.js?v=334ecb47" defer></script>
 </body>
 </html>

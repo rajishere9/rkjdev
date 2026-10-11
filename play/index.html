@@ -6,18 +6,23 @@
 <title>Play: small games about AI, by rkj dev</title>
 <meta name="description" content="Free browser games about artificial intelligence: a daily AI news guessing game, a scroll through the scale of AI, and a pixel mystery set on a datacenter night shift.">
 <link rel="canonical" href="https://www.rkjdev.com/play/">
-<meta name="theme-color" content="#16101a">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#110b14">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="rkj dev">
 <meta property="og:title" content="Play, by rkj dev">
 <meta property="og:description" content="Small games about AI, built on real data.">
 <meta property="og:url" content="https://www.rkjdev.com/play/">
 <meta property="og:image" content="https://www.rkjdev.com/play/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2316101a'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23f4b860'/%3E%3C/svg%3E">
+<link rel="icon" href="/favicon.svg?v=bdff7dc5" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=ffe10b2c">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Unbounded:wght@400;500&display=swap">
-<link rel="stylesheet" href="play.css?v=d22a7100">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,40;1,9..144,400..600,40&family=Schibsted+Grotesk:ital,wght@0,400..600;1,400..600&display=swap">
+<link rel="stylesheet" href="/site.css?v=e85724ed">
+<link rel="stylesheet" href="play.css?v=cbf09fb8">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"CollectionPage","name":"Play","url":"https://www.rkjdev.com/play/","description":"Free browser games about artificial intelligence.","hasPart":[
 {"@type":"VideoGame","name":"AI-dle","url":"https://www.rkjdev.com/play/ai-dle/","gamePlatform":"Web browser","applicationCategory":"Game","genre":"Puzzle"},
@@ -27,28 +32,29 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to the games</a>
-<div class="backdrop" aria-hidden="true"></div>
-<header class="top">
+<header class="site-head">
   <div class="wrap">
-    <a class="mark" href="/" aria-label="rkj dev, home">rkj dev</a>
+    <a class="mark" href="/">rkj dev</a>
     <nav aria-label="Site">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
       <a href="/blog/">Blog</a>
       <a href="/play/" aria-current="page">Play</a>
-      <a class="opt" href="/#work">Work</a>
-      <a class="opt" href="/#about">About</a>
+      <a href="/#contact">Contact</a>
     </nav>
   </div>
 </header>
 
-<main id="main" class="index">
+<main id="main" class="wrap hub">
   <h1>Play</h1>
   <p class="intro">Small games about AI, built on real data. They're free, run in your browser, and keep your scores on your device.</p>
 
-  <ol class="list">
+  <ol class="games">
     <li>
-      <a class="entry" href="ai-dle/">
+      <a class="game" href="ai-dle/">
         <span class="shot"><img src="ai-dle/thumb.webp?v=bf20198d" width="640" height="400" alt="The AI-dle case sheet, with one typed clue and five redacted ones"></span>
-        <div>
+        <div class="game-body">
+          <p class="kind">Daily puzzle</p>
           <h2>AI-dle</h2>
           <p>A new case every day. Identify the AI company or model behind six clues from the week's news, with each wrong guess lifting the redaction on the next one.</p>
           <p class="status" id="aidle-status">A new case opens at midnight.</p>
@@ -56,9 +62,10 @@
       </a>
     </li>
     <li>
-      <a class="entry" href="scale-of-ai/">
+      <a class="game" href="scale-of-ai/">
         <span class="shot"><img src="scale-of-ai/thumb.webp?v=cdaa4a1b" width="640" height="400" alt="The Scale of AI chart, with models placed down a log ruler of training compute"></span>
-        <div>
+        <div class="game-body">
+          <p class="kind">Interactive</p>
           <h2>The Scale of AI</h2>
           <p>Scroll from a single calculation down to the largest AI training runs ever, past every notable model since 1950.</p>
           <p class="status" id="scale-status">Data from Epoch AI, refreshed every week.</p>
@@ -66,9 +73,10 @@
       </a>
     </li>
     <li>
-      <a class="entry" href="night-shift/">
+      <a class="game" href="night-shift/">
         <span class="shot"><img src="night-shift/thumb.webp?v=b94dd3c9" width="640" height="400" alt="Night Shift: the break room at night, with the night tech and MOP-E the cleaning robot"></span>
-        <div>
+        <div class="game-body">
+          <p class="kind">Adventure</p>
           <h2>Night Shift</h2>
           <p>A pixel-art mystery. It's 3am at a datacenter, and something is using the cluster 17 minutes at a time. Seven puzzles, three endings, about half an hour. Plays on phones too.</p>
           <p class="status" id="night-status">New: your first shift starts at 03:00.</p>
@@ -80,10 +88,24 @@
   <p class="later">More games are in the works.</p>
 </main>
 
-<footer class="wrap foot">
-  <span>© <span id="yr">2026</span> <a href="/">RKJDEV Labs</a>, Proprietor: Rajan Krishnan · <a href="/privacy/">Privacy</a></span>
-  <span>No trackers. Scores stay in your browser.</span>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="biz">
+      <p class="biz-name">RKJDEV Labs</p>
+      <p>© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan</p>
+      <p>Udyam registered MSME, India, <span class="nowrap">UDYAM-BR-26-0254766</span></p>
+      <p><a href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a></p>
+    </div>
+    <nav aria-label="Site">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/blog/feed.xml">RSS</a>
+    </nav>
+    <p class="fine">No trackers. The games save your progress only in your own browser.</p>
+  </div>
 </footer>
-<script src="play.js?v=dced1e1b" defer></script>
+<script src="play.js?v=59393440" defer></script>
 </body>
 </html>

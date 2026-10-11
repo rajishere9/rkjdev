@@ -1,9 +1,4 @@
-// Play index: frosted header on scroll, plus today's status from each game.
-const topbar = document.querySelector(".top");
-const onScroll = () => topbar.classList.toggle("scrolled", scrollY > 8);
-addEventListener("scroll", onScroll, { passive: true }); onScroll();
-document.getElementById("yr").textContent = new Date().getFullYear();
-
+// Play index: today's status from each game.
 const localDate = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; };
 fetch("ai-dle/puzzles/index.json").then((r) => r.json()).then((index) => {
   const p = index.filter((x) => x.date <= localDate()).pop();

@@ -6,7 +6,8 @@
 <title>NASA and IBM Open-Source Lunar Foundation Model | rkj dev</title>
 <meta name="description" content="NASA and IBM have open-sourced the NASA-IBM Lunar Foundation Model, a multimodal AI trained on 17 years of lunar data to map ice, craters, and geology.">
 <link rel="canonical" href="https://www.rkjdev.com/blog/nasa-ibm-open-source-lunar-foundation-model/">
-<meta name="theme-color" content="#16101a">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#110b14">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta property="og:site_name" content="rkj dev Blog">
 <meta property="og:type" content="article">
@@ -22,11 +23,14 @@
 <meta name="twitter:description" content="NASA and IBM have open-sourced the NASA-IBM Lunar Foundation Model, a multimodal AI trained on 17 years of lunar data to map ice, craters, and geology.">
 <link rel="alternate" type="application/rss+xml" title="rkj dev Blog" href="/blog/feed.xml">
 <link rel="alternate" type="application/feed+json" title="rkj dev Blog" href="/blog/feed.json">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2316101a'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23f4b860'/%3E%3C/svg%3E">
+<link rel="icon" href="/favicon.svg?v=bdff7dc5" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=Unbounded:wght@300;400;500&display=swap">
-<link rel="stylesheet" href="/blog/blog.css?v=4ed3a51a">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,40;1,9..144,400..600,40&family=Schibsted+Grotesk:ital,wght@0,400..600;1,400..600&display=swap">
+<link rel="stylesheet" href="/site.css?v=e85724ed">
+<link rel="stylesheet" href="/blog/blog.css?v=7ad332ef">
 <meta property="article:published_time" content="2026-10-05T00:38:47.944Z">
 <meta property="article:modified_time" content="2026-10-05T00:38:47.944Z">
 <meta property="article:section" content="Science">
@@ -37,20 +41,19 @@
 <meta property="article:tag" content="Computer Vision">
 <meta property="article:tag" content="Planetary Science">
 <link rel="preload" as="image" href="/blog/img/nasa-ibm-open-source-lunar-foundation-model/hero.webp" imagesrcset="/blog/img/nasa-ibm-open-source-lunar-foundation-model/hero-640.webp 640w, /blog/img/nasa-ibm-open-source-lunar-foundation-model/hero.webp 1200w" imagesizes="(max-width: 760px) 100vw, 1200px">
-<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"NASA and IBM Release Open-Source Lunar Foundation Model","description":"NASA and IBM have open-sourced the NASA-IBM Lunar Foundation Model, a multimodal AI trained on 17 years of lunar data to map ice, craters, and geology.","url":"https://www.rkjdev.com/blog/nasa-ibm-open-source-lunar-foundation-model/","mainEntityOfPage":"https://www.rkjdev.com/blog/nasa-ibm-open-source-lunar-foundation-model/","image":["https://www.rkjdev.com/blog/img/nasa-ibm-open-source-lunar-foundation-model/og.jpg","https://www.rkjdev.com/blog/img/nasa-ibm-open-source-lunar-foundation-model/hero.webp"],"datePublished":"2026-10-05T00:38:47.944Z","dateModified":"2026-10-05T00:38:47.944Z","articleSection":"Science","keywords":"NASA, IBM, Open Source, Space Exploration, Computer Vision, Planetary Science","wordCount":851,"author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","name":"rkj dev","url":"https://www.rkjdev.com","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/me.jpg"}},"isBasedOn":["https://science.nasa.gov/science-research/artificial-intelligence-lunar-foundation-model/","https://newsroom.ibm.com/2026-09-10-ibm-and-nasa-release-open-source-ai-model-to-support-lunar-exploration","https://research.ibm.com/blog/nasa-ibm-lunar-foundation-model","https://huggingface.co/nasa-ibm-ai4science/NASA-IBM-Lunar-Foundation-Model","https://the-decoder.com/nasa-and-ibms-open-source-lunar-model-turns-17-years-of-orbiter-data-into-a-foundation-for-lunar-science/","https://www.space.com/astronomy/moon/nasa-ibm-launch-new-ai-model-for-studying-the-moon","https://thenextweb.com/news/nasa-ibm-lunar-foundation-model-open-source"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"Science","item":"https://www.rkjdev.com/blog/category/science/"},{"@type":"ListItem","position":3,"name":"NASA and IBM Release Open-Source Lunar Foundation Model","item":"https://www.rkjdev.com/blog/nasa-ibm-open-source-lunar-foundation-model/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Where is the NASA-IBM Lunar Foundation Model available?","acceptedAnswer":{"@type":"Answer","text":"The model checkpoints and tokenizers are hosted on Hugging Face under the Apache-2.0 license, while training scripts, fine-tuning tools, and benchmark datasets are available via GitHub and the TerraTorch library."}},{"@type":"Question","name":"What datasets were used to train the lunar model?","acceptedAnswer":{"@type":"Answer","text":"The model was trained from scratch on SomBench, an aggregation of roughly 2 million tile bundles combining 17 years of NASA Lunar Reconnaissance Orbiter imagery with data from NASA's GRAIL, Lunar Prospector, and JAXA's SELENE/Kaguya missions."}},{"@type":"Question","name":"How does the model handle extreme lunar shadows and lighting?","acceptedAnswer":{"@type":"Answer","text":"Rather than forcing the model to infer lighting solely from image pixels, the architecture tokenizes explicit optical metadata—such as solar incidence angles, emission, and tile footprints—directly into the encoder."}},{"@type":"Question","name":"Can the model be used directly for autonomous spacecraft landings?","acceptedAnswer":{"@type":"Answer","text":"No. The model card states that the system does not maintain an absolute geodetic reference frame and is designed for scientific analysis and mapping rather than operational landing-site hazard certification."}}]}]</script>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"NASA and IBM Release Open-Source Lunar Foundation Model","description":"NASA and IBM have open-sourced the NASA-IBM Lunar Foundation Model, a multimodal AI trained on 17 years of lunar data to map ice, craters, and geology.","url":"https://www.rkjdev.com/blog/nasa-ibm-open-source-lunar-foundation-model/","mainEntityOfPage":"https://www.rkjdev.com/blog/nasa-ibm-open-source-lunar-foundation-model/","image":["https://www.rkjdev.com/blog/img/nasa-ibm-open-source-lunar-foundation-model/og.jpg","https://www.rkjdev.com/blog/img/nasa-ibm-open-source-lunar-foundation-model/hero.webp"],"datePublished":"2026-10-05T00:38:47.944Z","dateModified":"2026-10-05T00:38:47.944Z","articleSection":"Science","keywords":"NASA, IBM, Open Source, Space Exploration, Computer Vision, Planetary Science","wordCount":851,"author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","name":"RKJDEV Labs","url":"https://www.rkjdev.com","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/apple-touch-icon.png"}},"isBasedOn":["https://science.nasa.gov/science-research/artificial-intelligence-lunar-foundation-model/","https://newsroom.ibm.com/2026-09-10-ibm-and-nasa-release-open-source-ai-model-to-support-lunar-exploration","https://research.ibm.com/blog/nasa-ibm-lunar-foundation-model","https://huggingface.co/nasa-ibm-ai4science/NASA-IBM-Lunar-Foundation-Model","https://the-decoder.com/nasa-and-ibms-open-source-lunar-model-turns-17-years-of-orbiter-data-into-a-foundation-for-lunar-science/","https://www.space.com/astronomy/moon/nasa-ibm-launch-new-ai-model-for-studying-the-moon","https://thenextweb.com/news/nasa-ibm-lunar-foundation-model-open-source"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"Science","item":"https://www.rkjdev.com/blog/category/science/"},{"@type":"ListItem","position":3,"name":"NASA and IBM Release Open-Source Lunar Foundation Model","item":"https://www.rkjdev.com/blog/nasa-ibm-open-source-lunar-foundation-model/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Where is the NASA-IBM Lunar Foundation Model available?","acceptedAnswer":{"@type":"Answer","text":"The model checkpoints and tokenizers are hosted on Hugging Face under the Apache-2.0 license, while training scripts, fine-tuning tools, and benchmark datasets are available via GitHub and the TerraTorch library."}},{"@type":"Question","name":"What datasets were used to train the lunar model?","acceptedAnswer":{"@type":"Answer","text":"The model was trained from scratch on SomBench, an aggregation of roughly 2 million tile bundles combining 17 years of NASA Lunar Reconnaissance Orbiter imagery with data from NASA's GRAIL, Lunar Prospector, and JAXA's SELENE/Kaguya missions."}},{"@type":"Question","name":"How does the model handle extreme lunar shadows and lighting?","acceptedAnswer":{"@type":"Answer","text":"Rather than forcing the model to infer lighting solely from image pixels, the architecture tokenizes explicit optical metadata—such as solar incidence angles, emission, and tile footprints—directly into the encoder."}},{"@type":"Question","name":"Can the model be used directly for autonomous spacecraft landings?","acceptedAnswer":{"@type":"Answer","text":"No. The model card states that the system does not maintain an absolute geodetic reference frame and is designed for scientific analysis and mapping rather than operational landing-site hazard certification."}}]}]</script>
 </head>
 <body class="post">
 <div class="progress" aria-hidden="true"><span></span></div>
 <a class="skip" href="#main">Skip to content</a>
-<div class="backdrop" aria-hidden="true"></div>
-<header class="top">
+<header class="site-head">
   <div class="wrap">
-    <a class="mark" href="/" aria-label="rkj dev, home">rkj dev</a>
+    <a class="mark" href="/">rkj dev</a>
     <nav aria-label="Site">
-      <a href="/blog/" aria-current="page">Blog</a>
-      <a href="/play/">Play</a>
       <a href="/#work">Work</a>
       <a href="/#about">About</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/play/">Play</a>
       <a href="/#contact">Contact</a>
     </nav>
   </div>
@@ -74,7 +77,7 @@
 </figure></div>
     <div class="layout wrap">
       <aside class="rail" aria-label="On this page">
-        <nav class="toc"><p>On this page</p><ol><li><a href="#solving-the-data-bottleneck-in-lunar-science">Solving the Data Bottleneck in Lunar Science</a></li><li><a href="#architecture-and-training-technical-specifications">Architecture and Training Technical Specifications</a></li><li><a href="#benchmark-performance-across-core-lunar-tasks">Benchmark Performance Across Core Lunar Tasks</a></li><li><a href="#fine-tuning-efficiency-and-operational-scope">Fine-Tuning Efficiency and Operational Scope</a></li></ol></nav>
+        <nav class="toc"><p>Contents</p><ol><li><a href="#solving-the-data-bottleneck-in-lunar-science">Solving the Data Bottleneck in Lunar Science</a></li><li><a href="#architecture-and-training-technical-specifications">Architecture and Training Technical Specifications</a></li><li><a href="#benchmark-performance-across-core-lunar-tasks">Benchmark Performance Across Core Lunar Tasks</a></li><li><a href="#fine-tuning-efficiency-and-operational-scope">Fine-Tuning Efficiency and Operational Scope</a></li></ol></nav>
         <div class="share">
           <p>Share</p>
           <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fnasa-ibm-open-source-lunar-foundation-model%2F&text=NASA%20and%20IBM%20Release%20Open-Source%20Lunar%20Foundation%20Model" target="_blank" rel="noopener">X</a>
@@ -84,8 +87,8 @@
         </div>
       </aside>
       <div class="prose">
-        <section class="takeaways" aria-labelledby="tk">
-          <h2 id="tk">Key takeaways</h2>
+        <section class="inshort" aria-labelledby="tk">
+          <h2 id="tk">In short</h2>
           <ul><li>NASA and IBM open-sourced the NASA-IBM Lunar Foundation Model under an Apache-2.0 license on Hugging Face and GitHub.</li><li>The model is pretrained on SomBench, a multimodal dataset of roughly 2 million tile bundles combining 17 years of Lunar Reconnaissance Orbiter data with missions like GRAIL and Kaguya.</li><li>Benchmark results show up to a 22% reduction in error when predicting polar ice stability compared to standard vision baselines.</li><li>Using lightweight LoRA fine-tuning and the TerraTorch toolkit, the architecture lets researchers adapt the system with lower compute requirements.</li></ul>
         </section>
         <p>NASA and IBM Research have released the <a href="https://science.nasa.gov/science-research/artificial-intelligence-lunar-foundation-model/" target="_blank" rel="noopener">NASA-IBM Lunar Foundation Model</a>, an open-source artificial intelligence system built to analyze decades of lunar observation data. Announced on September 10, 2026, the model is designed to accelerate planetary science by automating complex mapping tasks, including detecting craters, studying volcanic features, and identifying stable subsurface ice deposits near the Moon&#39;s poles.</p>
@@ -123,7 +126,7 @@
 <p>However, the model card specifies clear boundaries for operational use. The model does not maintain an internal geodetic reference frame, meaning generated outputs can experience absolute coordinate or elevation drifts and are not certified for real-time hazard clearance or automated landing-site selection. Instead, the model is intended to function as an open scientific framework for dense regression, semantic segmentation, and planetary feature discovery.</p>
 
         <section class="faq" aria-labelledby="faq-title">
-          <h2 id="faq-title">Frequently asked questions</h2>
+          <h2 id="faq-title">Questions people ask</h2>
           <details open><summary>Where is the NASA-IBM Lunar Foundation Model available?</summary><p>The model checkpoints and tokenizers are hosted on Hugging Face under the Apache-2.0 license, while training scripts, fine-tuning tools, and benchmark datasets are available via GitHub and the TerraTorch library.</p></details>
 <details><summary>What datasets were used to train the lunar model?</summary><p>The model was trained from scratch on SomBench, an aggregation of roughly 2 million tile bundles combining 17 years of NASA Lunar Reconnaissance Orbiter imagery with data from NASA's GRAIL, Lunar Prospector, and JAXA's SELENE/Kaguya missions.</p></details>
 <details><summary>How does the model handle extreme lunar shadows and lighting?</summary><p>Rather than forcing the model to infer lighting solely from image pixels, the architecture tokenizes explicit optical metadata—such as solar incidence angles, emission, and tile footprints—directly into the encoder.</p></details>
@@ -131,7 +134,7 @@
         </section>
         <section class="sources" id="sources" aria-labelledby="src-title">
           <h2 id="src-title">Sources</h2>
-          <ol><li><a href="https://science.nasa.gov/science-research/artificial-intelligence-lunar-foundation-model/" target="_blank" rel="noopener">NASA, IBM Launch AI Foundation Model for Lunar Science - NASA Science</a><span>NASA Science · Sep 10, 2026 · <b class="official">Official</b></span></li><li><a href="https://newsroom.ibm.com/2026-09-10-ibm-and-nasa-release-open-source-ai-model-to-support-lunar-exploration" target="_blank" rel="noopener">IBM and NASA Release Open-Source AI Model to Support Lunar Exploration</a><span>IBM Newsroom · <b class="official">Official</b></span></li><li><a href="https://research.ibm.com/blog/nasa-ibm-lunar-foundation-model" target="_blank" rel="noopener">A rough guide for going back to the Moon</a><span>IBM · Sep 10, 2026 · <b class="official">Official</b></span></li><li><a href="https://huggingface.co/nasa-ibm-ai4science/NASA-IBM-Lunar-Foundation-Model" target="_blank" rel="noopener">nasa-ibm-ai4science/NASA-IBM-Lunar-Foundation-Model</a><span>Hugging Face · Sep 1, 2026 · <b class="official">Official</b></span></li><li><a href="https://the-decoder.com/nasa-and-ibms-open-source-lunar-model-turns-17-years-of-orbiter-data-into-a-foundation-for-lunar-science/" target="_blank" rel="noopener">NASA and IBM's open source lunar model turns 17 years of orbiter data into a foundation for lunar science</a><span>The Decoder · Oct 4, 2026</span></li><li><a href="https://www.space.com/astronomy/moon/nasa-ibm-launch-new-ai-model-for-studying-the-moon" target="_blank" rel="noopener">NASA, IBM launch new AI model for studying the moon</a><span>Space · Sep 12, 2026</span></li><li><a href="https://thenextweb.com/news/nasa-ibm-lunar-foundation-model-open-source" target="_blank" rel="noopener">IBM and NASA release an open-source lunar foundation model</a><span>TNW | Space · Sep 10, 2026</span></li></ol>
+          <ol><li><a href="https://science.nasa.gov/science-research/artificial-intelligence-lunar-foundation-model/" target="_blank" rel="noopener">NASA, IBM Launch AI Foundation Model for Lunar Science - NASA Science</a><span>NASA Science, Sep 10, 2026, <b class="official">official source</b></span></li><li><a href="https://newsroom.ibm.com/2026-09-10-ibm-and-nasa-release-open-source-ai-model-to-support-lunar-exploration" target="_blank" rel="noopener">IBM and NASA Release Open-Source AI Model to Support Lunar Exploration</a><span>IBM Newsroom, <b class="official">official source</b></span></li><li><a href="https://research.ibm.com/blog/nasa-ibm-lunar-foundation-model" target="_blank" rel="noopener">A rough guide for going back to the Moon</a><span>IBM, Sep 10, 2026, <b class="official">official source</b></span></li><li><a href="https://huggingface.co/nasa-ibm-ai4science/NASA-IBM-Lunar-Foundation-Model" target="_blank" rel="noopener">nasa-ibm-ai4science/NASA-IBM-Lunar-Foundation-Model</a><span>Hugging Face, Sep 1, 2026, <b class="official">official source</b></span></li><li><a href="https://the-decoder.com/nasa-and-ibms-open-source-lunar-model-turns-17-years-of-orbiter-data-into-a-foundation-for-lunar-science/" target="_blank" rel="noopener">NASA and IBM's open source lunar model turns 17 years of orbiter data into a foundation for lunar science</a><span>The Decoder, Oct 4, 2026</span></li><li><a href="https://www.space.com/astronomy/moon/nasa-ibm-launch-new-ai-model-for-studying-the-moon" target="_blank" rel="noopener">NASA, IBM launch new AI model for studying the moon</a><span>Space, Sep 12, 2026</span></li><li><a href="https://thenextweb.com/news/nasa-ibm-lunar-foundation-model-open-source" target="_blank" rel="noopener">IBM and NASA release an open-source lunar foundation model</a><span>TNW | Space, Sep 10, 2026</span></li></ol>
           <p class="method">How this story was made: the newsroom picked it up from the-decoder.com, gathered the full text of the sources above, and drafted it with AI assistance. Every factual claim was then checked against those sources before publishing (24 claims checked). Illustrations marked as AI-generated are not photographs. Spotted an error? <a href="mailto:rajankrishnan909@gmail.com?subject=Correction%3A%20NASA%20and%20IBM%20Release%20Open-Source%20Lunar%20Foundation%20Model">Tell us</a>.</p>
         </section>
         <p class="tags"><span>#NASA</span> <span>#IBM</span> <span>#Open Source</span> <span>#Space Exploration</span> <span>#Computer Vision</span> <span>#Planetary Science</span></p>
@@ -141,37 +144,37 @@
   </article>
   <section class="related wrap" aria-labelledby="rel-title">
     <h2 id="rel-title">Keep reading</h2>
-    <div class="grid"><article class="card ">
-  <a class="card-link" href="/blog/alibaba-qwen-image-2-1-turbo-release/">
-    <div class="thumb is-ai"><img src="/blog/img/alibaba-qwen-image-2-1-turbo-release/hero-640.webp" srcset="/blog/img/alibaba-qwen-image-2-1-turbo-release/hero-640.webp 640w, /blog/img/alibaba-qwen-image-2-1-turbo-release/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="A software engineer examining digital graphics renders on a computer monitor in a compute lab." loading="lazy" decoding="async"></div>
-    <div class="card-body">
-      <p class="meta"><span class="cat">AI Models</span><time datetime="2026-10-11T00:12:04.608Z" data-rel>Oct 11, 2026</time></p>
+    <div class="rows"><article class="story row">
+  <a class="story-link" href="/blog/alibaba-qwen-image-2-1-turbo-release/">
+    <span class="pic"><img src="/blog/img/alibaba-qwen-image-2-1-turbo-release/hero-640.webp" srcset="/blog/img/alibaba-qwen-image-2-1-turbo-release/hero-640.webp 640w, /blog/img/alibaba-qwen-image-2-1-turbo-release/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="A software engineer examining digital graphics renders on a computer monitor in a compute lab." loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-10-11T00:12:04.608Z" data-rel>Oct 11, 2026</time></span>
       <h3>Alibaba Releases Qwen-Image-2.1-Turbo 8-Step Visual Generation Model</h3>
-      <p class="dek">Alibaba's open-weight visual generator compresses generation to eight denoising steps while launching paired cloud APIs.</p>
-      <p class="foot-meta">3 min read · 7 sources</p>
-    </div>
+      <span class="dek">Alibaba's open-weight visual generator compresses generation to eight denoising steps while launching paired cloud APIs.</span>
+      
+    </span>
   </a>
 </article>
-<article class="card ">
-  <a class="card-link" href="/blog/anthropic-launches-cyber-mission-oss-scanner/">
-    <div class="thumb is-ai"><img src="/blog/img/anthropic-launches-cyber-mission-oss-scanner/hero-640.webp" srcset="/blog/img/anthropic-launches-cyber-mission-oss-scanner/hero-640.webp 640w, /blog/img/anthropic-launches-cyber-mission-oss-scanner/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="An illustration of industrial machinery and filtration pipes in a municipal water plant." loading="lazy" decoding="async"></div>
-    <div class="card-body">
-      <p class="meta"><span class="cat">Tech</span><time datetime="2026-10-10T01:55:06.381Z" data-rel>Oct 10, 2026</time></p>
+<article class="story row">
+  <a class="story-link" href="/blog/anthropic-launches-cyber-mission-oss-scanner/">
+    <span class="pic"><img src="/blog/img/anthropic-launches-cyber-mission-oss-scanner/hero-640.webp" srcset="/blog/img/anthropic-launches-cyber-mission-oss-scanner/hero-640.webp 640w, /blog/img/anthropic-launches-cyber-mission-oss-scanner/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="An illustration of industrial machinery and filtration pipes in a municipal water plant." loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">Tech</span><time datetime="2026-10-10T01:55:06.381Z" data-rel>Oct 10, 2026</time></span>
       <h3>Anthropic Launches Cyber Mission and Free Scanner for Open Source</h3>
-      <p class="dek">The initiative pairs 11 industry partners to protect operational technology while offering automated security scans to open-source maintainers.</p>
-      <p class="foot-meta">4 min read · 3 sources</p>
-    </div>
+      <span class="dek">The initiative pairs 11 industry partners to protect operational technology while offering automated security scans to open-source maintainers.</span>
+      
+    </span>
   </a>
 </article>
-<article class="card ">
-  <a class="card-link" href="/blog/bootloops-ai-scientific-discovery-across-fields/">
-    <div class="thumb is-ai"><img src="/blog/img/bootloops-ai-scientific-discovery-across-fields/hero-640.webp" srcset="/blog/img/bootloops-ai-scientific-discovery-across-fields/hero-640.webp 640w, /blog/img/bootloops-ai-scientific-discovery-across-fields/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="A theoretical physicist examining complex mathematical equations and diagrams in a research laboratory" loading="lazy" decoding="async"></div>
-    <div class="card-body">
-      <p class="meta"><span class="cat">Research</span><time datetime="2026-10-10T01:11:16.852Z" data-rel>Oct 10, 2026</time></p>
+<article class="story row">
+  <a class="story-link" href="/blog/bootloops-ai-scientific-discovery-across-fields/">
+    <span class="pic"><img src="/blog/img/bootloops-ai-scientific-discovery-across-fields/hero-640.webp" srcset="/blog/img/bootloops-ai-scientific-discovery-across-fields/hero-640.webp 640w, /blog/img/bootloops-ai-scientific-discovery-across-fields/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="A theoretical physicist examining complex mathematical equations and diagrams in a research laboratory" loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">Research</span><time datetime="2026-10-10T01:11:16.852Z" data-rel>Oct 10, 2026</time></span>
       <h3>BootLoops AI Harness Solves Problems Across 22 Fields</h3>
-      <p class="dek">An open-source harness developed with Claude ported particle physics methods across 18 fields, generating 36 preprints in three months.</p>
-      <p class="foot-meta">4 min read · 7 sources</p>
-    </div>
+      <span class="dek">An open-source harness developed with Claude ported particle physics methods across 18 fields, generating 36 preprints in three months.</span>
+      
+    </span>
   </a>
 </article></div>
   </section>
@@ -180,25 +183,24 @@
     <a class="next" href="/blog/shinyhunters-hacker-rey-detained-jordan-fbi/"><span>Older</span>ShinyHunters Hacker 'Rey' Detained in Jordan, Cooperating with FBI</a>
   </nav>
 </main>
-<footer class="foot wrap">
-  <div>
-    <p class="foot-mark">rkj dev <span>Blog</span></p>
-    <p>Fast, source-checked coverage of new AI models, open-source releases, audio and video AI, and the tech and science breakthroughs of the day.</p>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="biz">
+      <p class="biz-name">RKJDEV Labs</p>
+      <p>© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan</p>
+      <p>Udyam registered MSME, India, <span class="nowrap">UDYAM-BR-26-0254766</span></p>
+      <p><a href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a></p>
+    </div>
+    <nav aria-label="Site">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/blog/feed.xml">RSS</a>
+    </nav>
+    <p class="fine">Stories are researched from the linked sources, written with AI assistance and checked claim by claim against those sources before publishing. AI-generated illustrations are labeled.</p>
   </div>
-  <nav aria-label="Blog">
-    <a href="/blog/">Latest</a>
-    <a href="/blog/category/ai-models/">AI Models</a>
-    <a href="/blog/category/open-source/">Open Source</a>
-    <a href="/blog/category/research/">Research</a>
-    <a href="/blog/category/audio-and-video/">Audio &amp; Video</a>
-    <a href="/blog/category/agents-and-tools/">Agents &amp; Tools</a>
-    <a href="/blog/category/industry/">Industry</a>
-    <a href="/blog/feed.xml">RSS</a>
-    <a href="/">About rkj dev</a>
-    <a href="/privacy/">Privacy</a>
-  </nav>
-  <p class="fine">© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan. Articles are researched from the linked sources, written with AI assistance and checked claim by claim against those sources. AI-generated illustrations are labeled.</p>
 </footer>
-<script src="/blog/blog.js?v=210b69de" defer></script>
+<script src="/blog/blog.js?v=45c7aef4" defer></script>
 </body>
 </html>

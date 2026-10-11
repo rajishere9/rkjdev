@@ -320,16 +320,19 @@ function goTo(m) {
     m.el.classList.add("found");
     setTimeout(() => m.el.classList.remove("found"), 2400);
     showCard(m, true, m.el);
+    card.tabIndex = -1;
+    card.focus({ preventScroll: true });
   });
 }
 find.addEventListener("input", () => {
   const q = find.value.trim().toLowerCase();
-  if (!q) { findList.hidden = true; return; }
+  if (!q) { findList.hidden = true; find.setAttribute("aria-expanded", "false"); return; }
   found = models.filter((m) => m.n.toLowerCase().includes(q) || m.o.toLowerCase().includes(q))
     .sort((a, b) => (a.n.toLowerCase().startsWith(q) ? 0 : 1) - (b.n.toLowerCase().startsWith(q) ? 0 : 1) || b.f - a.f).slice(0, 8);
   fIdx = 0;
   findList.innerHTML = found.length ? found.map((m, i) => `<li role="option" data-i="${i}" aria-selected="${i === 0}"><span>${esc(m.n)}</span><small>${esc(m.o.split(",")[0])}, ${year(m)}</small></li>`).join("") : `<li aria-disabled="true"><span>No model by that name</span></li>`;
   findList.hidden = false;
+  find.setAttribute("aria-expanded", "true");
 });
 find.addEventListener("keydown", (e) => {
   if (findList.hidden || !found.length) return;
@@ -337,10 +340,10 @@ find.addEventListener("keydown", (e) => {
     e.preventDefault(); fIdx = (fIdx + (e.key === "ArrowDown" ? 1 : found.length - 1)) % found.length;
     [...findList.children].forEach((li, i) => li.setAttribute("aria-selected", String(i === fIdx)));
   } else if (e.key === "Enter") { e.preventDefault(); goTo(found[fIdx]); }
-  else if (e.key === "Escape") findList.hidden = true;
+  else if (e.key === "Escape") { findList.hidden = true; find.setAttribute("aria-expanded", "false"); }
 });
 findList.addEventListener("pointerdown", (e) => { const li = e.target.closest("li[data-i]"); if (li) { e.preventDefault(); goTo(found[+li.dataset.i]); } });
-find.addEventListener("blur", () => setTimeout(() => (findList.hidden = true), 150));
+find.addEventListener("blur", () => setTimeout(() => { findList.hidden = true; find.setAttribute("aria-expanded", "false"); }, 150));
 
 // ---------- fields ----------
 let fieldList = [];
@@ -386,9 +389,6 @@ function toast(msg) {
   t.textContent = msg; t.classList.add("show");
   clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove("show"), 2200);
 }
-
-const topbar = $(".top");
-addEventListener("scroll", () => topbar.classList.toggle("scrolled", scrollY > 8), { passive: true });
 
 async function boot() {
   data = await fetch("data.json").then((r) => r.json());

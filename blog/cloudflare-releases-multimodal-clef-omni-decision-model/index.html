@@ -6,7 +6,8 @@
 <title>Cloudflare Launches Clef-Omni Multimodal Model | rkj dev</title>
 <meta name="description" content="Cloudflare launched Clef-Omni, an open-weight decision model processing audio and video, cut Clef-Flash pricing to $0.038, and accelerated Clef.">
 <link rel="canonical" href="https://www.rkjdev.com/blog/cloudflare-releases-multimodal-clef-omni-decision-model/">
-<meta name="theme-color" content="#16101a">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#110b14">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta property="og:site_name" content="rkj dev Blog">
 <meta property="og:type" content="article">
@@ -22,11 +23,14 @@
 <meta name="twitter:description" content="Cloudflare launched Clef-Omni, an open-weight decision model processing audio and video, cut Clef-Flash pricing to $0.038, and accelerated Clef.">
 <link rel="alternate" type="application/rss+xml" title="rkj dev Blog" href="/blog/feed.xml">
 <link rel="alternate" type="application/feed+json" title="rkj dev Blog" href="/blog/feed.json">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2316101a'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23f4b860'/%3E%3C/svg%3E">
+<link rel="icon" href="/favicon.svg?v=bdff7dc5" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=Unbounded:wght@300;400;500&display=swap">
-<link rel="stylesheet" href="/blog/blog.css?v=4ed3a51a">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,40;1,9..144,400..600,40&family=Schibsted+Grotesk:ital,wght@0,400..600;1,400..600&display=swap">
+<link rel="stylesheet" href="/site.css?v=e85724ed">
+<link rel="stylesheet" href="/blog/blog.css?v=7ad332ef">
 <meta property="article:published_time" content="2026-10-11T01:11:34.086Z">
 <meta property="article:modified_time" content="2026-10-11T01:11:34.086Z">
 <meta property="article:section" content="AI Models">
@@ -36,20 +40,19 @@
 <meta property="article:tag" content="Multimodal AI">
 <meta property="article:tag" content="Machine Learning">
 <link rel="preload" as="image" href="/blog/img/cloudflare-releases-multimodal-clef-omni-decision-model/hero.webp" imagesrcset="/blog/img/cloudflare-releases-multimodal-clef-omni-decision-model/hero-640.webp 640w, /blog/img/cloudflare-releases-multimodal-clef-omni-decision-model/hero.webp 1200w" imagesizes="(max-width: 760px) 100vw, 1200px">
-<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"Cloudflare Releases Multimodal Clef-Omni Decision Model","description":"Cloudflare launched Clef-Omni, an open-weight decision model processing audio and video, cut Clef-Flash pricing to $0.038, and accelerated Clef.","url":"https://www.rkjdev.com/blog/cloudflare-releases-multimodal-clef-omni-decision-model/","mainEntityOfPage":"https://www.rkjdev.com/blog/cloudflare-releases-multimodal-clef-omni-decision-model/","image":["https://www.rkjdev.com/blog/img/cloudflare-releases-multimodal-clef-omni-decision-model/og.jpg","https://www.rkjdev.com/blog/img/cloudflare-releases-multimodal-clef-omni-decision-model/hero.webp"],"datePublished":"2026-10-11T01:11:34.086Z","dateModified":"2026-10-11T01:11:34.086Z","articleSection":"AI Models","keywords":"Cloudflare, Clef-Omni, Artificial Intelligence, Multimodal AI, Machine Learning","wordCount":997,"author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","name":"rkj dev","url":"https://www.rkjdev.com","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/me.jpg"}},"isBasedOn":["https://huggingface.co/Cloudflare/clef-omni","https://blog.cloudflare.com/clef-faster-cheaper-multimodal/","https://developers.cloudflare.com/changelog/post/2026-10-09-clef-omni-workers-ai/","https://aiweekly.co/alerts/cloudflare-ships-multimodal-clef-omni-cuts-flash-to-0038m","https://www.techfabric.com/blog/clef-vs-clef-flash-vs-clef-omni","https://openrouter.ai/cloudflare/clef-omni"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"AI Models","item":"https://www.rkjdev.com/blog/category/ai-models/"},{"@type":"ListItem","position":3,"name":"Cloudflare Releases Multimodal Clef-Omni Decision Model","item":"https://www.rkjdev.com/blog/cloudflare-releases-multimodal-clef-omni-decision-model/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Clef-Omni?","acceptedAnswer":{"@type":"Answer","text":"Clef-Omni is an open-weight 30B mixture-of-experts multimodal decision model developed by Cloudflare. Post-trained from Qwen3-Omni-30B-A3B-Instruct, it scores typed questions over text, image, audio, and video inputs in a single forward pass without generating free-form text."}},{"@type":"Question","name":"How much does Clef-Omni cost compared to Clef and Clef-Flash?","acceptedAnswer":{"@type":"Answer","text":"On Workers AI, Clef-Omni costs $0.15 per million input tokens. Clef-Flash costs $0.038 per million input tokens (reduced from $0.09), and standard Clef costs $0.24 per million input tokens. None of the models charge for output tokens."}},{"@type":"Question","name":"Why did Cloudflare reduce the context window of hosted Clef-Flash?","acceptedAnswer":{"@type":"Answer","text":"Cloudflare reduced the hosted context window of Clef-Flash from 64,000 to 24,000 tokens to support a lower price point of $0.038 per million tokens. Internal usage data showed that only 0.24% of production requests exceeded 24,000 tokens."}},{"@type":"Question","name":"Is Clef-Omni compatible with existing Jev integrations?","acceptedAnswer":{"@type":"Answer","text":"Yes. Clef-Omni follows the SystemOne API standard and is compatible with Jev, allowing teams to swap endpoints and model identifiers without altering request bodies."}}]}]</script>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"Cloudflare Releases Multimodal Clef-Omni Decision Model","description":"Cloudflare launched Clef-Omni, an open-weight decision model processing audio and video, cut Clef-Flash pricing to $0.038, and accelerated Clef.","url":"https://www.rkjdev.com/blog/cloudflare-releases-multimodal-clef-omni-decision-model/","mainEntityOfPage":"https://www.rkjdev.com/blog/cloudflare-releases-multimodal-clef-omni-decision-model/","image":["https://www.rkjdev.com/blog/img/cloudflare-releases-multimodal-clef-omni-decision-model/og.jpg","https://www.rkjdev.com/blog/img/cloudflare-releases-multimodal-clef-omni-decision-model/hero.webp"],"datePublished":"2026-10-11T01:11:34.086Z","dateModified":"2026-10-11T01:11:34.086Z","articleSection":"AI Models","keywords":"Cloudflare, Clef-Omni, Artificial Intelligence, Multimodal AI, Machine Learning","wordCount":997,"author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","name":"RKJDEV Labs","url":"https://www.rkjdev.com","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/apple-touch-icon.png"}},"isBasedOn":["https://huggingface.co/Cloudflare/clef-omni","https://blog.cloudflare.com/clef-faster-cheaper-multimodal/","https://developers.cloudflare.com/changelog/post/2026-10-09-clef-omni-workers-ai/","https://aiweekly.co/alerts/cloudflare-ships-multimodal-clef-omni-cuts-flash-to-0038m","https://www.techfabric.com/blog/clef-vs-clef-flash-vs-clef-omni","https://openrouter.ai/cloudflare/clef-omni"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"AI Models","item":"https://www.rkjdev.com/blog/category/ai-models/"},{"@type":"ListItem","position":3,"name":"Cloudflare Releases Multimodal Clef-Omni Decision Model","item":"https://www.rkjdev.com/blog/cloudflare-releases-multimodal-clef-omni-decision-model/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Clef-Omni?","acceptedAnswer":{"@type":"Answer","text":"Clef-Omni is an open-weight 30B mixture-of-experts multimodal decision model developed by Cloudflare. Post-trained from Qwen3-Omni-30B-A3B-Instruct, it scores typed questions over text, image, audio, and video inputs in a single forward pass without generating free-form text."}},{"@type":"Question","name":"How much does Clef-Omni cost compared to Clef and Clef-Flash?","acceptedAnswer":{"@type":"Answer","text":"On Workers AI, Clef-Omni costs $0.15 per million input tokens. Clef-Flash costs $0.038 per million input tokens (reduced from $0.09), and standard Clef costs $0.24 per million input tokens. None of the models charge for output tokens."}},{"@type":"Question","name":"Why did Cloudflare reduce the context window of hosted Clef-Flash?","acceptedAnswer":{"@type":"Answer","text":"Cloudflare reduced the hosted context window of Clef-Flash from 64,000 to 24,000 tokens to support a lower price point of $0.038 per million tokens. Internal usage data showed that only 0.24% of production requests exceeded 24,000 tokens."}},{"@type":"Question","name":"Is Clef-Omni compatible with existing Jev integrations?","acceptedAnswer":{"@type":"Answer","text":"Yes. Clef-Omni follows the SystemOne API standard and is compatible with Jev, allowing teams to swap endpoints and model identifiers without altering request bodies."}}]}]</script>
 </head>
 <body class="post">
 <div class="progress" aria-hidden="true"><span></span></div>
 <a class="skip" href="#main">Skip to content</a>
-<div class="backdrop" aria-hidden="true"></div>
-<header class="top">
+<header class="site-head">
   <div class="wrap">
-    <a class="mark" href="/" aria-label="rkj dev, home">rkj dev</a>
+    <a class="mark" href="/">rkj dev</a>
     <nav aria-label="Site">
-      <a href="/blog/" aria-current="page">Blog</a>
-      <a href="/play/">Play</a>
       <a href="/#work">Work</a>
       <a href="/#about">About</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/play/">Play</a>
       <a href="/#contact">Contact</a>
     </nav>
   </div>
@@ -73,7 +76,7 @@
 </figure></div>
     <div class="layout wrap">
       <aside class="rail" aria-label="On this page">
-        <nav class="toc"><p>On this page</p><ol><li><a href="#multimodal-architecture-and-single-pass-inference">Multimodal Architecture and Single-Pass Inference</a></li><li><a href="#clef-flash-price-cut-and-clef-serving-upgrades">Clef-Flash Price Cut and Clef Serving Upgrades</a></li><li><a href="#benchmark-results-and-real-world-trade-offs">Benchmark Results and Real-World Trade-Offs</a></li><li><a href="#deployment-patterns-and-api-integration">Deployment Patterns and API Integration</a></li></ol></nav>
+        <nav class="toc"><p>Contents</p><ol><li><a href="#multimodal-architecture-and-single-pass-inference">Multimodal Architecture and Single-Pass Inference</a></li><li><a href="#clef-flash-price-cut-and-clef-serving-upgrades">Clef-Flash Price Cut and Clef Serving Upgrades</a></li><li><a href="#benchmark-results-and-real-world-trade-offs">Benchmark Results and Real-World Trade-Offs</a></li><li><a href="#deployment-patterns-and-api-integration">Deployment Patterns and API Integration</a></li></ol></nav>
         <div class="share">
           <p>Share</p>
           <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fcloudflare-releases-multimodal-clef-omni-decision-model%2F&text=Cloudflare%20Releases%20Multimodal%20Clef-Omni%20Decision%20Model" target="_blank" rel="noopener">X</a>
@@ -83,8 +86,8 @@
         </div>
       </aside>
       <div class="prose">
-        <section class="takeaways" aria-labelledby="tk">
-          <h2 id="tk">Key takeaways</h2>
+        <section class="inshort" aria-labelledby="tk">
+          <h2 id="tk">In short</h2>
           <ul><li>Cloudflare released Clef-Omni on October 9, 2026, an open-weight 30B mixture-of-experts decision model that scores text, images, audio, and video directly.</li><li>Unlike generative language models, Clef-Omni skips text token generation, calculating calibrated probabilities for schema questions in a single forward pass.</li><li>Cloudflare reduced Clef-Flash pricing from $0.09 to $0.038 per million input tokens while lowering its hosted context window to 24,000 tokens.</li><li>Clef-Omni is priced at $0.15 per million input tokens, while serving optimizations via SGLang make the original Clef up to 2x faster.</li></ul>
         </section>
         <p>On October 9, 2026, Cloudflare expanded its family of open-weight inference tools with the release of Clef-Omni, a multimodal decision model capable of handling audio and video alongside text and images. Announced on the <a href="https://blog.cloudflare.com/clef-faster-cheaper-multimodal/" target="_blank" rel="noopener">Cloudflare Blog</a>, the model arrives one week after the debut of the company&#39;s initial Clef and Clef-Flash architectures. Alongside the launch, Cloudflare reduced the hosted pricing of Clef-Flash by 58 percent and implemented serving optimizations that double the execution speed of the standard Clef model.</p>
@@ -149,7 +152,7 @@
 <p>In multimodal workflows, media payloads are delivered as base64-encoded strings directly in the JSON request body. Audio inputs accept WAV or MP3 files up to 300 seconds and 8 MiB, consuming approximately 780 tokens per minute. Video inputs support MP4 or WebM formats up to 60 seconds and 16 MiB, consuming approximately 8,600 frame tokens per minute at 480p resolution. Because tokens generated by video frames count directly against the 64,000-token context boundary, operational guidelines recommend keeping resolution modest to ensure state data is not truncated before evaluation.</p>
 
         <section class="faq" aria-labelledby="faq-title">
-          <h2 id="faq-title">Frequently asked questions</h2>
+          <h2 id="faq-title">Questions people ask</h2>
           <details open><summary>What is Clef-Omni?</summary><p>Clef-Omni is an open-weight 30B mixture-of-experts multimodal decision model developed by Cloudflare. Post-trained from Qwen3-Omni-30B-A3B-Instruct, it scores typed questions over text, image, audio, and video inputs in a single forward pass without generating free-form text.</p></details>
 <details><summary>How much does Clef-Omni cost compared to Clef and Clef-Flash?</summary><p>On Workers AI, Clef-Omni costs $0.15 per million input tokens. Clef-Flash costs $0.038 per million input tokens (reduced from $0.09), and standard Clef costs $0.24 per million input tokens. None of the models charge for output tokens.</p></details>
 <details><summary>Why did Cloudflare reduce the context window of hosted Clef-Flash?</summary><p>Cloudflare reduced the hosted context window of Clef-Flash from 64,000 to 24,000 tokens to support a lower price point of $0.038 per million tokens. Internal usage data showed that only 0.24% of production requests exceeded 24,000 tokens.</p></details>
@@ -157,7 +160,7 @@
         </section>
         <section class="sources" id="sources" aria-labelledby="src-title">
           <h2 id="src-title">Sources</h2>
-          <ol><li><a href="https://huggingface.co/Cloudflare/clef-omni" target="_blank" rel="noopener">Cloudflare/clef-omni</a><span>Hugging Face · Oct 9, 2026 · <b class="official">Official</b></span></li><li><a href="https://blog.cloudflare.com/clef-faster-cheaper-multimodal/" target="_blank" rel="noopener">Introducing Clef-omni with full multimodality, plus a faster Clef and a cheaper Clef-flash</a><span>Cloudflare Blog · Oct 9, 2026</span></li><li><a href="https://developers.cloudflare.com/changelog/post/2026-10-09-clef-omni-workers-ai/" target="_blank" rel="noopener">Clef-omni adds audio and video input, Clef-flash is now cheaper, and Clef is faster</a><span>Cloudflare · Oct 9, 2026</span></li><li><a href="https://aiweekly.co/alerts/cloudflare-ships-multimodal-clef-omni-cuts-flash-to-0038m" target="_blank" rel="noopener">Cloudflare Ships Multimodal Clef-omni, Cuts Flash to $0.038/M</a><span>AI Weekly · Oct 10, 2026</span></li><li><a href="https://www.techfabric.com/blog/clef-vs-clef-flash-vs-clef-omni" target="_blank" rel="noopener">Clef, Clef-flash or Clef-omni: which decision model to use</a><span>TechFabric · Oct 9, 2026</span></li><li><a href="https://openrouter.ai/cloudflare/clef-omni" target="_blank" rel="noopener">Clef Omni - API Pricing &amp; Providers | OpenRouter</a><span>openrouter.ai · Oct 9, 2026</span></li></ol>
+          <ol><li><a href="https://huggingface.co/Cloudflare/clef-omni" target="_blank" rel="noopener">Cloudflare/clef-omni</a><span>Hugging Face, Oct 9, 2026, <b class="official">official source</b></span></li><li><a href="https://blog.cloudflare.com/clef-faster-cheaper-multimodal/" target="_blank" rel="noopener">Introducing Clef-omni with full multimodality, plus a faster Clef and a cheaper Clef-flash</a><span>Cloudflare Blog, Oct 9, 2026</span></li><li><a href="https://developers.cloudflare.com/changelog/post/2026-10-09-clef-omni-workers-ai/" target="_blank" rel="noopener">Clef-omni adds audio and video input, Clef-flash is now cheaper, and Clef is faster</a><span>Cloudflare, Oct 9, 2026</span></li><li><a href="https://aiweekly.co/alerts/cloudflare-ships-multimodal-clef-omni-cuts-flash-to-0038m" target="_blank" rel="noopener">Cloudflare Ships Multimodal Clef-omni, Cuts Flash to $0.038/M</a><span>AI Weekly, Oct 10, 2026</span></li><li><a href="https://www.techfabric.com/blog/clef-vs-clef-flash-vs-clef-omni" target="_blank" rel="noopener">Clef, Clef-flash or Clef-omni: which decision model to use</a><span>TechFabric, Oct 9, 2026</span></li><li><a href="https://openrouter.ai/cloudflare/clef-omni" target="_blank" rel="noopener">Clef Omni - API Pricing &amp; Providers | OpenRouter</a><span>openrouter.ai, Oct 9, 2026</span></li></ol>
           <p class="method">How this story was made: the newsroom picked it up from Google News, blog.cloudflare.com and Google Search, gathered the full text of the sources above, and drafted it with AI assistance. Every factual claim was then checked against those sources before publishing (24 claims checked). Illustrations marked as AI-generated are not photographs. Spotted an error? <a href="mailto:rajankrishnan909@gmail.com?subject=Correction%3A%20Cloudflare%20Releases%20Multimodal%20Clef-Omni%20Decision%20Model">Tell us</a>.</p>
         </section>
         <p class="tags"><span>#Cloudflare</span> <span>#Clef-Omni</span> <span>#Artificial Intelligence</span> <span>#Multimodal AI</span> <span>#Machine Learning</span></p>
@@ -167,37 +170,37 @@
   </article>
   <section class="related wrap" aria-labelledby="rel-title">
     <h2 id="rel-title">Keep reading</h2>
-    <div class="grid"><article class="card ">
-  <a class="card-link" href="/blog/cloudflare-releases-clef-decision-models/">
-    <div class="thumb is-ai"><img src="/blog/img/cloudflare-releases-clef-decision-models/hero-640.webp" srcset="/blog/img/cloudflare-releases-clef-decision-models/hero-640.webp 640w, /blog/img/cloudflare-releases-clef-decision-models/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="Server room hardware processing structured data streams" loading="lazy" decoding="async"></div>
-    <div class="card-body">
-      <p class="meta"><span class="cat">AI Models</span><time datetime="2026-10-02T01:36:11.077Z" data-rel>Oct 2, 2026</time></p>
+    <div class="rows"><article class="story row">
+  <a class="story-link" href="/blog/cloudflare-releases-clef-decision-models/">
+    <span class="pic"><img src="/blog/img/cloudflare-releases-clef-decision-models/hero-640.webp" srcset="/blog/img/cloudflare-releases-clef-decision-models/hero-640.webp 640w, /blog/img/cloudflare-releases-clef-decision-models/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Server room hardware processing structured data streams" loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-10-02T01:36:11.077Z" data-rel>Oct 2, 2026</time></span>
       <h3>Cloudflare Releases Open-Weight Clef Decision Models</h3>
-      <p class="dek">Post-trained from Qwen backbones, Clef and Clef-flash bring multimodal, non-autoregressive decision scoring to edge infrastructure.</p>
-      <p class="foot-meta">3 min read · 5 sources</p>
-    </div>
+      <span class="dek">Post-trained from Qwen backbones, Clef and Clef-flash bring multimodal, non-autoregressive decision scoring to edge infrastructure.</span>
+      
+    </span>
   </a>
 </article>
-<article class="card ">
-  <a class="card-link" href="/blog/google-gemini-4-argon-frontier-model-launch-3/">
-    <div class="thumb is-ai"><img src="/blog/img/google-gemini-4-argon-frontier-model-launch-3/hero-640.webp" srcset="/blog/img/google-gemini-4-argon-frontier-model-launch-3/hero-640.webp 640w, /blog/img/google-gemini-4-argon-frontier-model-launch-3/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="A modern data center interior with glowing server racks representing AI compute infrastructure." loading="lazy" decoding="async"></div>
-    <div class="card-body">
-      <p class="meta"><span class="cat">AI Models</span><time datetime="2026-10-02T00:14:53.631Z" data-rel>Oct 2, 2026</time></p>
+<article class="story row">
+  <a class="story-link" href="/blog/google-gemini-4-argon-frontier-model-launch-3/">
+    <span class="pic"><img src="/blog/img/google-gemini-4-argon-frontier-model-launch-3/hero-640.webp" srcset="/blog/img/google-gemini-4-argon-frontier-model-launch-3/hero-640.webp 640w, /blog/img/google-gemini-4-argon-frontier-model-launch-3/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="A modern data center interior with glowing server racks representing AI compute infrastructure." loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-10-02T00:14:53.631Z" data-rel>Oct 2, 2026</time></span>
       <h3>Google Releases Gemini 4 Argon With 1M Output Limit and Cyber Focus</h3>
-      <p class="dek">Google claims the flagship model introduces an expanded output window, autonomous security auditing, and deep reasoning across enterprise and coding workflows.</p>
-      <p class="foot-meta">4 min read · 4 sources</p>
-    </div>
+      <span class="dek">Google claims the flagship model introduces an expanded output window, autonomous security auditing, and deep reasoning across enterprise and coding workflows.</span>
+      
+    </span>
   </a>
 </article>
-<article class="card ">
-  <a class="card-link" href="/blog/google-gemini-4-argon-frontier-model-launch/">
-    <div class="thumb is-ai"><img src="/blog/img/google-gemini-4-argon-frontier-model-launch/hero-640.webp" srcset="/blog/img/google-gemini-4-argon-frontier-model-launch/hero-640.webp 640w, /blog/img/google-gemini-4-argon-frontier-model-launch/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="Conceptual illustration of an advanced artificial intelligence network with complex data flows." loading="lazy" decoding="async"></div>
-    <div class="card-body">
-      <p class="meta"><span class="cat">AI Models</span><time datetime="2026-10-01T06:53:01.166Z" data-rel>Oct 1, 2026</time></p>
+<article class="story row">
+  <a class="story-link" href="/blog/google-gemini-4-argon-frontier-model-launch/">
+    <span class="pic"><img src="/blog/img/google-gemini-4-argon-frontier-model-launch/hero-640.webp" srcset="/blog/img/google-gemini-4-argon-frontier-model-launch/hero-640.webp 640w, /blog/img/google-gemini-4-argon-frontier-model-launch/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Conceptual illustration of an advanced artificial intelligence network with complex data flows." loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-10-01T06:53:01.166Z" data-rel>Oct 1, 2026</time></span>
       <h3>Google Unveils Gemini 4 Argon Frontier AI Model With 1M Output Window</h3>
-      <p class="dek">Google's new flagship AI model expands output capacity to 1 million tokens while targeting enterprise engineering, finance, and defensive cybersecurity.</p>
-      <p class="foot-meta">4 min read · 7 sources</p>
-    </div>
+      <span class="dek">Google's new flagship AI model expands output capacity to 1 million tokens while targeting enterprise engineering, finance, and defensive cybersecurity.</span>
+      
+    </span>
   </a>
 </article></div>
   </section>
@@ -206,25 +209,24 @@
     <a class="next" href="/blog/anthropic-disables-internet-evaluations-agent-incidents/"><span>Older</span>Anthropic Cuts Internet in Testing After Agent Submits Police Tip</a>
   </nav>
 </main>
-<footer class="foot wrap">
-  <div>
-    <p class="foot-mark">rkj dev <span>Blog</span></p>
-    <p>Fast, source-checked coverage of new AI models, open-source releases, audio and video AI, and the tech and science breakthroughs of the day.</p>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="biz">
+      <p class="biz-name">RKJDEV Labs</p>
+      <p>© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan</p>
+      <p>Udyam registered MSME, India, <span class="nowrap">UDYAM-BR-26-0254766</span></p>
+      <p><a href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a></p>
+    </div>
+    <nav aria-label="Site">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/blog/feed.xml">RSS</a>
+    </nav>
+    <p class="fine">Stories are researched from the linked sources, written with AI assistance and checked claim by claim against those sources before publishing. AI-generated illustrations are labeled.</p>
   </div>
-  <nav aria-label="Blog">
-    <a href="/blog/">Latest</a>
-    <a href="/blog/category/ai-models/">AI Models</a>
-    <a href="/blog/category/open-source/">Open Source</a>
-    <a href="/blog/category/research/">Research</a>
-    <a href="/blog/category/audio-and-video/">Audio &amp; Video</a>
-    <a href="/blog/category/agents-and-tools/">Agents &amp; Tools</a>
-    <a href="/blog/category/industry/">Industry</a>
-    <a href="/blog/feed.xml">RSS</a>
-    <a href="/">About rkj dev</a>
-    <a href="/privacy/">Privacy</a>
-  </nav>
-  <p class="fine">© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan. Articles are researched from the linked sources, written with AI assistance and checked claim by claim against those sources. AI-generated illustrations are labeled.</p>
 </footer>
-<script src="/blog/blog.js?v=210b69de" defer></script>
+<script src="/blog/blog.js?v=45c7aef4" defer></script>
 </body>
 </html>

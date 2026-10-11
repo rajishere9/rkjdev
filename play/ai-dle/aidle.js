@@ -262,9 +262,6 @@ function renderArchive() {
 }
 
 // ---------- start ----------
-const topbar = document.querySelector(".top");
-addEventListener("scroll", () => topbar.classList.toggle("scrolled", scrollY > 8), { passive: true });
-
 async function boot() {
   today = localDate();
   try { index = await fetch("puzzles/index.json", { cache: "no-cache" }).then((r) => r.json()); }

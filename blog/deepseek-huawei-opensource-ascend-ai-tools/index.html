@@ -6,7 +6,8 @@
 <title>DeepSeek, Huawei Open-Source Ascend AI Tools | rkj dev</title>
 <meta name="description" content="DeepSeek and Huawei have open-sourced programming tools and TileLang support for Ascend 950 AI chips, targeting reduced reliance on Nvidia's CUDA ecosystem.">
 <link rel="canonical" href="https://www.rkjdev.com/blog/deepseek-huawei-opensource-ascend-ai-tools/">
-<meta name="theme-color" content="#16101a">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#110b14">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta property="og:site_name" content="rkj dev Blog">
 <meta property="og:type" content="article">
@@ -22,11 +23,14 @@
 <meta name="twitter:description" content="DeepSeek and Huawei have open-sourced programming tools and TileLang support for Ascend 950 AI chips, targeting reduced reliance on Nvidia's CUDA ecosystem.">
 <link rel="alternate" type="application/rss+xml" title="rkj dev Blog" href="/blog/feed.xml">
 <link rel="alternate" type="application/feed+json" title="rkj dev Blog" href="/blog/feed.json">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2316101a'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23f4b860'/%3E%3C/svg%3E">
+<link rel="icon" href="/favicon.svg?v=bdff7dc5" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=Unbounded:wght@300;400;500&display=swap">
-<link rel="stylesheet" href="/blog/blog.css?v=4ed3a51a">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,40;1,9..144,400..600,40&family=Schibsted+Grotesk:ital,wght@0,400..600;1,400..600&display=swap">
+<link rel="stylesheet" href="/site.css?v=e85724ed">
+<link rel="stylesheet" href="/blog/blog.css?v=7ad332ef">
 <meta property="article:published_time" content="2026-10-02T00:43:43.449Z">
 <meta property="article:modified_time" content="2026-10-02T00:43:43.449Z">
 <meta property="article:section" content="Chips &amp; Hardware">
@@ -37,20 +41,19 @@
 <meta property="article:tag" content="AI Chips">
 <meta property="article:tag" content="Open Source">
 <link rel="preload" as="image" href="/blog/img/deepseek-huawei-opensource-ascend-ai-tools/hero.webp" imagesrcset="/blog/img/deepseek-huawei-opensource-ascend-ai-tools/hero-640.webp 640w, /blog/img/deepseek-huawei-opensource-ascend-ai-tools/hero.webp 1200w" imagesizes="(max-width: 760px) 100vw, 1200px">
-<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"DeepSeek and Huawei Release Open-Source Ascend AI Tools","description":"DeepSeek and Huawei have open-sourced programming tools and TileLang support for Ascend 950 AI chips, targeting reduced reliance on Nvidia's CUDA ecosystem.","url":"https://www.rkjdev.com/blog/deepseek-huawei-opensource-ascend-ai-tools/","mainEntityOfPage":"https://www.rkjdev.com/blog/deepseek-huawei-opensource-ascend-ai-tools/","image":["https://www.rkjdev.com/blog/img/deepseek-huawei-opensource-ascend-ai-tools/og.jpg","https://www.rkjdev.com/blog/img/deepseek-huawei-opensource-ascend-ai-tools/hero.webp"],"datePublished":"2026-10-02T00:43:43.449Z","dateModified":"2026-10-02T00:43:43.449Z","articleSection":"Chips & Hardware","keywords":"DeepSeek, Huawei, Ascend 950, TileLang, AI Chips, Open Source","wordCount":461,"author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","name":"rkj dev","url":"https://www.rkjdev.com","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/me.jpg"}},"isBasedOn":["https://github.com/deepseek-ai/TileKernels","https://github.com/tile-ai/tilelang","https://www.tomshardware.com/tech-industry/artificial-intelligence/deepseek-and-huawei-release-open-source-ascend-ai-programming-tools-to-reduce-reliance-on-nvidia-ecosystem-tools-include-compute-and-communication-libraries-as-well-as-ascend-support-for-tilelang","https://www.thedailyupside.com/technology/artificial-intelligence/deepseek-and-huawei-challenge-the-software-that-cements-nvidias-ai-dominance/"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"Chips & Hardware","item":"https://www.rkjdev.com/blog/category/chips-and-hardware/"},{"@type":"ListItem","position":3,"name":"DeepSeek and Huawei Release Open-Source Ascend AI Tools","item":"https://www.rkjdev.com/blog/deepseek-huawei-opensource-ascend-ai-tools/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What chips are supported by the new TileKernels Ascend backend?","acceptedAnswer":{"@type":"Answer","text":"The Ascend backend in TileKernels requires Huawei Ascend 950 NPUs and the CANN 9.2.0 or higher software stack."}},{"@type":"Question","name":"Is TileKernels open source?","acceptedAnswer":{"@type":"Answer","text":"Yes, DeepSeek has published TileKernels on GitHub under the open-source MIT License."}},{"@type":"Question","name":"What operators are included in the open-source release?","acceptedAnswer":{"@type":"Answer","text":"The library includes kernels for Mixture of Experts (MoE) routing, FP8/FP4 quantization, Engram gating, Manifold HyperConnections, and Rotary Position Embeddings (RoPE)."}}]}]</script>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"DeepSeek and Huawei Release Open-Source Ascend AI Tools","description":"DeepSeek and Huawei have open-sourced programming tools and TileLang support for Ascend 950 AI chips, targeting reduced reliance on Nvidia's CUDA ecosystem.","url":"https://www.rkjdev.com/blog/deepseek-huawei-opensource-ascend-ai-tools/","mainEntityOfPage":"https://www.rkjdev.com/blog/deepseek-huawei-opensource-ascend-ai-tools/","image":["https://www.rkjdev.com/blog/img/deepseek-huawei-opensource-ascend-ai-tools/og.jpg","https://www.rkjdev.com/blog/img/deepseek-huawei-opensource-ascend-ai-tools/hero.webp"],"datePublished":"2026-10-02T00:43:43.449Z","dateModified":"2026-10-02T00:43:43.449Z","articleSection":"Chips & Hardware","keywords":"DeepSeek, Huawei, Ascend 950, TileLang, AI Chips, Open Source","wordCount":461,"author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","name":"RKJDEV Labs","url":"https://www.rkjdev.com","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/apple-touch-icon.png"}},"isBasedOn":["https://github.com/deepseek-ai/TileKernels","https://github.com/tile-ai/tilelang","https://www.tomshardware.com/tech-industry/artificial-intelligence/deepseek-and-huawei-release-open-source-ascend-ai-programming-tools-to-reduce-reliance-on-nvidia-ecosystem-tools-include-compute-and-communication-libraries-as-well-as-ascend-support-for-tilelang","https://www.thedailyupside.com/technology/artificial-intelligence/deepseek-and-huawei-challenge-the-software-that-cements-nvidias-ai-dominance/"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"Chips & Hardware","item":"https://www.rkjdev.com/blog/category/chips-and-hardware/"},{"@type":"ListItem","position":3,"name":"DeepSeek and Huawei Release Open-Source Ascend AI Tools","item":"https://www.rkjdev.com/blog/deepseek-huawei-opensource-ascend-ai-tools/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What chips are supported by the new TileKernels Ascend backend?","acceptedAnswer":{"@type":"Answer","text":"The Ascend backend in TileKernels requires Huawei Ascend 950 NPUs and the CANN 9.2.0 or higher software stack."}},{"@type":"Question","name":"Is TileKernels open source?","acceptedAnswer":{"@type":"Answer","text":"Yes, DeepSeek has published TileKernels on GitHub under the open-source MIT License."}},{"@type":"Question","name":"What operators are included in the open-source release?","acceptedAnswer":{"@type":"Answer","text":"The library includes kernels for Mixture of Experts (MoE) routing, FP8/FP4 quantization, Engram gating, Manifold HyperConnections, and Rotary Position Embeddings (RoPE)."}}]}]</script>
 </head>
 <body class="post">
 <div class="progress" aria-hidden="true"><span></span></div>
 <a class="skip" href="#main">Skip to content</a>
-<div class="backdrop" aria-hidden="true"></div>
-<header class="top">
+<header class="site-head">
   <div class="wrap">
-    <a class="mark" href="/" aria-label="rkj dev, home">rkj dev</a>
+    <a class="mark" href="/">rkj dev</a>
     <nav aria-label="Site">
-      <a href="/blog/" aria-current="page">Blog</a>
-      <a href="/play/">Play</a>
       <a href="/#work">Work</a>
       <a href="/#about">About</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/play/">Play</a>
       <a href="/#contact">Contact</a>
     </nav>
   </div>
@@ -74,7 +77,7 @@
 </figure></div>
     <div class="layout wrap">
       <aside class="rail" aria-label="On this page">
-        <nav class="toc"><p>On this page</p><ol><li><a href="#what-the-new-ascend-software-toolchain-includes">What the New Ascend Software Toolchain Includes</a></li><li><a href="#hardware-requirements-and-cluster-optimization">Hardware Requirements and Cluster Optimization</a></li><li><a href="#challenging-the-cuda-ecosystem">Challenging the CUDA Ecosystem</a></li></ol></nav>
+        <nav class="toc"><p>Contents</p><ol><li><a href="#what-the-new-ascend-software-toolchain-includes">What the New Ascend Software Toolchain Includes</a></li><li><a href="#hardware-requirements-and-cluster-optimization">Hardware Requirements and Cluster Optimization</a></li><li><a href="#challenging-the-cuda-ecosystem">Challenging the CUDA Ecosystem</a></li></ol></nav>
         <div class="share">
           <p>Share</p>
           <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fdeepseek-huawei-opensource-ascend-ai-tools%2F&text=DeepSeek%20and%20Huawei%20Release%20Open-Source%20Ascend%20AI%20Tools" target="_blank" rel="noopener">X</a>
@@ -84,8 +87,8 @@
         </div>
       </aside>
       <div class="prose">
-        <section class="takeaways" aria-labelledby="tk">
-          <h2 id="tk">Key takeaways</h2>
+        <section class="inshort" aria-labelledby="tk">
+          <h2 id="tk">In short</h2>
           <ul><li>DeepSeek and Huawei open-sourced programming tools and libraries for Ascend 950 AI chips on September 30, 2026.</li><li>TileLang officially added native code generation, automatic scheduling, and synchronization for Huawei Ascend 950 NPUs.</li><li>DeepSeek updated its open-source TileKernels library with an Ascend backend, allowing the same Python APIs to run across Nvidia GPUs and Huawei NPUs.</li><li>The engineering effort included computation and communication optimization across a supernode system of 128 Ascend 950 accelerators.</li></ul>
         </section>
         <p>On September 30, 2026, Chinese artificial intelligence laboratory DeepSeek and hardware vendor Huawei released open-source programming tools and libraries designed for Huawei&#39;s Ascend AI accelerators. As reported by <a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/deepseek-and-huawei-release-open-source-ascend-ai-programming-tools-to-reduce-reliance-on-nvidia-ecosystem-tools-include-compute-and-communication-libraries-as-well-as-ascend-support-for-tilelang" target="_blank" rel="noopener">Tom&#39;s Hardware</a> via Reuters, the toolchain aims to ease development on Huawei hardware and reduce software dependence on Nvidia&#39;s CUDA ecosystem.</p>
@@ -117,14 +120,14 @@
 <p>According to <a href="https://www.thedailyupside.com/technology/artificial-intelligence/deepseek-and-huawei-challenge-the-software-that-cements-nvidias-ai-dominance/" target="_blank" rel="noopener">The Daily Upside</a>, DeepSeek stated that TileLang is designed to be simpler to program than CUDA while continuing to drive hardware near its upper operational limits. Huawei also indicated plans to release next-generation Ascend chips in early 2027, with TileLang positioned to program the upcoming hardware.</p>
 
         <section class="faq" aria-labelledby="faq-title">
-          <h2 id="faq-title">Frequently asked questions</h2>
+          <h2 id="faq-title">Questions people ask</h2>
           <details open><summary>What chips are supported by the new TileKernels Ascend backend?</summary><p>The Ascend backend in TileKernels requires Huawei Ascend 950 NPUs and the CANN 9.2.0 or higher software stack.</p></details>
 <details><summary>Is TileKernels open source?</summary><p>Yes, DeepSeek has published TileKernels on GitHub under the open-source MIT License.</p></details>
 <details><summary>What operators are included in the open-source release?</summary><p>The library includes kernels for Mixture of Experts (MoE) routing, FP8/FP4 quantization, Engram gating, Manifold HyperConnections, and Rotary Position Embeddings (RoPE).</p></details>
         </section>
         <section class="sources" id="sources" aria-labelledby="src-title">
           <h2 id="src-title">Sources</h2>
-          <ol><li><a href="https://github.com/deepseek-ai/TileKernels" target="_blank" rel="noopener">deepseek-ai/TileKernels</a><span>GitHub · Apr 22, 2026 · <b class="official">Official</b></span></li><li><a href="https://github.com/tile-ai/tilelang" target="_blank" rel="noopener">tile-ai/tilelang</a><span>GitHub · Oct 3, 2024 · <b class="official">Official</b></span></li><li><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/deepseek-and-huawei-release-open-source-ascend-ai-programming-tools-to-reduce-reliance-on-nvidia-ecosystem-tools-include-compute-and-communication-libraries-as-well-as-ascend-support-for-tilelang" target="_blank" rel="noopener">DeepSeek and Huawei release open-source Ascend AI programming tools to reduce reliance on Nvidia CUDA ecosystem &amp;mdash; tools include compute and communication libraries, as well as Ascend support fo…</a><span>Tom's Hardware · Oct 1, 2026</span></li><li><a href="https://www.thedailyupside.com/technology/artificial-intelligence/deepseek-and-huawei-challenge-the-software-that-cements-nvidias-ai-dominance/" target="_blank" rel="noopener">DeepSeek, Huawei Challenge the Software Powering Nvidia’s AI Dominance</a><span>The Daily Upside · Oct 1, 2026</span></li></ol>
+          <ol><li><a href="https://github.com/deepseek-ai/TileKernels" target="_blank" rel="noopener">deepseek-ai/TileKernels</a><span>GitHub, Apr 22, 2026, <b class="official">official source</b></span></li><li><a href="https://github.com/tile-ai/tilelang" target="_blank" rel="noopener">tile-ai/tilelang</a><span>GitHub, Oct 3, 2024, <b class="official">official source</b></span></li><li><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/deepseek-and-huawei-release-open-source-ascend-ai-programming-tools-to-reduce-reliance-on-nvidia-ecosystem-tools-include-compute-and-communication-libraries-as-well-as-ascend-support-for-tilelang" target="_blank" rel="noopener">DeepSeek and Huawei release open-source Ascend AI programming tools to reduce reliance on Nvidia CUDA ecosystem &amp;mdash; tools include compute and communication libraries, as well as Ascend support fo…</a><span>Tom's Hardware, Oct 1, 2026</span></li><li><a href="https://www.thedailyupside.com/technology/artificial-intelligence/deepseek-and-huawei-challenge-the-software-that-cements-nvidias-ai-dominance/" target="_blank" rel="noopener">DeepSeek, Huawei Challenge the Software Powering Nvidia’s AI Dominance</a><span>The Daily Upside, Oct 1, 2026</span></li></ol>
           <p class="method">How this story was made: the newsroom picked it up from Google Search, Google News and tomshardware.com, gathered the full text of the sources above, and drafted it with AI assistance. Every factual claim was then checked against those sources before publishing (33 claims checked). Illustrations marked as AI-generated are not photographs. Spotted an error? <a href="mailto:rajankrishnan909@gmail.com?subject=Correction%3A%20DeepSeek%20and%20Huawei%20Release%20Open-Source%20Ascend%20AI%20Tools">Tell us</a>.</p>
         </section>
         <p class="tags"><span>#DeepSeek</span> <span>#Huawei</span> <span>#Ascend 950</span> <span>#TileLang</span> <span>#AI Chips</span> <span>#Open Source</span></p>
@@ -134,37 +137,37 @@
   </article>
   <section class="related wrap" aria-labelledby="rel-title">
     <h2 id="rel-title">Keep reading</h2>
-    <div class="grid"><article class="card ">
-  <a class="card-link" href="/blog/nvidia-halts-rtx-5090-production-for/">
-    <div class="thumb is-ai"><img src="/blog/img/nvidia-halts-rtx-5090-production-for/hero-640.webp" srcset="/blog/img/nvidia-halts-rtx-5090-production-for/hero-640.webp 640w, /blog/img/nvidia-halts-rtx-5090-production-for/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="Illustration of robotic machinery assembling advanced semiconductor graphics processors in a cleanroom facility" loading="lazy" decoding="async"></div>
-    <div class="card-body">
-      <p class="meta"><span class="cat">Chips &amp; Hardware</span><time datetime="2026-10-11T01:39:19.011Z" data-rel>Oct 11, 2026</time></p>
+    <div class="rows"><article class="story row">
+  <a class="story-link" href="/blog/nvidia-halts-rtx-5090-production-for/">
+    <span class="pic"><img src="/blog/img/nvidia-halts-rtx-5090-production-for/hero-640.webp" srcset="/blog/img/nvidia-halts-rtx-5090-production-for/hero-640.webp 640w, /blog/img/nvidia-halts-rtx-5090-production-for/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Illustration of robotic machinery assembling advanced semiconductor graphics processors in a cleanroom facility" loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">Chips &amp; Hardware</span><time datetime="2026-10-11T01:39:19.011Z" data-rel>Oct 11, 2026</time></span>
       <h3>Nvidia Reportedly Halts RTX 5090 Production to Prioritize AI Chips</h3>
-      <p class="dek">Hardware leaks indicate Nvidia is ending allocations of GB202 silicon for GeForce RTX 5090 gaming cards to feed high-margin RTX Pro enterprise hardware.</p>
-      <p class="foot-meta">4 min read · 4 sources</p>
-    </div>
+      <span class="dek">Hardware leaks indicate Nvidia is ending allocations of GB202 silicon for GeForce RTX 5090 gaming cards to feed high-margin RTX Pro enterprise hardware.</span>
+      
+    </span>
   </a>
 </article>
-<article class="card ">
-  <a class="card-link" href="/blog/spacex-40-billion-debt-nvidia-ai-chips/">
-    <div class="thumb is-ai"><img src="/blog/img/spacex-40-billion-debt-nvidia-ai-chips/hero-640.webp" srcset="/blog/img/spacex-40-billion-debt-nvidia-ai-chips/hero-640.webp 640w, /blog/img/spacex-40-billion-debt-nvidia-ai-chips/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="Rows of data center server racks in a high-tech facility illuminated with blue indicator lights" loading="lazy" decoding="async"></div>
-    <div class="card-body">
-      <p class="meta"><span class="cat">Chips &amp; Hardware</span><time datetime="2026-10-09T01:19:04.295Z" data-rel>Oct 9, 2026</time></p>
+<article class="story row">
+  <a class="story-link" href="/blog/spacex-40-billion-debt-nvidia-ai-chips/">
+    <span class="pic"><img src="/blog/img/spacex-40-billion-debt-nvidia-ai-chips/hero-640.webp" srcset="/blog/img/spacex-40-billion-debt-nvidia-ai-chips/hero-640.webp 640w, /blog/img/spacex-40-billion-debt-nvidia-ai-chips/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Rows of data center server racks in a high-tech facility illuminated with blue indicator lights" loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">Chips &amp; Hardware</span><time datetime="2026-10-09T01:19:04.295Z" data-rel>Oct 9, 2026</time></span>
       <h3>SpaceX Seeks $40 Billion Debt Package to Fund Nvidia Rubin AI Chips</h3>
-      <p class="dek">The proposed financing package, reportedly led by Apollo Global Management, would fund hundreds of thousands of next-generation Nvidia AI accelerators.</p>
-      <p class="foot-meta">3 min read · 4 sources</p>
-    </div>
+      <span class="dek">The proposed financing package, reportedly led by Apollo Global Management, would fund hundreds of thousands of next-generation Nvidia AI accelerators.</span>
+      
+    </span>
   </a>
 </article>
-<article class="card ">
-  <a class="card-link" href="/blog/amazon-spv-financing-8-billion-nvidia-ai-chips/">
-    <div class="thumb is-ai"><img src="/blog/img/amazon-spv-financing-8-billion-nvidia-ai-chips/hero-640.webp" srcset="/blog/img/amazon-spv-financing-8-billion-nvidia-ai-chips/hero-640.webp 640w, /blog/img/amazon-spv-financing-8-billion-nvidia-ai-chips/hero.webp 1200w" sizes="(max-width: 700px) 100vw, 33vw" width="640" height="360" alt="Row of glowing server racks inside an advanced computing data center facility" loading="lazy" decoding="async"></div>
-    <div class="card-body">
-      <p class="meta"><span class="cat">Chips &amp; Hardware</span><time datetime="2026-10-03T01:37:51.037Z" data-rel>Oct 3, 2026</time></p>
+<article class="story row">
+  <a class="story-link" href="/blog/amazon-spv-financing-8-billion-nvidia-ai-chips/">
+    <span class="pic"><img src="/blog/img/amazon-spv-financing-8-billion-nvidia-ai-chips/hero-640.webp" srcset="/blog/img/amazon-spv-financing-8-billion-nvidia-ai-chips/hero-640.webp 640w, /blog/img/amazon-spv-financing-8-billion-nvidia-ai-chips/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Row of glowing server racks inside an advanced computing data center facility" loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">Chips &amp; Hardware</span><time datetime="2026-10-03T01:37:51.037Z" data-rel>Oct 3, 2026</time></span>
       <h3>Amazon Explores $8B Special Purpose Vehicle for Nvidia AI Chips</h3>
-      <p class="dek">Amazon is in talks with outside investors to shift $8 billion of Nvidia Grace Blackwell chips into an off-balance-sheet vehicle as capital spending accelerates.</p>
-      <p class="foot-meta">2 min read · 2 sources</p>
-    </div>
+      <span class="dek">Amazon is in talks with outside investors to shift $8 billion of Nvidia Grace Blackwell chips into an off-balance-sheet vehicle as capital spending accelerates.</span>
+      
+    </span>
   </a>
 </article></div>
   </section>
@@ -173,25 +176,24 @@
     <a class="next" href="/blog/openai-synopsys-gpt-synopsys-chip-design/"><span>Older</span>OpenAI and Synopsys Partner to Build GPT-Synopsys for Chip Design</a>
   </nav>
 </main>
-<footer class="foot wrap">
-  <div>
-    <p class="foot-mark">rkj dev <span>Blog</span></p>
-    <p>Fast, source-checked coverage of new AI models, open-source releases, audio and video AI, and the tech and science breakthroughs of the day.</p>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="biz">
+      <p class="biz-name">RKJDEV Labs</p>
+      <p>© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan</p>
+      <p>Udyam registered MSME, India, <span class="nowrap">UDYAM-BR-26-0254766</span></p>
+      <p><a href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a></p>
+    </div>
+    <nav aria-label="Site">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/blog/feed.xml">RSS</a>
+    </nav>
+    <p class="fine">Stories are researched from the linked sources, written with AI assistance and checked claim by claim against those sources before publishing. AI-generated illustrations are labeled.</p>
   </div>
-  <nav aria-label="Blog">
-    <a href="/blog/">Latest</a>
-    <a href="/blog/category/ai-models/">AI Models</a>
-    <a href="/blog/category/open-source/">Open Source</a>
-    <a href="/blog/category/research/">Research</a>
-    <a href="/blog/category/audio-and-video/">Audio &amp; Video</a>
-    <a href="/blog/category/agents-and-tools/">Agents &amp; Tools</a>
-    <a href="/blog/category/industry/">Industry</a>
-    <a href="/blog/feed.xml">RSS</a>
-    <a href="/">About rkj dev</a>
-    <a href="/privacy/">Privacy</a>
-  </nav>
-  <p class="fine">© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan. Articles are researched from the linked sources, written with AI assistance and checked claim by claim against those sources. AI-generated illustrations are labeled.</p>
 </footer>
-<script src="/blog/blog.js?v=210b69de" defer></script>
+<script src="/blog/blog.js?v=45c7aef4" defer></script>
 </body>
 </html>
