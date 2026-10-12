@@ -1,0 +1,170 @@
+{
+ "slug": "microsoft-launches-decision-1-model",
+ "title": "Microsoft Launches Decision-1 AI Model for Fast Structured Decisions",
+ "seoTitle": "Microsoft Launches Decision-1 for Fast AI Decisions",
+ "description": "Microsoft has released Decision-1, a 9B model built on Qwen3.5 designed for fast, low-cost routing, classification, and structured automated workflows.",
+ "dek": "Built on Alibaba's Qwen3.5-9B, the text-only model scores predefined options at $0.042 per million input tokens with zero output fees.",
+ "category": "AI Models",
+ "tags": [
+  "Microsoft",
+  "Decision Models",
+  "Qwen",
+  "AI Infrastructure",
+  "OpenRouter"
+ ],
+ "keyTakeaways": [
+  "Microsoft launched Microsoft-Decision-1, a 9-billion-parameter model designed exclusively for structured choices like routing, classification, and verification.",
+  "The model is post-trained on Alibaba's open-weight Qwen3.5-9B, with Microsoft planning to rebase future iterations on Microsoft AI and OpenAI foundations.",
+  "Microsoft reports 83.5% accuracy across 36 blind benchmarks, clocking in 35 times faster than GPT-6 Sol and 2.5 times faster than H2O-Lightning-4B.",
+  "Available in preview on Microsoft Foundry and OpenRouter, the API costs $0.042 per million input tokens with free output tokens."
+ ],
+ "body": "On October 9, 2026, Microsoft introduced [Microsoft-Decision-1](https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-microsoft-decision-1-in-microsoft-foundry-for-decision-and-classific/4562742), a 9-billion-parameter model tailored specifically for rapid, structured decision-making rather than conversational text generation. Built by post-training Alibaba's open-weight Qwen3.5-9B, the model targets high-volume operational tasks such as routing, data classification, and agent guardrails. By returning calibrated probability distributions over predefined options instead of generating open-ended prose, Microsoft Decision-1 aims to reduce inference latency and computational expenses in multi-step software pipelines.\n\nTraditional large language models are engineered to reason in paragraphs or synthesize documents, but intermediate steps in automated workflows often require simple categorical determinations. Microsoft says that running every routing choice or intent check through a general-purpose generative model introduces unneeded latency and token overhead. The release places Microsoft directly into an emerging segment of purpose-built decision models, competing alongside releases from startups like Jev, open-source efforts from Cloudflare, and Amazon's Strands Decider 2B.\n\n[[FIG1]]\n\n## How Microsoft Decision-1 Operates in Workflows\n\nUnlike standard chatbots, Microsoft-Decision-1 is strictly text-only and does not translate, converse, summarize, or draft responses, according to the [Microsoft Foundry model catalog](https://ai.azure.com/catalog/models/Microsoft-Decision-1). When queried, an application sends a context payload along with a closed set of choices, such as support categories or workflow directives. The model evaluates the input in a single pass and returns a calibrated confidence score for each option, allowing developers to set programmatic thresholds for automated actions or human escalation.\n\nMicrosoft outlines several core deployment scenarios for the system, including:\n\n* **Model and Tool Routing:** Selecting the appropriate agent, API endpoint, or downstream model based on an incoming query.\n* **Content Classification:** Sorting inputs into predefined categories such as customer intents, technical bug types, or billing questions.\n* **Evaluation and Verification:** Judging whether an AI-generated draft meets specific rubric criteria or is grounded in provided evidence.\n* **Agent Guardrails:** Validating proposed tool calls or workflow actions before an autonomous agent executes them.\n\nMicrosoft's documentation emphasizes explicit guardrails for the model itself: it is not intended or evaluated to act as the sole automated decision-maker in consequential determinations regarding people, such as employment, healthcare, housing, credit, or legal rights.\n\n## Benchmark Performance and Internal Microsoft Testing\n\nAccording to an announcement on [Microsoft's Command Line blog](https://commandline.microsoft.com/microsoft-decision-1-model-foundry/), Microsoft-Decision-1 achieved the highest accuracy in an internal evaluation spanning 36 benchmarks and nearly 150,000 blind questions. Reports reviewing the company's test results put the model's average accuracy across those evaluations at 83.5 percent, registering an average latency of roughly 85 milliseconds.\n\nOn inference speed, Microsoft claims the model ran 2.5 times faster than its runner-up, H2O-Lightning-4B v1.1, and 35 times faster than OpenAI's GPT-6 Sol. Some secondary reporting from [shattered.io](https://shattered.io/microsoft-decision-1-qwen3-5-9b-model-2026/) also cited comparisons against Quyet-1.0-Large, though official Microsoft documentation focused on H2O-Lightning-4B and GPT-6 Sol. In adversarial stability evaluations, Microsoft reported the model was perturbation-stable 98.7 percent of the time, changing answers in only 1.3 percent of tested input variations. However, as noted by [daily.dev](https://daily.dev/posts/microsoft-decision-1-a-cheap-text-only-decision-model-built-on-qwen-uqzhbc7p7), independent stress testing using adversarial suites like JevOut has not yet been conducted.\n\n[[FIG2]]\n\nMicrosoft Chief Executive Officer Satya Nadella stated that the company is already running the model internally across incident response, quality control, and scientific discovery. Within Microsoft's gaming division, Xbox Research applied Decision-1 to categorize more than 10,000 open-ended player feedback submissions into researcher-defined categories. The team reported classification quality competitive with GPT-5 while operating 80 to 100 times faster. Other internal groups have tested the model to grade Copilot response quality and guide adaptive replanning inside Microsoft Discovery.\n\n## Qwen Foundation and Future Rebasing Plans\n\nThe choice of Alibaba's Qwen3.5-9B as the underlying architecture highlights Microsoft's pragmatism in shipping small, specialized models quickly. Rather than waiting to adapt its proprietary frontier models or OpenAI's foundation models, Microsoft opted to fine-tune an established 9B open-weight base.\n\nMicrosoft has made clear that this foundation is transitional. In its launch materials, the company stated that future iterations will be rebased onto models developed by Microsoft AI (MAI) as well as OpenAI. While the base weights from Alibaba are open source, weights for Decision-1 itself are not being distributed, based on reporting from Data Studios cited by [shattered.io](https://shattered.io/microsoft-decision-1-qwen3-5-9b-model-2026/). Developers must access the model via hosted cloud infrastructure.\n\n## Pricing and Availability\n\nMicrosoft-Decision-1 is currently available in public preview within the Microsoft Foundry Models Catalog, the Foundry Playground, and on OpenRouter according to [Dealroom.co reporting](https://dealroom.co/news/161417-microsoft-launches-microsoft-decision-1-a-fast-decision-scoring-model-bu/), with OpenRouter listing the model under the identifier `microsoft/microsoft-decision-1`.\n\nPricing in Microsoft Foundry's US and EU data zones is set at $0.042 per million input tokens. Because the model outputs discrete probability scores and classification labels rather than generated text sequences, output tokens are free of charge. This pricing matches the rate set by competing decision startup Jev, positioning the model as an economical option for high-volume control loops where generative token billing would otherwise compound.",
+ "faq": [
+  {
+   "q": "What is Microsoft Decision-1 used for?",
+   "a": "Microsoft Decision-1 is designed for high-speed, structured choices such as request routing, intent classification, AI response evaluation, and agent workflow control."
+  },
+  {
+   "q": "Can Microsoft Decision-1 generate paragraphs or write code?",
+   "a": "No. Decision-1 is a text-only decision model that evaluates supplied inputs against a fixed set of predefined options, outputting calibrated probability scores rather than open-ended text."
+  },
+  {
+   "q": "What model architecture is Microsoft Decision-1 built on?",
+   "a": "The model was post-trained on Alibaba's open-weight Qwen3.5-9B. Microsoft plans to rebase future iterations on Microsoft AI (MAI) and OpenAI models."
+  },
+  {
+   "q": "How much does Microsoft Decision-1 cost to run?",
+   "a": "Usage costs $0.042 per million input tokens in Microsoft Foundry and OpenRouter, with no charge for output tokens."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern data server room with illuminated fiber-optic channels dividing incoming data streams into precise, glowing directional pathways. Technical engineers work in the background beside glass server racks.",
+  "alt": "Illustration of illuminated data pathways splitting into structured routing lines inside a server facility",
+  "caption": "Illustration: Decision models are designed to rapidly classify and route data streams across enterprise software pipelines.",
+  "src": "img/microsoft-launches-decision-1-model/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 101502,
+  "small": "img/microsoft-launches-decision-1-model/hero-640.webp",
+  "og": "img/microsoft-launches-decision-1-model/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/microsoft-launches-decision-1-model/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A software architect standing in an engineering lab looking at a multi-tiered holographic flow diagram showing fast triage pathways branching off into distinct automated channels.",
+   "alt": "Illustration of an engineer reviewing branching workflow decisions on a glowing technical diagram",
+   "caption": "Illustration: Microsoft Decision-1 operates as an automated control layer, categorizing incoming tasks before invoking larger models.",
+   "slot": "FIG1",
+   "src": "img/microsoft-launches-decision-1-model/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 41294,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "Two researchers in a modern computing facility comparing system benchmark monitors displaying fast real-time throughput metrics and low latency readouts.",
+   "alt": "Illustration of technical researchers analyzing system latency and accuracy metrics",
+   "caption": "Illustration: Microsoft's internal evaluations showed significant latency reductions over general-purpose language models.",
+   "slot": "FIG2",
+   "src": "img/microsoft-launches-decision-1-model/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 32540,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://commandline.microsoft.com/microsoft-decision-1-model-foundry/",
+   "title": "Introducing Microsoft-Decision-1, our model for fast decision-making",
+   "site": "Command Line",
+   "published": 1791596151000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-microsoft-decision-1-in-microsoft-foundry-for-decision-and-classific/4562742",
+   "title": "Introducing Microsoft-Decision-1 in Microsoft Foundry for decision and classification workloads",
+   "site": "TECHCOMMUNITY.MICROSOFT.COM",
+   "published": 1791571254000,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://the-decoder.com/microsofts-decision-1-model-enters-the-fast-growing-ai-decision-model-race/",
+   "title": "Microsoft's Decision-1 model enters the fast-growing AI decision model race",
+   "site": "The Decoder",
+   "published": 1791644253000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://ai.azure.com/catalog/models/Microsoft-Decision-1",
+   "title": "Microsoft-Decision-1 | Model Catalog | Microsoft Foundry",
+   "site": "Microsoft Foundry",
+   "published": null,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://shattered.io/microsoft-decision-1-qwen3-5-9b-model-2026/",
+   "title": "Microsoft Decision-1: 9B Qwen Model Launch Explained",
+   "site": "shattered.io",
+   "published": 1791714236000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://dealroom.co/news/161417-microsoft-launches-microsoft-decision-1-a-fast-decision-scoring-model-bu/",
+   "title": "Microsoft launches Microsoft-Decision-1, a fast decision-scoring model built on Alibaba's Qwen",
+   "site": "Dealroom.co",
+   "published": 1791630615000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://daily.dev/posts/microsoft-decision-1-a-cheap-text-only-decision-model-built-on-qwen-uqzhbc7p7",
+   "title": "Microsoft-Decision-1: a cheap, text-only decision model built on Qwen",
+   "site": "daily.dev",
+   "published": 1791645178397,
+   "official": false
+  }
+ ],
+ "publishedAt": 1791767304310,
+ "updatedAt": 1791767304310,
+ "foundVia": "Google News, the-decoder.com and Google Search",
+ "check": {
+  "claims": 39,
+  "score": 10
+ },
+ "story": {
+  "id": "Pea34f478",
+  "score": 84,
+  "items": [
+   "https://news.google.com/rss/articles/CBMikAFBVV95cUxNOGszcU9nbXgyR0dKOW5hMXJWaVRINE9rUDlFYTRUS1lXS0F2V19PRWxYd2ozUk54ckZrdE1KMmpuWVRNcnF6U3l1RE1UNnB1U1hvaVpUQTIyUFRXQjhMVGx5cEtabWRPWFo3eGZ5QjNrZ0g0Vi0xZjVVaFRlYlZla18xaXppTDhJZGJhbkhTY3Q?oc=5",
+   "https://news.google.com/rss/articles/CBMihAFBVV95cUxNRDhyeTJrSnh3SW1wMkFhUnpSZ0pLa2NuUzdMdV9nTWZhTVJMOUJXalpsdmRJZEVZZG52Rm9xRUdrdFFDVUlGWEdtal9aYi0tR3FrR2lLLWVwOXpmUmhhbWd3d0paRFJTZ09faGw5VDc1eEZldFBfNDRHT0JSMFhkLXVsZUo?oc=5",
+   "https://news.google.com/rss/articles/CBMipgFBVV95cUxQLU8wd3dlRTdLb0hTTE1ZOERWRzlwOWRBLVNhbVlwcVNzeUhRVkhBSVozUFlpV1dFMVV2R25uMEhVbUh2M2RIRWEyNnR4d2RqME96Mk82QS05QnhuS05GOVd3cUFpdUJkdGhHbHpsUzdtLWp3ZmRSMUtYbk5fVUt6UUJFYmg4Q0Y0eDY4cjhJMjdYWGZwTGgtRFVpY01WTW5KZV9JWXZR?oc=5",
+   "https://news.google.com/rss/articles/CBMidkFVX3lxTE1HSGJ3WjFtd3JlT1ZfNHM2cy1pdzhoUHBlOXNDZnpabTBnQW5UMEM4WE94bXM4eGE3SDkyMl9kckZvMWlnMkxMR1YzTEo0VkwzS3NXb0NjVkc4SjdoSDBJeC1Ydkc4U2NUYmthR29tMUZkU0QycEE?oc=5",
+   "https://news.google.com/rss/articles/CBMingFBVV95cUxNbkxyRVctZ3dpTGJvTVcxUVlHRTJITDd6NkM2R3VQMHVYYlZhbkpqQnMzX0ltZFlSNDFTSUpjQmg2MmxvcEItTE5rcFJHUzJLS192cWkxODg2ZkhLTTdTX1lvZ19KdGlCNGEzLU1NU0EtY3FpMmhhR0R3Qmw5UloyX3lWbTRTODVOX01ueml6X25fTGJsa1pVcHZSZnZwZw?oc=5",
+   "https://news.google.com/rss/articles/CBMihwFBVV95cUxOWDJJSTdGVFdlZXFlcXhHYkJ1eDBPVjVLSHQ4NDlxNnZtNWVNZjVzdUhqVklhVU1uUjJjaXljbXhTWVRCWm01OHBkR0hRZk9Vek5HYnZ6RWxpXy1KdzhBSVVhaVJ5MUpGTExmZ1VtU0hscWd5UncyaHdMWkpIcnl1d29GdEUweGc?oc=5",
+   "https://the-decoder.com/microsofts-decision-1-model-enters-the-fast-growing-ai-decision-model-race/",
+   "https://aitoolsrecap.com/Blog/ai-news-october-11-2026",
+   "https://www.techmeme.com/261011/p2#a261011p2",
+   "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9XTWNXZllYSlI2eEV3QkZOZ0R2SFlYNVlvRHl6S0VsMUJTOWs0ZlV2RTBSbk81eTl4cnBOVHBtQ1JNU0J1VjV4SkcySmI3X05vb0pkM0JqQXhQaDM2NGdwdHVn?oc=5",
+   "https://news.google.com/rss/articles/CBMipgFBVV95cUxPT215Y3ZDSi0yalFKQ0dPSVM0M2V4bGRrUUozX1Bfd1c4OVYzdkNJSHJQbU5TOW84UnJDOEpuSUlQdy0tbWZVTEdLWFZza29sTk1zQm5KamQtdVFYcldGSDhGWlpsTDNjR2JBS0NFNTgzTDFjVjRHb3poWmd6TC1wXzhHSzIxYUw2T3lpRzFOUHFBZFMzNnZoWldfWU5iSEoyblBuZ3RR?oc=5",
+   "https://news.google.com/rss/articles/CBMickFVX3lxTFBJWVVOOHQ2RU1aenVfeHYxZ05LcVVMM0Q4dTA1OW51dkRjajJrTzdmNllEMHVxNFdNOGdaZ193T2hxZmJURUNSZWtsZHFoc3NTc1JTMTNIcF9uemlEQk85M3JyaEEwUW8zQnBLRmJOVS1SZw?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}

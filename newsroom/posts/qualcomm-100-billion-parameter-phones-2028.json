@@ -1,0 +1,134 @@
+{
+ "slug": "qualcomm-100-billion-parameter-phones-2028",
+ "title": "Qualcomm CEO Says AI Labs Want 100B-Parameter Phones by 2028",
+ "seoTitle": "Qualcomm: AI Labs Target 100B Models on Phones by 2028",
+ "description": "Qualcomm CEO Cristiano Amon reveals frontier AI firms are pushing for continuous 100-billion-parameter on-device models by 2028 despite acute memory limits.",
+ "dek": "Leading AI labs want smartphones running 100-billion-parameter models continuously by 2028, tripling current mobile silicon capabilities amid tight DRAM supplies.",
+ "category": "Chips & Hardware",
+ "tags": [
+  "Qualcomm",
+  "Cristiano Amon",
+  "Snapdragon",
+  "Edge AI",
+  "Semiconductors",
+  "Smartphones"
+ ],
+ "keyTakeaways": [
+  "Frontier artificial intelligence labs are pushing Qualcomm to support continuous, all-day execution of 100-billion-parameter models on smartphones by 2028.",
+  "Current 2nm flagships max out at running mixture-of-experts models above 30 billion parameters, requiring a more than threefold jump in on-device capacity.",
+  "Hardware and supply bottlenecks loom large, as running a 4-bit quantized 100B model would demand at least 50GB of RAM amid an ongoing mobile DRAM crunch."
+ ],
+ "body": "Frontier artificial intelligence companies are asking mobile chipmakers to design smartphones capable of running 100-billion-parameter models continuously by 2028, Qualcomm Chief Executive Officer Cristiano Amon disclosed in an interview published on October 8, 2026. The target represents more than three times the capacity of current flagship silicon, signaling an aggressive push by AI developers to transition autonomous software agents out of remote data centers and directly onto consumer handsets.\n\nSpeaking with journalist Alex Heath on the Sources podcast during Qualcomm's Snapdragon Summit in Maui, Hawaii, Amon explained that leading labs want these massive models resident in memory throughout the day rather than spun up for isolated prompts. Amon declined to identify the specific companies making the demand, but he emphasized that the request originates from model developers rather than internal hardware marketing roadmaps, according to reporting by [Startup Fortune](https://startupfortune.com/qualcomms-ceo-says-ai-firms-want-phones-running-100-billion-parameter-models-by-2028/).\n\n[[FIG1]]\n\n## The Leap Beyond 30-Billion-Parameter Mobile Silicon\n\nThe requested 100-billion-parameter benchmark marks a sharp escalation beyond what current cutting-edge mobile processors can deliver. On September 22, 2026, Qualcomm unveiled its latest flagship platforms, the Snapdragon 8 Elite Gen 6 and the Snapdragon 8 Elite Extreme Gen 6, both manufactured on a 2nm process node. These chips are slated to power upcoming flagship devices from brands including Honor, iQOO, Motorola, OnePlus, OPPO, Redmi, RedMagic, vivo, and Xiaomi.\n\nAccording to [Techtember](https://techtember.news/article/qualcomm-amon-100b-phones-2028/), the higher-end Snapdragon 8 Elite Extreme Gen 6 features a redesigned Hexagon NPU equipped with an Element Accelerator and expanded shared memory. That architecture allows the system to process mixture-of-experts (MoE) models exceeding 30 billion parameters locally, supporting a context window of approximately 32,000 tokens.\n\nTripling that ceiling to 100 billion parameters while running the software continuously creates unprecedented engineering hurdles. Unlike standard chatbot interfaces that execute on demand and shut down, an always-on agent must remain active in background memory to observe device activity, reason across context, and execute tasks without draining batteries or causing thermal throttling.\n\n## Memory Constraints and Hardware Architecture Hurdles\n\nMeeting the 2028 target faces severe physical limitations around memory capacity and cost. As technical analysis from [Wccftech](https://wccftech.com/qualcomm-ceo-smartphones-100b-llms-2028-dram-supply-cost/) points out, running a 100-billion-parameter model with standard 4-bit quantization requires at least 50GB of RAM simply to store the model weights, alongside extra headroom for the operating system, running applications, and context cache. Even an aggressively compressed 2-bit model would consume roughly 25GB of dedicated system memory.\n\nThese memory footprints directly collide with mobile supply chain realities. While some Android flagships featured 24GB of LPDDR5X memory in prior cycles, soaring component prices and scarce dynamic random-access memory (DRAM) supplies have pushed manufacturers back toward or below 16GB configurations. Apple and Qualcomm have somewhat addressed this problem through a shift in chipset packaging with the A20 Pro and Snapdragon 8 Elite Extreme Gen 6, but the actual memory bottleneck will continue to exist.\n\n[[FIG2]]\n\nTo bypass these capacity ceilings, engineers are exploring sparse mixture-of-experts architectures with expert offloading. Under this setup, only active expert parameters reside in fast DRAM while inactive components are streamed on demand from onboard flash storage like UFS or NVMe, though flash read speeds remain significantly slower than system memory. Model distillation also remains an alternative, where compressed 20-billion to 30-billion parameter models attempt to approximate 100-billion-parameter reasoning.\n\nAmon acknowledged a temporary constraint on smartphone memory supplies, while Startup Fortune reported that the memory suppliers and advanced-node capacity phone chipmakers rely on are also under pressure from Nvidia, AMD, and hyperscalers buying parts for data-center AI servers. However, Amon argued that this supply squeeze will compel chip designers to focus on memory-efficient silicon architectures rather than relying entirely on expanding physical DRAM pools.\n\n## The Agentic Shift and Hardware Beyond Handsets\n\nAmon framed the pressure from AI labs as the foundation of an upcoming device replacement cycle driven by agentic software. As reported by [Stocktwits](https://stocktwits.com/news-articles/markets/equity/qcom-cristiano-amon-ai-companies-100b-parameter-models-2028/cZx56UPRBFR), Amon predicted an impending \"battle of the agents,\" where consumer AI moves beyond separate chatbot applications into deeply integrated platform services that use device data, sensor feeds, and installed applications to execute tasks on behalf of users.\n\nLocal processing offers critical latency and privacy advantages for software handling sensitive personal context, Amon argued. Rather than replacing cloud compute entirely, he envisions a hybrid setup where personal devices handle immediate contextual operations. \"If you pull up your phone and it takes time for the agent to do certain things for you, then you're going to do it yourself,\" Amon noted, calling smartphones the largest development platform ever created.\n\nThis push toward resident artificial intelligence also extends past smartphones. Qualcomm already supplies silicon for Meta's smart glasses, and Amon indicated he is particularly bullish on glasses as wearables enter what he described as an \"iPod moment.\" In the broader supply chain, analyst Ming-Chi Kuo previously reported that OpenAI has explored an AI-agent phone program involving Qualcomm and MediaTek, pointing to possible mass production in the first half of 2027 with projected shipments reaching roughly 30 million units across 2027 and 2028.\n\nQualcomm has made no binding product commitments tied to the 2028 timeline, with Amon presenting the 100-billion-parameter mark as an industry-driven request rather than an official hardware release date. Whether silicon designers can reconcile massive model architectures with mobile thermal envelopes and constrained memory markets remains the central unanswered question heading toward 2028.",
+ "faq": [
+  {
+   "q": "Why do AI companies want 100-billion-parameter models running locally on phones?",
+   "a": "Developers are shifting toward agentic software that operates continuously in the background, reasoning over personal context, sensors, and installed apps. Processing these workloads directly on-device lowers response latency and keeps personal information local."
+  },
+  {
+   "q": "What is the primary technical barrier to running 100B models on mobile devices?",
+   "a": "System memory is the chief bottleneck. A 4-bit quantized 100-billion-parameter model demands at least 50GB of RAM just for model weights, far exceeding current smartphone memory ceilings amid high component prices and tight DRAM supplies driven by data-center demand."
+  },
+  {
+   "q": "What can Qualcomm's newest 2026 flagship silicon handle today?",
+   "a": "Qualcomm's 2nm Snapdragon 8 Elite Extreme Gen 6 platform features a Hexagon NPU capable of running mixture-of-experts models exceeding 30 billion parameters on-device with a context window of approximately 32,000 tokens."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern electronics engineering cleanroom where a semiconductor specialist in protective gear inspects an advanced 2-nanometer system-on-chip wafer glowing under precision laboratory lighting, surrounded by microscopic circuit diagrams and robotic fabrication tools.",
+  "alt": "An engineer inspecting a high-density semiconductor wafer in a cleanroom environment.",
+  "caption": "Illustration: Advanced mobile silicon development aimed at expanding neural processing capabilities.",
+  "src": "img/qualcomm-100-billion-parameter-phones-2028/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 58154,
+  "small": "img/qualcomm-100-billion-parameter-phones-2028/hero-640.webp",
+  "og": "img/qualcomm-100-billion-parameter-phones-2028/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/qualcomm-100-billion-parameter-phones-2028/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A technology executive speaking into a broadcast microphone on a modern conference stage with presentation displays in the background showing abstract neural network diagrams.",
+   "alt": "A technology executive speaking at a conference presentation.",
+   "caption": "Illustration: Industry leadership outlining hardware requirements for next-generation mobile agents.",
+   "slot": "FIG1",
+   "src": "img/qualcomm-100-billion-parameter-phones-2028/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 32060,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A conceptual technical visualization showing the internal architecture of a smartphone motherboard, emphasizing densely stacked memory chips and a central neural processing unit dissipating heat.",
+   "alt": "A technical schematic showing mobile processor and DRAM packaging on a smartphone logic board.",
+   "caption": "Illustration: Dense DRAM packaging and high-bandwidth interconnects required for local AI inference.",
+   "slot": "FIG2",
+   "src": "img/qualcomm-100-billion-parameter-phones-2028/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 58550,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://startupfortune.com/qualcomms-ceo-says-ai-firms-want-phones-running-100-billion-parameter-models-by-2028/",
+   "title": "Qualcomm's CEO says AI firms want phones running 100-billion-parameter models by 2028",
+   "site": "Startup Fortune",
+   "published": 1791695416000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://wccftech.com/qualcomm-ceo-smartphones-100b-llms-2028-dram-supply-cost/",
+   "title": "Qualcomm CEO Hints That Smartphones Capable Of Running 100B LLMs Could Arrive By 2028, Without Addressing Two Elephants In The Room; DRAM Supply & Cost",
+   "site": "Wccftech",
+   "published": 1791719823000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://techtember.news/article/qualcomm-amon-100b-phones-2028/",
+   "title": "Qualcomm CEO Says AI Firms Want Phones Running 100-Billion-Parameter Models by 2028",
+   "site": "Techtember",
+   "published": 1791702600000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://stocktwits.com/news-articles/markets/equity/qcom-cristiano-amon-ai-companies-100b-parameter-models-2028/cZx56UPRBFR",
+   "title": "QCOM CEO Cristiano Amon Says AI Companies Want Phones That Can Run 100B Parameter Models By 2028 — 'There's Going To Be A Battle Of The Agents'",
+   "site": "Stocktwits",
+   "published": 1791716064000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1791767861801,
+ "updatedAt": 1791767861801,
+ "foundVia": "Reddit",
+ "check": {
+  "claims": 46,
+  "score": 10
+ },
+ "story": {
+  "id": "P2eec5d0d",
+  "score": 81,
+  "items": [
+   "https://www.reddit.com/r/singularity/comments/1x2z573/qualcomm_ceo_frontier_ai_companies_want_phones/",
+   "https://www.reddit.com/r/accelerate/comments/1x2zcm6/qualcomm_ceo_frontier_ai_companies_want_phones/",
+   "https://tech.yahoo.com/ai/apple-intelligence/articles/qcom-ceo-cristiano-amon-says-105424604.html",
+   "https://www.reddit.com/r/singularity/comments/1x3knjc/qualcomm_ceo_reveals_al_companies_want_phones/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
