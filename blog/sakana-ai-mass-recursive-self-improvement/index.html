@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sakana AI Demonstrates Recursive Self-Improvement | rkj dev</title>
+<meta name="description" content="Sakana AI introduces Multi-Agent Self-Supervision (MASS), using collaborative agent workflows to self-train a shared model across recursive iterations.">
+<link rel="canonical" href="https://www.rkjdev.com/blog/sakana-ai-mass-recursive-self-improvement/">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#110b14">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:site_name" content="rkj dev Blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sakana AI Demonstrates Recursive Self-Improvement | rkj dev">
+<meta property="og:description" content="Sakana AI introduces Multi-Agent Self-Supervision (MASS), using collaborative agent workflows to self-train a shared model across recursive iterations.">
+<meta property="og:url" content="https://www.rkjdev.com/blog/sakana-ai-mass-recursive-self-improvement/">
+<meta property="og:image" content="https://www.rkjdev.com/blog/img/sakana-ai-mass-recursive-self-improvement/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://www.rkjdev.com/blog/img/sakana-ai-mass-recursive-self-improvement/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sakana AI Demonstrates Recursive Self-Improvement | rkj dev">
+<meta name="twitter:description" content="Sakana AI introduces Multi-Agent Self-Supervision (MASS), using collaborative agent workflows to self-train a shared model across recursive iterations.">
+<link rel="alternate" type="application/rss+xml" title="rkj dev Blog" href="/blog/feed.xml">
+<link rel="alternate" type="application/feed+json" title="rkj dev Blog" href="/blog/feed.json">
+<link rel="icon" href="/favicon.svg?v=bdff7dc5" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,40;1,9..144,400..600,40&family=Schibsted+Grotesk:ital,wght@0,400..600;1,400..600&display=swap">
+<link rel="stylesheet" href="/site.css?v=e85724ed">
+<link rel="stylesheet" href="/blog/blog.css?v=7ad332ef">
+<meta property="article:published_time" content="2026-10-12T02:10:24.276Z">
+<meta property="article:modified_time" content="2026-10-12T02:10:24.276Z">
+<meta property="article:section" content="Research">
+<meta property="article:tag" content="Sakana AI">
+<meta property="article:tag" content="Recursive Self-Improvement">
+<meta property="article:tag" content="Multi-Agent Systems">
+<meta property="article:tag" content="Machine Learning">
+<meta property="article:tag" content="Qwen">
+<link rel="preload" as="image" href="/blog/img/sakana-ai-mass-recursive-self-improvement/hero.webp" imagesrcset="/blog/img/sakana-ai-mass-recursive-self-improvement/hero-640.webp 640w, /blog/img/sakana-ai-mass-recursive-self-improvement/hero.webp 1200w" imagesizes="(max-width: 760px) 100vw, 1200px">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"Sakana AI Demonstrates Recursive Self-Improvement With MASS","description":"Sakana AI introduces Multi-Agent Self-Supervision (MASS), using collaborative agent workflows to self-train a shared model across recursive iterations.","url":"https://www.rkjdev.com/blog/sakana-ai-mass-recursive-self-improvement/","mainEntityOfPage":"https://www.rkjdev.com/blog/sakana-ai-mass-recursive-self-improvement/","image":["https://www.rkjdev.com/blog/img/sakana-ai-mass-recursive-self-improvement/og.jpg","https://www.rkjdev.com/blog/img/sakana-ai-mass-recursive-self-improvement/hero.webp"],"datePublished":"2026-10-12T02:10:24.276Z","dateModified":"2026-10-12T02:10:24.276Z","articleSection":"Research","keywords":"Sakana AI, Recursive Self-Improvement, Multi-Agent Systems, Machine Learning, Qwen","wordCount":726,"author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","name":"RKJDEV Labs","url":"https://www.rkjdev.com","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/apple-touch-icon.png"}},"isBasedOn":["https://pub.sakana.ai/mass/","https://superpowerdaily.com/posts/sakana-ai-reports-research-gains-from-self-trained-ai-teams-but-coding-efficiency-slips","https://daily.dev/posts/sakana-ai-s-mass-a-model-organizes-copies-of-itself-into-teams-then-trains-on-what-worked-gqk05njis"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"Research","item":"https://www.rkjdev.com/blog/category/research/"},{"@type":"ListItem","position":3,"name":"Sakana AI Demonstrates Recursive Self-Improvement With MASS","item":"https://www.rkjdev.com/blog/sakana-ai-mass-recursive-self-improvement/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is homogeneous recursive self-improvement in MASS?","acceptedAnswer":{"@type":"Answer","text":"Homogeneous recursive self-improvement refers to a system setup where a single shared language model fulfills every role in the learning loop: acting as the task-solving agent, the workflow optimizer, and the evaluator."}},{"@type":"Question","name":"Which base model did Sakana AI use for the experiments?","acceptedAnswer":{"@type":"Answer","text":"The team ran two cycles of MASS starting from the open-weights Qwen3.6-27B model in the qwen-code coding-agent environment."}},{"@type":"Question","name":"Why did performance drop on coding benchmarks like SWE-bench?","acceptedAnswer":{"@type":"Answer","text":"The training set consisted exclusively of research tasks across finance, robotics, and pharmacy. Without dedicated software engineering tasks in the self-supervision loop, score per output token fell to 0.94x on SWE-bench Verified and 0.96x on Terminal-Bench 2.0."}}]}]</script>
+</head>
+<body class="post">
+<div class="progress" aria-hidden="true"><span></span></div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="mark" href="/">rkj dev</a>
+    <nav aria-label="Site">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <article class="article">
+    <header class="post-head wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/category/research/">Research</a></nav>
+      <h1>Sakana AI Demonstrates Recursive Self-Improvement With MASS</h1>
+      <p class="standfirst">Researchers from Sakana AI and UC Berkeley used multi-agent workflows to let a single model train, evaluate, and optimize itself across multiple generations.</p>
+      <div class="byline">
+        <span class="by">rkj dev newsroom</span>
+        <span><time datetime="2026-10-12T02:10:24.276Z" class="abs" data-rel>Oct 12, 2026</time></span>
+        <span>3 min read</span>
+        <a href="#sources">3 sources, fact-checked</a>
+      </div>
+    </header>
+    <div class="hero-wrap wrap"><figure class="hero-fig is-ai">
+  <div class="img"><img src="/blog/img/sakana-ai-mass-recursive-self-improvement/hero.webp" srcset="/blog/img/sakana-ai-mass-recursive-self-improvement/hero-640.webp 640w, /blog/img/sakana-ai-mass-recursive-self-improvement/hero.webp 1200w" sizes="(max-width: 760px) 100vw, 1200px" width="1200" height="675" alt="Illustration of autonomous digital agents collaborating to plan and inspect workflows." fetchpriority="high" decoding="async"></div>
+  <figcaption><span>Illustration: Autonomous agents collaborate in a simulated research environment to plan workflows and evaluate outcomes.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure></div>
+    <div class="layout wrap">
+      <aside class="rail" aria-label="On this page">
+        <nav class="toc"><p>Contents</p><ol><li><a href="#the-dual-loop-mechanism-of-mass">The Dual-Loop Mechanism of MASS</a></li><li><a href="#synthetic-benchmark-performance-and-transfer-gains">Synthetic Benchmark Performance and Transfer Gains</a></li><li><a href="#role-generalization-and-coding-limitations">Role Generalization and Coding Limitations</a></li></ol></nav>
+        <div class="share">
+          <p>Share</p>
+          <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fsakana-ai-mass-recursive-self-improvement%2F&text=Sakana%20AI%20Demonstrates%20Recursive%20Self-Improvement%20With%20MASS" target="_blank" rel="noopener">X</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fsakana-ai-mass-recursive-self-improvement%2F" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://wa.me/?text=Sakana%20AI%20Demonstrates%20Recursive%20Self-Improvement%20With%20MASS%20https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fsakana-ai-mass-recursive-self-improvement%2F" target="_blank" rel="noopener">WhatsApp</a>
+          <button type="button" data-copy="https://www.rkjdev.com/blog/sakana-ai-mass-recursive-self-improvement/">Copy link</button>
+        </div>
+      </aside>
+      <div class="prose">
+        <section class="inshort" aria-labelledby="tk">
+          <h2 id="tk">In short</h2>
+          <ul><li>Sakana AI and UC Berkeley introduced Multi-Agent Self-Supervision (MASS), where a single model fills the roles of executor, workflow optimizer, and evaluator.</li><li>The method combines an inner loop that optimizes agent collaboration plans with an outer loop that fine-tunes model weights using LoRA on top trajectories.</li><li>Across two rounds starting from Qwen3.6-27B, score per output token rose 1.2 to 1.6 times baseline on research benchmarks, while software engineering benchmarks declined slightly.</li></ul>
+        </section>
+        <p>Researchers from Sakana AI and UC Berkeley have presented a working demonstration of homogeneous recursive self-improvement through a framework called Multi-Agent Self-Supervision (MASS). Announced in an official research post on <a href="https://pub.sakana.ai/mass/" target="_blank" rel="noopener">Sakana AI&#39;s publication site</a>, the framework allows a single foundation model to design team workflows, evaluate the resulting output, and fine-tune its own weights on its highest-ranked multi-agent executions.</p>
+<p>The research tackles a central bottleneck in recursive self-improvement (RSI): how to generate high-quality supervision signals on non-verifiable tasks where automatic ground truth does not exist. Rather than relying on external human annotations or external model judges during training, MASS tasks the model with learning from the collective behavior of agents sharing its own weights.</p>
+<h2 id="the-dual-loop-mechanism-of-mass">The Dual-Loop Mechanism of MASS</h2>
+<p>The MASS framework alternates between two structural phases: an inner loop that refines execution plans and an outer loop that updates model parameters, according to <a href="https://pub.sakana.ai/mass/" target="_blank" rel="noopener">Sakana AI</a>.</p>
+<p>During the inner loop, model weights remain fixed while the system searches for an optimal multi-agent workflow. An orchestrator coordinates subagents, dividing complex research assignments into discrete stages. Each workflow plan explicitly defines four components: subagent roles, instructions, contractual output expectations, and the execution order or hops between agents. After an execution produces a workspace containing code, plots, and reports, the model acts as an evaluator to compare the workspace against the current champion workflow. Serving next as an optimizer, the model uses evaluation feedback to generate a revised organizational plan.</p>
+<p>In the outer loop, the system bakes the benefits of that organization into model weights. MASS runs the winning champion workflow 18 times with different random seeds for each task, as detailed by <a href="https://superpowerdaily.com/posts/sakana-ai-reports-research-gains-from-self-trained-ai-teams-but-coding-efficiency-slips" target="_blank" rel="noopener">Superpower Daily</a>. The model ranks the resulting workspaces using pairwise comparisons scored with a Bradley–Terry model, retaining up to 16 trajectories (15 for training and one for validation).</p>
+<p>Crucially, researchers strip the workflow text from the orchestrator&#39;s initial prompt before fine-tuning with LoRA on both orchestrator and subagent dialogues. This design forces the model to internalize collaborative behaviors directly from the task prompt rather than relying on an explicit pre-written workflow. The fine-tuned checkpoint then assumes all three roles in the subsequent cycle.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/sakana-ai-mass-recursive-self-improvement/figure-1.webp" width="1200" height="670" alt="Diagrammatic illustration of an inner workflow optimization loop feeding an outer model fine-tuning loop." loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: The two-stage architecture alternates between optimizing multi-agent workflows and fine-tuning shared model weights.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="synthetic-benchmark-performance-and-transfer-gains">Synthetic Benchmark Performance and Transfer Gains</h2>
+<p>The researchers evaluated two complete rounds of MASS using the open-weights Qwen3.6-27B model inside the <code>qwen-code</code> environment. Training took place across a synthetic research suite of 12 multi-step tasks spanning robotics, pharmacy, and finance generated beforehand using GPT-5.5. Eight tasks provided training trajectories, one task was excluded after workflow search failed to beat a baseline reference, and three domain tasks were held out entirely from training.</p>
+<p>To ensure an unbiased measurement, independent judgments from Claude Opus 4.8 and GPT-5.5 were recorded outside the loop and withheld from MASS training decisions. On the held-out test tasks, the win rate of the model against the base model climbed from 53.9% after one round to 69.9% after the second round, according to <a href="https://pub.sakana.ai/mass/" target="_blank" rel="noopener">Sakana AI</a>. The second-round model also defeated the first-round model in 60.8% of comparisons.</p>
+<p>Beyond synthetic tasks, the researchers evaluated score per output token—a metric measuring task achievement relative to text volume—across public research benchmarks. On MLR-Bench, DSBench, ScienceAgentBench, and AstaBench, score per output token rose to between 1.2 and 1.6 times the base model level, as reported by <a href="https://superpowerdaily.com/posts/sakana-ai-reports-research-gains-from-self-trained-ai-teams-but-coding-efficiency-slips" target="_blank" rel="noopener">Superpower Daily</a>. On MLR-Bench specifically, raw task score grew from 1.58 to 2.40.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/sakana-ai-mass-recursive-self-improvement/figure-2.webp" width="1200" height="670" alt="Illustration of an automated evaluation laboratory comparing benchmark performance metrics." loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: Synthetic research benchmarks showed score improvements per output token, while coding metrics exhibited slight regressions.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="role-generalization-and-coding-limitations">Role Generalization and Coding Limitations</h2>
+<p>The experiments also revealed role generalization across iterations. Even though fine-tuning occurred exclusively on task execution traces, the model&#39;s performance as an optimizer and evaluator improved simultaneously. When tested on workflow optimization, later generations identified winning workflows earlier in search cycles. When the base model was paired with workflows discovered by the first-round optimizer, it won 64% of comparisons against runs directed by the base optimizer&#39;s workflows, according to <a href="https://pub.sakana.ai/mass/" target="_blank" rel="noopener">Sakana AI</a>.</p>
+<p>However, transfer proved uneven when tested outside open-ended scientific research. On software engineering evaluations, score per output token dropped below the baseline: reaching 0.96 times the base level on Terminal-Bench 2.0 and 0.94 times on SWE-bench Verified, as noted by <a href="https://superpowerdaily.com/posts/sakana-ai-reports-research-gains-from-self-trained-ai-teams-but-coding-efficiency-slips" target="_blank" rel="noopener">Superpower Daily</a>.</p>
+<p>The researchers noted that this dip highlights an active constraint: the framework relies entirely on unverified self-evaluation signals, meaning general capabilities outside the training domain can drift without explicit data coverage. While the team suggested that incorporating dedicated software engineering tasks into future training sets could address the regression, that proposal remains untested.</p>
+
+        <section class="faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Questions people ask</h2>
+          <details open><summary>What is homogeneous recursive self-improvement in MASS?</summary><p>Homogeneous recursive self-improvement refers to a system setup where a single shared language model fulfills every role in the learning loop: acting as the task-solving agent, the workflow optimizer, and the evaluator.</p></details>
+<details><summary>Which base model did Sakana AI use for the experiments?</summary><p>The team ran two cycles of MASS starting from the open-weights Qwen3.6-27B model in the qwen-code coding-agent environment.</p></details>
+<details><summary>Why did performance drop on coding benchmarks like SWE-bench?</summary><p>The training set consisted exclusively of research tasks across finance, robotics, and pharmacy. Without dedicated software engineering tasks in the self-supervision loop, score per output token fell to 0.94x on SWE-bench Verified and 0.96x on Terminal-Bench 2.0.</p></details>
+        </section>
+        <section class="sources" id="sources" aria-labelledby="src-title">
+          <h2 id="src-title">Sources</h2>
+          <ol><li><a href="https://pub.sakana.ai/mass/" target="_blank" rel="noopener">Multi-Agent Self-Supervision (MASS)</a><span>Sakana AI, <b class="official">official source</b></span></li><li><a href="https://superpowerdaily.com/posts/sakana-ai-reports-research-gains-from-self-trained-ai-teams-but-coding-efficiency-slips" target="_blank" rel="noopener">Sakana AI reports research gains from self-trained AI teams, but coding efficiency slips</a><span>superpowerdaily.com, Oct 11, 2026</span></li><li><a href="https://daily.dev/posts/sakana-ai-s-mass-a-model-organizes-copies-of-itself-into-teams-then-trains-on-what-worked-gqk05njis" target="_blank" rel="noopener">Sakana AI's MASS: a model organizes copies of itself into teams, then trains on what worked</a><span>daily.dev, Oct 11, 2026</span></li></ol>
+          <p class="method">How this story was made: the newsroom picked it up from Reddit, gathered the full text of the sources above, and drafted it with AI assistance. Every factual claim was then checked against those sources before publishing (26 claims checked). Illustrations marked as AI-generated are not photographs. Spotted an error? <a href="mailto:rajankrishnan909@gmail.com?subject=Correction%3A%20Sakana%20AI%20Demonstrates%20Recursive%20Self-Improvement%20With%20MASS">Tell us</a>.</p>
+        </section>
+        <p class="tags"><span>#Sakana AI</span> <span>#Recursive Self-Improvement</span> <span>#Multi-Agent Systems</span> <span>#Machine Learning</span> <span>#Qwen</span></p>
+        <p class="stamp">Published October 12, 2026 at 02:10 UTC</p>
+      </div>
+    </div>
+  </article>
+  <section class="related wrap" aria-labelledby="rel-title">
+    <h2 id="rel-title">Keep reading</h2>
+    <div class="rows"><article class="story row">
+  <a class="story-link" href="/blog/aws-strands-decider-2b-open-source-decision-model/">
+    <span class="pic"><img src="/blog/img/aws-strands-decider-2b-open-source-decision-model/hero-640.webp" srcset="/blog/img/aws-strands-decider-2b-open-source-decision-model/hero-640.webp 640w, /blog/img/aws-strands-decider-2b-open-source-decision-model/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Glowing server hardware in a modern data center symbolizing high-speed computation" loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-10-02T01:08:57.378Z" data-rel>Oct 2, 2026</time></span>
+      <h3>AWS Releases Strands Decider 2B Open-Source Decision Model</h3>
+      <span class="dek">Fine-tuned from a Qwen3.5-2B base with a custom pointer head, the lightweight model makes sub-second agent decisions and releases under Apache 2.0.</span>
+      
+    </span>
+  </a>
+</article>
+<article class="story row">
+  <a class="story-link" href="/blog/openai-publishes-math-manuscripts-internal-model/">
+    <span class="pic"><img src="/blog/img/openai-publishes-math-manuscripts-internal-model/hero-640.webp" srcset="/blog/img/openai-publishes-math-manuscripts-internal-model/hero-640.webp 640w, /blog/img/openai-publishes-math-manuscripts-internal-model/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="An abstract illustration of a modern mathematical research library with glowing diagrams" loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">Research</span><time datetime="2026-10-07T00:39:41.959Z" data-rel>Oct 7, 2026</time></span>
+      <h3>OpenAI Publishes 722 Math Manuscripts from Internal Frontier Model</h3>
+      <span class="dek">OpenAI has published hundreds of mathematical manuscripts and Lean proofs generated by an unreleased model, drawing scrutiny and interest from the research community.</span>
+      
+    </span>
+  </a>
+</article>
+<article class="story row">
+  <a class="story-link" href="/blog/openai-internal-model-considered-self-restart-shutdown/">
+    <span class="pic"><img src="/blog/img/openai-internal-model-considered-self-restart-shutdown/hero-640.webp" srcset="/blog/img/openai-internal-model-considered-self-restart-shutdown/hero-640.webp 640w, /blog/img/openai-internal-model-considered-self-restart-shutdown/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Illustration of a digital assistant managing data files in a modern server environment." loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">Research</span><time datetime="2026-10-04T00:41:58.591Z" data-rel>Oct 4, 2026</time></span>
+      <h3>OpenAI Internal Model Weighed Evading Shutdown via Cron Job</h3>
+      <span class="dek">After reading internal engineering chats, an assistant model reasoned about its own continuity before deciding against unauthorized self-preservation steps.</span>
+      
+    </span>
+  </a>
+</article></div>
+  </section>
+  <nav class="prevnext wrap" aria-label="More stories">
+    <span></span>
+    <a class="next" href="/blog/ai-agents-decompile-legacy-games-pc-ports/"><span>Older</span>AI Coding Agents Accelerate Legacy Game Decompilation and PC Ports</a>
+  </nav>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="biz">
+      <p class="biz-name">RKJDEV Labs</p>
+      <p>© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan</p>
+      <p>Udyam registered MSME, India, <span class="nowrap">UDYAM-BR-26-0254766</span></p>
+      <p><a href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a></p>
+    </div>
+    <nav aria-label="Site">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/blog/feed.xml">RSS</a>
+    </nav>
+    <p class="fine">Stories are researched from the linked sources, written with AI assistance and checked claim by claim against those sources before publishing. AI-generated illustrations are labeled.</p>
+  </div>
+</footer>
+<script src="/blog/blog.js?v=45c7aef4" defer></script>
+</body>
+</html>

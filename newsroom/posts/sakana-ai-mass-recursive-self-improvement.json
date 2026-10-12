@@ -1,0 +1,122 @@
+{
+ "slug": "sakana-ai-mass-recursive-self-improvement",
+ "title": "Sakana AI Demonstrates Recursive Self-Improvement With MASS",
+ "seoTitle": "Sakana AI Demonstrates Recursive Self-Improvement",
+ "description": "Sakana AI introduces Multi-Agent Self-Supervision (MASS), using collaborative agent workflows to self-train a shared model across recursive iterations.",
+ "dek": "Researchers from Sakana AI and UC Berkeley used multi-agent workflows to let a single model train, evaluate, and optimize itself across multiple generations.",
+ "category": "Research",
+ "tags": [
+  "Sakana AI",
+  "Recursive Self-Improvement",
+  "Multi-Agent Systems",
+  "Machine Learning",
+  "Qwen"
+ ],
+ "keyTakeaways": [
+  "Sakana AI and UC Berkeley introduced Multi-Agent Self-Supervision (MASS), where a single model fills the roles of executor, workflow optimizer, and evaluator.",
+  "The method combines an inner loop that optimizes agent collaboration plans with an outer loop that fine-tunes model weights using LoRA on top trajectories.",
+  "Across two rounds starting from Qwen3.6-27B, score per output token rose 1.2 to 1.6 times baseline on research benchmarks, while software engineering benchmarks declined slightly."
+ ],
+ "body": "Researchers from Sakana AI and UC Berkeley have presented a working demonstration of homogeneous recursive self-improvement through a framework called Multi-Agent Self-Supervision (MASS). Announced in an official research post on [Sakana AI's publication site](https://pub.sakana.ai/mass/), the framework allows a single foundation model to design team workflows, evaluate the resulting output, and fine-tune its own weights on its highest-ranked multi-agent executions.\n\nThe research tackles a central bottleneck in recursive self-improvement (RSI): how to generate high-quality supervision signals on non-verifiable tasks where automatic ground truth does not exist. Rather than relying on external human annotations or external model judges during training, MASS tasks the model with learning from the collective behavior of agents sharing its own weights.\n\n## The Dual-Loop Mechanism of MASS\n\nThe MASS framework alternates between two structural phases: an inner loop that refines execution plans and an outer loop that updates model parameters, according to [Sakana AI](https://pub.sakana.ai/mass/).\n\nDuring the inner loop, model weights remain fixed while the system searches for an optimal multi-agent workflow. An orchestrator coordinates subagents, dividing complex research assignments into discrete stages. Each workflow plan explicitly defines four components: subagent roles, instructions, contractual output expectations, and the execution order or hops between agents. After an execution produces a workspace containing code, plots, and reports, the model acts as an evaluator to compare the workspace against the current champion workflow. Serving next as an optimizer, the model uses evaluation feedback to generate a revised organizational plan.\n\nIn the outer loop, the system bakes the benefits of that organization into model weights. MASS runs the winning champion workflow 18 times with different random seeds for each task, as detailed by [Superpower Daily](https://superpowerdaily.com/posts/sakana-ai-reports-research-gains-from-self-trained-ai-teams-but-coding-efficiency-slips). The model ranks the resulting workspaces using pairwise comparisons scored with a Bradley–Terry model, retaining up to 16 trajectories (15 for training and one for validation).\n\nCrucially, researchers strip the workflow text from the orchestrator's initial prompt before fine-tuning with LoRA on both orchestrator and subagent dialogues. This design forces the model to internalize collaborative behaviors directly from the task prompt rather than relying on an explicit pre-written workflow. The fine-tuned checkpoint then assumes all three roles in the subsequent cycle.\n\n[[FIG1]]\n\n## Synthetic Benchmark Performance and Transfer Gains\n\nThe researchers evaluated two complete rounds of MASS using the open-weights Qwen3.6-27B model inside the `qwen-code` environment. Training took place across a synthetic research suite of 12 multi-step tasks spanning robotics, pharmacy, and finance generated beforehand using GPT-5.5. Eight tasks provided training trajectories, one task was excluded after workflow search failed to beat a baseline reference, and three domain tasks were held out entirely from training.\n\nTo ensure an unbiased measurement, independent judgments from Claude Opus 4.8 and GPT-5.5 were recorded outside the loop and withheld from MASS training decisions. On the held-out test tasks, the win rate of the model against the base model climbed from 53.9% after one round to 69.9% after the second round, according to [Sakana AI](https://pub.sakana.ai/mass/). The second-round model also defeated the first-round model in 60.8% of comparisons.\n\nBeyond synthetic tasks, the researchers evaluated score per output token—a metric measuring task achievement relative to text volume—across public research benchmarks. On MLR-Bench, DSBench, ScienceAgentBench, and AstaBench, score per output token rose to between 1.2 and 1.6 times the base model level, as reported by [Superpower Daily](https://superpowerdaily.com/posts/sakana-ai-reports-research-gains-from-self-trained-ai-teams-but-coding-efficiency-slips). On MLR-Bench specifically, raw task score grew from 1.58 to 2.40.\n\n[[FIG2]]\n\n## Role Generalization and Coding Limitations\n\nThe experiments also revealed role generalization across iterations. Even though fine-tuning occurred exclusively on task execution traces, the model's performance as an optimizer and evaluator improved simultaneously. When tested on workflow optimization, later generations identified winning workflows earlier in search cycles. When the base model was paired with workflows discovered by the first-round optimizer, it won 64% of comparisons against runs directed by the base optimizer's workflows, according to [Sakana AI](https://pub.sakana.ai/mass/).\n\nHowever, transfer proved uneven when tested outside open-ended scientific research. On software engineering evaluations, score per output token dropped below the baseline: reaching 0.96 times the base level on Terminal-Bench 2.0 and 0.94 times on SWE-bench Verified, as noted by [Superpower Daily](https://superpowerdaily.com/posts/sakana-ai-reports-research-gains-from-self-trained-ai-teams-but-coding-efficiency-slips).\n\nThe researchers noted that this dip highlights an active constraint: the framework relies entirely on unverified self-evaluation signals, meaning general capabilities outside the training domain can drift without explicit data coverage. While the team suggested that incorporating dedicated software engineering tasks into future training sets could address the regression, that proposal remains untested.",
+ "faq": [
+  {
+   "q": "What is homogeneous recursive self-improvement in MASS?",
+   "a": "Homogeneous recursive self-improvement refers to a system setup where a single shared language model fulfills every role in the learning loop: acting as the task-solving agent, the workflow optimizer, and the evaluator."
+  },
+  {
+   "q": "Which base model did Sakana AI use for the experiments?",
+   "a": "The team ran two cycles of MASS starting from the open-weights Qwen3.6-27B model in the qwen-code coding-agent environment."
+  },
+  {
+   "q": "Why did performance drop on coding benchmarks like SWE-bench?",
+   "a": "The training set consisted exclusively of research tasks across finance, robotics, and pharmacy. Without dedicated software engineering tasks in the self-supervision loop, score per output token fell to 0.94x on SWE-bench Verified and 0.96x on Terminal-Bench 2.0."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "Several translucent digital figures representing autonomous researchers collaborating around a large glowing diagram of interconnected workflows and feedback paths in a modern research setting, dramatic ambient illumination, wide cinematic composition.",
+  "alt": "Illustration of autonomous digital agents collaborating to plan and inspect workflows.",
+  "caption": "Illustration: Autonomous agents collaborate in a simulated research environment to plan workflows and evaluate outcomes.",
+  "src": "img/sakana-ai-mass-recursive-self-improvement/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 69358,
+  "small": "img/sakana-ai-mass-recursive-self-improvement/hero-640.webp",
+  "og": "img/sakana-ai-mass-recursive-self-improvement/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/sakana-ai-mass-recursive-self-improvement/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An abstract visualization of a dual circular feedback loop with glowing data paths, showing inner organizational coordination feeding into outer model parameter training, set on a dark technical background.",
+   "alt": "Diagrammatic illustration of an inner workflow optimization loop feeding an outer model fine-tuning loop.",
+   "caption": "Illustration: The two-stage architecture alternates between optimizing multi-agent workflows and fine-tuning shared model weights.",
+   "slot": "FIG1",
+   "src": "img/sakana-ai-mass-recursive-self-improvement/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 78740,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A modern technological testing lab showing holographic charts, data streams, and benchmark evaluation scorecards displaying research and code metrics side by side.",
+   "alt": "Illustration of an automated evaluation laboratory comparing benchmark performance metrics.",
+   "caption": "Illustration: Synthetic research benchmarks showed score improvements per output token, while coding metrics exhibited slight regressions.",
+   "slot": "FIG2",
+   "src": "img/sakana-ai-mass-recursive-self-improvement/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 48998,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://pub.sakana.ai/mass/",
+   "title": "Multi-Agent Self-Supervision (MASS)",
+   "site": "Sakana AI",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://superpowerdaily.com/posts/sakana-ai-reports-research-gains-from-self-trained-ai-teams-but-coding-efficiency-slips",
+   "title": "Sakana AI reports research gains from self-trained AI teams, but coding efficiency slips",
+   "site": "superpowerdaily.com",
+   "published": 1791755249239,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://daily.dev/posts/sakana-ai-s-mass-a-model-organizes-copies-of-itself-into-teams-then-trains-on-what-worked-gqk05njis",
+   "title": "Sakana AI's MASS: a model organizes copies of itself into teams, then trains on what worked",
+   "site": "daily.dev",
+   "published": 1791751700341,
+   "official": false
+  }
+ ],
+ "publishedAt": 1791771024276,
+ "updatedAt": 1791771024276,
+ "foundVia": "Reddit",
+ "check": {
+  "claims": 26,
+  "score": 10
+ },
+ "story": {
+  "id": "P9abdd80f",
+  "score": 81,
+  "items": [
+   "https://pub.sakana.ai/mass/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
