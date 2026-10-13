@@ -1,0 +1,150 @@
+{
+ "slug": "amd-helion-rack-architecture-agentic",
+ "title": "AMD Unveils Helion Rack Architecture for Agentic AI Workloads",
+ "seoTitle": "AMD Helion Rack Architecture for Agentic AI",
+ "description": "AMD introduced Helion, an open OCP rack design scaling to 32,768 Zen 6 cores and 16 Instinct MI350P GPUs designed for agentic AI compute.",
+ "dek": "The open rack reference design scales up to 32,768 Zen 6 EPYC cores with optional Instinct GPUs to manage concurrent agent orchestration and enterprise inference.",
+ "category": "Chips & Hardware",
+ "tags": [
+  "AMD",
+  "Agentic AI",
+  "AMD EPYC",
+  "Data Centers",
+  "Open Compute Project",
+  "Hardware"
+ ],
+ "keyTakeaways": [
+  "AMD introduced the Helion agentic AI rack reference design based on Open Compute Project specifications at the OCP Global Summit.",
+  "A CPU-only configuration packs up to 32,768 Zen 6 EPYC cores across 128 sockets for high-density agent sandboxing and execution.",
+  "An enterprise configuration blends EPYC CPUs with up to 16 AMD Instinct MI350P GPUs and an integrated token router.",
+  "Eight server partners—including Dell, HPE, Cisco, and Supermicro—plan to release Helion-based hardware starting in November 2026."
+ ],
+ "body": "On October 12, 2026, AMD announced AMD Helion, an open rack-scale reference design engineered to handle the specific operational demands of agentic AI workloads. Unveiled at the Open Compute Project (OCP) Global Summit in San Jose, the blueprint provides server manufacturers with specifications for building high-density systems tailored to autonomous software agents rather than large-scale model training, according to [AMD's official announcement](https://ir.amd.com/news-events/press-releases/detail/1301/introducing-amd-helion-agentic-ai-compute-at-rack-scale).\n\nAgentic AI systems require infrastructure that differs fundamentally from traditional training clusters. While foundation model pre-training depends heavily on tightly coupled GPU fabrics, running concurrent software agents involves building software, database querying, code execution, and complex workflows. AMD aims to address these heterogeneous compute demands by combining high-density 6th Gen AMD EPYC central processors, flexible GPU nodes, and an integrated token router inside an open-standard chassis.\n\n[[FIG1]]\n\n## Tailored Configurations: Hyperscale Density and Enterprise Hybrid Systems\n\nAccording to [AMD's Helion product architecture documentation](https://www.amd.com/en/products/rackscale-solutions/helion.html), the platform is split into two primary architectures: a CPU-only hyperscale design and a hybrid enterprise configuration.\n\nThe CPU-only configuration targets hyperscalers, neoclouds, and sovereign operators that maintain separate accelerated clusters for raw model inference. Powered by 6th Gen AMD EPYC 9006 series processors (codenamed \"Venice\"), this design packs up to 128 sockets per rack, delivering up to 32,768 \"Zen 6\" x86 CPU cores. Operators can balance power consumption and density using distinct blade designs: dense servers offering 256 cores at 400W, balanced servers running 256 cores at 600W, or technical compute nodes using 96 high-frequency cores operating at up to 5.0 GHz.\n\nFor enterprise environments that need compute and acceleration within a single footprint, the enterprise configuration integrates CPU and GPU nodes into one system. This layout pairs EPYC compute blades with up to 16 AMD Instinct MI350P GPUs housed across two independent 5U server chassis, as detailed by [Tom's Hardware](https://www.tomshardware.com/pc-components/cpus/amd-debuts-helion-reference-design-for-agentic-ai-servers-with-up-to-32-768-zen-6-venice-cores-rack-design-ships-next-year-in-cpu-only-and-all-in-one-configurations). The rack also incorporates dedicated general-purpose blades using EPYC 9006 SP7, SP8, and 9006X SP7 processors to support background storage and databases.\n\n## Architectural Focus: Token Routing and Independent GPU Nodes\n\nUnlike AMD's previously introduced Helios platform—which was built for frontier-scale training and massive inference with 72 MI455X GPUs linked via a scale-up fabric—Helion focuses strictly on execution efficiency. AMD confirmed that the two eight-GPU server nodes in Helion operate independently without an interconnecting scale-up fabric, reflecting enterprise agent needs rather than monolithic model training.\n\nA key functional component of the enterprise design is an integrated token router. AMD states that this mechanism directs agents' model calls across frontier models in the cloud and open-source models running in the rack.\n\n\"Agentic AI is not a single workload. It spans personal agents, enterprise applications, code execution and complex workflows, each with different compute requirements,\" said Dan McNamara, senior vice president and general manager of Compute and Enterprise AI at AMD, in [AMD's press release](https://ir.amd.com/news-events/press-releases/detail/1301/introducing-amd-helion-agentic-ai-compute-at-rack-scale). McNamara stated that Helion is intended to help partners optimize rack compute to match available power budgets.\n\n[[FIG2]]\n\n## Hardware Standards and Power Constraints\n\nHelion adheres closely to open data center specifications. According to AMD's technical brief, the system fits a 21-inch Open Rack Standard (ORv3) 44OU frame and supports both air-cooled and direct liquid-cooled (DLC) deployments. The design incorporates up to 102 Tbps of rack networking bandwidth using OCP NIC 3.0 adapters, alongside OCP Data Center Modular Hardware System (DC-MHS) compliant host processor modules, DC-SCM management modules, HPRv2 power shelves, and Caliptra silicon root-of-trust security.\n\nThe emphasis on core density per watt directly addresses severe data center power bottlenecks, as reported by [The Next Web](https://thenextweb.com/news/amd-helion-agentic-rack-power). In regions like Europe, electrical grid constraints have restricted data center development, prompting operators to prioritize the number of active agents supported per kilowatt over peak theoretical floating-point performance.\n\n```\nAMD Helion Rack Specifications at a Glance\n• Peak CPU Density: Up to 32,768 Zen 6 cores (128 sockets)\n• Processors: 6th Gen AMD EPYC 9006 Series (\"Venice\")\n• Acceleration: Up to 16 AMD Instinct MI350P GPUs (Enterprise model)\n• Network Bandwidth: Up to 102 Tbps (OCP NIC 3.0)\n• Form Factor: 21-inch 44OU chassis (ORv3), air- or direct liquid-cooled\n• Hardware Compliance: DC-MHS, DC-SCM, HPRv2, Caliptra root-of-trust\n```\n\n## Availability and Ecosystem Partner Support\n\nAMD will not manufacture or sell finished Helion server cabinets directly. Instead, the company plans to contribute the Helion specification to the Open Compute Project, allowing original equipment manufacturers (OEMs) and original design manufacturers (ODMs) to build and customize commercial products, as outlined by [DataCenterDynamics](https://www.datacenterdynamics.com/en/news/amd-unveils-cpu-only-helion-rack-to-support-agentic-ai-workloads/).\n\nEight major infrastructure partners have pledged support for the Helion blueprint: Cisco, Dell Technologies, Hon Hai Technology Group (Foxconn), Hewlett Packard Enterprise (HPE), Lenovo, QCT, Supermicro, and Wiwynn, as reported by [Quartz](https://qz.com/amd-helion-agentic-ai-rack-open-blueprint-101226).\n\nAMD had initially indicated that systems would ship during the first half of 2027 before revising the timeline to November 2026, coinciding with broader Zen 6 processor production ramps. AMD has not publicly disclosed pricing for Helion reference components, leaving final system pricing to hardware partners based on chosen CPU core counts, cooling loops, and GPU accelerators.",
+ "faq": [
+  {
+   "q": "What is the primary difference between AMD Helion and AMD Helios?",
+   "a": "AMD Helios is designed for frontier-scale model training and large-scale inference using 72 tightly coupled GPUs with unified memory fabrics. In contrast, AMD Helion is a flexible rack architecture optimized for running software agents, packing up to 32,768 Zen 6 CPU cores alongside optional independent GPUs."
+  },
+  {
+   "q": "Can enterprises configure AMD Helion with both CPUs and GPUs?",
+   "a": "Yes. While the hyperscale configuration is CPU-only, the enterprise configuration supports AMD EPYC CPU nodes alongside up to 16 AMD Instinct MI350P GPUs and dedicated database and storage blades."
+  },
+  {
+   "q": "When will AMD Helion hardware become available?",
+   "a": "Commercial systems built on the Helion specification by manufacturing partners such as Dell, HPE, and Supermicro are scheduled to become available in November 2026."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern data center aisle lined with tall, standardized 21-inch open compute server racks glowing with soft blue and amber LED indicator lights. A technician in anti-static attire inspects liquid cooling distribution manifolds attached to dense server trays.",
+  "alt": "A modern server room aisle featuring high-density open compute server racks with liquid cooling lines.",
+  "caption": "Illustration: high-density server racks designed for modular data center deployments.",
+  "src": "img/amd-helion-rack-architecture-agentic/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 66996,
+  "small": "img/amd-helion-rack-architecture-agentic/hero-640.webp",
+  "og": "img/amd-helion-rack-architecture-agentic/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/amd-helion-rack-architecture-agentic/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An engineer wearing lab safety glasses examining a modular server blade containing dual high-core-count processors, surrounded by circuit testing equipment on an assembly workbench in an electronics hardware facility.",
+   "alt": "An engineer inspecting a dense enterprise server blade with high-performance processors on an assembly bench.",
+   "caption": "Illustration: modular server hardware engineered for multi-core compute workloads.",
+   "slot": "FIG1",
+   "src": "img/amd-helion-rack-architecture-agentic/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 53740,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A close-up view of industrial direct liquid cooling tubes and brass quick-disconnect fittings routing fluid across high-density processor heat spreaders inside a dark enterprise server chassis.",
+   "alt": "Direct liquid cooling pipes and fittings connected to server processor blocks inside a rack system.",
+   "caption": "Illustration: direct liquid cooling infrastructure inside high-density rack systems.",
+   "slot": "FIG2",
+   "src": "img/amd-helion-rack-architecture-agentic/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 55632,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1301/introducing-amd-helion-agentic-ai-compute-at-rack-scale",
+   "title": "Introducing AMD Helion, Agentic AI Compute at Rack Scale",
+   "site": "Advanced Micro Devices, Inc.",
+   "published": 1791795600000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://www.amd.com/en/products/rackscale-solutions/helion.html",
+   "title": "AMD Helion™ Agentic AI Rack",
+   "site": "AMD",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://www.tomshardware.com/pc-components/cpus/amd-debuts-helion-reference-design-for-agentic-ai-servers-with-up-to-32-768-zen-6-venice-cores-rack-design-ships-next-year-in-cpu-only-and-all-in-one-configurations",
+   "title": "AMD debuts Helion reference design for agentic AI servers with up to 32,768 Zen 6 'Venice' cores — rack design ships later this year in CPU-only and all-in-one configurations [Updated]",
+   "site": "tomshardware.com",
+   "published": 1791810000000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://thenextweb.com/news/amd-helion-agentic-rack-power",
+   "title": "AMD puts 32,768 CPU cores in a rack built for AI agents",
+   "site": "TNW | Artificial-intelligence",
+   "published": 1791829743000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://www.datacenterdynamics.com/en/news/amd-unveils-cpu-only-helion-rack-to-support-agentic-ai-workloads/",
+   "title": "AMD unveils Helion rack to support agentic AI workloads",
+   "site": "datacenterdynamics.com",
+   "published": 1791763200000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://qz.com/amd-helion-agentic-ai-rack-open-blueprint-101226",
+   "title": "AMD Helion agentic AI rack design targets hyperscale and enterprise",
+   "site": "qz.com",
+   "published": 1791763200000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1791855921732,
+ "updatedAt": 1791855921732,
+ "foundVia": "tomshardware.com and Google Search",
+ "check": {
+  "claims": 19,
+  "score": 10
+ },
+ "story": {
+  "id": "P0dd896b5",
+  "score": 84,
+  "items": [
+   "https://www.tomshardware.com/pc-components/cpus/amd-debuts-helion-reference-design-for-agentic-ai-servers-with-up-to-32-768-zen-6-venice-cores-rack-design-ships-next-year-in-cpu-only-and-all-in-one-configurations",
+   "https://ir.amd.com/news-events/press-releases/detail/1301/introducing-amd-helion-agentic-ai-compute-at-rack-scale",
+   "https://www.datacenterdynamics.com/en/news/amd-unveils-cpu-only-helion-rack-to-support-agentic-ai-workloads/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
