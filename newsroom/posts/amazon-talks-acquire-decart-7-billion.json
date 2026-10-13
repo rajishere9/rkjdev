@@ -1,0 +1,132 @@
+{
+ "slug": "amazon-talks-acquire-decart-7-billion",
+ "title": "Amazon in Advanced Talks to Acquire AI Startup Decart for $7 Billion",
+ "seoTitle": "Amazon in Talks to Buy AI Startup Decart for $7B",
+ "description": "Amazon is in advanced talks to acquire AI startup Decart for roughly $7 billion, aiming to boost Trainium custom chips and generative video tech.",
+ "dek": "The potential deal would rank among Amazon's largest acquisitions, strengthening its custom Trainium chip ecosystem against Nvidia.",
+ "category": "Industry",
+ "tags": [
+  "Amazon",
+  "Decart",
+  "Trainium",
+  "Artificial Intelligence",
+  "AWS",
+  "Nvidia"
+ ],
+ "keyTakeaways": [
+  "Amazon is negotiating an acquisition of three-year-old AI startup Decart for approximately $7 billion.",
+  "Decart makes software that allows AI models to switch fluidly between hardware chips from Nvidia, Google, and Amazon.",
+  "Decart demonstrated its real-time video model Lucy on Amazon's Trainium3 custom chips at AWS re:Invent, with Amazon stating that Decart ran real-time video four times faster on Trainium at half the cost of GPUs.",
+  "The talks follow previously abandoned acquisition attempts for Decart by Nvidia and a failed $6 billion bid by Anthropic."
+ ],
+ "body": "Amazon is in advanced negotiations to acquire artificial intelligence startup Decart in a transaction valued at approximately $7 billion, according to reporting from [The Wall Street Journal cited by Quartz](https://qz.com/amazon-decart-acquisition-talks-7-billion-101226). People familiar with the matter indicated that an agreement could be finalized in the near future, provided discussions do not fall apart or another bidder steps forward. Neither Amazon nor Decart has publicly confirmed the talks.\n\nIf completed, the transaction would represent one of the largest corporate takeovers in Amazon's history. As reported by [GeekWire](https://www.geekwire.com/2026/why-amazon-might-pay-billions-for-decart-a-3-year-old-ai-startup-that-hasnt-disclosed-its-revenue/), a $7 billion purchase price would place Decart just behind Amazon's $13.7 billion acquisition of Whole Foods in 2017, its $8.45 billion purchase of MGM in 2022, and its roughly $11 billion agreement to acquire satellite provider Globalstar earlier in 2026.\n\n[[FIG1]]\n\n## The Technology Behind Decart: Chip Portability and World Models\n\nFounded in 2023 by Israeli engineers Dean Leitersdorf, Orian Leitersdorf, and Moshe Shalev, Decart operates its corporate headquarters in San Francisco alongside a research and development center in Tel Aviv. The startup raised upwards of $400 million to $450 million from venture capital backers including Sequoia Capital, Benchmark, and Radical Ventures, with eBay acting as both an investor and a customer, according to reporting from [Quartz](https://qz.com/amazon-decart-acquisition-talks-7-billion-101226) and [GeekWire](https://www.geekwire.com/2026/why-amazon-might-pay-billions-for-decart-a-3-year-old-ai-startup-that-hasnt-disclosed-its-revenue/). In May 2026, Decart closed a $300 million funding round that included Nvidia as an investor, valuing the company at nearly $4 billion.\n\nDecart develops core software designed to make AI workloads run more efficiently and allow developers to switch between competing AI accelerators manufactured by Nvidia, Google, and Amazon. The startup licenses this optimization layer directly to cloud infrastructure providers and artificial intelligence laboratories. Decart has also developed proprietary generative models, notably Lucy—a real-time video editing engine capable of superimposing clothing or accessories on people in live video feeds—and Oasis, an interactive world model that generates dynamic 3D virtual environments used in gaming, robotics, and autonomous vehicle simulation, as detailed by [The Jerusalem Post](https://www.jpost.com/business-and-innovation/tech-and-start-ups/article-911395).\n\n[[FIG2]]\n\n## Strategic Fit for AWS and the Trainium Chip Architecture\n\nAmazon Web Services has already integrated Decart deeply into its silicon strategy. AWS granted Decart early access to its custom Trainium3 processor in 2025 after technical meetings between the engineering teams, according to [Calcalist's CTech](https://www.calcalistech.com/ctechnews/article/ec25jzet0). Decart subsequently migrated its own models and infrastructure over to Trainium hardware.\n\nAt the AWS re:Invent conference in Las Vegas, Decart demonstrated its Lucy real-time video model by transforming AWS Senior Vice President Peter DeSantis into a live animated avatar of Amazon CTO Werner Vogels on stage, followed by an on-stage demo featuring Decart CEO Dean Leitersdorf. During the presentation, Amazon highlighted that Decart's software ran real-time video generation four times faster on Trainium hardware at half the operating cost of conventional graphics processing units, as reported by [GeekWire](https://www.geekwire.com/2026/why-amazon-might-pay-billions-for-decart-a-3-year-old-ai-startup-that-hasnt-disclosed-its-revenue/).\n\nOwning Decart directly would give Amazon an engineering lever to attract developers to its proprietary silicon. Because Nvidia's proprietary CUDA programming platform dominates the machine learning sector, converting workloads to custom cloud accelerators typically demands substantial developer effort. Decart's abstraction technology would permit engineering teams with software built for Nvidia GPUs to deploy workloads onto Trainium with minimal modifications. Amazon could also deploy Decart's generative video software across consumer services like Twitch and digital storefront fitting tools.\n\n## Prior Bidders, Valuation Discrepancies, and Open Questions\n\nThe acquisition talks follow months of negotiations involving other major artificial intelligence companies. Nvidia previously held acquisition talks with Decart, according to [CTech](https://www.calcalistech.com/ctechnews/article/ec25jzet0). In August 2026, Anthropic entered advanced discussions to acquire Decart for approximately $6 billion to fold the team into its inference optimization group, but Anthropic abandoned the transaction in September following due diligence, as reported by [Quartz](https://qz.com/amazon-decart-acquisition-talks-7-billion-101226). Israeli business outlet Globes reported that Decart's founders had objected to Anthropic's condition requiring the relocation of staff from Tel Aviv to San Francisco.\n\nWhile publication Globes reported that Decart has operated profitably almost since its inception, [CTech](https://www.calcalistech.com/ctechnews/article/ec25jzet0) noted that Decart's underlying commercial revenue base remains significantly smaller than the reported $7 billion valuation under discussion. Additionally, industry observers note that an unresolved question remains whether an Amazon-owned Decart would continue supporting silicon from rivals such as Google and Nvidia, or pivot its software stack exclusively to favor Amazon's custom hardware.",
+ "faq": [
+  {
+   "q": "What products has Decart developed?",
+   "a": "Decart creates chip-switching optimization software that allows AI workloads to transition between chips from Nvidia, Google, and Amazon. It also built Lucy, a model for real-time live video editing, and Oasis, an interactive world model for simulating 3D environments."
+  },
+  {
+   "q": "Why is Amazon interested in acquiring Decart?",
+   "a": "Decart's software simplifies migrating models designed for Nvidia hardware over to alternative chips like Amazon's custom Trainium3 processor. Amazon stated during re:Invent that Decart ran real-time video four times faster on Trainium at half the cost of GPUs."
+  },
+  {
+   "q": "Which other companies attempted to acquire Decart?",
+   "a": "Nvidia explored an acquisition earlier in 2026, and Anthropic engaged in advanced negotiations for approximately $6 billion before walking away in September 2026 following due diligence."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern glass boardroom in a skyscraper overlooking an urban skyline at dusk, where a business executive in formal attire sits across from startup founders reviewing architectural schematics of artificial intelligence microprocessors glowing faintly on a table.",
+  "alt": "Illustration of corporate leaders discussing a major technology acquisition in a boardroom",
+  "caption": "Illustration: Amazon is in advanced negotiations to acquire artificial intelligence startup Decart for around $7 billion.",
+  "src": "img/amazon-talks-acquire-decart-7-billion/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 54062,
+  "small": "img/amazon-talks-acquire-decart-7-billion/hero-640.webp",
+  "og": "img/amazon-talks-acquire-decart-7-billion/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/amazon-talks-acquire-decart-7-billion/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An abstract visualization of digital neural networks transitioning seamlessly across different silicon processor architectures, illuminated by soft blue and amber light paths inside a modern server environment.",
+   "alt": "Illustration representing software bridging different artificial intelligence computer chips",
+   "caption": "Illustration: Decart's software platform enables artificial intelligence models to switch fluidly between hardware accelerators.",
+   "slot": "FIG1",
+   "src": "img/amazon-talks-acquire-decart-7-billion/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 72600,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A tech executive giving a keynote presentation on a large illuminated auditorium stage, with background digital screens showing a real-time animated cartoon avatar mimicking the presenter's movements.",
+   "alt": "Illustration of a real-time generative video presentation on an auditorium stage",
+   "caption": "Illustration: Decart showcased its real-time video model Lucy running on Amazon's Trainium3 chip at AWS re:Invent.",
+   "slot": "FIG2",
+   "src": "img/amazon-talks-acquire-decart-7-billion/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 22584,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://qz.com/amazon-decart-acquisition-talks-7-billion-101226",
+   "title": "Amazon in talks to acquire AI startup Decart for $7 billion",
+   "site": "qz.com",
+   "published": 1791763200000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://www.geekwire.com/2026/why-amazon-might-pay-billions-for-decart-a-3-year-old-ai-startup-that-hasnt-disclosed-its-revenue/",
+   "title": "Why Amazon might pay billions for Decart, a 3-year-old AI startup that hasn't disclosed its revenue",
+   "site": "geekwire.com",
+   "published": 1791763200000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://www.calcalistech.com/ctechnews/article/ec25jzet0",
+   "title": "Amazon emerges as potential buyer of Israeli AI startup Decart at $7 billion",
+   "site": "calcalistech.com",
+   "published": 1791765325670,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.jpost.com/business-and-innovation/tech-and-start-ups/article-911395",
+   "title": "Amazon in talks to acquire Israeli start-up, AI model that can edit live videos in real-time",
+   "site": "The Jerusalem Post",
+   "published": 1791798998000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1791852658279,
+ "updatedAt": 1791852658279,
+ "foundVia": "Google Search",
+ "check": {
+  "claims": 36,
+  "score": 10
+ },
+ "story": {
+  "id": "Pb7e1b201",
+  "score": 85,
+  "items": [
+   "https://www.jpost.com/business-and-innovation/tech-and-start-ups/article-911395"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}

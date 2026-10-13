@@ -1,0 +1,160 @@
+{
+ "slug": "alphaproof-nexus-deepmind-open-math-problems",
+ "title": "DeepMind's AlphaProof Nexus Resolves Dozens of Open Math Problems",
+ "seoTitle": "DeepMind's AlphaProof Nexus Solves Open Math Problems",
+ "description": "Google DeepMind's AlphaProof Nexus solved nine open Erdős problems and 44 OEIS conjectures using Gemini 3.1 Pro and the Lean proof assistant.",
+ "dek": "By pairing Gemini 3.1 Pro with the Lean proof assistant, DeepMind proved decades-old conjectures in a peer-reviewed study published in Science.",
+ "category": "Research",
+ "tags": [
+  "Google DeepMind",
+  "AlphaProof Nexus",
+  "Formal Verification",
+  "Lean",
+  "Mathematics"
+ ],
+ "keyTakeaways": [
+  "AlphaProof Nexus autonomously proved 9 of 353 open Erdős problems and 44 of 492 OEIS conjectures.",
+  "The system uses Gemini 3.1 Pro to draft Lean code and relies on formal compiler checks rather than unverified text output.",
+  "The study was peer-reviewed and published in Science, contrasting with recent controversy surrounding unverified AI math dumps."
+ ],
+ "body": "Google DeepMind's automated mathematical reasoning system, AlphaProof Nexus, has solved dozens of long-standing open problems in mathematics, according to research published in the journal *Science* in October 2026. The system proved nine open problems posed by mathematician Paul Erdős—including two questions that had remained unsolved for 56 years—alongside 44 conjectures from the On-Line Encyclopedia of Integer Sequences (OEIS). The findings mark a concrete milestone in applying formal verification systems to automated discovery.\n\nThe results, originally detailed in an [arXiv preprint](https://arxiv.org/abs/2605.22763) by DeepMind researchers and formally verified in the Lean language, tackle a core limitation of modern artificial intelligence: mathematical hallucination. While large language models frequently generate plausible-sounding arguments that contain subtle errors, AlphaProof Nexus operates inside interactive theorem provers that reject any invalid logical step.\n\n[[FIG1]]\n\n## Combining Gemini 3.1 Pro With Lean Verification\n\nAlphaProof Nexus relies on a closed-loop reasoning pipeline built around Gemini 3.1 Pro, as reported by [The Decoder](https://the-decoder.com/google-deepminds-alphaproof-nexus-solved-dozens-of-open-math-problems-and-actually-got-peer-reviewed/). The language model writes and edits mathematical proofs in Lean, a computer-based formal proof assistant. Lean checks each draft after every edit, and error messages guide the next attempt.\n\nFor more complex logical sub-goals, the pipeline can call DeepMind's specialized proof tool, AlphaProof. However, DeepMind noted that AlphaProof Nexus succeeded in resolving the nine Erdős problems even without calling the auxiliary AlphaProof tool. In a perspective article published in Science, reported on by [The Daily Star](https://www.thedailystar.net/news/technology/news/ai-can-now-solve-complex-mathematical-research-problems-scientists-say-4296911), mathematicians Jeremy Avigad and Matthew Ballard examined how advances in AI are changing mathematical discovery.\n\nAccording to the authors' paper on [arXiv](https://arxiv.org/abs/2605.22763), the team's most capable agent achieved these Erdős solutions at a compute cost of \"a few hundred dollars\" per problem. DeepMind compared this setup with a simpler baseline agent alternating generation and Lean checking, which also replicated the Erdős solutions but ran up significantly higher costs on the most challenging tasks.\n\n[[FIG2]]\n\n## Solved Conjectures and Broader Deployments\n\nAlphaProof Nexus attempted 353 open Erdős problems, successfully resolving nine. The system also evaluated 492 open conjectures cataloged in the OEIS database, proving 44 of them. Beyond combinatorial problems, the system solved an open question in algebraic geometry and improved a known mathematical bound in min-max optimization, an area relevant to machine learning training algorithms.\n\nTo allow independent validation, the researchers released the Lean code and human-readable natural language proofs in a public [GitHub repository](https://github.com/google-deepmind/alphaproof-nexus-results). The repository contains formal Lean 4 code across multiple disciplines, including additive combinatorics, algebraic geometry, graph theory, optimization theory, and quantum optics. Human domain experts reviewed the formal Lean specifications to ensure the automated code strictly matched the original historical conjectures.\n\n[[FIG3]]\n\n## Peer Review in an Era of Friction\n\nThe publication in *Science* arrives during rising tensions between the mathematics community and artificial intelligence laboratories. As highlighted by [The Decoder](https://the-decoder.com/google-deepminds-alphaproof-nexus-solved-dozens-of-open-math-problems-and-actually-got-peer-reviewed/) and [Sıfırıncı Dakika](https://sifirincidakika.com/en/news/google-deepmind-s-alphaproof-nexus-solved-dozens-of-open-math-problems-and-got-peer-reviewed), the Association for Human Mathematics—led by mathematician Terence Tao—recently advocated a boycott against OpenAI after the company published hundreds of unverified AI-generated proofs to GitHub without journal submission.\n\nBy contrast, DeepMind chose formal peer review alongside open-source artifact verification. Although Lean guarantees that the internal steps of a proof adhere to logical rules, human mathematicians must still confirm that the problem statement was translated into code without semantic drift. As Avigad and Ballard noted, automated theorem provers will increasingly function not as replacements for human mathematicians, but as collaborative systems that help researchers navigate complex proof spaces.",
+ "faq": [
+  {
+   "q": "What problems did AlphaProof Nexus solve?",
+   "a": "AlphaProof Nexus solved nine of 353 attempted Erdős problems (including two unsolved for 56 years), proved 44 OEIS conjectures, solved an open problem in algebraic geometry, and improved an optimization bound."
+  },
+  {
+   "q": "How does AlphaProof Nexus avoid generating false proofs?",
+   "a": "The system writes proofs in the formal programming language Lean. The Lean engine verifies each proof step logically, sending compiler feedback and error messages back to Gemini 3.1 Pro until a valid proof is constructed."
+  },
+  {
+   "q": "How much did it cost to solve each Erdős problem?",
+   "a": "DeepMind reported that its primary autonomous agent solved the Erdős problems at a computing cost of a few hundred dollars per problem."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern mathematics research library at dusk with two academic researchers examining formal symbolic logic on translucent glass display boards alongside computational equipment",
+  "alt": "Two researchers studying mathematical formulas and formal proofs in an academic laboratory",
+  "caption": "Illustration: Mathematical researchers studying computer-assisted formal proofs in an academic laboratory.",
+  "src": "img/alphaproof-nexus-deepmind-open-math-problems/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 63752,
+  "small": "img/alphaproof-nexus-deepmind-open-math-problems/hero-640.webp",
+  "og": "img/alphaproof-nexus-deepmind-open-math-problems/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/alphaproof-nexus-deepmind-open-math-problems/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An illuminated server rack in a quiet server room connected to a workstation terminal displaying complex geometric graphs and symbolic formal logic lines",
+   "alt": "A computing terminal displaying symbolic logic and network graphs in a data facility",
+   "caption": "Illustration: Automated proof engines evaluate mathematical statements through formal interactive verification.",
+   "slot": "FIG1",
+   "src": "img/alphaproof-nexus-deepmind-open-math-problems/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 28210,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A university seminar room with a large chalkboard filled with discrete mathematics and graph theory equations alongside laptop computers open on wooden tables",
+   "alt": "A chalkboard covered in discrete mathematics equations beside researcher workstations",
+   "caption": "Illustration: Combinatorics and integer sequence problems translated into interactive theorem proving systems.",
+   "slot": "FIG2",
+   "src": "img/alphaproof-nexus-deepmind-open-math-problems/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 41824,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "An academic panel of mathematicians and computer scientists sitting around a conference table reviewing technical papers and code dossiers",
+   "alt": "Mathematicians and scientists reviewing peer-reviewed technical publications at a table",
+   "caption": "Illustration: Formal review and peer validation are critical steps in checking computer-generated proofs.",
+   "slot": "FIG3",
+   "src": "img/alphaproof-nexus-deepmind-open-math-problems/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 40678,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://arxiv.org/abs/2605.22763",
+   "title": "Advancing Mathematics Research with AI-Driven Formal Proof Search",
+   "site": "arXiv.org",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://github.com/google-deepmind/alphaproof-nexus-results",
+   "title": "google-deepmind/alphaproof-nexus-results",
+   "site": "GitHub",
+   "published": 1778666361000,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://the-decoder.com/google-deepminds-alphaproof-nexus-solved-dozens-of-open-math-problems-and-actually-got-peer-reviewed/",
+   "title": "Google Deepmind's AlphaProof Nexus solved dozens of open math problems and actually got peer reviewed",
+   "site": "The Decoder",
+   "published": 1791797754000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.thedailystar.net/news/technology/news/ai-can-now-solve-complex-mathematical-research-problems-scientists-say-4296911",
+   "title": "AI can now solve complex mathematical research problems, scientists say",
+   "site": "The Daily Star",
+   "published": null,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://wittywires.com/forums/topic/?topic=deepminds-alphaproof-nexus-reportedly-proves-nine-open-erdos-problems",
+   "title": "DeepMind’s AlphaProof Nexus reportedly proves nine open Erdős problems",
+   "site": "WittyWires",
+   "published": 1791799432000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://sifirincidakika.com/en/news/google-deepmind-s-alphaproof-nexus-solved-dozens-of-open-math-problems-and-got-peer-reviewed",
+   "title": "Google DeepMind's AlphaProof Nexus solved dozens of open math problems and got peer reviewed",
+   "site": "Sıfırıncı Dakika",
+   "published": 1791799264542,
+   "official": false
+  }
+ ],
+ "publishedAt": 1791852030857,
+ "updatedAt": 1791852030857,
+ "foundVia": "the-decoder.com and Reddit",
+ "check": {
+  "claims": 29,
+  "score": 10
+ },
+ "story": {
+  "id": "P0ba5de4d",
+  "score": 93,
+  "items": [
+   "https://the-decoder.com/google-deepminds-alphaproof-nexus-solved-dozens-of-open-math-problems-and-actually-got-peer-reviewed/",
+   "https://www.reddit.com/r/singularity/comments/1x43db1/deepminds_alphaproof_nexus_reportedly_solved_9/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
