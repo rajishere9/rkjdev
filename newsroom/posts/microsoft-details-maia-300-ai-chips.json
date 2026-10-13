@@ -1,0 +1,174 @@
+{
+ "slug": "microsoft-details-maia-300-ai-chips",
+ "title": "Microsoft Details Azure Maia 300 Chip for Multi-Gigawatt Rollouts",
+ "seoTitle": "Microsoft Details Azure Maia 300 AI Chip",
+ "description": "Microsoft unveiled Azure Maia 300, a custom AI inference chip built on TSMC N2P silicon, targeting multi-gigawatt cloud deployments starting in 2027.",
+ "dek": "Built on TSMC's N2P node with 288GB of HBM4, the third-generation inference accelerator is designed to become Microsoft's primary inference engine.",
+ "category": "Chips & Hardware",
+ "tags": [
+  "Microsoft",
+  "Azure Maia 300",
+  "AI Chips",
+  "Semiconductors",
+  "Data Centers"
+ ],
+ "keyTakeaways": [
+  "Microsoft announced Azure Maia 300 on October 12, 2026, targeting multi-gigawatt data center deployments starting in 2027.",
+  "The chip features a multi-chiplet design with a TSMC N2P compute die, eight HBM4 stacks, 288GB memory capacity, and 18 TB/s bandwidth.",
+  "Microsoft claims Maia 300 achieves 40% more tokens per megawatt than leading GPU systems and up to 7x the rack-scale token throughput of Maia 200.",
+  "Maia hardware is reserved exclusively for Microsoft internal services, including Copilot and proprietary MAI models, rather than external Azure rentals."
+ ],
+ "body": "On October 12, 2026, Microsoft introduced the Azure Maia 300, its third-generation custom artificial intelligence accelerator engineered to power cloud-scale inference workloads. Unveiled at the OCP Global Summit, the accelerator pairs an advanced semiconductor manufacturing node with high-bandwidth memory to serve large-scale reasoning and multi-step agentic systems. According to [The Official Microsoft Blog](https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments/), Microsoft plans to expand the Azure Maia family into multi-gigawatt deployments starting in 2027, positioning Maia as the primary AI inference infrastructure across its enterprise and consumer products.\n\nThe announcement reflects Microsoft's broader strategy to expand internal silicon production and reduce dependency on external hardware suppliers. Satya Nadella, Microsoft's chief executive officer, described the development as the company's \"biggest bet yet on our own silicon,\" as reported by [GeekWire](https://www.geekwire.com/2026/microsoft-makes-biggest-bet-yet-on-its-own-silicon-unveils-new-ai-chip-to-reduce-reliance-on-nvidia/). By designing accelerators tailored specifically to its proprietary software stack, Microsoft aims to navigate power grid constraints that dictate the pace of AI infrastructure expansion.\n\n[[FIG1]]\n\n## Multi-Chiplet Architecture in Azure Maia 300 Built on TSMC N2P\n\nUnlike its predecessor, the Maia 200, which relied on a monolithic N3P die, the Azure Maia 300 shifts to a disaggregated multi-chiplet design. As detailed in the [Microsoft Azure Blog](https://azure.microsoft.com/en-us/blog/deep-dive-into-azure-maia-300-architecture/), the accelerator isolates compute tasks onto a die fabricated on Taiwan Semiconductor Manufacturing Co.'s (TSMC) N2P node. Memory controllers and input/output functions are moved to separate dies optimized for connectivity, bandwidth, and manufacturing cost. This modular arrangement increases the silicon area allocated strictly to compute calculations, boosting compute floating-point operations by 36%.\n\nMemory specifications show significant gains aimed at addressing decode-heavy model architectures. According to technical documentation analyzed by [StorageReview](https://www.storagereview.com/news/microsoft-maia-300-hbm4-n2p-chiplet-96-accelerator-rack), each Maia 300 accelerator incorporates eight HBM4 stacks providing 288GB of capacity and 18 TB/s of peak memory bandwidth, running within a 950-watt thermal design power (TDP) envelope. Compared to the Maia 200's 216GB of HBM3E and 7.1 TB/s bandwidth, the new design delivers 2.5 times the memory bandwidth, a 33% increase in memory capacity, and approximately double the HBM bandwidth per watt.\n\nTo manage data movement inside the package, Microsoft transitioned from uniform memory access to a locality-aware non-uniform memory access (NUMA) architecture across the chiplets. Built around an evolution of Microsoft's Software Defined Locally Accessed Dataflow Architecture (SDLA), the system allows software to coordinate data placement across on-die SRAM scratchpads, DMA engines, and high-bandwidth memory. Narrower numerical formats, including enhanced MXFP4 and sub-3-bit storage formats, further minimize memory footprint and data traffic during inference execution.\n\n## Scaling Density: 96 Accelerators in a 167-Kilowatt Rack\n\nAt the data center level, Microsoft redesigned its physical server topology to maximize density within strict thermal and electrical parameters. As outlined in the [Microsoft Azure Blog](https://azure.microsoft.com/en-us/blog/deep-dive-into-azure-maia-300-architecture/), the Maia 300 system integrates 96 accelerators across 24 four-accelerator trays into a single 167-kilowatt rack. This doubles the accelerator density of the 48-chip Maia 200 rack while providing 27.6TB of HBM capacity and 1.7 PB/s of aggregate memory bandwidth per rack.\n\nThe system utilizes a hybrid cooling approach, where custom liquid cooling loops capture more than 80% of the thermal load generated by the accelerators, voltage regulator modules, and switch application-specific integrated circuits (ASICs). The remaining heat from memory, storage, and auxiliary server components is dissipated using air cooling. Power distribution relies on dual power feeds and a 50-volt busbar infrastructure with integrated transfer switches to maintain system uptime during maintenance operations.\n\nScale-up networking extends beyond single rack enclosures through a two-tier Ethernet fabric, as documented by [StorageReview](https://www.storagereview.com/news/microsoft-maia-300-hbm4-n2p-chiplet-96-accelerator-rack). Each accelerator incorporates an integrated AI network controller with 32 ports of 400 Gb/s Ethernet running a proprietary AI transport protocol. Within a rack tray, direct electrical links connect paired accelerators, while six high-radix switch ASICs connect all 96 units in the rack pod. Optical connections then link up to 128 racks together, forming a scale-up superpod spanning up to 12,288 accelerators under a unified communication model.\n\n[[FIG2]]\n\n## Production Workloads and Internal Deployment Timeline\n\nMicrosoft intends to deploy the Azure Maia 300 in production facilities beginning in 2027. According to reporting by [The Verge](https://www.theverge.com/news/1009465/microsoft-maia-300-chip-improvements-rollout), executive vice president Scott Guthrie noted that Microsoft expects Maia 300 to achieve 40% more tokens per megawatt compared to leading GPU-based systems, while yielding up to seven times the rack-scale token throughput of Maia 200.\n\nThe Maia architecture is specifically aligned with Microsoft's internal product roadmap rather than external commercial cloud rentals. While The Verge reported that Maia 300 could help Microsoft catch competitors in frontier AI, Microsoft AI chief executive officer Mustafa Suleyman emphasized the need for a platform the company owns and co-designs with Microsoft AI models. While second-generation Maia 200 accelerators currently serve production workloads across the United States, Europe, and Australia for Microsoft Copilot, GitHub Copilot and Microsoft Foundry deployments will expand before the close of 2026, laying the software foundation for the Maia 300 transition.\n\nDespite heavy capital allocation toward proprietary silicon, Microsoft maintains established supply agreements with external semiconductor vendors. Nadella confirmed that the company will deploy next-generation systems utilizing Nvidia's Vera Rubin and AMD's Helios architectures. Analysis by Evercore ISI reported by [GeekWire](https://www.geekwire.com/2026/microsoft-makes-biggest-bet-yet-on-its-own-silicon-unveils-new-ai-chip-to-reduce-reliance-on-nvidia/) estimates that custom Maia silicon will represent roughly 10% of Microsoft's total AI chip spending by early 2027. Further technical demonstrations and deployment roadmaps will be presented at Microsoft Ignite in November 2026.",
+ "faq": [
+  {
+   "q": "When will Microsoft deploy Azure Maia 300?",
+   "a": "Microsoft plans to begin production deployments of Azure Maia 300 in 2027 across multi-gigawatt data center installations."
+  },
+  {
+   "q": "Can external developers rent Azure Maia 300 instances?",
+   "a": "No. Microsoft reserves Maia silicon exclusively for its own internal workloads, including Microsoft Copilot, GitHub Copilot, and internal model development, rather than offering it for cloud rental."
+  },
+  {
+   "q": "How does Maia 300 compare to Maia 200 in hardware specifications?",
+   "a": "Maia 300 provides 288GB of HBM4 memory (up from 216GB HBM3E), 18 TB/s bandwidth (up from 7.1 TB/s), and doubles rack density to 96 accelerators per 167 kW rack, compared to 48 accelerators in Maia 200."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A close-up studio shot of a complex advanced microchip package with multiple interconnected silicon dies and high-bandwidth memory stacks resting on a sleek metallic surface under focused blue and amber light.",
+  "alt": "Illustration of a multi-chiplet semiconductor package with high-bandwidth memory",
+  "caption": "Illustration: A custom multi-chiplet AI accelerator package designed for high-density inference.",
+  "src": "img/microsoft-details-maia-300-ai-chips/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 50090,
+  "small": "img/microsoft-details-maia-300-ai-chips/hero-640.webp",
+  "og": "img/microsoft-details-maia-300-ai-chips/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/microsoft-details-maia-300-ai-chips/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An intricate technical diagram-style illustration showing modular compute dies connected via high-speed interconnects to adjacent memory stacks on an advanced semiconductor substrate.",
+   "alt": "Illustration of a modular semiconductor chiplet layout",
+   "caption": "Illustration: Modular chiplet architecture separating compute and memory components.",
+   "slot": "FIG1",
+   "src": "img/microsoft-details-maia-300-ai-chips/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 66870,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "Rows of tall, densely packed data center server racks in a clean facility with visible cooling tubes and network cabling running between server chassis.",
+   "alt": "Illustration of dense server racks in a modern data center",
+   "caption": "Illustration: High-density server racks engineered with liquid cooling for AI data centers.",
+   "slot": "FIG2",
+   "src": "img/microsoft-details-maia-300-ai-chips/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 40416,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://news.microsoft.com/maia-2026/",
+   "title": "Before - Microsoft's latest custom chip: Maia 300",
+   "site": "Microsoft's latest custom chip: Maia 300",
+   "published": 1791803233000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://azure.microsoft.com/en-us/blog/deep-dive-into-azure-maia-300-architecture/",
+   "title": "Deep dive into Azure Maia 300 architecture",
+   "site": "Microsoft Azure Blog",
+   "published": 1791810000000,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments/",
+   "title": "Microsoft to expand Azure Maia system to multi-gigawatt deployments",
+   "site": "The Official Microsoft Blog",
+   "published": 1791810089000,
+   "official": true
+  },
+  {
+   "n": 4,
+   "url": "https://www.theverge.com/news/1009465/microsoft-maia-300-chip-improvements-rollout",
+   "title": "Microsoft’s new AI chip makes it less reliant on Nvidia’s GPUs",
+   "site": "The Verge",
+   "published": 1791810000000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://the-decoder.com/microsoft-plans-to-scale-its-own-maia-ai-chips-to-gigawatt-levels-by-2027/",
+   "title": "Microsoft plans to scale its own Maia AI chips to gigawatt levels by 2027",
+   "site": "The Decoder",
+   "published": 1791818643000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://www.geekwire.com/2026/microsoft-makes-biggest-bet-yet-on-its-own-silicon-unveils-new-ai-chip-to-reduce-reliance-on-nvidia/",
+   "title": "Microsoft makes 'biggest bet yet' on its own silicon, unveils new AI chip to reduce reliance on Nvidia",
+   "site": "geekwire.com",
+   "published": 1791763200000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://www.storagereview.com/news/microsoft-maia-300-hbm4-n2p-chiplet-96-accelerator-rack",
+   "title": "Microsoft Maia 300 Puts 288GB of HBM4 at 18TB/s on an N2P Chiplet and 96 Accelerators in a 167kW Rack",
+   "site": "StorageReview.com",
+   "published": 1791834329000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1791850983835,
+ "updatedAt": 1791850983835,
+ "foundVia": "news.microsoft.com, Google News and Google Search",
+ "check": {
+  "claims": 40,
+  "score": 10
+ },
+ "story": {
+  "id": "P891a777c",
+  "score": 98,
+  "items": [
+   "https://news.microsoft.com/maia-2026/",
+   "https://news.google.com/rss/articles/CBMiigFBVV95cUxQMFNMVlVUZmNza0NDelpIV21DellOcjRTcXFTUjQ5ZElIVUYxQ0I3SmJDa29wdldwUk1vYzZFUHE5aldoaXV6Y0dwb05WZ3RoV3VKUWxzaU1NY3dCSkMwRl92T1dBeTlUcklTUEJIYlpaQzJ4OW1kbU00VG5yc1pCaUQ2Q3RxekVsd0E?oc=5",
+   "https://news.google.com/rss/articles/CBMiugFBVV95cUxPWHVSM1ltUmRIUHVldm04ZU5JX2hLc0lhYjZVaDMzMDlkVkxXNUM3OTFFVU1kdlM1R3BneGN5cXp3Ui1Yc211TFF0VUU3ZlpRWjhBRy0yOGJjdlZxR3FmdmFHdFNMRDM3Rnh3WjJMd0d1MHNINEdvdWpBVEc5TTJNMjk1Xy1JNEY2b1g5RkYzWXYtakQ0SmNnMHdoUlRnbjFMSWVBUm9QaVBXbkFNUVgwSDVLdURleTBwMHc?oc=5",
+   "https://news.google.com/rss/articles/CBMiygFBVV95cUxPUEZEbjdfOE1lY3RRLVpLcGZDNlUtLU93MTlhbW9JYzRoMmlGZHJsNmd5UFRXNjZkWE9FUmhLRFNqOTZVQ3dKaHkyNm15blIwSXduVk9wb18wV1d4djQ5Sm9Fc1E0aFA3cC0wbjhubVFHRlM2emVWTGhvRGNDYmJiN0JwV2tfQ2xHelBzUEU5R1ZPNVZPNW4tY1VhbjhuQUtHMXZILWdqTDgwdkFHZU5XbnZKNEdWUjk2M01jQ1pUeV9tQ2NUQ3FEV0Rn?oc=5",
+   "https://www.geekwire.com/2026/microsoft-makes-biggest-bet-yet-on-its-own-silicon-unveils-new-ai-chip-to-reduce-reliance-on-nvidia/",
+   "https://www.techmeme.com/261012/p21#a261012p21",
+   "https://www.theverge.com/news/1009465/microsoft-maia-300-chip-improvements-rollout",
+   "https://news.google.com/rss/articles/CBMickFVX3lxTFBhNk5uaFNHMUFFMFE1SW1UajBzMjhuYkV4RzF1b2gtd3BYU283cEY3b016MXI1MFFwSWFkX1Zoak1vdmdzamRJM1FYa1dNVmpEVUJNU0FDX1lJV2l3VWE2V1otckhnSWd2dkI0cElLNUE1dw?oc=5",
+   "https://news.google.com/rss/articles/CBMiswFBVV95cUxQazlUUklSM194X0ZVSXJGS0FxMFFKRlZydGkwQ1BFck1wZUdoXzBQUUpaV0piUWpkZURxdm8xc1NmVU5yZ1ZFR21falZac0pNMmZVRk5IMVBRWF9vNk1YbmQ1cFFadG1FaG56YV85UGs5LVJMNXpuZV9MUHdTbWQ1OEtWSHdoWDM3WmRybkRvV1hTRVBldlE0MzU2M0tYSnFzbkJLS1dPZUtzX2VqcUZLNW5Ta9IBuAFBVV95cUxQMHRLTGVMVUZkNjdFOW4zNGh3b290UW5sNWU2S3JJS193U0MtRDU2T2d6RVJkWXA5TDQwc2tHcy1jXzNxaXpGSGNrVHVndTJKOVJUMEtHU1BPYVVCQ3NBMGRMSlQwdzBqOWVEZE9odmVKMk81YmpicGFsTHBMbTdoc2lsSTJfbGFFTjdlZ1dqSGVDVU1kUTlhZlBxR2E2NldLSWxzTzg1UkVQUU9uN0g2MjJBZU5Qdzcz?oc=5",
+   "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBTX0VySlg4ajZ6dS1tSWJsUjVaNW5MTjVTemF6OUtYM2w3c0xXM0xZQ2lObHhUXzVuTW8wMWNvaDQ3U0x4VlBoRzN5UGRJRnZfVHNYQU0tSnY0OE0?oc=5",
+   "https://news.google.com/rss/articles/CBMikgFBVV95cUxQVDVFeU9KeTdoaUtrWjNqTF84dFBhcHJkRGFUZndrMGU3dk52akU0S1IwUXBTSERoX2U5TTV1bTRfdExmb0drb3NoSTdXdXB6SUpfaU5TeW9jdUJYdlUzRm9WdTNlNGF4aExWVjZDQVVRc3BoTE9rUWJWNC0tVVl4bFRmRk5NQVMwS0IyRWZyUXdnQQ?oc=5",
+   "https://news.google.com/rss/articles/CBMibEFVX3lxTE1TaW9GR0FyMklyc3piSVNLNDRRcEZ5M09yaXpaR3EzV05aUlZoRXEzQ2Q2X3I1bTBDZUg1NDJtaFE5RkNScl9XMG40cHFGRWZaakVJX3ozZzRZV3YzQ0R2MGR0b3FmZUw3bl9veA?oc=5",
+   "https://news.google.com/rss/articles/CBMitwFBVV95cUxQOURWUHhSdXF5LVVhaTI4LU16dVBFSWYyNEhxcm1sYWpsZFV0TER5eWdXRkRiTmY3MHZNQjktYzdIZ1haek85ZmtDRFE5WTcySi0tNFpIMWZlTE53M2hKbUo1cEczaWF1N1F6ZTBtMFA1dFMtQ3l6WVpUT2o3U1hfZG16TlFDLS1fYUhPZDF6Wl9kQ0VrRkVaTGI2OHFYVWZ5d3ZVTGdYM3plVG5XNDVucDRhMU9ubjQ?oc=5",
+   "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPQWU4ZWRmVE9JQWtLc2FiblhnOFc4emZLVTM3UXZCaXNUTUlZdFRQMkMwVXZwVTNYbWlPM2JFOXYtdWZNdnRTcmhMdk1GREpWdm1uX2Q3OGQ3b2NvNGhzRXdZUHFhakNQZ2JCS0tTSHdXWWZOdWQ4S3Q5S0RPMWpzRlBPQVRXZDBQLVpTVnYtM2o4c1lXWlZwb0dWZFNuNFJ0ZU02eVNaWHhpZw?oc=5",
+   "https://www.techmeme.com/261012/p29#a261012p29",
+   "https://the-decoder.com/microsoft-plans-to-scale-its-own-maia-ai-chips-to-gigawatt-levels-by-2027/",
+   "https://www.reddit.com/r/accelerate/comments/1x44bw5/microsoft_dropped_an_incredible_chip/",
+   "https://news.google.com/rss/articles/CBMisgFBVV95cUxNQWtCRTJBSThLQjBSa09qbEhKc2d2N0xyMDdJYXFXZWg4UGFRcUExcVBBd292eFl2WGwzVXBCVzg2WWtnOFM5eE1ma2gzTGNSMms5SFFpdTZOVjR4TEZEcmlpZmNYbEdUZmxya1FremFRNmVNTTdzYUlRdzZEYmFBV3VwVWNEUmFDMG9NMjNRX25BRW9Gbktyb0RGNWE2a0kxLTV0VEZ1YXozZDRuNm91YkpB?oc=5",
+   "https://news.google.com/rss/articles/CBMimgFBVV95cUxQbXdvdGREcjRPNHptRzBRc0U2a3ZSZXQ5cHdDRG5HVkpyYnZCTmJKcVdJVnpGUnhua09PbmR4bXdXM0diYVptTWNmcHFaY3FTRmlJV2N6d2Vma183QnA3UnFjUTVNRjhEWWRFZDJNQTdGNkkzbFNNSzFvLTloQ25kQmlYRXFfcmRCSzVvdU9VdXhSUEx5d1ZqU3VB0gGfAUFVX3lxTFBYNlVqUHRKWk9zYWtJU1hCWEpKM2tRUDgxdDltRlV1aU52dmlieFIyWTNwOEt2VndRT01ERnVmVG1xaEt6YnptRDhJNW42bFgwQWM4QXJMTTE5SllPZFc5dUtoclhJamluZENjdXdzeGdDNDFzejZlSHRwbjBVX0VTbHh0ZDRPVlNfQVgyelJVUl9KZi1LQllkR29uRlg4NA?oc=5",
+   "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPU3RjYjdEeDVFT2NQZHV1QXkyT3hRaF9pQTcyYlZoQ0VRdlVtWTdSVEZSUWUxOFU5bGs5ZW9WNm5fUFlTa3RXejBBNUdhTEVrVkFDcEdSNjFFb1lxX0l0UVBxbXZTbm5JWkQ4Z3ctMTNlUGoyNFRlQUpZR01wM1hLZGJiRkFheXpLRXhSZ1Y0dlR2eTBaOHQ3cTVpYXdUMk1UTmxBVFJjOHJNVVVLSVRpTmEzMksyVWgycDBsOFBJTVk0eXMtS0ZCN2FWTWU0MngwN2IyZjZxaWc3VEZNMF9SdnIwZndUOElTZURHY0FUVdIB6AFBVV95cUxPUjFpYWhrVUlfaTU2Z0hOc3M0OXlSX3htOUdHNklFN3RaeFBKN1Y4X2g5bWUxVmRvWW5KMnJpZGNDam9QTkEzdkdkVHRtcHFEZUlidF9aZTlVRGdGVXlyczNYdWdJaGpfcmZSN3M0cktOdS1wb3JoWEFnSHVPbklNUjBYQ1FKbjFvVm1HbjBjMWhmWjJIZHpmandKeWFkYkNSbEN3N2trT1JIMG9jS3QxeHBxUXQyMUdUaE42S29zMmNmZ01xaFNzVlIwX2xUX0pxd3llR2I3MzVRNExYNW1JaGd0N3pZVGw5?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
