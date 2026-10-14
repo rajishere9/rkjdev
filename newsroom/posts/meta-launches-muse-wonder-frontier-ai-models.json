@@ -1,0 +1,164 @@
+{
+ "slug": "meta-launches-muse-wonder-frontier-ai-models",
+ "title": "Meta Launches Muse Wonder AI Models to Challenge OpenAI and Anthropic",
+ "seoTitle": "Meta Launches Muse Wonder Frontier AI Models",
+ "description": "Meta has launched its Muse Wonder frontier AI models, offering multimodal agent capabilities and matching rival labs on key software engineering benchmarks.",
+ "dek": "Meta Superintelligence Labs released Muse Wonder and Muse Wonder Full, introducing agent memory tools while keeping its top-tier model behind a coding paywall.",
+ "category": "AI Models",
+ "tags": [
+  "Meta",
+  "Muse Wonder",
+  "Artificial Intelligence",
+  "LLMs",
+  "AI Agents",
+  "Benchmarks"
+ ],
+ "keyTakeaways": [
+  "Meta launched proprietary models Muse Wonder and Muse Wonder Full on October 12, 2026, marking a complete shift away from open weights for its flagship tier.",
+  "The standard Muse Wonder model is accessible via commercial API for $4.00 per million input tokens and $20.00 per million output tokens, while Muse Wonder Full is exclusive to paid Muse Code subscriptions.",
+  "On the Artificial Analysis Intelligence Index v4.3, Muse Wonder Full scored 56, matching Claude Sonnet 5.5 and trailing only Anthropic Claude Opus 5.5 at 58.",
+  "New core agent capabilities include Active Memory for context retention across sessions and Active Focus for self-correction during long multi-step workflows."
+ ],
+ "body": "On October 12, 2026, Meta officially launched its new flagship artificial intelligence model family, introducing Muse Wonder and Muse Wonder Full. Developed by Meta Superintelligence Labs—a dedicated research division established approximately 14 months ago and led by former Scale AI chief executive Alexandr Wang—the models represent the tech company's push to directly match frontier systems built by Anthropic, OpenAI, and Google. This official release marks a major operational transition for the company: neither Wonder model includes downloadable open-source weights, confirming a closed commercial strategy for its top tier as reported by [VentureBeat](https://venturebeat.com/technology/metas-new-muse-wonder-and-muse-wonder-full-models-achieve-frontier-performance-but-only-the-weaker-one-is-available-via-api).\n\nAccording to Meta's research blog, the models were trained at the company's gigawatt-scale Prometheus data center, located in central Ohio according to AIToolsRecap. The system processes multimodal inputs spanning text, images, audio, and video across an approximate 1-million-token context window, while outputting text. Chief Executive Mark Zuckerberg stated on X that the release represents \"a much larger and more advanced class of models\" compared to the earlier Muse Spark family introduced in April 2026, coming just six weeks after Spark 1.3 debuted. Following the launch, Meta shares rose 3% on Monday, as detailed by [Latent Space](https://www.latent.space/p/ainews-meta-muse-wonder-and-wonder).\n\n## Active Memory and Active Focus for Autonomous Agents\n\nRather than framing Wonder solely as a conversational engine, Meta built the architecture to handle sustained, autonomous tasks across personal and professional domains. In its technical overview on the [Meta AI Research Blog](https://research.meta.ai/blog/muse-wonder), the company emphasized two core systems: Active Memory and Active Focus. Active Memory allows the model to preserve personal and professional context across multiple conversations spanning days and weeks, automatically retrieving relevant project details when new tasks arise.\n\nActive Focus equips the models to work through multi-step blockers without abandoning an assignment. Meta claims that when a task becomes difficult, the model will attempt alternate strategies, recover from execution errors, and seek clarification from the user. For sensitive or consequential workflows, Meta stated the agent checks in with human operators before finalizing actions.\n\n[[FIG1]]\n\n## Benchmark Performance Across Coding and Legal Tasks\n\nIndependent evaluations show Meta has closed the gap with incumbent frontier developers, though results vary by task. According to the independent evaluation firm Artificial Analysis reported by [Mashable](https://mashable.com/tech/meta-launches-muse-wonder-ai-model-family), on its Intelligence Index v4.3, Muse Wonder Full scored 56 at maximum reasoning effort, while the standard Muse Wonder scored 52. For comparison, Anthropic's Claude Opus 5.5 led the index at 58, Anthropic's Claude Sonnet 5.5 scored 56, OpenAI's GPT-6 Astra scored 53, and Google's Gemini 4 Argon posted 53.\n\nMeta's published model card highlights strong results in software engineering and professional reasoning. On the DeepSWE 1.1 software engineering evaluation, Muse Wonder Full scored 79.0% and standard Wonder scored 78.8%, surpassing Claude Opus 5.5 at 74.2% and GPT-6 Astra at 74.1%. On SWE-Marathon, which measures long-running coding projects, Wonder Full scored 57.5% compared to 46.3% for Opus 5.5 and 42.5% for GPT-6 Astra. On the legal domain benchmark Harvey LAB-AA, Wonder Full posted a score of 13.1, outperforming Astra's 8.6 and Opus 5.5's 4.2, though overall legal scores across all providers remained low.\n\nHowever, the evaluations also revealed clear limitations. On Terminal-Bench 4.0-AA, Claude Opus 5.5 (59.6%) and GPT-6 Astra (59.1%) both outperformed Wonder Full (57.1%). On medical reasoning evaluated by HealthBench Pro, Claude Opus 5.5 scored 65.6 and Astra scored 65.3, ahead of Wonder Full's 62.3. As noted by [VentureBeat](https://venturebeat.com/technology/metas-new-muse-wonder-and-muse-wonder-full-models-achieve-frontier-performance-but-only-the-weaker-one-is-available-via-api), Meta's internal evaluations also relied on different tooling configurations for certain coding comparisons, meaning not all tests occurred under identical conditions.\n\n## API Pricing, Availability, and the Muse Code Paywall\n\nAccess to the Muse Wonder family is split across tiers. The standard Muse Wonder model is available immediately through the Meta Model API under the model identifier `muse-wonder-1.0`. Meta priced input tokens at $4.00 per million, output tokens at $20.00 per million, and cached input tokens at $0.20 per million, alongside an optional web search fee of $2.50 per 1,000 queries. Rate limits are capped at 3,000 requests per minute and 4 million tokens per minute. This token pricing matches Anthropic's standard Claude Opus 5.5 rates exactly, while undercutting OpenAI's GPT-6 Astra standard rates of $10.00 input and $50.00 output per million tokens.\n\nHowever, developers looking to integrate Meta's highest-performing model cannot do so programmatically. Meta has restricted Muse Wonder Full entirely from the public API, reserving it exclusively for paid subscribers to its Muse Code programming tool, as outlined by [AIToolsRecap](https://aitoolsrecap.com/Blog/ai-news-october-13-2026). Muse Code subscribers must pay either $50 per month for the Power Usage plan or $200 per month for the Maximum Usage plan to access Wonder Full. The models will also roll out to paid subscribers of Meta's consumer agent app Muse, which recently surpassed 5 million downloads.\n\n[[FIG2]]\n\n## Privacy Settings and Data Governance\n\nMeta introduced distinct data handling policies alongside the launch. The pay-as-you-go Meta Model API operates under Standard Mode, which guarantees customer inputs and outputs are not used to train future AI models. Conversely, Muse Code subscriptions default to Contributor Mode, which permits Meta to use submitted prompts, code repositories, files, and outputs for model training. While users can manually turn Contributor Mode off, Meta's terms forbid submitting sensitive, confidential, or personal data while the feature is active.\n\nEnterprise customers can request Zero Data Retention (ZDR) for the Model API, but selecting this option introduces technical tradeoffs. Turning on ZDR disables server-side conversation state, file uploads, background execution, and integrated web searches. Because these limitations disable memory and persistence, developers running ZDR cannot take advantage of Wonder's headline Active Memory feature.\n\nMeta's push into proprietary frontier models comes amid elevated spending, with the company projecting its 2026 AI-related investments could reach $145 billion, according to [The Hindu](https://www.thehindu.com/sci-tech/technology/meta-says-its-new-ai-models-on-par-with-openai-anthropic/article71577915.ece). While Zuckerberg signed an administration-backed AI safety pledge alongside leaders from OpenAI, Anthropic, Google, and Nvidia in September 2026, Meta's release schedule demonstrates that it is pressing forward with commercial deployment rather than adopting voluntary development pauses.",
+ "faq": [
+  {
+   "q": "How can developers access Muse Wonder and Muse Wonder Full?",
+   "a": "Standard Muse Wonder is available through the Meta Model API at $4.00 per million input tokens and $20.00 per million output tokens, as well as via Muse Code. Muse Wonder Full is not available on the API and can only be accessed through paid Muse Code subscriptions costing $50 or $200 per month."
+  },
+  {
+   "q": "Are the weights for Muse Wonder open source like Llama?",
+   "a": "No. Unlike Meta's older Llama models or its Muse Glimmer release, both Muse Wonder and Muse Wonder Full are proprietary models. Meta does not offer downloadable weights or self-hosting options."
+  },
+  {
+   "q": "What are Active Memory and Active Focus?",
+   "a": "Active Memory is Meta's system for retaining and recalling context across conversations over days or weeks. Active Focus is an agentic execution feature designed to keep the model pursuing complex goals, trying alternative strategies and self-correcting when encountering errors."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An expansive high-tech data center hall illuminated by cool blue and magenta lighting, filled with rows of sleek computing server racks, with an engineer in modern work attire inspecting a digital diagnostic tablet in the foreground.",
+  "alt": "Illustration of an engineer inspecting server racks inside a large-scale data center facility.",
+  "caption": "Illustration: Meta's new frontier models were trained at its large-scale Prometheus data center.",
+  "src": "img/meta-launches-muse-wonder-frontier-ai-models/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 49550,
+  "small": "img/meta-launches-muse-wonder-frontier-ai-models/hero-640.webp",
+  "og": "img/meta-launches-muse-wonder-frontier-ai-models/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/meta-launches-muse-wonder-frontier-ai-models/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A modern software development workspace where a female software engineer collaborates with an intelligent multi-screen system, reviewing complex branching code structures and process workflows.",
+   "alt": "Illustration of a software engineer examining code and agent automation workflows across multiple monitors.",
+   "caption": "Illustration: Muse Wonder introduces Active Memory and Active Focus to sustain long-horizon agent workflows.",
+   "slot": "FIG1",
+   "src": "img/meta-launches-muse-wonder-frontier-ai-models/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 35138,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A corporate enterprise office meeting where software developers and technical managers review AI API pricing plans and compute resource allocations on an interactive display board.",
+   "alt": "Illustration of a tech team discussing model pricing and API integration strategies.",
+   "caption": "Illustration: Developers face different access tiers, with Wonder Full reserved for paid coding subscriptions.",
+   "slot": "FIG2",
+   "src": "img/meta-launches-muse-wonder-frontier-ai-models/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 39504,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/",
+   "title": "Introducing Muse Wonder and Muse Wonder Full: Frontier Models for Agents",
+   "site": "Meta Newsroom",
+   "published": 1791824885000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://venturebeat.com/technology/metas-new-muse-wonder-and-muse-wonder-full-models-achieve-frontier-performance-but-only-the-weaker-one-is-available-via-api",
+   "title": "Meta's new Muse Wonder and Muse Wonder Full models achieve frontier performance, but only the weaker one is available via API",
+   "site": "venturebeat.com",
+   "published": 1791763200000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://www.thehindu.com/sci-tech/technology/meta-says-its-new-ai-models-on-par-with-openai-anthropic/article71577915.ece",
+   "title": "Meta says its new AI models on par with OpenAI, Anthropic",
+   "site": "The Hindu",
+   "published": 1791865643000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.latent.space/p/ainews-meta-muse-wonder-and-wonder",
+   "title": "[AINews] Meta Muse Wonder & Wonder Full: MSL’s Claude 5.5-tier Frontier Model",
+   "site": "Latent.Space",
+   "published": 1791884224000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://research.meta.ai/blog/muse-wonder",
+   "title": "Muse Wonder: A Frontier Model For Personal & Professional AI Agents",
+   "site": "Meta AI",
+   "published": 1791763200000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://mashable.com/tech/meta-launches-muse-wonder-ai-model-family",
+   "title": "Meta launches Muse Wonder, catching OpenAI, Anthropic: How to try it, benchmark results",
+   "site": "Mashable",
+   "published": 1791836149000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://aitoolsrecap.com/Blog/ai-news-october-13-2026",
+   "title": "AI News Today, 13 Oct 2026: Meta Ships a Frontier Model",
+   "site": "AIToolsRecap",
+   "published": 1791849600000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1791937403600,
+ "updatedAt": 1791937403600,
+ "foundVia": "Google Search, Google News and latent.space",
+ "check": {
+  "claims": 33,
+  "score": 10
+ },
+ "story": {
+  "id": "Pd299eae1",
+  "score": 95,
+  "items": [
+   "https://aitoolsrecap.com/Blog/ai-news-october-13-2026",
+   "https://news.google.com/rss/articles/CBMipgFBVV95cUxNX29ua2N5bHdBX2ZQRHpvd3dNd2FJb09rNG9qWDBub0lUbEdRbDMyb0hKY3Z6NmQtZ0JnRW4tVWloTVVCREY0MGViREFnOEF6STNTeHI1a1diakJveC1RUzNNbUVLWGpJVlc0NHRSTUhfVHMzVTVVazJzZ1RzQXVqcEwxb09kR21kYm0tM3BxTjNYV2pOOHFudVlKNVA5MWdScXJYdkhR?oc=5",
+   "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOWmVfYVJRZ2Qwd0ZGUWVFVk5yTjhva0tnS3p2VmJzVkNvMVEzU1NFYUZvZVA1RnlWTDBUc1RLdGw3Mm9yZEJpdG5LbE42R2FtcUI3ZzhXVXBoY00xY29FZjlkMDdZN0ZsYnlxOEQtMXUtRGlwMWI5djdHMW9RQW5yRUcwQXRRUzg0b3l6blBxRFo3Vkh2djhBSWFJaVlrelgtT185LWZXZnhuelBNeEdLc1VZQlBmWDQ2RGQ5TWNFWVRrTHA1ZTBYZTJKS1NyUW10VDNBRC1QVHpvOUVNbW10eE5TVW5DUdIB6wFBVV95cUxPTGd6OHV0dFkxMXZvek11d3BKRlltRzhCdUg2V0V4WEx2WDFfVXBkZlBtLVFkMnVpUk5fRXJCeDFCaTd6UWRVNnEzR1ZjR1FHZ2hxdDYzNktSbkF1WklydHhtbzBtdkRGUklnZVB2RlM4UXZXVDNacHNxT1BaNVhrSW13VXJuU2RYcUdnRExGdU96Mk5ZQTRaYmhhQjV0OTVyMXFQQWtSUDRYcFlvZnhUTE1vejA2eExRM1I4TWEzV3ZYemFCU3hJbHZBUUlXd1hEOXVoenpicnk4a1dNd3NfVkZaOW1VenUyQ1B3?oc=5",
+   "https://www.thehindu.com/sci-tech/technology/meta-says-its-new-ai-models-on-par-with-openai-anthropic/article71577915.ece",
+   "https://news.google.com/rss/articles/CBMikgFBVV95cUxNRHF0Tno4MERfd2doQnpCVHBySm1SZkRmUGRkYzdtQkpSbENEZFVwcEJqc3J6ZGtzUXhBUk1JMEh4Y2NIdUhtai12dXJzVVhxTUFEVFVseVotdXdOaG5XQWt0OXdqNXRtWThQNVZOdmVzLW5IUTN3QU5XY0Jfd29DbldNVGdqMEs1czV0bWlPNTFDZw?oc=5",
+   "https://www.latent.space/p/ainews-meta-muse-wonder-and-wonder",
+   "https://news.google.com/rss/articles/CBMibEFVX3lxTE9yWGw1MVlfR3M5Um1mTWM4YXYtMno1WDJ4T1FJV1hpOW85S2VpYUJDTER6dlM4bk8tdG1zWUcxc2pYZmVPVDFrck5lTV8tbGFPLUQySU5IVkNrdWs5WEJybVBjUHhlN1JNWk5XaQ?oc=5",
+   "https://news.google.com/rss/articles/CBMioAFBVV95cUxPVkR1S3ZsalZkRjlRRkxEdVVBbU5ENUdtM3AxanQ1cXdNUW40RTNWRkkyUFJ0N3dmS0Nyd1oyUlBxUktvZ29pMGdDWXA1anFzNHVsQzZtRGs2ei16Nk5LOFZfZzVUbTVHSHRDS2lTMHlsX1oweEY5NEJUa0lGWnA1R2lzTURJclBMYmxaci1xcmRYMEhnMEFNSm5LSkVOd040?oc=5",
+   "https://www.reddit.com/r/ClaudeAI/comments/1x53dea/metas_new_muse_wonder_cost_96_on_pokémon_red_and/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
