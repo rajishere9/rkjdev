@@ -1,0 +1,435 @@
+{
+ "reason": "fact-check failed: Maia 300 is built on TSMC's 2nm process. | Illustration depicts microelectronics engineers evaluating advanced multi-chiplet designs inside a semiconductor fabrication plant.",
+ "story": {
+  "id": "Pc0474722",
+  "headline": "Microsoft Unveils Next-Generation Maia 300 Custom AI Accelerators",
+  "firstSeen": 1791869645499,
+  "items": [
+   "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/microsoft-plans-huge-deployment-of-its-own-ai-chips-with-an-eye-on-saving-costs/134906279",
+   "https://news.google.com/rss/articles/CBMidEFVX3lxTE1TTlh6TzJPTWpRbG1rV05PcVBOeWtQU2tsbGJ6RmVySDlmc0NYWmR6cllBclcwdTlYVHBRREs5djhZeDl6ajZGM1hfcWZpZnRXSktXVFZoY1ZlR1BudWtzNFgzNFNDd2Z0bjhTUnZXekQwTHZl?oc=5",
+   "https://news.google.com/rss/articles/CBMigAFBVV95cUxPTnU3eWwxdWloX1ZFckwtTzZhTVBFM1R4X2hRdmJiT2wwWEdEZzVDRFFhVWNka2RIQUtBVGJyZGN6Wk1kX2N4RE5QRy1xY0F2ZmFYVm02LVVZVzFIcTNxN01RRDFLYW1XTTAzUkpPV3VrUkVFM1cyTzFJRjNyb3pCVQ?oc=5",
+   "https://news.google.com/rss/articles/CBMirAFBVV95cUxOVEY4cmZuQjFvdS1lRUFZTUFUdHBDTUJzYmJGaVhZTTh3QXhnSnhhMVRnVm1WMFZKRUpPQUJiTDRsbGlmZnB5aGtVVDg1SnNUeDMwWi1raFp6S2thOEc2OUJXOWNFckMySnZid2ljbURVdEFfNlhDaFpYc1VxX3RDM3ZQeGZ4QTBBWHJNRmdsUlJ2Z1dWaEJKSDFfZWJRZ0FCRHA5UDR5a3IyVlYw0gGyAUFVX3lxTE5xcEdTejFlYVg3UmJtVGlwZmJtOFc1T2F1UVozRV9rOG5SQkV1OWpSejI5OXNXbjRSSzdlWnZnNGhCaDk5YnJBOWtOZmxRQW1mUUJxWXRwcVdvUVZXNUU4ZXlld3c4WUZnMV8wS0ZRaTQwekRWai1xSVotM2RCdUpWLVQyOUU1eGRwVkZIZmFmNUZtVWRxNFlIbFNlR1YzRl8zajgtR29FZl9xclhRQTBJQmc?oc=5"
+  ],
+  "attempts": 1,
+  "importance": 85,
+  "summary": "Microsoft has announced the Maia 300, its next-generation custom AI accelerator built using advanced 2nm technology. The chip expansion highlights the company's growing push into in-house silicon infrastructure to power its AI workloads.",
+  "category": "Chips & Hardware",
+  "lastSeen": 1791878644640,
+  "update": false,
+  "updateOf": "microsoft-details-maia-300-ai-chips",
+  "score": 88
+ },
+ "draft": {
+  "newsworthy": true,
+  "title": "Microsoft Unveils Maia 300 Custom AI Accelerators for 2027",
+  "seoTitle": "Microsoft Unveils Maia 300 AI Chips for 2027 Scale",
+  "slug": "microsoft-unveils-maia-300-ai-accelerators",
+  "description": "Microsoft revealed the Azure Maia 300, a 2nm multi-chiplet AI accelerator deploying in 2027 with HBM4 memory and multi-gigawatt cluster scaling.",
+  "dek": "Built on TSMC's 2nm process, Microsoft's third-generation AI accelerator targets multi-gigawatt inference deployments starting in 2027.",
+  "category": "Chips & Hardware",
+  "tags": [
+   "Microsoft",
+   "Azure Maia 300",
+   "AI Chips",
+   "Semiconductors",
+   "TSMC",
+   "HBM4"
+  ],
+  "keyTakeaways": [
+   "Microsoft announced the Maia 300 custom AI accelerator on October 12, 2026, targeting multi-gigawatt production rollouts beginning in 2027.",
+   "The chip uses a multi-chiplet architecture combining TSMC's 2nm N2P process for compute with 3nm dies for I/O and memory controllers.",
+   "Each accelerator features 288 GB of HBM4 across eight stacks, reaching 18 TB/s of peak memory bandwidth inside a 950-watt thermal design envelope.",
+   "A standard rack packs 96 accelerators drawing 167 kW, scaling up to 12,288 chips across a 128-rack optical superpod fabric."
+  ],
+  "body": "On October 12, 2026, Microsoft officially announced the Azure Maia 300, its third-generation custom artificial intelligence accelerator engineered to handle long-context reasoning, latency-sensitive conversational interfaces, and sustained agentic workloads. Microsoft revealed comprehensive rack-level specifications, memory configurations, and deployment schedules. The company plans to begin production rollouts in 2027, scaling the platform into multi-gigawatt installations that could potentially involve more than one million chips serving internal AI operations across Microsoft Copilot, GitHub Copilot, Azure OpenAI workloads, and proprietary MAI models.\n\nAccording to [The Official Microsoft Blog](https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments/), Maia 300 is designed to serve as Microsoft's primary inference architecture as enterprise demands shift toward multi-step autonomous agents. The announcement follows the production deployment of Maia 200, which currently serves live workloads for Microsoft Copilot, Teams, and internal foundation model research across data centers in the United States, Europe, and Australia.\n\n[[FIG1]]\n\n## Multi-Chiplet Architecture Built on TSMC 2nm\n\nTo manage manufacturing economics while scaling compute capability, Microsoft adopted a disaggregated multi-chiplet architecture for Maia 300. As detailed in the [Microsoft Azure Blog](https://azure.microsoft.com/en-us/blog/deep-dive-into-azure-maia-300-architecture/), the primary compute chiplets are fabricated on Taiwan Semiconductor Manufacturing Company's (TSMC) advanced N2P process node. Peripheral functions, including memory controllers and input/output (I/O) communication blocks, reside on separate dies manufactured on 3-nanometer technology.\n\nThis separation allows Microsoft to dedicate silicon area on the costliest cutting-edge node exclusively to compute execution. The design increases raw compute FLOPs by 36 percent over the previous-generation Maia 200 while expanding scale-up interconnect bandwidth by 14 percent, according to Microsoft's architectural whitepaper. Control path programming remains separated from data path execution through Microsoft's Software Defined Locally Accessed (SDLA) architecture, which coordinates data placement and DMA engines across specialized local memories and compute engines, while superpod communication between accelerators occurs without host processor involvement.\n\nOn-package memory organization also shifts away from uniform memory access (UMA). Instead, Maia 300 adopts a locality-aware non-uniform memory access (NUMA) topology across the chiplet substrate. Each compute region pairs with adjacent memory storage to limit physical travel distance across the package, minimizing electrical dissipation during decode-heavy token generation.\n\n## HBM4 Subsystems and Low-Precision Compute\n\nMemory bandwidth forms the central constraint in cloud-scale large language model serving. Maia 300 integrates eight stacks of next-generation HBM4 memory, delivering 288 GB of high-bandwidth memory capacity and 18.0 TB/s of peak memory bandwidth. As reported by [TrendForce](https://www.trendforce.com/news/2026/10/13/news-ai-chip-memory-strategies-diverge-microsofts-maia-300-fuels-hbm4-demand-as-intel-bets-on-lower-cost-lpddr5x/), this represents an expansion from the six HBM3E stacks deployed on Maia 200, which provided 216 GB of memory.\n\nThe accelerator operates within a thermal design power (TDP) envelope of 950 watts per chip. Compared to Maia 200, Microsoft states the new subsystem provides 2.5 times the total memory bandwidth, a 33 percent capacity increase, and approximately double the HBM bandwidth per watt. The hardware architecture pairs this capacity with software-managed on-die static random-access memory (SRAM), which functions as a dedicated scratchpad to shelter HBM from continuous access during intermediate kernel operations.\n\n[[FIG2]]\n\nTo increase sequence length capabilities, Maia 300 adds instruction set architecture (ISA) extensions tailored for low-precision mathematical formats. The chip natively accelerates enhanced Microscaling FP4 (MXFP4) computation and sub-3-bit storage formats for key-value (KV) caches. Designing for low-precision formats reduces memory and bandwidth requirements for computation and KV-cache storage.\n\n## Rack Density and 12,288-Chip Superpod Fabrics\n\nAt the data center level, Microsoft packages the accelerators into integrated rack systems designed around power and cooling constraints. Each Maia 300 rack houses 96 accelerators divided among 24 four-accelerator trays, drawing 167 kilowatts of power. This doubles the accelerator density of the Maia 200 platform. Each tray includes its own host processor, storage, memory, and thermal routing, removing the requirement for standalone host compute shelves.\n\nAcross a single 96-accelerator rack, the system delivers an aggregate 27.6 TB of HBM capacity and 1.7 PB/s of aggregate memory bandwidth. Power enters through dual utility feeds supported by a 50-volt busbar distribution system and an integrated rack-level automatic transfer switch. Thermal dissipation uses a hybrid model: facility liquid cooling dissipates more than 80 percent of the heat load generated by compute processors, voltage regulators, and networking ASICs, while supplemental air cooling manages peripheral storage and auxiliary chips.\n\nInterconnect scaling uses a two-tier Ethernet-based AI transport fabric. Accelerators communicate directly within trays over short electrical links, while three liquid-cooled switch trays containing six high-radix ASICs connect all 96 chips inside a single rack pod. To scale beyond individual cabinets, optical transceivers link up to 128 racks together, creating a unified scale-up domain of 12,288 accelerators. According to Microsoft's technical disclosure, an accelerator can route up to 750 GB/s to any peer within this superpod fabric without traversing standard host-level network interface cards.\n\n## Efficiency Claims and Market Context\n\nMicrosoft claims that Maia 300 delivers up to seven times the rack-scale token throughput of Maia 200 and more than 2.5 times the performance per watt. Against external competitors, Microsoft projects that Maia 300 will achieve 40 percent more tokens per megawatt than leading GPU-based systems. However, as noted in reporting by [Reuters](https://cio.economictimes.indiatimes.com/news/next-gen-technologies/microsoft-plans-huge-deployment-of-its-own-ai-chips-with-an-eye-on-saving-costs/134906279), Microsoft did not disclose the specific competitive GPU configurations or cluster baselines used to calculate that figure.\n\nRani Borkar, president of Azure hardware systems and infrastructure at Microsoft, explained the design focus to Reuters, stating: \"It's basically delivering more intelligence for every watt, every dollar, and every byte of memory by optimizing across the entire system.\"\n\nMarket observers note that physical density carries tradeoffs. As covered by [Investing.com](https://www.investing.com/news/stock-market-news/microsofts-maia-300-chip-and-what-it-means-for-nvidia-93CH-4944991), a 96-chip Maia 300 rack consumes approximately 167 kW, compared to roughly 142 kW drawn by Nvidia's 72-GPU GB300 server rack. Financial analysts also highlighted that while hyperscalers such as Microsoft, Google, Amazon, and Meta continue developing internal silicon to mitigate capital costs—Microsoft expects annual capital expenditures to exceed $175 billion—Nvidia maintains a lead in AI training, while customer adoption will be key for Maia. On the day of the announcement, Microsoft shares rose 0.86 percent to trade at $539.66, while Nvidia shares traded down 1.22 percent at $226.49.\n\n## Deployment Timelines and Workload Allocation\n\nMicrosoft stated that Maia 300 production deployments will begin in 2027. Ahead of that rollout, Microsoft is expanding its Maia 200 footprint. Production workloads currently active on Maia 200 include Microsoft Copilot, Teams AI features, and inference and data generation for the MAI research group. Workloads for GitHub Copilot and the Microsoft Foundry model platform are scheduled to transition onto Maia 200 infrastructure before the end of 2026, while Dragon Copilot is designed to be supported across the Maia generations.\n\nWhen Maia 300 enters production facilities in 2027, Microsoft plans to allocate both internal services and partner models—including proprietary models from OpenAI—onto the multi-gigawatt footprint. Microsoft will share information on its AI strategy, technology adoption trends, and success in Frontier Transformation at Microsoft Ignite 2026 in San Francisco.",
+  "faq": [
+   {
+    "q": "When will Microsoft deploy Maia 300 in data centers?",
+    "a": "Microsoft stated that production deployments of the Azure Maia 300 accelerator will begin in 2027, scaling across multi-gigawatt installations."
+   },
+   {
+    "q": "What manufacturing process node does Maia 300 use?",
+    "a": "The compute chiplets on Maia 300 are manufactured on TSMC's 2nm N2P process, while auxiliary I/O and memory controller chiplets use 3nm technology."
+   },
+   {
+    "q": "What are the core memory and power specifications of Maia 300?",
+    "a": "Each Maia 300 chip features eight HBM4 memory stacks offering 288 GB of capacity and 18.0 TB/s of peak bandwidth within a 950-watt thermal design power envelope."
+   },
+   {
+    "q": "How many Maia 300 accelerators fit in a single rack?",
+    "a": "A standard Maia 300 rack contains 96 accelerators drawing 167 kW of power, which can link into superpods of up to 12,288 chips across 128 racks."
+   }
+  ],
+  "hero": {
+   "marker": "HERO",
+   "type": "ai",
+   "prompt": "A modern cleanroom laboratory showcasing an advanced multi-chip semiconductor package resting on a test bench under soft lighting, surrounded by precision engineering measurement equipment and subtle optical reflections, photographed in sharp industrial detail.",
+   "alt": "A close-up view of an advanced multi-chiplet processor package sitting in a microelectronics engineering facility.",
+   "caption": "Illustration: Next-generation custom multi-chiplet accelerator hardware designed for high-density artificial intelligence compute."
+  },
+  "figures": [
+   {
+    "marker": "FIG1",
+    "type": "ai",
+    "prompt": "Hardware engineers in cleanroom suits examining a modular semiconductor wafer carrier inside an advanced fabrication facility with silicon processing machinery in the background.",
+    "alt": "Semiconductor engineers inspecting silicon chip designs in an advanced cleanroom facility.",
+    "caption": "Illustration: Microelectronics engineers evaluating advanced multi-chiplet designs inside a semiconductor fabrication plant."
+   },
+   {
+    "marker": "FIG2",
+    "type": "ai",
+    "prompt": "An array of tall data center server cabinets with visible blue liquid cooling pipes and complex networking cable routing inside a hyperscale server hall.",
+    "alt": "High-density server racks fitted with liquid cooling pipes and high-speed data cabling inside a cloud data center.",
+    "caption": "Illustration: High-density liquid-cooled rack infrastructure supporting multi-gigawatt cloud computing deployments."
+   }
+  ],
+  "sourcesUsed": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ]
+ },
+ "check": {
+  "claims": [
+   {
+    "claim": "Microsoft unveiled the Maia 300 custom AI accelerator for production rollouts beginning in 2027.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "Maia 300 is built on TSMC's 2nm process.",
+    "status": "contradicted",
+    "source": 3,
+    "fix": "Clarify that only Maia 300's primary compute chiplets are built on TSMC's 2nm (N2P) process, while I/O and memory controller dies use 3nm technology."
+   },
+   {
+    "claim": "Microsoft's third-generation AI accelerator targets multi-gigawatt inference deployments starting in 2027.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "Azure Maia 300 deploys in 2027 with HBM4 memory and multi-gigawatt cluster scaling.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "Microsoft announced the Maia 300 custom AI accelerator on October 12, 2026.",
+    "status": "supported",
+    "source": 6
+   },
+   {
+    "claim": "The Maia 300 chip combines TSMC's 2nm N2P process for compute with 3nm dies for I/O and memory controllers.",
+    "status": "supported",
+    "source": 3
+   },
+   {
+    "claim": "Each Maia 300 accelerator features 288 GB of HBM4 across eight stacks.",
+    "status": "supported",
+    "source": 2
+   },
+   {
+    "claim": "Maia 300 reaches 18.0 TB/s of peak memory bandwidth inside a 950-watt TDP envelope.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "A standard Maia 300 rack packs 96 accelerators drawing 167 kW.",
+    "status": "supported",
+    "source": 2
+   },
+   {
+    "claim": "Maia 300 scales up to 12,288 chips across a 128-rack optical superpod fabric.",
+    "status": "supported",
+    "source": 2
+   },
+   {
+    "claim": "Maia 300 is engineered to handle long-context reasoning, latency-sensitive conversational interfaces, and sustained agentic workloads.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "Microsoft's multi-gigawatt installations starting in 2027 could potentially involve more than one million chips.",
+    "status": "supported",
+    "source": 3
+   },
+   {
+    "claim": "Maia 300 will serve internal AI operations across Microsoft Copilot, GitHub Copilot, Azure-delivered OpenAI workloads, and MAI models.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "Maia 300 is designed to serve as Microsoft's primary inference architecture as enterprise demands shift toward multi-step autonomous agents.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "Maia 200 currently serves live workloads for Microsoft Copilot, Teams, and MAI model research across the United States, Europe, and Australia.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "Microsoft adopted a disaggregated multi-chiplet architecture for Maia 300 to balance compute performance, efficiency, and cost structure.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "Peripheral functions including memory controllers and I/O blocks reside on separate 3-nanometer dies.",
+    "status": "supported",
+    "source": 3
+   },
+   {
+    "claim": "The multi-chiplet architecture increases silicon area dedicated to compute on the advanced node.",
+    "status": "supported",
+    "source": 2
+   },
+   {
+    "claim": "Maia 300 increases raw compute FLOPs by 36 percent and scale-up bandwidth by 14 percent compared to Maia 200.",
+    "status": "supported",
+    "source": 2
+   },
+   {
+    "claim": "Control path programming is separated from data path execution through Microsoft's SDLA architecture.",
+    "status": "supported",
+    "source": 2
+   },
+   {
+    "claim": "Superpod communication between Maia accelerators occurs directly without host processor involvement or discrete scale-out NICs.",
+    "status": "supported",
+    "source": 2
+   },
+   {
+    "claim": "Maia 300 shifts on-package memory from UMA to a locality-aware NUMA topology across chiplets.",
+    "status": "supported",
+    "source": 2
+   },
+   {
+    "claim": "Each compute region pairs with adjacent memory storage to reduce data travel distance and electrical dissipation.",
+    "status": "supported",
+    "source": 2
+   },
+   {
+    "claim": "Moving data efficiently rather than raw compute power is increasingly the bottleneck in large inference systems.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "Maia 300 expands from the six HBM3E stacks (216 GB) on Maia 200 to eight HBM4 stacks (288 GB).",
+    "status": "supported",
+    "source": 5
+   },
+   {
+    "claim": "Compared to Maia 200, Maia 300 delivers 2.5 times the total memory bandwidth, 33 percent more capacity, and approximately twice the HBM bandwidth per watt.",
+    "status": "supported",
+    "source": 2
+   },
+   {
+    "claim": "On-die SRAM functions as a software-managed scratchpad to reduce pressure on HBM.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "Maia 300 adds ISA enhancements to optimize key inference kernels like softmax and data casting.",
+    "status": "supported",
+    "source": 2
+   },
+   {
+    "claim": "Maia 300 natively accelerates enhanced MXFP4 computation and sub-3-bit storage formats for KV caches.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "Advanced low-precision formats reduce memory and bandwidth requirements for computation and KV-cache storage.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "Each Maia 300 rack houses 96 accelerators across 24 four-accelerator trays within a 167-kW power envelope.",
+    "status": "supported",
+    "source": 2
+   },
+   {
+    "claim": "Maia 300 doubles the accelerator density of the Maia 200 rack.",
+    "status": "supported",
+    "source": 2
+   },
+   {
+    "claim": "Each tray includes its own host processor, memory, storage, and cooling, eliminating standalone host trays.",
+    "status": "supported",
+    "source": 2
+   },
+   {
+    "claim": "A single 96-accelerator rack delivers 27.6 TB of HBM capacity and 1.7 PB/s of aggregate HBM bandwidth.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "Rack power is distributed via dual power feeds, a 50 V busbar architecture, and an automatic transfer switch.",
+    "status": "supported",
+    "source": 2
+   },
+   {
+    "claim": "Facility liquid cooling removes over 80 percent of the rack's thermal load from accelerators, voltage regulators, and switch ASICs.",
+    "status": "supported",
+    "source": 2
+   },
+   {
+    "claim": "The interconnect architecture uses a two-tier network running custom AI transport over Ethernet.",
+    "status": "supported",
+    "source": 2
+   },
+   {
+    "claim": "Six high-radix switch ASICs in three liquid-cooled switch trays connect all 96 chips in a rack pod using electrical links.",
+    "status": "supported",
+    "source": 2
+   },
+   {
+    "claim": "Optical transceivers link up to 128 racks into a superpod of 12,288 accelerators.",
+    "status": "supported",
+    "source": 2
+   },
+   {
+    "claim": "An accelerator can drive up to 750 GB/s to any peer within the superpod.",
+    "status": "supported",
+    "source": 2
+   },
+   {
+    "claim": "Microsoft claims Maia 300 delivers up to 7 times the rack-scale token throughput and more than 2.5 times the performance per watt of Maia 200.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "Microsoft projects Maia 300 will deliver 40 percent more tokens per megawatt than leading GPU-based systems.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "Microsoft did not disclose the specific competitive GPU systems used for its 40% efficiency comparison.",
+    "status": "supported",
+    "source": 3
+   },
+   {
+    "claim": "Rani Borkar stated to Reuters that Maia 300 delivers more intelligence for every watt, dollar, and byte of memory by optimizing across the entire system.",
+    "status": "supported",
+    "source": 3
+   },
+   {
+    "claim": "A 96-chip Maia 300 rack consumes approximately 167 kW compared to 142 kW drawn by Nvidia's 72-GPU GB300 rack.",
+    "status": "supported",
+    "source": 3
+   },
+   {
+    "claim": "Microsoft expects annual capital expenditures to exceed $175 billion this calendar year.",
+    "status": "supported",
+    "source": 3
+   },
+   {
+    "claim": "Nvidia maintains an advantage in AI training while customer adoption represents a key test for Maia.",
+    "status": "supported",
+    "source": 6
+   },
+   {
+    "claim": "On October 12, 2026, Microsoft shares gained 0.86 percent to $539.66 while Nvidia shares fell 1.22 percent to $226.49.",
+    "status": "supported",
+    "source": 6
+   },
+   {
+    "claim": "GitHub Copilot and Microsoft Foundry workloads are scheduled to migrate onto Maia 200 by the end of 2026.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "Maia generations are designed to support Dragon Copilot to scale workflows and reduce clinicians' administrative burden.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "Microsoft will share more details on its AI strategy and Frontier Transformation at Microsoft Ignite 2026 in San Francisco.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "Illustration depicts next-generation custom multi-chiplet accelerator hardware designed for high-density AI compute.",
+    "status": "supported",
+    "source": 1
+   },
+   {
+    "claim": "Illustration depicts microelectronics engineers evaluating advanced multi-chiplet designs inside a semiconductor fabrication plant.",
+    "status": "unsupported",
+    "source": 0,
+    "fix": "remove"
+   },
+   {
+    "claim": "Illustration depicts high-density liquid-cooled rack infrastructure supporting multi-gigawatt cloud computing deployments.",
+    "status": "supported",
+    "source": 1
+   }
+  ],
+  "recent": true,
+  "score": 9
+ },
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments/",
+   "title": "Microsoft to expand Azure Maia system to multi-gigawatt deployments",
+   "site": "The Official Microsoft Blog",
+   "official": true,
+   "primary": true,
+   "published": 1791810089000,
+   "text": "Azure Maia 200 now in production; Azure Maia 300 coming in 2027\nAs we move into the era of Super Intelligence, Microsoft is entering a new phase of infrastructure. We will scale our Azure Maia family to multi-gigawatt deployments starting in 2027, making Maia the primary inference system for Microsoft products and services.\nThe multigenerational Azure Maia program has become a foundational element"
+  },
+  {
+   "n": 2,
+   "url": "https://azure.microsoft.com/en-us/blog/deep-dive-into-azure-maia-300-architecture/",
+   "title": "Deep dive into Azure Maia 300 architecture",
+   "site": "Microsoft Azure Blog",
+   "official": true,
+   "primary": true,
+   "published": 1791810000000,
+   "text": "From its inception, Azure Maia has been built around a single architectural philosophy: optimize the entire system for LLM inference so that every watt and every dollar delivers more intelligence. Now in its third generation, Maia 300 is the fullest expression of that philosophy. Maia 300 is built as a complete system, with software, silicon, physical rack infrastructure, networking, and datacente"
+  },
+  {
+   "n": 3,
+   "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/microsoft-plans-huge-deployment-of-its-own-ai-chips-with-an-eye-on-saving-costs/134906279",
+   "title": "Microsoft plans huge deployment of its own AI chips, with an eye on saving costs",
+   "site": "Reuters",
+   "official": false,
+   "primary": false,
+   "published": 1791858823000,
+   "text": "Reuters\n \n \n Published On Oct 13, 2026 at 08:03 AM IST\n \n \n \n\n \n \n \n Microsoft announced the next generation of its custom AI chip on Monday and said it plans to deploy potentially more than a million of them next year to back its internal AI services.The Maia 300, as the chip is called, is the third generation of the company's custom chips designed to handle AI data crunching such as coding and c"
+  },
+  {
+   "n": 4,
+   "url": "https://www.neowin.net/news/microsoft-unveils-maia-300-ai-accelerator-to-take-on-nvidia-at-gigawatt-scale/",
+   "title": "Microsoft unveils Maia 300 AI accelerator to take on NVIDIA at gigawatt scale",
+   "site": "neowin.net",
+   "official": false,
+   "primary": false,
+   "published": 1791820920000,
+   "text": "Author: Pradeep Viswanathan (@pradeepviswav)\n\nOverview and Context:\n- Maia 300 will serve as the primary inference platform for Microsoft Copilot, GitHub Copilot, Microsoft Foundry, and OpenAI models in 2027.\n- Earlier in 2026, Microsoft announced the Maia 200, its second-generation custom AI accelerator focused on cost-efficient inference.\n- Microsoft confirmed that Maia 200 is currently running "
+  },
+  {
+   "n": 5,
+   "url": "https://www.trendforce.com/news/2026/10/13/news-ai-chip-memory-strategies-diverge-microsofts-maia-300-fuels-hbm4-demand-as-intel-bets-on-lower-cost-lpddr5x/",
+   "title": "[News] AI Chip Memory Strategies Diverge: Microsoft’s Maia 300 Fuels HBM4 Demand as Intel Bets on LPDDR5X",
+   "site": "TrendForce",
+   "official": false,
+   "primary": false,
+   "published": 1791888195000,
+   "text": "Microsoft and Intel unveiled their latest in-house AI accelerators on Monday, stepping up their challenge to NVIDIA with distinct approaches to AI inference performance and efficiency. According to Reuters, Microsoft’s Maia 300 features a multi-chiplet architecture leveraging TSMC’s 2nm process for core computing functions. It also packs eight HBM4 stacks, up from six HBM3E stacks in Maia 200, Seo"
+  },
+  {
+   "n": 6,
+   "url": "https://www.investing.com/news/stock-market-news/microsofts-maia-300-chip-and-what-it-means-for-nvidia-93CH-4944991",
+   "title": "Microsoft's Maia 300 chip and what it means for Nvidia",
+   "site": "investing.com",
+   "official": false,
+   "primary": false,
+   "published": 1791810720000,
+   "text": "Author / Editor: Luke Juricic\nSource: Investing.com (with Reuters material noted)\n\nAnnouncement and Deployment Plans:\n- On October 12, 2026, Microsoft (MSFT) unveiled its Maia 300 custom artificial intelligence (AI) chip.\n- The Maia 300 is Microsoft's third-generation chip.\n- Microsoft plans \"multi-gigawatt\" deployments starting from 2027, possibly amounting to more than one million chips.\n- Accor"
+  }
+ ]
+}
