@@ -1,0 +1,165 @@
+{
+ "slug": "nvidia-open-sources-runai-dsx-ai-factory",
+ "title": "Nvidia Open-Sources Run:ai Under DSX AI Factory Platform",
+ "seoTitle": "Nvidia Open-Sources Run:ai for AI Factories",
+ "description": "Nvidia has open-sourced the complete Run:ai platform and its modular scheduling tools as part of the NVIDIA DSX AI Factory software ecosystem.",
+ "dek": "Nvidia has released the full Run:ai platform and its core modular components under open-source licenses, broadening access to Kubernetes GPU scheduling.",
+ "category": "Open Source",
+ "tags": [
+  "Nvidia",
+  "Run:ai",
+  "Kubernetes",
+  "Open Source",
+  "GPU Scheduling",
+  "Cloud Infrastructure"
+ ],
+ "keyTakeaways": [
+  "Nvidia open-sourced the complete Run:ai platform on October 13, 2026, making code available on GitHub and as a Community Product on NGC.",
+  "The software consists of four independently adoptable components: KAI Scheduler, GPU Fractioning Operator, KAI Resource Management, and Workload Map.",
+  "The GPU Fractioning Operator retires Run:ai's prior proprietary implementation in favor of native CUDA 13.4 GPU fractioning on Kubernetes.",
+  "Eight cloud and infrastructure partners, including Crusoe, Nebius, and Mirantis, are integrating Run:ai into their cloud and infrastructure offerings.",
+  "Nvidia continues to sell commercial subscriptions with enterprise support via NVIDIA AI Enterprise, NVIDIA Mission Control, and cloud marketplaces."
+ ],
+ "body": "On October 13, 2026, Nvidia made the complete Run:ai platform available as open-source software, incorporating the GPU orchestration stack into its DSX AI Factory ecosystem. According to an announcement on the [NVIDIA Technical Blog](https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform/), the release gives developers, cloud providers, and enterprise infrastructure teams direct access to software designed to schedule, share, and manage graphics processors across Kubernetes clusters.\n\nThe decision opens up technology that Nvidia purchased in late 2024 for an estimated $800 million following regulatory reviews in the United States and Europe, as reported by [CTech](https://www.calcalistech.com/ctechnews/article/jqdtr2997). When the acquisition was announced, Run:ai co-founders Omri Geller and Dr. Ronen Dar stated intentions to eventually open-source the platform to foster broader ecosystem adoption. While Nvidia claims the move will help AI clouds improve GPU utilization and workload throughput, [Superpower Daily](https://superpowerdaily.com/posts/nvidia-open-sources-full-run-ai-platform-for-sharing-and-scheduling-gpus) observed that Nvidia has not published measured benchmark results alongside this launch.\n\n## The Architecture of Open-Source Run:ai\n\nThe open-source release encompasses the unified Run:ai platform alongside four modular components that operators can adopt together or implement independently within existing Kubernetes environments, as detailed by [daily.dev](https://daily.dev/posts/nvidia-open-sources-the-full-run-ai-platform-for-gpu-orchestration-on-kubernetes-av5zzkyqm).\n\n[[FIG1]]\n\n### KAI Scheduler\n\nThe scheduling engine powering Run:ai is the KAI Scheduler, which Nvidia released under the Apache 2.0 license and contributed to the Cloud Native Computing Foundation (CNCF) as a Sandbox project. Nvidia confirmed that all scheduler development takes place directly in the upstream community repository. KAI Scheduler provides gang scheduling with in-memory prescheduling simulation, preventing multi-pod training jobs from being partially placed or needlessly evicted. It also coordinates fair-share quotas, hardware topology-aware placement, Dynamic Resource Allocation (DRA) support, and GPU sharing.\n\n### GPU Fractioning Operator\n\nRun:ai previously relied on a proprietary system to split GPUs among multiple lightweight workloads. With this release, Nvidia retired that proprietary code in favor of a Kubernetes integration built directly on CUDA 13.4 native fractioning. The GPU Fractioning Operator relies on the underlying CUDA driver to enforce hard memory isolation boundaries between workloads, while the operator tracks cluster allocations and exposes metrics per pod. It functions with KAI Scheduler but remains scheduler-agnostic.\n\n### KAI Resource Management and Workload Map\n\nThe remaining two modular systems focus on organizational boundaries and workload lifecycle handling:\n\n* **KAI Resource Management:** Governs hardware consumption across enterprise organizational hierarchies. It enables platform administrators to group heterogeneous hardware into node pools and set quota guarantees across projects and departments, replacing manual namespace tracking and external spreadsheets.\n* **Workload Map:** Operates as a contract for Kubernetes AI workloads. Because machine learning systems utilize varied Custom Resource Definitions (CRDs)—including PyTorchJob, RayCluster, JobSet, and KServe InferenceService—Workload Map normalizes these definitions into a standard Go library. It describes pod roles, status, and gang semantics without requiring custom code for every individual CRD. Nvidia notes that Workload Map operates offline on unstructured objects and does not handle queuing, scheduling, or autoscaling.\n\n[[FIG2]]\n\n## Model Streaming and Inference Optimization\n\nAlongside the core orchestration components, Nvidia highlighted complementary open-source tooling, specifically Model Streamer, to tackle cold-start latency when launching inference services on Kubernetes. Cold starts frequently leave GPUs idle for minutes while large model weights transfer from remote storage to accelerator memory.\n\nAs Nvidia outlined on the [NVIDIA Technical Blog](https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform/), Model Streamer reads weights concurrently and streams them straight into GPU memory. The tool is already integrated upstream in inference engines including vLLM and SGLang using the `--load-format runai_streamer` flag, as well as in ModelExpress. Major cloud providers have also documented its use: Amazon Web Services includes it in the vLLM Deep Learning Container for Amazon EKS, Google Cloud collaborated with Nvidia to stream directly from Cloud Storage on GKE, and Microsoft Azure provides Azure Blob Storage integration.\n\n## Cloud Partner Integrations and Ecosystem Support\n\nNvidia named eight cloud infrastructure and software partners currently integrating the open-source Run:ai stack into their products: Crusoe, Mirantis, Nebius, OpenNebula Systems, Rafay, Saturn Cloud, Spectro Cloud, and vCluster.\n\n[[FIG3]]\n\nTheir deployment models cover several operational approaches:\n\n* **Crusoe:** Detailed an integration where Run:ai coordinates GPU scheduling and sharing while Crusoe Managed Kubernetes manages the underlying hardware, validated for multi-node PyTorch training and inference serving according to [Superpower Daily](https://superpowerdaily.com/posts/nvidia-open-sources-full-run-ai-platform-for-sharing-and-scheduling-gpus).\n* **Nebius:** Added a one-click application deployment for Run:ai within Nebius AI Cloud on its Managed Service for Kubernetes.\n* **Rafay:** Expands Run:ai into a fully managed service, automating the GPU control plane and tenant environments for enterprise catalogs.\n* **vCluster:** Uses pre-validated deployment templates to create isolated multi-tenant environments across a shared GPU fleet.\n* **Mirantis, OpenNebula, Saturn Cloud, and Spectro Cloud:** Have embedded the platform into tools ranging from sovereign cloud stacks and Metal-to-Model provisioning to white-label inference metering.\n\n## Licensing, Packaging, and Enterprise Commercial Options\n\nThe software is distributed through two primary open-source channels, as summarized by [Venture Atlas](https://www.ventureatlas.org/news/2026-10-13-nvidia-runai-open-source). Developers can access source repositories under the DSX AI Factory GitHub organization, governed by their respective open-source licenses. Alternatively, users can deploy the software via a Helm chart distributed as a Community Product in the NVIDIA NGC catalog.\n\nThe NGC Community Product requires no paid subscription or support entitlement, though users must accept Nvidia's Software License Agreement and product-specific terms. Nvidia explicitly noted that enterprise technical support is excluded from the community release. Organizations seeking enterprise-grade service level agreements must purchase commercial offerings through NVIDIA AI Enterprise, NVIDIA Mission Control, or supported cloud marketplace packages.",
+ "faq": [
+  {
+   "q": "What components of Run:ai are available as open-source software?",
+   "a": "Nvidia open-sourced the complete platform, which includes four modular components: KAI Scheduler (a CNCF Sandbox project), the GPU Fractioning Operator (leveraging CUDA 13.4), KAI Resource Management, and the Workload Map Go library."
+  },
+  {
+   "q": "Does the open-source community release include Nvidia enterprise support?",
+   "a": "No. The Community Product available on NGC and the code on GitHub require no paid license but do not include enterprise support. Nvidia sells commercially supported versions through NVIDIA AI Enterprise, NVIDIA Mission Control, and cloud marketplaces."
+  },
+  {
+   "q": "How does the open-source GPU Fractioning Operator handle GPU splitting?",
+   "a": "It retires Run:ai's previous proprietary fractioning technology and uses native CUDA 13.4 fractioning. The CUDA driver enforces memory limits per workload, while the Kubernetes operator exposes utilization metrics and handles pod placement."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern datacenter server room bathed in soft ambient lighting, where a female systems architect inspects illuminated server racks packed with advanced graphics processing hardware and high-density networking cables.",
+  "alt": "An engineer inspecting server racks in an enterprise data center",
+  "caption": "Illustration: An infrastructure engineer reviewing cluster hardware inside an AI data center.",
+  "src": "img/nvidia-open-sources-runai-dsx-ai-factory/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 58880,
+  "small": "img/nvidia-open-sources-runai-dsx-ai-factory/hero-640.webp",
+  "og": "img/nvidia-open-sources-runai-dsx-ai-factory/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/nvidia-open-sources-runai-dsx-ai-factory/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A technical schematic visualization showing interconnected software layers, microservices nodes, and container pods cleanly distributing computing jobs across silicon processors.",
+   "alt": "Abstract diagram representing Kubernetes workload scheduling across hardware nodes",
+   "caption": "Illustration: Workload scheduling layers orchestrating compute tasks across distributed processors.",
+   "slot": "FIG1",
+   "src": "img/nvidia-open-sources-runai-dsx-ai-factory/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 44212,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "Two software engineers collaborating at a dual-monitor workstation, analyzing resource allocation flowcharts and code repositories in an open-plan tech office.",
+   "alt": "Two software developers reviewing architectural diagrams at a workstation",
+   "caption": "Illustration: Developers configuring resource governance and workload mapping tools.",
+   "slot": "FIG2",
+   "src": "img/nvidia-open-sources-runai-dsx-ai-factory/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 36686,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "A high-angle perspective of an expansive cloud computing server facility with structured fiber optic cabling and active server indicators showing steady operational flow.",
+   "alt": "High-density cloud server racks connected by glowing fiber optic network lines",
+   "caption": "Illustration: Cloud infrastructure powering multi-tenant clusters across data center environments.",
+   "slot": "FIG3",
+   "src": "img/nvidia-open-sources-runai-dsx-ai-factory/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 78306,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform/",
+   "title": "NVIDIA Run:ai Is Now Open Source as Part of NVIDIA DSX AI Factory Platform",
+   "site": "NVIDIA Technical Blog",
+   "published": 1791901180000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://forums.developer.nvidia.com/t/nvidia-run-ai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform/385782",
+   "title": "NVIDIA Run:ai Is Now Open Source as Part of NVIDIA DSX AI Factory Platform - Technical Blog - NVIDIA Developer Forums",
+   "site": "forums.developer.nvidia.com",
+   "published": 1791901182000,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://superpowerdaily.com/posts/nvidia-open-sources-full-run-ai-platform-for-sharing-and-scheduling-gpus",
+   "title": "NVIDIA open-sources full Run:ai platform for sharing and scheduling GPUs",
+   "site": "superpowerdaily.com",
+   "published": 1791906849079,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.calcalistech.com/ctechnews/article/jqdtr2997",
+   "title": "Nvidia opens up Israeli-founded Run:ai software two years after $800 million acquisition",
+   "site": "ctech",
+   "published": 1791900000829,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://www.ventureatlas.org/news/2026-10-13-nvidia-runai-open-source",
+   "title": "Nvidia open-sources the full Run:ai platform",
+   "site": "ventureatlas.org",
+   "published": 1791849600000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://daily.dev/posts/nvidia-open-sources-the-full-run-ai-platform-for-gpu-orchestration-on-kubernetes-av5zzkyqm",
+   "title": "NVIDIA open sources the full Run:ai platform for GPU orchestration on Kubernetes",
+   "site": "daily.dev",
+   "published": 1791907742263,
+   "official": false
+  }
+ ],
+ "publishedAt": 1791940897244,
+ "updatedAt": 1791940897244,
+ "foundVia": "developer.nvidia.com, Google News and Google Search",
+ "check": {
+  "claims": 29,
+  "score": 10
+ },
+ "story": {
+  "id": "P5812cfef",
+  "score": 87,
+  "items": [
+   "https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform/",
+   "https://news.google.com/rss/articles/CBMirAFBVV95cUxOcUhCMm5LY3dMOVd6U1daRWpINVhKcXhIcWt0bVlyYTRCWnlVRHY5aDhoc3pHdUlsb1RUbHVUZlV3QkhXVzFDRXpUb2JyMWlkeUw0MU9sTld4U3o3Y1hPQXJFMVVuS2FTR1h5eUVzdUdBTlVkdTVXQXhSZUQxbXltY1hXcTlWY2hxZUJjRkstbkhxekpJTDRuMkpJSTBvM282ckVmQjNzX1VDOVV4?oc=5",
+   "https://forums.developer.nvidia.com/t/nvidia-run-ai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform/385782",
+   "https://news.google.com/rss/articles/CBMicEFVX3lxTE9GcnZxQ25EemU4UjczckRWVXNWTll6aDZWYVU1V25DMnhLVy1kWFNxbGJkS21vUzZlZGU1TFEyUklBZW5KWEJwV0ZpZDJIT3ltMy04YUI1bVdBRUpNaTdNZW1ZbHZwMlR0R0NRb05peHk?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
