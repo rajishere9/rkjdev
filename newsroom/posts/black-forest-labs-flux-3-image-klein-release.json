@@ -1,0 +1,171 @@
+{
+ "slug": "black-forest-labs-flux-3-image-klein-release",
+ "title": "Black Forest Labs Releases FLUX 3 Image Klein Open-Weights Model",
+ "seoTitle": "Black Forest Labs Debuts FLUX 3 Image Klein Model",
+ "description": "Black Forest Labs has launched FLUX 3 Image Klein, a 5.6B open-weights model for image generation and editing that runs on consumer GPUs with 8GB of VRAM.",
+ "dek": "The 5.6-billion-parameter model retains native 4K output from the larger FLUX 3 Image model announced in July 2026, bounding-box composition, and consumer GPU support under a revenue-tiered license.",
+ "category": "AI Models",
+ "tags": [
+  "Black Forest Labs",
+  "FLUX 3",
+  "Open Weights",
+  "Image Generation",
+  "ComfyUI",
+  "NVIDIA"
+ ],
+ "keyTakeaways": [
+  "Black Forest Labs released FLUX 3 Image Klein, a 5.6-billion-parameter open-weights image generator and editor.",
+  "The model runs locally on consumer graphics cards with as little as 8 GB of VRAM using an INT8 build in ComfyUI.",
+  "Workflows support native 4K output, multi-reference editing with up to 10 images, and precise layout controls via bounding boxes.",
+  "The release is governed by the FLUX Kommunity License, permitting free commercial use only for organizations making under $5 million annually.",
+  "While a prompt upsampler is required to avoid generic output, BFL's 9-billion-parameter model is not strictly required because any LLM can be used with the provided system prompt."
+ ],
+ "body": "On October 15, 2026, AI research studio [Black Forest Labs announced](https://bfl.ai/blog/flux-3-image-klein) the release of FLUX 3 Image Klein, a 5.6-billion-parameter open-weights model designed for text-to-image synthesis, image editing, and multi-reference generation. Built to execute on consumer-grade hardware, the new architecture delivers high-resolution synthesis up to native 4K while operating on GPUs with as little as 8 GB of video memory. The release marks the second public model from the company's FLUX 3 family, following the earlier launch of its robotics-oriented FLUX 3 Action checkpoint.\n\nThe system combines generation, single-reference image editing, and compositions drawing from up to 10 reference images into a unified transformer backbone. Alongside the core weights, Black Forest Labs published companion tools and quantized formats to enable local execution across standard open-source pipelines, including ComfyUI and Hugging Face Diffusers.\n\n## Dual Checkpoints and the Prompt Upsampling Requirement\n\nBlack Forest Labs structured the release into two primary model checkpoints: an undistilled base version and a step-distilled variant. The base model operates across 50 steps with a default classifier-free guidance setting of 3.5, targeted at developers conducting research, downstream adaptation, and Low-Rank Adaptation (LoRA) fine-tuning. For production serving and direct generation, the step-distilled model executes in 16 steps without classifier-free guidance, providing roughly six times faster local generation.\n\nA central operational change in the FLUX 3 pipeline is the strict requirement for a prompt upsampler. As documented in the [official model card on Hugging Face](https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy), the 5.6B transformer takes comprehensive, paragraph-length scene descriptions rather than short text prompts. Passing short, raw text prompts directly into the diffusion pipeline produces generic visual output.\n\nTo address this dependency, the company released the [FLUX 3 Image Klein Prompt Upsampler](https://huggingface.co/black-forest-labs/flux-3-image-klein-pup), a separate 9-billion-parameter vision-language model built as a fine-tune of Alibaba Cloud's Qwen3.5-9B under the Apache 2.0 license. The upsampler rewrites short user commands into detailed technical prompts specifying camera angle, framing, lighting conditions, textures, and subject materials. For image editing, the upsampler looks at reference images and writes the instruction around what is in them: what changes, what stays, by appearance.\n\n[[FIG1]]\n\n## Layout Control and Hardware Specifications\n\nFLUX 3 Image Klein retains native bounding-box conditioning for layout composition and targeted edits from the larger FLUX 3 Image model. While the [official model repository on GitHub](https://github.com/black-forest-labs/flux-3-image-klein) uses a 0-to-1 coordinate range passed via JSON, the ComfyUI Hugging Face repository documents appending coordinate tables formatted on a normalized 0-to-1000 coordinate grid directly to the prompt payload. Users can define rectangular spatial bounds to guide element placement rather than as a hard mask, though edits can alter content outside the requested box unless using the API's pixel restoration feature.\n\nThe image transformer uses Alibaba's Qwen3-VL-4B-Instruct as its dedicated text encoder, keeping linguistic evaluation separate from visual synthesis. In uncompressed BF16 precision, the generator transformer requires 11.2 GB of memory, while the Qwen3-VL-4B text encoder requires 8.9 GB. To lower memory barriers, Black Forest Labs worked with NVIDIA to build FP8, INT8, and NVFP4 checkpoints.\n\nThrough an INT8 build repackaged for ComfyUI, the generator transformer footprint drops to 5.8 GB and the text encoder drops to 4.9 GB. This allows the system to operate on 8 GB cards such as the NVIDIA GeForce RTX 3070 and RTX 4070. On an RTX 4070 running ComfyUI, the distilled INT8 model produces a 1-megapixel image in 8.9 seconds for text generation and 18.9 seconds for an edit. On a flagship GeForce RTX 5090, generation takes 4.1 seconds and editing takes 7.2 seconds.\n\nFor enterprise data center environments, NVIDIA Blackwell systems using NVFP4 precision reach sub-second latencies. On DGX hardware, generation of a 1-megapixel image completes in 0.59 seconds, while a 2K (2,048 × 2,048) image takes 2.2 seconds.\n\n## Benchmarks and Internal Evaluations\n\nIn evaluation charts published by Black Forest Labs, FLUX 3 Image Klein demonstrated substantial quality gains over its predecessors. Against the prior 9-billion-parameter FLUX.2 [klein], the new 5.6B model achieved a 91 Elo increase in text-to-image preference and a 70 Elo gain in image editing benchmarks, despite a 38 percent decrease in parameter count.\n\nBlack Forest Labs reported that Klein outperformed open-weights alternatives such as the 7B Qwen-Image 2.1 and the 12.9B Krea 2 in internal evaluations for image editing. The company's internal comparisons also positioned the distilled model above closed commercial offerings including Ideogram V4.5 and FLUX.2 [pro].\n\nHowever, trade publication [VentureBeat reported limitations](https://venturebeat.com/technology/black-forest-labs-opens-flux-3-image-klein-weights-with-free-commercial-use-limited-to-smaller-businesses) regarding the published benchmark data. The outlet pointed out that Black Forest Labs omitted sample sizes, prompt sets, and uncertainty metrics from its public charts. Furthermore, the official speed comparisons measured GeForce GPUs using INT8 while data-center systems ran NVFP4, preventing direct silicon-level comparisons. The benchmark evaluations also omitted comparisons at full 4K output resolutions and did not include tests against OpenAI's GPT Image 2.5 or Google's Nano Banana 2.1.\n\n[[FIG2]]\n\n## Licensing Terms and API Availability\n\nWhile the code and the prompt upsampler are published under the permissive Apache 2.0 license, the core image model weights are governed by the FLUX Kommunity License v1.0. As outlined by the FLUX Kommunity License terms, the license allows free commercial use exclusively for individuals and entities with gross annualized revenues under $5 million, aggregated across all corporate affiliates.\n\nOrganizations generating $5 million or more in annual revenue are excluded from free commercial self-hosting. Enterprise teams exceeding this threshold must purchase commercial self-hosting licenses or route workloads through the official Black Forest Labs API. The license also restricts outputs from being used to train competing foundation models and strictly forbids military, surveillance, or biometric applications.\n\nFor managed infrastructure, Black Forest Labs provides hosted access to the distilled model via its API, with pricing tiered by output resolution: $0.008 for 768 × 768 pixels, $0.009 for 1K (1,024 × 1,024), $0.011 for 1.5K, $0.014 for 2K, and $0.036 for native 4K renders. The hosted endpoint integrates proprietary prompt expansion and pixel restoration pipelines directly into the generation loop.\n\nFine-tuning pipelines are operational from day one. Community developers can adapt the base model using Ostris's AI Toolkit, Diffusers scripts, and official recipes included in NVIDIA NeMo AutoModel, providing smaller studios with an accessible foundation for custom asset generation.",
+ "faq": [
+  {
+   "q": "What hardware is required to run FLUX 3 Image Klein locally?",
+   "a": "The model runs on consumer NVIDIA GeForce RTX GPUs with as little as 8 GB of VRAM using the INT8 build in ComfyUI. The uncompressed BF16 generator weights require 11.2 GB of VRAM, with an additional 8.9 GB required for the text encoder unless quantized."
+  },
+  {
+   "q": "Can businesses use the open weights commercially for free?",
+   "a": "Commercial use is free only for individuals and organizations with gross annualized revenue under $5 million under the FLUX Kommunity License. Companies earning $5 million or more must license the weights commercially or use the paid API."
+  },
+  {
+   "q": "Why is the prompt upsampler required during inference?",
+   "a": "FLUX 3 Image Klein was trained on dense, paragraph-long scene descriptions. Passing short natural language prompts without expansion results in generic imagery, though any preferred LLM equipped with BFL's provided system prompt can be used to upsample prompts instead of the 9B model."
+  },
+  {
+   "q": "How does FLUX 3 Image Klein handle layout control?",
+   "a": "The model accepts bounding-box coordinates on a 0-to-1000 grid appended to the prompt payload, allowing users to define positions and dimensions for specific objects during generation or editing."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An AI researcher in an illuminated laboratory testing digital image generation models across multiple workstation monitors displaying colorful generative art compositions",
+  "alt": "An AI researcher working at computer monitors displaying generative visuals",
+  "caption": "Illustration: Computer scientists developing compact visual models for local workstation deployment",
+  "src": "img/black-forest-labs-flux-3-image-klein-release/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 61878,
+  "small": "img/black-forest-labs-flux-3-image-klein-release/hero-640.webp",
+  "og": "img/black-forest-labs-flux-3-image-klein-release/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/black-forest-labs-flux-3-image-klein-release/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A modern graphic designer at a desktop setup using a digital stylus to arrange rectangular grid bounding boxes over an intricate digital visual layout",
+   "alt": "A designer drawing bounding boxes on a digital canvas",
+   "caption": "Illustration: Spatial bounding-box controls guiding elements across a high-resolution generative canvas",
+   "slot": "FIG1",
+   "src": "img/black-forest-labs-flux-3-image-klein-release/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 34222,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A computer hardware setup with consumer graphics cards and data center servers side by side, illuminated with cool blue and green status indicators",
+   "alt": "Computer graphics hardware and data center racks running model inference",
+   "caption": "Illustration: Quantized transformer models operating across both consumer workstations and data center clusters",
+   "slot": "FIG2",
+   "src": "img/black-forest-labs-flux-3-image-klein-release/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 32806,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://bfl.ai/blog/flux-3-image-klein",
+   "title": "FLUX 3 Image Klein",
+   "site": "Black Forest Labs",
+   "published": 1792076400000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy",
+   "title": "black-forest-labs/flux-3-image-klein-comfy · Hugging Face",
+   "site": "huggingface.co",
+   "published": 1792077155000,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-pup",
+   "title": "black-forest-labs/flux-3-image-klein-pup",
+   "site": "Hugging Face",
+   "published": 1792010429000,
+   "official": true
+  },
+  {
+   "n": 4,
+   "url": "https://github.com/black-forest-labs/flux-3-image-klein",
+   "title": "black-forest-labs/flux-3-image-klein",
+   "site": "GitHub",
+   "published": 1792075843000,
+   "official": true
+  },
+  {
+   "n": 5,
+   "url": "https://bfl.ai/models/flux-3-image-klein",
+   "title": "FLUX 3 Image Klein: Open weights image generation and editing | Black Forest Labs",
+   "site": "Black Forest Labs",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 6,
+   "url": "https://venturebeat.com/technology/black-forest-labs-opens-flux-3-image-klein-weights-with-free-commercial-use-limited-to-smaller-businesses",
+   "title": "Black Forest Labs opens FLUX 3 Image Klein weights, with free commercial use limited to smaller businesses",
+   "site": "venturebeat.com",
+   "published": 1792079400000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://the-decoder.com/black-forest-labs-open-weights-image-model-flux-3-image-klein-runs-on-consumer-gpus-with-just-8-gb-of-vram/",
+   "title": "Black Forest Labs' open-weights image model FLUX 3 Image Klein runs on consumer GPUs with just 8 GB of VRAM",
+   "site": "The Decoder",
+   "published": 1792083434000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792111273095,
+ "updatedAt": 1792111273095,
+ "foundVia": "bfl.ai, Hugging Face and GitHub",
+ "check": {
+  "claims": 31,
+  "score": 10
+ },
+ "story": {
+  "id": "Pa4bf9e64",
+  "score": 91,
+  "items": [
+   "https://bfl.ai/blog/flux-3-image-klein",
+   "https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy",
+   "https://huggingface.co/black-forest-labs/flux-3-image-klein-pup",
+   "https://github.com/black-forest-labs/flux-3-image-klein",
+   "https://news.google.com/rss/articles/CBMilAFBVV95cUxPSWJQZUhVZ1hUaHJWczg4ZHMxZ0N6Q3lvYzlOVGdONGhNNXlkTzlyM1pCNnRCUzQ1Ml9uTTV1eFQzTHJWZjdodHFvSFpSbDZQOW80NkVjb2ZrTUlMZ3dLR2o3U21STTdKb0FSOHd0RGlha1lWaEZzcUpZNW1rTFBGVW1RdDI0bzZpM05wSkJtcDl3NDYy?oc=5",
+   "https://bfl.ai/models/flux-3-image-klein",
+   "https://www.reddit.com/r/StableDiffusion/comments/1x6oct0/flux_3_klein_is_out/",
+   "https://www.reddit.com/r/StableDiffusion/comments/1x6oy6s/flux3_klein_image_out_on_hugging_face/",
+   "https://the-decoder.com/black-forest-labs-open-weights-image-model-flux-3-image-klein-runs-on-consumer-gpus-with-just-8-gb-of-vram/",
+   "https://www.reddit.com/r/StableDiffusion/comments/1x6vl5u/flux_3_klein_is_one_of_the_models_of_all_time/",
+   "https://www.reddit.com/r/comfyui/comments/1x6sxun/flux_3_image_klein_56b_open_weights_is_now/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}

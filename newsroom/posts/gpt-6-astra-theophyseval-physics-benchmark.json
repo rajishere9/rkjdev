@@ -1,0 +1,161 @@
+{
+ "slug": "gpt-6-astra-theophyseval-physics-benchmark",
+ "title": "GPT-6-Astra Solves 49 of 50 Theoretical Physics Problems on New Benchmark",
+ "seoTitle": "GPT-6-Astra Solves 49 of 50 Theoretical Physics Tests",
+ "description": "OpenAI's GPT-6-Astra solved 98% of research-level theoretical physics problems on TheoPhysEval, correcting expert answer keys at under $3 per test.",
+ "dek": "Frontier AI agent GPT-6-Astra solved 49 of 50 unpublished, expert-level theoretical physics calculations on the TheoPhysEval benchmark for under $3 apiece.",
+ "category": "Research",
+ "tags": [
+  "GPT-6-Astra",
+  "TheoPhysEval",
+  "OpenAI",
+  "Theoretical Physics",
+  "AI Benchmarks"
+ ],
+ "keyTakeaways": [
+  "GPT-6-Astra scored 98% (49/50) on TheoPhysEval, an evaluation suite of 50 unpublished research-level calculations across 11 physics subfields.",
+  "Solving the problems cost an average of under $3 each—totaling roughly $116 for the full suite—running inside OpenAI's Codex environment.",
+  "When reviewing failed runs, researchers found subtle errors in their own reference solutions; correcting them raised Astra's final score from the late eighties to 98%.",
+  "Cutting off web search barely lowered accuracy for leading models, demonstrating substantial memorization of theoretical physics literature.",
+  "The benchmark authors stress that while models excel at concrete derivations, agents still lack the scientific 'taste' needed to formulate new theories."
+ ],
+ "body": "Frontier AI models have demonstrated an ability to handle advanced mathematical derivations in physics. On a new benchmark called TheoPhysEval, OpenAI's GPT-6-Astra solved 49 out of 50 unpublished, research-level theoretical physics problems, achieving a 98 percent accuracy rate at an average API cost of under $3 per problem. The results were detailed in an academic preprint published on [arXiv.org](https://arxiv.org/abs/2610.16733) by a team of nearly 35 physicists from institutions including Harvard University, Google DeepMind, the International Centre for Theoretical Sciences (ICTS), and KU Leuven.\n\nTheoPhysEval was created to evaluate how off-the-shelf AI agents perform when handed concrete, highly specialized calculations that working physicists encounter daily. The authors described these as \"turn-the-crank\" research tasks—problems that take an established mathematical technique from recent literature and apply it to a modified configuration. Each problem carried a verifiable numerical or symbolic answer and was unpublished at the time of testing, preventing models from relying on leaked answer keys.\n\n[[FIG1]]\n\n## How GPT-6-Astra Performed on TheoPhysEval\n\nWhen evaluated in OpenAI's Codex harness with access to search tools and coding environments, GPT-6-Astra solved 49 of the 50 problems, according to the paper and reporting by [The Decoder](https://the-decoder.com/gpt-6-astra-solves-49-of-50-physics-research-problems-at-2-40-apiece/). The full 50-problem evaluation consumed approximately 37 million tokens and cost about $116 in total API spend, averaging roughly $2.40 per problem.\n\nThe benchmark problems spanned 11 subfields, including holography, black hole physics, fluid dynamics, and quantum phases of matter. In one problem, the agent had to calculate the Page time for a black-string background with two branes in four-dimensional anti-de Sitter space (AdS4). Doing so required finding an existing five-dimensional calculation in the literature, converting its equations to four dimensions, and numerically solving a singular boundary-value problem while managing endpoint singularities. Benchmark coordinator Suvrat Raju of ICTS noted that solving that problem manually took him about a day, and the authors estimated that prior to modern AI agents, only a small number of global experts possessed the specific domain background and computational skills to complete it.\n\nAnthropic's Claude Opus 5.5, running inside Claude Code, finished in second place on the realistic track, solving 46 of 50 problems (92 percent). Opus consumed approximately 211 million tokens and accumulated about $240 in API costs, as reported by [OfficeChai](https://officechai.com/ai/gpt-6-astra-solves-49-50-unpublished-physics-research-problems-under-theophyseval-benchmark-for-3-a-problem/). Other models trailed significantly: Google's Gemini 3.8 Flash scored 68 percent, the open-weight DeepSeek-V4.1-Flash reached 54 percent, and GLM 5.3 recorded 42 percent.\n\n[[FIG2]]\n\n## AI Agents Correct Human Reference Solutions\n\nDuring initial grading, GPT-6-Astra's score stood in the late eighties, just ahead of Opus 5.5. However, when researchers checked the disputed solutions, the agents insisted their answers were accurate, as economist Alex Tabarrok highlighted on [Marginal Revolution](https://marginalrevolution.com/marginalrevolution/2026/10/astra-held-its-ground-truth.html).\n\nUpon re-examining their own derivations, the expert contributors discovered subtle mathematical errors in several reference answers. Once those flaws in the answer key were corrected, Astra's responses matched the revised solutions, pushing its score to 98 percent. The authors noted that this phenomenon mirrors issues found on other physics evaluations like CritPt, where flawed grading keys have previously led benchmarks to underestimate model capabilities.\n\nOnly a single problem stumped every model tested. The problem presented an inverse challenge: deduce the autonomous differential equation that produces a specific, given curve. The intended solution relies on specialized mathematical forms that satisfy the differential equation only in an extended sense. While the authors acknowledged the problem could appear unfair, they kept it in the suite because empirical research often demands inferring governing physical laws from incomplete or noisy data.\n\n## Memorization Versus True Innovation\n\nTo examine how heavily agents rely on real-time internet search, the researchers conducted an isolated track with web access disabled. The performance drop was minimal. Both GPT-6-Astra and Claude Opus 5.5 scored 92 percent (46 out of 50) offline, an analysis by [explainx.ai](https://explainx.ai/blog/theophyseval-gpt-6-astra-49-of-50-physics-problems-2-40-each-2026) pointed out. Because many problems required specific equations from recent literature, the researchers concluded that leading frontier models have effectively memorized large portions of theoretical physics papers within their training weights.\n\nBy contrast, weaker models exhibited clear pattern-matching failure modes. On the black hole task, both Gemini and GLM retrieved an older paper during their web search runs and copied its five-dimensional equations directly into their calculations without modifying them for the four-dimensional spacetime required by the prompt.\n\n[[FIG3]]\n\n## What Turn-the-Crank Calculations Mean for the Field\n\nDespite the high calculation scores, the paper emphasizes that current AI agents are far from replacing human theoretical physicists. Autonomous problem-solving represents only the final phase of research. Before a calculation can begin, physicists must formulate original theories and identify productive questions.\n\nThe authors observed that current language models lack scientific \"taste.\" When asked to propose new physics problems, agents frequently drift into trivial details that human researchers find uninteresting. Furthermore, while OpenAI reported that internal agent clusters solved open math problems such as Navier-Stokes cases, agents have not produced unprompted conceptual breakthroughs in theoretical physics.\n\nThe benchmark results nevertheless signal shifts in academic training. Because TheoPhysEval problems represent the caliber of tasks traditionally assigned to beginning doctoral students as starter projects, assigning standard calculational exercises may become obsolete unless used purely for teaching fundamentals. The full dataset and test harness have been made available on Hugging Face for community evaluation.",
+ "faq": [
+  {
+   "q": "What is the TheoPhysEval benchmark?",
+   "a": "TheoPhysEval is an evaluation suite of 50 unpublished, research-level theoretical physics problems spanning 11 subfields. Created by nearly 35 physicists, the benchmark features problems with verifiable numerical or symbolic answers that typically require a day or less for an expert to solve."
+  },
+  {
+   "q": "How did GPT-6-Astra perform on TheoPhysEval?",
+   "a": "GPT-6-Astra, running in OpenAI's Codex environment with web and tool access, solved 49 of the 50 problems (98 percent). The entire test run consumed approximately 37 million tokens at a total cost of around $116, or under $3 per problem."
+  },
+  {
+   "q": "Why did researchers have to update the benchmark answer key?",
+   "a": "When investigating discrepancies where GPT-6-Astra disagreed with the initial answer key, researchers discovered subtle errors in the human experts' original calculations. Correcting those reference solutions raised Astra's final score to 98 percent."
+  },
+  {
+   "q": "How did other AI models perform compared to GPT-6-Astra?",
+   "a": "Anthropic's Claude Opus 5.5 placed second, solving 92 percent (46/50) with search and 92 percent offline. Google's Gemini 3.8 Flash scored 68 percent, DeepSeek-V4.1-Flash scored 54 percent, and GLM 5.3 scored 42 percent on the realistic track."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern university physics department office at dusk, with floor-to-ceiling chalkboards filled with complex tensor calculus, quantum field theory diagrams, and boundary value equations, next to a sleek workstation displaying numerical simulation graphs on two wide monitors.",
+  "alt": "A university physics office with chalkboards covered in complex formulas and a workstation displaying numerical calculations",
+  "caption": "Illustration: Theoretical physics research relies heavily on complex mathematical derivations and computational modeling.",
+  "src": "img/gpt-6-astra-theophyseval-physics-benchmark/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 55360,
+  "small": "img/gpt-6-astra-theophyseval-physics-benchmark/hero-640.webp",
+  "og": "img/gpt-6-astra-theophyseval-physics-benchmark/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/gpt-6-astra-theophyseval-physics-benchmark/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "Two academic researchers in a university seminar room examining complex differential equations and matrix calculations written across multiple rolling blackboards, discussing technical details with open reference books on a nearby table.",
+   "alt": "Two researchers studying mathematical formulas and calculations on seminar room blackboards",
+   "caption": "Illustration: The TheoPhysEval benchmark consists of 50 unpublished problems designed by specialized research physicists.",
+   "slot": "FIG1",
+   "src": "img/gpt-6-astra-theophyseval-physics-benchmark/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 41606,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A close-up view of a clean research desk with handwritten mathematical proofs on paper, alongside a stylus tablet showing numerical plots and step-by-step symbolic algebra checks.",
+   "alt": "Handwritten physics proofs and a digital tablet verifying numerical calculations",
+   "caption": "Illustration: AI evaluations revealed subtle mathematical errors in several human expert reference keys.",
+   "slot": "FIG2",
+   "src": "img/gpt-6-astra-theophyseval-physics-benchmark/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 35054,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "An empty university lecture hall with rows of wooden desks facing a large stage with chalkboards displaying hydrodynamic equations and spacetime geometries under soft architectural lighting.",
+   "alt": "An empty academic lecture hall with blackboards showing fluid mechanics and cosmology equations",
+   "caption": "Illustration: Experts emphasize that scientific insight and problem formulation remain distinct from mechanical calculation.",
+   "slot": "FIG3",
+   "src": "img/gpt-6-astra-theophyseval-physics-benchmark/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 31024,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://arxiv.org/abs/2610.16733",
+   "title": "TheoPhysEval: Assessing AI agents at autonomous theoretical physics problem solving",
+   "site": "arXiv.org",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://the-decoder.com/gpt-6-astra-solves-49-of-50-physics-research-problems-at-2-40-apiece/",
+   "title": "GPT-6-Astra solves 49 of 50 physics research problems at $2.40 apiece",
+   "site": "The Decoder",
+   "published": 1792077855000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://officechai.com/ai/gpt-6-astra-solves-49-50-unpublished-physics-research-problems-under-theophyseval-benchmark-for-3-a-problem/",
+   "title": "GPT-6 Astra Solves 49/50 Unpublished Physics Research Problems Under TheoPhysEval Benchmark For $3 A Problem",
+   "site": "OfficeChai",
+   "published": 1792071626000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://marginalrevolution.com/marginalrevolution/2026/10/astra-held-its-ground-truth.html",
+   "title": "Astra Held Its Ground (Truth)",
+   "site": "marginalrevolution.com",
+   "published": 1792022400000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://explainx.ai/blog/theophyseval-gpt-6-astra-49-of-50-physics-problems-2-40-each-2026",
+   "title": "GPT-6-Astra Solves 49 of 50 Physics Problems at ~$2.40 | explainx.ai Blog | explainx.ai",
+   "site": "explainx.ai",
+   "published": 1792022400000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792110531652,
+ "updatedAt": 1792110531652,
+ "foundVia": "Reddit and the-decoder.com",
+ "check": {
+  "claims": 19,
+  "score": 10
+ },
+ "story": {
+  "id": "P370ceb6e",
+  "score": 93,
+  "items": [
+   "https://www.reddit.com/r/accelerate/comments/1x5yt69/gpt6_astra_autonomously_solved_4950_unpublished/",
+   "https://www.reddit.com/r/accelerate/comments/1x5yq1t/gpt6_astra_autonomously_solves_49_out_of_50/",
+   "https://www.reddit.com/r/accelerate/comments/1x6782t/astra_is_the_coolest/",
+   "https://www.reddit.com/r/accelerate/comments/1x67whk/ai_is_about_to_rawdog_the_physics_singularity/",
+   "https://the-decoder.com/gpt-6-astra-solves-49-of-50-physics-research-problems-at-2-40-apiece/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
