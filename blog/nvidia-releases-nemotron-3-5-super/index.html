@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NVIDIA Launches Nemotron 3.5 Super VL Multimodal Model | rkj dev</title>
+<meta name="description" content="NVIDIA launched Nemotron 3.5 Super VL, an open 120B multimodal model built for enterprise agents, alongside two compact local Bolt variants.">
+<link rel="canonical" href="https://www.rkjdev.com/blog/nvidia-releases-nemotron-3-5-super/">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#110b14">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:site_name" content="rkj dev Blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NVIDIA Launches Nemotron 3.5 Super VL Multimodal Model | rkj dev">
+<meta property="og:description" content="NVIDIA launched Nemotron 3.5 Super VL, an open 120B multimodal model built for enterprise agents, alongside two compact local Bolt variants.">
+<meta property="og:url" content="https://www.rkjdev.com/blog/nvidia-releases-nemotron-3-5-super/">
+<meta property="og:image" content="https://www.rkjdev.com/blog/img/nvidia-releases-nemotron-3-5-super/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://www.rkjdev.com/blog/img/nvidia-releases-nemotron-3-5-super/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NVIDIA Launches Nemotron 3.5 Super VL Multimodal Model | rkj dev">
+<meta name="twitter:description" content="NVIDIA launched Nemotron 3.5 Super VL, an open 120B multimodal model built for enterprise agents, alongside two compact local Bolt variants.">
+<link rel="alternate" type="application/rss+xml" title="rkj dev Blog" href="/blog/feed.xml">
+<link rel="alternate" type="application/feed+json" title="rkj dev Blog" href="/blog/feed.json">
+<link rel="icon" href="/favicon.svg?v=bdff7dc5" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,40;1,9..144,400..600,40&family=Schibsted+Grotesk:ital,wght@0,400..600;1,400..600&display=swap">
+<link rel="stylesheet" href="/site.css?v=e85724ed">
+<link rel="stylesheet" href="/blog/blog.css?v=7ad332ef">
+<meta property="article:published_time" content="2026-10-16T00:50:05.633Z">
+<meta property="article:modified_time" content="2026-10-16T00:50:05.633Z">
+<meta property="article:section" content="AI Models">
+<meta property="article:tag" content="NVIDIA">
+<meta property="article:tag" content="Nemotron">
+<meta property="article:tag" content="Multimodal AI">
+<meta property="article:tag" content="Open Weights">
+<meta property="article:tag" content="AI Agents">
+<link rel="preload" as="image" href="/blog/img/nvidia-releases-nemotron-3-5-super/hero.webp" imagesrcset="/blog/img/nvidia-releases-nemotron-3-5-super/hero-640.webp 640w, /blog/img/nvidia-releases-nemotron-3-5-super/hero.webp 1200w" imagesizes="(max-width: 760px) 100vw, 1200px">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"NVIDIA Releases Nemotron 3.5 Super VL Open Multimodal Agent Model","description":"NVIDIA launched Nemotron 3.5 Super VL, an open 120B multimodal model built for enterprise agents, alongside two compact local Bolt variants.","url":"https://www.rkjdev.com/blog/nvidia-releases-nemotron-3-5-super/","mainEntityOfPage":"https://www.rkjdev.com/blog/nvidia-releases-nemotron-3-5-super/","image":["https://www.rkjdev.com/blog/img/nvidia-releases-nemotron-3-5-super/og.jpg","https://www.rkjdev.com/blog/img/nvidia-releases-nemotron-3-5-super/hero.webp"],"datePublished":"2026-10-16T00:50:05.633Z","dateModified":"2026-10-16T00:50:05.633Z","articleSection":"AI Models","keywords":"NVIDIA, Nemotron, Multimodal AI, Open Weights, AI Agents","wordCount":880,"author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","name":"RKJDEV Labs","url":"https://www.rkjdev.com","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/apple-touch-icon.png"}},"isBasedOn":["https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/","https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/","https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB","https://github.com/ggml-org/llama.cpp/pull/30520","https://huggingface.co/nvidia/Nemotron-3.5-Rerank-8B-BF16","https://venturebeat.com/technology/nvidias-new-open-nemotron-3-5-super-vl-with-post-training-beats-claude-opus-5-gpt-6-1-sol-on-specialized-task-benchmarks","https://the-decoder.com/nvidias-nemotron-3-5-super-vl-is-an-open-model-built-to-run-enterprise-ai-agents-nonstop/"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"AI Models","item":"https://www.rkjdev.com/blog/category/ai-models/"},{"@type":"ListItem","position":3,"name":"NVIDIA Releases Nemotron 3.5 Super VL Open Multimodal Agent Model","item":"https://www.rkjdev.com/blog/nvidia-releases-nemotron-3-5-super/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the parameter count of Nemotron 3.5 Super VL?","acceptedAnswer":{"@type":"Answer","text":"Nemotron 3.5 Super VL is a 120-billion-parameter mixture-of-experts model that activates 12 billion parameters per token."}},{"@type":"Question","name":"What are the Nemotron 3.5 Bolt models?","acceptedAnswer":{"@type":"Answer","text":"Nemotron 3.5 Bolt models are local variants designed for consumer and edge hardware. Bolt 74B-A9B uses 2-bit quantization to fit into 24GB of VRAM, while Bolt E4B is a 4GB model scheduled for release on October 23, 2026."}},{"@type":"Question","name":"What license does Nemotron 3.5 Super VL use?","acceptedAnswer":{"@type":"Answer","text":"The model weights, datasets, and training recipes are licensed under the OpenMDW License Agreement, version 1.1, allowing both commercial and non-commercial deployment."}},{"@type":"Question","name":"How does Nemotron 3.5 Super VL handle both vision and language?","acceptedAnswer":{"@type":"Answer","text":"The model incorporates a C-RADIO v4-H vision encoder connected to an MoE backbone, allowing it to parse images, PDFs, charts, tables, and video without requiring a secondary vision model."}}]}]</script>
+</head>
+<body class="post">
+<div class="progress" aria-hidden="true"><span></span></div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="mark" href="/">rkj dev</a>
+    <nav aria-label="Site">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <article class="article">
+    <header class="post-head wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/category/ai-models/">AI Models</a></nav>
+      <h1>NVIDIA Releases Nemotron 3.5 Super VL Open Multimodal Agent Model</h1>
+      <p class="standfirst">The 120-billion-parameter open-weights mixture-of-experts model pairs vision and reasoning for continuous enterprise workflows, accompanied by two edge-focused Bolt models.</p>
+      <div class="byline">
+        <span class="by">rkj dev newsroom</span>
+        <span><time datetime="2026-10-16T00:50:05.633Z" class="abs" data-rel>Oct 16, 2026</time></span>
+        <span>4 min read</span>
+        <a href="#sources">7 sources, fact-checked</a>
+      </div>
+    </header>
+    <div class="hero-wrap wrap"><figure class="hero-fig is-ai">
+  <div class="img"><img src="/blog/img/nvidia-releases-nemotron-3-5-super/hero.webp" srcset="/blog/img/nvidia-releases-nemotron-3-5-super/hero-640.webp 640w, /blog/img/nvidia-releases-nemotron-3-5-super/hero.webp 1200w" sizes="(max-width: 760px) 100vw, 1200px" width="1200" height="675" alt="Digital visualization of server racks and glowing data streams representing multimodal artificial intelligence models." fetchpriority="high" decoding="async"></div>
+  <figcaption><span>Illustration: Conceptual depiction of high-efficiency multimodal agent architectures operating in enterprise server infrastructure.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure></div>
+    <div class="layout wrap">
+      <aside class="rail" aria-label="On this page">
+        <nav class="toc"><p>Contents</p><ol><li><a href="#multimodal-architecture-and-performance-metrics">Multimodal Architecture and Performance Metrics</a></li><li><a href="#edge-inference-with-nemotron-3-5-bolt">Edge Inference with Nemotron 3.5 Bolt</a></li><li><a href="#customization-and-enterprise-deployments">Customization and Enterprise Deployments</a></li><li><a href="#open-datasets-licensing-and-hardware-optimization">Open Datasets, Licensing, and Hardware Optimization</a></li></ol></nav>
+        <div class="share">
+          <p>Share</p>
+          <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fnvidia-releases-nemotron-3-5-super%2F&text=NVIDIA%20Releases%20Nemotron%203.5%20Super%20VL%20Open%20Multimodal%20Agent%20Model" target="_blank" rel="noopener">X</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fnvidia-releases-nemotron-3-5-super%2F" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://wa.me/?text=NVIDIA%20Releases%20Nemotron%203.5%20Super%20VL%20Open%20Multimodal%20Agent%20Model%20https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fnvidia-releases-nemotron-3-5-super%2F" target="_blank" rel="noopener">WhatsApp</a>
+          <button type="button" data-copy="https://www.rkjdev.com/blog/nvidia-releases-nemotron-3-5-super/">Copy link</button>
+        </div>
+      </aside>
+      <div class="prose">
+        <section class="inshort" aria-labelledby="tk">
+          <h2 id="tk">In short</h2>
+          <ul><li>Nemotron 3.5 Super VL uses a 120B mixture-of-experts architecture activating 12B parameters per token for document intelligence, coding, and tool use.</li><li>NVIDIA reports the model achieves up to 5x higher throughput on agentic workloads than other open models in its size category.</li><li>NVIDIA also launched the local Nemotron 3.5 Bolt 74B-A9B model fitting in 24GB VRAM, with the smaller Bolt E4B arriving on October 23, 2026.</li><li>Weights, training recipes, and open datasets—including a 2.8-trillion-token Indic dataset across 22 languages—are released under the OpenMDW-1.1 license, with the model trained on roughly 26 trillion pretraining and continued pretraining tokens.</li></ul>
+        </section>
+        <p>On October 15, 2026, NVIDIA released Nemotron 3.5 Super VL, an open 120-billion-parameter multimodal model designed to execute complex reasoning, visual inspection, and tool-calling workflows for enterprise software agents. Built in partnership with the Nemotron Coalition—an industry group that includes Mistral AI, Thinking Machines Lab, Perplexity, and Black Forest Labs—the release targets organizations seeking continuous, autonomous agents that can parse visual documents and take actions without routing data through proprietary third-party cloud services.</p>
+<p>According to the <a href="https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/" target="_blank" rel="noopener">NVIDIA Technical Blog</a>, Nemotron 3.5 Super VL relies on a Mixture-of-Experts (MoE) architecture that activates only 12 billion parameters per token. This design combines text, document, chart, image, and video processing in a single system, eliminating the need to pass context back and forth between separate text and vision-language models.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/nvidia-releases-nemotron-3-5-super/figure-1.webp" width="1200" height="670" alt="An engineer reviewing complex document charts and code traces on multi-monitor displays." loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: Visual document processing and code analysis performed by enterprise reasoning models.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="multimodal-architecture-and-performance-metrics">Multimodal Architecture and Performance Metrics</h2>
+<p>NVIDIA reported in its <a href="https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/" target="_blank" rel="noopener">official announcement blog</a> that Nemotron 3.5 Super VL delivers accuracy comparable to its flagship Nemotron 3 Ultra reasoning model while running at approximately one-fifth the parameter footprint. NVIDIA distilled Super VL directly from Nemotron 3 Ultra using multi-teacher on-policy distillation (MOPD) alongside SkewReverse loss to retain coding proficiency.</p>
+<p>On behavioral agent evaluations, Super VL scored 63.44% on Hermes Bench and 87.05% on LangChain evaluations, surpassing Nemotron 3 Ultra&#39;s marks of 56.33% and 84.3%, respectively. When tested on the CharXiv chart reasoning benchmark, the model scored 80.8%—rising to 84% when permitted to execute Python code interpretation—outperforming the 63% score set by Nemotron 3 Nano Omni. In software engineering tasks, NVIDIA noted the model outperforms Nemotron 3 Super across SWE-bench and Terminal-Bench.</p>
+<p>For inference performance, testing on the Artificial Analysis Intelligence Index reported by <a href="https://venturebeat.com/technology/nvidias-new-open-nemotron-3-5-super-vl-with-post-training-beats-claude-opus-5-gpt-6-1-sol-on-specialized-task-benchmarks" target="_blank" rel="noopener">VentureBeat</a> showed Super VL reached roughly 625 tokens per second on four NVIDIA Blackwell B200 GPUs. NVIDIA claims this offers up to a 5x throughput advantage over comparable open models like Inkling Small. However, VentureBeat reported that on the composite Artificial Analysis index score, Super VL registered a score of 26, trailing other open alternatives such as GLM-5.3-Flash at 42 and Qwen3.8-Flash-Next at 40.</p>
+<h2 id="edge-inference-with-nemotron-3-5-bolt">Edge Inference with Nemotron 3.5 Bolt</h2>
+<p>Alongside the data-center-scale Super VL model, NVIDIA launched the Bolt line of edge models intended for local deployment on workstations and personal computers, detailed on <a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB" target="_blank" rel="noopener">Hugging Face</a>.</p>
+<p>The Nemotron 3.5 Bolt 74B-A9B model compresses the architecture to 74 billion total parameters with 9 billion active parameters using Star Elastic, a router-guided architectural search. Using native 2-bit quantization (IQ2), the model fits within 24GB of memory, allowing it to run concurrently with local desktop applications on hardware such as NVIDIA DGX Spark, RTX PRO systems, and GeForce RTX PCs. Bolt supports popular inference frameworks including vLLM, llama.cpp, Ollama, and LM Studio, according to technical integration work logged on <a href="https://github.com/ggml-org/llama.cpp/pull/30520" target="_blank" rel="noopener">GitHub</a>.</p>
+<p>NVIDIA reported that Bolt 74B-A9B ranks first in its class on PinchBench and second on BrowseComp. A second local model, Bolt E4B, requires 4GB of memory for interactive voice assistants and embedded devices, with availability scheduled for October 23, 2026.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/nvidia-releases-nemotron-3-5-super/figure-2.webp" width="1200" height="670" alt="A compact desktop computing workstation processing automated digital agent workflows." loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: Local edge hardware executing agentic tasks using quantized open models.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="customization-and-enterprise-deployments">Customization and Enterprise Deployments</h2>
+<p>NVIDIA designed Super VL for post-training using NVIDIA NeMo, permitting organizations to customize the open weights on proprietary datasets using supervised fine-tuning (SFT) and low-rank adaptation (LoRA). As reported by <a href="https://the-decoder.com/nvidias-nemotron-3-5-super-vl-is-an-open-model-built-to-run-enterprise-ai-agents-nonstop/" target="_blank" rel="noopener">The Decoder</a>, several early adopters have deployed customized checkpoints for specialized internal workflows.</p>
+<p>Scale AI fine-tuned Super VL for automated vendor credit processing at Skydance Corporation, with Skydance expecting a 40x drop in inference costs and a 5x latency reduction. Scale AI also developed an agent for Ernst &amp; Young for merger-and-acquisition due diligence. Financial platform Ramp adapted the model to extract merchant names, dates, and amounts from receipt photographs into structured JSON, projecting 10x lower latency. In cybersecurity, AI21 and Alice reported a 41% accuracy gain after tuning Super VL for vulnerability remediation and threat intelligence. Additional partners incorporating the model include Salesforce for government workflow automation, CrowdStrike for enterprise defense, Perplexity for search tasks, Atlassian, and Dassault Systèmes.</p>
+<p>VentureBeat pointed out that while post-trained Super VL variants showed task-specific gains of 9% to 44% over baseline models, these specialized gains reflect targeted fine-tuning rather than general zero-shot superiority across broad benchmarks.</p>
+<h2 id="open-datasets-licensing-and-hardware-optimization">Open Datasets, Licensing, and Hardware Optimization</h2>
+<p>Super VL underwent pretraining and continued pretraining across roughly 26 trillion tokens, followed by 3.8 million post-training samples and reinforcement learning across approximately 100 environments. To expand multilingual capability, NVIDIA partnered with IIT Madras and its AI4Bharat laboratory to add 10 billion Indic tokens during continued pretraining. As part of the release, NVIDIA published the complete 2.8-trillion-token dataset covering 22 Indian languages on Hugging Face.</p>
+<p>For inference efficiency, the model implements multi-token prediction (MTP) and LiLiCorr, an open speculative decoding technique that evaluates draft candidates across entire token sequences, which NVIDIA reports delivers up to 2.3x faster token generation on DGX Spark. According to NVIDIA, under Dynamo distributed serving, request affinity routing and KV-cache offloading on 16 B200 GPUs served up to 8x more concurrent users while reducing time-to-first-token by 85%.</p>
+<p>Nemotron 3.5 Super VL is available on Hugging Face, ModelScope, OpenRouter, and as an NVIDIA NIM microservice. Model weights and recipes are governed under the OpenMDW-1.1 license for commercial and research use. While free developer access is available via rate-limited endpoints, production deployments running via NVIDIA AI Enterprise NIM microservices carry a software licensing fee of $4,500 per GPU annually, excluding infrastructure and compute costs.</p>
+
+        <section class="faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Questions people ask</h2>
+          <details open><summary>What is the parameter count of Nemotron 3.5 Super VL?</summary><p>Nemotron 3.5 Super VL is a 120-billion-parameter mixture-of-experts model that activates 12 billion parameters per token.</p></details>
+<details><summary>What are the Nemotron 3.5 Bolt models?</summary><p>Nemotron 3.5 Bolt models are local variants designed for consumer and edge hardware. Bolt 74B-A9B uses 2-bit quantization to fit into 24GB of VRAM, while Bolt E4B is a 4GB model scheduled for release on October 23, 2026.</p></details>
+<details><summary>What license does Nemotron 3.5 Super VL use?</summary><p>The model weights, datasets, and training recipes are licensed under the OpenMDW License Agreement, version 1.1, allowing both commercial and non-commercial deployment.</p></details>
+<details><summary>How does Nemotron 3.5 Super VL handle both vision and language?</summary><p>The model incorporates a C-RADIO v4-H vision encoder connected to an MoE backbone, allowing it to parse images, PDFs, charts, tables, and video without requiring a secondary vision model.</p></details>
+        </section>
+        <section class="sources" id="sources" aria-labelledby="src-title">
+          <h2 id="src-title">Sources</h2>
+          <ol><li><a href="https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/" target="_blank" rel="noopener">NVIDIA Nemotron 3.5 Super VL Powers Specialized Agents with Multimodal Reasoning</a><span>NVIDIA Technical Blog, Oct 15, 2026, <b class="official">official source</b></span></li><li><a href="https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/" target="_blank" rel="noopener">Open From Data Center to Desktop: NVIDIA Expands Nemotron Family With Highest Efficiency Super VL and Bolt Models</a><span>NVIDIA Blog, Oct 15, 2026, <b class="official">official source</b></span></li><li><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB" target="_blank" rel="noopener">nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB</a><span>Hugging Face, Oct 7, 2026, <b class="official">official source</b></span></li><li><a href="https://github.com/ggml-org/llama.cpp/pull/30520" target="_blank" rel="noopener">Add Nemotron Super 3.5 VL and Nemotron Bolt 74B A9B support by frozenblade1224 · Pull Request #30520 · ggml-org/llama.cpp</a><span>GitHub, <b class="official">official source</b></span></li><li><a href="https://huggingface.co/nvidia/Nemotron-3.5-Rerank-8B-BF16" target="_blank" rel="noopener">nvidia/Nemotron-3.5-Rerank-8B-BF16</a><span>Hugging Face, Oct 15, 2026, <b class="official">official source</b></span></li><li><a href="https://venturebeat.com/technology/nvidias-new-open-nemotron-3-5-super-vl-with-post-training-beats-claude-opus-5-gpt-6-1-sol-on-specialized-task-benchmarks" target="_blank" rel="noopener">NVIDIA's new, open Nemotron 3.5 Super VL with post-training beats Claude Opus 5, GPT-6.1 Sol on specialized task benchmarks</a><span>venturebeat.com, Oct 15, 2026</span></li><li><a href="https://the-decoder.com/nvidias-nemotron-3-5-super-vl-is-an-open-model-built-to-run-enterprise-ai-agents-nonstop/" target="_blank" rel="noopener">Nvidia's Nemotron 3.5 Super VL is an open model built to run enterprise AI agents nonstop</a><span>The Decoder, Oct 15, 2026</span></li></ol>
+          <p class="method">How this story was made: the newsroom picked it up from developer.nvidia.com, Google News and blogs.nvidia.com, gathered the full text of the sources above, and drafted it with AI assistance. Every factual claim was then checked against those sources before publishing (27 claims checked). Illustrations marked as AI-generated are not photographs. Spotted an error? <a href="mailto:rajankrishnan909@gmail.com?subject=Correction%3A%20NVIDIA%20Releases%20Nemotron%203.5%20Super%20VL%20Open%20Multimodal%20Agent%20Model">Tell us</a>.</p>
+        </section>
+        <p class="tags"><span>#NVIDIA</span> <span>#Nemotron</span> <span>#Multimodal AI</span> <span>#Open Weights</span> <span>#AI Agents</span></p>
+        <p class="stamp">Published October 16, 2026 at 00:50 UTC</p>
+      </div>
+    </div>
+  </article>
+  <section class="related wrap" aria-labelledby="rel-title">
+    <h2 id="rel-title">Keep reading</h2>
+    <div class="rows"><article class="story row">
+  <a class="story-link" href="/blog/mistral-large-4-preview-open-weights-2/">
+    <span class="pic"><img src="/blog/img/mistral-large-4-preview-open-weights-2/hero-640.webp" srcset="/blog/img/mistral-large-4-preview-open-weights-2/hero-640.webp 640w, /blog/img/mistral-large-4-preview-open-weights-2/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="An AI researcher inspecting server status screens inside a European data center control room." loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-10-08T02:09:12.807Z" data-rel>Oct 8, 2026</time></span>
+      <h3>Mistral Large 4 Launches in Public Preview as a 1-Trillion Parameter MoE</h3>
+      <span class="dek">Nicknamed 'Le Chonk,' the European AI lab's flagship mixture-of-experts model pairs 49 billion active parameters with enterprise cybersecurity and multimodal reasoning.</span>
+      
+    </span>
+  </a>
+</article>
+<article class="story row">
+  <a class="story-link" href="/blog/mistral-releases-mistral-large-4-open-weight-model/">
+    <span class="pic"><img src="/blog/img/mistral-releases-mistral-large-4-open-weight-model/hero-640.webp" srcset="/blog/img/mistral-releases-mistral-large-4-open-weight-model/hero-640.webp 640w, /blog/img/mistral-releases-mistral-large-4-open-weight-model/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="AI-generated illustration of a high-tech data center with glowing server racks." loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-10-07T01:15:57.514Z" data-rel>Oct 7, 2026</time></span>
+      <h3>Mistral Releases Mistral Large 4, a 1-Trillion Parameter Model</h3>
+      <span class="dek">Nicknamed 'Le Chonk,' the multimodal model is built for AI sovereignty and self-deployment according to Mistral, which also reported top-tier cybersecurity benchmark results ahead of a planned open-weights release.</span>
+      
+    </span>
+  </a>
+</article>
+<article class="story row">
+  <a class="story-link" href="/blog/mistral-releases-trillion-parameter-mistral-large/">
+    <span class="pic"><img src="/blog/img/mistral-releases-trillion-parameter-mistral-large/hero-640.webp" srcset="/blog/img/mistral-releases-trillion-parameter-mistral-large/hero-640.webp 640w, /blog/img/mistral-releases-trillion-parameter-mistral-large/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="An AI researcher in a server room control facility overseeing advanced computing infrastructure." loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-10-07T00:51:30.607Z" data-rel>Oct 7, 2026</time></span>
+      <h3>Mistral Releases Mistral Large 4, a 1-Trillion-Parameter Open Model</h3>
+      <span class="dek">Nicknamed 'Le Chonk,' the European flagship brings a sparse mixture-of-experts design, sovereign deployment options, and specialized cybersecurity workflows.</span>
+      
+    </span>
+  </a>
+</article></div>
+  </section>
+  <nav class="prevnext wrap" aria-label="More stories">
+    <a href="/blog/mistral-timestral-time-series-models-launch/"><span>Newer</span>Mistral Releases Timestral Time Series Models for Zero-Shot Forecasting</a>
+    <a class="next" href="/blog/tsmc-reports-record-q3-2026-profits-ai-demand/"><span>Older</span>TSMC Posts Record Q3 2026 Profit as TSMC and CEO C.C. Wei Say Rising Adoption of Agentic…</a>
+  </nav>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="biz">
+      <p class="biz-name">RKJDEV Labs</p>
+      <p>© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan</p>
+      <p>Udyam registered MSME, India, <span class="nowrap">UDYAM-BR-26-0254766</span></p>
+      <p><a href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a></p>
+    </div>
+    <nav aria-label="Site">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/blog/feed.xml">RSS</a>
+    </nav>
+    <p class="fine">Stories are researched from the linked sources, written with AI assistance and checked claim by claim against those sources before publishing. AI-generated illustrations are labeled.</p>
+  </div>
+</footer>
+<script src="/blog/blog.js?v=45c7aef4" defer></script>
+</body>
+</html>

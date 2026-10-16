@@ -1,0 +1,135 @@
+{
+ "slug": "microsoft-unveils-mai-base-2-frontier-model",
+ "title": "Microsoft Unveils MAI-Base-2 with 2.8 Trillion Parameters",
+ "seoTitle": "Microsoft Unveils MAI-Base-2 AI Model",
+ "description": "Microsoft has completed pre-training on MAI-Base-2, a 2.8-trillion-parameter MoE model trained on 16,000 GB200 GPUs to rival OpenAI and DeepSeek.",
+ "dek": "The 2.8-trillion-parameter mixture-of-experts model was trained on 16,000 GB200 GPUs and claims major efficiency gains over OpenAI and DeepSeek.",
+ "category": "AI Models",
+ "tags": [
+  "Microsoft",
+  "MAI-Base-2",
+  "OpenAI",
+  "Artificial Intelligence",
+  "Mixture of Experts"
+ ],
+ "keyTakeaways": [
+  "Microsoft completed pre-training on MAI-Base-2, a mixture-of-experts model featuring 2.8 trillion total parameters and 80 billion active parameters.",
+  "The model was trained on 16,000 GB200 GPUs across 38 days in August and September 2026 using a 50 trillion-token dataset.",
+  "Microsoft AI CEO Mustafa Suleyman claimed the model beats the base model behind OpenAI's GPT-5.6 Sol while using one-fourth of the compute.",
+  "Microsoft reports MAI-Base-2 is 4 to 12 times more FLOPs-efficient during pre-training than DeepSeek-V4-Pro-Base."
+ ],
+ "body": "On October 15, 2026, Microsoft announced that it completed pre-training for MAI-Base-2, a massive in-house foundation model. The system uses a mixture-of-experts architecture scaling to 2.8 trillion total parameters, with 80 billion active parameters, according to a technical update published on the [Microsoft AI Lab Notes blog](https://microsoft.ai/news/frontier-pre-training-at-microsoft-ai/).\n\n The company reported that MAI-Base-2 outperformed every open-weight base model evaluated on its held-out internal benchmarks and demonstrated substantial computational efficiency gains over existing frontier systems.\n\n## Training Hardware and Technical Specifications\n\nMicrosoft trained MAI-Base-2 on a cluster of 16,000 GB200 GPUs over 38 days across August and September 2026, according to reporting from [StreetInsider](https://www.streetinsider.com/Corporate+News/Microsoft+completes+pre-training+of+MAI-Base-2+AI+foundation+model/27192270.html) and [Breaking The News](https://breakingthenews.net/Article/Microsoft-completes-MAI-Base-2-pre-training/67321754).\n\nThe training corpus comprised a 50 trillion-token mixture with a March 2026 knowledge cutoff date. Measured in unique tokens, this represented an approximate 36% expansion over the dataset used for Microsoft's predecessor model, MAI-Base-1, which was introduced in June 2026.\n\nUnlike the original MAI-Base-1, MAI-Base-2 integrates native multimodal vision capabilities through an encoder-free architecture. Its vision-language dataset contains 4.5 trillion unique tokens, making up roughly 18% of the total pre-training mixture. Microsoft reported that the visual pre-training spans tasks including image captioning, chart interpretation, spatial reasoning, and medical understanding.\n\n[[FIG1]]\n\n## Compute Efficiency and Comparisons to OpenAI and DeepSeek\n\nIn an internal town hall address to employees on October 15, Microsoft AI CEO Mustafa Suleyman shared aggressive performance comparisons against outside systems, according to [Business Insider](https://www.businessinsider.com/microsoft-ai-ceo-new-model-beats-openai-using-less-compute-2026-10).\n\nSuleyman told staff that MAI-Base-2 is a stronger pre-trained base model than the model powering OpenAI's GPT-5.6 Sol, an internal OpenAI system nicknamed \"Spud.\" Suleyman claimed that Microsoft required only one-quarter of the compute that OpenAI used to train its corresponding base model, citing internal technical access and confidential evaluations measuring how effectively the AI predicts patterns.\n\nMicrosoft also compared the model to open architectures from Chinese AI lab DeepSeek. In its public notes, Microsoft stated that MAI-Base-2 achieves between 4 and 12 times greater pre-training FLOPs efficiency than DeepSeek-V4-Pro-Base, which Microsoft described as the strongest open base model currently available. Suleyman stated during the town hall that the company achieved a 12-fold computational efficiency advantage over DeepSeek on pre-training.\n\n[[FIG2]]\n\n## Enterprise Licensing and the Evolving OpenAI Partnership\n\nMicrosoft confirmed that MAI-Base-2 was trained strictly on organic data without distillation from other frontier models, as detailed by [StreetInsider](https://www.streetinsider.com/Corporate+News/Microsoft+completes+pre-training+of+MAI-Base-2+AI+foundation+model/27192270.html). Microsoft indicated that avoiding distillation allows the company to license the model's weights directly to commercial customers through its Foundry platform.\n\nThe internal positioning of MAI-Base-2 comes amid shifts in Microsoft's alliance with OpenAI. Microsoft owns a stake in OpenAI valued at more than $100 billion and continues to offer OpenAI systems to enterprise cloud customers. However, the corporate relationship has grown more complex over the past year as Microsoft develops native alternatives.\n\nIn March 2026, Microsoft consolidated its consumer and enterprise Copilot teams while reassigning Suleyman to lead foundational model development within the company's superintelligence unit. With pre-training finished, MAI-Base-2 has entered post-training, and Microsoft confirmed that preliminary preparations for MAI-Base-3 are already underway.",
+ "faq": [
+  {
+   "q": "What is MAI-Base-2?",
+   "a": "MAI-Base-2 is an in-house foundational AI model developed by Microsoft. It features a mixture-of-experts architecture with 2.8 trillion total parameters and 80 billion active parameters."
+  },
+  {
+   "q": "How was MAI-Base-2 trained?",
+   "a": "The model was pre-trained over 38 days in August and September 2026 using 16,000 GB200 GPUs on a 50 trillion-token dataset with an encoder-free native vision architecture."
+  },
+  {
+   "q": "How does MAI-Base-2 compare to OpenAI and DeepSeek models?",
+   "a": "Microsoft claims MAI-Base-2 required one-fourth the compute used for the base model powering OpenAI's GPT-5.6 Sol while delivering better pattern prediction, and achieved 4 to 12 times higher FLOPs efficiency than DeepSeek-V4-Pro-Base."
+  },
+  {
+   "q": "Will Microsoft license MAI-Base-2 weights?",
+   "a": "Yes. Because the model was trained on organic data without distillation from other systems, Microsoft stated it plans to license the model weights to enterprise customers via its Foundry platform."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An expansive modern supercomputing server room filled with glowing server racks connected by high-density fiber-optic networking, with amber and teal indicators illuminating the dark, polished facility floor.",
+  "alt": "An illustration of a supercomputing datacenter cluster",
+  "caption": "",
+  "src": "img/microsoft-unveils-mai-base-2-frontier-model/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 72616,
+  "small": "img/microsoft-unveils-mai-base-2-frontier-model/hero-640.webp",
+  "og": "img/microsoft-unveils-mai-base-2-frontier-model/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/microsoft-unveils-mai-base-2-frontier-model/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An engineer wearing lab attire examining technical diagrams and data flows on a transparent glass work board inside a brightly lit research facility.",
+   "alt": "An illustration of an AI researcher reviewing system architectures",
+   "caption": "",
+   "slot": "FIG1",
+   "src": "img/microsoft-unveils-mai-base-2-frontier-model/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 41092,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A tech executive standing at a minimalist wooden lectern speaking to an auditorium of attentive colleagues during an internal corporate town hall meeting.",
+   "alt": "An illustration of a company town hall meeting",
+   "caption": "",
+   "slot": "FIG2",
+   "src": "img/microsoft-unveils-mai-base-2-frontier-model/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 28558,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://www.businessinsider.com/microsoft-ai-ceo-new-model-beats-openai-using-less-compute-2026-10",
+   "title": "Microsoft AI CEO says new model beats OpenAI using less compute",
+   "site": "Business Insider",
+   "published": 1792107104455,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://microsoft.ai/news/frontier-pre-training-at-microsoft-ai/",
+   "title": "Frontier Pre-training at Microsoft AI | Microsoft AI",
+   "site": "Microsoft AI",
+   "published": 1792080541000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://www.streetinsider.com/Corporate+News/Microsoft+completes+pre-training+of+MAI-Base-2+AI+foundation+model/27192270.html",
+   "title": "Microsoft completes pre-training of MAI-Base-2 AI foundation model",
+   "site": "streetinsider.com",
+   "published": 1792022400000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://breakingthenews.net/Article/Microsoft-completes-MAI-Base-2-pre-training/67321754",
+   "title": "Microsoft completes MAI-Base-2 pre-training - Breaking The News",
+   "site": "breakingthenews.net",
+   "published": 1792022400000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792112501354,
+ "updatedAt": 1792112501354,
+ "foundVia": "Google News",
+ "check": {
+  "claims": 22,
+  "score": 10
+ },
+ "story": {
+  "id": "Pa4b7ba35",
+  "score": 90,
+  "items": [
+   "https://news.google.com/rss/articles/CBMijAFBVV95cUxNRW51akJGblNTOFdkeTdXa1ZFaF9JMlptcjFiZU8wQkdyWS1HMUcyRmhDVk14aFlDUE5YN1cyMUFTS29fSTZNQ3dRYkY3Yzd6MGVQZ3VnaE43djVDYjc4TllJSFBna3RWeGNxMVZNcHVFSDJZQnRhcVhITnV1WDMyQkV6SmRVRUJXNG82RQ?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}

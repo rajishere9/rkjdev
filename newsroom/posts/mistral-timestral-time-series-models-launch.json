@@ -1,0 +1,167 @@
+{
+ "slug": "mistral-timestral-time-series-models-launch",
+ "title": "Mistral Releases Timestral Time Series Models for Zero-Shot Forecasting",
+ "seoTitle": "Mistral Timestral Time Series Models Launch",
+ "description": "Mistral AI has released Timestral, a family of zero-shot time series models from 5M to 209M parameters designed to deliver fast forecasting directly on CPUs.",
+ "dek": "The four lightweight models range from 5M to 209M parameters and, according to Mistral's self-reported benchmark findings, outperform larger competitors on key public forecasting benchmarks without requiring GPUs.",
+ "category": "AI Models",
+ "tags": [
+  "Mistral AI",
+  "Timestral",
+  "Time Series",
+  "Foundation Models",
+  "Open Weights",
+  "Forecasting"
+ ],
+ "keyTakeaways": [
+  "Mistral released Timestral, its first family of four time series foundation models spanning 5M, 28M, 123M, and 209M parameters.",
+  "According to Mistral's submissions and evaluations, the 209M-parameter model ranked first among zero-shot models on the GIFT-Eval, TIME, and fev-bench leaderboards.",
+  "The models operate without dedicated GPU acceleration, generating forecasts in 10 to 140 milliseconds on standard 8-thread server CPUs.",
+  "Timestral uses Decoupled Horizon Forecasting and covariate-aware attention to predict 21 quantiles across contexts up to 32,768 steps.",
+  "Inference code is released under the Apache 2.0 license on GitHub, while model weights are published under a Modified MIT license."
+ ],
+ "body": "On October 15, 2026, Mistral AI expanded beyond natural language processing by launching [Timestral](https://mistral.ai/news/timestral/), its first family of foundation models built specifically for numerical time-series forecasting. The release consists of four parameter sizes—5M, 28M, 123M, and 209M—designed to deliver multivariate, probabilistic projections out of the box without requiring domain-specific retraining. According to Mistral, its flagship 209M model achieves top placement across three primary public forecasting benchmarks while using approximately two-thirds of the parameters found in previous state-of-the-art models.\n\nTime series represents one of the most widespread operational data types in enterprise settings, powering server telemetry, inventory tracking, financial risk estimation, and energy grid planning. Whereas traditional statistical methods like ARIMA fit strictly to individual series and deep learning approaches like PatchTST typically require training from scratch on each dataset, Timestral uses pre-training over diverse synthetic and real datasets to generalize zero-shot across unseen domains.\n\n[[FIG1]]\n\n## Architecture Behind Timestral Time Series Models\n\nAll four sizes of the Timestral family share the same underlying architecture and training methodology, as detailed in the official [Mistral AI GitHub repository](https://github.com/mistralai/timestral). Timestral is built as a causal patch-based transformer featuring both time attention and variate attention mechanisms. It operates on patches of 32 time steps, embedding values alongside missing-value indicator flags to handle irregular data naturally without data distortion.\n\nThe models introduce Decoupled Horizon Forecasting, a mechanism designed to solve context-loss issues seen in standard causal decoders. Traditional masking techniques in systems like TimesFM-3 mask out target values, causing them to appear as missing values and removing them from context during subsequent predictions. Decoupled Horizon Forecasting retains the entire history within the sequence, deploying dedicated learned forecast tokens that read earlier context. This design allows observed values to function simultaneously as targets and contextual history while maintaining distinct markers for true gaps.\n\nTo integrate exogenous variables cleanly, Timestral uses covariate-aware attention. Input series are categorized as target variates, past-only covariates, or known-future covariates such as scheduled factory shutdowns or weather projections. Information flows strictly from covariates to targets, preventing target futures from leaking into predictions. The model can process context lengths up to 32,768 time steps, forecasting horizons of up to 1,024 steps in a single forward pass, with longer windows decoded block by block.\n\n[[FIG2]]\n\n## Benchmark Performance and CPU Efficiency\n\nMistral reported benchmark evaluations across three primary public forecasting suites: GIFT-Eval, TIME, and fev-bench. According to the company, Timestral-209M secured the top spot across all five evaluated metrics among pre-trained zero-shot entries using a single checkpoint without model ensembling.\n\nOn the [GIFT-Eval benchmark](https://huggingface.co/mistralai/Timestral-5M), Timestral-209M posted a Mean Absolute Scaled Error (MASE) of 0.658 and a Continuous Ranked Probability Score (CRPS) of 0.446, outperforming rival baselines. On the TIME benchmark across 98 tasks, it achieved a MASE of 0.626 and CRPS of 0.522. On fev-bench across 100 tasks, it recorded a SQL skill score of 50.39 and a MASE skill score of 39.49.\n\nMistral also highlighted efficiency gains across smaller sizes on the accuracy-versus-size Pareto front. According to Mistral, the 28M-parameter model outperforms Chronos-2—which is roughly four times larger—on GIFT-Eval and TIME, while the 209M model surpasses TimesFM-3 and Falcon-2.0. The 123M checkpoint comes within 0.2% of the 209M score at three-quarters of its latency.\n\nInference for the Timestral family does not require specialized GPU hardware. Testing on a standard 8-thread server CPU forecasting 24 hours ahead from three weeks of 15-minute history yielded an inference time of 10 milliseconds on the [Timestral-5M model](https://huggingface.co/mistralai/Timestral-5M) and 140 milliseconds on the Timestral-209M model. The 28M checkpoint executes roughly five times faster than the 209M model, making the family suitable for deployment on edge gateways, periodic cron tasks, and resource-constrained microservices.\n\n## Industrial Applications and Agentic Workflows\n\nUnlike point-forecast algorithms that generate a single deterministic line, Timestral outputs 21 distinct quantiles ranging from 0.01 to 0.99 using a pinball loss objective. This probabilistic distribution allows operations teams to quantify prediction spread and set dynamic alert thresholds grounded in risk rather than fixed estimates.\n\nIn plant maintenance scenarios cited by Mistral, related mechanical properties such as pump vibration, temperature, and pressure fluctuate together. Timestral forecasts these multivariate streams jointly rather than in isolation, incorporating categorical operating modes (such as idle, running, or under maintenance) directly as raw category codes, whereas categorical covariates are target-encoded only for univariate targets.\n\nMistral outlined how Timestral can serve as an analytical foundation within multi-modal AI agent pipelines. When Timestral identifies anomalous readings on industrial machinery, an agent can embed the anomalous telemetry signals and compare them to historical sensor records. The agent can then trigger sub-agents to parse maintenance logs, shift records, and technical manuals to generate a root-cause diagnosis and recommended resolution for operations staff before an asset fails.\n\n## Availability and Adaptation Options\n\nMistral has published standalone inference code on GitHub under the open-source Apache 2.0 license, requiring dependencies limited to PyTorch, NumPy, `safetensors`, and `huggingface_hub`. Model weights for all four sizes—measuring 21 MB for 5M, 111 MB for 28M, 490 MB for 123M, and 837 MB for 209M—are hosted on the Hugging Face Hub under a Modified MIT license. The license grants broad usage rights provided deployments do not infringe on third-party intellectual property.\n\nFor enterprise customers needing specialized fine-tuning, Mistral announced that Timestral is available in public preview through Mistral Forge. The service enables organizations to fine-tune weights on internal telemetry, customize domain covariates, control pre-training data mixtures to prevent backtest contamination, and deploy into air-gapped environments or private clouds. Mistral stated that a full technical report documenting the underlying training dynamics will be published in a subsequent release.",
+ "faq": [
+  {
+   "q": "What parameter sizes are available for Timestral?",
+   "a": "Timestral is released in four sizes: 5M, 28M, 123M, and 209M parameters, with download sizes ranging from 21 MB to 837 MB."
+  },
+  {
+   "q": "Does Timestral require a GPU for inference?",
+   "a": "No. Timestral runs entirely on standard server CPUs, with latency on an 8-thread CPU measured between 10 milliseconds for the 5M model and 140 milliseconds for the 209M model."
+  },
+  {
+   "q": "What licenses govern Timestral's code and model weights?",
+   "a": "The inference code repository on GitHub is licensed under Apache 2.0, while the model weights hosted on Hugging Face are distributed under a Modified MIT license."
+  },
+  {
+   "q": "How does Timestral format its predictions?",
+   "a": "Timestral produces probabilistic forecasts across 21 non-crossing quantiles (ranging from 0.01 to 0.99), allowing users to evaluate prediction uncertainty alongside median estimates."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An industrial engineer in a modern operations control room examining multi-channel glowing telemetry wave graphs and predictive time-series trends on large glass display panels",
+  "alt": "An engineer monitoring multi-channel sensor telemetry and predictive forecasting trends in a control room",
+  "caption": "Illustration: An operations engineer evaluating predictive telemetry curves and sensor distributions.",
+  "src": "img/mistral-timestral-time-series-models-launch/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 52728,
+  "small": "img/mistral-timestral-time-series-models-launch/hero-640.webp",
+  "og": "img/mistral-timestral-time-series-models-launch/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/mistral-timestral-time-series-models-launch/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A technical researcher analyzing glowing digital network diagrams showing attention links between sequential numerical time steps on a clean laboratory workstation",
+   "alt": "A researcher studying neural network attention patterns across numerical time sequences",
+   "caption": "Illustration: Transformer attention layers processing temporal sequences and multivariate series.",
+   "slot": "FIG1",
+   "src": "img/mistral-timestral-time-series-models-launch/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 34806,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A plant technician wearing protective gear inspecting mechanical water pumps and heavy industrial equipment fitted with wireless digital telemetry sensors",
+   "alt": "A technician inspecting industrial machinery equipped with wireless monitoring sensors",
+   "caption": "Illustration: Sensor-equipped plant machinery generating telemetry for predictive maintenance systems.",
+   "slot": "FIG2",
+   "src": "img/mistral-timestral-time-series-models-launch/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 49340,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://mistral.ai/news/timestral/",
+   "title": "Timestral: Mistral's First Family of Time-Series Foundation Models",
+   "site": "Mistral AI",
+   "published": 1784073600000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://github.com/mistralai/timestral",
+   "title": "mistralai/timestral",
+   "site": "GitHub",
+   "published": 1792059618000,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://huggingface.co/mistralai/Timestral-5M",
+   "title": "mistralai/Timestral-5M",
+   "site": "Hugging Face",
+   "published": 1791985273000,
+   "official": true
+  },
+  {
+   "n": 4,
+   "url": "https://huggingface.co/mistralai/Timestral-123M",
+   "title": "mistralai/Timestral-123M",
+   "site": "Hugging Face",
+   "published": 1792000264000,
+   "official": true
+  },
+  {
+   "n": 5,
+   "url": "https://explainx.ai/blog/timestral-mistral-time-series-foundation-models-209m-cpu-forecasting-2026",
+   "title": "Timestral: Mistral 209M Forecasting Model, #1 on 3 Boards | explainx.ai Blog | explainx.ai",
+   "site": "explainx.ai",
+   "published": 1792022400000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://ai-tldr.dev/releases/mistral-timestral/",
+   "title": "Timestral — Mistral's first open models for time-series forecasting",
+   "site": "AI/TLDR",
+   "published": 1792022400000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://news.assaynotes.com/en/story/f5064e83-58a4-441a-823f-2f896c7959a7",
+   "title": "Mistral releases Timestral time-series foundation models",
+   "site": "News",
+   "published": null,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792112121699,
+ "updatedAt": 1792112121699,
+ "foundVia": "mistral.ai, GitHub and Hugging Face",
+ "check": {
+  "claims": 32,
+  "score": 10
+ },
+ "story": {
+  "id": "Pb4930426",
+  "score": 90,
+  "items": [
+   "https://mistral.ai/news/timestral/",
+   "https://github.com/mistralai/timestral",
+   "https://huggingface.co/mistralai/Timestral-5M",
+   "https://huggingface.co/mistralai/Timestral-123M",
+   "https://huggingface.co/mistralai/Timestral-28M",
+   "https://huggingface.co/mistralai/Timestral-209M",
+   "https://www.reddit.com/r/LocalLLaMA/comments/1x6ouoy/mistralaitimestral/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
