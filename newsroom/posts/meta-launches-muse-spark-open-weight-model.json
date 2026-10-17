@@ -1,0 +1,174 @@
+{
+ "slug": "meta-launches-muse-spark-open-weight-model",
+ "title": "Meta Launches Muse Spark Open to Challenge Rival Open Models",
+ "seoTitle": "Meta Launches Muse Spark Open-Weight AI Model",
+ "description": "Meta released Muse Spark Open, an 816B open-weight multimodal model with a 1M token context, teaming up with Apple and Nvidia for local and server deployment.",
+ "dek": "The 816-billion-parameter open-weight model brings 1-million-token multimodal reasoning to Apple Silicon and enterprise Nvidia Blackwell systems.",
+ "category": "AI Models",
+ "tags": [
+  "Meta",
+  "Open Source",
+  "Artificial Intelligence",
+  "Apple",
+  "Nvidia"
+ ],
+ "keyTakeaways": [
+  "Meta launched Muse Spark Open, an 816B-parameter (42B active) mixture-of-experts model with a 1-million-token context window.",
+  "The model is optimized to run locally across two Apple M5 Ultra Mac Studios using Apple's MLX framework, requiring 1TB of unified memory.",
+  "Nvidia released an accompanying DFlash 2 draft model to accelerate inference on Blackwell GB300 systems via vLLM and SGLang.",
+  "Meta positioned the release against international open-weight systems, reporting benchmark gains over Chinese models Kimi K3 and GLM 5.3 on agentic tasks."
+ ],
+ "body": "On October 15, 2026, Meta released the weights for Muse Spark Open, an 816-billion-parameter multimodal AI model designed for agentic tasks, coding, and multi-step reasoning. Featuring 42 billion active parameters per forward pass and a context window reaching 1 million tokens, the model is available to download on Hugging Face under Meta's Muse Model License. New technical disclosures outline how Meta worked alongside hardware vendors to support on-device desktop execution on Apple Silicon and server-scale inference on Nvidia systems.\n\nAlexandr Wang, Meta's chief of AI, called Muse Spark Open \"the most capable US open-weight model to date\" in posts on X, while background reporting by [The Guardian](https://www.theguardian.com/technology/2026/oct/16/meta-releases-muse-spark-open-a-new-open-weight-ai-model) explained that open-weight models provide parameter access to developers and noted competition from leading Chinese models.\n\n[[FIG1]]\n\n## Apple Silicon Integration and Local Hardware Requirements\n\nA notable technical development in the launch is Meta's collaboration with Apple. According to [9to5Mac](https://9to5mac.com/2026/10/15/meta-launches-new-muse-spark-open-model-optimized-to-run-on-mac-studio/), Muse Spark Open leverages Apple's open-source MLX array framework to distribute inference across Apple unified memory architecture. Mark Zuckerberg stated on X that the model was optimized for Mac Studio hardware in coordination with Apple head John Ternus.\n\nLocal deployment requires substantial memory. As detailed by [Engadget](https://www.engadget.com/2287833/meta-built-a-huge-open-weight-ai-model-for-macs-but-youll-need-1tb-of-ram-to-run-it/), running Muse Spark Open on desktop hardware requires roughly 1TB of RAM. This setup uses two Mac Studio systems equipped with M5 Ultra chips offering 512GB of unified memory each, joined so that the M5 Ultra integrated GPUs can access the model across 1.2 TB/s of memory bandwidth. Meta reported testing on-device agentic workflows on the hardware, including using Muse Code for shipping real iOS changes (bug fixes, new features, full build) to the open-source Mastodon client Ice Cubes and controlling DaVinci Resolve frame-by-frame for automated video cropping.\n\n[Engadget](https://www.engadget.com/2287833/meta-built-a-huge-open-weight-ai-model-for-macs-but-youll-need-1tb-of-ram-to-run-it/) noted that setups can also run on four 256GB Mac Studios, an arrangement priced near $38,000, while [CNET](https://www.cnet.com/tech/computing/meta-spark-open-ai-apple-news/) noted that single base M5 Ultra units start at $5,499 with 96GB memory.\n\n[[FIG2]]\n\n## Nvidia Speculative Decoding and Server Inference\n\nBeyond desktop Mac Silicon, server infrastructure providers rolled out immediate support. On October 16, 2026, Nvidia published [Muse-Spark-Open-816B-A42B-DFlash2](https://huggingface.co/nvidia/Muse-Spark-Open-816B-A42B-DFlash2), a dedicated 4.38-billion-parameter draft model built with Nvidia Model Optimizer 0.47 for DFlash 2 speculative decoding.\n\nThe DFlash 2 draft model features 5 dense decoder layers with non-causal sliding-window attention across a 2,048-token window, sharing token embeddings and output heads with Meta's target checkpoint. Testing conducted on Nvidia Blackwell GB300 systems using vLLM demonstrated average acceptance lengths between 3.47 and 3.87 tokens per step on MT-Bench and the SPEED-Bench qualitative split, while the throughput split averaged 3.03 to 3.35 tokens per step. Serving configurations for SGLang allow teams to deploy an NVFP4 quantized checkpoint of Muse Spark Open across four Blackwell GPUs using tensor and expert parallelism.\n\nAccording to [Meta's developer documentation](https://dev.meta.ai/resources/blog/build-with-muse-spark-open), runtime and serving integrations at launch include vLLM, SGLang, llama.cpp, and Hugging Face, alongside cloud catalog support on Amazon SageMaker AI, Google Cloud Model Garden, and Microsoft Foundry Models.\n\n## Competitive Benchmarks and Industry Impact\n\nMeta positioned Muse Spark Open as a direct response to leading Chinese open-weight models, including Alibaba's Qwen, Moonshot AI's Kimi K3, and Z.ai's GLM family, as noted by [The Guardian](https://www.theguardian.com/technology/2026/oct/16/meta-releases-muse-spark-open-a-new-open-weight-ai-model). According to benchmarks released by Meta and reported by [Engadget](https://www.engadget.com/2287833/meta-built-a-huge-open-weight-ai-model-for-macs-but-youll-need-1tb-of-ram-to-run-it/), Muse Spark Open outperformed GLM 5.3 and Kimi K3 on evaluations measuring visual reasoning and multi-step agentic performance.\n\nAs reported by [ETEnterpriseAI](https://enterpriseai.economictimes.indiatimes.com/amp/news/industry/meta-releases-open-weight-muse-spark-ai-model-for-coding-and-ai-agents/134986747), open weights provide enterprises with private control over data governance and deployment environments without continuous cloud API billing. Hosted API availability has also rolled out through providers including Fireworks AI, Together AI, Groq, Baseten, and Modal, providing hosted alternatives for organizations that do not manage on-premises clusters.",
+ "faq": [
+  {
+   "q": "What are the core technical specifications of Muse Spark Open?",
+   "a": "Muse Spark Open features 816 billion total parameters with 42 billion active parameters in a mixture-of-experts configuration, a 1-million-token context window, and multimodal input support covering text, images, video, and audio."
+  },
+  {
+   "q": "What hardware is required to run the model locally?",
+   "a": "Local execution requires 1TB of unified RAM, which can be achieved using two Apple Mac Studios configured with 512GB M5 Ultra chips running Apple MLX, or four 256GB Mac Studio units."
+  },
+  {
+   "q": "How does Nvidia accelerate Muse Spark Open on servers?",
+   "a": "Nvidia released the Muse-Spark-Open-816B-A42B-DFlash2 draft model, a 4.38-billion parameter checkpoint designed to accelerate inference on Blackwell GPUs via DFlash 2 speculative decoding in vLLM and SGLang."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "Two sleek desktop computer workstations connected by thick glowing data cables on a modern wooden desk in a quiet research studio, soft morning light, minimalist design.",
+  "alt": "Two linked desktop workstations connected by high-bandwidth cables on an engineering desk.",
+  "caption": "Illustration: Dual high-memory desktop workstations configured to run large open-weight models locally.",
+  "src": "img/meta-launches-muse-spark-open-weight-model/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 52152,
+  "small": "img/meta-launches-muse-spark-open-weight-model/hero-640.webp",
+  "og": "img/meta-launches-muse-spark-open-weight-model/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/meta-launches-muse-spark-open-weight-model/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An engineer sitting at a clean dual-monitor workstation reviewing complex software code and video editing tracks, cinematic lighting, focused atmosphere.",
+   "alt": "An engineer observing complex coding tasks and video editing operations on a multi-monitor display.",
+   "caption": "Illustration: Software engineers testing agentic workflows that drive local video editing and software builds.",
+   "slot": "FIG1",
+   "src": "img/meta-launches-muse-spark-open-weight-model/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 32578,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "Modern enterprise server rack glowing with neon indicator lights inside a data center, highlighting high-performance accelerator hardware.",
+   "alt": "Enterprise computing server racks illuminated in a clean data center facility.",
+   "caption": "Illustration: Data center accelerator systems running multi-GPU speculative decoding pipelines.",
+   "slot": "FIG2",
+   "src": "img/meta-launches-muse-spark-open-weight-model/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 51434,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://huggingface.co/nvidia/Muse-Spark-Open-816B-A42B-DFlash2",
+   "title": "nvidia/Muse-Spark-Open-816B-A42B-DFlash2",
+   "site": "Hugging Face",
+   "published": 1792125626000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://www.theguardian.com/technology/2026/oct/16/meta-releases-muse-spark-open-a-new-open-weight-ai-model",
+   "title": "Meta releases Muse Spark Open, a new ‘open-weight’ AI model",
+   "site": "The Guardian",
+   "published": 1792110868000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://9to5mac.com/2026/10/15/meta-launches-new-muse-spark-open-model-optimized-to-run-on-mac-studio/",
+   "title": "Meta launches new Muse Spark Open model, optimized to run on Mac Studio",
+   "site": "9to5Mac",
+   "published": 1792083600000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.engadget.com/2287833/meta-built-a-huge-open-weight-ai-model-for-macs-but-youll-need-1tb-of-ram-to-run-it/",
+   "title": "Meta Built A Huge Open-Weight AI Model For Macs, But You'll Need 1TB Of RAM To Run It",
+   "site": "Engadget",
+   "published": 1792083768000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://enterpriseai.economictimes.indiatimes.com/amp/news/industry/meta-releases-open-weight-muse-spark-ai-model-for-coding-and-ai-agents/134986747",
+   "title": "Meta releases open-weight Muse Spark AI model for coding and AI agents",
+   "site": "ETEnterpriseAI",
+   "published": 1792137025000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://dev.meta.ai/resources/blog/build-with-muse-spark-open",
+   "title": "Build with Muse Spark Open",
+   "site": "Meta Model API",
+   "published": null,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://www.cnet.com/tech/computing/meta-spark-open-ai-apple-news/",
+   "title": "Surprise! Meta and Apple Worked Together on a New Open-Source AI Model - CNET",
+   "site": "CNET",
+   "published": 1792165593000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792196009492,
+ "updatedAt": 1792196009492,
+ "foundVia": "Google News, Hugging Face and Google Search",
+ "check": {
+  "claims": 28,
+  "score": 10
+ },
+ "story": {
+  "id": "Pf230c66c",
+  "score": 91,
+  "items": [
+   "https://news.google.com/rss/articles/CBMia0FVX3lxTFBvSnZoemZnUGhnYWhDNkNHYUNMWHl5YUxqTVpLRkVPSWNBTTc1OEVaOE9jdVFRYkdIME5yZWM0RFJYaGlGdWx1eGZuZE50aFRoRHBsVHBzZm5CSFRRQjRzOTZ0dXc2SUdqbEJr?oc=5",
+   "https://news.google.com/rss/articles/CBMiogFBVV95cUxPTlBSVzNzRjZrZlFxel9aYkpIcEFzNllvb0xIX3FLc053WDE0RGZMazlTOEViUml3ZFJnNnFqZGZGbm5IRzNQMVhiZExpRDdDb0VTRWFmZHlBY3N4NDlmN3FmZjJ1V0JwMmhJQURmVGtlZnYtT0k4YWh1WTRmbmUyN19GQjJzaGpnSGpiZnROdmZVVEtCOG5oRFVmbHpZdVlwd2fSAacBQVVfeXFMTnJlNE84aDAzNUpOeVNuazdOOVBwbFdpN19RZlhTdC1jNXYzemRxZVNHZGJMZWxhVmhBZ01pTHdEdEN3Wk1qcFlQV1pITUhDWUZOdGhuQ1pleVFtdHVCZUNvMkhfbmViN1RnWXBvOUxQZTNMSmRmRzJEaVNOUFkwdWxFQkcxZ3FQZVdCOWYtS1NoRXdhbll0V0EtMjBHbVpkSm1leW1Vakk?oc=5",
+   "https://news.google.com/rss/articles/CBMib0FVX3lxTE1VWlBHSkQ3eG5lZ3ZWbHh1M29SVzJZc2pYbUpKMklKc1pSaGw2MUlhU1F3emlLN0lqX1dJNUJCUEJLZ3NHMThlYm0yNkxsUUZhVndNaW4xRmVQdkNqMEZyclZkZlpqZktteXZ0ZGFDWQ?oc=5",
+   "https://news.google.com/rss/articles/CBMipgFBVV95cUxPSGdWYlhXalpfRWswMmQxSFQwdVpWemVPaDVvejFiSGJDcnAwN0haWG1QcXBfTmI4c1ZWOGlNSDJCV2dqeWx2Z0JiUzlvNjRSc3RuLWppX2JfRFFRd3FxMGVncWR5ZmQxSnZmNkI2VklsOVNxeF9NdkxQbzlXQTJfWDNWb3FzeVhnMzd5Mks0a05UNGxrZl92Mko1a01nd01kbXRmUzNR?oc=5",
+   "https://news.google.com/rss/articles/CBMiygFBVV95cUxQUzFRd0E1emFtV1J4NVVfT0NDenUyLUZuNWZzMXRaNXFvZGlueFpMT1VSb0h2TE1IZ1RWMkpub1p4WHNpREJvUXd3TmExMWJSb01GYVFkOUR1dnBxeFRVbTdYN1NEZ1VKVXE2MlBVNkFZT2E3cEI0RnpQQXh2N3RnSFVtbk1tLTdLUGdlQkpjX2ZIeUxGM212Nk04bEhERk95bXkxRVdHekxFUnF2UlRReWt1THFIdjFGTnVHcDZiYURzV3BRcHhDLTRR0gHPAUFVX3lxTE9Cb3YtTUJtTldlZmRDTVFtZWhVYXpQWjI1Wm04ZzEybXRyOTA1TTQ2TlhYUEI1UzdReXlDZXlmd0xQU19GT3BBMXdFallEbGFDb0VCcE1NRjNUUTFVTklYeS00SWt4MnZlSzVjakFTRkhjZ2ZENUU0UDhrMkVrWmNiektHR0NHS3FuQm41YWpnMjYycnZhZ3dhOWlMaVJoRFJnV2licW9zenVhZWYyRFVGa2JXZ3k5SEVSa3FhU241dEFBaVhrYlowenhOYkdCNA?oc=5",
+   "https://news.google.com/rss/articles/CBMidkFVX3lxTE1DdV9fZ0JzODkyaE5BS2lIa01Kd0pVeUw0X0hzZjAwSGx1dlBaeDVldUxoODBHeWhWdFhvNC1WZk9SMGZJWkFQNXJGaWp4VUhEMmh1empLbWVGU0dNLXhNWjBMQkwtSndvNkNMYms4cWtWYzNFTkE?oc=5",
+   "https://news.google.com/rss/articles/CBMijgFBVV95cUxNeGt6cUdHSERBUWtfal9Uc09fbXRUUUpjcUZqT2lYWG5JV05hSmxEcjlKYng2MkZYRnJCVXBncEd3X2lsZFNtUWUwLTRvQUl5MW5Qb0VVWmNYMTlmbEctLVRmYXYzcWsyOXFnLVpPZ1JMV3JQZDhTYXBtWGVENGQteWxDREV5SnhWcVg5TmRR0gGOAUFVX3lxTE14a3pxR0dIREFRa19qX1RzT19tdFRRSmNxRmpPaVhYbklXTmFKbERyOUpieDYyRlhGckJVcGdwR3dfaWxkU21RZTAtNG9BSXkxblBvRVVaY1gxOWZsRy0tVGZhdjNxazI5cWctWk9nUkxXclBkOFNhcG1YZUQ0ZC15bENERXlKeFZxWDlOZFE?oc=5",
+   "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOR0h6d2JNM0JvSEZQbmNNNHFHVDRpNlpPU0FoeHhaR3VrMk1SSlQ2dEhLaXUzV1diVXhGOE9VVWQ0ek9QSWRFVDJUam5OY0FOakVsOVFfa1FuVWhFQVV1V1FYX3RMRGlleFpkVGhwX25ueTV6ZTBOaXB0QTU1TkliNmhUYzdSTnNTa1NLeUdzVXFjSXBEWXh2UThkU1ktakhnTjFvSVpXSTdIZ9IBsAFBVV95cUxNdEVkM09oNURmUjdqc1ZWcWdpMjJzdDJvRGRHYWNPUnlJY2p0WHR5dUpOTmV0aG1NOS1uRWNZenExOGhhRUFHNDRpOXlfdlkxbHJueWw3bDNTeVEtbEkzS3I4anNJc09VZXFSNXFoN2wyaTlOWnZhUVpja3V1NFUzM2NYTDZTeEUtemhlLVFZc0xtM1dJRzZreHhkRjRVSmt2dmxaMF9wRUFwMjZDYVYtSg?oc=5",
+   "https://huggingface.co/nvidia/Muse-Spark-Open-816B-A42B-DFlash2",
+   "https://news.google.com/rss/articles/CBMie0FVX3lxTE5uaGxRdmJobzNhMThUUE1JMUxVTmxtUUoxczVhNkJhQUhfelEwYy1zT05NV1AtRVh0VnIwdDlIaEFiSk9Qdmd6WE54T2w2OGtuSl9tUXA0a2ZKNEFOcVNyYk5BR1Z4cnRvWHdVN2pxMkUzVnVZT00tNHN2QQ?oc=5",
+   "https://english.cw.com.tw/article/article.action?id=5065",
+   "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQcTI3ZXFvVWZuVlpwS0hOMTR0YUEyeEhub0plelk5UDVSdVZIVmdJREVqUDdQZVU2VlBrUUQySDVwNlNPRWlBeVp2UHB4czZsZkpyczVwT1hBZnBJckJSTFlwUWJxeGJPR1BzTlpSZmQ4YldGUWZyWENPYlpwdnY3WHdjeWxTendLOXBMVkM2Ym1Xdkx0REpwYi1KTzBsUzN4Z3NKRjlwYTdqbkJ2ZkVIN3VMa1lpNWo0STJDcERMdi1IY0w5dGwyN2MyY2NHQzdYUGN4LXBYWdIB5AFBVV95cUxQWl90a0dKWkdYNUEzaDlPUGItWnV1VER6azFwT2R6OFNLa1hGcWxRUnN1VFRPTkszbDVCa2ZZYWQ4d0xHZXNHaG1odEpPNmhieU1pazg4SmlpRFJvN0ZydjVzY2tZdWVYT2JQV3lFREZWZnJDX2RKY2JITTZzOGhpRXYtVGhyZnpCQVdMUGU4cnlISmNsYVNieTVLQ3hWNFd5UXo1Vjd0c2wwM19yUUdtTlhCeW52QUhKNnkzbnVCNFpuSE5VOVdQTEtGMTY4dzcwTDV1aTdjWXQ2d1JkdGlfVl8yTXY?oc=5",
+   "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNLWpwWHlXSExVNGlXRE8wYnNGZndES3NLTF9BTGdWY25uVFQ1amF2dVJod3pTOWRnNzdfRDR0X3VtbDF3QTJtbTRZNXVsa3NZMFMwdlFuZF9ZNEZIdnhzRS1heE9PRHFiTFdSUVFLcW0zRnNFZGZxcThjbnNRYlRHVURIbktGSndoSE95UlBSZllOVHJCczRjTG1QVF9nZjh1blFwRnYyWnZVZG1zMnpjR2tyZkxieUxobWYyaV83R2FXajc1d2lFQlZKY0tObnhyZWtQY1g2WXZ3dzUwYll5WU5MeWpXNm1KRjFhTUJjTGVudFNTbjBnTmFNeWF6WUpwcmpoMHZiOHJKSlHSAZACQVVfeXFMUFQtdHI5RXdZbTJHdEdkTjlNZzcyNFBVM0l3ZDJwUVZvTlprV0d4WmtpYnFDc3U3ek9sNm9Ddk0wYU1hUnY4LXNOUmxRUTFTemlfbUpWQWYxR3V6X3g0RGFWQ0pSYTkwUnJSd0JOcm5ZMG9wVmZ4QkVYUmxjNEVyRlZzXzVVUFBHNEZfcDFNeHpBNWFxcERMWkxYWl90MHhxZXpNZy1pY0dZdkxPWmJBTXgxYnlOVWpfTmNqNmxKQzFZeTQ2S19pcmlqM1Y4b25xUWNyVEJ6TGdxZVVIcWM4RWxPUHZ1MENYSlR3X01LMEFMQk53RWxVd2pSOGl2M0tuWC1GQ01oSHRSNWh4SWxDd0E?oc=5",
+   "https://news.google.com/rss/articles/CBMisAFBVV95cUxNdEVkM09oNURmUjdqc1ZWcWdpMjJzdDJvRGRHYWNPUnlJY2p0WHR5dUpOTmV0aG1NOS1uRWNZenExOGhhRUFHNDRpOXlfdlkxbHJueWw3bDNTeVEtbEkzS3I4anNJc09VZXFSNXFoN2wyaTlOWnZhUVpja3V1NFUzM2NYTDZTeEUtemhlLVFZc0xtM1dJRzZreHhkRjRVSmt2dmxaMF9wRUFwMjZDYVYtStIBsAFBVV95cUxNdEVkM09oNURmUjdqc1ZWcWdpMjJzdDJvRGRHYWNPUnlJY2p0WHR5dUpOTmV0aG1NOS1uRWNZenExOGhhRUFHNDRpOXlfdlkxbHJueWw3bDNTeVEtbEkzS3I4anNJc09VZXFSNXFoN2wyaTlOWnZhUVpja3V1NFUzM2NYTDZTeEUtemhlLVFZc0xtM1dJRzZreHhkRjRVSmt2dmxaMF9wRUFwMjZDYVYtSg?oc=5",
+   "https://news.google.com/rss/articles/CBMivgFBVV95cUxPVEVLOWdkbFhOOGZWX1cyOXRlQzdueHJTQ2JoQkliaWxIMlc0OTVfRFpOcmxDNUdkcjFpUVF3UHFNRGtEbGRxVXVLQ25xb2gzaWhjMGJ6clhtcmFUOHZmQTI5dVVKeUtLU0E3N1U0S3FyQmRkTFluQ3hmLW1aVWdLd2pYempNLUlsdG8wTGR5ZmFEMmNDMTJsdExrYmo1TVJvYW1DMXVWblhOQ2d4LXk4aGVZTXpKREFCUm05NmR3?oc=5",
+   "https://news.google.com/rss/articles/CBMigwJBVV95cUxOaEstQW1TNDlnMFFsY0htb2MzaVVZdkdjVDdnYkRTdDBzT0JRakk3TEVUWDFIdUlQOU90Q0t0N0hja1F1UHA0RjZ2dkU3RXY3MTNOOXpuMkRpdm5rY0FhVE1qYnluc0FEbkxORUVJRVFJbmczNnZ3TVRUci1Ud2NKQ01BYnVabnpzTHpNQUZCUlM2Tk9nNWNBaHdXUG5rU2NUdEQwNExZOElURE9vUi1BdkZkc0pyM2dJRDNXSm5nRTY1ZTVvdy16Zk5hcUpTa2xvSVZ5aWd1YmZScEtqWTBZZE83YUFXOFlGbDdvWlJ4dHM2RkpQSjFnZFgwZUhRdGJhb29Z0gGDAkFVX3lxTE5oSy1BbVM0OWcwUWxjSG1vYzNpVVl2R2NUN2diRFN0MHNPQlFqSTdMRVRYMUh1SVA5T3RDS3Q3SGNrUXVQcDRGNnZ2RTdFdjcxM045em4yRGl2bmtjQWFUTWpieW5zQURuTE5FRUlFUUluZzM2dndNVFRyLVR3Y0pDTUFidVpuenNMek1BRkJSUzZOT2c1Y0Fod1dQbmtTY1R0RDA0TFk4SVRET29SLUF2RmRzSnIzZ0lEM1dKbmdFNjVlNW93LXpmTmFxSlNrbG9JVnlpZ3ViZlJwS2pZMFlkTzdhQVc4WUZsN29aUnh0czZGSlBKMWdkWDBlSFF0YmFvb1k?oc=5",
+   "https://news.google.com/rss/articles/CBMipgFBVV95cUxNdVdzNzM4aENKSU1RN1ZUZWtINmdoLTZkdko1bVJ4Z1N2dl9tVVZRVG1uUWZnSVJwa1d4RWE2Z1E3MTZBc05TN19SU2xZc2NkejJJYnRQR1Q4TW1Uamw3dUdsT280Vk9uVHA2SHFnZkRjcTZFd00xajUtYlhKZE9fN3UzcjM4V3JadXFITlkwMUtkdXE4bGlSZmJNMTNVZTd1REdsU293?oc=5",
+   "https://news.google.com/rss/articles/CBMihwFBVV95cUxPendmbktMRElTYXNaUWxNamx2TDhpeHVyRHJ6dHN1ZEtwOERqY3lyb1V6SVc5QmZ1Rk1kc1IyZ0Q3eEhvSGJaOGRiajdnSmpkSVRnRmN0LVB3Xy1jS3hVQ3Q0cF9NbUw2bnVKcDZybDJOTEwtb3FJUmp2NmQ0X2tUbkFaV3dScE0?oc=5",
+   "https://news.google.com/rss/articles/CBMilwJBVV95cUxQcEk2emxMQUo0SFd1WWRSc25yRnhsZXdtXzZ0aEFCVTBmOTNjUElublRwVTByVmRaQWlBbm1ESEZULWZoVTlMd2dNZTQ3Sk1Yd0hUa2dDeVBSbmZsYmtaY2MyU1BsZTlMWFJOM2RycTkzU0dwNDRLdVBwc2dHbHZZY1Q5TlJwOGd2V3p4QnFqWkd4MGZYMEYtZEd1UHJNZklkR2x1Q0ZUU3lkQXhpVEpmbTlNMnZzSmN4UWI2WW13cHJ0ZWNwSkZUUHRNUmwtajV2ZG5STU41emdyUUd1Ujd0QUgyNkhkTGNDTGk1Zmh3OU16YjJvei1Ccl9ld3hHWkVMMmJ5eUNMZDBWOS1idDJ0eFZqdDRQMkXSAZwCQVVfeXFMTTFKemxHRUhnMXFHdGMwS2RPdFFuTS1VMmI4YjhWZVpQdUU5enhBTnZKMWR1YmVNN0Vzb1ZoeEludTdXX0RmWFVTeFVlTWJLcWJnVDRNbUFSWEhlSy1VTFdqM1RKZ3I3aC05dW10MzJJWlV6Z0tVcFZCdXNPTVNGc0h1bS1Va1RfRklacXg1TzUza0xBQVBlNjUyOUJVZDJobDBMUFpVODFQSWZnSzEtUmNoRmNubGdUS3hxWGtrWVZTanpXaWIwaUViREZqbXZibXdrQ2J6SG4yRGJsN0lTYzlONkt3M2pOaHhjSDllRC1EajZLMjZxX3E3S3EydGFDSlh3aktlbkpncEFpeFpfUlpRcHk3eklGb2VZT1k?oc=5",
+   "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQWU9uQkw2ZmxpVmlCQ3VXMGFWYUhoM3V5QmtDRVBJai1PUVVKeDFzbmwxYV81MUJRVkVNVW5zYlFwdGVQeUR4MWlRd2w3bFA3dENyUXREZDIxSTZTdVNKUHJUSjFfRi1EREp0Y3ZvbDFLdWxvekJ3SkhOSk1DcVViR1JYamxxalRPTlVPUnRGdnJjdndpUDV2QVNrUUEydnVMOGNnUkdIRmJxMUd6SVFIRml0MS1CQUI0OWM3VkFNTTdRZlNDbHZxMzZmSHJRb0cxN1lSdUlidlFuUdIB3wFBVV95cUxNR0NHZDFPWEtpRzZ3dy1fbW8zRGJlRE9sR2tqWVhyWFk1UXhucFA5a3VxbGFrUzJlZUIzSEtHNXBnclZiTElzYzJfWlJPTndPUUNwSHhqaFBJUktlNU8xMlA5RHpqeXpKQlVIVjA0U20zTUxyaEtOVUZwZzczb0FiZ2d3SVp5VWdOdV9uRUhGWTZBUW8ybk51RUI1azVFZEFvNWdxYWdfQWV6cDhYcUFUTE9Lb0x5Y25nRGVEZmc2WlNNYmFSZ24tejJVRXRDcVBFU2ZlcHRwXzBxa2VHZXlv?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
