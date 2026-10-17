@@ -1,0 +1,181 @@
+{
+ "slug": "china-proposes-export-controls-ai-models-chips",
+ "title": "China Proposes Sweeping Export Controls on Advanced AI Models and Chips",
+ "seoTitle": "China Proposes Export Controls on 23 AI Technologies",
+ "description": "China proposed export controls on 23 AI technologies, restricting frontier models over 2 trillion parameters, chip designs, and autonomous malware tools.",
+ "dek": "A draft catalog update from Beijing introduces export bans and licensing hurdles for ultra-large models and advanced chip architectures while leaving open-source code largely untouched.",
+ "category": "Policy",
+ "tags": [
+  "China",
+  "AI Policy",
+  "Export Controls",
+  "Semiconductors",
+  "Large Language Models",
+  "Open Source"
+ ],
+ "keyTakeaways": [
+  "China's commerce and science ministries issued Announcement No. 48 proposing export bans or restrictions on 23 AI technologies, alongside photovoltaics and biotech.",
+  "The draft restricts exports of model weights, code, and architecture for AI models with at least 2 trillion parameters, 10^26 FLOPs of training compute, or top-10 global rankings.",
+  "A total ban applies to AI tools that autonomously generate or mutate malware targeting defense networks and critical infrastructure.",
+  "Open-source releases, published academic research, and overseas consumer access via APIs and applications remain exempt from standard export licensing.",
+  "A temporary mandatory registration rule took effect on October 16, 2026, while the draft remains open for public comment through November 15, 2026."
+ ],
+ "body": "On October 16, 2026, China's Ministry of Commerce and Ministry of Science and Technology published a joint regulatory draft proposing export bans and restrictions on 40 technologies, placing 23 artificial intelligence technologies under strict state oversight. Released as [Announcement No. 48](https://www.mofcom.gov.cn/zwgk/zcfb/art/2026/art_0a31a3c9ac404f7a9b0e917ce3412997.html), the proposal is a sweeping draft plan governing the outbound transfer of domestic software, computing clusters, and semiconductor designs. Alongside AI, the catalog covers 12 photovoltaic technologies and five biomedical fields.\n\nThe ministries opened a public comment period running through November 15, 2026, according to [The Next Web](https://thenextweb.com/news/china-ai-export-controls-draft). However, Chinese authorities simultaneously enacted an immediate, temporary registration rule on October 16. The interim mandate obligates domestic organizations to log any ongoing or planned export deals involving listed technologies through the Commerce Ministry's online portal before proceeding with transfers.\n\n[[FIG1]]\n\n## Quantitative Thresholds for Frontier Models\n\nThe draft regulations set clear technical boundaries defining when large language models and foundation systems fall under export controls. According to reporting by [The Decoder](https://the-decoder.com/china-plans-to-tighten-export-controls-on-open-weight-models-and-23-key-ai-technologies/), Beijing established a dual-trigger system targeting software assets including model weights, checkpoints, source code, architecture, and training or inference methods.\n\nUnder the first criterion, controls apply to models trained on \"important data\" as designated under China's Data Security Law and associated statutes, provided the systems deliver services derived from that data. Datasets already in the public domain are exempt, as are training corpora containing no more than 0.1 percent of such data if it has been thoroughly sanitized, does not manifest in user outputs, and does not materially enhance the system's core research capabilities.\n\nUnder the second criterion, controls automatically apply when an AI model hits a training compute threshold of 10^26 floating-point operations (FLOPs), reaches a scale of at least 2 trillion parameters, or secures a spot among the world's top 10 on performance, specific task, safety, or usage rankings. While the regulatory text does not cite individual systems by name, [WKMG News 6](https://www.clickorlando.com/business/2026/10/16/china-moves-to-curb-tech-exports-including-ai-citing-national-security-risks/) noted that Chinese systems such as Moonshot AI's Kimi K3 and Alibaba's Qwen3.8-Max operate above the 2-trillion-parameter threshold. Alibaba also announced plans in September 2026 to build models scaling between 5 and 10 trillion parameters.\n\n## Prohibitions, Chip Design Limits, and National Security\n\nThe 40 items in Announcement No. 48 are split between outright prohibitions and restricted categories. As detailed by [The Hindu](https://www.thehindu.com/news/international/china-considers-new-export-curbs-on-solar-ai-biotech/article71591880.ece), 14 technologies face a total export ban, while 26 face restricted licensing regimes.\n\nChief among the prohibited technologies are autonomous AI systems capable of generating or mutating malicious code to compromise government networks, military facilities, or critical national infrastructure. AI-assisted systems designed for software vulnerability discovery are not banned outright, but they are categorized as restricted technologies that require government licensing.\n\nBeyond algorithmic code, the restrictions target hardware architecture. The draft extends export licensing requirements to design blueprints for AI processing chips manufactured at or below 14 nanometers, chips utilizing 2.5D or 3D stacking packages, and specialized memory chip designs, according to [Emergent](https://emergent.sh/news/china-proposes-ai-export-controls-models). Outside AI, complete bans target perovskite and tandem solar cell manufacturing, while restrictions cover high-capacity polysilicon production lines capable of producing 30,000 tonnes or more annually.\n\n[[FIG2]]\n\n## Open-Source Exemptions and Global Access Paths\n\nDespite the strict hardware and parameter thresholds, the Chinese government structured the rules to preserve parts of its international developer footprint. The Commerce Ministry stated that open-source software, published code repositories, and findings disseminated through academic papers remain broadly exempt from export controls, as reported by [Morningstar](https://www.morningstar.com/news/dow-jones/202610162068/china-proposes-export-controls-on-ai-technologies).\n\nForeign developers and international consumers can also continue interacting with covered Chinese AI models through standard consumer applications, websites, SaaS platforms, and remote API calls without triggering export reviews. Licensing hurdles specifically target the physical or contractual migration of core proprietary assets abroad.\n\nUnder the draft, deploying a covered model onto foreign physical servers counts as a regulated technology export. However, Beijing introduced a fast-track process: Chinese companies deploying models onto their own corporate-owned cloud infrastructure abroad receive automatic licensing upon filing. The fast-track mechanism also covers overseas chip tape-outs, joint international standard-setting activities, and partnerships within the World Artificial Intelligence Cooperation Organization, an international body launched by Beijing.\n\n## Geopolitical Impact and Market Outlook\n\nExplaining the regulatory rationale, a spokesperson for China's Ministry of Commerce stated that AI, biomedicine, and photovoltaics increasingly touch sensitive sectors, noting that \"major economies around the world have implemented varying degrees of export controls in these areas.\" The spokesperson maintained that the draft adheres to international norms to prevent proliferation risks and guarantee that systems remain safe and controllable.\n\nIndustry analysts view the move as a direct regulatory counterpart to Western policies. Dean W. Ball, head of strategic futures at OpenAI, observed in analysis cited by [The Decoder](https://the-decoder.com/china-plans-to-tighten-export-controls-on-open-weight-models-and-23-key-ai-technologies/) that the framework serves as a \"mirror image\" of model-weight export controls enacted by the United States. While Ball pointed out that Beijing is not shutting down open-weight development today, the rules establish the state's legal authority to restrict model weights at will in the future.\n\n[[FIG3]]\n\nThe draft follows several years of escalating global restrictions. Washington has long curbed Chinese access to frontier lithography equipment and high-end processing accelerators, and in June 2026 the U.S. Commerce Department briefly directed Anthropic to bar foreign nationals from using its Fable 5 and Mythos 5 models before lifting the requirement. Beijing has simultaneously scrutinized foreign tech transactions, having blocked Meta Platforms' proposed $2 billion acquisition of startup Manus in April 2026 on national security grounds.\n\nFor enterprise customers, the proposed catalog signals growing bifurcation. Lian Jye Su, chief analyst at Omdia, noted through [WKMG News 6](https://www.clickorlando.com/business/2026/10/16/china-moves-to-curb-tech-exports-including-ai-citing-national-security-risks/) that the rules reflect a response to Western technological sovereignty policies. As Natixis senior economist Gary Ng observed, global access to technologies is becoming increasingly fragmented.",
+ "faq": [
+  {
+   "q": "Which AI technologies face a complete export ban under China's proposal?",
+   "a": "Technologies designed for autonomous malicious-code generation and mutation that could target critical infrastructure, military systems, or government networks face a complete prohibition."
+  },
+  {
+   "q": "What parameter thresholds trigger export controls on large AI models?",
+   "a": "Export controls kick in if an AI model contains 2 trillion or more parameters, requires 10^26 FLOPs or more of training compute, ranks in the global top 10 on performance or safety benchmarks, or is trained on China's restricted important data."
+  },
+  {
+   "q": "Are open-source models and API services affected by the new rules?",
+   "a": "Open-source code and published academic research are exempt from the controls. Overseas end users can also continue using restricted models through standard APIs, applications, and websites without triggering export licensing."
+  },
+  {
+   "q": "When do China's proposed export controls take effect?",
+   "a": "The draft proposal is open for public comment until November 15, 2026. However, a temporary rule requiring export registration for all listed technologies took effect immediately on October 16, 2026."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "alt": "Illustration of trade and technology regulators reviewing digital blueprints of microchips and neural networks on an illuminated table",
+  "caption": "Illustration: Government officials review technical documentation for advanced semiconductors and neural networks under proposed trade rules. (AI-generated) | rkj dev Blog credit: Ideogram / rkj dev Blog",
+  "src": "img/china-proposes-export-controls-ai-models-chips/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 65656,
+  "small": "img/china-proposes-export-controls-ai-models-chips/hero-640.webp",
+  "og": "img/china-proposes-export-controls-ai-models-chips/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/china-proposes-export-controls-ai-models-chips/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "alt": "Illustration of a massive server room with digital data streams highlighting computational neural networks and parameter weights",
+   "caption": "Illustration: Data centers training foundation models with trillions of parameters face strict licensing thresholds under Beijing's draft rules. (AI-generated) | rkj dev Blog credit: Ideogram / rkj dev Blog",
+   "slot": "FIG1",
+   "src": "img/china-proposes-export-controls-ai-models-chips/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 81134,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "alt": "Illustration of an advanced semiconductor wafer displaying 3D stacked microchip architectures and circuit pathways",
+   "caption": "Illustration: Hardware design technologies for advanced packaging and sub-14-nanometer chips fall under restricted export categories. (AI-generated) | rkj dev Blog credit: Ideogram / rkj dev Blog",
+   "slot": "FIG2",
+   "src": "img/china-proposes-export-controls-ai-models-chips/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 57444,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "alt": "Illustration of global digital networks diverging into separate regional cloud corridors connected across continents",
+   "caption": "Illustration: Emerging regulatory barriers across major economies are driving growing fragmentation in global technology access. (AI-generated) | rkj dev Blog credit: Ideogram / rkj dev Blog",
+   "slot": "FIG3",
+   "src": "img/china-proposes-export-controls-ai-models-chips/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 39176,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://thenextweb.com/news/china-ai-export-controls-draft",
+   "title": "China proposes export controls on its advanced AI models and chip designs",
+   "site": "TNW | Artificial-intelligence",
+   "published": 1792156092000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://www.thehindu.com/news/international/china-considers-new-export-curbs-on-solar-ai-biotech/article71591880.ece",
+   "title": "China considers new export curbs on solar, AI, biotech",
+   "site": "The Hindu",
+   "published": 1792146660000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://the-decoder.com/china-plans-to-tighten-export-controls-on-open-weight-models-and-23-key-ai-technologies/",
+   "title": "China plans to tighten export controls on open-weight models and 23 key AI technologies",
+   "site": "The Decoder",
+   "published": 1792172567000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.mofcom.gov.cn/zwgk/zcfb/art/2026/art_0a31a3c9ac404f7a9b0e917ce3412997.html",
+   "title": "商务部 科技部公告2026年第48号 就修订《中国禁止出口限制出口技术目录》公开征求意见并对相关技术出口实施临时登记管理",
+   "site": "mofcom.gov.cn",
+   "published": null,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://www.morningstar.com/news/dow-jones/202610162068/china-proposes-export-controls-on-ai-technologies",
+   "title": "China Proposes Export Controls on AI Technologies",
+   "site": "Morningstar, Inc.",
+   "published": 1792146000000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://www.clickorlando.com/business/2026/10/16/china-moves-to-curb-tech-exports-including-ai-citing-national-security-risks/",
+   "title": "China moves to curb tech exports, including AI, citing national security risks",
+   "site": "WKMG News 6 & ClickOrlando",
+   "published": 1792153252000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://emergent.sh/news/china-proposes-ai-export-controls-models",
+   "title": "China Proposes AI Export Controls on Models and Chips",
+   "site": "Emergent",
+   "published": 1792160217000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792196796564,
+ "updatedAt": 1792196796564,
+ "foundVia": "Techmeme, Google Search and Google News",
+ "check": {
+  "claims": 50,
+  "score": 10
+ },
+ "story": {
+  "id": "P2e49871e",
+  "score": 88,
+  "items": [
+   "https://www.techmeme.com/261016/p5#a261016p5",
+   "https://www.morningstar.com/news/dow-jones/202610162068/china-proposes-export-controls-on-ai-technologies",
+   "https://news.google.com/rss/articles/CBMid0FVX3lxTE9GT0htbnpxdzM4Tm1RTTZia0ZFRnFDR1g2cS13MWpWTzBHeVJWSGFlbkZIYTVIcHZsenAzRFd0aWFXODV6RFkyVVdKVmFCTFZWNzdmaEdzQ2h1TVk0UmxSRzU3c0EwUkVucHRmWDktd1VySTZlQS1j?oc=5",
+   "https://www.clickorlando.com/business/2026/10/16/china-moves-to-curb-tech-exports-including-ai-citing-national-security-risks/",
+   "https://www.reddit.com/r/LocalLLaMA/comments/1x7g3zq/china_proposes_export_controls_on_23_ai/",
+   "https://news.google.com/rss/articles/CBMikAFBVV95cUxObXRBclhhcm1OSzQ3SGF0cjNzdmdNZTE1eTJ0V2pKMEtraEZYQWh0SWtyS3ZrcnRlU0E3S3pLX25vVVhEV0JCbnhvSTJCNWlacDNzQVdGOU14UHNfb1pDUzRTc3N6aGxEam8yNzQweFFlN1ZGaGxwUWFVT3oycF9FNlpGdkVBWjllUlJBelJmSHc?oc=5",
+   "https://emergent.sh/news/china-proposes-ai-export-controls-models",
+   "https://news.google.com/rss/articles/CBMipwFBVV95cUxPUWJDS0prTVRYUmc3bEVPalN4b0dfOWVoS3BpSmlPZWhZTjJwd0NpeGZEQ3l3eVUxZkVPcGxUSjV0cnREZFVpZE9EMVdObHJxbV9oamxpbV9RRVk2dmVXb2xxNUdpYnZtdXRoeWN5N2Vtbll1Y0NsUmYtTEgyLUJHREJYSFVWT1VLSWNRRnRKUjRqZzV1VFVMdkx2R3NiRkgtZC1xc2NLOA?oc=5",
+   "https://the-decoder.com/china-tightens-export-controls-on-open-weight-models-and-23-key-ai-technologies/",
+   "https://the-decoder.com/china-plans-to-tighten-export-controls-on-open-weight-models-and-23-key-ai-technologies/",
+   "https://news.google.com/rss/articles/CBMisgFBVV95cUxPdU1Eb2ZqTHBnQlJISXdubUVnNHZLTXJOLXlpdDI3cFlRWjZLOUpWRGpCTTgwTmZZZk1ydlRSQnVnV29sZTJwSF9LOWxnbktBejZYeGhpN1lINUxEVlRDb2xON2JJekdvdXo1dzB2VzBjOV9TR3NzSF85Z0dYc0N1NzVhWU5OU3kyZTNHSEE2ZFljX1RJdFFyWXBHdmExekZ2X0tPTUI5U1AzRUxWWkl6MENR?oc=5",
+   "https://www.pbs.org/newshour/world/china-says-it-will-curb-tech-exports-including-ai-citing-national-security-risks"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
