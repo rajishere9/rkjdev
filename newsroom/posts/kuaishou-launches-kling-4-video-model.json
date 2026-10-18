@@ -1,0 +1,161 @@
+{
+ "slug": "kuaishou-launches-kling-4-video-model",
+ "title": "Kuaishou Launches Kling 4.0 with Multimodal Video Controls",
+ "seoTitle": "Kuaishou Launches Kling 4.0 AI Video Model",
+ "description": "Kuaishou has launched Kling 4.0 globally, introducing 30-second single-pass video generation, 10 keyframe inputs, and 15 multimodal reference assets.",
+ "dek": "Kuaishou's upgraded video generator expands single-pass generation to 30 seconds and adds multi-keyframe directing tools for commercial creators.",
+ "category": "AI Models",
+ "tags": [
+  "Kling AI",
+  "Kuaishou",
+  "Video Generation",
+  "Multimodal AI",
+  "Generative AI"
+ ],
+ "keyTakeaways": [
+  "Kling 4.0 launched globally on October 15, doubling single-pass generation length from 15 seconds to 30 seconds.",
+  "The new Omni Reference system accepts up to 15 multimodal assets, including 10 images and 5 video clips, paired with up to 10 keyframe inputs.",
+  "Access is available via the Kling AI web interface as well as developer tooling through the Model Context Protocol (MCP) and CLI.",
+  "Features marked as coming soon include 10-bit HDR output at 1080p and 4K, 2-minute video extensions, and an enterprise API."
+ ],
+ "body": "Kuaishou Technology has officially rolled out [Kling 4.0](https://kling.ai/release-note/release-notes/Kling_4) to all users, introducing native 30-second clip generation and multimodal directing controls. The release on October 15, 2026, follows a tiered preview phase that began in late September and aims to give commercial production teams finer control over camera movement, narrative progression, and character consistency.\n\nAccording to [Kling AI's global press release](https://www.globenewswire.com/news-release/2026/10/16/3382484/0/en/kling-ai-launches-kling-4-0-globally-with-professional-grade-output-stable-motion-and-multimodal-control.html), the platform has reached more than 100 million global users and over 50,000 enterprise customers across film, television, advertising, and gaming. Kling 4.0 focuses on shifting generative video from isolated prompt outputs toward practical production assets that integrate into existing editing pipelines.\n\n[[FIG1]]\n\n## Directorial Control Through Omni Reference and Keyframes\n\nPrevious text-to-video systems often struggled with character drift and erratic camera shifts across sequential shots. To address this, Kling 4.0 introduces an upgraded Omni Reference feature alongside multi-keyframe sequencing, as reported by [TechNode](https://technode.com/2026/10/16/kling-ai-4-0-suggests-a-shift-in-ai-video-competition-from-visual-quality-to-directorial-control/).\n\nThe Omni Reference tool allows creators to supply up to 15 reference assets for a single generation task. This total can comprise up to 10 reference images, 5 video inputs totaling up to 30 seconds, and 7 custom elements, including voice references. Kling 4.0 supports white-model and depth-map video inputs, enabling animators to dictate physical motion paths, camera pans, and narrative pacing while altering the visual subject matter.\n\nFor temporal pacing, Kling 4.0 accepts up to 10 keyframes. According to [TechNode](https://technode.com/2026/10/16/kling-ai-4-0-suggests-a-shift-in-ai-video-competition-from-visual-quality-to-directorial-control/), this configuration lets creators map out character states, actions, and scene transitions across the clip rather than relying entirely on descriptive text prompts.\n\n## Specifications, Workflow Updates, and Kling 4.0 Flash\n\nKling 4.0 expands prompt comprehension to 8,000 tokens and adds native two-channel stereo audio support with automated lip synchronization. The model supports multilingual text generation and vocal rendering across languages including English, Chinese, Japanese, Korean, Spanish, Portuguese, German, French, and Hindi, along with regional dialects and accents.\n\nAlongside the full foundation model, Kuaishou released Kling 4.0 Flash, a lighter variant designed for high-frequency workflows. Flash generates clips up to 20 seconds long at 720p resolution in 8-bit standard dynamic range (SDR). In contrast, the standard Kling 4.0 model supports native generation from 3 to 30 seconds at 720p and 1080p resolutions, with aspect ratios spanning 16:9, 9:16, 1:1, and 21:9 ultrawide.\n\n[[FIG2]]\n\nKuaishou also redesigned the web creation workspace, adding a timeline view, a node-based canvas, and AI agent integration. For automated developer pipelines, Kling 4.0 includes support for the Model Context Protocol (MCP) and a command-line interface (CLI), allowing external agents to script video generations and automate batch asset creation.\n\n## Studio Deployments and Adobe Firefly Integration\n\nSeveral commercial projects piloted Kling 4.0 ahead of the general release. As noted in a press release distributed via [GlobeNewswire](https://www.globenewswire.com/news-release/2026/10/16/3382484/0/en/kling-ai-launches-kling-4-0-globally-with-professional-grade-output-stable-motion-and-multimodal-control.html), Kling AI served as the technological brand partner for the animated feature *Minibots* produced by Evolutionary Films. Co-founders John Adams and Diane Shorthouse stated that Omni Reference allowed them to design sets and characters with concept artists and guide camera movement without hand-crafting every shot using traditional keyframes.\n\nKorean director Sung-Soo Kim used Kling 4.0 Preview during September beta testing to generate a subway collision sequence for his Kafka-inspired short film *Worm Train*. Kim reported that the system convincingly rendered the weight and physical collision dynamics between the transformed insect protagonist and passengers.\n\nLooking outward, Adobe announced plans to bring both Kling 4.0 and Kling 4.0 Flash to Adobe Firefly, according to [Markets Insider](https://markets.businessinsider.com/news/stocks/kling-ai-launches-kling-4-0-globally-with-professional-grade-output-stable-motion-and-multimodal-control-1036635021). Meg Donovan, Senior Director of Product Marketing for GenAI and Creators at Adobe, confirmed that the models will join Firefly's suite to provide creators with alternative cinematic and high-speed generation choices.\n\n## Pricing, Credit Costs, and Pending Features\n\nKling 4.0 is available immediately through the Kling AI web portal. According to [Kie.ai](https://kie.ai/blog/kling-4-0-release-analysis-30-second-clips-keyframes-pricing), standard generations consume 15 credits per second for 1080p resolution and 10 credits per second for 720p. Generating a maximum-length 30-second clip at 1080p costs 450 credits, which one tester calculated at roughly 16 Chinese yuan based on standard membership rates.\n\nWhile the web application is live, several announced features remain listed as coming soon. These include 10-bit HDR output at both 1080p and 4K resolutions, a video extension tool to lengthen clips up to two minutes across multiple passes, and official developer API endpoints for third-party software integration.",
+ "faq": [
+  {
+   "q": "What are the primary differences between Kling 4.0 and Kling 4.0 Flash?",
+   "a": "Kling 4.0 supports clips up to 30 seconds at 720p and 1080p with upcoming 10-bit HDR support, while Kling 4.0 Flash is capped at 20 seconds, 720p resolution, and 8-bit SDR output for faster rendering."
+  },
+  {
+   "q": "How does Omni Reference work in Kling 4.0?",
+   "a": "Omni Reference allows users to input up to 15 assets—combining up to 10 images, 5 video clips (including depth maps) up to 30 seconds total, voice audio references, and 7 elements—to control appearance, lighting, and action consistency."
+  },
+  {
+   "q": "What features are listed as coming soon for Kling 4.0?",
+   "a": "Features not yet available at launch include 10-bit HDR color rendering at 1080p and 4K, video extension up to two minutes, and full developer/enterprise API access."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern film studio control room with a cinematographer reviewing widescreen footage of high-speed tracking shots and digital character renders on professional grading monitors.",
+  "alt": "An illustration of a film studio editing bay displaying digital video footage across widescreen monitors.",
+  "caption": "Illustration: A film production workspace utilizing multimodal reference inputs for video generation.",
+  "src": "img/kuaishou-launches-kling-4-video-model/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 47296,
+  "small": "img/kuaishou-launches-kling-4-video-model/hero-640.webp",
+  "og": "img/kuaishou-launches-kling-4-video-model/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/kuaishou-launches-kling-4-video-model/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An animator working with multiple reference boards, arranging character turnaround sheets, depth maps, and video sequence keyframes on an expansive digital workspace.",
+   "alt": "An illustration of digital storyboard frames, character reference sheets, and depth maps arrayed on an animator's workstation.",
+   "caption": "Illustration: Multi-asset referencing and keyframe planning used to guide digital shot continuity.",
+   "slot": "FIG1",
+   "src": "img/kuaishou-launches-kling-4-video-model/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 46126,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A software engineer seated at a dual-monitor workstation viewing command-line scripts and automation workflows connecting to a remote AI media server.",
+   "alt": "An illustration of a developer running terminal commands and automated media scripts across computer screens.",
+   "caption": "Illustration: Command-line interface and protocol workflows driving automated video generation.",
+   "slot": "FIG2",
+   "src": "img/kuaishou-launches-kling-4-video-model/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 37362,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://kling.ai/release-note/release-notes/Kling_4",
+   "title": "Meet All-New Kling 4.0! - Kling AI",
+   "site": "kling.ai",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://technode.com/2026/10/16/kling-ai-4-0-suggests-a-shift-in-ai-video-competition-from-visual-quality-to-directorial-control/",
+   "title": "Kling AI 4.0 suggests a shift in AI video competition from visual quality to directorial control",
+   "site": "TechNode",
+   "published": 1792139646000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://markets.businessinsider.com/news/stocks/kling-ai-launches-kling-4-0-globally-with-professional-grade-output-stable-motion-and-multimodal-control-1036635021",
+   "title": "Kling AI Launches Kling 4.0 Globally with Professional-Grade Output, Stable Motion and Multimodal Control",
+   "site": "markets.businessinsider.com",
+   "published": 1792174243000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-officially-launches-next-generation-kling-40-raising",
+   "title": "Kling AI Officially Launches Next-Generation Kling 4.0, Raising the Bar for Professional-Grade Video Models | Kuaishou Technology",
+   "site": "Kuaishou Technology",
+   "published": 1792176635000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://www.thailand-business-news.com/pr-news/kling-ai-launches-kling-4-0-globally-with-professional-grade-output-stable-motion-and-multimodal-control",
+   "title": "Kling AI Launches Kling 4.0 Globally with Professional-Grade Output, Stable Motion and Multimodal Control",
+   "site": "thailand-business-news.com",
+   "published": 1792108800000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://kie.ai/blog/kling-4-0-release-analysis-30-second-clips-keyframes-pricing",
+   "title": "Kling 4.0 Release: 30s Clips, 10 Keyframes, Pricing",
+   "site": "kie.ai",
+   "published": 1792108800000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://www.globenewswire.com/news-release/2026/10/16/3382484/0/en/kling-ai-launches-kling-4-0-globally-with-professional-grade-output-stable-motion-and-multimodal-control.html",
+   "title": "Kling AI Launches Kling 4.0 Globally with Professional-Grade Output, Stable Motion and Multimodal Control",
+   "site": "GlobeNewswire",
+   "published": 1792148024000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792289674154,
+ "updatedAt": 1792289674154,
+ "foundVia": "technode.com, Google Search and Google News",
+ "check": {
+  "claims": 33,
+  "score": 10
+ },
+ "story": {
+  "id": "Peb980925",
+  "score": 84,
+  "items": [
+   "https://technode.com/2026/10/16/kling-ai-4-0-suggests-a-shift-in-ai-video-competition-from-visual-quality-to-directorial-control/",
+   "https://www.globenewswire.com/news-release/2026/10/16/3382484/0/en/kling-ai-launches-kling-4-0-globally-with-professional-grade-output-stable-motion-and-multimodal-control.html",
+   "https://news.google.com/rss/articles/CBMioAFBVV95cUxPQnlMRlBMaGlzQTRnQzQ4YVJOTWQ5UnRvVFhobDB4WFM2MDg1bFRmQ2pCWVF4YlJHUTFNYXNoTS1yTmp3V1kxTVREVUZOYlNPaXpmOHpsR19ENkpqbU5hYVJscXdrak4xUWpYekx1TUwyV1JXS2hRZTlrbFhYYUlRQ3kxc0FleU5WRFlCZzBPRTFxUnVraUhSMlJIVXJwYXB1?oc=5",
+   "https://tech-insider.org/kling-api-ai-video-pipeline-setup-2026/",
+   "https://news.google.com/rss/articles/CBMizgFBVV95cUxPZDB0Z0JZS1ZyS0Q2dkY3NjRmT1kycm5kcVYzNE1PTlFhcW5rSWdpRGo5d3kxWkRtVEVxOS1QOGpteDRNd3AwV0NUOG1GUkxkajlDdFVyODV3NHZVOGp1S3dkOXZ2RkN0Ujhoajg1bGNaUjkzZ3o5MWVwTXRRalpVOGx3amM2dm0wSnVJZVhRRmthZ3AyWUo5X09Gd1pHSU5nQ05nRlQ5MHJxT2dVVGUyYlNsSTQtWGVpUTBxcnowZmZraU9INk1TekhTb3VYdw?oc=5",
+   "https://news.google.com/rss/articles/CBMingFBVV95cUxNZjlQZzJxcUV3VlJTQ1NXcWZoT2s2dHdWY01MQ094QXdDS09ManhTWmtRd3NrZEQ3WjFrWkI4bjloSGVyUFU0TzdKVGMwODFhWEZmUkc5WWVpT21HNjQtSUM2RGZKenBRcUVKOTZ5R003NDRhVTF3YThIVkU3a21uUFFudGRvdW9HbnZLWENwSzN5dTlDbUZxdXBmMjZkZw?oc=5",
+   "https://news.google.com/rss/articles/CBMimgFBVV95cUxNQl8xZTNsQ3VvUkIycllxV0pMVWdGb1owZjdhN2Z0U0d6OUU5ZzlLZzR1Wk1QZ3dHVm9DQXAxMkxIQndoQkRmZV93b2MySDZNdUVwZVVDM3FmOEpOanJRMVByRWdmS3BJbm5HbDlRbmZabWZSNnl3eGl0UmVzbGRHY1l2OC1KR1k0ZlZNb3l1dFlQTjE3dndrZWln?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
