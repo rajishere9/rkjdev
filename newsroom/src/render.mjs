@@ -3,7 +3,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import crypto from "node:crypto";
 import { Marked } from "marked";
-import { SITE, CATEGORIES } from "./config.mjs";
+import { SITE, CATEGORIES, CATEGORY_INFO } from "./config.mjs";
 import { esc, slugify, clip, log, unescapeText } from "./util.mjs";
 
 const PER_PAGE = 24;
@@ -12,11 +12,21 @@ export const FONTS = "https://fonts.googleapis.com/css2?family=Fraunces:ital,ops
 const B = SITE.base; // "/blog"
 const abs = (p) => SITE.origin + p;
 const catSlug = (c) => slugify(c.replace("&", "and"));
+// Search results cut titles around 60 characters: keep the brand suffix only when it fits.
+const withBrand = (t, brand = "rkj dev") => (`${t} | ${brand}`.length <= 62 ? `${t} | ${brand}` : t);
+// Meta descriptions: about 150-160 characters, falling back to the standfirst when the writer's is too thin.
+const metaDescription = (p) => clip((p.description || "").length >= 70 ? p.description : [p.description, p.dek].filter(Boolean).join(" "), 160);
+const PUBLISHER = { "@type": "Organization", "@id": `${SITE.origin}/#labs`, name: "RKJDEV Labs", url: `${SITE.origin}/`, logo: { "@type": "ImageObject", url: `${SITE.origin}/apple-touch-icon.png`, width: 180, height: 180 } };
+const WEBSITE = { "@type": "WebSite", "@id": `${SITE.origin}/#website`, name: "rkj dev", alternateName: ["rkjdev", "RKJDEV Labs"], url: `${SITE.origin}/`, inLanguage: "en", publisher: { "@id": `${SITE.origin}/#labs` } };
 
 const fmtDate = (t) => new Date(t).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" });
 const fmtFull = (t) => new Date(t).toLocaleString("en-US", { month: "long", day: "numeric", year: "numeric", hour: "2-digit", minute: "2-digit", timeZone: "UTC", hour12: false }) + " UTC";
 const iso = (t) => new Date(t).toISOString();
 const time = (t, cls = "") => `<time datetime="${iso(t)}"${cls ? ` class="${cls}"` : ""} data-rel>${fmtDate(t)}</time>`;
+
+// Slugs of duplicate posts and the post each one redirects to, so internal links skip the redirect.
+let redirects = new Map();
+const resolveLink = (href) => href.replace(/^((?:https:\/\/www\.rkjdev\.com)?\/blog\/)([a-z0-9-]+)(?=\/|$)/, (m, base, slug) => redirects.has(slug) ? base + redirects.get(slug) : m);
 
 function readingTime(md) {
   return Math.max(2, Math.round(md.split(/\s+/).length / 230));
@@ -44,6 +54,7 @@ function renderMarkdown(md) {
       },
       link({ href, title, tokens }) {
         const text = this.parser.parseInline(tokens);
+        href = resolveLink(href);
         const external = /^https?:\/\//.test(href) && !href.startsWith(SITE.origin);
         return `<a href="${esc(href)}"${title ? ` title="${esc(title)}"` : ""}${external ? ' target="_blank" rel="noopener"' : ""}>${text}</a>`;
       },
@@ -67,7 +78,7 @@ function figureHtml(f, { hero = false, priority = false } = {}) {
 </figure>`;
 }
 
-function head({ title, description, canonical, image, type = "website", extra = "", assets }) {
+function head({ title, description, canonical, image, type = "website", extra = "", assets, robots = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" }) {
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -78,7 +89,7 @@ function head({ title, description, canonical, image, type = "website", extra = 
 <link rel="canonical" href="${esc(canonical)}">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#110b14">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="robots" content="${robots}">
 <meta property="og:site_name" content="${esc(SITE.name)}">
 <meta property="og:type" content="${type}">
 <meta property="og:title" content="${esc(title)}">
@@ -181,27 +192,34 @@ function listingPage({ posts, page, pages, category, assets, updatedAt }) {
   const baseUrl = category ? `${B}/category/${catSlug(category)}/` : `${B}/`;
   const canonical = abs(page === 1 ? baseUrl : `${baseUrl}page/${page}/`);
   const title = category
-    ? `${category} news${page > 1 ? ` (page ${page})` : ""} | ${SITE.name}`
-    : page > 1 ? `Latest AI and tech news (page ${page}) | ${SITE.name}` : `AI news today: new models, open source and tech breakthroughs | ${SITE.name}`;
-  const description = category ? `The latest ${category.toLowerCase()} news from ${SITE.name}: fast, source-checked coverage of what changed today.` : SITE.description;
+    ? withBrand(`${category} news${page > 1 ? `, page ${page}` : ""}`, SITE.name)
+    : page > 1 ? withBrand(`Latest AI and tech news, page ${page}`, SITE.name) : withBrand("AI news today: models, open source and breakthroughs");
+  const intro = category ? CATEGORY_INFO[category] || `The latest ${category} news from ${SITE.name}, checked against the sources.` : SITE.description;
+  const description = page > 1 ? clip(`Page ${page}. ${intro}`, 160) : intro;
   const [lead, second, third, ...rest] = page === 1 ? posts : [null, null, null, ...posts];
-  const itemList = { "@context": "https://schema.org", "@type": "CollectionPage", name: title, url: canonical, description,
+  const itemList = { "@context": "https://schema.org", "@type": "CollectionPage", name: title, url: canonical, description, inLanguage: "en", isPartOf: { "@id": `${SITE.origin}/#website` },
+    ...(category ? { breadcrumb: { "@type": "BreadcrumbList", itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Blog", item: abs(`${B}/`) },
+      { "@type": "ListItem", position: 2, name: category, item: abs(baseUrl) },
+    ] } } : {}),
     mainEntity: { "@type": "ItemList", itemListElement: posts.slice(0, 20).map((p, i) => ({ "@type": "ListItem", position: i + 1, url: abs(`${B}/${p.slug}/`) })) } };
 
   return `${head({ title, description, canonical, image: posts[0]?.hero ? abs(`${B}/${posts[0].og || posts[0].hero.src}`) : `${SITE.origin}/og.jpg`, assets,
-    extra: `<script type="application/ld+json">${JSON.stringify(itemList)}</script>${page > 1 ? `\n<link rel="prev" href="${abs(page === 2 ? baseUrl : `${baseUrl}page/${page - 1}/`)}">` : ""}${page < pages ? `\n<link rel="next" href="${abs(`${baseUrl}page/${page + 1}/`)}">` : ""}` })}
+    robots: posts.length ? undefined : "noindex, follow",
+    extra: `<script type="application/ld+json">${JSON.stringify(category || page > 1 ? itemList : [itemList, { "@context": "https://schema.org", ...WEBSITE }, { "@context": "https://schema.org", ...PUBLISHER }]).replace(/</g, "\\u003c")}</script>${page > 1 ? `\n<link rel="prev" href="${abs(page === 2 ? baseUrl : `${baseUrl}page/${page - 1}/`)}">` : ""}${page < pages ? `\n<link rel="next" href="${abs(`${baseUrl}page/${page + 1}/`)}">` : ""}` })}
 <body class="listing">
 ${header()}
 <main id="main" class="wrap">
   <section class="masthead">
     ${category ? `<nav class="crumbs" aria-label="Breadcrumb"><a href="${B}/">Blog</a><span aria-hidden="true">/</span><span>${esc(category)}</span></nav>` : ""}
     <h1>${category ? esc(category) : "AI and emerging tech,<br> the day it happens."}</h1>
-    <p class="intro">${category ? esc(description) : "New models, open-source releases, audio and video AI, and the science and tech breakthroughs worth knowing about. Every story is researched from its sources and checked claim by claim."}</p>
+    <p class="intro">${category ? esc(intro) : "New models, open-source releases, audio and video AI, and the science and tech breakthroughs worth knowing about. Every story is researched from its sources and checked claim by claim."}</p>
     <p class="desk">Last story ${time(updatedAt)}. <span data-next-check>The desk checks the wires every half hour.</span></p>
     ${chips(category)}
   </section>
   ${!posts.length ? `<p class="empty">No stories here yet. The newsroom checks for news every 30 minutes.</p>` : ""}
-  ${lead ? `<section class="top-stories" aria-label="Top stories">
+  ${lead ? `<section class="top-stories" aria-labelledby="top-title">
+    <h2 id="top-title" class="sr">Top stories</h2>
     ${card(lead, { size: "lead", priority: true })}
     <div class="side-col">${[second, third].filter(Boolean).map((p) => card(p, { size: "side" })).join("\n")}</div>
   </section>` : ""}
@@ -232,12 +250,13 @@ function postPage(p, { assets, related, prev, next }) {
   const jsonLd = [
     {
       "@context": "https://schema.org", "@type": "NewsArticle",
-      headline: clip(p.title, 110), description: p.description, url, mainEntityOfPage: url,
+      headline: clip(p.title, 110), description: metaDescription(p), url, mainEntityOfPage: { "@type": "WebPage", "@id": url }, inLanguage: "en", isAccessibleForFree: true,
       image: [abs(`${B}/${p.og || p.hero?.src}`), p.hero && abs(`${B}/${p.hero.src}`)].filter(Boolean),
       datePublished: iso(p.publishedAt), dateModified: iso(p.updatedAt || p.publishedAt),
       articleSection: p.category, keywords: p.tags.join(", "), wordCount: p.body.split(/\s+/).length,
+      thumbnailUrl: p.hero ? abs(`${B}/${p.hero.small || p.hero.src}`) : undefined,
       author: { "@type": "Organization", name: "rkj dev newsroom", url: abs(`${B}/`) },
-      publisher: { "@type": "Organization", name: "RKJDEV Labs", url: SITE.origin, logo: { "@type": "ImageObject", url: `${SITE.origin}/apple-touch-icon.png` } },
+      publisher: PUBLISHER, isPartOf: { "@id": `${SITE.origin}/#website` },
       isBasedOn: p.sources.map((s) => s.url),
     },
     { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
@@ -250,7 +269,7 @@ function postPage(p, { assets, related, prev, next }) {
 
   const share = encodeURIComponent(url);
   const shareText = encodeURIComponent(p.title);
-  return `${head({ title: `${p.seoTitle || p.title} | rkj dev`, description: p.description, canonical: url, image: abs(`${B}/${p.og || p.hero?.src}`), type: "article", assets,
+  return `${head({ title: withBrand(p.seoTitle || p.title), description: metaDescription(p), canonical: url, image: abs(`${B}/${p.og || p.hero?.src}`), type: "article", assets,
     extra: `<meta property="article:published_time" content="${iso(p.publishedAt)}">
 <meta property="article:modified_time" content="${iso(p.updatedAt || p.publishedAt)}">
 <meta property="article:section" content="${esc(p.category)}">
@@ -317,6 +336,26 @@ ${header()}
 ${footer(assets.js)}`;
 }
 
+// A story we published twice: its old URL stays alive as an instant redirect to the copy we keep,
+// which search engines treat as a permanent move, so links and rankings consolidate on one page.
+function redirectPage(p, target) {
+  const to = `${B}/${target.slug}/`;
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>${esc(target.title)}</title>
+<link rel="canonical" href="${abs(to)}">
+<meta http-equiv="refresh" content="0; url=${to}">
+<script>location.replace(${JSON.stringify(to)} + location.hash)</script>
+</head>
+<body>
+<p>This story has moved: <a href="${to}">${esc(target.title)}</a></p>
+</body>
+</html>
+`;
+}
+
 function related(p, posts) {
   const tags = new Set(p.tags.map((t) => t.toLowerCase()));
   return posts.filter((x) => x.slug !== p.slug)
@@ -359,10 +398,13 @@ function jsonFeed(posts) {
 }
 
 function sitemaps(posts, categories, pagesCount) {
+  const newest = (list) => list.length ? Math.max(...list.map((p) => p.updatedAt || p.publishedAt)) : null;
   const urls = [
-    { loc: abs(`${B}/`), lastmod: posts[0]?.publishedAt },
-    ...Array.from({ length: Math.max(0, pagesCount - 1) }, (_, i) => ({ loc: abs(`${B}/page/${i + 2}/`) })),
-    ...categories.map((c) => ({ loc: abs(`${B}/category/${catSlug(c)}/`) })),
+    { loc: abs(`${B}/`), lastmod: newest(posts) },
+    ...Array.from({ length: Math.max(0, pagesCount - 1) }, (_, i) => ({ loc: abs(`${B}/page/${i + 2}/`), lastmod: newest(posts.slice((i + 1) * PER_PAGE, (i + 2) * PER_PAGE)) })),
+    // Empty categories are noindex, so they stay out of the sitemap.
+    ...categories.map((c) => ({ c, list: posts.filter((p) => p.category === c) })).filter((x) => x.list.length)
+      .map(({ c, list }) => ({ loc: abs(`${B}/category/${catSlug(c)}/`), lastmod: newest(list) })),
     ...posts.map((p) => ({ loc: abs(`${B}/${p.slug}/`), lastmod: p.updatedAt || p.publishedAt, image: p.hero && abs(`${B}/${p.hero.src}`) })),
   ];
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -402,6 +444,12 @@ async function updateHome(root, posts) {
 export async function renderSite({ root, posts }) {
   const out = path.join(root, "blog");
   posts = posts.filter((p) => !p.hidden).sort((a, b) => b.publishedAt - a.publishedAt);
+  // Duplicates of a story we kept become redirects and leave every listing, feed and sitemap.
+  const bySlug = new Map(posts.map((p) => [p.slug, p]));
+  const keep = (p) => !(p.duplicateOf && bySlug.has(p.duplicateOf) && !bySlug.get(p.duplicateOf).duplicateOf);
+  const duplicates = posts.filter((p) => !keep(p));
+  posts = posts.filter(keep);
+  redirects = new Map(duplicates.map((p) => [p.slug, p.duplicateOf]));
   for (const p of posts) p.readingTime = readingTime(p.body);
   const assets = {
     css: await assetVersion(path.join(out, "blog.css")), js: await assetVersion(path.join(out, "blog.js")),
@@ -435,6 +483,7 @@ export async function renderSite({ root, posts }) {
     const p = posts[i];
     await write(`${p.slug}/index.html`, postPage(p, { assets, related: related(p, posts), prev: posts[i - 1], next: posts[i + 1] }));
   }
+  for (const p of duplicates) await write(`${p.slug}/index.html`, redirectPage(p, bySlug.get(p.duplicateOf)));
   const { sitemap, news } = sitemaps(posts, usedCats, pages);
   await write("feed.xml", rss(posts));
   await write("feed.json", jsonFeed(posts));
