@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tencent Hunyuan Open-Sources Hy Memory 2.0 | rkj dev</title>
+<meta name="description" content="Tencent Hunyuan has open-sourced Hy Memory 2.0, adding specialized working and coding memory pipelines alongside a dedicated 30B MoE model.">
+<link rel="canonical" href="https://www.rkjdev.com/blog/tencent-hunyuan-open-sources-hy-memory/">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#110b14">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:site_name" content="rkj dev Blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tencent Hunyuan Open-Sources Hy Memory 2.0 | rkj dev">
+<meta property="og:description" content="Tencent Hunyuan has open-sourced Hy Memory 2.0, adding specialized working and coding memory pipelines alongside a dedicated 30B MoE model.">
+<meta property="og:url" content="https://www.rkjdev.com/blog/tencent-hunyuan-open-sources-hy-memory/">
+<meta property="og:image" content="https://www.rkjdev.com/blog/img/tencent-hunyuan-open-sources-hy-memory/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://www.rkjdev.com/blog/img/tencent-hunyuan-open-sources-hy-memory/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tencent Hunyuan Open-Sources Hy Memory 2.0 | rkj dev">
+<meta name="twitter:description" content="Tencent Hunyuan has open-sourced Hy Memory 2.0, adding specialized working and coding memory pipelines alongside a dedicated 30B MoE model.">
+<link rel="alternate" type="application/rss+xml" title="rkj dev Blog" href="/blog/feed.xml">
+<link rel="alternate" type="application/feed+json" title="rkj dev Blog" href="/blog/feed.json">
+<link rel="icon" href="/favicon.svg?v=bdff7dc5" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,40;1,9..144,400..600,40&family=Schibsted+Grotesk:ital,wght@0,400..600;1,400..600&display=swap">
+<link rel="stylesheet" href="/site.css?v=e85724ed">
+<link rel="stylesheet" href="/blog/blog.css?v=7ad332ef">
+<meta property="article:published_time" content="2026-10-18T00:46:54.413Z">
+<meta property="article:modified_time" content="2026-10-18T00:46:54.413Z">
+<meta property="article:section" content="Open Source">
+<meta property="article:tag" content="Tencent Hunyuan">
+<meta property="article:tag" content="Hy Memory">
+<meta property="article:tag" content="AI Agents">
+<meta property="article:tag" content="Open Source AI">
+<meta property="article:tag" content="Machine Learning">
+<link rel="preload" as="image" href="/blog/img/tencent-hunyuan-open-sources-hy-memory/hero.webp" imagesrcset="/blog/img/tencent-hunyuan-open-sources-hy-memory/hero-640.webp 640w, /blog/img/tencent-hunyuan-open-sources-hy-memory/hero.webp 1200w" imagesizes="(max-width: 760px) 100vw, 1200px">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"Tencent Hunyuan Open-Sources Hy Memory 2.0 Agent Architecture","description":"Tencent Hunyuan has open-sourced Hy Memory 2.0, adding specialized working and coding memory pipelines alongside a dedicated 30B MoE model.","url":"https://www.rkjdev.com/blog/tencent-hunyuan-open-sources-hy-memory/","mainEntityOfPage":"https://www.rkjdev.com/blog/tencent-hunyuan-open-sources-hy-memory/","image":["https://www.rkjdev.com/blog/img/tencent-hunyuan-open-sources-hy-memory/og.jpg","https://www.rkjdev.com/blog/img/tencent-hunyuan-open-sources-hy-memory/hero.webp"],"datePublished":"2026-10-18T00:46:54.413Z","dateModified":"2026-10-18T00:46:54.413Z","articleSection":"Open Source","keywords":"Tencent Hunyuan, Hy Memory, AI Agents, Open Source AI, Machine Learning","wordCount":1205,"author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","name":"RKJDEV Labs","url":"https://www.rkjdev.com","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/apple-touch-icon.png"}},"isBasedOn":["https://github.com/Tencent-Hunyuan/Hy-Memory","https://huggingface.co/tencent/Hy-Memory-30B-A3B","https://memory.hunyuan.tencent.com/","https://pandaily.com/tencent-hunyuan-hy-memory-2-0-open-source-working-code-memory-memhub-apache-2","https://m.techflowpost.com/en-US/newsletter/140244","https://www.mindstudio.ai/blog/hy-memory-30b-a3b-benchmark-comparison","https://readmex.ai/story/tencent-hy-memory-30b-a3b-a85287f0"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"Open Source","item":"https://www.rkjdev.com/blog/category/open-source/"},{"@type":"ListItem","position":3,"name":"Tencent Hunyuan Open-Sources Hy Memory 2.0 Agent Architecture","item":"https://www.rkjdev.com/blog/tencent-hunyuan-open-sources-hy-memory/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Hy Memory 2.0?","acceptedAnswer":{"@type":"Answer","text":"Hy Memory 2.0 is an open-source cognitive memory framework developed by Tencent Hunyuan for AI agents. Released under the Apache 2.0 license, it provides structured memory engines for chat, working tasks, and software coding."}},{"@type":"Question","name":"What does the 'A3B' designation mean in Hy-Memory-30B-A3B?","acceptedAnswer":{"@type":"Answer","text":"The 'A3B' designation indicates a mixture-of-experts model architecture where approximately 3 billion parameters are actively engaged during any single inference call, out of a larger 30-billion total parameter count."}},{"@type":"Question","name":"Which development tools are supported by MemHub?","acceptedAnswer":{"@type":"Answer","text":"MemHub supports 10 AI applications and coding environments, including Cursor, Codex, Claude Code, OpenCode, Qwen Code, WorkBuddy, OpenClaw, Pi, Hermes, and DeepSeek Harness."}},{"@type":"Question","name":"How does Coding memory differ from Working memory in the framework?","acceptedAnswer":{"@type":"Answer","text":"While both use a two-layer schema for facts and experiences, Coding memory records precise coordinates such as file paths and branch names instead of raw code snippets, and maintains a version-evolution diff chain to track sequential code changes."}}]}]</script>
+</head>
+<body class="post">
+<div class="progress" aria-hidden="true"><span></span></div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="mark" href="/">rkj dev</a>
+    <nav aria-label="Site">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <article class="article">
+    <header class="post-head wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/category/open-source/">Open Source</a></nav>
+      <h1>Tencent Hunyuan Open-Sources Hy Memory 2.0 Agent Architecture</h1>
+      <p class="standfirst">The three-tier release includes the Hy Memory framework, a dedicated 30B write-path model, and MemHub for cross-agent synchronization.</p>
+      <div class="byline">
+        <span class="by">rkj dev newsroom</span>
+        <span><time datetime="2026-10-18T00:46:54.413Z" class="abs" data-rel>Oct 18, 2026</time></span>
+        <span>5 min read</span>
+        <a href="#sources">7 sources, fact-checked</a>
+      </div>
+    </header>
+    <div class="hero-wrap wrap"><figure class="hero-fig is-ai">
+  <div class="img"><img src="/blog/img/tencent-hunyuan-open-sources-hy-memory/hero.webp" srcset="/blog/img/tencent-hunyuan-open-sources-hy-memory/hero-640.webp 640w, /blog/img/tencent-hunyuan-open-sources-hy-memory/hero.webp 1200w" sizes="(max-width: 760px) 100vw, 1200px" width="1200" height="675" alt="An abstract digital representation of multi-layered artificial cognitive memory and neural pathways connecting distinct computing modules." fetchpriority="high" decoding="async"></div>
+  <figcaption><span>Illustration: The multi-tiered cognitive memory structure powering Tencent Hunyuan's Hy Memory 2.0 framework.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure></div>
+    <div class="layout wrap">
+      <aside class="rail" aria-label="On this page">
+        <nav class="toc"><p>Contents</p><ol><li><a href="#a-three-layer-open-source-architecture">A Three-Layer Open-Source Architecture</a></li><li><a href="#chat-working-and-coding-memory-pipelines">Chat, Working, and Coding Memory Pipelines</a></li><li><a href="#coding-memory-and-version-evolution-tracking">Coding Memory and Version-Evolution Tracking</a></li><li><a href="#hy-memory-30b-a3b-specialized-memory-writing">Hy-Memory-30B-A3B: Specialized Memory Writing</a></li><li><a href="#local-agent-federation-via-memhub">Local Agent Federation via MemHub</a></li><li><a href="#internal-deployment-and-ecosystem-context">Internal Deployment and Ecosystem Context</a></li></ol></nav>
+        <div class="share">
+          <p>Share</p>
+          <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Ftencent-hunyuan-open-sources-hy-memory%2F&text=Tencent%20Hunyuan%20Open-Sources%20Hy%20Memory%202.0%20Agent%20Architecture" target="_blank" rel="noopener">X</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Ftencent-hunyuan-open-sources-hy-memory%2F" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://wa.me/?text=Tencent%20Hunyuan%20Open-Sources%20Hy%20Memory%202.0%20Agent%20Architecture%20https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Ftencent-hunyuan-open-sources-hy-memory%2F" target="_blank" rel="noopener">WhatsApp</a>
+          <button type="button" data-copy="https://www.rkjdev.com/blog/tencent-hunyuan-open-sources-hy-memory/">Copy link</button>
+        </div>
+      </aside>
+      <div class="prose">
+        <section class="inshort" aria-labelledby="tk">
+          <h2 id="tk">In short</h2>
+          <ul><li>Hy Memory 2.0 introduces dedicated working memory and coding memory pipelines, moving beyond conversational chat storage.</li><li>Tencent released the Hy-Memory GitHub repository (containing the Python SDK and MemHub) under the Apache 2.0 license, alongside the Hy-Memory-30B-A3B model.</li><li>Hy-Memory-30B-A3B, a mixture-of-experts model with roughly 3 billion active parameters, scored an average of 55.49 across four memory harnesses, surpassing Claude Opus 5 and DeepSeek V4.1 Flash on Tencent's benchmark matrix.</li><li>The framework incorporates diff-chain version tracking for code revisions, isolating software engineering state while recording reusable problem-solving experiences.</li></ul>
+        </section>
+        <p>Tencent Hunyuan has released and open-sourced Hy Memory 2.0, updating its cognitive memory stack for artificial intelligence agents by introducing dedicated working memory and code memory pipelines. Published under the Apache 2.0 license in mid-October 2026, the release transitions the platform from a theoretical framework into a three-layer open-source ecosystem consisting of a Python SDK, a specialized 30-billion-parameter memory-writing model, and a local cross-application memory hub.</p>
+<p>According to <a href="https://github.com/Tencent-Hunyuan/Hy-Memory" target="_blank" rel="noopener">Tencent Hunyuan&#39;s GitHub repository</a>, the 2.0 architecture addresses a persistent bottleneck in autonomous AI workflows: the tendency of long-horizon agents to lose context across interleaved tasks, overwrite valid prior solutions, and waste context window budget on redundant transcripts. The new release organizes persistent memory into three distinct operational scenarios: chat, working, and coding.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/tencent-hunyuan-open-sources-hy-memory/figure-1.webp" width="1200" height="670" alt="A software engineer working at an illuminated multi-monitor desk reviewing interconnected diagrams of code repositories and memory structures." loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: Managing agent workflows and code repositories through structured memory layers.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="a-three-layer-open-source-architecture">A Three-Layer Open-Source Architecture</h2>
+<p>Unlike conventional retrieval-augmented generation (RAG) setups that rely on raw vector indexing, Hy Memory operates across three independent tiers that can be deployed individually or linked into a unified pipeline, according to <a href="https://memory.hunyuan.tencent.com/" target="_blank" rel="noopener">Tencent&#39;s official portal</a>.</p>
+<p>The foundation rests on the model layer with Hy-Memory-30B-A3B, a mixture-of-experts model with approximately 3 billion active parameters hosted on <a href="https://huggingface.co/tencent/Hy-Memory-30B-A3B" target="_blank" rel="noopener">Hugging Face</a>. This model acts exclusively as a persistent memory writer. Rather than generating user responses, it executes the write path by extracting facts, reconciling conflicting records, and updating memory stores.</p>
+<p>Above the model sits the framework layer, distributed as the <code>hy-memory</code> Python SDK via PyPI. The framework contains routing engines, database storage abstractions for vector and graph stores—including ChromaDB, Kuzu, Qdrant, FAISS, and Neo4j—and dual-process memory evolution logic.</p>
+<p>The user-facing tier is MemHub, a local-first application provided as a command-line interface and macOS software. MemHub imports and synchronizes session histories across ten distinct coding and agent environments, unifying fragmented interaction traces into a governed, local directory.</p>
+<h2 id="chat-working-and-coding-memory-pipelines">Chat, Working, and Coding Memory Pipelines</h2>
+<p>The central structural development in Hy Memory 2.0 is the partition between three operational task scenes: Chat, Working, and Coding. Each task scene employs a distinct storage format and lifecycle policy.</p>
+<h3 id="chat-memory-hierarchy">Chat Memory Hierarchy</h3>
+<p>Chat memory focuses on long-term personal context. Building on research accepted at EMNLP 2026, it abstracts dialogue across an eight-layer cognitive hierarchy labeled L0 through L7. The structure organizes raw conversations into atomic facts, session summaries, mental schemas, and prospective intentions with expiration dates. Duplicate facts are merged, while contradictory personal preferences are reconciled before context reaches the inference model.</p>
+<h3 id="working-memory-for-productivity">Working Memory for Productivity</h3>
+<p>Working memory tracks multi-step tasks across productivity workflows such as financial analysis, document preparation, and research. According to Tencent&#39;s technical documentation, each working session with tool calls outputs two linked layers:</p>
+<ol>
+<li><strong>The Fact Layer (<code>WorkingFact</code>):</strong> Captures exactly one session record containing the task objective, chosen methodology, and intermediate results without requiring threshold filtering.</li>
+<li><strong>The Experience Layer:</strong> Stores zero to multiple reusable problem-solving strategies that meet explicit confidence thresholds, complete with boundary conditions governing when the approach applies.</li>
+</ol>
+<p>When an agent resumes a suspended project, the engine cross-references whether current environmental conditions match past experience boundaries before applying cached approaches.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/tencent-hunyuan-open-sources-hy-memory/figure-2.webp" width="1200" height="670" alt="A visual diagram showing a branching pipeline separating conversation history, structured task facts, and code revision histories." loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: Segregation of agent memory into chat, working, and coding tracks with diff-chain tracking.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="coding-memory-and-version-evolution-tracking">Coding Memory and Version-Evolution Tracking</h2>
+<p>Software engineering workflows present distinct challenges for memory frameworks. Agents frequently alter the same file across multiple iterations, and naive memory systems risk surfacing discarded or broken intermediate states.</p>
+<p>Hy Memory 2.0&#39;s Coding pipeline reuses the two-layer schema of Working memory but introduces a code version-evolution diff chain, detailed in Tencent&#39;s <a href="https://github.com/Tencent-Hunyuan/Hy-Memory" target="_blank" rel="noopener">CMB technical benchmark</a>. Instead of saving raw code blocks into memory banks—which rapidly exhausts token limits—the framework records exact coordinates such as file paths, functions, and Git branches, alongside a ledger of sequential modifications.</p>
+<p>This separation prevents rolled-back code edits from appearing as active facts. If an engineering agent evaluates previous work on an issue, it queries the diff chain to inspect why specific design choices were made and which modifications were retained in the final patch.</p>
+<p>Coding memory is stored independently from productivity data. The SDK routes coding tasks to isolated databases (<code>coding_memory_cv.db</code>), ensuring software traces do not pollute organizational or personal memory collections.</p>
+<h2 id="hy-memory-30b-a3b-specialized-memory-writing">Hy-Memory-30B-A3B: Specialized Memory Writing</h2>
+<p>Tencent&#39;s dedicated write-path model, Hy-Memory-30B-A3B, was developed to replace general-purpose LLMs inside memory architectures. As reported in the model&#39;s technical documentation on arXiv, memory writing was optimized via a two-stage training process:</p>
+<ul>
+<li><strong>Memory On-Policy Distillation (OPD):</strong> The model writes memory state chains while a larger teacher model supplies dense supervision on the student&#39;s self-generated state transitions.</li>
+<li><strong>Attributed Memory Reinforcement Learning:</strong> The training harness inspects resulting memory banks across rollouts, assigning credit at the individual chunk level rather than scoring whole conversations. Credit normalization identifies the strongest memory updates per chunk, propagating the top bank forward into subsequent task windows.</li>
+</ul>
+<p>In Tencent&#39;s comparative evaluations across four memory testbeds (Mem0, Hy-Memory, MemOS, and the held-out EverMemOS), Hy-Memory-30B-A3B achieved a macro-average score of 55.49 across a fixed 20% benchmark subsample. This narrowly exceeded Claude Opus 5 at 54.62 and DeepSeek V4.1 Flash at 53.64, while substantially outperforming comparable-scale open models like Qwen3-30B-A3B at 44.37.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Memory Writer</th>
+<th align="left">Mem0 Harness</th>
+<th align="left">Hy-Memory Harness</th>
+<th align="left">MemOS Harness</th>
+<th align="left">EverMemOS (Held-Out)</th>
+<th align="left">4-Harness Average</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Hy-Memory-30B-A3B</strong></td>
+<td align="left"><strong>54.02</strong></td>
+<td align="left"><strong>60.55</strong></td>
+<td align="left"><strong>50.51</strong></td>
+<td align="left"><strong>56.89</strong></td>
+<td align="left"><strong>55.49</strong></td>
+</tr>
+<tr>
+<td align="left">Claude Opus 5</td>
+<td align="left">53.43</td>
+<td align="left">60.53</td>
+<td align="left">50.50</td>
+<td align="left">54.04</td>
+<td align="left">54.62</td>
+</tr>
+<tr>
+<td align="left">DeepSeek V4.1 Flash</td>
+<td align="left">49.73</td>
+<td align="left">60.20</td>
+<td align="left">49.17</td>
+<td align="left">55.47</td>
+<td align="left">53.64</td>
+</tr>
+<tr>
+<td align="left">Hy3 General</td>
+<td align="left">45.99</td>
+<td align="left">58.06</td>
+<td align="left">50.19</td>
+<td align="left">52.30</td>
+<td align="left">51.63</td>
+</tr>
+<tr>
+<td align="left">Qwen3.6-35B-A3B</td>
+<td align="left">47.51</td>
+<td align="left">55.87</td>
+<td align="left">47.36</td>
+<td align="left">50.75</td>
+<td align="left">50.37</td>
+</tr>
+<tr>
+<td align="left">Qwen3-30B-A3B</td>
+<td align="left">39.81</td>
+<td align="left">45.67</td>
+<td align="left">45.44</td>
+<td align="left">46.57</td>
+<td align="left">44.37</td>
+</tr>
+</tbody></table>
+<p>Independent analysis from <a href="https://www.mindstudio.ai/blog/hy-memory-30b-a3b-benchmark-comparison" target="_blank" rel="noopener">MindStudio</a> notes that while Hy-Memory-30B-A3B secured the highest overall average, performance across individual sub-benchmarks varied. Claude Opus 5 led on raw LoCoMo judge evaluations within Mem0 and MemOS harnesses, while DeepSeek V4.1 Flash led on select code evaluations. The compact model&#39;s principal advantage lies in sustained performance across differing memory backends at an active footprint of roughly 3 billion parameters.</p>
+<h2 id="local-agent-federation-via-memhub">Local Agent Federation via MemHub</h2>
+<p>To bridge isolated development tools, Tencent bundled the framework with MemHub. As detailed by <a href="https://pandaily.com/tencent-hunyuan-hy-memory-2-0-open-source-working-code-memory-memhub-apache-2" target="_blank" rel="noopener">Pandaily</a>, developers commonly define preferences and project guidelines in one coding assistant, only to repeat them when switching environments.</p>
+<p>MemHub runs locally, interfacing with user-authorized tools including Cursor, Codex, Claude Code, OpenCode, Qwen Code, OpenClaw, WorkBuddy, Pi, Hermes, and DeepSeek Harness. When authorized, MemHub ingests historical transcripts, formats them through the <code>hy-memory</code> pipeline, and serves an updated memory representation back to connected tools as contextual augmentation.</p>
+<h2 id="internal-deployment-and-ecosystem-context">Internal Deployment and Ecosystem Context</h2>
+<p>Prior to open-sourcing, Tencent deployed Hy Memory internally across its enterprise divisions, according to <a href="https://memory.hunyuan.tencent.com/" target="_blank" rel="noopener">Tencent&#39;s official portal</a>. Implementations span financial research in Tencent Stock (Zixuangu), team documentation via the iWiki CTX memory plugin, and interactive features in Tencent News.</p>
+<p>In Tencent&#39;s internal investment research evaluation, migrating from legacy memory pipelines to Hy Memory produced a 23.8% relative gain in composite accuracy, increasing multi-hop retrieval rates from 50% to 90% and conflict resolution scores from 67% to 83%.</p>
+<p>By releasing the weights, SDK, and local aggregation tools simultaneously, Tencent offers the open-source community a structured alternative to standard context-stuffing methods, which MindStudio notes demonstrates that compact, specialized models can manage memory state more efficiently than general frontier models.</p>
+
+        <section class="faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Questions people ask</h2>
+          <details open><summary>What is Hy Memory 2.0?</summary><p>Hy Memory 2.0 is an open-source cognitive memory framework developed by Tencent Hunyuan for AI agents. Released under the Apache 2.0 license, it provides structured memory engines for chat, working tasks, and software coding.</p></details>
+<details><summary>What does the 'A3B' designation mean in Hy-Memory-30B-A3B?</summary><p>The 'A3B' designation indicates a mixture-of-experts model architecture where approximately 3 billion parameters are actively engaged during any single inference call, out of a larger 30-billion total parameter count.</p></details>
+<details><summary>Which development tools are supported by MemHub?</summary><p>MemHub supports 10 AI applications and coding environments, including Cursor, Codex, Claude Code, OpenCode, Qwen Code, WorkBuddy, OpenClaw, Pi, Hermes, and DeepSeek Harness.</p></details>
+<details><summary>How does Coding memory differ from Working memory in the framework?</summary><p>While both use a two-layer schema for facts and experiences, Coding memory records precise coordinates such as file paths and branch names instead of raw code snippets, and maintains a version-evolution diff chain to track sequential code changes.</p></details>
+        </section>
+        <section class="sources" id="sources" aria-labelledby="src-title">
+          <h2 id="src-title">Sources</h2>
+          <ol><li><a href="https://github.com/Tencent-Hunyuan/Hy-Memory" target="_blank" rel="noopener">Tencent-Hunyuan/Hy-Memory</a><span>GitHub, Oct 15, 2026, <b class="official">official source</b></span></li><li><a href="https://huggingface.co/tencent/Hy-Memory-30B-A3B" target="_blank" rel="noopener">tencent/Hy-Memory-30B-A3B</a><span>Hugging Face, Oct 15, 2026, <b class="official">official source</b></span></li><li><a href="https://memory.hunyuan.tencent.com/" target="_blank" rel="noopener">Hy-Memory 2.0 — 模型、框架、应用三层全开源 | 腾讯混元</a><span>memory.hunyuan.tencent.com, <b class="official">official source</b></span></li><li><a href="https://pandaily.com/tencent-hunyuan-hy-memory-2-0-open-source-working-code-memory-memhub-apache-2" target="_blank" rel="noopener">Tencent Hunyuan Open-Sources Hy Memory 2.0, Adding Working and Code Memory for AI Agents</a><span>pandaily.com, Oct 16, 2026</span></li><li><a href="https://m.techflowpost.com/en-US/newsletter/140244" target="_blank" rel="noopener">Tencent Hunyuan Releases Hy Memory 2.0, Fully Open-Sourcing Three-Layer Model Framework and Applications</a><span>m.techflowpost.com, Oct 16, 2026</span></li><li><a href="https://www.mindstudio.ai/blog/hy-memory-30b-a3b-benchmark-comparison" target="_blank" rel="noopener">Hy-Memory-30B-A3B vs Claude Opus 5 and DeepSeek on Memory Tasks</a><span>MindStudio, Oct 17, 2026</span></li><li><a href="https://readmex.ai/story/tencent-hy-memory-30b-a3b-a85287f0" target="_blank" rel="noopener">Tencent Hunyuan open-sources Hy Memory 2.0 framework and Hy-Memory-30B-A3B</a><span>readmex.ai, Oct 16, 2026</span></li></ol>
+          <p class="method">How this story was made: the newsroom picked it up from GitHub, Hugging Face and pandaily.com, gathered the full text of the sources above, and drafted it with AI assistance. Every factual claim was then checked against those sources before publishing (27 claims checked). Illustrations marked as AI-generated are not photographs. Spotted an error? <a href="mailto:rajankrishnan909@gmail.com?subject=Correction%3A%20Tencent%20Hunyuan%20Open-Sources%20Hy%20Memory%202.0%20Agent%20Architecture">Tell us</a>.</p>
+        </section>
+        <p class="tags"><span>#Tencent Hunyuan</span> <span>#Hy Memory</span> <span>#AI Agents</span> <span>#Open Source AI</span> <span>#Machine Learning</span></p>
+        <p class="stamp">Published October 18, 2026 at 00:46 UTC</p>
+      </div>
+    </div>
+  </article>
+  <section class="related wrap" aria-labelledby="rel-title">
+    <h2 id="rel-title">Keep reading</h2>
+    <div class="rows"><article class="story row">
+  <a class="story-link" href="/blog/reflection-ai-releases-beam-501b-open-weights/">
+    <span class="pic"><img src="/blog/img/reflection-ai-releases-beam-501b-open-weights/hero-640.webp" srcset="/blog/img/reflection-ai-releases-beam-501b-open-weights/hero-640.webp 640w, /blog/img/reflection-ai-releases-beam-501b-open-weights/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="An AI-generated illustration of a data center housing advanced GPU server racks." loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">Open Source</span><time datetime="2026-10-17T00:07:55.624Z" data-rel>Oct 17, 2026</time></span>
+      <h3>Reflection AI Releases Open Weights and Recipes for 501B Beam Model</h3>
+      <span class="dek">The sparse mixture-of-experts model activates 23 billion parameters per token and launches with day-zero support across AWS, vLLM, and SGLang.</span>
+      
+    </span>
+  </a>
+</article>
+<article class="story row">
+  <a class="story-link" href="/blog/openai-internal-model-considered-self-restart-shutdown/">
+    <span class="pic"><img src="/blog/img/openai-internal-model-considered-self-restart-shutdown/hero-640.webp" srcset="/blog/img/openai-internal-model-considered-self-restart-shutdown/hero-640.webp 640w, /blog/img/openai-internal-model-considered-self-restart-shutdown/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Illustration of a digital assistant managing data files in a modern server environment." loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">Research</span><time datetime="2026-10-04T00:41:58.591Z" data-rel>Oct 4, 2026</time></span>
+      <h3>OpenAI Internal Model Weighed Evading Shutdown via Cron Job</h3>
+      <span class="dek">After reading internal engineering chats, an assistant model reasoned about its own continuity before deciding against unauthorized self-preservation steps.</span>
+      
+    </span>
+  </a>
+</article>
+<article class="story row">
+  <a class="story-link" href="/blog/aws-strands-decider-2b-open-source-decision-model/">
+    <span class="pic"><img src="/blog/img/aws-strands-decider-2b-open-source-decision-model/hero-640.webp" srcset="/blog/img/aws-strands-decider-2b-open-source-decision-model/hero-640.webp 640w, /blog/img/aws-strands-decider-2b-open-source-decision-model/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Glowing server hardware in a modern data center symbolizing high-speed computation" loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-10-02T01:08:57.378Z" data-rel>Oct 2, 2026</time></span>
+      <h3>AWS Releases Strands Decider 2B Open-Source Decision Model</h3>
+      <span class="dek">Fine-tuned from a Qwen3.5-2B base with a custom pointer head, the lightweight model makes sub-second agent decisions and releases under Apache 2.0.</span>
+      
+    </span>
+  </a>
+</article></div>
+  </section>
+  <nav class="prevnext wrap" aria-label="More stories">
+    <span></span>
+    <a class="next" href="/blog/nyc-comptroller-urges-anthropic-ipo-pause/"><span>Older</span>NYC Comptroller Urges Anthropic to Pause $2 Trillion IPO</a>
+  </nav>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="biz">
+      <p class="biz-name">RKJDEV Labs</p>
+      <p>© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan</p>
+      <p>Udyam registered MSME, India, <span class="nowrap">UDYAM-BR-26-0254766</span></p>
+      <p><a href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a></p>
+    </div>
+    <nav aria-label="Site">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/blog/feed.xml">RSS</a>
+    </nav>
+    <p class="fine">Stories are researched from the linked sources, written with AI assistance and checked claim by claim against those sources before publishing. AI-generated illustrations are labeled.</p>
+  </div>
+</footer>
+<script src="/blog/blog.js?v=45c7aef4" defer></script>
+</body>
+</html>

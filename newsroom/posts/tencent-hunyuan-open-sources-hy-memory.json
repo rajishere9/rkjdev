@@ -1,0 +1,160 @@
+{
+ "slug": "tencent-hunyuan-open-sources-hy-memory",
+ "title": "Tencent Hunyuan Open-Sources Hy Memory 2.0 Agent Architecture",
+ "seoTitle": "Tencent Hunyuan Open-Sources Hy Memory 2.0",
+ "description": "Tencent Hunyuan has open-sourced Hy Memory 2.0, adding specialized working and coding memory pipelines alongside a dedicated 30B MoE model.",
+ "dek": "The three-tier release includes the Hy Memory framework, a dedicated 30B write-path model, and MemHub for cross-agent synchronization.",
+ "category": "Open Source",
+ "tags": [
+  "Tencent Hunyuan",
+  "Hy Memory",
+  "AI Agents",
+  "Open Source AI",
+  "Machine Learning"
+ ],
+ "keyTakeaways": [
+  "Hy Memory 2.0 introduces dedicated working memory and coding memory pipelines, moving beyond conversational chat storage.",
+  "Tencent released the Hy-Memory GitHub repository (containing the Python SDK and MemHub) under the Apache 2.0 license, alongside the Hy-Memory-30B-A3B model.",
+  "Hy-Memory-30B-A3B, a mixture-of-experts model with roughly 3 billion active parameters, scored an average of 55.49 across four memory harnesses, surpassing Claude Opus 5 and DeepSeek V4.1 Flash on Tencent's benchmark matrix.",
+  "The framework incorporates diff-chain version tracking for code revisions, isolating software engineering state while recording reusable problem-solving experiences."
+ ],
+ "body": "Tencent Hunyuan has released and open-sourced Hy Memory 2.0, updating its cognitive memory stack for artificial intelligence agents by introducing dedicated working memory and code memory pipelines. Published under the Apache 2.0 license in mid-October 2026, the release transitions the platform from a theoretical framework into a three-layer open-source ecosystem consisting of a Python SDK, a specialized 30-billion-parameter memory-writing model, and a local cross-application memory hub.\n\nAccording to [Tencent Hunyuan's GitHub repository](https://github.com/Tencent-Hunyuan/Hy-Memory), the 2.0 architecture addresses a persistent bottleneck in autonomous AI workflows: the tendency of long-horizon agents to lose context across interleaved tasks, overwrite valid prior solutions, and waste context window budget on redundant transcripts. The new release organizes persistent memory into three distinct operational scenarios: chat, working, and coding.\n\n[[FIG1]]\n\n## A Three-Layer Open-Source Architecture\n\nUnlike conventional retrieval-augmented generation (RAG) setups that rely on raw vector indexing, Hy Memory operates across three independent tiers that can be deployed individually or linked into a unified pipeline, according to [Tencent's official portal](https://memory.hunyuan.tencent.com/).\n\nThe foundation rests on the model layer with Hy-Memory-30B-A3B, a mixture-of-experts model with approximately 3 billion active parameters hosted on [Hugging Face](https://huggingface.co/tencent/Hy-Memory-30B-A3B). This model acts exclusively as a persistent memory writer. Rather than generating user responses, it executes the write path by extracting facts, reconciling conflicting records, and updating memory stores.\n\nAbove the model sits the framework layer, distributed as the `hy-memory` Python SDK via PyPI. The framework contains routing engines, database storage abstractions for vector and graph stores—including ChromaDB, Kuzu, Qdrant, FAISS, and Neo4j—and dual-process memory evolution logic.\n\nThe user-facing tier is MemHub, a local-first application provided as a command-line interface and macOS software. MemHub imports and synchronizes session histories across ten distinct coding and agent environments, unifying fragmented interaction traces into a governed, local directory.\n\n## Chat, Working, and Coding Memory Pipelines\n\nThe central structural development in Hy Memory 2.0 is the partition between three operational task scenes: Chat, Working, and Coding. Each task scene employs a distinct storage format and lifecycle policy.\n\n### Chat Memory Hierarchy\n\nChat memory focuses on long-term personal context. Building on research accepted at EMNLP 2026, it abstracts dialogue across an eight-layer cognitive hierarchy labeled L0 through L7. The structure organizes raw conversations into atomic facts, session summaries, mental schemas, and prospective intentions with expiration dates. Duplicate facts are merged, while contradictory personal preferences are reconciled before context reaches the inference model.\n\n### Working Memory for Productivity\n\nWorking memory tracks multi-step tasks across productivity workflows such as financial analysis, document preparation, and research. According to Tencent's technical documentation, each working session with tool calls outputs two linked layers:\n\n1. **The Fact Layer (`WorkingFact`):** Captures exactly one session record containing the task objective, chosen methodology, and intermediate results without requiring threshold filtering.\n2. **The Experience Layer:** Stores zero to multiple reusable problem-solving strategies that meet explicit confidence thresholds, complete with boundary conditions governing when the approach applies.\n\nWhen an agent resumes a suspended project, the engine cross-references whether current environmental conditions match past experience boundaries before applying cached approaches.\n\n[[FIG2]]\n\n## Coding Memory and Version-Evolution Tracking\n\nSoftware engineering workflows present distinct challenges for memory frameworks. Agents frequently alter the same file across multiple iterations, and naive memory systems risk surfacing discarded or broken intermediate states.\n\nHy Memory 2.0's Coding pipeline reuses the two-layer schema of Working memory but introduces a code version-evolution diff chain, detailed in Tencent's [CMB technical benchmark](https://github.com/Tencent-Hunyuan/Hy-Memory). Instead of saving raw code blocks into memory banks—which rapidly exhausts token limits—the framework records exact coordinates such as file paths, functions, and Git branches, alongside a ledger of sequential modifications.\n\nThis separation prevents rolled-back code edits from appearing as active facts. If an engineering agent evaluates previous work on an issue, it queries the diff chain to inspect why specific design choices were made and which modifications were retained in the final patch.\n\nCoding memory is stored independently from productivity data. The SDK routes coding tasks to isolated databases (`coding_memory_cv.db`), ensuring software traces do not pollute organizational or personal memory collections.\n\n## Hy-Memory-30B-A3B: Specialized Memory Writing\n\nTencent's dedicated write-path model, Hy-Memory-30B-A3B, was developed to replace general-purpose LLMs inside memory architectures. As reported in the model's technical documentation on arXiv, memory writing was optimized via a two-stage training process:\n\n- **Memory On-Policy Distillation (OPD):** The model writes memory state chains while a larger teacher model supplies dense supervision on the student's self-generated state transitions.\n- **Attributed Memory Reinforcement Learning:** The training harness inspects resulting memory banks across rollouts, assigning credit at the individual chunk level rather than scoring whole conversations. Credit normalization identifies the strongest memory updates per chunk, propagating the top bank forward into subsequent task windows.\n\nIn Tencent's comparative evaluations across four memory testbeds (Mem0, Hy-Memory, MemOS, and the held-out EverMemOS), Hy-Memory-30B-A3B achieved a macro-average score of 55.49 across a fixed 20% benchmark subsample. This narrowly exceeded Claude Opus 5 at 54.62 and DeepSeek V4.1 Flash at 53.64, while substantially outperforming comparable-scale open models like Qwen3-30B-A3B at 44.37.\n\n| Memory Writer | Mem0 Harness | Hy-Memory Harness | MemOS Harness | EverMemOS (Held-Out) | 4-Harness Average |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| **Hy-Memory-30B-A3B** | **54.02** | **60.55** | **50.51** | **56.89** | **55.49** |\n| Claude Opus 5 | 53.43 | 60.53 | 50.50 | 54.04 | 54.62 |\n| DeepSeek V4.1 Flash | 49.73 | 60.20 | 49.17 | 55.47 | 53.64 |\n| Hy3 General | 45.99 | 58.06 | 50.19 | 52.30 | 51.63 |\n| Qwen3.6-35B-A3B | 47.51 | 55.87 | 47.36 | 50.75 | 50.37 |\n| Qwen3-30B-A3B | 39.81 | 45.67 | 45.44 | 46.57 | 44.37 |\n\nIndependent analysis from [MindStudio](https://www.mindstudio.ai/blog/hy-memory-30b-a3b-benchmark-comparison) notes that while Hy-Memory-30B-A3B secured the highest overall average, performance across individual sub-benchmarks varied. Claude Opus 5 led on raw LoCoMo judge evaluations within Mem0 and MemOS harnesses, while DeepSeek V4.1 Flash led on select code evaluations. The compact model's principal advantage lies in sustained performance across differing memory backends at an active footprint of roughly 3 billion parameters.\n\n## Local Agent Federation via MemHub\n\nTo bridge isolated development tools, Tencent bundled the framework with MemHub. As detailed by [Pandaily](https://pandaily.com/tencent-hunyuan-hy-memory-2-0-open-source-working-code-memory-memhub-apache-2), developers commonly define preferences and project guidelines in one coding assistant, only to repeat them when switching environments.\n\nMemHub runs locally, interfacing with user-authorized tools including Cursor, Codex, Claude Code, OpenCode, Qwen Code, OpenClaw, WorkBuddy, Pi, Hermes, and DeepSeek Harness. When authorized, MemHub ingests historical transcripts, formats them through the `hy-memory` pipeline, and serves an updated memory representation back to connected tools as contextual augmentation.\n\n## Internal Deployment and Ecosystem Context\n\nPrior to open-sourcing, Tencent deployed Hy Memory internally across its enterprise divisions, according to [Tencent's official portal](https://memory.hunyuan.tencent.com/). Implementations span financial research in Tencent Stock (Zixuangu), team documentation via the iWiki CTX memory plugin, and interactive features in Tencent News.\n\nIn Tencent's internal investment research evaluation, migrating from legacy memory pipelines to Hy Memory produced a 23.8% relative gain in composite accuracy, increasing multi-hop retrieval rates from 50% to 90% and conflict resolution scores from 67% to 83%.\n\nBy releasing the weights, SDK, and local aggregation tools simultaneously, Tencent offers the open-source community a structured alternative to standard context-stuffing methods, which MindStudio notes demonstrates that compact, specialized models can manage memory state more efficiently than general frontier models.",
+ "faq": [
+  {
+   "q": "What is Hy Memory 2.0?",
+   "a": "Hy Memory 2.0 is an open-source cognitive memory framework developed by Tencent Hunyuan for AI agents. Released under the Apache 2.0 license, it provides structured memory engines for chat, working tasks, and software coding."
+  },
+  {
+   "q": "What does the 'A3B' designation mean in Hy-Memory-30B-A3B?",
+   "a": "The 'A3B' designation indicates a mixture-of-experts model architecture where approximately 3 billion parameters are actively engaged during any single inference call, out of a larger 30-billion total parameter count."
+  },
+  {
+   "q": "Which development tools are supported by MemHub?",
+   "a": "MemHub supports 10 AI applications and coding environments, including Cursor, Codex, Claude Code, OpenCode, Qwen Code, WorkBuddy, OpenClaw, Pi, Hermes, and DeepSeek Harness."
+  },
+  {
+   "q": "How does Coding memory differ from Working memory in the framework?",
+   "a": "While both use a two-layer schema for facts and experiences, Coding memory records precise coordinates such as file paths and branch names instead of raw code snippets, and maintains a version-evolution diff chain to track sequential code changes."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "alt": "An abstract digital representation of multi-layered artificial cognitive memory and neural pathways connecting distinct computing modules.",
+  "caption": "Illustration: The multi-tiered cognitive memory structure powering Tencent Hunyuan's Hy Memory 2.0 framework.",
+  "src": "img/tencent-hunyuan-open-sources-hy-memory/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 89680,
+  "small": "img/tencent-hunyuan-open-sources-hy-memory/hero-640.webp",
+  "og": "img/tencent-hunyuan-open-sources-hy-memory/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/tencent-hunyuan-open-sources-hy-memory/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "alt": "A software engineer working at an illuminated multi-monitor desk reviewing interconnected diagrams of code repositories and memory structures.",
+   "caption": "Illustration: Managing agent workflows and code repositories through structured memory layers.",
+   "slot": "FIG1",
+   "src": "img/tencent-hunyuan-open-sources-hy-memory/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 44926,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "alt": "A visual diagram showing a branching pipeline separating conversation history, structured task facts, and code revision histories.",
+   "caption": "Illustration: Segregation of agent memory into chat, working, and coding tracks with diff-chain tracking.",
+   "slot": "FIG2",
+   "src": "img/tencent-hunyuan-open-sources-hy-memory/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 46910,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://github.com/Tencent-Hunyuan/Hy-Memory",
+   "title": "Tencent-Hunyuan/Hy-Memory",
+   "site": "GitHub",
+   "published": 1792069616000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://huggingface.co/tencent/Hy-Memory-30B-A3B",
+   "title": "tencent/Hy-Memory-30B-A3B",
+   "site": "Hugging Face",
+   "published": 1792057920000,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://memory.hunyuan.tencent.com/",
+   "title": "Hy-Memory 2.0 — 模型、框架、应用三层全开源 | 腾讯混元",
+   "site": "memory.hunyuan.tencent.com",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 4,
+   "url": "https://pandaily.com/tencent-hunyuan-hy-memory-2-0-open-source-working-code-memory-memhub-apache-2",
+   "title": "Tencent Hunyuan Open-Sources Hy Memory 2.0, Adding Working and Code Memory for AI Agents",
+   "site": "pandaily.com",
+   "published": 1792108800000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://m.techflowpost.com/en-US/newsletter/140244",
+   "title": "Tencent Hunyuan Releases Hy Memory 2.0, Fully Open-Sourcing Three-Layer Model Framework and Applications",
+   "site": "m.techflowpost.com",
+   "published": 1792145564204,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://www.mindstudio.ai/blog/hy-memory-30b-a3b-benchmark-comparison",
+   "title": "Hy-Memory-30B-A3B vs Claude Opus 5 and DeepSeek on Memory Tasks",
+   "site": "MindStudio",
+   "published": 1792195200000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://readmex.ai/story/tencent-hy-memory-30b-a3b-a85287f0",
+   "title": "Tencent Hunyuan open-sources Hy Memory 2.0 framework and Hy-Memory-30B-A3B",
+   "site": "readmex.ai",
+   "published": 1792138371000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792284414413,
+ "updatedAt": 1792284414413,
+ "foundVia": "GitHub, Hugging Face and pandaily.com",
+ "check": {
+  "claims": 27,
+  "score": 10
+ },
+ "story": {
+  "id": "P693d5ca4",
+  "score": 88,
+  "items": [
+   "https://github.com/Tencent-Hunyuan/Hy-Memory",
+   "https://huggingface.co/tencent/Hy-Memory-30B-A3B",
+   "https://pandaily.com/tencent-hunyuan-hy-memory-2-0-open-source-working-code-memory-memhub-apache-2",
+   "https://aitoolsrecap.com/Blog/ai-news-october-17-2026",
+   "https://news.google.com/rss/articles/CBMinwFBVV95cUxPOEJwdE5OZzNwMnZVMDNhR0tWTEhMVlRYQjliNHBmTDEyZU4tdDBSVkZhVllKWGhNcEZaVWhfZVFNYzVDSWZtOFZnUnBvYWxhR29pZWNxWGFTZ291T3dvcXdSQUFEc3NUU3BIYS10MEJnRWc1MTd6UUFacWItWUdSTnU4NFkyWU5TMkVhd19YMXZrM3d1b2dRWG1XTWZGOXM?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
