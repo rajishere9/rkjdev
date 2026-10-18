@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeepSeek Releases V4.1-Flash-1017 Model and Search API | rkj dev</title>
+<meta name="description" content="DeepSeek released its V4.1-Flash-1017 model checkpoint featuring a 1M context window, reportedly reduced task runtime according to DeepSeek's announcement, and public web Search and Fetch API endpoints.">
+<link rel="canonical" href="https://www.rkjdev.com/blog/deepseek-releases-v4-1-flash-1017-search-api/">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#110b14">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:site_name" content="rkj dev Blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DeepSeek Releases V4.1-Flash-1017 Model and Search API | rkj dev">
+<meta property="og:description" content="DeepSeek released its V4.1-Flash-1017 model checkpoint featuring a 1M context window, reportedly reduced task runtime according to DeepSeek's announcement, and public web Search and Fetch API endpoints.">
+<meta property="og:url" content="https://www.rkjdev.com/blog/deepseek-releases-v4-1-flash-1017-search-api/">
+<meta property="og:image" content="https://www.rkjdev.com/blog/img/deepseek-releases-v4-1-flash-1017-search-api/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://www.rkjdev.com/blog/img/deepseek-releases-v4-1-flash-1017-search-api/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DeepSeek Releases V4.1-Flash-1017 Model and Search API | rkj dev">
+<meta name="twitter:description" content="DeepSeek released its V4.1-Flash-1017 model checkpoint featuring a 1M context window, reportedly reduced task runtime according to DeepSeek's announcement, and public web Search and Fetch API endpoints.">
+<link rel="alternate" type="application/rss+xml" title="rkj dev Blog" href="/blog/feed.xml">
+<link rel="alternate" type="application/feed+json" title="rkj dev Blog" href="/blog/feed.json">
+<link rel="icon" href="/favicon.svg?v=bdff7dc5" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,40;1,9..144,400..600,40&family=Schibsted+Grotesk:ital,wght@0,400..600;1,400..600&display=swap">
+<link rel="stylesheet" href="/site.css?v=e85724ed">
+<link rel="stylesheet" href="/blog/blog.css?v=7ad332ef">
+<meta property="article:published_time" content="2026-10-18T00:21:33.039Z">
+<meta property="article:modified_time" content="2026-10-18T00:21:33.039Z">
+<meta property="article:section" content="AI Models">
+<meta property="article:tag" content="DeepSeek">
+<meta property="article:tag" content="Artificial Intelligence">
+<meta property="article:tag" content="Large Language Models">
+<meta property="article:tag" content="Open Source AI">
+<meta property="article:tag" content="APIs">
+<link rel="preload" as="image" href="/blog/img/deepseek-releases-v4-1-flash-1017-search-api/hero.webp" imagesrcset="/blog/img/deepseek-releases-v4-1-flash-1017-search-api/hero-640.webp 640w, /blog/img/deepseek-releases-v4-1-flash-1017-search-api/hero.webp 1200w" imagesizes="(max-width: 760px) 100vw, 1200px">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"DeepSeek Launches V4.1-Flash-1017 Checkpoint and Public Search API","description":"DeepSeek released its V4.1-Flash-1017 model checkpoint featuring a 1M context window, reportedly reduced task runtime according to DeepSeek's announcement, and public web Search and Fetch API endpoints.","url":"https://www.rkjdev.com/blog/deepseek-releases-v4-1-flash-1017-search-api/","mainEntityOfPage":"https://www.rkjdev.com/blog/deepseek-releases-v4-1-flash-1017-search-api/","image":["https://www.rkjdev.com/blog/img/deepseek-releases-v4-1-flash-1017-search-api/og.jpg","https://www.rkjdev.com/blog/img/deepseek-releases-v4-1-flash-1017-search-api/hero.webp"],"datePublished":"2026-10-18T00:21:33.039Z","dateModified":"2026-10-18T00:21:33.039Z","articleSection":"AI Models","keywords":"DeepSeek, Artificial Intelligence, Large Language Models, Open Source AI, APIs","wordCount":977,"author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","name":"RKJDEV Labs","url":"https://www.rkjdev.com","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/apple-touch-icon.png"}},"isBasedOn":["https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017","https://api-docs.deepseek.com/news/news261017/","https://api-docs.deepseek.com/updates/","https://the-decoder.com/deepseek-v4-1-flash-1017-beats-larger-rivals-in-agentic-tasks-while-once-again-massively-cutting-per-task-costs/","https://www.marktechpost.com/2026/10/17/deepseek-just-released-v4-1-flash-1017-scores-77-0-on-deepswe-opens-search-api/","https://ca.investing.com/news/stock-market-news/deepseek-releases-ai-model-update-opens-search-apis-to-all-users-4886477","https://aiweekly.co/alerts/deepseek-opens-v41-flash-1017-weights-and-075-search-api"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"AI Models","item":"https://www.rkjdev.com/blog/category/ai-models/"},{"@type":"ListItem","position":3,"name":"DeepSeek Launches V4.1-Flash-1017 Checkpoint and Public Search API","item":"https://www.rkjdev.com/blog/deepseek-releases-v4-1-flash-1017-search-api/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How can developers access DeepSeek-V4.1-Flash-1017?","acceptedAnswer":{"@type":"Answer","text":"Developers can invoke the model via the DeepSeek API by specifying the model identifier deepseek-flash using standard OpenAI or Anthropic endpoint schemas. The weights are also available for self-hosting on Hugging Face and ModelScope under the MIT license."}},{"@type":"Question","name":"What are the costs for the newly released Search and Fetch APIs?","acceptedAnswer":{"@type":"Answer","text":"Both the Search and Fetch endpoints are priced at $0.75 per 1,000 successful requests, with rate limits set to 5 queries per second per account. Calls made through DeepSeek Harness, Claude Code, and Codex are free until October 31, 2026, at 16:00 UTC."}},{"@type":"Question","name":"How does DeepSeek-V4.1-Flash-1017 compare to larger commercial frontier models?","acceptedAnswer":{"@type":"Answer","text":"According to benchmarks released by DeepSeek, the model achieved a 77.0 score on DeepSWE v1.1 and 60.5 on Automation-Bench v1.0.6, surpassing models like Claude Opus 5 and GPT-5.6 Sol on those specific software tests. However, Claude Opus 5 retains higher scores on raw reasoning tasks such as HLE and Terminal-Bench 4.0."}}]}]</script>
+</head>
+<body class="post">
+<div class="progress" aria-hidden="true"><span></span></div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="mark" href="/">rkj dev</a>
+    <nav aria-label="Site">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <article class="article">
+    <header class="post-head wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/category/ai-models/">AI Models</a></nav>
+      <h1>DeepSeek Launches V4.1-Flash-1017 Checkpoint and Public Search API</h1>
+      <p class="standfirst">According to DeepSeek's self-reported evaluation, the updated Mixture-of-Experts checkpoint cuts task completion time, posts higher agent benchmark marks, and unlocks DeepSeek's internal web search index.</p>
+      <div class="byline">
+        <span class="by">rkj dev newsroom</span>
+        <span><time datetime="2026-10-18T00:21:33.039Z" class="abs" data-rel>Oct 18, 2026</time></span>
+        <span>4 min read</span>
+        <a href="#sources">7 sources, fact-checked</a>
+      </div>
+    </header>
+    <div class="hero-wrap wrap"><figure class="hero-fig is-ai">
+  <div class="img"><img src="/blog/img/deepseek-releases-v4-1-flash-1017-search-api/hero.webp" srcset="/blog/img/deepseek-releases-v4-1-flash-1017-search-api/hero-640.webp 640w, /blog/img/deepseek-releases-v4-1-flash-1017-search-api/hero.webp 1200w" sizes="(max-width: 760px) 100vw, 1200px" width="1200" height="675" alt="Digital illustration of monitors displaying code and geometric models in a workspace." fetchpriority="high" decoding="async"></div>
+  <figcaption><span>Illustration representing automated coding and three-dimensional model generation.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure></div>
+    <div class="layout wrap">
+      <aside class="rail" aria-label="On this page">
+        <nav class="toc"><p>Contents</p><ol><li><a href="#architecture-and-memory-optimization">Architecture and Memory Optimization</a></li><li><a href="#benchmark-performance-across-coding-and-agent-harnesses">Benchmark Performance Across Coding and Agent Harnesses</a></li><li><a href="#search-and-fetch-api-availability">Search and Fetch API Availability</a></li><li><a href="#developer-deployment-and-model-availability">Developer Deployment and Model Availability</a></li></ol></nav>
+        <div class="share">
+          <p>Share</p>
+          <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fdeepseek-releases-v4-1-flash-1017-search-api%2F&text=DeepSeek%20Launches%20V4.1-Flash-1017%20Checkpoint%20and%20Public%20Search%20API" target="_blank" rel="noopener">X</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fdeepseek-releases-v4-1-flash-1017-search-api%2F" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://wa.me/?text=DeepSeek%20Launches%20V4.1-Flash-1017%20Checkpoint%20and%20Public%20Search%20API%20https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fdeepseek-releases-v4-1-flash-1017-search-api%2F" target="_blank" rel="noopener">WhatsApp</a>
+          <button type="button" data-copy="https://www.rkjdev.com/blog/deepseek-releases-v4-1-flash-1017-search-api/">Copy link</button>
+        </div>
+      </aside>
+      <div class="prose">
+        <section class="inshort" aria-labelledby="tk">
+          <h2 id="tk">In short</h2>
+          <ul><li>DeepSeek-V4.1-Flash-1017 introduces an updated checkpoint under the MIT license with a 1 million token context window and 384,000 maximum output tokens.</li><li>The model scored 77.0 on DeepSWE v1.1 and 42.3 on Terminal-Bench 4.0, while DeepSeek claims in its technical documentation that it reduces token generation length and task execution runtime.</li><li>DeepSeek opened its in-house web Search and Fetch APIs to all developers at $0.75 per 1,000 successful requests, with free access via select harnesses through October 31, 2026.</li><li>The checkpoint runs on a 40-layer causal encoder-decoder architecture with 552 billion backbone parameters, activating 8 billion parameters during prefill and 16 billion during decode.</li></ul>
+        </section>
+        <p>On October 17, 2026, artificial intelligence laboratory DeepSeek deployed an updated model checkpoint, <a href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017" target="_blank" rel="noopener">DeepSeek-V4.1-Flash-1017</a>, across its web interface, mobile application, and developer API. Alongside the model release, the company opened public access to its proprietary web Search and Fetch APIs, giving external developers programmatic access to the search infrastructure powering its consumer applications.</p>
+<p>The update serves as a direct revision to the earlier DeepSeek-V4.1-Flash architecture rolled out in September 2026. According to the company&#39;s <a href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017" target="_blank" rel="noopener">model card on Hugging Face</a>, the 1017 checkpoint targets improvements across reasoning, coding, autonomous agent execution, and multimodal visual tasks. DeepSeek describes the release as a Pareto improvement in performance and operating expense, delivering higher benchmark accuracy while decreasing output length and runtimes.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/deepseek-releases-v4-1-flash-1017-search-api/figure-1.webp" width="1200" height="670" alt="Abstract visualization of neural network layers and data matrices." loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration of compressed neural network layers and memory architectures.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="architecture-and-memory-optimization">Architecture and Memory Optimization</h2>
+<p>DeepSeek-V4.1-Flash-1017 maintains the architectural profile of the V4.1-Flash line, utilizing a multimodal Mixture-of-Experts (MoE) design with 40 Transformer layers divided evenly into a 20-layer causal encoder and a 20-layer decoder. Detailed architectural reporting from <a href="https://www.marktechpost.com/2026/10/17/deepseek-just-released-v4-1-flash-1017-scores-77-0-on-deepswe-opens-search-api/" target="_blank" rel="noopener">MarkTechPost</a> states the model contains 552 billion backbone parameters alongside 196 billion Engram parameters. In operation, it activates 8 billion parameters per token during the prefill phase and 16 billion parameters per token during token decoding.</p>
+<p>Memory management sits at the core of the checkpoint&#39;s efficiency gains. The release uses Causal Encoder-Decoder (CED) mechanics, projecting the decoder&#39;s global key-value (KV) states from final encoder hidden layers to reduce prefill compute overhead. Attention operations rely on Compressed Sparse Attention 2 (CSA2), with layers cycling through Full, Reindex, and Reuse modes to share key indices. By packing the main KV cache into FP4 representations, global KV requirements drop to 890 bytes per token, roughly one-fourth of the memory footprint of the earlier V4-Flash model, while sliding-window attention (SWA) bounded replay reduces persistent cache storage to roughly one-eighth.</p>
+<p>The system supports a 1 million token context window and maximum generation limits reaching 256,000 to 384,000 output tokens. DeepSeek&#39;s technical recommendations advise sampling with a temperature of 1.0 and top_p of 1.0. For prompt processing, DeepSeek published <a href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017" target="_blank" rel="noopener">deepseek-recipe</a>, an open-source Rust library with Python bindings designed to parse multi-turn chat conversions, thinking tokens, tool calls, and image data into the exact token layouts required by the model.</p>
+<h2 id="benchmark-performance-across-coding-and-agent-harnesses">Benchmark Performance Across Coding and Agent Harnesses</h2>
+<p>To train the checkpoint on autonomous end-to-end tasks, DeepSeek implemented reinforcement learning with self-feedback (RLSF). As reported by <a href="https://the-decoder.com/deepseek-v4-1-flash-1017-beats-larger-rivals-in-agentic-tasks-while-once-again-massively-cutting-per-task-costs/" target="_blank" rel="noopener">The Decoder</a>, this method allows the system to evaluate its own intermediate logic and code generation during complex development cycles without relying on separate reward models or human labelers. The company showcased projects constructed from scratch using the technique, including 3D architectural models and browser games.</p>
+<p>In evaluations published in the <a href="https://api-docs.deepseek.com/updates/" target="_blank" rel="noopener">DeepSeek API documentation change log</a>, V4.1-Flash-1017 posted gains across all 11 standardized benchmarks compared to the base September checkpoint:</p>
+<ul>
+<li><strong>DeepSWE v1.1 (Mini-SWE-V2 harness):</strong> 77.0, rising from 74.2 on the previous Flash release and outpacing Claude Opus 5 (74.0) and GPT-5.6 Sol (73.0).</li>
+<li><strong>Terminal-Bench 4.0 (Claude Code harness):</strong> 42.3, compared to 31.2 previously, placing it ahead of GPT-5.6 Sol (39.9) and GLM 5.3 (37.9), though trailing Claude Opus 5 (51.8).</li>
+<li><strong>Automation-Bench v1.0.6:</strong> 60.5, improving from 54.8.</li>
+<li><strong>Agents&#39; Last Exam:</strong> 35.4, up from 31.8.</li>
+<li><strong>Apex Bench v1.1:</strong> 72.1, climbing from 64.6.</li>
+<li><strong>HLE (without tools):</strong> 42.6 overall and 44.0 on the text-only subset, behind Claude Opus 5 at 56.3.</li>
+<li><strong>Multimodal Benchmarks:</strong> BabyVision reached 92.5 (with tools), and Chartography reached 83.0.</li>
+</ul>
+<p>Analysis reported by <a href="https://the-decoder.com/deepseek-v4-1-flash-1017-beats-larger-rivals-in-agentic-tasks-while-once-again-massively-cutting-per-task-costs/" target="_blank" rel="noopener">The Decoder</a> highlighted that the model&#39;s more succinct generation behavior lowered test costs significantly. On the DeepSWE evaluation, the updated Flash checkpoint executed tasks at an average cost just under $0.20 per completed task at top performance, compared to around $0.50 for the September version. Rival models charted on the same evaluation landed between $2 and over $10 per task.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/deepseek-releases-v4-1-flash-1017-search-api/figure-2.webp" width="1200" height="670" alt="Abstract digital graphic of data nodes and search index pathways." loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration of programmatic web search indexing and data retrieval.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="search-and-fetch-api-availability">Search and Fetch API Availability</h2>
+<p>Simultaneously with the checkpoint rollout, DeepSeek introduced public developer endpoints for web search: <code>POST /v1/tools/search</code> and <code>POST /v1/tools/fetch</code>. As outlined in the <a href="https://api-docs.deepseek.com/updates/" target="_blank" rel="noopener">DeepSeek API documentation updates</a>, the services run on an in-house search engine that DeepSeek claims indexes hundreds of billions of web pages and serves hundreds of millions of queries daily.</p>
+<p>The Search API accepts queries with filters such as <code>site:</code>, <code>lang:</code>, <code>after:</code>, and <code>before:</code>, returning between 1 and 50 results containing authority tiers (rated 0 to 4) and reranking scores (rated 0 to 3). The Fetch API extracts individual target URLs and returns the contents formatted as clean Markdown. DeepSeek notes that its search engine applies filtering mechanisms designed to suppress SEO spam, geographic ranking manipulation, and low-quality synthetic text.</p>
+<p>Pricing for both the Search and Fetch endpoints is set at $0.75 per 1,000 successful queries, with empty and failed requests incurring no charge. Each account receives a baseline rate limit of 5 queries per second. DeepSeek announced in its <a href="https://api-docs.deepseek.com/news/news261017/" target="_blank" rel="noopener">developer news bulletin</a> that server-side calls routed through the DeepSeek Harness, Claude Code, and Codex developer environments remain free of charge until October 31, 2026, at 16:00 UTC.</p>
+<h2 id="developer-deployment-and-model-availability">Developer Deployment and Model Availability</h2>
+<p>For existing API users, accessing DeepSeek-V4.1-Flash-1017 requires no parameter restructuring. The company updated the production alias <code>deepseek-flash</code> to route directly to the new checkpoint. As noted by <a href="https://aiweekly.co/alerts/deepseek-opens-v41-flash-1017-weights-and-075-search-api" target="_blank" rel="noopener">AI Weekly</a>, developers consuming the standard model name automatically transitioned to the updated behavior without an opt-out flag or migration process.</p>
+<p>The model weights are published under an open <a href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017" target="_blank" rel="noopener">MIT License on Hugging Face</a> and ModelScope. DeepSeek recommends pairing the model with DeepSeek Harness version v0.2.1-rc.1 or later, while adding dedicated optimizations for developer tooling including Tencent CodeBuddy and WorkBuddy.</p>
+<p>DeepSeek&#39;s cloud API structure applies peak rates of $0.30 per 1 million cache-miss input tokens and $1.20 per 1 million output tokens, with off-peak rates discounted by 50 percent. Cache hits are priced at $0.003 per million tokens. The model also exposes a reasoning effort scalar ranging from 1 to 100, mapped to standard low (50), high (75), and max (100) operational presets.</p>
+
+        <section class="faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Questions people ask</h2>
+          <details open><summary>How can developers access DeepSeek-V4.1-Flash-1017?</summary><p>Developers can invoke the model via the DeepSeek API by specifying the model identifier deepseek-flash using standard OpenAI or Anthropic endpoint schemas. The weights are also available for self-hosting on Hugging Face and ModelScope under the MIT license.</p></details>
+<details><summary>What are the costs for the newly released Search and Fetch APIs?</summary><p>Both the Search and Fetch endpoints are priced at $0.75 per 1,000 successful requests, with rate limits set to 5 queries per second per account. Calls made through DeepSeek Harness, Claude Code, and Codex are free until October 31, 2026, at 16:00 UTC.</p></details>
+<details><summary>How does DeepSeek-V4.1-Flash-1017 compare to larger commercial frontier models?</summary><p>According to benchmarks released by DeepSeek, the model achieved a 77.0 score on DeepSWE v1.1 and 60.5 on Automation-Bench v1.0.6, surpassing models like Claude Opus 5 and GPT-5.6 Sol on those specific software tests. However, Claude Opus 5 retains higher scores on raw reasoning tasks such as HLE and Terminal-Bench 4.0.</p></details>
+        </section>
+        <section class="sources" id="sources" aria-labelledby="src-title">
+          <h2 id="src-title">Sources</h2>
+          <ol><li><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017" target="_blank" rel="noopener">deepseek-ai/DeepSeek-V4.1-Flash-1017</a><span>Hugging Face, Oct 17, 2026, <b class="official">official source</b></span></li><li><a href="https://api-docs.deepseek.com/news/news261017/" target="_blank" rel="noopener">DeepSeek-V4.1-Flash-1017: Wish-Driven Programming Made Real | DeepSeek API Docs</a><span>api-docs.deepseek.com, <b class="official">official source</b></span></li><li><a href="https://api-docs.deepseek.com/updates/" target="_blank" rel="noopener">Change Log | DeepSeek API Docs</a><span>api-docs.deepseek.com, <b class="official">official source</b></span></li><li><a href="https://the-decoder.com/deepseek-v4-1-flash-1017-beats-larger-rivals-in-agentic-tasks-while-once-again-massively-cutting-per-task-costs/" target="_blank" rel="noopener">Deepseek V4.1 Flash 1017 beats larger rivals in agentic tasks while once again massively cutting per-task costs</a><span>The Decoder, Oct 17, 2026</span></li><li><a href="https://www.marktechpost.com/2026/10/17/deepseek-just-released-v4-1-flash-1017-scores-77-0-on-deepswe-opens-search-api/" target="_blank" rel="noopener">DeepSeek Just Released V4.1-Flash-1017, Scores 77.0 on DeepSWE, Opens Search API</a><span>marktechpost.com, Oct 17, 2026</span></li><li><a href="https://ca.investing.com/news/stock-market-news/deepseek-releases-ai-model-update-opens-search-apis-to-all-users-4886477" target="_blank" rel="noopener">DeepSeek releases AI model update, opens search APIs to all users</a><span>ca.investing.com, Oct 17, 2026</span></li><li><a href="https://aiweekly.co/alerts/deepseek-opens-v41-flash-1017-weights-and-075-search-api" target="_blank" rel="noopener">DeepSeek Opens V4.1-Flash-1017 Weights and $0.75 Search API</a><span>AI Weekly, Oct 17, 2026</span></li></ol>
+          <p class="method">How this story was made: the newsroom picked it up from Google Search, Reddit and Hugging Face, gathered the full text of the sources above, and drafted it with AI assistance. Every factual claim was then checked against those sources before publishing (51 claims checked). Illustrations marked as AI-generated are not photographs. Spotted an error? <a href="mailto:rajankrishnan909@gmail.com?subject=Correction%3A%20DeepSeek%20Launches%20V4.1-Flash-1017%20Checkpoint%20and%20Public%20Search%20API">Tell us</a>.</p>
+        </section>
+        <p class="tags"><span>#DeepSeek</span> <span>#Artificial Intelligence</span> <span>#Large Language Models</span> <span>#Open Source AI</span> <span>#APIs</span></p>
+        <p class="stamp">Published October 18, 2026 at 00:21 UTC</p>
+      </div>
+    </div>
+  </article>
+  <section class="related wrap" aria-labelledby="rel-title">
+    <h2 id="rel-title">Keep reading</h2>
+    <div class="rows"><article class="story row">
+  <a class="story-link" href="/blog/aleph-alpha-releases-kolibri-open-weight-moe/">
+    <span class="pic"><img src="/blog/img/aleph-alpha-releases-kolibri-open-weight-moe/hero-640.webp" srcset="/blog/img/aleph-alpha-releases-kolibri-open-weight-moe/hero-640.webp 640w, /blog/img/aleph-alpha-releases-kolibri-open-weight-moe/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="A server room representing sovereign European AI computing infrastructure" loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-10-05T01:15:02.565Z" data-rel>Oct 5, 2026</time></span>
+      <h3>Aleph Alpha Releases Kolibri, an Open-Weight 78.1B MoE Model</h3>
+      <span class="dek">The German AI lab releases an open-weight mixture-of-experts model optimized for bilingual enterprise workloads, long contexts, and sovereign European compliance.</span>
+      
+    </span>
+  </a>
+</article>
+<article class="story row">
+  <a class="story-link" href="/blog/reflection-ai-releases-beam-501b-open-weights/">
+    <span class="pic"><img src="/blog/img/reflection-ai-releases-beam-501b-open-weights/hero-640.webp" srcset="/blog/img/reflection-ai-releases-beam-501b-open-weights/hero-640.webp 640w, /blog/img/reflection-ai-releases-beam-501b-open-weights/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="An AI-generated illustration of a data center housing advanced GPU server racks." loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">Open Source</span><time datetime="2026-10-17T00:07:55.624Z" data-rel>Oct 17, 2026</time></span>
+      <h3>Reflection AI Releases Open Weights and Recipes for 501B Beam Model</h3>
+      <span class="dek">The sparse mixture-of-experts model activates 23 billion parameters per token and launches with day-zero support across AWS, vLLM, and SGLang.</span>
+      
+    </span>
+  </a>
+</article>
+<article class="story row">
+  <a class="story-link" href="/blog/anthropic-releases-claude-sonnet-5/">
+    <span class="pic"><img src="/blog/img/anthropic-releases-claude-sonnet-5/hero-640.webp" srcset="/blog/img/anthropic-releases-claude-sonnet-5/hero-640.webp 640w, /blog/img/anthropic-releases-claude-sonnet-5/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Illustration of a tech workspace with developers collaborating on advanced software systems" loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-09-29T00:12:34.666Z" data-rel>Sep 29, 2026</time></span>
+      <h3>Anthropic Launches Claude Sonnet 5.5 With Faster Output and Coding Gains</h3>
+      <span class="dek">Anthropic says the updated mid-tier model runs 30 percent faster, costs up to 30 percent less per task, and rivals Opus 5.5 on agentic coding benchmarks.</span>
+      
+    </span>
+  </a>
+</article></div>
+  </section>
+  <nav class="prevnext wrap" aria-label="More stories">
+    <span></span>
+    <a class="next" href="/blog/openai-launches-rosalind-academic-plan-for-labs/"><span>Older</span>OpenAI Launches Rosalind Academic Plan for U.S. University Labs</a>
+  </nav>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="biz">
+      <p class="biz-name">RKJDEV Labs</p>
+      <p>© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan</p>
+      <p>Udyam registered MSME, India, <span class="nowrap">UDYAM-BR-26-0254766</span></p>
+      <p><a href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a></p>
+    </div>
+    <nav aria-label="Site">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/blog/feed.xml">RSS</a>
+    </nav>
+    <p class="fine">Stories are researched from the linked sources, written with AI assistance and checked claim by claim against those sources before publishing. AI-generated illustrations are labeled.</p>
+  </div>
+</footer>
+<script src="/blog/blog.js?v=45c7aef4" defer></script>
+</body>
+</html>
