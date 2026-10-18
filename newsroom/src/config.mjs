@@ -40,6 +40,22 @@ export const CATEGORIES = [
   "Policy", "Chips & Hardware", "Robotics", "Science", "Space", "Tech",
 ];
 
+// Meta description and intro for each category page, so they don't all share one templated sentence.
+export const CATEGORY_INFO = {
+  "AI Models": "New AI model launches and updates from OpenAI, Google, Anthropic, Meta, DeepSeek, Qwen and other labs: specs, benchmarks, pricing and availability.",
+  "Open Source": "Open-weight models, open-source AI frameworks and datasets: what was released, under which license, and what it can do.",
+  "Research": "AI research that matters: new papers, techniques, safety and interpretability results, explained from the original sources.",
+  "Audio & Video": "AI video generators, music models, voice and text-to-speech releases: what launched, how it compares and where to try it.",
+  "Agents & Tools": "AI agents, coding assistants, APIs and developer tools: launches and updates that change how people build with AI.",
+  "Industry": "AI business news: funding rounds, acquisitions, earnings, partnerships and the deals reshaping the AI industry.",
+  "Policy": "AI policy and regulation: laws, lawsuits, government action and safety rules around the world, explained from the sources.",
+  "Chips & Hardware": "AI chips and hardware: Nvidia, AMD, TPUs, data centers and the compute behind the latest models.",
+  "Robotics": "Robotics news: humanoid robots, robot foundation models and the companies building machines that act in the real world.",
+  "Science": "Science breakthroughs worth knowing about, from physics and biology to AI-driven discovery, checked against the research.",
+  "Space": "Space news: launches, missions, telescopes and discoveries, from NASA, ESA, SpaceX and beyond.",
+  "Tech": "Technology news beyond AI: devices, platforms, security and the computing stories of the day.",
+};
+
 // Domains whose images and words count as official, first-party sources.
 export const OFFICIAL_DOMAINS = [
   "openai.com", "anthropic.com", "deepmind.google", "blog.google", "research.google", "developers.googleblog.com", "ai.google.dev", "cloud.google.com",

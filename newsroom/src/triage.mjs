@@ -48,9 +48,11 @@ function priority(it) {
   return (it.official ? 1000 : 0) + (it.kind === "search" ? 300 : 0) + Math.min(800, eng) + (it.weight > 1 ? 200 : 0);
 }
 
-export async function triage(items, state) {
+export async function triage(items, state, recent = []) {
   const pending = state.stories.pending;
-  const covered = state.stories.covered.filter((c) => hoursAgo(c.at) < 24 * 7);
+  // Published posts on disk first, so coverage is known even if the working state was reset.
+  const covered = recent.map((p) => ({ slug: p.slug, headline: p.title }))
+    .concat(state.stories.covered.filter((c) => hoursAgo(c.at) < 24 * 7 && !recent.some((p) => p.slug === c.slug)));
   const sorted = [...items].sort((a, b) => priority(b) - priority(a)).slice(0, 360);
   const chunks = [];
   for (let i = 0; i < sorted.length; i += 120) chunks.push(sorted.slice(i, i + 120));
@@ -126,4 +128,35 @@ export function mergeAndSelect(stories, state, slotsLeft) {
   log(`triage: ${stories.length} stories, ${state.stories.pending.length} pending, ${ready.length} ready, writing ${chosen.length}`);
   for (const p of chosen) log(`  → [${p.score}] ${p.headline}`);
   return chosen;
+}
+
+const dupSchema = {
+  type: "object",
+  properties: {
+    sameAs: { type: "string", description: "Slug of the published post about the same event, else empty" },
+    newDevelopment: { type: "boolean", description: "True only if the story reports a major new development that post could not have covered" },
+  },
+  required: ["sameAs", "newDevelopment"],
+};
+
+// Last check before writing: is this event already on the site? Reads the published posts themselves, so it holds
+// even when triage misses the match, two pending stories describe one event, or the working state was lost.
+export async function findCovered(story, recent) {
+  if (!recent.length) return null;
+  const { value } = await gemini.json({
+    model: MODELS.triage,
+    temperature: 0,
+    schema: dupSchema,
+    system: "You are the news editor of an AI news site. You stop the site from publishing the same news event twice.",
+    prompt: `A reporter wants to write this story:
+${story.headline}
+${story.summary || ""}
+
+These posts are already published:
+${recent.map((p) => `${p.slug}: ${p.title}${p.dek ? ` — ${p.dek}` : ""}`).join("\n")}
+
+If one of them covers the same underlying event (same announcement, launch, deal, lawsuit, incident or study, even with different wording, numbers or angle), return its slug as sameAs. Set newDevelopment only when the story reports something genuinely new since that post (for example a deal that closed after talks, a model that shipped after a preview, a ruling after a lawsuit was filed). Rewordings, extra details and reactions are not new developments.`,
+  });
+  const match = value.sameAs && recent.find((p) => p.slug === value.sameAs.trim());
+  return match ? { slug: match.slug, newDevelopment: !!value.newDevelopment } : null;
 }

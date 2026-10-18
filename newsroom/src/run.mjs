@@ -5,7 +5,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { LIMITS, SITE, MODELS } from "./config.mjs";
 import { collectAll } from "./collect.mjs";
-import { triage, mergeAndSelect } from "./triage.mjs";
+import { triage, mergeAndSelect, findCovered } from "./triage.mjs";
 import { research } from "./research.mjs";
 import { vetRealImages, buildFigures } from "./images.mjs";
 import { updatePlay } from "./play.mjs";
@@ -76,9 +76,20 @@ async function indexNow(urls) {
   }
 }
 
-async function publishStory(story, state) {
+async function publishStory(story, state, recent) {
   story.attempts = (story.attempts || 0) + 1;
   log(`story: ${story.headline}`);
+  try {
+    const dup = await findCovered(story, recent);
+    if (dup && !dup.newDevelopment) {
+      story.attempts = 99;
+      state.stories.covered.push({ slug: dup.slug, headline: story.headline, at: Date.now() });
+      return { skipped: `already covered at ${dup.slug}` };
+    }
+    if (dup) story.updateOf = dup.slug;
+  } catch (e) {
+    log(`dedupe: check failed, writing anyway: ${e.message}`);
+  }
   const { sources, reject } = await research(story);
   if (reject) {
     story.retryAfter = Date.now() + 40 * 60e3;
@@ -150,10 +161,13 @@ async function main() {
 
   const summary = { at: new Date().toISOString(), published: [], skipped: [] };
   if (!flag("--render-only")) {
+    // The week's published posts, newest first: what triage and the duplicate check compare new stories against.
+    const recent = (await loadPosts()).filter((p) => p && !p.hidden && !p.duplicateOf && hoursAgo(p.publishedAt) < 24 * 7)
+      .sort((a, b) => b.publishedAt - a.publishedAt);
     const items = await collectAll(state);
     let stories = [];
     if (items.length) {
-      stories = await triage(items, state);
+      stories = await triage(items, state, recent);
       for (const it of items) state.seen[it.id] = Date.now();
     }
     const max = args.includes("--max") ? +args[args.indexOf("--max") + 1] : LIMITS.postsPerRun;
@@ -164,8 +178,9 @@ async function main() {
     for (const story of chosen) {
       if ((Date.now() - started) / 60e3 > LIMITS.runBudgetMinutes * 0.65) { log("run: time budget reached, leaving the rest for the next run"); break; }
       try {
-        const r = await publishStory(story, state);
+        const r = await publishStory(story, state, recent);
         if (r.post) {
+          recent.unshift(r.post);
           state.stories.pending = state.stories.pending.filter((p) => p.id !== story.id);
           if (!flag("--dry")) state.daily.count++;
           summary.published.push(r.post.slug);
