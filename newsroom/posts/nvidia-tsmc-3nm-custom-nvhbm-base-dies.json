@@ -1,0 +1,118 @@
+{
+ "slug": "nvidia-tsmc-3nm-custom-nvhbm-base-dies",
+ "title": "Nvidia Demands TSMC 3nm Process for Custom NVHBM Base Dies",
+ "seoTitle": "Nvidia Requests TSMC 3nm for NVHBM Base Dies",
+ "description": "Nvidia asks Samsung, SK Hynix, and Micron to use TSMC's 3nm node for custom NVHBM base dies, aiming to standardize memory and cut verification steps.",
+ "dek": "To unify memory performance across suppliers, Nvidia is requiring Samsung, SK Hynix, and Micron to build custom NVHBM base dies on TSMC's 3nm node.",
+ "category": "Chips & Hardware",
+ "tags": [
+  "Nvidia",
+  "TSMC",
+  "Samsung",
+  "High-Bandwidth Memory",
+  "Semiconductors",
+  "Hardware"
+ ],
+ "keyTakeaways": [
+  "Nvidia has directed Samsung, SK Hynix, and Micron to manufacture base dies for custom NVHBM using TSMC's 3nm process.",
+  "The core dies will rely on sixth-generation (1c) DRAM technology to match the standardized architecture.",
+  "Nvidia reports that the custom memory design delivers up to 30 percent higher memory bandwidth and 15 percent lower power consumption than standard HBM4E.",
+  "Samsung accepted the terms after an internal review, marking its first collaboration with TSMC at the HBM fabrication stage.",
+  "Samsung will retain in-house production for standard HBM and may offer its own foundry for NVHBM if TSMC capacity is exceeded."
+ ],
+ "body": "Nvidia has instructed its primary memory suppliers—Samsung Electronics, SK Hynix, and Micron Technology—to manufacture the base dies for its upcoming custom high-bandwidth memory (NVHBM) on TSMC's 3-nanometer (3nm) node, according to reports from the Seoul Economic Daily published by [CommonWealth Magazine](https://english.cw.com.tw/article/article.action?id=5066) and [Wccftech](https://wccftech.com/nvidia-custom-hbm-samsung-tsmc-3nm-base-die/). The directive establishes a unified production standard across multiple memory vendors and prompts Samsung to partner with TSMC at the HBM manufacturing stage for the first time.\n\nFollowing an internal review, Samsung accepted Nvidia's terms despite operating its own commercial foundry. The arrangement breaks Samsung's traditional end-to-end approach for this custom memory tier, uniting the world's leading DRAM manufacturers under a single foundry process for NVHBM base dies.\n\n## Standardizing NVHBM Base Dies Across Memory Partners\n\nUnder the specifications set by Nvidia, the custom NVHBM integrates Nvidia's proprietary memory controller directly into the base die. To preserve architectural consistency, Nvidia requested that Samsung, SK Hynix, and Micron each fabricate these base dies exclusively through TSMC's 3nm process. For the memory core dies stacked on top, suppliers must deploy sixth-generation DRAM, also known as the 1c process.\n\n[[FIG1]]\n\nNvidia's primary objective behind mandating a shared foundry node is standardization. When different memory makers build base dies with disparate manufacturing nodes and internal libraries, the host chipmaker must run individual, lengthy verification procedures for each supplier's samples. By enforcing TSMC's 3nm technology across all three memory partners, Nvidia can verify a single base die design, eliminating redundant validation testing and accelerating time to volume deployment.\n\nAccording to details reported by [Wccftech](https://wccftech.com/nvidia-custom-hbm-samsung-tsmc-3nm-base-die/), Nvidia claims its custom in-house memory architecture can yield up to 30 percent higher memory bandwidth than standard HBM4E while reducing power consumption by up to 15 percent. These custom memory stacks have been targeted for deployment in Nvidia's future Feynman GPU architecture.\n\n## Samsung Adapts Its Foundry Strategy\n\nFor Samsung, the move represents a tactical adjustment in its high-bandwidth memory roadmap. Historically, Samsung has relied on a turnkey model, fabricating both the DRAM core dies and the underlying logic base dies within its own semiconductor facilities. By agreeing to TSMC-manufactured base dies for NVHBM, Samsung is temporarily setting aside its foundry rivalry with TSMC to protect its share of Nvidia's component supply chain.\n\n[[FIG2]]\n\nSamsung does not plan to abandon its in-house manufacturing capabilities entirely. The company will continue using its own foundries for standard HBM production and for custom memory products developed for other semiconductor clients, as noted by [CommonWealth Magazine](https://english.cw.com.tw/article/article.action?id=5066). Furthermore, Samsung is currently evaluating whether its proprietary foundry lines could be qualified to manufacture NVHBM base dies in the event that global demand outstrips TSMC's available 3nm capacity.\n\nHigh-bandwidth memory production remains central to Samsung's broader semiconductor financial recovery. Boosted by surging demand for AI hardware components, Samsung's foundry division reduced its annual operating losses by 41 percent, cutting deficits from 6.74 trillion won (approximately $5.1 billion) in 2025 down to 3.92 trillion won (approximately $2.95 billion) in 2026, according to [Wccftech](https://wccftech.com/nvidia-custom-hbm-samsung-tsmc-3nm-base-die/). Complying with Nvidia's multi-vendor manufacturing blueprint ensures Samsung retains a critical role in next-generation accelerator hardware alongside SK Hynix and Micron.",
+ "faq": [
+  {
+   "q": "What is Nvidia NVHBM?",
+   "a": "NVHBM is Nvidia's custom high-bandwidth memory solution that integrates a proprietary Nvidia memory controller directly into the base die. Nvidia claims the architecture delivers up to 30 percent higher bandwidth and 15 percent lower power consumption compared to standard HBM4E."
+  },
+  {
+   "q": "Why is Nvidia requiring memory suppliers to use TSMC's 3nm process?",
+   "a": "Nvidia mandated TSMC's 3nm node so that Samsung, SK Hynix, and Micron use an identical manufacturing standard for base dies. This standardization allows Nvidia to avoid testing and qualifying different base die variants from each individual vendor."
+  },
+  {
+   "q": "Will Samsung stop manufacturing base dies in its own foundries?",
+   "a": "No. Samsung will continue manufacturing base and core dies in-house for standard HBM and for other custom chip customers. It is also assessing whether its own foundries could produce NVHBM base dies if TSMC's capacity cannot meet demand."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "Engineers wearing protective cleanroom suits work near high-precision automated photolithography machinery inside an advanced semiconductor fabrication facility.",
+  "alt": "Illustration of cleanroom technicians operating semiconductor fabrication equipment.",
+  "caption": "Illustration: Semiconductor technicians inside an advanced wafer fabrication facility.",
+  "src": "img/nvidia-tsmc-3nm-custom-nvhbm-base-dies/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 63804,
+  "small": "img/nvidia-tsmc-3nm-custom-nvhbm-base-dies/hero-640.webp",
+  "og": "img/nvidia-tsmc-3nm-custom-nvhbm-base-dies/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/nvidia-tsmc-3nm-custom-nvhbm-base-dies/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A detailed technical visualization of a three-dimensional stacked memory chip showing layered DRAM dies mounted directly on top of an underlying silicon base controller die.",
+   "alt": "Illustration of a stacked silicon memory module highlighting the base controller die.",
+   "caption": "Illustration: Structural rendering of stacked DRAM dies bonded to a unified base controller die.",
+   "slot": "FIG1",
+   "src": "img/nvidia-tsmc-3nm-custom-nvhbm-base-dies/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 73386,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "Corporate technology executives in dark suits seated at a modern glass conference table reviewing technical semiconductor supply chain diagrams on digital displays.",
+   "alt": "Illustration of technology executives collaborating over semiconductor supply plans.",
+   "caption": "Illustration: Industry leaders evaluating multi-foundry manufacturing agreements and capacity plans.",
+   "slot": "FIG2",
+   "src": "img/nvidia-tsmc-3nm-custom-nvhbm-base-dies/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 52932,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://english.cw.com.tw/article/article.action?id=5066",
+   "title": "Samsung to Use TSMC's 3nm Process for Nvidia's Next-Generation HBM",
+   "site": "english.cw.com.tw",
+   "published": 1792368000000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://wccftech.com/nvidia-custom-hbm-samsung-tsmc-3nm-base-die/",
+   "title": "NVIDIA’s Development Of Custom HBM Drops Samsung’s And TSMC’s Foundry Rivalry, As Both Manufacturers Join Forces To Develop “Base Die” On The 3nm Node",
+   "site": "Wccftech",
+   "published": 1792319015000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792375614967,
+ "updatedAt": 1792375614967,
+ "foundVia": "Techmeme and Google News",
+ "check": {
+  "claims": 14,
+  "score": 10
+ },
+ "story": {
+  "id": "Pa0de5324",
+  "score": 81,
+  "items": [
+   "https://www.techmeme.com/261018/p9#a261018p9",
+   "https://news.google.com/rss/articles/CBMibEFVX3lxTFBRc0xWRC1DMTdFZ1FTcUJDTWZrVW1ULTZXbUJXdTdhUldaYUEydy1tX0N3VExIYlFMWjhBcWdtejFYcXVmRnRXUlJRVExCSWhoV211bkhjTm5WVmV2Yl85eFloWHpZR3lPc3BPRA?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
