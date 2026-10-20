@@ -1,0 +1,156 @@
+{
+ "slug": "meta-prometheus-gigawatt-supercluster-ohio",
+ "title": "Meta Unveils Prometheus Gigawatt Supercluster Scaling to 1M GPUs",
+ "seoTitle": "Meta Prometheus Supercluster: Specs, Scale, and Reliability",
+ "description": "Meta has detailed Prometheus, its gigawatt-scale AI supercluster in New Albany, Ohio, scaling toward 1 million GPUs after training the Muse model family.",
+ "dek": "Meta's New Albany campus now runs hundreds of thousands of GPUs across multiple buildings, using custom Ethernet fabrics and liquid cooling to train frontier AI models.",
+ "category": "Chips & Hardware",
+ "tags": [
+  "Meta",
+  "Prometheus",
+  "Supercomputing",
+  "NVIDIA",
+  "Data Centers",
+  "AI Hardware"
+ ],
+ "keyTakeaways": [
+  "Prometheus has completed its first phase in New Albany, Ohio, and is expanding toward a target of approximately one million GPUs and 1 gigawatt of capacity.",
+  "Meta used the cluster to train its Muse foundational models, recording over 85 percent goodput on pre-training and over 90 percent on reinforcement learning.",
+  "The infrastructure combines NVIDIA GB200 and GB300 NVL72 racks on an open Ethernet architecture, with Vera Rubin systems planned next."
+ ],
+ "body": "Meta has published technical details of Prometheus, its gigawatt-scale artificial intelligence supercluster located in New Albany, Ohio. According to an announcement published on the [Engineering at Meta blog](https://engineering.fb.com/2026/10/19/data-center-engineering/inside-prometheus-meta-gigawatt-scale-supercluster/), the facility has completed its initial phase and currently operates hundreds of thousands of GPUs across multiple buildings. The company is expanding the site toward an intended target of roughly one million GPUs running in lockstep.\n\nThe deployment represents a major reconfiguration of Meta's New Albany campus, which two years ago served primarily as a standard data center handling web traffic. Meta reworked the site into a distributed computing complex designed specifically for frontier AI workloads. The completed first phase was used to train Meta's Muse foundational models, including the Muse Wonder models that the company states achieve state-of-the-art performance on agentic tasks.\n\n[[FIG1]]\n\n## Multi-Generation GPU Architecture Across NVL72 Racks\n\nPrometheus currently deploys two generations of NVIDIA hardware built around the NVL72 rack design, where 72 GPUs act as a single accelerator domain over NVLink. Meta also revealed plans to introduce a third platform based on NVIDIA's Vera Rubin architecture, as detailed by [Unite.AI](https://www.unite.ai/meta-details-prometheus-supercluster-scaling-toward-1-million-gpus/).\n\nThe first production platform, named Catalina, deploys the NVIDIA GB200 NVL72 using the Ariel two-rack configuration. In this setup, 36 Blackwell GPUs per rack connect over NVLink into a 72-GPU fabric. Meta pairs each GPU with an NVIDIA Grace CPU and two ConnectX-7 400G network interface cards, a configuration Meta claims allowed it to deploy 800G of I/O per GPU earlier than the rest of the industry. Catalina delivers 720 peak PFLOPS of FP8 training compute (1,440 PFLOPS at FP4), 13.4 terabytes of HBM3e memory, and 130 terabytes per second of peak NVLink bandwidth, consuming approximately 120 kilowatts across the two racks.\n\nPrometheus's second deployed platform, Clemente, shifts to the NVIDIA GB300 NVL72. Clemente consolidates the entire 72-GPU domain into a single rack by using ConnectX-8 SuperNICs that provide native 800G throughput per GPU and moving to a 2:1 GPU-to-CPU ratio. Equipped with 72 Blackwell Ultra GPUs, Clemente delivers 20.7 terabytes of HBM3e (288 gigabytes per GPU), over 1 exaFLOP of peak FP4 compute, and operates at roughly 135 kilowatts per rack. Meta reports that Clemente delivers a 5 to 10 percent performance improvement over the GB200 setup.\n\nLooking ahead, Meta plans to add a third platform designated San Miguel. According to Meta's engineering disclosures, San Miguel will feature 72 NVIDIA Vera Rubin GPUs equipped with 288 gigabytes of HBM4 memory, delivering 2.52 peak EFLOPS of FP4 compute, 216 terabytes per second of peak NVLink bandwidth, and fully liquid-cooled trays consuming over 170 kilowatts per rack.\n\n## Custom Ethernet Fabrics and Regional Aggregation\n\nTo coordinate computation across hundreds of thousands of accelerators, Meta constructed a dedicated Ethernet-based Back-End network operating alongside standard data center traffic. Technical reporting from [Crypto Briefing](https://cryptobriefing.com/meta-prometheus-supercluster-ohio-ai-training/) notes that Meta highlighted these architectural designs at the OCP Global Summit.\n\nInside individual buildings, network fabrics connect up to 20,736 GPUs in a low-latency topology. Meta initially deployed a Disaggregated Scheduled Fabric using sub-packet-level multipath routing and credit-based flow control to prevent congestion. As network cards gained endpoint packet reordering, Meta updated the network to a Non-Scheduled Fabric powered by shallow-buffer 51.2T switches, including Minipack3 with dynamic load balancing and Minipack3N systems using NVIDIA Spectrum-4 silicon and Adaptive Routing. Both designs run on Meta's FBOSS software stack.\n\n[[FIG2]]\n\nTo link disparate structures across the campus and beyond, Meta developed the Backend Aggregation (BAG) network. This multi-layer hub-and-spoke setup connects building-level fabrics over distances ranging from 2 kilometers to more than 100 kilometers. Built using Arista 7800-series chassis with deep-buffered Broadcom Jericho3 silicon, the aggregation network delivers multiple petabits per second of bandwidth per region pair. The physical plant encompasses millions of miles of optical fiber and millions of optical transceivers, ranging from short-reach 2x400G FR4 LITE optics inside server halls to 800G-ZR coherent optics for spans exceeding 10 kilometers.\n\n## Sustaining Goodput and Engineering Fault Tolerance\n\nMaintaining continuous operation during distributed training runs presents severe challenges. Moving from earlier 8-GPU systems to 72-GPU NVLink domains expanded the hardware fault blast radius ninefold, meaning a single component failure could jeopardize an entire rack.\n\nTo preserve training throughput, Meta mapped model parallelism onto power-of-two group sizes, assigning 64 GPUs per rack to active workloads while reserving eight GPUs as hot spares. If a GPU fails, an in-rack spare takes its place immediately, allowing the workload to restart from its last checkpoint without waiting for hardware replacements. When provisioning a 32,768-GPU training run, Meta allocates 523 NVL72 racks—totalling 37,656 GPUs—which includes roughly 2 percent in whole-rack reserves.\n\nMeta couples this hardware layout with two automated recovery systems. Parallelism-Aware Fault Tolerance allows the cluster to isolate a faulty data-parallel replica and take it offline while remaining replicas repeat the execution step and continue training. When failures exceed the boundary of a single replica, distributed asynchronous checkpointing restores state from multi-tier storage using delta checkpointing and in-memory staging.\n\nAccording to company-provided figures reported by [NeoTeo](https://www.neoteo.com/en/meta-says-prometheus-first-phase-is-complete/), Meta achieved over 85 percent goodput during pre-training runs and over 90 percent during reinforcement learning for Muse Wonder. The company reported a wall-clock mean time between interruptions of approximately 47,000 GPU hours during training, which subsequently increased past 54,000 GPU hours following fleet-wide firmware fixes and telemetry-driven hardware triage conducted jointly with embedded NVIDIA engineers. Meta stated that daily interruptions fell 99 percent from mid-2025 peaks, aiming for an ultimate target of 100,000 GPU hours between interruptions.\n\n[[FIG3]]\n\n## Power Grid Management and Future Infrastructure\n\nOperating at gigawatt scale introduces heavy electrical and thermal strains. Synchronized training runs create cluster-wide power transients of 30 to 40 percent, with sudden job starts or stops shifting tens of megawatts within seconds. To keep the facility within grid constraints, Meta deploys its Dynamo Dimmer framework, which throttles GPU power caps dynamically as electrical limits approach, supported by in-rack battery backup modules, capacitor trays, and facility battery energy storage.\n\nCooling relies on direct-to-chip closed-loop liquid systems. Meta utilizes modular Air-Assisted Liquid Cooling in free-air buildings and rapid-deployment facilities, alongside Facility Liquid Cooling in dedicated AI data centers. The company stated it covers the full cost of energy at the New Albany facility and matches its consumption with clean and renewable generation.\n\nAccording to [Unite.AI](https://www.unite.ai/meta-details-prometheus-supercluster-scaling-toward-1-million-gpus/), Prometheus serves as the operational baseline for Meta's upcoming infrastructure projects. The architectural strategies tested in Ohio are directly informing Hyperion, Meta's planned follow-on supercluster in Richland Parish, Louisiana, which aims for up to 5 gigawatts of total capacity in partnership with utility provider Entergy.",
+ "faq": [
+  {
+   "q": "What is the primary purpose of Meta's Prometheus supercluster?",
+   "a": "Prometheus is built to train Meta's frontier artificial intelligence models. Its completed first phase was used to train the Muse foundational model family, including Muse Wonder."
+  },
+  {
+   "q": "How large will the Prometheus supercluster be at full capacity?",
+   "a": "Meta plans to scale Prometheus to roughly one million GPUs operating across multiple buildings with an electrical capacity reaching gigawatt scale."
+  },
+  {
+   "q": "What GPU platforms are deployed inside Prometheus?",
+   "a": "Prometheus currently runs two NVIDIA platforms: Catalina, which uses GB200 NVL72, and Clemente, which uses GB300 NVL72. A third platform, San Miguel, based on NVIDIA Vera Rubin NVL72, is planned for future expansion."
+  },
+  {
+   "q": "What training reliability metrics did Meta achieve with Prometheus?",
+   "a": "Meta reported over 85 percent goodput on Muse Wonder pre-training and over 90 percent on reinforcement learning, with a mean time between interruptions exceeding 54,000 GPU hours."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "Wide angle exterior view of a massive modern data center campus in central Ohio under a dramatic twilight sky, showing long industrial server halls connected by enclosed utility bridges, with subtle ambient glow from cooling equipment and perimeter lights",
+  "alt": "Exterior view of a large modern data center facility in Ohio at dusk",
+  "caption": "Illustration: Meta's New Albany, Ohio campus houses the multi-building Prometheus supercluster.",
+  "src": "img/meta-prometheus-gigawatt-supercluster-ohio/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 93248,
+  "small": "img/meta-prometheus-gigawatt-supercluster-ohio/hero-640.webp",
+  "og": "img/meta-prometheus-gigawatt-supercluster-ohio/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/meta-prometheus-gigawatt-supercluster-ohio/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "Interior corridor of a modern AI supercomputer facility, showing rows of tall black high-density computing server racks with glowing blue indicators, overhead busways, and bundled liquid cooling tubes running into server chassis",
+   "alt": "Rows of high-density server racks inside an advanced supercomputer center",
+   "caption": "Illustration: High-power NVL72 computing racks line the interior server halls of the cluster.",
+   "slot": "FIG1",
+   "src": "img/meta-prometheus-gigawatt-supercluster-ohio/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 50806,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "Two network engineers in protective vests inspecting dense fiber optic cabling trunks and optical patch panels inside a high-bandwidth data center networking room",
+   "alt": "Network engineers examining fiber optic patch panels inside a facility",
+   "caption": "Illustration: Dedicated Ethernet fabrics connect thousands of GPUs across building-level networks.",
+   "slot": "FIG2",
+   "src": "img/meta-prometheus-gigawatt-supercluster-ohio/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 67484,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "Industrial cooling infrastructure installation adjacent to a tech facility, featuring heavy-duty closed-loop liquid cooling distribution units, stainless steel pipes, and large industrial heat exchangers",
+   "alt": "Industrial liquid cooling distribution units outside a high-performance facility",
+   "caption": "Illustration: Closed-loop liquid cooling systems manage the thermal output of gigawatt-scale AI workloads.",
+   "slot": "FIG3",
+   "src": "img/meta-prometheus-gigawatt-supercluster-ohio/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 49060,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://engineering.fb.com/2026/10/19/data-center-engineering/inside-prometheus-meta-gigawatt-scale-supercluster/",
+   "title": "Inside Prometheus: Meta’s Journey to a Gigawatt-Scale Supercluster",
+   "site": "Engineering at Meta",
+   "published": 1792414810000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://www.unite.ai/meta-details-prometheus-supercluster-scaling-toward-1-million-gpus/",
+   "title": "Meta Details Prometheus Supercluster Scaling Toward 1 Million GPUs",
+   "site": "Unite.AI",
+   "published": 1792435746000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://cryptobriefing.com/meta-prometheus-supercluster-ohio-ai-training/",
+   "title": "Meta brings Prometheus supercluster online in Ohio to train its Muse AI models",
+   "site": "Crypto Briefing",
+   "published": 1792433900000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.neoteo.com/en/meta-says-prometheus-first-phase-is-complete",
+   "title": "Meta says Prometheus’ first phase is complete",
+   "site": "NeoTeo",
+   "published": 1792444514000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://blockchain.news/ainews/meta-details-prometheus-supercluster-powering-muse-wonder",
+   "title": "Meta details Prometheus supercluster powering Muse Wonder",
+   "site": "blockchain.news",
+   "published": 1792404840000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792462302893,
+ "updatedAt": 1792462302893,
+ "foundVia": "Techmeme",
+ "check": {
+  "claims": 40,
+  "score": 10
+ },
+ "story": {
+  "id": "P2682b7ba",
+  "score": 85,
+  "items": [
+   "https://www.techmeme.com/261019/p40#a261019p40"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}

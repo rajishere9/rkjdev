@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meta Prometheus Supercluster: Specs, Scale, and Reliability</title>
+<meta name="description" content="Meta has detailed Prometheus, its gigawatt-scale AI supercluster in New Albany, Ohio, scaling toward 1 million GPUs after training the Muse model family.">
+<link rel="canonical" href="https://www.rkjdev.com/blog/meta-prometheus-gigawatt-supercluster-ohio/">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#110b14">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta property="og:site_name" content="rkj dev Blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Meta Prometheus Supercluster: Specs, Scale, and Reliability">
+<meta property="og:description" content="Meta has detailed Prometheus, its gigawatt-scale AI supercluster in New Albany, Ohio, scaling toward 1 million GPUs after training the Muse model family.">
+<meta property="og:url" content="https://www.rkjdev.com/blog/meta-prometheus-gigawatt-supercluster-ohio/">
+<meta property="og:image" content="https://www.rkjdev.com/blog/img/meta-prometheus-gigawatt-supercluster-ohio/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://www.rkjdev.com/blog/img/meta-prometheus-gigawatt-supercluster-ohio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Meta Prometheus Supercluster: Specs, Scale, and Reliability">
+<meta name="twitter:description" content="Meta has detailed Prometheus, its gigawatt-scale AI supercluster in New Albany, Ohio, scaling toward 1 million GPUs after training the Muse model family.">
+<link rel="alternate" type="application/rss+xml" title="rkj dev Blog" href="/blog/feed.xml">
+<link rel="alternate" type="application/feed+json" title="rkj dev Blog" href="/blog/feed.json">
+<link rel="icon" href="/favicon.svg?v=bdff7dc5" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,40;1,9..144,400..600,40&family=Schibsted+Grotesk:ital,wght@0,400..600;1,400..600&display=swap">
+<link rel="stylesheet" href="/site.css?v=e85724ed">
+<link rel="stylesheet" href="/blog/blog.css?v=7ad332ef">
+<meta property="article:published_time" content="2026-10-20T02:11:42.893Z">
+<meta property="article:modified_time" content="2026-10-20T02:11:42.893Z">
+<meta property="article:section" content="Chips &amp; Hardware">
+<meta property="article:tag" content="Meta">
+<meta property="article:tag" content="Prometheus">
+<meta property="article:tag" content="Supercomputing">
+<meta property="article:tag" content="NVIDIA">
+<meta property="article:tag" content="Data Centers">
+<meta property="article:tag" content="AI Hardware">
+<link rel="preload" as="image" href="/blog/img/meta-prometheus-gigawatt-supercluster-ohio/hero.webp" imagesrcset="/blog/img/meta-prometheus-gigawatt-supercluster-ohio/hero-640.webp 640w, /blog/img/meta-prometheus-gigawatt-supercluster-ohio/hero.webp 1200w" imagesizes="(max-width: 760px) 100vw, 1200px">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"Meta Unveils Prometheus Gigawatt Supercluster Scaling to 1M GPUs","description":"Meta has detailed Prometheus, its gigawatt-scale AI supercluster in New Albany, Ohio, scaling toward 1 million GPUs after training the Muse model family.","url":"https://www.rkjdev.com/blog/meta-prometheus-gigawatt-supercluster-ohio/","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.rkjdev.com/blog/meta-prometheus-gigawatt-supercluster-ohio/"},"inLanguage":"en","isAccessibleForFree":true,"image":["https://www.rkjdev.com/blog/img/meta-prometheus-gigawatt-supercluster-ohio/og.jpg","https://www.rkjdev.com/blog/img/meta-prometheus-gigawatt-supercluster-ohio/hero.webp"],"datePublished":"2026-10-20T02:11:42.893Z","dateModified":"2026-10-20T02:11:42.893Z","articleSection":"Chips & Hardware","keywords":"Meta, Prometheus, Supercomputing, NVIDIA, Data Centers, AI Hardware","wordCount":1080,"thumbnailUrl":"https://www.rkjdev.com/blog/img/meta-prometheus-gigawatt-supercluster-ohio/hero-640.webp","author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","@id":"https://www.rkjdev.com/#labs","name":"RKJDEV Labs","url":"https://www.rkjdev.com/","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/apple-touch-icon.png","width":180,"height":180}},"isPartOf":{"@id":"https://www.rkjdev.com/#website"},"isBasedOn":["https://engineering.fb.com/2026/10/19/data-center-engineering/inside-prometheus-meta-gigawatt-scale-supercluster/","https://www.unite.ai/meta-details-prometheus-supercluster-scaling-toward-1-million-gpus/","https://cryptobriefing.com/meta-prometheus-supercluster-ohio-ai-training/","https://www.neoteo.com/en/meta-says-prometheus-first-phase-is-complete","https://blockchain.news/ainews/meta-details-prometheus-supercluster-powering-muse-wonder"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"Chips & Hardware","item":"https://www.rkjdev.com/blog/category/chips-and-hardware/"},{"@type":"ListItem","position":3,"name":"Meta Unveils Prometheus Gigawatt Supercluster Scaling to 1M GPUs","item":"https://www.rkjdev.com/blog/meta-prometheus-gigawatt-supercluster-ohio/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the primary purpose of Meta's Prometheus supercluster?","acceptedAnswer":{"@type":"Answer","text":"Prometheus is built to train Meta's frontier artificial intelligence models. Its completed first phase was used to train the Muse foundational model family, including Muse Wonder."}},{"@type":"Question","name":"How large will the Prometheus supercluster be at full capacity?","acceptedAnswer":{"@type":"Answer","text":"Meta plans to scale Prometheus to roughly one million GPUs operating across multiple buildings with an electrical capacity reaching gigawatt scale."}},{"@type":"Question","name":"What GPU platforms are deployed inside Prometheus?","acceptedAnswer":{"@type":"Answer","text":"Prometheus currently runs two NVIDIA platforms: Catalina, which uses GB200 NVL72, and Clemente, which uses GB300 NVL72. A third platform, San Miguel, based on NVIDIA Vera Rubin NVL72, is planned for future expansion."}},{"@type":"Question","name":"What training reliability metrics did Meta achieve with Prometheus?","acceptedAnswer":{"@type":"Answer","text":"Meta reported over 85 percent goodput on Muse Wonder pre-training and over 90 percent on reinforcement learning, with a mean time between interruptions exceeding 54,000 GPU hours."}}]}]</script>
+</head>
+<body class="post">
+<div class="progress" aria-hidden="true"><span></span></div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="mark" href="/">rkj dev</a>
+    <nav aria-label="Site">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <article class="article">
+    <header class="post-head wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/category/chips-and-hardware/">Chips &amp; Hardware</a></nav>
+      <h1>Meta Unveils Prometheus Gigawatt Supercluster Scaling to 1M GPUs</h1>
+      <p class="standfirst">Meta's New Albany campus now runs hundreds of thousands of GPUs across multiple buildings, using custom Ethernet fabrics and liquid cooling to train frontier AI models.</p>
+      <div class="byline">
+        <span class="by">rkj dev newsroom</span>
+        <span><time datetime="2026-10-20T02:11:42.893Z" class="abs" data-rel>Oct 20, 2026</time></span>
+        <span>5 min read</span>
+        <a href="#sources">5 sources, fact-checked</a>
+      </div>
+    </header>
+    <div class="hero-wrap wrap"><figure class="hero-fig is-ai">
+  <div class="img"><img src="/blog/img/meta-prometheus-gigawatt-supercluster-ohio/hero.webp" srcset="/blog/img/meta-prometheus-gigawatt-supercluster-ohio/hero-640.webp 640w, /blog/img/meta-prometheus-gigawatt-supercluster-ohio/hero.webp 1200w" sizes="(max-width: 760px) 100vw, 1200px" width="1200" height="675" alt="Exterior view of a large modern data center facility in Ohio at dusk" fetchpriority="high" decoding="async"></div>
+  <figcaption><span>Illustration: Meta's New Albany, Ohio campus houses the multi-building Prometheus supercluster.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure></div>
+    <div class="layout wrap">
+      <aside class="rail" aria-label="On this page">
+        <nav class="toc"><p>Contents</p><ol><li><a href="#multi-generation-gpu-architecture-across-nvl72-racks">Multi-Generation GPU Architecture Across NVL72 Racks</a></li><li><a href="#custom-ethernet-fabrics-and-regional-aggregation">Custom Ethernet Fabrics and Regional Aggregation</a></li><li><a href="#sustaining-goodput-and-engineering-fault-tolerance">Sustaining Goodput and Engineering Fault Tolerance</a></li><li><a href="#power-grid-management-and-future-infrastructure">Power Grid Management and Future Infrastructure</a></li></ol></nav>
+        <div class="share">
+          <p>Share</p>
+          <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fmeta-prometheus-gigawatt-supercluster-ohio%2F&text=Meta%20Unveils%20Prometheus%20Gigawatt%20Supercluster%20Scaling%20to%201M%20GPUs" target="_blank" rel="noopener">X</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fmeta-prometheus-gigawatt-supercluster-ohio%2F" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://wa.me/?text=Meta%20Unveils%20Prometheus%20Gigawatt%20Supercluster%20Scaling%20to%201M%20GPUs%20https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fmeta-prometheus-gigawatt-supercluster-ohio%2F" target="_blank" rel="noopener">WhatsApp</a>
+          <button type="button" data-copy="https://www.rkjdev.com/blog/meta-prometheus-gigawatt-supercluster-ohio/">Copy link</button>
+        </div>
+      </aside>
+      <div class="prose">
+        <section class="inshort" aria-labelledby="tk">
+          <h2 id="tk">In short</h2>
+          <ul><li>Prometheus has completed its first phase in New Albany, Ohio, and is expanding toward a target of approximately one million GPUs and 1 gigawatt of capacity.</li><li>Meta used the cluster to train its Muse foundational models, recording over 85 percent goodput on pre-training and over 90 percent on reinforcement learning.</li><li>The infrastructure combines NVIDIA GB200 and GB300 NVL72 racks on an open Ethernet architecture, with Vera Rubin systems planned next.</li></ul>
+        </section>
+        <p>Meta has published technical details of Prometheus, its gigawatt-scale artificial intelligence supercluster located in New Albany, Ohio. According to an announcement published on the <a href="https://engineering.fb.com/2026/10/19/data-center-engineering/inside-prometheus-meta-gigawatt-scale-supercluster/" target="_blank" rel="noopener">Engineering at Meta blog</a>, the facility has completed its initial phase and currently operates hundreds of thousands of GPUs across multiple buildings. The company is expanding the site toward an intended target of roughly one million GPUs running in lockstep.</p>
+<p>The deployment represents a major reconfiguration of Meta&#39;s New Albany campus, which two years ago served primarily as a standard data center handling web traffic. Meta reworked the site into a distributed computing complex designed specifically for frontier AI workloads. The completed first phase was used to train Meta&#39;s Muse foundational models, including the Muse Wonder models that the company states achieve state-of-the-art performance on agentic tasks.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/meta-prometheus-gigawatt-supercluster-ohio/figure-1.webp" width="1200" height="670" alt="Rows of high-density server racks inside an advanced supercomputer center" loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: High-power NVL72 computing racks line the interior server halls of the cluster.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="multi-generation-gpu-architecture-across-nvl72-racks">Multi-Generation GPU Architecture Across NVL72 Racks</h2>
+<p>Prometheus currently deploys two generations of NVIDIA hardware built around the NVL72 rack design, where 72 GPUs act as a single accelerator domain over NVLink. Meta also revealed plans to introduce a third platform based on NVIDIA&#39;s Vera Rubin architecture, as detailed by <a href="https://www.unite.ai/meta-details-prometheus-supercluster-scaling-toward-1-million-gpus/" target="_blank" rel="noopener">Unite.AI</a>.</p>
+<p>The first production platform, named Catalina, deploys the NVIDIA GB200 NVL72 using the Ariel two-rack configuration. In this setup, 36 Blackwell GPUs per rack connect over NVLink into a 72-GPU fabric. Meta pairs each GPU with an NVIDIA Grace CPU and two ConnectX-7 400G network interface cards, a configuration Meta claims allowed it to deploy 800G of I/O per GPU earlier than the rest of the industry. Catalina delivers 720 peak PFLOPS of FP8 training compute (1,440 PFLOPS at FP4), 13.4 terabytes of HBM3e memory, and 130 terabytes per second of peak NVLink bandwidth, consuming approximately 120 kilowatts across the two racks.</p>
+<p>Prometheus&#39;s second deployed platform, Clemente, shifts to the NVIDIA GB300 NVL72. Clemente consolidates the entire 72-GPU domain into a single rack by using ConnectX-8 SuperNICs that provide native 800G throughput per GPU and moving to a 2:1 GPU-to-CPU ratio. Equipped with 72 Blackwell Ultra GPUs, Clemente delivers 20.7 terabytes of HBM3e (288 gigabytes per GPU), over 1 exaFLOP of peak FP4 compute, and operates at roughly 135 kilowatts per rack. Meta reports that Clemente delivers a 5 to 10 percent performance improvement over the GB200 setup.</p>
+<p>Looking ahead, Meta plans to add a third platform designated San Miguel. According to Meta&#39;s engineering disclosures, San Miguel will feature 72 NVIDIA Vera Rubin GPUs equipped with 288 gigabytes of HBM4 memory, delivering 2.52 peak EFLOPS of FP4 compute, 216 terabytes per second of peak NVLink bandwidth, and fully liquid-cooled trays consuming over 170 kilowatts per rack.</p>
+<h2 id="custom-ethernet-fabrics-and-regional-aggregation">Custom Ethernet Fabrics and Regional Aggregation</h2>
+<p>To coordinate computation across hundreds of thousands of accelerators, Meta constructed a dedicated Ethernet-based Back-End network operating alongside standard data center traffic. Technical reporting from <a href="https://cryptobriefing.com/meta-prometheus-supercluster-ohio-ai-training/" target="_blank" rel="noopener">Crypto Briefing</a> notes that Meta highlighted these architectural designs at the OCP Global Summit.</p>
+<p>Inside individual buildings, network fabrics connect up to 20,736 GPUs in a low-latency topology. Meta initially deployed a Disaggregated Scheduled Fabric using sub-packet-level multipath routing and credit-based flow control to prevent congestion. As network cards gained endpoint packet reordering, Meta updated the network to a Non-Scheduled Fabric powered by shallow-buffer 51.2T switches, including Minipack3 with dynamic load balancing and Minipack3N systems using NVIDIA Spectrum-4 silicon and Adaptive Routing. Both designs run on Meta&#39;s FBOSS software stack.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/meta-prometheus-gigawatt-supercluster-ohio/figure-2.webp" width="1200" height="670" alt="Network engineers examining fiber optic patch panels inside a facility" loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: Dedicated Ethernet fabrics connect thousands of GPUs across building-level networks.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<p>To link disparate structures across the campus and beyond, Meta developed the Backend Aggregation (BAG) network. This multi-layer hub-and-spoke setup connects building-level fabrics over distances ranging from 2 kilometers to more than 100 kilometers. Built using Arista 7800-series chassis with deep-buffered Broadcom Jericho3 silicon, the aggregation network delivers multiple petabits per second of bandwidth per region pair. The physical plant encompasses millions of miles of optical fiber and millions of optical transceivers, ranging from short-reach 2x400G FR4 LITE optics inside server halls to 800G-ZR coherent optics for spans exceeding 10 kilometers.</p>
+<h2 id="sustaining-goodput-and-engineering-fault-tolerance">Sustaining Goodput and Engineering Fault Tolerance</h2>
+<p>Maintaining continuous operation during distributed training runs presents severe challenges. Moving from earlier 8-GPU systems to 72-GPU NVLink domains expanded the hardware fault blast radius ninefold, meaning a single component failure could jeopardize an entire rack.</p>
+<p>To preserve training throughput, Meta mapped model parallelism onto power-of-two group sizes, assigning 64 GPUs per rack to active workloads while reserving eight GPUs as hot spares. If a GPU fails, an in-rack spare takes its place immediately, allowing the workload to restart from its last checkpoint without waiting for hardware replacements. When provisioning a 32,768-GPU training run, Meta allocates 523 NVL72 racks—totalling 37,656 GPUs—which includes roughly 2 percent in whole-rack reserves.</p>
+<p>Meta couples this hardware layout with two automated recovery systems. Parallelism-Aware Fault Tolerance allows the cluster to isolate a faulty data-parallel replica and take it offline while remaining replicas repeat the execution step and continue training. When failures exceed the boundary of a single replica, distributed asynchronous checkpointing restores state from multi-tier storage using delta checkpointing and in-memory staging.</p>
+<p>According to company-provided figures reported by <a href="https://www.neoteo.com/en/meta-says-prometheus-first-phase-is-complete/" target="_blank" rel="noopener">NeoTeo</a>, Meta achieved over 85 percent goodput during pre-training runs and over 90 percent during reinforcement learning for Muse Wonder. The company reported a wall-clock mean time between interruptions of approximately 47,000 GPU hours during training, which subsequently increased past 54,000 GPU hours following fleet-wide firmware fixes and telemetry-driven hardware triage conducted jointly with embedded NVIDIA engineers. Meta stated that daily interruptions fell 99 percent from mid-2025 peaks, aiming for an ultimate target of 100,000 GPU hours between interruptions.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/meta-prometheus-gigawatt-supercluster-ohio/figure-3.webp" width="1200" height="670" alt="Industrial liquid cooling distribution units outside a high-performance facility" loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: Closed-loop liquid cooling systems manage the thermal output of gigawatt-scale AI workloads.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="power-grid-management-and-future-infrastructure">Power Grid Management and Future Infrastructure</h2>
+<p>Operating at gigawatt scale introduces heavy electrical and thermal strains. Synchronized training runs create cluster-wide power transients of 30 to 40 percent, with sudden job starts or stops shifting tens of megawatts within seconds. To keep the facility within grid constraints, Meta deploys its Dynamo Dimmer framework, which throttles GPU power caps dynamically as electrical limits approach, supported by in-rack battery backup modules, capacitor trays, and facility battery energy storage.</p>
+<p>Cooling relies on direct-to-chip closed-loop liquid systems. Meta utilizes modular Air-Assisted Liquid Cooling in free-air buildings and rapid-deployment facilities, alongside Facility Liquid Cooling in dedicated AI data centers. The company stated it covers the full cost of energy at the New Albany facility and matches its consumption with clean and renewable generation.</p>
+<p>According to <a href="https://www.unite.ai/meta-details-prometheus-supercluster-scaling-toward-1-million-gpus/" target="_blank" rel="noopener">Unite.AI</a>, Prometheus serves as the operational baseline for Meta&#39;s upcoming infrastructure projects. The architectural strategies tested in Ohio are directly informing Hyperion, Meta&#39;s planned follow-on supercluster in Richland Parish, Louisiana, which aims for up to 5 gigawatts of total capacity in partnership with utility provider Entergy.</p>
+
+        <section class="faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Questions people ask</h2>
+          <details open><summary>What is the primary purpose of Meta's Prometheus supercluster?</summary><p>Prometheus is built to train Meta's frontier artificial intelligence models. Its completed first phase was used to train the Muse foundational model family, including Muse Wonder.</p></details>
+<details><summary>How large will the Prometheus supercluster be at full capacity?</summary><p>Meta plans to scale Prometheus to roughly one million GPUs operating across multiple buildings with an electrical capacity reaching gigawatt scale.</p></details>
+<details><summary>What GPU platforms are deployed inside Prometheus?</summary><p>Prometheus currently runs two NVIDIA platforms: Catalina, which uses GB200 NVL72, and Clemente, which uses GB300 NVL72. A third platform, San Miguel, based on NVIDIA Vera Rubin NVL72, is planned for future expansion.</p></details>
+<details><summary>What training reliability metrics did Meta achieve with Prometheus?</summary><p>Meta reported over 85 percent goodput on Muse Wonder pre-training and over 90 percent on reinforcement learning, with a mean time between interruptions exceeding 54,000 GPU hours.</p></details>
+        </section>
+        <section class="sources" id="sources" aria-labelledby="src-title">
+          <h2 id="src-title">Sources</h2>
+          <ol><li><a href="https://engineering.fb.com/2026/10/19/data-center-engineering/inside-prometheus-meta-gigawatt-scale-supercluster/" target="_blank" rel="noopener">Inside Prometheus: Meta’s Journey to a Gigawatt-Scale Supercluster</a><span>Engineering at Meta, Oct 19, 2026</span></li><li><a href="https://www.unite.ai/meta-details-prometheus-supercluster-scaling-toward-1-million-gpus/" target="_blank" rel="noopener">Meta Details Prometheus Supercluster Scaling Toward 1 Million GPUs</a><span>Unite.AI, Oct 19, 2026</span></li><li><a href="https://cryptobriefing.com/meta-prometheus-supercluster-ohio-ai-training/" target="_blank" rel="noopener">Meta brings Prometheus supercluster online in Ohio to train its Muse AI models</a><span>Crypto Briefing, Oct 19, 2026</span></li><li><a href="https://www.neoteo.com/en/meta-says-prometheus-first-phase-is-complete" target="_blank" rel="noopener">Meta says Prometheus’ first phase is complete</a><span>NeoTeo, Oct 19, 2026</span></li><li><a href="https://blockchain.news/ainews/meta-details-prometheus-supercluster-powering-muse-wonder" target="_blank" rel="noopener">Meta details Prometheus supercluster powering Muse Wonder</a><span>blockchain.news, Oct 19, 2026</span></li></ol>
+          <p class="method">How this story was made: the newsroom picked it up from Techmeme, gathered the full text of the sources above, and drafted it with AI assistance. Every factual claim was then checked against those sources before publishing (40 claims checked). Illustrations marked as AI-generated are not photographs. Spotted an error? <a href="mailto:rajankrishnan909@gmail.com?subject=Correction%3A%20Meta%20Unveils%20Prometheus%20Gigawatt%20Supercluster%20Scaling%20to%201M%20GPUs">Tell us</a>.</p>
+        </section>
+        <p class="tags"><span>#Meta</span> <span>#Prometheus</span> <span>#Supercomputing</span> <span>#NVIDIA</span> <span>#Data Centers</span> <span>#AI Hardware</span></p>
+        <p class="stamp">Published October 20, 2026 at 02:11 UTC</p>
+      </div>
+    </div>
+  </article>
+  <section class="related wrap" aria-labelledby="rel-title">
+    <h2 id="rel-title">Keep reading</h2>
+    <div class="rows"><article class="story row">
+  <a class="story-link" href="/blog/spacex-40-billion-debt-nvidia-ai-chips/">
+    <span class="pic"><img src="/blog/img/spacex-40-billion-debt-nvidia-ai-chips/hero-640.webp" srcset="/blog/img/spacex-40-billion-debt-nvidia-ai-chips/hero-640.webp 640w, /blog/img/spacex-40-billion-debt-nvidia-ai-chips/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Rows of data center server racks in a high-tech facility illuminated with blue indicator lights" loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">Chips &amp; Hardware</span><time datetime="2026-10-09T01:19:04.295Z" data-rel>Oct 9, 2026</time></span>
+      <h3>SpaceX Seeks $40 Billion Debt Package to Fund Nvidia Rubin AI Chips</h3>
+      <span class="dek">The proposed financing package, reportedly led by Apollo Global Management, would fund hundreds of thousands of next-generation Nvidia AI accelerators.</span>
+      
+    </span>
+  </a>
+</article>
+<article class="story row">
+  <a class="story-link" href="/blog/nscale-anthropic-second-45-billion-compute-deal/">
+    <span class="pic"><img src="/blog/img/nscale-anthropic-second-45-billion-compute-deal/hero-640.webp" srcset="/blog/img/nscale-anthropic-second-45-billion-compute-deal/hero-640.webp 640w, /blog/img/nscale-anthropic-second-45-billion-compute-deal/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Illustration of a large industrial data center campus situated in a rural landscape." loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">Industry</span><time datetime="2026-10-20T02:19:27.081Z" data-rel>Oct 20, 2026</time></span>
+      <h3>Nscale and Anthropic Discuss Second $45B AI Compute Deal</h3>
+      <span class="dek">The potential agreement for 460 megawatts of Nvidia Vera Rubin compute at Nscale's West Virginia campus comes as both companies prepare for initial public offerings.</span>
+      
+    </span>
+  </a>
+</article>
+<article class="story row">
+  <a class="story-link" href="/blog/amazon-spv-financing-8-billion-nvidia-ai-chips/">
+    <span class="pic"><img src="/blog/img/amazon-spv-financing-8-billion-nvidia-ai-chips/hero-640.webp" srcset="/blog/img/amazon-spv-financing-8-billion-nvidia-ai-chips/hero-640.webp 640w, /blog/img/amazon-spv-financing-8-billion-nvidia-ai-chips/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Row of glowing server racks inside an advanced computing data center facility" loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">Chips &amp; Hardware</span><time datetime="2026-10-03T01:37:51.037Z" data-rel>Oct 3, 2026</time></span>
+      <h3>Amazon Explores $8B Special Purpose Vehicle for Nvidia AI Chips</h3>
+      <span class="dek">Amazon is in talks with outside investors to shift $8 billion of Nvidia Grace Blackwell chips into an off-balance-sheet vehicle as capital spending accelerates.</span>
+      
+    </span>
+  </a>
+</article></div>
+  </section>
+  <nav class="prevnext wrap" aria-label="More stories">
+    <a href="/blog/nscale-anthropic-second-45-billion-compute-deal/"><span>Newer</span>Nscale and Anthropic Discuss Second $45B AI Compute Deal</a>
+    <a class="next" href="/blog/microsoft-cancels-uk-data-centre-lease-grid-delays/"><span>Older</span>Microsoft Cancels UK Data Centre Lease Over Power Grid Delays</a>
+  </nav>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="biz">
+      <p class="biz-name">RKJDEV Labs</p>
+      <p>© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan</p>
+      <p>Udyam registered MSME, India, <span class="nowrap">UDYAM-BR-26-0254766</span></p>
+      <p><a href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a></p>
+    </div>
+    <nav aria-label="Site">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/blog/feed.xml">RSS</a>
+    </nav>
+    <p class="fine">Stories are researched from the linked sources, written with AI assistance and checked claim by claim against those sources before publishing. AI-generated illustrations are labeled.</p>
+  </div>
+</footer>
+<script src="/blog/blog.js?v=45c7aef4" defer></script>
+</body>
+</html>
