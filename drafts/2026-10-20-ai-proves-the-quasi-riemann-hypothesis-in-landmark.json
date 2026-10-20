@@ -1,0 +1,327 @@
+{
+ "reason": "fact-check failed: The automated proof establishes a uniform zero-free boundary verified in Lean code. | The result establishes uniform zero-free regions for the zeta function, Dirichlet L-functions, and specified Hecke L-functions. | The new proof provides a barrier of fixed width that holds regardless of height.",
+ "story": {
+  "id": "P69f0c185",
+  "headline": "AI Proves the Quasi-Riemann Hypothesis in Landmark Mathematical Proof",
+  "firstSeen": 1792425784471,
+  "items": [
+   "https://www.quantamagazine.org/ai-proved-the-quasi-riemann-hypothesis-what-happens-now-20261019/"
+  ],
+  "attempts": 1,
+  "importance": 85,
+  "summary": "Artificial intelligence systems have successfully proven the Quasi-Riemann Hypothesis in a development that has been fully verified and unpacked by human mathematicians. Experts describe the implications of the automated proof as staggering for mathematical research.",
+  "category": "Research",
+  "lastSeen": 1792425784471,
+  "update": false,
+  "updateOf": "",
+  "score": 85
+ },
+ "draft": {
+  "newsworthy": true,
+  "rejectReason": "",
+  "title": "OpenAI Proof Claims to Settle the Quasi-Riemann Hypothesis",
+  "seoTitle": "OpenAI Claims Quasi-Riemann Hypothesis Proof",
+  "slug": "openai-claims-quasi-riemann-hypothesis-proof",
+  "description": "OpenAI announced a proof claiming to solve the quasi-Riemann hypothesis, bounding zeta zeros between 1/8 and 7/8 in Lean-verified research.",
+  "dek": "Human mathematicians are evaluating an automated proof of the quasi-Riemann hypothesis, establishing a uniform zero-free boundary verified in Lean code.",
+  "category": "Research",
+  "tags": [
+   "OpenAI",
+   "Mathematics",
+   "Quasi-Riemann Hypothesis",
+   "Lean",
+   "Artificial Intelligence",
+   "Number Theory"
+  ],
+  "keyTakeaways": [
+   "OpenAI announced a mathematical proof claiming to settle the quasi-Riemann hypothesis, bounding nontrivial zeta zeros within the strip between 1/8 and 7/8.",
+   "The 199-page primary manuscript was formally checked using the Lean interactive theorem prover, accompanied by a Comparator verification challenge.",
+   "Mathematicians report the proof introduces no new conceptual frameworks, instead orchestrating a surprising synthesis of established number theory techniques.",
+   "While the full Riemann hypothesis remains an open Millennium Prize Problem, the result establishes uniform zero-free regions for the zeta function, Dirichlet L-functions, and specified Hecke L-functions."
+  ],
+  "body": "On October 6, 2026, OpenAI announced a collection of 377 mathematical results, highlighted by an automated proof claiming to settle the quasi-Riemann hypothesis—a weaker formulation of the Riemann hypothesis, long considered one of the foremost open questions in mathematics. Stanford University mathematician Jared Duker Lichtman described the development as \"the most significant AI-for-math achievement so far, by quite a margin,\" according to reporting from [Quanta Magazine](https://www.quantamagazine.org/ai-proved-the-quasi-riemann-hypothesis-what-happens-now-20261019/). While the full Riemann hypothesis remains an open Millennium Prize Problem after more than 160 years, resolving the quasi-Riemann hypothesis provides fixed mathematical limits that directly govern the distribution of prime numbers.\n\nTechniques used within the proof relied in part on earlier methods pioneered by Maksym Radziwiłł of New York University and Alexander Dunn of the Georgia Institute of Technology. Radziwiłł noted that the consequences of establishing the quasi-Riemann hypothesis are \"staggering,\" adding that \"in a sense, the vast majority of consequences of RH already follow from quasi-RH.\" Rather than inventing new foundational concepts, the system linked known analytic tools in an unexpected order. \"The proof is a surprising synthesis of well-known ideas,\" Dunn told [Quanta Magazine](https://www.quantamagazine.org/ai-proved-the-quasi-riemann-hypothesis-what-happens-now-20261019/).\n\n[[FIG1]]\n\n## The Mathematical Scope of the 7/8 Boundary\n\nThe classical Riemann hypothesis, conjectured by Bernhard Riemann in 1859, concerns the non-trivial zeros of the Riemann zeta function, denoted ζ(s). Riemann demonstrated that any nontrivial zeros must lie inside a critical strip where the input's real part sits between 0 and 1. The original hypothesis posits that all nontrivial zeros sit precisely on the vertical critical line where the real part equals 1/2. Numerical calculations have confirmed that the first 12 trillion nontrivial zeros lie on this line, but an analytic proof covering all zeros has remained elusive. In 1896, mathematicians proved that zeros could not reside on the extreme edges of the strip, confirming the prime number theorem. As Enrico Bombieri noted in documentation for the Clay Mathematics Institute, any failure of the hypothesis would create havoc in the distribution of prime numbers.\n\nThe quasi-Riemann hypothesis requires establishing a strictly narrower exclusion strip rather than locating zeros exclusively on the 1/2 line. As detailed by [Binary Verse AI](https://binaryverseai.com/quasi-riemann-hypothesis/), OpenAI's primary manuscript, dated September 30, 2026, claims a fixed zero-free half-plane for any input where the real part strictly exceeds 7/8. Using the functional-equation symmetry of the zeta function, ruling out zeros with a real part above 7/8 simultaneously rules out zeros with a real part below 1/8. This confines all nontrivial zeros to the closed strip between 1/8 and 7/8.\n\nCrucially, this boundary is uniform across infinite height. Classical analytic results already establish zero-free corridors near 1, but those corridors shrink as the imaginary coordinate increases. The new proof provides a barrier of fixed width that holds regardless of height. Beyond the Riemann zeta function, the paper claims the identical 7/8 boundary applies to all Dirichlet L-functions and finite-order Hecke L-functions over the number field ℚ(√−3), as documented by [Binary Verse AI](https://binaryverseai.com/quasi-riemann-hypothesis/).\n\n## Two Papers, Lean Verification, and Prose Shortcomings\n\nOpenAI released two versions of the argument within its mathematics release, cataloged under family 003 among 722 manuscripts spanning 372 families. The primary manuscript runs 199 pages and proves the 7/8 boundary with formalization in the Lean interactive theorem prover. The second manuscript, completed roughly a week later, presents a weaker boundary between 1/12 and 11/12 across 49 pages. This shorter version received human editing for readability but has not been formally verified.\n\nDespite the mathematical milestone, human researchers noted severe stylistic problems in the machine-generated text. Radziwiłł stated in an email to [Quanta Magazine](https://www.quantamagazine.org/ai-proved-the-quasi-riemann-hypothesis-what-happens-now-20261019/) that both documents \"are horribly written (in a way that would lead to immediate rejection at any mathematical journal)\" and fall far short of the expository standards expected in analytic number theory. Because of this density, mathematicians have concentrated their review on the 49-page paper, whose brevity makes the underlying architecture easier to deconstruct.\n\n[[FIG2]]\n\nThe Lean verification materials for the 199-page paper target a zeta nonvanishing theorem and Dirichlet L-function nonvanishing assertions, allowing three standard logical axioms: propositional extensionality, quotient soundness, and classical choice, according to [Binary Verse AI](https://binaryverseai.com/quasi-riemann-hypothesis/). The accompanying repository includes a Comparator challenge framework that allows outside researchers to evaluate the machine-checked argument against defined criteria.\n\n## Anatomy of the Proof and Prime Number Consequences\n\nThe architecture of the proof operates in two sequential stages. According to technical documentation summarized by [Binary Verse AI](https://binaryverseai.com/quasi-riemann-hypothesis/), both stages examine character sums through two distinct mathematical representations: direct bounds and Poisson summation connecting the construction to the reciprocal of a target L-function. Because a vanishing function creates a singularity in its reciprocal, proving that the reciprocal extends holomorphically across a domain rules out zeros.\n\nThe initial stage establishes the 11/12 boundary using completed cubic-theta sums, a reflection identity, and large-sieve estimates to control aggregate term sizes across families of arithmetic terms. The second stage sharpens the boundary to 7/8 by modifying arithmetic sums with selected prime factors to cancel local contributions, alongside unequal averaging scales and moment estimates that secure positive savings in the exponents.\n\nEstablishing the 7/8 bound yields direct consequences for prime numbers. Because zeta zeros govern error terms when estimating the count of primes up to a given number, a uniform bound of 7/8 supports power-saving prime-counting error estimates. It also rules out exceptional real Landau–Siegel zeros in the interval between 7/8 and 1. In addition, the manuscript provides a polylogarithmic bound on the least quadratic nonresidue modulo an odd prime, yielding a deterministic polynomial-time algorithm for finding modular square roots.\n\n## Model Attribution and Scrutiny\n\nOpenAI attributed the proofs to an unreleased internal frontier model rather than a publicly deployed ChatGPT system. Production records note that work on the zeta zero-free region was an exception to the team's standard automated procedures, and published reasoning traces did not disclose discovery paths for family 003, as reported by [Binary Verse AI](https://binaryverseai.com/quasi-riemann-hypothesis/).\n\nThe theorem provides no algorithm for breaking modern integer-factoring cryptography, nor does it resolve the full Riemann hypothesis. Number theorists continue to inspect both the Lean code and the prose proofs discussed in [Quanta Magazine](https://www.quantamagazine.org/ai-proved-the-quasi-riemann-hypothesis-what-happens-now-20261019/) to confirm that the full mathematical interpretation survives rigorous scrutiny.",
+  "faq": [
+   {
+    "q": "Did AI solve the Riemann hypothesis?",
+    "a": "No. The full Riemann hypothesis remains an open Millennium Prize Problem. OpenAI claimed its system proved the quasi-Riemann hypothesis, establishing that nontrivial zeros must lie in a strip between 1/8 and 7/8 rather than proving they all lie on the 1/2 line."
+   },
+   {
+    "q": "Which AI model generated the proof?",
+    "a": "OpenAI attributed the result to an unreleased internal frontier model, not a publicly available consumer ChatGPT model."
+   },
+   {
+    "q": "Has the mathematical proof been verified?",
+    "a": "The 199-page manuscript establishing the 7/8 boundary was formalized and verified in the Lean interactive theorem prover with a Comparator verification framework. The shorter 49-page paper establishing an 11/12 boundary was human-edited but has not been formally verified in Lean."
+   },
+   {
+    "q": "What concrete mathematical consequences follow from the proof?",
+    "a": "The proof supports power-saving error terms in prime-counting estimates, rules out Landau-Siegel zeros in the interval (7/8, 1), and provides a deterministic polynomial-time algorithm for finding modular square roots."
+   }
+  ],
+  "hero": {
+   "marker": "HERO",
+   "type": "ai",
+   "prompt": "An abstract geometric visualization of complex analysis and mathematical coordinate planes, featuring glowing horizontal and vertical grid lines, numerical values along an axis, and a shaded vertical corridor representing a zero-free mathematical region, bathed in deep blue and gold illumination.",
+   "alt": "Conceptual geometric representation of a mathematical complex plane with coordinate lines and a highlighted strip.",
+   "caption": "Illustration: A conceptual visualization of complex planes and bounded mathematical regions."
+  },
+  "figures": [
+   {
+    "marker": "FIG1",
+    "type": "ai",
+    "prompt": "A mathematician standing before a large blackboard covered in intricate number theory formulas, summation symbols, and geometric curves, gesturing toward a drawn coordinate axis in a quiet lecture hall.",
+    "alt": "A mathematician examining mathematical formulas drawn on a large university chalkboard.",
+    "caption": "Illustration: A mathematician examining number-theoretic equations on a lecture hall chalkboard."
+   },
+   {
+    "marker": "FIG2",
+    "type": "ai",
+    "prompt": "A three-dimensional conceptual mathematical rendering of intersecting luminous surfaces and vector fields representing functions and complex plane boundaries against a dark minimalist backdrop.",
+    "alt": "Abstract mathematical surfaces representing complex functions and analytic boundaries.",
+    "caption": "Illustration: Conceptual depiction of mathematical functions mapped across multidimensional coordinate space."
+   }
+  ],
+  "sourcesUsed": [
+   1,
+   2
+  ]
+ },
+ "check": {
+  "claims": [
+   {
+    "claim": "OpenAI announced a mathematical proof claiming to settle the quasi-Riemann hypothesis.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "Human mathematicians are evaluating the automated proof of the quasi-Riemann hypothesis.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "The automated proof establishes a uniform zero-free boundary verified in Lean code.",
+    "status": "needs_attribution",
+    "source": 2,
+    "fix": "Clarify that the proof claims to establish a uniform zero-free boundary, as mathematicians note full mathematical validation is still under review."
+   },
+   {
+    "claim": "OpenAI claims the proof bounds nontrivial zeta zeros within the strip between 1/8 and 7/8.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "The 199-page primary manuscript was formally checked using the Lean interactive theorem prover, accompanied by a Comparator verification challenge.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "Mathematicians report the proof introduces no new conceptual frameworks, instead synthesizing established number theory techniques.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "The result establishes uniform zero-free regions for the zeta function, Dirichlet L-functions, and specified Hecke L-functions.",
+    "status": "needs_attribution",
+    "source": 2,
+    "fix": "State that OpenAI's paper claims to establish these zero-free regions, as independent verification of the full mathematical argument is ongoing."
+   },
+   {
+    "claim": "On October 6, 2026, OpenAI announced a collection of 377 mathematical results.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "Jared Duker Lichtman of Stanford University described the development as 'the most significant AI-for-math achievement so far, by quite a margin.'",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "The full Riemann hypothesis remains an open Millennium Prize Problem after more than 160 years.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "Techniques used within the proof relied in part on earlier methods pioneered by Maksym Radziwiłł and Alexander Dunn.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "Radziwiłł stated the consequences of establishing the quasi-Riemann hypothesis are 'staggering' and that the vast majority of consequences of RH follow from quasi-RH.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "Alexander Dunn told Quanta Magazine that 'The proof is a surprising synthesis of well-known ideas.'",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "Bernhard Riemann conjectured the Riemann hypothesis in 1859 and proved nontrivial zeros must lie in a strip between 0 and 1.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "Numerical calculations have confirmed that the first 12 trillion nontrivial zeros lie on the 1/2 line.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "In 1896, mathematicians proved zeros could not reside on the edges of the strip, confirming the prime number theorem.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "Enrico Bombieri wrote that the failure of the Riemann hypothesis would create havoc in the distribution of prime numbers.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "OpenAI's primary manuscript, dated September 30, 2026, claims a zero-free half-plane for inputs where the real part strictly exceeds 7/8, which by symmetry confines zeros between 1/8 and 7/8.",
+    "status": "supported",
+    "source": 2,
+    "fix": ""
+   },
+   {
+    "claim": "The new proof provides a barrier of fixed width that holds regardless of height.",
+    "status": "needs_attribution",
+    "source": 2,
+    "fix": "State that the claimed proof purports to provide a barrier of fixed width, as the manuscript's estimates have not yet undergone full independent validation."
+   },
+   {
+    "claim": "The paper claims the 7/8 boundary applies to all Dirichlet L-functions and finite-order Hecke L-functions over the number field ℚ(√−3).",
+    "status": "supported",
+    "source": 2,
+    "fix": ""
+   },
+   {
+    "claim": "OpenAI's mathematics release contains 722 manuscripts across 372 families, with the quasi-Riemann result cataloged under family 003.",
+    "status": "supported",
+    "source": 2,
+    "fix": ""
+   },
+   {
+    "claim": "The primary 7/8 manuscript is 199 pages long and verified in Lean, while the secondary 11/12 manuscript is 49 pages, human-edited, and not formally verified.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "Radziwiłł stated in an email that both papers are horribly written in a manner that would lead to immediate rejection at any mathematical journal.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "Lean verification materials target a zeta nonvanishing theorem and Dirichlet L-function nonvanishing assertions, permitting three standard logical axioms.",
+    "status": "supported",
+    "source": 2,
+    "fix": ""
+   },
+   {
+    "claim": "The proof examines character sums via direct bounds and Poisson summation connecting to the reciprocal of a target L-function.",
+    "status": "supported",
+    "source": 2,
+    "fix": ""
+   },
+   {
+    "claim": "The initial stage establishes an 11/12 boundary using completed cubic-theta sums, reflection identity, and large-sieve estimates.",
+    "status": "supported",
+    "source": 2,
+    "fix": ""
+   },
+   {
+    "claim": "The second stage sharpens the boundary to 7/8 using selected prime factor modifications and moment estimates.",
+    "status": "supported",
+    "source": 2,
+    "fix": ""
+   },
+   {
+    "claim": "A uniform bound of 7/8 supports power-saving prime-counting error estimates and excludes exceptional real Landau-Siegel zeros in the interval (7/8, 1).",
+    "status": "supported",
+    "source": 2,
+    "fix": ""
+   },
+   {
+    "claim": "The manuscript provides a polylogarithmic bound on the least quadratic nonresidue modulo an odd prime, deriving a deterministic polynomial-time algorithm for modular square roots.",
+    "status": "supported",
+    "source": 2,
+    "fix": ""
+   },
+   {
+    "claim": "OpenAI attributed the proofs to an unreleased internal frontier model rather than a publicly deployed ChatGPT system.",
+    "status": "supported",
+    "source": 2,
+    "fix": ""
+   },
+   {
+    "claim": "Production records note work on the zeta zero-free region was an exception to standard procedures, and published reasoning traces did not disclose discovery paths for family 003.",
+    "status": "supported",
+    "source": 2,
+    "fix": ""
+   },
+   {
+    "claim": "The theorem provides no integer-factoring algorithm to break encryption and does not resolve the full Riemann hypothesis.",
+    "status": "supported",
+    "source": 2,
+    "fix": ""
+   },
+   {
+    "claim": "Illustration caption: A conceptual visualization of complex planes and bounded mathematical regions.",
+    "status": "unsupported",
+    "source": 0,
+    "fix": "remove"
+   },
+   {
+    "claim": "Illustration caption: A mathematician examining number-theoretic equations on a lecture hall chalkboard.",
+    "status": "unsupported",
+    "source": 0,
+    "fix": "remove"
+   },
+   {
+    "claim": "Illustration caption: Conceptual depiction of mathematical functions mapped across multidimensional coordinate space.",
+    "status": "unsupported",
+    "source": 0,
+    "fix": "remove"
+   }
+  ],
+  "recent": true,
+  "score": 8
+ },
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://www.quantamagazine.org/ai-proved-the-quasi-riemann-hypothesis-what-happens-now-20261019/",
+   "title": "AI Proved the Quasi-Riemann Hypothesis. What Happens Now? | Quanta Magazine",
+   "site": "Quanta Magazine",
+   "official": false,
+   "primary": false,
+   "published": 1792424426000,
+   "text": "Among the 377 results that OpenAI announced on October 6, 2026, one stood out. It claimed to settle the “quasi-Riemann hypothesis” — a weaker version of the Riemann hypothesis, which is arguably the biggest open question in math. The new proof is, as Jared Duker Lichtman of Stanford University put it, “the most significant AI-for-math achievement so far, by quite a margin.”\nThe Riemann hypothesis "
+  },
+  {
+   "n": 2,
+   "url": "https://binaryverseai.com/quasi-riemann-hypothesis/",
+   "title": "Quasi-Riemann Hypothesis: What OpenAI’s 7/8 Claim Means",
+   "site": "Binary Verse AI",
+   "official": false,
+   "primary": false,
+   "published": 1791348793000,
+   "text": "The Riemann hypothesis remains unsolved. Clay Mathematics Institute still lists it as an open Millennium Prize Problem. OpenAI’s new Quasi-Riemann Hypothesis manuscript addresses a weaker statement, but “weaker” hardly means small. If its argument holds, it establishes a fixed limit on where certain mathematical zeros can occur, tightening our understanding of prime numbers.Released on October 6, "
+  }
+ ]
+}
