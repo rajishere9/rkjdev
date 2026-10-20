@@ -1,0 +1,184 @@
+{
+ "slug": "minimax-launches-m3-1-flash-agent-costs",
+ "title": "MiniMax Launches M3.1 Flash Model to Slash AI Agent Operating Costs",
+ "seoTitle": "MiniMax M3.1 Flash Model Cuts AI Agent Costs",
+ "description": "MiniMax released its M3.1 Flash model on Oct. 19, 2026, promising 70% cheaper agent workflows, faster inference, and a 1-million-token context window.",
+ "dek": "The 428-billion-parameter mixture-of-experts model claims near-frontier enterprise workflow scores at 15 cents per million input tokens, though independent tests flag high hallucination rates.",
+ "category": "AI Models",
+ "tags": [
+  "MiniMax",
+  "MiniMax M3.1 Flash",
+  "AI Agents",
+  "Artificial Analysis",
+  "Machine Learning"
+ ],
+ "keyTakeaways": [
+  "MiniMax rolled out MiniMax M3.1 Flash on October 19, 2026, offering flat pricing of $0.15 per million input and $0.60 per million output tokens.",
+  "The 428-billion-parameter MoE model ran anonymously as 'Space Bunny', processing over 200 trillion tokens prior to launch.",
+  "MiniMax claims a 70% reduction in agent costs and inference speeds up to 200+ tokens per second, but independent tests show a 93% hallucination rate on factual questions when wrong."
+ ],
+ "body": "Chinese artificial intelligence company MiniMax released its [MiniMax M3.1 Flash model](https://www.minimax.io/blog/minimax-m31f) on October 19, 2026, targeting the escalating cost of running autonomous AI agents. The release is designed to lower operating expenses for multi-step agentic workflows, software development, and computer-use tasks. MiniMax claims that M3.1 Flash cuts overall usage costs for agentic tasks by 70% and operates nearly three times faster than its predecessor, MiniMax M3.\n\nThe launch enters an increasingly aggressive pricing contest across the AI sector, where Chinese and Western labs are racing to trim inference fees. According to [reporting by SiliconANGLE](https://siliconangle.com/2026/10/19/minimax-launches-m3-1-flash-model-says-it-cuts-ai-agent-costs-by-70/), the model directly targets agent workloads that require dozens or hundreds of chained calls to complete a single job, a dynamic where compounding latency and token costs frequently overwhelm production budgets.\n\n[[FIG1]]\n\n## Architecture, Speed, and the 'Space Bunny' Stealth Run\n\nUnder the hood, the MiniMax M3.1 Flash model relies on a multimodal mixture-of-experts (MoE) architecture with 428 billion total parameters and approximately 23 billion active parameters per token, matching the parameter count of the earlier M3 base model. As detailed by [MarkTechPost](https://www.marktechpost.com/2026/10/19/minimax-m3-1-flash-release/), the architecture incorporates sparse attention and a native visual encoder, accepting inputs across text, image, and video modalities while returning text responses.\n\nMiniMax confirmed that an earlier build of M3.1 Flash operated anonymously on model routing platforms under the alias \"Space Bunny,\" processing more than 200 trillion tokens before its official unveiling. The company attributes the new variant's speed advantages to more aggressive sparsity techniques during inference. MiniMax reports everyday output speeds exceeding 200 tokens per second, with median speeds consistently measuring above 170 tokens per second across its standard infrastructure.\n\nThe model maintains a 1-million-token context window with always-on reasoning. Developers cannot disable reasoning entirely; attempting to set reasoning parameters to disabled yields an API error. Instead, callers choose among five reasoning effort tiers ranging from Low to Max, with chain-of-thought tokens delivered in a dedicated API field rather than inline formatting.\n\n[[FIG2]]\n\n## Benchmark Performance Across Software and Office Tasks\n\nIn vendor-reported evaluations, MiniMax positioned M3.1 Flash alongside larger frontier offerings on enterprise task automation. On Automation-Bench v1.0.6, which evaluates end-to-end business workflows across enterprise SaaS platforms, MiniMax reported a top score of 62.2, edging out DeepSeek V4.1 Flash at 60.5 and surpassing Claude Opus 5 and GPT-5.6 Sol in company-provided comparisons. MiniMax also reported a score of 76.2 on BankerToolBench, tying Opus 5 on multi-step financial compliance, chained tool execution, and document consistency tasks.\n\nSoftware engineering and computer operation benchmarks present a more varied profile. According to MarkTechPost, M3.1 Flash achieved 73.7% on DeepSWE v1.1, placing it just ahead of GPT-5.6 Sol at 73.0% but trailing DeepSeek V4.1 Flash-1017, which scored 77.0%. On computer navigation, MiniMax reported that the model scored 61.7 on OSWorld V2 and 29.6 on Agents' Last Exam. MiniMax also highlighted an 82% score on CyberGym, a benchmark developed by University of California, Berkeley researchers to measure vulnerability identification and software security validation.\n\nHowever, the model shows pronounced weaknesses in terminal environments. On Terminal Bench 4.0, M3.1 Flash scored 38.1, falling 13.7 points behind Claude Opus 5's mark of 51.8. It also trailed Opus 5 on repository-level code modifications on NL2Repo-Bench.\n\n[[FIG3]]\n\n## Independent Evaluations Flag High Hallucination Rates\n\nIndependent testing conducted by Artificial Analysis revealed trade-offs between speed, cost, and factual grounding. As reported by [VentureBeat](https://venturebeat.com/technology/minimaxs-new-m3-1-flash-beats-deepseek-and-opus-5-on-a-key-business-benchmark-at-lower-cost-but-with-a-high-hallucination-rate), M3.1 Flash achieved an Intelligence Index score of 42 at maximum reasoning effort, rising 13 points above M3's score of 29. That ties Z.ai's GLM-5.3 Flash (42), edges ahead of Google's Gemini 3.8 Flash (41), and places the system slightly behind DeepSeek V4.1 Flash-1017 (45).\n\nArtificial Analysis measured the average evaluation cost per task at approximately $0.22 for M3.1 Flash, a 57% decrease compared to M3's $0.51 task cost. On the research-grade physics test CritPt, M3.1 Flash scored 22%, compared to 24% for DeepSeek V4.1 Flash and 18% for Gemini 3.8 Flash. On Humanity's Last Exam, it reached 48%, matching Gemini 3.8 Flash and outperforming DeepSeek's 43%.\n\nDespite those gains, factual accuracy testing showed significant reliability risks. On the AA-Omniscience test, M3.1 Flash answered 56% of factual questions correctly, outscoring DeepSeek (43%) and GLM-5.3 Flash (28%). However, because the model attempted virtually every question without acknowledging uncertainty or refusing, roughly 93% of its non-correct responses were outright factual errors. That behavior dragged its overall Omniscience score down to 16. [The Decoder notes](https://the-decoder.com/minimax-m3-1-flash-shows-chinas-ai-price-race-has-no-floor-in-sight/) that organizations deploying M3.1 Flash for knowledge-intensive operational tasks will likely need secondary verification steps, retrieval pipelines, and human oversight.\n\n## Pricing Structure and Competitive Economics\n\nMiniMax set API pricing for M3.1 Flash at a flat $0.15 per million input tokens, $0.60 per million output tokens, and $0.015 per million cached input tokens. These rates represent a 50% reduction in per-token charges compared to standard MiniMax M3 pricing, with no additional surcharges applied for long contexts up to the 1-million-token boundary.\n\nAs examined by [The New Stack](https://thenewstack.io/minimax-flash-agent-costs/), how those rates translate to customer invoices depends heavily on agent behavior. While MiniMax advertises a 70% net reduction in agent operating costs, agent workflows can consume volatile numbers of tokens across loops and tool retries. In the competitive arena, DeepSeek V4.1 Flash matches MiniMax's $0.15 input and $0.60 output rates during off-peak windows, but DeepSeek doubles those prices to $0.30 input and $1.20 output during peak weekday hours (01:00 to 04:00 and 06:00 to 10:00 UTC). Conversely, DeepSeek offers cheaper cached input pricing at $0.003 per million tokens, compared to MiniMax's $0.015.\n\nMiniMax M3.1 Flash is available immediately via the platform.minimax.io API, the company's M Plan subscription, and the MiniMax Code desktop environment. MiniMax has scheduled the open-weight release of M3.1 Flash for October 23, 2026, though licensing terms and local hardware execution requirements have not yet been disclosed. The company stated that an expanded, higher-capability \"Pro\" model remains in development for future release.",
+ "faq": [
+  {
+   "q": "What is the context window and pricing for MiniMax M3.1 Flash?",
+   "a": "MiniMax M3.1 Flash supports a 1-million-token context window. Pricing is set at $0.15 per million input tokens, $0.60 per million output tokens, and $0.015 per million cached input tokens, with no long-context surcharges."
+  },
+  {
+   "q": "What was the 'Space Bunny' model?",
+   "a": "Space Bunny was the anonymous preview version of MiniMax M3.1 Flash that operated on routing platforms like OpenRouter, processing over 200 trillion tokens before MiniMax officially claimed it."
+  },
+  {
+   "q": "Are the model weights for MiniMax M3.1 Flash publicly available?",
+   "a": "MiniMax plans to release open weights for M3.1 Flash on October 23, 2026, though official licensing terms and hardware requirements have not yet been announced."
+  },
+  {
+   "q": "Why did independent testing flag the model's factual accuracy?",
+   "a": "On Artificial Analysis's AA-Omniscience test, M3.1 Flash answered 56% of questions correctly but exhibited a 93% hallucination rate on non-correct responses because it attempted almost every question rather than declining when uncertain."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern enterprise server room bathed in soft cool light, where an engineer in business casual attire inspects glowing high-density server racks displaying subtle network activity indicators, captured in a clean cinematic aesthetic.",
+  "alt": "An engineer inspecting server racks in a modern cloud computing data center.",
+  "caption": "Illustration: Enterprise infrastructure running high-throughput agentic workloads.",
+  "src": "img/minimax-launches-m3-1-flash-agent-costs/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 69826,
+  "small": "img/minimax-launches-m3-1-flash-agent-costs/hero-640.webp",
+  "og": "img/minimax-launches-m3-1-flash-agent-costs/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/minimax-launches-m3-1-flash-agent-costs/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A conceptual digital workspace with geometric translucent layers depicting automated workflow streams and data pathways connected to software code modules, rendered in clean technical vector-inspired 3D style.",
+   "alt": "A 3D visualization of interconnected digital workflows and multi-step computational pipelines.",
+   "caption": "Illustration: Multi-step software automation pipelines handling complex agent tasks.",
+   "slot": "FIG1",
+   "src": "img/minimax-launches-m3-1-flash-agent-costs/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 41072,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A software developer seated at an office desk working across dual monitors displaying code analysis diagrams and workflow logs, bathed in ambient office lighting.",
+   "alt": "A software engineer working at a desk reviewing automated development workflows.",
+   "caption": "Illustration: Developers integrating automated agent tools into software engineering pipelines.",
+   "slot": "FIG2",
+   "src": "img/minimax-launches-m3-1-flash-agent-costs/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 32036,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "A financial analyst and an operations manager reviewing computational performance charts on a sleek meeting room display in an enterprise office.",
+   "alt": "Enterprise managers reviewing benchmark data and computing economics on a digital board.",
+   "caption": "Illustration: Technology teams evaluating cost and accuracy trade-offs for production models.",
+   "slot": "FIG3",
+   "src": "img/minimax-launches-m3-1-flash-agent-costs/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 27588,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://www.minimax.io/blog/minimax-m31f",
+   "title": "MiniMax M3.1 Flash: Redefining Agent Performance and Cost",
+   "site": "MiniMax",
+   "published": 1792368000000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://venturebeat.com/technology/minimaxs-new-m3-1-flash-beats-deepseek-and-opus-5-on-a-key-business-benchmark-at-lower-cost-but-with-a-high-hallucination-rate",
+   "title": "MiniMax's new M3.1 Flash beats DeepSeek and Opus 5 on a key business benchmark at lower cost — but with a high hallucination rate",
+   "site": "venturebeat.com",
+   "published": 1792438680000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://www.marktechpost.com/2026/10/19/minimax-m3-1-flash-release/",
+   "title": "MiniMax Just Launched M3.1 Flash: 428B MoE Agentic Model at $0.15/M Input",
+   "site": "marktechpost.com",
+   "published": 1792368000000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://the-decoder.com/minimax-m3-1-flash-shows-chinas-ai-price-race-has-no-floor-in-sight/",
+   "title": "MiniMax M3.1 Flash shows China's AI price race has no floor in sight",
+   "site": "The Decoder",
+   "published": 1792434150000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://siliconangle.com/2026/10/19/minimax-launches-m3-1-flash-model-says-it-cuts-ai-agent-costs-by-70/",
+   "title": "MiniMax launches M3.1 Flash model, says it cuts AI agent costs by 70%",
+   "site": "SiliconANGLE",
+   "published": 1792448750000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://thenewstack.io/minimax-flash-agent-costs/",
+   "title": "MiniMax just halved its token prices. Your AI agent bill may not follow.",
+   "site": "The New Stack",
+   "published": 1792447219000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://shattered.io/minimax-m3-1-flash-launch-cost-cut-2026/",
+   "title": "MiniMax M3.1 Flash Launches, Cuts AI Costs 70% [2026]",
+   "site": "Shattered",
+   "published": 1792433755000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792455901462,
+ "updatedAt": 1792455901462,
+ "foundVia": "Google News, Reddit and Techmeme",
+ "check": {
+  "claims": 42,
+  "score": 10
+ },
+ "story": {
+  "id": "P0b18c474",
+  "score": 91,
+  "items": [
+   "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQcU9pLVo3ZWdIWHQwazZFQjZoR2hzeWpuX083T0gwTW5jbWhHa211U3pqLXNfWGNGbVpaMHd1UHpKbWFKQzNhWHVqQ2hpNjMxc3dEaW1tblpMRTRPVmRESmM4U3d6SnYwaHpKb1lERzBGaUdmTXFnSC1wYmhSY3pEaFU5Tl9TZ2pJckNKOWkxWEc2ZkZpSFRzNXhVZVVXaUFVdjdlc3JoSWE?oc=5",
+   "https://www.reddit.com/r/LocalLLaMA/comments/1x9suvs/minimaxm31flash_is_coming/",
+   "https://news.google.com/rss/articles/CBMiiAJBVV95cUxQLXlvbmRBcUlwNGZuZ25NVS10aHJBMzJ6dHFYQ2ZkUGNwZUd5MlRsUG9jQ01iUVZ0ODZGc2NtdzBXQWYzQkNrMEFVTTgwWXBGOFBJM2ZPQ0NFUTlzWFBKX3BhTmYwYVV1eTRfUUpuVndLUExQWnh1YXltbkRfUVVRM0pURHJSUFJxa0hqX21Jc1RMN016SXNnbGUwWU05NjVYQnUzQkZPU2NhSzUxQnZtVkwwLV95UGRMS2gxdTNtY0RoRjM1WWM0aF9JREd0NUxPUnJhQ3ZxU3pWUWFTcHlTOWN3c2hteEJiUGlwc1FHYkdIcERJMndRUXFGM1Y5YkpPNlQtbU9hclI?oc=5",
+   "https://news.google.com/rss/articles/CBMizgFBVV95cUxOUDFubkp4RmVPMUM4T0FMVy05dllGZDZYQi1fc2VfanJ1SElsLTltXzJLYlFvRWRNY3psRDFSVTJVZ2Z3WFdzTEU5Z1NSeU1GRVpNMU5XN2pEQzBqQWlHazVETkl2TDVEenhWTkxCemJJUVFMb1A5Xy1lMXVaQUtSdy1paUwweUFWZElXR2xYV2xOUWFuakNUeTcyeHVFQTB0OU11MFpCNHNxZnRaSThwajRhc2EzM3RBZkNWcnhZYVluTVdqbnZ3VW9sU04zUQ?oc=5",
+   "https://news.google.com/rss/articles/CBMizgFBVV95cUxNaURsVGRLN0ZudjFlcHppeVRzX3NyaGRQUGZMTi1kRDRGNHNPVWwwUE4tLVhKNzJNTkh0LV9VdUc5RzNETXhnaWJId1VlWGdCSWlMMk05eUd6a3RqQ0t4emxDdTJCSDhzdTNNVVZ6YlJkSVNJbWJtUVljOFNaQnZYWkJLdDdpeVY3SF9maTZXdHFNN3JrV1RqOWtMVzlVcjlMVFE4dmZzYVY0ZFBTWTFQWm5vWC13dGVRUkZjRGFOakswOHV1b21mRi1qOW52dw?oc=5",
+   "https://news.google.com/rss/articles/CBMihwJBVV95cUxNRnpBdnpmMzJtWGVkOHJQR0JBXzhUd09PcXVMMlVLLVN5cDR3ZFRmV3hxNUEwc0tHbnJfaS1uRFR4TFI3YTNXLW96V0tneXotanJlS1lXTEFjVEJkejY4cUlrVDJ2RGxGemZOWjdoanZpd2VVUzBGaTJzVHd4Q3JKUEozeG9sYnNSb3JXaFFlREwxdGdpenpEMmZpVlpMeV8tYTV6d2N6VmtycC1Qa3ptcWR4dmdfV2JnblhmZGFDeHp3NEhYMDg1SmxhUEcySDNkd0JoX2hvU0h4LVZSeXRPVzN5WUZwdHhNVlFKNVRROUlOSWF6OEREQ1F0YXo0LU5iTXoyYnpsNA?oc=5",
+   "https://news.google.com/rss/articles/CBMidkFVX3lxTFBaU2g5bkdabnhBakcxYlh2MTVPYWpGYnlhYzlJNjdad3FSdVZoVFFtVE8zbGFOVUh2WkVnZTNoeXF5T25ULWhSQzc4b0l3bUg2RmtXLTdXUmVqaVdnMUhpSDk3TEltTzVLc0RxRHNSTmhzZmp0YVHSAXZBVV95cUxQWlNoOW5HWm54QWpHMWJYdjE1T2FqRmJ5YWM5STY3WndxUnVWaFRRbVRPM2xhTlVIdlpFZ2UzaHlxeU9uVC1oUkM3OG9Jd21INkZrVy03V1JlamlXZzFIaUg5N0xJbU81S3NEcURzUk5oc2ZqdGFR?oc=5",
+   "https://www.techmeme.com/261019/p30#a261019p30",
+   "https://www.minimax.io/blog/minimax-m31f",
+   "https://the-decoder.com/minimax-m3-1-flash-shows-chinas-ai-price-race-has-no-floor-in-sight/",
+   "https://www.reddit.com/r/LocalLLaMA/comments/1xa1rru/minimax_m31_flash_released_space_bunny_was_an/",
+   "https://venturebeat.com/technology/minimaxs-new-m3-1-flash-beats-deepseek-and-opus-5-on-a-key-business-benchmark-at-lower-cost-but-with-a-high-hallucination-rate",
+   "https://siliconangle.com/2026/10/19/minimax-launches-m3-1-flash-model-says-it-cuts-ai-agent-costs-by-70/",
+   "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUTFzLTVJTXFMdGsxc3NOTWtLTVhkOFcxX1BjcVFrOGVTUnhUMmFhWWNmaVhQVjFnNEt2cXJWVWZSQmhvQXlxeVNTM2d1aFI4RHIxVjFnMkhoX2Q5SHp6d0xCS1FwZ2FBeEhrWWdZWE5ST0RCeFg4VW5PTDFqczNvbjYwd2dOb0tOSTc1RkJ0WXBaeHoxdnhCWXEzOUNtTERfV1AyRGNiVQ?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
