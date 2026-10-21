@@ -1,0 +1,156 @@
+{
+ "slug": "inception-mercury-3-diffusion-llm",
+ "title": "Inception Releases Mercury 3 Diffusion LLM at Inception's Self-Reported 1,068 Tokens per…",
+ "seoTitle": "Inception Releases Mercury 3 Diffusion LLM",
+ "description": "Inception released Mercury 3, a diffusion LLM generating 1,068 tokens per second according to Inception's self-reported figures, with a 1M context window, beating rivals on vendor-reported benchmark tests.",
+ "dek": "Inception AI's fourth-generation diffusion language model uses parallel refinement to hit over 1,000 tokens per second according to Inception's self-reported measurements, while expanding context to one million tokens.",
+ "category": "AI Models",
+ "tags": [
+  "Inception AI",
+  "Mercury 3",
+  "Diffusion LLM",
+  "AI Hardware",
+  "LLM Benchmarks"
+ ],
+ "keyTakeaways": [
+  "Inception released Mercury 3 on October 19, 2026, claiming generation throughput of 1,068 tokens per second on Nvidia GPUs.",
+  "The model relies on iterative parallel diffusion refinement rather than sequential, autoregressive token generation.",
+  "Mercury 3 features a 1 million token context window and a maximum completion limit of 131,072 tokens.",
+  "On Inception's vendor benchmarks, Mercury 3 led OpenAI's GPT-6 Luna and Anthropic's Claude Haiku 5.5 on eight of 12 tests, but trailed on deep coding and long-context recall.",
+  "Available via API starting at promotional rates of $0.10 per million input and $0.35 per million output tokens, with cached input discounted by 90%."
+ ],
+ "body": "Redwood City-based artificial intelligence lab Inception AI Inc. launched its Mercury 3 diffusion LLM on October 19, 2026, pitching a diffusion-based language model designed to bypass the sequential bottlenecks of standard conversational architectures. According to [Inception's announcement](https://www.inceptionlabs.ai/blog/introducing-mercury-3), the model generates up to 1,068 tokens per second during inference on Nvidia Corp. hardware. The release marks the startup's fourth iteration of its architecture, which Inception states scales the parameter count to more than 40 times the size of its initial Mercury 1 release while expanding its context window to 1 million tokens.\n\nWhile the vast majority of production text generation relies on autoregressive models that predict one token at a time from left to right, Inception is wagering on text diffusion. In this paradigm, the system generates a noisy draft of an entire response block and refines every token simultaneously across a sequence of parallel passes. Chief Executive Stefano Ermon told The Deep View (as quoted by [The Next Web](https://thenextweb.com/news/inception-mercury-3-diffusion-llm)) that Mercury 3 is comparable to Luna and Haiku but way faster, and The Next Web reported the 4x to 8x benchmark speedup based on Inception's figures.\n\n## Mercury 3 Diffusion LLM Architecture Versus Autoregressive Generation\n\nTraditional autoregressive models must complete each token before computing the next, which inherently constrains execution throughput on parallel processor clusters. Mercury 3 eliminates that sequential dependency by applying continuous refinement passes across full blocks of text, akin to the techniques popularized by image diffusion models. As reported by [Marktechpost](https://www.marktechpost.com/2026/10/19/inception-mercury-3-diffusion-llm/), fewer sequential execution steps translate directly into higher output volume on equivalent server hardware.\n\n[[FIG1]]\n\nInception reported that Mercury 3 delivers three times the general intelligence of its initial release on standard benchmark evaluations while maintaining identical inference velocity. Ermon commented on scaling, as reported by [SiliconANGLE](https://siliconangle.com/2026/10/20/inception-says-mercury-3-beats-gpt-6-luna-and-claude-haiku-5-5-at-up-to-8x-the-speed/), stating that internal progress refutes long-standing industry skepticism over whether diffusion architectures can scale to compete with mainstream language systems, arguing that performance limitations stem from available data and compute rather than structural algorithmic walls. To accelerate development, Inception used swarms of Mercury 3 agents to improve the model itself as recursive self-improvement, an approach Ermon stated yielded an extra 16% speed increase on top of manual optimizations.\n\n## Benchmark Scores Against GPT-6 Luna and Claude Haiku 5.5\n\nOn Inception's self-reported evaluations across 12 standard benchmarks conducted at medium reasoning effort, Mercury 3 outperformed rival low-latency models—OpenAI's GPT-6 Luna and Anthropic's Claude Haiku 5.5—in eight categories. According to data published by [Marktechpost](https://www.marktechpost.com/2026/10/19/inception-mercury-3-diffusion-llm/), Mercury 3 recorded a score of 51.08 on SWE-Bench Atlas, substantially higher than GPT-6 Luna's 33.33 and Claude Haiku 5.5's 32.26. The model also posted leads on IFBench with 76.84 against Luna's 61.82 and Haiku's 54.65, and reached 89.23 on GPQA Diamond.\n\nThe vendor data also highlights notable blind spots. Claude Haiku 5.5 outperformed Mercury 3 on the DeepSWE v1 coding benchmark, scoring 51.62 compared to Mercury 3's 46.31. Haiku 5.5 also led in long-context retrieval, logging 78.40 on MRCR v2 compared to Mercury 3's 75.50. Additionally, GPT-6 Luna edged out Mercury 3 by narrow fractions of a point on AA-Omniscience-Public (46.94 to 46.44) and AA-LCR v1.1 (78.30 to 77.67). Inception acknowledged that sustained long-context retrieval and longer coding tasks continue to present difficulties for the model.\n\n## Early Integrations and Hands-On Testing\n\nTo demonstrate real-world utility, Inception highlighted early production integrations with business partners operating latency-dependent products. Web-navigation startup TinyFish reported running Mercury 3 across 50 live Mind2Web browser tasks, completing 50% of assignments at parity in token counts and steps compared to frontier models, outperforming GPT-6.1-Sol. Smart-glasses search provider Octen AI measured a median generation latency of 0.9 seconds and an end-to-end response time of 2.2 seconds, where previous five-second delays hindered user interaction. Interactive education app RevisionDojo reported that hints and graded student submissions return in approximately one second.\n\n[[FIG2]]\n\nIndependent workflow examinations confirmed noticeable responsiveness alongside clear technical boundaries. In a hands-on review published by [MindStudio](https://www.mindstudio.ai/blog/mercury-3-inception-diffusion-model), Mercury 3 solved subtle real-world application bugs—such as locating an unflagged logic discrepancy in a donor registry compliance app without explicit error traces—and succeeded on physical reasoning and multilingual instruction tasks with minimal deliberation delay. However, on open-ended, extended creative coding challenges, including generating interactive vector-based applications, the model slowed significantly, encountered temporary execution loops, and exhibited weaker tool calling coordination.\n\n## Pricing, Architecture, and Enterprise Availability\n\nMercury 3 is offered strictly as an API service without downloadable weights. According to [The Rundown University](https://app.therundown.ai/guides/mercury-3-guide), the model supports an input context window of up to 1 million tokens and a maximum completion length of 131,072 tokens, which subsumes both internal reasoning tokens and visible output. The API exposes adjustable reasoning settings—Instant, Low, Medium, and High—and maintains complete compatibility with OpenAI's API standards to facilitate straightforward migration.\n\nInception set list pricing at $0.20 per million input tokens and $0.70 per million output tokens, accompanied by a 50% launch promotion dropping costs to $0.10 for inputs and $0.35 for outputs. Prompt caching provides a 90% discount on cached inputs, reducing that portion to $0.01 per million tokens during the promotion. New enterprise and developer accounts receive an allotment of 100 million free tokens. Access is currently hosted via Inception's proprietary portal as well as third-party aggregators OpenRouter, Baseten, and Vercel's AI Gateway. Alongside the main release, Inception introduced two specialized sister variants: Mercury Voice, configured to minimize time-to-first-token in conversational audio agents, and Mercury Decide, optimized for automated high-volume classification workflows.",
+ "faq": [
+  {
+   "q": "How does a diffusion language model differ from an autoregressive LLM?",
+   "a": "Autoregressive models write text sequentially token by token from left to right, with each token depending on the preceding one. Mercury 3 uses text diffusion, drafting a block of text all at once and iteratively refining all tokens in parallel, which substantially increases generation speed on GPUs."
+  },
+  {
+   "q": "What is the token generation speed and context length of Mercury 3?",
+   "a": "Inception reports an inference speed of 1,068 tokens per second on Nvidia GPUs, paired with a 1 million token context window and a maximum completion output of 131,072 tokens."
+  },
+  {
+   "q": "How much does Mercury 3 cost to use?",
+   "a": "Standard list pricing is $0.20 per million input tokens and $0.70 per million output tokens. At launch, Inception offers a 50% promotional discount ($0.10 input, $0.35 output), with cached inputs discounted by 90% and 100 million free trial tokens for new accounts."
+  },
+  {
+   "q": "Are the model weights for Mercury 3 open source?",
+   "a": "No. Mercury 3 is closed-source and available exclusively through API endpoints provided by Inception, Baseten, OpenRouter, and Vercel."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern computing laboratory server cluster with parallel glowing blue data conduits converging across high-performance accelerator racks in an illuminated tech facility.",
+  "alt": "Server hardware racks processing parallel text diffusion data in an illuminated facility",
+  "caption": "Illustration: Parallel diffusion models refine entire blocks of text simultaneously, bypassing traditional sequential generation limits.",
+  "src": "img/inception-mercury-3-diffusion-llm/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 104208,
+  "small": "img/inception-mercury-3-diffusion-llm/hero-640.webp",
+  "og": "img/inception-mercury-3-diffusion-llm/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/inception-mercury-3-diffusion-llm/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An engineer wearing sleek smart glasses walking through an urban atrium, glancing upward as subtle augmented visual cues reflect softly in the lenses.",
+   "alt": "A person using smart glasses for low-latency visual queries outdoors",
+   "caption": "Illustration: Fast token generation reduces latency for wearable devices like smart glasses.",
+   "slot": "FIG1",
+   "src": "img/inception-mercury-3-diffusion-llm/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 55966,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A student working at a modern desk with an interactive digital tablet displaying feedback and practice problems under warm study lighting.",
+   "alt": "A student reviewing interactive digital coursework on a tablet computer",
+   "caption": "Illustration: Near-instant model responses enable responsive interactive tutoring applications.",
+   "slot": "FIG2",
+   "src": "img/inception-mercury-3-diffusion-llm/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 24330,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://thenextweb.com/news/inception-mercury-3-diffusion-llm",
+   "title": "Inception says its Mercury 3 model beats GPT-6 Luna and runs far faster",
+   "site": "TNW | Artificial-intelligence",
+   "published": 1792510784000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://www.marktechpost.com/2026/10/19/inception-mercury-3-diffusion-llm/",
+   "title": "Inception Releases Mercury 3 Diffusion LLM at 1,068 Tokens per Second",
+   "site": "marktechpost.com",
+   "published": 1792368000000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://siliconangle.com/2026/10/20/inception-says-mercury-3-beats-gpt-6-luna-and-claude-haiku-5-5-at-up-to-8x-the-speed/",
+   "title": "Inception says Mercury 3 beats GPT-6 Luna and Claude Haiku 5.5 at up to 8x the speed",
+   "site": "SiliconANGLE",
+   "published": 1792536302000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.inceptionlabs.ai/blog/introducing-mercury-3",
+   "title": "Diffusion at Scale: Introducing Mercury 3 – Inception",
+   "site": "inceptionlabs.ai",
+   "published": 1792368000000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://www.mindstudio.ai/blog/mercury-3-inception-diffusion-model",
+   "title": "Mercury 3 by Inception: A Hands-On Test of the Diffusion Language Model",
+   "site": "MindStudio",
+   "published": 1792454400000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://app.therundown.ai/guides/mercury-3-guide",
+   "title": "Mercury 3: How to Use Inception’s Fast AI Model",
+   "site": "The Rundown University",
+   "published": 1792511086000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792549307746,
+ "updatedAt": 1792549307746,
+ "foundVia": "Hacker News, Techmeme and Google News",
+ "check": {
+  "claims": 49,
+  "score": 10
+ },
+ "story": {
+  "id": "P6d7d53eb",
+  "score": 84,
+  "items": [
+   "https://www.inceptionlabs.ai/blog/introducing-mercury-3",
+   "https://www.techmeme.com/261019/p51#a261019p51",
+   "https://news.google.com/rss/articles/CBMihwFBVV95cUxNaGUzQ3g3QjZmRXppMXh0VFZOcGZJaUtIc2RpWFJ2TWZsTGtucERLZmFSTlQtRlBtazNwTkFIUm1STUQ4QWFqRWNwWWFSLTBkU0w5NzZUaFduZm9BQW1IbW02Wmt6MWZzVDhBYmExV3IzZHgwdkswcWNkMElvbDdJWXF6cXViS2PSAYcBQVVfeXFMTWhlM0N4N0I2ZkV6aTF4dFRWTnBmSWlLSHNkaVhSdk1mbExrbnBES2ZhUk5ULUZQbWszcE5BSFJtUk1EOEFhakVjcFlhUi0wZFNMOTc2VGhXbmZvQUFtSG1tNlprejFmc1Q4QWJhMVdyM2R4MHZLMHFjZDBJb2w3SVlxenF1Yktj?oc=5",
+   "https://news.google.com/rss/articles/CBMivgFBVV95cUxNazhadVNwUWFmLXBDTW1IVFpFanhFYVdEbjhXZV9PdXhubTZpTk5SeDhNTWJ0dXZDWU13d1BQblpyX1pid0d2elMyZl92bXpaZE9ZS29CUU5nMDF3V21HcnpGOUYyVEdBajd2azltUUVOWVJCVWI0eE9CbGYtSTlvcFV1S2lRQzBqM2NWSjhQNzZQSW1uYW1HOGlXUlB4b0VQcjVYUU9RV1FSRUwwZVJrN2JGOHFBbWw0ZExtQmRB?oc=5",
+   "https://siliconangle.com/2026/10/20/inception-says-mercury-3-beats-gpt-6-luna-and-claude-haiku-5-5-at-up-to-8x-the-speed/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}

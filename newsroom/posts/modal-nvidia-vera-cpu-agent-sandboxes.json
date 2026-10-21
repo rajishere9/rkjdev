@@ -1,0 +1,145 @@
+{
+ "slug": "modal-nvidia-vera-cpu-agent-sandboxes",
+ "title": "Modal Adopts Nvidia Vera CPUs After Tests Show 2x Agent Throughput",
+ "seoTitle": "Modal Adopts Nvidia Vera CPUs for AI Agent Workloads",
+ "description": "Modal adds Nvidia Vera CPUs to its fleet after internal benchmarks showed double the throughput of Intel and AMD chips in agentic AI sandbox workloads.",
+ "dek": "Internal benchmarks showed the Arm-based processor doubled throughput under heavy container load, though Modal will retain its x86 fleet.",
+ "category": "Chips & Hardware",
+ "tags": [
+  "Nvidia",
+  "Modal",
+  "Server CPUs",
+  "AI Agents",
+  "Cloud Computing"
+ ],
+ "keyTakeaways": [
+  "Modal reported that Nvidia's 88-core Arm-based Vera CPU delivered up to twice the throughput of Intel Xeon and AMD EPYC processors in dense sandbox environments.",
+  "The startup received its first Vera server at its San Francisco office in October 2026, marking its first step away from an exclusively x86 fleet.",
+  "Modal will operate a heterogeneous server architecture, retaining existing AMD and Intel processors because porting all software to Arm immediately is impractical.",
+  "Nvidia projects at least $20 billion in Vera CPU revenue during its current fiscal year, aiming to sell 4 million units."
+ ],
+ "body": "Cloud infrastructure startup Modal announced on October 19, 2026, that it plans to deploy Nvidia's Arm-based Vera processors across its server fleet after internal benchmark tests showed the chip delivered twice the throughput of existing x86 processors in AI agent workloads. The decision marks the company's first architectural shift away from relying exclusively on Intel and AMD chips.\n\nAccording to a [Modal blog post](https://modal.com/blog/nvidia-vera-sandboxes), Nvidia hand-delivered the company's first Vera server to its San Francisco office in mid-October 2026. The processor is being evaluated specifically to power Modal Sandboxes, isolated execution environments where autonomous software agents execute code, install dependencies, and run commands.\n\n## Solving Contention in Multi-Tenant AI Sandboxes\n\nAI agents executing multistep workflows place unique stresses on data center processors. Unlike traditional web services with predictable traffic patterns, sandbox environments run hundreds of concurrent containers on a single host. In these settings, an agent may sit idle for several seconds while awaiting a model completion, followed by an immediate ten-fold surge in CPU usage during tasks such as compilation, file searches, or package installations.\n\n[Modal reported](https://modal.com/blog/nvidia-vera-sandboxes) that these spiky, heterogeneous workloads frequently trigger noisy-neighbor issues on shared machines. When multiple containers experience simultaneous resource spikes, traditional server processors encounter contention that slows down adjacent tasks. In reinforcement learning pipelines, these CPU bottlenecks become particularly expensive because costly GPU clusters must sit idle while waiting for environment rollouts to complete.\n\n[[FIG1]]\n\nTo evaluate server behavior under these conditions, Modal created a testing suite dubbed Agentless Agent Bench, comprising 50 Terminal-Bench oracle tasks and verifiers stripped of network dependencies. In single-task tests running on an unloaded server, Modal found Vera was often faster than comparable chips from Intel, AMD, and Amazon, though not by a wide margin. The performance gap widened substantially once servers were packed with concurrent containers.\n\n## Benchmark Performance Under Heavy Contention\n\nAs reported by [Wccftech](https://wccftech.com/modal-2x-performance-jump-moving-from-intel-amd-cpus-to-nvidia-vera/), Vera sustained its task completion rate under heavy container packing while rival processors reached throughput ceilings. In Modal's tests against Intel Xeon \"Granite Rapids\" processors, Vera yielded up to twice the task throughput per core. Against AMD Zen 5 systems running 150 concurrent containers across 124 enabled logical CPUs, Vera demonstrated more than six times the task throughput.\n\nModal attributed this scaling behavior to Vera's memory subsystem. As noted by [Tom's Hardware](https://www.tomshardware.com/pc-components/cpus/nvidia-vera-cpu-deployed-at-ai-startup-modal-alongside-existing-x86-fleet-internal-testing-showed-2x-throughput-compared-to-amd-and-intel), Vera pairs 88 custom Arm v9.2 Olympus cores—capable of decoding and executing up to 10 instructions per cycle—with 1.2 TB/s of memory bandwidth. Modal claimed the architecture allows servers to pack more active containers per core without experiencing the CPU throttling typical of standard multi-tenant setups.\n\nHowever, Tom's Hardware noted several caveats in Modal's disclosed data. Modal did not release detailed system configurations, specific baseline processor SKUs, or performance-per-watt measurements. Additionally, the benchmarks evaluated Vera against currently shipping x86 chips rather than upcoming processor generations planned by AMD and Intel.\n\n[[FIG2]]\n\n## Heterogeneous Fleet Strategy\n\nAdopting Vera requires Modal to adapt its infrastructure, operating environment, and container image build pipeline to support the Arm instruction set architecture. Modal Chief Executive Erik Bernhardsson stated that the company cannot port its entire software catalog to Arm overnight and will continue purchasing and running x86 processors from AMD and Intel.\n\nInstead of transitioning entirely to Arm, Modal will maintain a heterogeneous server fleet, routing individual workloads to whichever CPU architecture performs most efficiently, according to [Tom's Hardware](https://www.tomshardware.com/pc-components/cpus/nvidia-vera-cpu-deployed-at-ai-startup-modal-alongside-existing-x86-fleet-internal-testing-showed-2x-throughput-compared-to-amd-and-intel). The startup also intends to benchmark future generations of x86 processors as AMD and Intel release them.\n\nThe deployment comes during rapid commercial growth for Modal. The startup recently closed a $750 million funding round led by Accel at a $15.75 billion valuation, as reported by [The Next Web](https://thenextweb.com/news/modal-nvidia-vera-cpu-sandboxes). Modal's sandbox product currently generates $300 million in annual revenue, with total company revenue growing more than 15-fold over the prior year. Modal expects its overall annual revenue to reach $1 billion within the next year.\n\n## Nvidia's Push Into Server CPUs\n\nFor Nvidia, Modal's adoption represents a notable customer win in its effort to establish standalone data center CPUs alongside its graphics accelerators. As reported by [Seeking Alpha](https://seekingalpha.com/news/4654317-modal-gets-first-nvidia-vera-cpu-server-breaking-from-intel-and-amd), Nvidia unveiled Vera in March 2026 as a processor tailored for agentic AI workloads, both as a component of the Vera Rubin GPU platform and as an independent server offering.\n\nNvidia has previously secured Vera commitments from major AI organizations including OpenAI, Anthropic, and Perplexity, with Perplexity reporting 1.5 times faster execution on coding tasks, according to [The Next Web](https://thenextweb.com/news/modal-nvidia-vera-cpu-sandboxes). Nvidia projects that Vera sales will generate at least $20 billion in revenue during its current fiscal year, targeting shipments of 4 million units into an estimated $200 billion total server processor market.\n\nModal has not yet disclosed an exact release date for when customers will be able to run production sandbox workloads on Vera hardware.",
+ "faq": [
+  {
+   "q": "Why is Modal testing Nvidia Vera CPUs?",
+   "a": "Modal tested Nvidia Vera to evaluate its performance in multi-tenant AI sandboxes, where background coding agents and reinforcement learning rollouts require heavy CPU resources and high memory bandwidth."
+  },
+  {
+   "q": "What performance increase did Modal observe?",
+   "a": "Modal reported up to twice the throughput per core compared to Intel Xeon processors and more than six times the throughput of AMD Zen 5 systems under heavy container contention with 150 concurrent tasks."
+  },
+  {
+   "q": "Is Modal replacing all of its Intel and AMD processors?",
+   "a": "No. Modal plans to maintain a heterogeneous fleet, continuing to run x86 processors from Intel and AMD alongside Vera while evaluating future processor releases from all three vendors."
+  },
+  {
+   "q": "What architectural modifications does Modal need to make for Vera?",
+   "a": "Because Vera uses the Arm v9.2 instruction set architecture rather than x86, Modal must modify its cloud infrastructure and container image build pipeline to support Arm binaries."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An illuminated server rack in a modern high-tech data center with glowing internal circuit boards and copper heat pipes, casting blue and green light across dark metallic server chassis",
+  "alt": "A glowing server chassis installed in a data center rack",
+  "caption": "Illustration: High-density server hardware configured for multi-tenant cloud workloads.",
+  "src": "img/modal-nvidia-vera-cpu-agent-sandboxes/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 49482,
+  "small": "img/modal-nvidia-vera-cpu-agent-sandboxes/hero-640.webp",
+  "og": "img/modal-nvidia-vera-cpu-agent-sandboxes/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/modal-nvidia-vera-cpu-agent-sandboxes/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "Engineers in cleanroom garments working inside a bright laboratory assembling a multi-socket processor motherboard on an anti-static workbench",
+   "alt": "Hardware engineers working on a server motherboard in a laboratory",
+   "caption": "Illustration: Hardware testing and server configuration inside Modal's San Francisco office.",
+   "slot": "FIG1",
+   "src": "img/modal-nvidia-vera-cpu-agent-sandboxes/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 47890,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A modern open-plan technology company office with server components displayed on a table near large glass windows overlooking a city skyline",
+   "alt": "Server equipment in a contemporary software startup office",
+   "caption": "Illustration: Delivery and benchmarking of next-generation hardware in a cloud infrastructure office.",
+   "slot": "FIG2",
+   "src": "img/modal-nvidia-vera-cpu-agent-sandboxes/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 41890,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://www.tomshardware.com/pc-components/cpus/nvidia-vera-cpu-deployed-at-ai-startup-modal-alongside-existing-x86-fleet-internal-testing-showed-2x-throughput-compared-to-amd-and-intel",
+   "title": "Modal taps Nvidia Vera CPUs after firm's internal tests show 2x throughput over Intel and AMD chips — AI agentic workflows said to favor Arm chips, but firm will keep x86 chips deployed in heterogene…",
+   "site": "tomshardware.com",
+   "published": 1792497000000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://thenextweb.com/news/modal-nvidia-vera-cpu-sandboxes",
+   "title": "Modal says Nvidia’s Vera CPU doubles throughput for its AI sandboxes",
+   "site": "TNW | Artificial-intelligence",
+   "published": 1792432815000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://modal.com/blog/nvidia-vera-sandboxes",
+   "title": "NVIDIA Vera CPUs double throughput for Modal Sandboxes",
+   "site": "Modal",
+   "published": 1792418460000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://seekingalpha.com/news/4654317-modal-gets-first-nvidia-vera-cpu-server-breaking-from-intel-and-amd",
+   "title": "Modal gets first Nvidia Vera CPU server, breaking from Intel and AMD",
+   "site": "seekingalpha.com",
+   "published": 1792426348000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://wccftech.com/modal-2x-performance-jump-moving-from-intel-amd-cpus-to-nvidia-vera/",
+   "title": "Modal Sees A 2x Performance Jump After Moving To NVIDIA’s Vera CPU From Intel & AMD, Says “Vera Gets Better Under Heavy Load”",
+   "site": "Wccftech",
+   "published": 1792501203000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792548491035,
+ "updatedAt": 1792548491035,
+ "foundVia": "Techmeme, Google News and tomshardware.com",
+ "check": {
+  "claims": 41,
+  "score": 10
+ },
+ "story": {
+  "id": "Pbebfa492",
+  "score": 84,
+  "items": [
+   "https://www.techmeme.com/261019/p31#a261019p31",
+   "https://news.google.com/rss/articles/CBMib0FVX3lxTE0wY0gxNlFFV3FhM0RtZG1iSDhlQW5QWWNld3J0UWdMVlNvd3FUTzREalFLN1czcEVFTHdmWnZPTkhfZVJTRmI0NTdNanJfR1dWZlZ1dlF6SG1fNndUOVk1azRWYlV3VlNtUFVCbTdRdw?oc=5",
+   "https://www.tomshardware.com/pc-components/cpus/nvidia-vera-cpu-deployed-at-ai-startup-modal-alongside-existing-x86-fleet-internal-testing-showed-2x-throughput-compared-to-amd-and-intel"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
