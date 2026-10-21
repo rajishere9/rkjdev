@@ -1,0 +1,167 @@
+{
+ "slug": "claude-designs-scorpion-neurotoxin-protein-binders",
+ "title": "Anthropic's Claude Designs 17 Protein Binders Against Scorpion Venom",
+ "seoTitle": "Claude AI Designs Scorpion Neurotoxin Protein Binders",
+ "description": "Anthropic used Claude to design 17 confirmed protein binders against scorpion venom neurotoxins across a 64-hour run, advancing computational drug discovery.",
+ "dek": "Anthropic used an internal research model to design candidate minibinders targeting deadly scorpion toxins, with two contract laboratories confirming 17 working designs.",
+ "category": "Research",
+ "tags": [
+  "Anthropic",
+  "Claude",
+  "Protein Design",
+  "Drug Discovery",
+  "Biotechnology",
+  "Artificial Intelligence"
+ ],
+ "keyTakeaways": [
+  "An internal research model of Claude generated 318,484 protein designs over 64 hours, consuming approximately 10,000 GPU hours.",
+  "Laboratory testing by Adaptyv Bio and Twist Bioscience confirmed 17 out of 211 tested designs bound to scorpion neurotoxins at or tighter than 1 micromolar affinity.",
+  "Two candidates targeting the Mexican scorpion toxin Cn2 exhibited single-digit nanomolar binding affinity and competed with a known neutralizing antibody.",
+  "None of the candidate designs bound to multiple toxins simultaneously, and Anthropic emphasizes that none have been tested for neutralization in living cells or animals.",
+  "Anthropic has made the sequences and experimental data for all 211 tested designs publicly available to researchers."
+ ],
+ "body": "On October 20, 2026, [Anthropic announced](https://www.anthropic.com/research/claude-scorpion-toxin-binder-design) that an internal research model operating inside Claude Science autonomously planned and directed the computational design of protein binders targeting lethal scorpion neurotoxins. Working from an initial prompt and four follow-up directions developed with investment research firm Citrini Research, the model screened hundreds of thousands of candidates over 64 hours. Independent contract laboratories Adaptyv Bio and Twist Bioscience physically synthesized and evaluated 211 of those designs, confirming that 17 successfully bound their target toxins.\n\nThe project targeted scorpion envenomation, an affliction classified by public health researchers as a neglected tropical disease. According to Anthropic's research report, scorpions sting more than 1.2 million people annually, resulting in upwards of 3,250 deaths, mostly among children in regions with scarce access to intensive medical facilities. Traditional antivenom development depends on milking venom from thousands of live scorpions, immunizing horses over months, and harvesting the animal antibodies—an expensive, supply-constrained process that yields treatments effective against only limited subsets of toxins.\n\n[[FIG1]]\n\n## Autonomous Computational Design Across 64 Hours\n\nAnthropic initiated the campaign to evaluate whether an AI model could guide nonexpert researchers in addressing an underfunded biomedical problem. The initial prompt defined the five neurotoxin targets, protein design and folding tools, and rules for novelty, scoring, and filtering, while Claude set the quality thresholds and decided to use 12 design tools. Claude selected structural models by querying the Protein Data Bank and the AlphaFold database, identified five functional interaction hotspots on each toxin, and directed the design pipeline.\n\nOver the course of the 64-hour campaign, which required on the order of 10,000 GPU hours, Claude generated 318,484 candidate minibinders—small, synthetic proteins designed from scratch to lock onto specific target sites. The system co-folded and evaluated 553,052 candidate-toxin complexes in silico, automatically eliminating any designs with structural homology to existing toxins or known natural proteins. As [reported by Anthropic](https://www.anthropic.com/research/claude-scorpion-toxin-binder-design), Claude operated entirely autonomously for the first 24 hours before researchers intervened with four follow-up prompts to guide multi-target binder strategies.\n\nClaude initially selected 180 top candidates for physical synthesis and drafted automated emails transmitting the sequences directly to gene synthesis provider Twist Bioscience. The research team added 31 supplemental designs with Claude's assistance, bringing the total sent to the wet lab to 211 candidates.\n\n## Independent Laboratory Validation and Binding Metrics\n\nThe 211 candidates were manufactured and evaluated by two independent contract research organizations using surface plasmon resonance (SPR), an instrument that tracks molecular association and dissociation in real time to establish the dissociation constant (KD). To ensure rigorous verification, the two facilities employed different expression methods:\n\n* **Adaptyv Bio** synthesized the proteins using a cell-free system powered by extracted bacterial cellular machinery.\n* **Twist Bioscience** expressed the candidates in mammalian human kidney cells as fusions to antibody Fc stems.\n\nTo qualify as a verified binder, a candidate had to register binding across all experimental replicates at both facilities (with the exception of one toxin evaluated only at Adaptyv Bio) with a KD of 1 micromolar (µM) or tighter. Additionally, candidates were required to demonstrate zero binding activity against CLEC12A, an unrelated human protein used to rule out sticky, non-specific cross-reactivity.\n\nOf the 211 candidates tested, 17 met all qualification criteria. When evaluated against the 60 candidates explicitly engineered against single toxins, 11 passed, reflecting an 18% hit rate that Anthropic noted is consistent with conventional computational protein design workflows.\n\n[[FIG2]]\n\n## Target Breakdown and Single-Digit Nanomolar Affinities\n\nThe campaign targeted five distinct neurotoxins from four regions, each known to bind voltage-gated sodium channels in nerve cell membranes and trigger uncontrolled adrenaline release, pulmonary edema, and heart failure. The experimental validation confirmed binders across four of the five targets:\n\n* **Cn2 (Mexico, *Centruroides noxius*):** 7 confirmed binders\n* **AaH I (North Africa):** 4 confirmed binders\n* **AaH II (North Africa):** 4 confirmed binders\n* **LqhIII (Middle East):** 2 confirmed binders\n* **Ts1 (Brazil):** 0 confirmed binders\n\nAs detailed in [coverage by Benzinga](https://www.benzinga.com/markets/private-markets/26/10/62483196/anthropics-claude-designed-hundreds-of-thousands-of-proteins-in-64-hours-to-target-scorpion-venom), the strongest performers were two minibinders designated Cn2-B1 and Cn2-B2. Both bound the Mexican scorpion neurotoxin Cn2 with single-digit nanomolar affinity across tests in both laboratories. In subsequent competition experiments, both binders prevented the attachment of LR, an established antibody known to protect mice by physically shielding the sodium-channel binding site of Cn2. Because Cn2-B1 and Cn2-B2 attach on or near the same epitope as antibody LR, researchers infer they are likely capable of blocking the toxin's interaction with human ion channels.\n\nBenchmark natural antibodies and nanobodies historically developed against Cn2 and AaH II possess sub-nanomolar affinities (KD under 1 nM). Claude's binders did not surpass the tightest existing natural antibodies.\n\n## Technical Limitations and the Antivenom Gap\n\nDespite the successful binding results, Anthropic explicitly stated that it has not produced an antivenom. According to [AI Weekly's analysis](https://aiweekly.co/alerts/claude-autonomously-designs-17-scorpion-toxin-binders-in-64-hours), significant development gaps remain before any computational binder can serve as a clinical therapy.\n\nFirst, the physical assays evaluated binding against recombinant proteins produced from cloned genes rather than native toxins isolated directly from scorpion venom. Second, neither Anthropic nor its partner laboratories performed in vitro neutralization assays—such as patch-clamp electrophysiology to confirm that the minibinders prevent sodium channels from misfiring—nor did they evaluate protection in living animals.\n\nFurthermore, Claude failed entirely at multi-toxin design. Although the team tested 91 candidates engineered to bind all five toxins and 60 targeting specific toxin families, zero multi-toxin designs met the binding criteria against more than one target. While the five toxins share a common structural fold, their amino acid sequences share only 26% to 62% sequence identity. Anthropic noted that this failure could stem from prompting limits, deficiencies in existing structural prediction models, or inherent biophysical trade-offs that make universal cross-reactivity extraordinarily difficult.\n\n[[FIG3]]\n\n## Why It Matters for Drug Discovery\n\nExternal researchers reviewing the findings emphasized that while binding is a critical milestone, it represents only the opening phase of drug development. Susana Vázquez Torres, a structural biology researcher at the Spanish National Cancer Research Centre, noted that obtaining tight binders computationally is no longer the primary bottleneck in therapeutics; the challenge lies in developing molecules that can become real drugs that are safe, affordable, and widely accessible.\n\nTimothy P. Jenkins, an associate professor at the Technical University of Denmark, highlighted the broader implications for neglected diseases. Jenkins stated that designing credible binders against five toxins in parallel within days demonstrates an AI-driven shift that could accelerate discovery pipelines historically constrained by a lack of commercial investment.\n\nAnthropic has made the amino acid sequences and experimental measurements for all 211 tested candidates [publicly available](https://www.anthropic.com/research/claude-scorpion-toxin-binder-design) to enable independent laboratories to validate neutralization, test native venom binding, and explore further therapeutic optimization.",
+ "faq": [
+  {
+   "q": "Did Claude create an antivenom for scorpion stings?",
+   "a": "No. Anthropic explicitly noted that it has not produced an antivenom. The team confirmed that 17 designed proteins bind target neurotoxins in laboratory instruments, but has not conducted cellular neutralization experiments or animal trials to demonstrate protection against venom."
+  },
+  {
+   "q": "How many protein designs did Claude generate during the experiment?",
+   "a": "Claude generated 318,484 candidate protein designs over 64 hours, using roughly 10,000 GPU hours. The model selected 180 designs, and researchers added 31 more with Claude's assistance, resulting in 211 designs tested in physical wet laboratories."
+  },
+  {
+   "q": "Which scorpion neurotoxins were successfully bound?",
+   "a": "The 17 successful binders targeted four toxins: Cn2 from Mexico (7 binders), AaH I from North Africa (4 binders), AaH II from North Africa (4 binders), and LqhIII from the Middle East (2 binders). None bound Ts1 from Brazil, and none successfully bound multiple toxins simultaneously."
+  },
+  {
+   "q": "Who conducted the laboratory testing of the AI designs?",
+   "a": "Physical testing was carried out by two independent contract research organizations: Adaptyv Bio, using a bacterial cell-free protein synthesis system, and Twist Bioscience, using a mammalian human kidney cell expression platform."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern molecular biology laboratory where glowing computational 3D models of complex protein structures hover above an automated surface plasmon resonance sensor instrument, flanked by laboratory glassware and robotic liquid handlers in cool blue and amber light.",
+  "alt": "Digital visualization of protein structures interacting in a high-tech biotechnology laboratory setting",
+  "caption": "Illustration: Computational protein structures designed to target venom neurotoxins being evaluated in a laboratory environment.",
+  "src": "img/claude-designs-scorpion-neurotoxin-protein-binders/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 54638,
+  "small": "img/claude-designs-scorpion-neurotoxin-protein-binders/hero-640.webp",
+  "og": "img/claude-designs-scorpion-neurotoxin-protein-binders/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/claude-designs-scorpion-neurotoxin-protein-binders/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A life science researcher in a sterile cleanroom inspecting a multi-screen computational workstation showing coiled ribbon diagrams of synthetic minibinders interacting with a scorpion neurotoxin surface.",
+   "alt": "A scientist analyzing synthetic protein binder ribbon models on high-resolution laboratory displays",
+   "caption": "Illustration: A researcher reviewing candidate minibinder structures designed by an AI model to attach to neurotoxins.",
+   "slot": "FIG1",
+   "src": "img/claude-designs-scorpion-neurotoxin-protein-binders/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 34632,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "An automated microfluidic biochip running surface plasmon resonance experiments, showing illuminated fluid channels where small designed protein molecules bind to immobilized target proteins.",
+   "alt": "Close-up view of an optical biosensor chip measuring real-time protein binding kinetics",
+   "caption": "Illustration: Surface plasmon resonance sensors measuring the dissociation constants and binding strength of candidate proteins.",
+   "slot": "FIG2",
+   "src": "img/claude-designs-scorpion-neurotoxin-protein-binders/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 29824,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "Two scientists in protective coats and eyewear examining glass test vials and computer data charts in a brightly lit pharmaceutical development laboratory.",
+   "alt": "Two biotechnology researchers discussing analytical data next to lab bench equipment",
+   "caption": "Illustration: Scientists evaluating the translation of computational protein designs into candidate therapeutic molecules.",
+   "slot": "FIG3",
+   "src": "img/claude-designs-scorpion-neurotoxin-protein-binders/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 39688,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
+   "title": "How Claude designed protein binders against scorpion neurotoxins",
+   "site": "Anthropic",
+   "published": 1792454400000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://www-cdn.anthropic.com/31ac578806cffd8b3d92d8affe6edc4c04d502e1.pdf",
+   "title": "",
+   "site": "www-cdn.anthropic.com",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://eu.36kr.com/en/p/4034833727100038",
+   "title": "Claude Designs 310,000 Novel Proteins in Just 64 Hours: 17 Successfully Verified by Experiments",
+   "site": "eu.36kr.com",
+   "published": null,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.benzinga.com/markets/private-markets/26/10/62483196/anthropics-claude-designed-hundreds-of-thousands-of-proteins-in-64-hours-to-target-scorpion-venom",
+   "title": "Anthropic's Claude Designed Hundreds Of Thousands Of Proteins In 64 Hours To Target Scorpion Venom",
+   "site": "benzinga.com",
+   "published": 1792514340000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://aiweekly.co/alerts/claude-autonomously-designs-17-scorpion-toxin-binders-in-64-hours",
+   "title": "Claude Autonomously Designs 17 Scorpion-Toxin Binders in 64 Hours",
+   "site": "AI Weekly",
+   "published": 1792537300000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://explainx.ai/blog/claude-scorpion-toxin-protein-binders-anthropic-2026",
+   "title": "Claude Scorpion Toxin Binders: 17 of 211 Designs Worked | explainx.ai Blog | explainx.ai",
+   "site": "explainx.ai",
+   "published": 1792454400000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792552387338,
+ "updatedAt": 1792552387338,
+ "foundVia": "Hacker News and Reddit",
+ "check": {
+  "claims": 33,
+  "score": 10
+ },
+ "story": {
+  "id": "Pe3a25ed6",
+  "score": 84,
+  "items": [
+   "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
+   "https://www.reddit.com/r/singularity/comments/1xb2pme/a_fiveperson_investment_team_with_almost_no/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
