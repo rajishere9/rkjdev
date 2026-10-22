@@ -1,0 +1,179 @@
+{
+ "slug": "anthropic-launches-claude-duet-proactive-ai-agent",
+ "title": "Anthropic Unveils Claude Duet Proactive AI Agent for Pro and Max Users",
+ "seoTitle": "Anthropic Launches Claude Duet Proactive Agent",
+ "description": "Anthropic has launched Claude Duet, a proactive AI assistant running on Opus 5.5 that monitors background tasks for Claude Pro and Max subscribers.",
+ "dek": "Anthropic's new proactive assistant operates in a cloud virtual machine, monitoring connected services to surface morning briefs and handle administrative workflows.",
+ "category": "Agents & Tools",
+ "tags": [
+  "Anthropic",
+  "Claude Duet",
+  "AI Agents",
+  "Opus 5.5",
+  "Artificial Intelligence"
+ ],
+ "keyTakeaways": [
+  "Claude Duet is built around Anthropic's Opus 5.5 model and runs in a cloud virtual machine equipped with a browser.",
+  "The agent operates through dedicated iOS and Android apps as well as claude.ai for U.S. Pro and Max subscribers via a waitlist.",
+  "Duet conducts background checks every few hours, generates daily morning briefings, and integrates with over 6,000 connectors.",
+  "User approval is strictly required before sending messages, signing agreements, making payments, or deleting data.",
+  "Duet directly counters competing offerings from Meta and OpenAI, including Muse and Dots."
+ ],
+ "body": "Anthropic introduced Claude Duet on October 21, 2026, targeting professionals and small business owners. Powered by Anthropic's Opus 5.5 model, the new tool functions as an always-on assistant capable of performing tasks in the background, preparing morning briefings, and independently flagging items requiring human input. The tool has opened as a research preview via a waitlist for U.S. subscribers on Claude Pro and Max plans, as reported by [VentureBeat](https://venturebeat.com/technology/anthropics-answer-to-muse-is-here-claude-duet-a-mobile-and-desktop-ai-agent-that-takes-actions-proactively).\n\nRather than relying on continuous user prompts, Claude Duet operates in a cloud computing environment that remains active after a user closes their laptop or locks their smartphone. Anthropic is offering the agent through dedicated mobile applications on iOS and Android alongside claude.ai, positioning it directly against rival personal agents from Meta and OpenAI.\n\n## How Claude Duet Operates Across Cloud Virtual Machines\n\nUnlike traditional chatbots that execute requests only while an active session window is open, Claude Duet runs inside a remote virtual machine equipped with a web browser. According to [9to5Mac](https://9to5mac.com/2026/10/21/anthropic-takes-on-chatgpt-dots-and-meta-muse-with-claude-duet/), Duet runs on its own cloud-based computer, allowing it to continue working even after users close the app.\n\n[[FIG1]]\n\nDuet carries forward context previously established in Claude, integrating existing user memory, skills, and third-party application connections. Users interact with the assistant using text or voice in a persistent conversation thread, or they can establish distinct channels for individual projects that share a unified memory pool.\n\nEach day begins with a morning briefing that Duet compiles from connected services, summarizing priority tasks and drafting prospective replies. Throughout the workday, the assistant scans connected accounts every few hours to detect developments that warrant notification. Anthropic noted that continuous real-time monitoring is intentionally avoided because nonstop background checks would exhaust subscribers' plan limits rapidly, as detailed by [Engadget](https://engadget.com/2293646/claude-duet-is-anthropics-answer-to-meta-muse-and-openai-dots/).\n\nUsers track ongoing operations through a dedicated Tasks tab. Claude Duet posts updates into the conversation thread when work finishes or requires input. Crucially, Anthropic designed the system so that only human users can mark tasks as completed.\n\n## Workplace Workflows and Connector Ecosystem\n\nAnthropic built Claude Duet to support more than 6,000 plugins and connectors accessible in the Claude Marketplace. Supported connectors include standard workplace applications such as Gmail, Google Calendar, Google Drive, Slack, HubSpot, QuickBooks, Calendly, and Docusign, according to the [Claude Help Center](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet).\n\nThe agent handles several complex operational tasks:\n\n* **Financial management:** Investigating overdue balances in Stripe or QuickBooks, composing follow-up correspondence, and building financial projections.\n* **People operations and recruiting:** Gathering employee hours, bonuses, and reimbursements to process payroll via Gusto, or drafting job descriptions and publishing listings to LinkedIn.\n* **Customer outreach and legal:** Drafting communications from HubSpot CRM records and preparing formal agreements for signature through Docusign.\n* **E-commerce and purchasing:** Maintaining Shopify digital storefronts and generating promotional assets in Canva. Purchases can be conducted through Stripe Link and Shopify Shop Pay, where Duet requests approval before executing transactions using virtual single-use cards that hide real account numbers.\n\nFor online destinations that lack dedicated connectors, Claude Duet navigates the web using its integrated cloud browser.\n\n[[FIG2]]\n\n## Safety Controls, Approvals, and Limitations\n\nTo manage the operational risks of autonomous software, Anthropic integrated strict approval gates into Duet. The software cannot independently transmit communications, complete financial payments, sign legal agreements, or delete records without explicit user confirmation. Furthermore, Anthropic completely prohibits securities trades and balance transfers between financial institutions, even if a user authorizes them, as reported by [VentureBeat](https://venturebeat.com/technology/anthropics-answer-to-muse-is-here-claude-duet-a-mobile-and-desktop-ai-agent-that-takes-actions-proactively).\n\nSecurity defenses feature a dedicated sensitive-information classifier and safety system prompt. The model outright blocks transmission of government identity numbers and payment card numbers. Transmission of personal health or private financial details requires affirmative consent from the user. Credential isolation keeps passwords and authentication tokens out of direct model view, while prompt-injection defenses operate as a separate architecture safeguard.\n\nAnthropic acknowledged current operational limitations in documentation cited by [The Verge](https://theverge.com/ai-artificial-intelligence/1015843/anthropic-claude-duet-ai-agent). The preview edition can occasionally misinterpret conversations or incorrectly calibrate the urgency of tasks. Additionally, users cannot view the virtual browser's interface directly during execution, and Anthropic noted the model is less proficient at personal consumer errands such as reserving travel tickets.\n\n## Competition Across the Personal Agent Sector\n\nClaude Duet enters a competitive field dominated by recent agent launches from major AI developers. As highlighted by [Business Insider](https://businessinsider.com/anthropic-answers-meta-openai-new-personal-agent-claude-duet-2026-10), the product was developed under the leadership of Karan Ahuja, who previously headed product management at Meta Superintelligence Labs before joining Anthropic in August 2026.\n\nMeta introduced its Muse agent in September 2026 across WhatsApp and a standalone application. Data from Sensor Tower cited by VentureBeat showed Muse logged 10.9 million downloads and 2.5 million daily active users by mid-October 2026, while Apptopia reported total installations topped 14 million by October 21. Muse operates in isolated cloud environments with a free entry tier focused on everyday errands and purchases.\n\nMeanwhile, OpenAI offers Dots, an agent powered by GPT-6 Astra that integrates into ChatGPT, Slack, and Microsoft Teams to address software development and project coordination. Dots requires a Pro tier subscription starting at $100 per month, whereas Anthropic plans to make Duet available to $20-per-month Claude Pro users once generally released.\n\nOther market participants noted by VentureBeat include Portola's conversational companion agent Tolan, which lacks business tool integrations, and Spear Street Technology's Instinct, an SMS- and phone-based assistant focused on errand delegation.\n\n## Pricing, Usage Quotas, and Availability\n\nClaude Duet is currently restricted to U.S.-based individual subscribers on Claude Pro ($20 monthly or $200 annually) and Claude Max (starting at $100 monthly), accessed via a waitlist roll-out as described by [9to5Google](https://9to5google.com/2026/10/21/claude-duet-anthropic-ai-agent-waitlist/). Access is provided at no extra fee during the preview, but Duet activity consumes standard subscription message allowances.\n\nBackground check-ins and complex generation tasks both draw down account usage quotas. To cushion onboarding, Anthropic provides preview participants with a one-time reset of five-hour and weekly usage allowances, valid through November 30, 2026.\n\nDuet is not yet available for Team or Enterprise organizational tiers, and Anthropic has not released a Duet developer API, benchmark scores, or an official enterprise deployment timeline.",
+ "faq": [
+  {
+   "q": "Who can access Claude Duet during the preview?",
+   "a": "Claude Duet is currently available to Claude Pro and Claude Max subscribers located in the United States via a waitlist. It is not currently available on Team or Enterprise subscription plans."
+  },
+  {
+   "q": "What tasks can Claude Duet execute without user approval?",
+   "a": "Duet can review connected data, search past conversations, compile morning briefings, and prepare draft files independently. However, it requires explicit human approval before sending a message, making a payment, signing documents, or deleting content."
+  },
+  {
+   "q": "How does Claude Duet handle financial transactions and payments?",
+   "a": "Duet supports purchases via Stripe Link and Shopify Shop Pay by requiring confirmation from the user and executing transactions through a single-use virtual card that hides actual payment card numbers. Direct transfers between financial accounts and securities trading remain completely prohibited."
+  },
+  {
+   "q": "Does running Claude Duet consume regular Claude usage allowances?",
+   "a": "Yes. Claude Duet shares standard session and weekly usage limits with Claude. Background checks and automated tasks consume allowances, though admitted preview testers receive a one-time allowance reset valid through November 30, 2026."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An executive working at an office desk in early morning light, reviewing automated task summaries presented alongside a glowing digital tablet in a modern workstation",
+  "alt": "An illustration of a professional reviewing an automated morning briefing on a digital screen",
+  "caption": "Illustration: Claude Duet operates in cloud virtual machines to prepare morning briefings and track tasks across connected business tools.",
+  "src": "img/anthropic-launches-claude-duet-proactive-ai-agent/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 39266,
+  "small": "img/anthropic-launches-claude-duet-proactive-ai-agent/hero-640.webp",
+  "og": "img/anthropic-launches-claude-duet-proactive-ai-agent/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/anthropic-launches-claude-duet-proactive-ai-agent/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A modern cloud computing data center with glowing server racks processing automated software agents in the background",
+   "alt": "An illustration representing cloud computing infrastructure executing tasks asynchronously",
+   "caption": "Illustration: Duet runs tasks inside cloud-hosted virtual machines, allowing workflows to continue after users close their devices.",
+   "slot": "FIG1",
+   "src": "img/anthropic-launches-claude-duet-proactive-ai-agent/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 40070,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A small business manager reviewing invoices, spreadsheets, and logistics schedules in a modern open workspace",
+   "alt": "An illustration of a small business professional supervising multiple automated business processes",
+   "caption": "Illustration: Anthropic designed Duet for professionals and small business operators handling operations like invoicing and customer outreach.",
+   "slot": "FIG2",
+   "src": "img/anthropic-launches-claude-duet-proactive-ai-agent/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 35036,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://venturebeat.com/technology/anthropics-answer-to-muse-is-here-claude-duet-a-mobile-and-desktop-ai-agent-that-takes-actions-proactively",
+   "title": "Anthropic's answer to Muse is here: Claude Duet, a mobile and desktop AI agent that takes actions proactively",
+   "site": "venturebeat.com",
+   "published": 1792540800000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://www.businessinsider.com/anthropic-answers-meta-openai-new-personal-agent-claude-duet-2026-10",
+   "title": "Anthropic launches Claude Duet, its answer to Meta and OpenAI's personal agents",
+   "site": "Business Insider",
+   "published": 1792614543480,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://www.engadget.com/2293646/claude-duet-is-anthropics-answer-to-meta-muse-and-openai-dots/",
+   "title": "Claude Duet Is Anthropic's Answer To Meta Muse And OpenAI Dots",
+   "site": "Engadget",
+   "published": 1792616599000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://9to5mac.com/2026/10/21/anthropic-takes-on-chatgpt-dots-and-meta-muse-with-claude-duet/",
+   "title": "Anthropic takes on ChatGPT Dots and Meta Muse with Claude Duet",
+   "site": "9to5Mac",
+   "published": 1792611565000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1015843/anthropic-claude-duet-ai-agent",
+   "title": "Anthropic takes on Muse with Claude Duet, its new AI agent",
+   "site": "The Verge",
+   "published": 1792612400000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://9to5google.com/2026/10/21/claude-duet-anthropic-ai-agent-waitlist/",
+   "title": "Claude Duet is Anthropic’s proactive AI agent answer to Muse and OpenAI’s Dots [Video]",
+   "site": "9to5Google",
+   "published": 1792615500000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://support.claude.com/en/articles/17631495-get-started-with-claude-duet",
+   "title": "Get started with Claude Duet",
+   "site": "Claude Help Center",
+   "published": null,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792633094436,
+ "updatedAt": 1792633094436,
+ "foundVia": "Hacker News, 9to5mac.com and Google News",
+ "check": {
+  "claims": 35,
+  "score": 10
+ },
+ "story": {
+  "id": "P43463580",
+  "score": 88,
+  "items": [
+   "https://claude.com/product/claude-duet",
+   "https://9to5mac.com/2026/10/21/anthropic-takes-on-chatgpt-dots-and-meta-muse-with-claude-duet/",
+   "https://news.google.com/rss/articles/CBMioAFBVV95cUxNcm85NURDZEFFWGNUb0V4anVHWllXX0tieUdJLThVZEFRVTFkVGYzcXhtSFNGbW5aZjJCZHhoeDVRNEZjRjh1N2E1THk3TTB4ckxucUVxSlRmUHdBTTBIdktEUFNYREc3blNEaEY2SktVd3BXdlJVcll1TnUtZHE4a1RrSGxhWnY5c0JhdV9qeUI5TzcydDIzcnJCTWg3UzN6?oc=5",
+   "https://www.reddit.com/r/ClaudeAI/comments/1xbwkgf/claude_duet_anthropic_just_casually_dropped_the/",
+   "https://news.google.com/rss/articles/CBMia0FVX3lxTE1pYzdSRjZBUnJFZ1Utalp5YkQwUmVIS0piUmxUZnlieHpObW1VVFk2NER4V2hObnNhRlBvdkJ4alZNUFpHZjE4dXR2STRFeXJweTYtbU5lRXF3N0RsamxFMXpzNTRpY3MzNGdr?oc=5",
+   "https://www.theverge.com/ai-artificial-intelligence/1015843/anthropic-claude-duet-ai-agent",
+   "https://news.google.com/rss/articles/CBMirwFBVV95cUxPRDJYNEVlX0RpSXZrNldLY2dmYjZtNVgwcERJTEN1MklkQVh5QUNoX25RX1hLYl9zWi1UMG90Ym5US2dsNEJKLU83aUhzOTNZVWp1WExoaEJwUC1sSFNEZEVjNmwwZF9fNjFqWFFYOGRieW1zQmg4aXhKdVVqa1phQ21DN0dMeW1BTDZjcW5zRHBRLWFVTXo0YzBzMWJUWm9kajQ5ZjJpZDFzclBsSFg0?oc=5",
+   "https://news.google.com/rss/articles/CBMingFBVV95cUxQWGdoR054d2JZNk1OTmRKbFJDenRZWkRqUlBWaHpYTG1GcUF3Z2tBcEhrUlotNFE1dUxRR0JoTEdYaEtSa2ZWcTA2aDdVak9KckszOUZZa2xxMDJXQUQxeGNyclNfNTg4SFlkUllsblJmVUlNSEIxZ2g0SmYtSXNjTnA0YmJXUzhSZTA0elIzZUtLM0hoR25RNzZnU3hlUQ?oc=5",
+   "https://www.techmeme.com/261021/p49#a261021p49",
+   "https://www.engadget.com/2293646/claude-duet-is-anthropics-answer-to-meta-muse-and-openai-dots/",
+   "https://9to5google.com/2026/10/21/claude-duet-anthropic-ai-agent-waitlist/",
+   "https://www.reddit.com/r/ClaudeAI/comments/1xbx2hk/anthropic_just_announced_claude_duet/",
+   "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNSFZYTW81ai1KaU91ZGZUV1VlUkFrRkVfWVpraWlRMl9rWXJnUXV2cnZ3dlFBUUtCeldidHR0MVhJdmY3MGVzSzZDYnYxODNQNXdxS1Z5ZVNIcHd4bklybjBOR3hQeEhwUkFBVW1WdVA1Q0V2WTZfbFAwSVdPcVRKdG5jc3dhYzZiYm01X1hqbDR2ZlVtblF6NmZUWVV0TFlVSkZJWHJUeG_SAa4BQVVfeXFMUDZ1eGN2Uncyczl3by1yNFAxQlJfd2JmSDBaX05QaEpFb0tGY3FJWGY4R2RzcXBRMXRYdzFhTWFIVEluT0I5MExZZG9hX3U0MXliVFJYS3hxN0FtME5obUdWOW9CZTBYdkpsVXFHN2d1VXp2VVI2NG5BNFF4MkEwLTlmZkVWZ016RkRtRHNsUi1RSEVERG1SNzB2aFlVLXFNSF80dEtDUnNZN05RSlh3?oc=5",
+   "https://news.google.com/rss/articles/CBMidkFVX3lxTFBPTXo4TnBwRnEtcVktaWNyMXhDYldRRUxqS0dfeko1NjZtbFJuWElnNHp6WU5xRXNwSVd3SV85b2x2d21CbnRmcWh1LXgwaHNFZUV4dmZqM2NIYldvQlRUa0xYZm5GUWVHeloxTk85NkQ0ME5oeFE?oc=5",
+   "https://news.google.com/rss/articles/CBMimgFBVV95cUxNT3ZHZ3d6dlM3WHM4YzV5dWE5UjQ4VTQtYUx0S2Myc0ppdDNvRXdmLTFPbzVxS29iWkZ6RUtRcDZ6NGNMUTBQZ3pzWTVsbXVzWDJ5bW8xWnZ4Z1VsV3YxempNcDY2NmhsYUEwYWZ1WTlfQ29OSF9VREFKTVN1REI2M2ZDZG43QkhVM2lZYWE2VFE3SmhqcDB5M0VR?oc=5",
+   "https://shattered.io/claude-duet-anthropic-ai-agent-opus-5-5-2026/",
+   "https://news.google.com/rss/articles/CBMingFBVV95cUxNRmtuVmJURnNtamVSeC1mMGdmYmZOWVR2MExlTkVabDM1LTJ5Z2w0TVN0M1laQ3pTczUzYnhBeWJ3clRKNFlYUTRZNzBRTnNGTG5JcktGRGFQVFlERlRDVWFCUWZVMUs1Nmltck5SRjYtckxaOWN4SHBrNThtamdYUnZaZFZaZS02emtYbWx1TDhBUjczZUtsdHVQOU9IZw?oc=5",
+   "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNM2tRTXBpSGNESlpzYXpSYXZuTzFuUjNITVlCTnpUV0x1bDVINkxFZWFWUF9ObTNaUUFia1hLOVpMdGx5NWJfeERERjJwVmhUUjQ4QzBlNE9QeEtHcjZfLUtoZU1FN1g4S0RDNGUwUTl0X1BqV1NUV0hORFE5alVtVHpZaEFrdHN0NjFoUjFxVFNKcmFONVRoRkZtNU1mYjhBWGtZYTVGTGtfdU5URjZmSHBlQ082T2d1QnZtY3VpcDcxRWM?oc=5",
+   "https://claude.com/resources/articles/claude-duet",
+   "https://news.google.com/rss/articles/CBMiogFBVV95cUxPQkZFNGVZc2Q2Q3VJYWVFNjFlOUh1NE1aNWFrZHlzOFlEMVpQU0xFQkFDSW4ydXljV1gtRnBBVzZjWi11Z3dMQ0sxdl9EdXdJOWl0TWlYMnl1M1o5S3d4LXRuOW9lLUd3bS1lYkloUnFGVnhqbFNJSGtVRUt4ZnlWSVg1Q01YOHlrWF9tZ0RsQXptUjljR0MxVFVaWW0xTXMweUE?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
