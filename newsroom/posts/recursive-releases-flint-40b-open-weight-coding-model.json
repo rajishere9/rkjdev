@@ -1,0 +1,161 @@
+{
+ "slug": "recursive-releases-flint-40b-open-weight-coding-model",
+ "title": "Recursive Releases Flint 40B Open-Weight Coding Model for Laptops",
+ "seoTitle": "Recursive Releases Flint 40B Open-Weight Coding Model",
+ "description": "Recursive has launched Flint, an open-weight 40B MoE coding model that the company says was developed with its Eureka Machine and optimized to run locally on developer laptops.",
+ "dek": "Built with an automated research system according to Recursive, the 40B mixture-of-experts model activates just 2.5B parameters to run high-speed agentic coding directly on local machines.",
+ "category": "AI Models",
+ "tags": [
+  "Recursive",
+  "Flint",
+  "Open Source",
+  "Coding Agents",
+  "Mixture of Experts",
+  "Local AI"
+ ],
+ "keyTakeaways": [
+  "Recursive launched Flint under an Apache 2.0 license, featuring 39.8 billion total parameters and approximately 2.5 billion active per token.",
+  "According to Recursive, the model was built in under four months using its automated research harness, known as the Eureka Machine.",
+  "Flint runs locally on 48 GB Apple Silicon Macs and NVIDIA RTX Spark systems, achieving generation speeds above 125 to 150 tokens per second.",
+  "On benchmarks reported by Recursive, Flint achieved 74.2% on SWE-bench Verified and 89.7% on SWE-bench Pro v2."
+ ],
+ "body": "On October 21, 2026, AI research startup Recursive released Flint, its first open-weight model designed for autonomous software development and local code execution. Available under an [Apache 2.0 license on Hugging Face](https://huggingface.co/RecursiveSI/flint), the text-only decoder Transformer contains 39.8 billion total parameters while activating approximately 2.5 billion parameters per token. The architecture is engineered to run directly on consumer workstations and laptops, allowing developers to inspect repositories, resolve bugs, and run tool-assisted coding workflows offline without sending proprietary source code to third-party cloud servers.\n\nAccording to Recursive, the company developed Flint in under four months by using an internal system dubbed the Eureka Machine, led by Chief Executive Officer Richard Socher. According to [reporting by TechCrunch](https://techcrunch.com/2026/10/21/recursive-launches-flint-a-laptop-coding-model-it-says-was-largely-built-by-ai/), the startup, which came out of stealth in May 2026 with $650 million in funding from backers including GV, NVIDIA, and AMD Ventures, said it used the automated harness to search architectures, devise quantization strategies, and write specialized hardware compute kernels.\n\n[[FIG1]]\n\n## Automated Design via the Eureka Machine\n\nRecursive describes the Eureka Machine as an automated research engine that proposes technical hypotheses, implements code, runs experiments, and selects next steps based on empirical results. Rather than relying solely on human engineers for iteration loops, Recursive put the automated agent directly into the model design pipeline, as documented in an announcement on the [Recursive company blog](https://recursive.com/updates/introducing-recursive-flint).\n\nRecursive highlighted three structural contributions made by the automated harness to Flint's release. First, it initiated architecture searches from a 35-billion total, 3-billion active baseline, testing varied expert configurations and layer widths before selecting a sparse mixture-of-experts layout with 40 billion total parameters and 2.5 billion active parameters. Second, the system applied 4-bit quantization to the model's output projection layer—a layer traditionally preserved at higher bit-widths—and recovered accuracy by using an offline distillation pass with the 16-bit model acting as a teacher. Third, the system generated custom computational kernels, including a fused Metal megakernel for Apple Silicon decode passes.\n\nSocher told WIRED, as reported by [Superpower Daily](https://superpowerdaily.com/posts/recursive-says-ai-handled-most-development-of-its-first-coding-model-flint), that while recursive self-improvement remains the company's long-term research roadmap, Flint itself is not an autonomously runaway system. Socher emphasized that the platform operates under administrative human supervision.\n\n[[FIG2]]\n\n## Architecture Specifications and Local Hardware Targets\n\nFlint features a 49-layer decoder design composed of two initial dense layers followed by 47 mixture-of-experts layers. Each MoE layer maintains 256 routed experts, selecting six routed experts per token alongside one constantly active shared expert. The model includes an attention setup of 35 sliding-window layers across a 513-token window and 14 full-attention layers without positional encodings, as detailed on the [official model card](https://huggingface.co/RecursiveSI/flint).\n\nThe official configuration specifies a context window of 262,144 tokens, while Recursive's blog states Flint supports context windows of up to 512k tokens (recommending staying within 256k for best results). Quantized 4-bit weights consume approximately 23 gigabytes of local storage and memory, making the model compatible with Apple M4 Pro, M5 Pro, and M5 Max systems equipped with 48 gigabytes of unified memory, as well as 48-gigabyte NVIDIA systems.\n\nRecursive reports short-context decode speeds surpassing 125 tokens per second on an M4 Pro MacBook Pro and over 150 tokens per second on an NVIDIA RTX Spark device. At GTC Berlin, [NVIDIA announced day-zero platform support](https://blogs.nvidia.com/blog/local-ai-gtc-rtx-dgx-spark-station-sync/) for Flint across its RTX Spark and DGX Spark platforms, enabling developers to run and fine-tune Flint using the NeMo ecosystem via low-rank adaptation and reinforcement learning.\n\n## Benchmark Performance and Limitations\n\nIn evaluations published by Recursive and compiled by [MarkTechPost](https://www.marktechpost.com/2026/10/21/recursive-flint-local-coding-model/), Flint scored 74.2% on SWE-bench Verified, 89.7% on SWE-bench Pro v2, and 54.9% on Terminal-Bench 2.1 in its 16-bit BF16 checkpoint. The 4-bit NVFP4 quantized checkpoint produced comparable marks, recording 74.1% on SWE-bench Verified, 88.5% on SWE-bench Pro v2, and 53.7% on Terminal-Bench 2.1.\n\nOn instruction-following and synthetic evaluations, Flint reached 95.1% on IFEval and 80.3% on LiveCodeBench v6. Recursive's internal evaluations placed Flint above other sparse models under 50 billion parameters, including Qwen 3.6 MoE and Laguna XS 2.1. However, the model trailed larger dense baselines on terminal automation; for example, Alibaba's dense Qwen 3.8 scored 73.0% on Terminal-Bench 2.1 compared to Flint's 54.9%.\n\nRecursive noted that while Flint excels at handling multi-turn tool calling and codebase exploration, it recommends breaking complex tasks into smaller subtasks. Because extended agentic reasoning can rapidly consume token allowances, Recursive recommends deploying an output budget of at least 32,768 tokens for complex coding problems.",
+ "faq": [
+  {
+   "q": "What is Recursive Flint?",
+   "a": "Flint is an open-weight, 39.8-billion-parameter mixture-of-experts coding model developed by Recursive Superintelligence. It activates approximately 2.5 billion parameters per token and is designed to execute locally on laptops and workstations."
+  },
+  {
+   "q": "What hardware is required to run Flint locally?",
+   "a": "Flint's 4-bit weights require roughly 23 GB of memory. It runs on Apple Silicon Macs (M4 Pro, M5 Pro, or M5 Max) with at least 48 GB of unified memory, as well as 48 GB NVIDIA GPUs and systems like the NVIDIA RTX Spark and DGX Spark."
+  },
+  {
+   "q": "What license is Flint released under?",
+   "a": "Flint's weights and code artifacts are available under the open-source Apache 2.0 license."
+  },
+  {
+   "q": "How does Flint compare to dense coding models?",
+   "a": "According to Recursive, Flint delivers coding scores comparable to dense 25B to 40B models while running more than five times faster due to its sparse activation of 2.5B parameters per token. However, it trails some large dense models, such as Qwen 3.8, on specific terminal execution benchmarks."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "alt": "An engineer sitting at a desk operating a high-end laptop with complex code visual abstractions hovering above the screen.",
+  "caption": "Illustration: Local artificial intelligence execution running on modern laptop workstation hardware without cloud reliance.",
+  "src": "img/recursive-releases-flint-40b-open-weight-coding-model/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 50994,
+  "small": "img/recursive-releases-flint-40b-open-weight-coding-model/hero-640.webp",
+  "og": "img/recursive-releases-flint-40b-open-weight-coding-model/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/recursive-releases-flint-40b-open-weight-coding-model/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "alt": "A modern machine learning research lab with servers and automated data loops visualized across transparent panels.",
+   "caption": "Illustration: Automated research harnesses running self-guided model architecture search and quantization routines.",
+   "slot": "FIG1",
+   "src": "img/recursive-releases-flint-40b-open-weight-coding-model/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 40036,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "alt": "A close-up conceptual view of a compact computer chip with illuminated routing paths representing sparse mixture-of-experts logic.",
+   "caption": "Illustration: Sparse mixture-of-experts routing directing tokens through specialized sub-networks on local silicon.",
+   "slot": "FIG2",
+   "src": "img/recursive-releases-flint-40b-open-weight-coding-model/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 34876,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://huggingface.co/RecursiveSI/flint",
+   "title": "RecursiveSI/flint",
+   "site": "Hugging Face",
+   "published": 1792592458000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://blogs.nvidia.com/blog/local-ai-gtc-rtx-dgx-spark-station-sync/",
+   "title": "Bringing the Spark to Europe: Local Intelligence Powers Next Wave of Agents",
+   "site": "NVIDIA Blog",
+   "published": 1792579837000,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://www.marktechpost.com/2026/10/21/recursive-flint-local-coding-model/",
+   "title": "Recursive Releases Flint, an Open-Weight 40B MoE Local Coding Model for Agents with 2.5B Active Params",
+   "site": "marktechpost.com",
+   "published": 1792540800000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://techcrunch.com/2026/10/21/recursive-launches-flint-a-laptop-coding-model-it-says-was-largely-built-by-ai/",
+   "title": "Recursive launches Flint, a laptop coding model it says was largely built by AI",
+   "site": "TechCrunch",
+   "published": 1792614461000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://recursive.com/updates/introducing-recursive-flint",
+   "title": "Introducing Flint - Recursive",
+   "site": "recursive.com",
+   "published": 1781136000000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://superpowerdaily.com/posts/recursive-says-ai-handled-most-development-of-its-first-coding-model-flint",
+   "title": "Recursive says AI handled most development of its first coding model, Flint",
+   "site": "superpowerdaily.com",
+   "published": 1792601083943,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://aiweekly.co/alerts/recursive-opens-flint-a-40b25b-moe-coder-hitting-897-on-swe-bench-pro-v2-under",
+   "title": "Recursive Opens Flint, a 40B/2.5B MoE Coder Hitting 89.7% on SWE-bench Pro v2 Under Apache 2.0",
+   "site": "aiweekly.co",
+   "published": 1792607609000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792640970145,
+ "updatedAt": 1792640970145,
+ "foundVia": "Techmeme, Google News and techcrunch.com",
+ "check": {
+  "claims": 30,
+  "score": 10
+ },
+ "story": {
+  "id": "Pa8d78a37",
+  "score": 84,
+  "items": [
+   "https://www.techmeme.com/261021/p39#a261021p39",
+   "https://news.google.com/rss/articles/CBMiswFBVV95cUxNcnFZU01DbEZkckxRS0dwU2NlckxfSXVWNzdaNmk5dlowTG5VLWRCN0NHOFZyR2h0YUpnTVQ4cEFqeHdHVU1veUNqeE1uMmNxTWoxc1FwNEd0SFlYR2xiNTZqX2hDdk0tTnRFLV9tOS1ZckJJTWctaG9Jd3ZJd3E3Q2NvMUFuZzZsMG9vaEdHMHNjaUxoTWFZS0xwUjM5ZF9mQ3VGWkxLd1VkM1pmYU5ncGlSNA?oc=5",
+   "https://techcrunch.com/2026/10/21/recursive-launches-flint-a-laptop-coding-model-it-says-was-largely-built-by-ai/",
+   "https://news.google.com/rss/articles/CBMigAFBVV95cUxQVHp6OEtzS2JOczJKY0d3dENMTy1iM3lEOGxUTU9Kd0tSY2lCbUdGYmxvX3pBWHpEWklzTUVGdUhCRlZicElCNWV6eENDRHpkcTdXVlRzc3hBdUNDMDg5cEFDM2MtMFQtbThvMU5hVmwwRjBMOEpqTDJyWmZ5M0x5QdIBgAFBVV95cUxQVHp6OEtzS2JOczJKY0d3dENMTy1iM3lEOGxUTU9Kd0tSY2lCbUdGYmxvX3pBWHpEWklzTUVGdUhCRlZicElCNWV6eENDRHpkcTdXVlRzc3hBdUNDMDg5cEFDM2MtMFQtbThvMU5hVmwwRjBMOEpqTDJyWmZ5M0x5QQ?oc=5",
+   "https://news.google.com/rss/articles/CBMilwFBVV95cUxOaU5RN2NaaFc5THZwX3lSc1FFekVZN2hoVEZ1aWFhLXhqd0ktd2pkQTAwNnVwcFdZQUJPeFBHU1NRZ094aXFUT2RIV0xKQk50RnRubEc2RUNpTmYyVWFkMEpnTlMwWWM0OFpFQXpVVnBEMUU0dWhPamxveDI4dzhRaGVRNHJEeWNzRkdHUWQ4RzJQaGlaLXVN?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
