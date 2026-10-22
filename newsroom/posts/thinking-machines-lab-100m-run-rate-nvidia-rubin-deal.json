@@ -1,0 +1,143 @@
+{
+ "slug": "thinking-machines-lab-100m-run-rate-nvidia-rubin-deal",
+ "title": "Thinking Machines Lab Hits $100M Run Rate and Inks 1GW Nvidia Deal",
+ "seoTitle": "Thinking Machines Lab Hits $100M Run Rate and Nvidia Deal",
+ "description": "Mira Murati's Thinking Machines Lab surpasses a $100M run rate through Tinker, prepares a 1GW Nvidia Vera Rubin buildout, and discusses a $40B valuation.",
+ "dek": "Mira Murati's startup scales its Tinker fine-tuning service to nine-figure revenue while lining up a gigawatt of next-generation Nvidia hardware.",
+ "category": "Industry",
+ "tags": [
+  "Thinking Machines Lab",
+  "Mira Murati",
+  "Nvidia",
+  "Tinker",
+  "AI Infrastructure"
+ ],
+ "keyTakeaways": [
+  "Thinking Machines Lab has surpassed a $100 million annualized revenue run rate driven by its Tinker fine-tuning infrastructure platform.",
+  "The San Francisco-based public benefit corporation committed to deploying at least one gigawatt of Nvidia Vera Rubin systems starting in early 2027.",
+  "The startup is in discussions to raise $5 billion to $6 billion at a pre-money valuation of at least $40 billion, with Accel in talks to lead and Nvidia providing capital.",
+  "Inkling, the company's 975-billion-parameter open-weights mixture-of-experts model released in July 2026, is distributed for free while fine-tuning compute generates revenue."
+ ],
+ "body": "Thinking Machines Lab, the artificial intelligence company founded in early 2025 by former OpenAI chief technology officer Mira Murati, has surpassed an annualized revenue run rate of $100 million, according to financial details reported by [TechCrunch and PYMNTS](https://www.todaysstartupnews.com/startups/thinking-machines-1-billion-40-billion-valuation-murati). The revenue milestone arrives as the San Francisco-based public benefit corporation prepares for a massive infrastructure rollout backed by Nvidia and pursues a multi-billion-dollar funding round that would value the company at $40 billion or more.\n\nThe startup's commercial engine relies on its fine-tuning service, Tinker, which allows enterprise clients and researchers to adapt large machine learning models to proprietary data. While the company offers its flagship model weights without software licensing fees, it bills organizations for the specialized compute power needed to adapt those models inside customized training environments.\n\n[[FIG1]]\n\n## Commercial Growth Built on Tinker\n\nThinking Machines Lab unveiled Tinker on October 1, 2025, and moved the system into [general availability on December 12, 2025](https://aimagazine.com/news/thinking-machines-lab-hits-a-us-100m-run-rate-on-tinker). The platform provides an API that lets developers fine-tune open models with custom training loops while Thinking Machines manages the underlying hardware infrastructure. Customers retain ownership and control over their private training data and algorithmic designs.\n\nSeveral enterprise clients and research teams have reported operational results on the platform. Enterprise search firm Glean used Tinker to train an agentic search model, reducing search latency by 50% and cutting token consumption by 25%. AI database company Chroma constructed a search subagent that matched several frontier systems at a fraction of typical operating expenses. In mathematical research, Axiom Math used the platform to train AxiomProver, an automated reasoning model that solved all 12 Putnam competition problems in December 2025, with each proof verified in the Lean interactive theorem prover. Tinker research grants also support academic work at institutions including MIT and Stanford.\n\nAccording to reporting from [TNW](https://thenextweb.com/news/thinking-machines-lab-6bn-round-nvidia-accel), Tinker generates computing fees not only from the company's internal model family but also by supporting third-party architectures. While internal sources speaking to reporters describe annualized figures reaching into the hundreds of millions of dollars, the revenue remains self-reported and unverified by outside financial audits.\n\n## The Open-Weights Architecture of Inkling\n\nIn July 2026, Thinking Machines Lab expanded its technical portfolio by shipping Inkling, an open-weights mixture-of-experts model comprising 975 billion total parameters and 41 billion active parameters during inference. The architecture incorporates a 1-million-token context window and handles text, image, and audio inputs natively.\n\nInkling was trained on Nvidia GB300 NVL72 clusters, as detailed by [AI Magazine](https://aimagazine.com/news/thinking-machines-lab-hits-a-us-100m-run-rate-on-tinker). At launch, inference access was established across third-party platforms including Together AI, Fireworks, Databricks, Modal, and Baseten.\n\nBy distributing Inkling's weights freely to the public, Thinking Machines Lab bypasses traditional proprietary API usage models. Instead, the company captures commercial value when enterprises take those open weights and deploy high-volume training and domain adaptation workloads on Tinker's managed hardware fleet.\n\n[[FIG2]]\n\n## A Gigawatt-Scale Vera Rubin Infrastructure Pact\n\nTo power future model research and sustain Tinker's expansion, Thinking Machines announced a long-term strategic partnership with Nvidia on March 10, 2026. Under the agreement, the lab plans to deploy at least one gigawatt of next-generation [Nvidia Vera Rubin systems](https://blogs.nvidia.com/blog/nvidia-thinking-machines-lab/), with targeted deployment beginning in early 2027.\n\nThe collaboration includes architectural initiatives to co-design training and serving pipelines specifically optimized for future Nvidia hardware. Nvidia also made an undisclosed equity investment in Thinking Machines as part of the transaction.\n\n\"AI is the most powerful knowledge discovery instrument in human history,\" Nvidia founder and chief executive Jensen Huang stated in the announcement. Murati noted that the infrastructure arrangement accelerates the company's ability to build systems that users can shape directly. A gigawatt puts the lab in direct competition with far better capitalised rivals for chips, power and data-centre space.\n\n## Funding Talks Target a $40 Billion Valuation\n\nTo fund that computing expansion, Thinking Machines Lab is in talks to secure a new funding round that would price the young company at $40 billion or higher before new cash. According to [reporting by The Information cited by TNW](https://thenextweb.com/news/thinking-machines-lab-6bn-round-nvidia-accel), the proposed financing could raise between $5 billion and $6 billion. Existing backer Accel is in talks to lead the transaction, with Nvidia discussing a commitment that could supply $2.5 billion to $3 billion of the round.\n\nThe talks follow a $2 billion seed round closed in July 2025 at a $12 billion post-money valuation, led by Andreessen Horowitz. Other early investors included AMD, Cisco, Accel, Jane Street, GV, Lightspeed, Conviction Partners, and the Albanian government. In late 2025, the company sought financing at a valuation of $50 billion or higher, but those discussions did not close.\n\nAt a $40 billion pre-money valuation against run-rate revenue reported above $100 million, the implied pricing multiple exceeds 80 to 400 times annual revenue depending on final figures. Sourcing for the ongoing round surfaced when Andreessen Horowitz briefed its own limited partners, meaning legal terms remain subject to negotiation and final execution.\n\n## Executive Exits and Governance Structure\n\nThe funding negotiations follow a period of leadership turnover among the company's initial founding group. Co-founder Andrew Tulloch departed for Meta in October 2025. Co-founder and former chief technology officer Barret Zoph resigned during an all-hands meeting in January 2026 to rejoin OpenAI, later transitioning to Google. Co-founder Luke Metz also returned to OpenAI, while Lilian Weng stepped down in July 2026 before rejoining OpenAI two days later; OpenAI confirmed to [AI Magazine](https://aimagazine.com/news/thinking-machines-lab-hits-a-us-100m-run-rate-on-tinker) that she returned earlier in 2026.\n\nDespite the departures, co-founder and chief scientist John Schulman remains at the company. Following Zoph's exit, the company appointed PyTorch co-creator Soumith Chintala to lead technical execution, steering the delivery of Inkling in 2026.\n\nCorporate authority remains tightly consolidated under Murati, who maintains majority voting control over the company's board of directors. If the $40 billion financing concludes as structured, Thinking Machines will hold one of the highest valuations among independent AI startups, supported by a closed commercial circuit that channels capital from chipmakers directly into cloud computing demand.",
+ "faq": [
+  {
+   "q": "What is Thinking Machines Lab's primary revenue source?",
+   "a": "The company generates revenue through Tinker, an infrastructure platform that bills enterprise customers for compute time used to train and fine-tune open AI models on managed GPU hardware."
+  },
+  {
+   "q": "What are the technical specifications of the Inkling model?",
+   "a": "Inkling is an open-weights mixture-of-experts model featuring 975 billion total parameters, 41 billion active parameters, and a 1-million-token context window that supports text, images, and audio."
+  },
+  {
+   "q": "What are the details of the Nvidia Vera Rubin agreement?",
+   "a": "Announced in March 2026, the strategic partnership commits to deploying at least one gigawatt of Nvidia Vera Rubin systems for frontier training and Tinker services, with deployment targeted for early 2027."
+  },
+  {
+   "q": "Who is leading the proposed $40 billion funding round?",
+   "a": "Venture capital firm Accel is in discussions to lead the round, which could raise between $5 billion and $6 billion, with Nvidia in talks to provide roughly half of the total capital."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern, massive industrial computing facility showing rows of illuminated server racks under cool blue and amber LED lighting, with heavy power conduits and cooling architecture spanning the high ceiling.",
+  "alt": "A large-scale modern AI data center with illuminated hardware racks and industrial cooling equipment.",
+  "caption": "Illustration: Next-generation hardware facilities designed to supply gigawatt-scale computing power.",
+  "src": "img/thinking-machines-lab-100m-run-rate-nvidia-rubin-deal/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 70272,
+  "small": "img/thinking-machines-lab-100m-run-rate-nvidia-rubin-deal/hero-640.webp",
+  "og": "img/thinking-machines-lab-100m-run-rate-nvidia-rubin-deal/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/thinking-machines-lab-100m-run-rate-nvidia-rubin-deal/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "Two engineers in a modern corporate technology office examining complex data pipelines and model training schematics projected on a wide translucent glass display board.",
+   "alt": "Engineers reviewing model adaptation workflows on an office display screen.",
+   "caption": "Illustration: Enterprise developers adapting open-weight machine learning architectures inside private environments.",
+   "slot": "FIG1",
+   "src": "img/thinking-machines-lab-100m-run-rate-nvidia-rubin-deal/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 39418,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "An executive presenting strategic growth figures and infrastructure capacity charts on a digital screen to an audience of venture capital investors seated in a bright boardroom.",
+   "alt": "An executive presenting technical infrastructure plans inside a modern corporate boardroom.",
+   "caption": "Illustration: Startup leadership meeting with venture partners to discuss multi-billion-dollar infrastructure funding.",
+   "slot": "FIG2",
+   "src": "img/thinking-machines-lab-100m-run-rate-nvidia-rubin-deal/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 36606,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://blogs.nvidia.com/blog/nvidia-thinking-machines-lab/",
+   "title": "NVIDIA and Thinking Machines Lab Announce Long-Term Gigawatt-Scale Strategic Partnership",
+   "site": "NVIDIA Blog",
+   "published": 1773147611000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://thenextweb.com/news/thinking-machines-lab-6bn-round-nvidia-accel",
+   "title": "Thinking Machines is in talks to raise $6bn, The Information reports",
+   "site": "TNW | Investors-funding",
+   "published": 1788722141000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://thinkingmachines.ai/news/nvidia-partnership/",
+   "title": "Thinking Machines Lab and NVIDIA Announce Long-Term Gigawatt-Scale Strategic Partnership",
+   "site": "Thinking Machines Lab",
+   "published": 1773100800000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://aimagazine.com/news/thinking-machines-lab-hits-a-us-100m-run-rate-on-tinker",
+   "title": "Thinking Machines Lab Hits a US$100m Run Rate on Tinker",
+   "site": "aimagazine.com",
+   "published": 1792540800000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://www.todaysstartupnews.com/startups/thinking-machines-1-billion-40-billion-valuation-murati",
+   "title": "Mira Murati's Thinking Machines Chases a $40B Price Tag, Down From the $50B It Wanted Last Year",
+   "site": "Today's Startup News",
+   "published": 1788626691295,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792636842055,
+ "updatedAt": 1792636842055,
+ "foundVia": "Google Search",
+ "check": {
+  "claims": 33,
+  "score": 10
+ },
+ "story": {
+  "id": "Pbab6b020",
+  "score": 85,
+  "items": [
+   "https://aimagazine.com/news/thinking-machines-lab-hits-a-us-100m-run-rate-on-tinker"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
