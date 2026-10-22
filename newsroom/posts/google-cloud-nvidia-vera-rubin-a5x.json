@@ -1,0 +1,145 @@
+{
+ "slug": "google-cloud-nvidia-vera-rubin-a5x",
+ "title": "Google Cloud Sets Vera Rubin A5X Instances for November Launch",
+ "seoTitle": "Google Cloud Vera Rubin A5X Instances Launch",
+ "description": "Google Cloud announced Vera Rubin-powered A5X instances will reach general availability in November 2026, scaling up to 960,000 GPUs across data centers.",
+ "dek": "Google Cloud and NVIDIA have announced general availability next month for A5X bare-metal instances based on the Vera Rubin NVL72 platform, scaling up to 960,000 GPUs.",
+ "category": "Chips & Hardware",
+ "tags": [
+  "Google Cloud",
+  "NVIDIA",
+  "Vera Rubin",
+  "A5X",
+  "AI Infrastructure",
+  "Reinforcement Learning"
+ ],
+ "keyTakeaways": [
+  "Google Cloud announced at GTC Berlin 2026 that its NVIDIA Vera Rubin NVL72-powered A5X instances will reach general availability in November 2026, with European availability planned.",
+  "The bare-metal A5X infrastructure combines Vera Rubin racks, ConnectX-9 SuperNICs, Google Virgo mesh networking, and fourth-generation liquid cooling, with plans to scale to 960,000 GPUs across sites.",
+  "London-based Ineffable Intelligence is the first customer using A5X for continuous reinforcement learning, while communications firm WPP collapsed multi-node creative agent workloads onto a single instance.",
+  "Google Cloud is also expanding Confidential Computing across bare-metal A4X Max instances and generally releasing Confidential G4 virtual machines powered by Blackwell-generation silicon."
+ ],
+ "body": "Google Cloud and NVIDIA announced on October 21, 2026, that bare-metal A5X instances powered by the NVIDIA Vera Rubin NVL72 platform will reach general availability in November 2026. Unveiled at NVIDIA GTC Berlin 2026, the systems combine NVIDIA's latest rack-scale compute hardware with Google Cloud's networking and liquid cooling to serve training, inference, and continuous reinforcement learning workloads. According to an announcement on the [NVIDIA Blog](https://blogs.nvidia.com/blog/google-cloud-vera-rubin-infrastructure/), Google Cloud plans to scale this Vera Rubin architecture to as many as 960,000 GPUs across multiple data center locations.\n\n[[FIG1]]\n\n## Rack Architecture and Virgo Mesh Networking\n\nThe A5X instances represent a bare-metal deployment within Google Cloud’s AI Hypercomputer architecture. As reported by [Crypto Briefing](https://cryptobriefing.com/google-cloud-vera-rubin-960000-gpus/), each instance bypasses virtualization layers to give customers direct access to the underlying hardware. At the core of each rack is the Vera Rubin NVL72 system, which links 72 Rubin GPUs and 36 Vera CPUs over NVLink 6 interconnects, alongside NVIDIA ConnectX-9 SuperNICs and BlueField-4 data processing units.\n\nTo link racks across facilities, Google Cloud integrated its Virgo Network fabric. As detailed on the [Google Cloud Blog](https://cloud.google.com/blog/topics/ai-infrastructure/google-cloud-infrastructure-at-nvidia-gtc-berlin-2026), the Virgo Network uses a mesh topology to deliver a non-blocking fabric for both intra-building and inter-building communication. This networking layer supports horizontal scaling up to 80,000 Rubin GPUs within a single site and up to 960,000 GPUs across multi-site installations. Heat dissipation across these dense clusters is handled by Google Cloud’s fourth-generation advanced liquid-cooling system.\n\nOn the storage and memory fronts, Google Cloud Managed Lustre now supports NVIDIA GPUDirect Storage on A5X instances, establishing direct RDMA data pathways from parallel file systems into GPU memory without traversing host CPUs. Google Cloud also introduced an advanced KV-caching tier designed to offload context memory beyond onboard high-bandwidth memory (HBM) to accelerate multi-turn agent interactions and lower time-to-first-token.\n\n## Performance Claims and Initial Deployments\n\nAccording to materials released during the original April 2026 preview and reiterated by [Unite.AI](https://www.unite.ai/google-clouds-first-nvidia-vera-rubin-a5x-instances-go-live/), the Vera Rubin-powered A5X instances are designed to deliver up to 10 times lower inference cost per token and up to 10 times higher throughput per megawatt compared to prior-generation infrastructure. Google Cloud and NVIDIA also noted they are testing NVIDIA DSX MaxLPS technology to optimize performance per watt within tight data center power allocations.\n\nIneffable Intelligence, a London-based AI company founded by AlphaGo creator David Silver, became the first customer to access the live A5X hardware. The company is using the environment to build continuous reinforcement learning systems termed \"superlearners\" that evaluate and update models dynamically based on generated experience.\n\n\"We're building superlearners that continually improve through their own experience,\" Silver said in a statement published on the [NVIDIA Blog](https://blogs.nvidia.com/blog/google-cloud-vera-rubin-infrastructure/). \"That demands both substantial compute and a tight connection between generating experience and training on it, so each improvement in the agent can quickly shape its next experience. Vera Rubin's combination of compute performance and high-bandwidth connectivity, between the Vera CPU and Rubin GPUs and between the Rubin GPUs within the rack, allow us to push the scale and ambition of our reinforcement learning research further.\"\n\n[[FIG2]]\n\nMarketing and communications group WPP also piloted the A5X instances to execute its creative agent reference architecture. Operating with NVIDIA Nemotron models inside NVIDIA OpenShell sandboxes, the setup automates multistep media workflows including video generation and asset restyling under human supervision. According to [Blockchain.News](https://blockchain.news/news/google-cloud-nvidia-a5x-general-availability-november-2026), WPP found that agent workloads previously requiring a multi-node computing cluster could execute on a single A5X instance.\n\n## Confidential Computing and Sovereign Cloud Options\n\nAlongside the A5X Rubin hardware, Google Cloud expanded its hardware-level data isolation features. Google Cloud announced it is offering NVIDIA Confidential Computing at rack scale on bare-metal systems, including A4X Max instances powered by NVIDIA GB300 NVL72 hardware. The architecture applies hardware-rooted secure boot, cryptographic attestation, and encrypted NVLink and memory interconnects to secure model weights and user prompts during active processing.\n\nGoogle Cloud also declared general availability for Confidential Computing on G4 virtual machines powered by NVIDIA RTX PRO 6000 Blackwell Server Edition GPUs, citing enterprise adoption from customers such as Vertebrae, Polaris Cloud, and Confidential Core AI. For dedicated sovereign infrastructure, the [Google Cloud Blog](https://cloud.google.com/blog/topics/ai-infrastructure/google-cloud-infrastructure-at-nvidia-gtc-berlin-2026) confirmed that NVIDIA Blackwell Ultra HGX B300 systems have reached general availability on Google Distributed Cloud (GDC) for fully air-gapped on-premises environments, alongside air-gapped support for Gemini 3.5 Flash.\n\nWorkload orchestration for the new hardware is supported natively through Google Kubernetes Engine (GKE). GKE now incorporates features such as GKE Managed DRANET, which exposes network interfaces as native Kubernetes resources, and Kueue, which applies topology-aware resource scheduling to distributed training and inference jobs.\n\n## Availability Timeline\n\nGeneral availability for Google Cloud A5X instances is scheduled for November 2026, according to announcements by both companies at GTC Berlin. As reported by [Blockchain.News](https://blockchain.news/news/google-cloud-nvidia-a5x-general-availability-november-2026), exact calendar release dates, per-instance CPU and host RAM breakdowns, and hourly pricing tiers have not yet been published.\n\nGoogle Cloud stated that subsequent rollouts will introduce A5X availability to European regions to satisfy local data residency and operational sovereignty requirements, supported by regional compliance options including Google Cloud Data Boundary and European partnerships with S3NS in France and Thales in Germany.",
+ "faq": [
+  {
+   "q": "When will Google Cloud A5X instances be generally available?",
+   "a": "Google Cloud and NVIDIA stated that A5X instances will reach general availability in November 2026, with regional expansion into Europe planned thereafter."
+  },
+  {
+   "q": "What hardware makes up the NVIDIA Vera Rubin NVL72 rack?",
+   "a": "Each NVL72 rack integrates 72 NVIDIA Rubin GPUs and 36 NVIDIA Vera CPUs connected by NVLink 6 interconnects, ConnectX-9 SuperNICs, and BlueField-4 DPUs."
+  },
+  {
+   "q": "How far can Google Cloud scale its Vera Rubin infrastructure?",
+   "a": "Using the Google Cloud Virgo Network mesh fabric, the infrastructure can scale up to 80,000 Rubin GPUs within a single data center and up to 960,000 Rubin GPUs across multi-site deployments."
+  },
+  {
+   "q": "Who are the initial customers testing A5X?",
+   "a": "Ineffable Intelligence is using A5X for continuous reinforcement learning research, and WPP has deployed the instances for creative agent workflows using NVIDIA Nemotron and OpenShell."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A vast, high-tech server hall in a modern data center, filled with tall racks featuring advanced liquid-cooling piping glowing softly under ambient industrial lighting, with network cables routed overhead, depicted from an eye-level perspective.",
+  "alt": "Liquid-cooled server racks inside a hyperscale cloud data center.",
+  "caption": "Illustration: Hyperscale server racks in an advanced liquid-cooled cloud data center facility.",
+  "src": "img/google-cloud-nvidia-vera-rubin-a5x/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 65800,
+  "small": "img/google-cloud-nvidia-vera-rubin-a5x/hero-640.webp",
+  "og": "img/google-cloud-nvidia-vera-rubin-a5x/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/google-cloud-nvidia-vera-rubin-a5x/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "Two network engineers in protective vests inspecting glowing optical cables and dense networking equipment inside a high-performance compute facility.",
+   "alt": "Engineers examining network infrastructure inside a server facility.",
+   "caption": "Illustration: Engineers inspecting high-throughput network fabric in an AI compute facility.",
+   "slot": "FIG1",
+   "src": "img/google-cloud-nvidia-vera-rubin-a5x/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 55584,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A research scientist sitting at a workstation analyzing complex model learning graphs and multi-node compute distribution diagrams on multiple large monitors in a clean research laboratory.",
+   "alt": "A researcher studying distributed compute workflows on computer monitors.",
+   "caption": "Illustration: A researcher monitoring large-scale reinforcement learning and agent architectures.",
+   "slot": "FIG2",
+   "src": "img/google-cloud-nvidia-vera-rubin-a5x/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 43352,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://blogs.nvidia.com/blog/google-cloud-vera-rubin-infrastructure/",
+   "title": "Google Cloud and NVIDIA Announce General Availability of NVIDIA Vera Rubin Infrastructure",
+   "site": "NVIDIA Blog",
+   "published": 1792579517000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://cloud.google.com/blog/topics/ai-infrastructure/google-cloud-infrastructure-at-nvidia-gtc-berlin-2026",
+   "title": "Google Cloud infrastructure at NVIDIA GTC Berlin 2026",
+   "site": "Google Cloud",
+   "published": 1792540800000,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://cryptobriefing.com/google-cloud-vera-rubin-960000-gpus/",
+   "title": "Google Cloud plans to scale Vera Rubin infrastructure to 960,000 GPUs",
+   "site": "Crypto Briefing",
+   "published": 1792586414000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.unite.ai/google-clouds-first-nvidia-vera-rubin-a5x-instances-go-live/",
+   "title": "Google Cloud’s First NVIDIA Vera Rubin A5X Instances Go Live",
+   "site": "Unite.AI",
+   "published": 1792581852000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://blockchain.news/news/google-cloud-nvidia-a5x-general-availability-november-2026",
+   "title": "Google Cloud and NVIDIA set November A5X general availability",
+   "site": "Blockchain.News",
+   "published": 1792599280477,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792631483556,
+ "updatedAt": 1792631483556,
+ "foundVia": "blogs.nvidia.com and Google News",
+ "check": {
+  "claims": 27,
+  "score": 10
+ },
+ "story": {
+  "id": "P92d543b1",
+  "score": 91,
+  "items": [
+   "https://blogs.nvidia.com/blog/google-cloud-vera-rubin-infrastructure/",
+   "https://news.google.com/rss/articles/CBMieEFVX3lxTFBJNE5tbERxR1F1VWQtQUNPNXppNGFmTlZremNiRFNwclFHeWVFVkUwZXdZU1NhSUNtNG5uRUIya0lMNkw0RUExOTFmdVJWc1Q1djRDd1FVV1VlYnpHVzlfdzU0MTNTMDA4WnJ2YWdkMnItTndvYko5NQ?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
