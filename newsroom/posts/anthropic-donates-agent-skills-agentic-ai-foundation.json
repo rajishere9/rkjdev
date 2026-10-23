@@ -1,0 +1,154 @@
+{
+ "slug": "anthropic-donates-agent-skills-agentic-ai-foundation",
+ "title": "Anthropic Donates Agent Skills Standard to Agentic AI Foundation",
+ "seoTitle": "Anthropic Donates Agent Skills to AAIF",
+ "description": "Anthropic has donated its Agent Skills open standard to the Linux Foundation's Agentic AI Foundation alongside three other major industry contributions.",
+ "dek": "The transfer hands governance of the modular instruction format, domain, and brand to the Linux Foundation-backed body alongside contributions from OpenAI, Hugging Face, and Alibaba.",
+ "category": "Open Source",
+ "tags": [
+  "Anthropic",
+  "Agent Skills",
+  "Agentic AI Foundation",
+  "Open Source",
+  "Linux Foundation",
+  "Model Context Protocol"
+ ],
+ "keyTakeaways": [
+  "Anthropic donated the Agent Skills specification, logo, GitHub organization, and agentskills.io domain to the Agentic AI Foundation (AAIF).",
+  "The format has reached more than 70 platforms, including ChatGPT, Cursor, GitHub Copilot, and VS Code, with 1 million skills published according to Anthropic.",
+  "Engineers from Anthropic, Google, and OpenAI will maintain the standard as individual contributors under lead maintainers David Soria Parra and Mahesh Murag.",
+  "The donation coincided with AAIF adding four projects at AGNTCon + MCPCon North America, expanding the foundation's hosted roster from three to 10 projects."
+ ],
+ "body": "On October 22, 2026, Anthropic announced that it is donating the Agent Skills open standard to the Agentic AI Foundation (AAIF), an open-source consortium organized under the Linux Foundation. The transfer includes the Agent Skills specification, brand assets, GitHub organization, and the agentskills.io domain. The decision places future governance of the format under neutral stewardship one year after Anthropic first released skills as a product feature.\n\nAnthropic [stated in its announcement](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation) that more than 70 agent platforms have integrated Agent Skills since the format was published as an open standard in December 2025. Listed adopters include ChatGPT, Cursor, GitHub Copilot, and VS Code. Anthropic reported that developers have published approximately 1 million skills and recorded nearly 280 million installs, though [explainx.ai reported](https://explainx.ai/blog/anthropic-donates-agent-skills-agentic-ai-foundation-agentskills-io-70-platforms-2026) that Anthropic did not release verification methodologies or deduplicated telemetry for those install counts.\n\nThis marks the second major specification Anthropic has handed to the AAIF. The company co-founded the foundation alongside Block and OpenAI in late 2025, initially donating the Model Context Protocol (MCP) to provide a shared protocol for connecting AI models to data sources and development tools.\n\n[[FIG1]]\n\n## How the Agent Skills Standard Works\n\nAnthropic originally developed the skills framework while building Claude Code, which launched in October 2025. According to the company, large language models handled broad knowledge work effectively but struggled with procedural workflows and task-specific business logic. Rather than prompting an agent repeatedly with instructions in chat interfaces, skills package instructions into modular directories.\n\nAs documented on [agentskills.io](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation) and analyzed by [explainx.ai](https://explainx.ai/blog/anthropic-donates-agent-skills-agentic-ai-foundation-agentskills-io-70-platforms-2026), each skill is structured as a dedicated folder containing a mandatory `SKILL.md` file. This core file contains required metadata with a name and description, followed by instructions telling an agent how to carry out a given operation. A skill directory can optionally include subdirectories for executable scripts, documentation references, and asset templates.\n\nTo manage context limits, the standard uses a three-tier \"progressive disclosure\" mechanism:\n\n* **Startup:** The host application reads only the skill's name and descriptive metadata into the agent's context window.\n* **Matching:** When an incoming user request aligns with a skill description, the agent ingests the complete instruction text from `SKILL.md`.\n* **Execution:** The agent runs bundled automation scripts or loads referenced files only if execution demands those resources.\n\nWhile MCP supplies agents with tool connections and database access, Agent Skills specifies how tasks should be executed. [SiliconANGLE observed](https://siliconangle.com/2026/10/22/agentic-ai-foundation-adds-four-more-open-source-ai-tools/) that standardizing these procedural directories makes instructions easily portable between agent engines and reduces model hallucinations by structuring reference material uniformly.\n\n## Neutral Governance and Individual Maintainers\n\nUnder the Linux Foundation structure, contributor participation does not require membership in the AAIF. Anthropic confirmed that developers can continue to use or contribute without joining the AAIF.\n\nEngineers will maintain the standard as individuals. David Soria Parra, an Anthropic engineer and co-creator of MCP, and Mahesh Murag will serve as Lead Maintainers. Engineers from Anthropic, Google, and OpenAI have joined the maintainer group as individuals. Writing on his blog, technologist [Simon Willison noted](https://simonwillison.net/2026/Oct/22/donating-agent-skills/) that he personally predicted the donation to the AAIF in December 2025, when Anthropic first labeled skills an open standard.\n\nAnthropic has proposed a three-part technical roadmap for the community under AAIF:\n\n1. **Versioned releases:** Moving away from a continuous living specification to formal versioning, replacing interim community workarounds such as custom lockfiles.\n2. **Formal proposal process:** Establishing a structured proposal and feedback process via GitHub and Discord for future protocol modifications.\n3. **Security guidance:** Publishing baseline security parameters for creators and runtimes, as skills that bundle shell scripts or code can execute with user-level permissions on host environments.\n\n[[FIG2]]\n\n## Foundation Expansion at AGNTCon\n\nThe donation of Agent Skills was one of four new project additions announced during the AGNTCon + MCPCon North America conference in San Jose, California, on October 22, 2026. According to [The Linux Foundation](https://www.linuxfoundation.org/press/agentic-ai-foundation-announces-four-new-projects-agent-skills-open-responses-openenv-and-opensandbox), the new contributions expand the AAIF portfolio from three founding projects to 10 within its first operational year.\n\nThe four additions represent distinct tiers of the open agent infrastructure:\n\n* **Agent Skills:** Donated by Anthropic, governing agent procedures and operational know-how.\n* **Open Responses:** Donated by OpenAI, establishing a shared schema and streaming event model based on the OpenAI Responses API to simplify multi-provider application interfaces.\n* **OpenEnv:** Donated by Hugging Face, offering a containerized framework for reinforcement learning environments that integrates MCP with standard Gym interfaces.\n* **OpenSandbox:** Donated by Alibaba, providing general-purpose sandbox APIs, multi-language SDKs, and container runtimes to isolate and execute untrusted agent actions.\n\n\"Agent Skills, Open Responses, OpenEnv, and OpenSandbox each cover a different part of that stack, from how agents gain capabilities to where they run, and four different companies chose to contribute them to neutral governance,\" said Manik Surtani, CTO and co-founder of the Agentic AI Foundation, in [The Linux Foundation's release](https://www.linuxfoundation.org/press/agentic-ai-foundation-announces-four-new-projects-agent-skills-open-responses-openenv-and-opensandbox). The four projects join preexisting AAIF repositories, including A2A, Agent Router, agentgateway, AGENTS.md, goose, and MCP.\n\n## Implications for Developers and the Agent Ecosystem\n\nFor enterprise teams and open-source contributors, the immediate file mechanics of Agent Skills remain unaltered. Skills written for compatible systems such as Claude Code, Cursor, or VS Code continue to parse identical directory trees.\n\nHowever, formalizing the standard addresses key fragmentation challenges. [MIXED reported](https://mixed-news.com/en/anthropic-agent-skills-agentic-ai-foundation/) that third-party vendors such as Unity have already packaged official skill extensions for coding agents, underscoring the growing reliance on common instruction standards.\n\nSecurity guidance is one of the maintainers' proposed roadmap items. Because skills can package executable scripts alongside instructional text, guidance is needed because bundled scripts run with user permissions. Security researchers have previously built third-party auditing tools like NVIDIA's SkillSpector scanner, but the AAIF roadmap aims to formalize official runtime recommendations as the standard evolves under multi-company oversight.",
+ "faq": [
+  {
+   "q": "What is the Agent Skills standard?",
+   "a": "Agent Skills is an open specification that structures specialized instructions, scripts, and documentation into a standardized folder containing a SKILL.md file, allowing AI agents to load procedural workflows on demand."
+  },
+  {
+   "q": "Do developers need an AAIF membership to use or create Agent Skills?",
+   "a": "No. Anthropic confirmed that anyone can use or contribute to the standard without joining the AAIF."
+  },
+  {
+   "q": "How does Agent Skills differ from the Model Context Protocol (MCP)?",
+   "a": "The Model Context Protocol connects AI agents to external data sources and tools, whereas Agent Skills provides the step-by-step instructions and procedural workflows an agent follows to complete specific tasks."
+  },
+  {
+   "q": "What other projects were added to the Agentic AI Foundation alongside Agent Skills?",
+   "a": "The AAIF simultaneously accepted Open Responses from OpenAI, OpenEnv from Hugging Face, and OpenSandbox from Alibaba, expanding its hosted projects to 10."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "Software engineers and technology leaders gathered inside a modern convention center auditorium, listening to an technical presentation on an open-source stage illuminated by soft cyan and white architectural lights.",
+  "alt": "Developers attending an open source agent technology conference.",
+  "caption": "Illustration of software developers gathering at an open-source conference to discuss shared AI agent specifications.",
+  "src": "img/anthropic-donates-agent-skills-agentic-ai-foundation/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 39426,
+  "small": "img/anthropic-donates-agent-skills-agentic-ai-foundation/hero-640.webp",
+  "og": "img/anthropic-donates-agent-skills-agentic-ai-foundation/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/anthropic-donates-agent-skills-agentic-ai-foundation/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "Two programmers working side by side in a bright studio office, reviewing modular software workflow flowcharts and code logic diagrams pinned to a glass wall.",
+   "alt": "Engineers collaborating on modular workflow architectures.",
+   "caption": "Illustration of developers structuring modular operational instructions and progressive disclosure workflows for autonomous systems.",
+   "slot": "FIG1",
+   "src": "img/anthropic-donates-agent-skills-agentic-ai-foundation/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 43150,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A diverse committee of engineers and software architects seated around an oval conference table in an office boardroom, examining shared open-source technical specifications.",
+   "alt": "A working group of technical contributors discussing protocol governance.",
+   "caption": "Illustration of an open-source technical committee collaborating under neutral foundation governance.",
+   "slot": "FIG2",
+   "src": "img/anthropic-donates-agent-skills-agentic-ai-foundation/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 38982,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+   "title": "Donating Agent Skills to the Agentic AI Foundation",
+   "site": "Anthropic",
+   "published": 1792627200000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://siliconangle.com/2026/10/22/agentic-ai-foundation-adds-four-more-open-source-ai-tools/",
+   "title": "Agentic AI Foundation adds four more open-source AI tools",
+   "site": "SiliconANGLE",
+   "published": 1792709027000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://simonwillison.net/2026/Oct/22/donating-agent-skills/",
+   "title": "Donating Agent Skills to the Agentic AI Foundation",
+   "site": "Simon Willison’s Weblog",
+   "published": null,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.linuxfoundation.org/press/agentic-ai-foundation-announces-four-new-projects-agent-skills-open-responses-openenv-and-opensandbox",
+   "title": "Agentic AI Foundation Announces Four New Projects: Agent Skills, Open Responses, OpenEnv, and OpenSandbox",
+   "site": "The Linux Foundation",
+   "published": 1792684800000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://mixed-news.com/en/anthropic-agent-skills-agentic-ai-foundation/",
+   "title": "Anthropic hands its widely used AI skills standard to an independent foundation",
+   "site": "MIXED Reality News",
+   "published": 1792710438000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://explainx.ai/blog/anthropic-donates-agent-skills-agentic-ai-foundation-agentskills-io-70-platforms-2026",
+   "title": "Anthropic Donates Agent Skills to the Agentic AI Foundation: What Changes",
+   "site": "explainx.ai",
+   "published": 1792627200000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792717997992,
+ "updatedAt": 1792717997992,
+ "foundVia": "anthropic.com, simonwillison.net and Techmeme",
+ "check": {
+  "claims": 49,
+  "score": 10
+ },
+ "story": {
+  "id": "P95b6f312",
+  "score": 87,
+  "items": [
+   "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+   "https://simonwillison.net/2026/Oct/22/donating-agent-skills/",
+   "https://www.techmeme.com/261022/p53#a261022p53"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
