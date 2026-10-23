@@ -1,0 +1,156 @@
+{
+ "slug": "base-labs-mammoth-1-elephant-1-decision-models",
+ "title": "Base Labs Releases Open Mammoth-1 and Elephant-1 Decision Models",
+ "seoTitle": "Base Labs Releases Mammoth-1 and Elephant-1 Models",
+ "description": "Base Labs and Baseten have released elephant-1 and mammoth-1, open-weight decision models that return calibrated probabilities without generating text.",
+ "dek": "Post-trained on 6.2 million examples, the 9B and 27B open-weight models return calibrated probabilities in a single forward pass.",
+ "category": "AI Models",
+ "tags": [
+  "Base Labs",
+  "Baseten",
+  "Decision Models",
+  "Open Source",
+  "Machine Learning"
+ ],
+ "keyTakeaways": [
+  "Base Labs released elephant-1 (9B) and mammoth-1 (27B), two open-weight models post-trained from Qwen3.5 that output calibrated decision probabilities instead of generating text.",
+  "Mammoth-1 scored 71.24 on the Jev Decision Index 0.4 to take first place out of 208 models, while elephant-1 ranked as the top model under 15 billion parameters with a score of 62.65.",
+  "Both models employ block-bidirectional attention on full-attention layers and share a single prefix prefill across multiple questions to minimize compute costs.",
+  "Model weights are available under an MIT license on Hugging Face, alongside a free trial on Baseten Model APIs running through October 27, 2026."
+ ],
+ "body": "On October 19, 2026, Base Labs, the research division of cloud inference provider Baseten, published the weights for [elephant-1](https://huggingface.co/baselabs/elephant-1) and [mammoth-1](https://huggingface.co/baselabs/mammoth-1), two open-weights AI models designed specifically for decision-making tasks. Rather than composing conversational text or open-ended prose, these specialized models output calibrated probabilities across predefined options in a single forward pass. Baseten formally detailed the system architecture and evaluation metrics in a [technical report](https://labs.baseten.co/articles/mammoth-1-and-elephant-1-frontier-decision-models) released on October 21, 2026.\n\nThe release targets production workflows where generative language models often introduce unnecessary latency and compute overhead, such as support ticket routing, content moderation, security guardrails, and model-routing pipelines. By sidestepping autoregressive text generation, the models provide deterministic, threshold-ready scores intended to help automated systems decide when to act immediately and when to escalate ambiguous requests to human reviewers.\n\n[[FIG1]]\n\n## Skipping Text Generation for Direct Probabilities\n\nDecision models operate differently from typical autoregressive language models. First popularized in September 2026 when TypeSafe introduced Jev and the System One API, decision models accept a structured context—known as a state—alongside a list of typed questions, according to the [Base Labs technical report](https://labs.baseten.co/articles/mammoth-1-and-elephant-1-frontier-decision-models). The state can include raw text, support tickets, documents, or image inputs.\n\nInstead of sampling tokens to write an answer, elephant-1 and mammoth-1 evaluate all provided questions using one shared-prefix prefill. The model reads the input state once, stores its key-value cache, and applies subsequent forward passes solely over the individual question suffixes. Each question must match one of three formats:\n\n* **Choice:** Evaluates between 1 and 255 named options with optional descriptions, returning an explicit probability distribution summing to one alongside a normalized confidence score.\n* **Yes/No (Noul):** Returns a single calibrated probability score, denoted as P(yes), for binary verification tasks.\n* **Score:** Ranks inputs across an ordered scale of 2 to 10 distinct levels, returning probabilities for each step, an expected average score, and a confidence metric.\n\nBecause the system skips text token generation, Base Labs notes that decisions avoid output parsing errors while significantly reducing inference latency compared to multi-step reasoning models.\n\n## Architecture and Attention Mask Adjustments\n\nBoth models originate from Alibaba's open-weights Qwen3.5 family. Elephant-1 is a 9-billion-parameter model derived from Qwen3.5-9B, while mammoth-1 contains 27 billion parameters post-trained from Qwen3.5-27B. Both retain a maximum sequence length of 16,384 tokens, and inputs exceeding this threshold are refused rather than truncated.\n\nQwen3.5 models use a hybrid sequence architecture combining causal Gated DeltaNet (GDN) linear recurrent layers with standard full-attention layers. Base Labs altered only the full-attention layers by introducing a block-bidirectional attention mask. Under this mask, tokens in the question suffix can attend bidirectionally to all tokens within their own block as well as all preceding prefix tokens, while prefix tokens never attend to the suffix.\n\nAccording to Base Labs, this block-bidirectional design ensures that question tokens are encoded with full knowledge of their candidate options. In an ablation test using an early training data mixture on a 10,000-example sample of the Jev Decision Index, Base Labs reported that the block-bidirectional mask improved performance from 44.8 to 48.6 points compared to standard causal masking. The vision encoder remains frozen during post-training, with full fine-tuning applied across the language model parameters.\n\n[[FIG2]]\n\n## Training Mixture and Abstention Tuning\n\nTraining both models required 6.21 million curated decision examples, compiled through an eight-iteration dataset sequence labeled Mix 8. Base Labs used elephant-1 to experiment with data mixtures and synthetic generation loops before using the final mixture to train both models.\n\nThe 6.21-million-row dataset is divided into four main segments:\n\n* **Core decision skills (3.62 million examples, 58.3%):** Covers knowledge and reasoning, language processing, tools and automation, retrieval and classification, and human taste evaluations.\n* **Safety and abstention (1.00 million examples, 16.1%):** Targets refusal cases, identifying harmful requests, unviable tool calls, and uncertain queries.\n* **Judging and expert domains (1.00 million examples, 16.1%):** Teaches the model to evaluate answers against rubrics and score outputs across law, finance, and healthcare contexts.\n* **Public decision data (0.59 million examples, 9.5%):** Converts 93 tasks across 61 commercially licensed datasets, reasoning probes, and community benchmarks into decision formats.\n\nTo prevent the models from making unwarranted assumptions, Base Labs introduced explicit abstention training. The loss function combined standard cross-entropy with a Brier calibration term (lambda = 1) and introduced a trained \"I don't know\" option. When candidate answers are ambiguous or missing, the model is penalized more heavily for selecting an incorrect answer than for choosing the abstention option. Base Labs used 128 Nvidia H100 GPUs (16 nodes) to train elephant-1 over 5,546 steps, while mammoth-1 was trained on 72 Nvidia GB300 GPUs (18 nodes) across 9,859 steps in bfloat16 precision.\n\n## Benchmark Performance and Evaluations\n\nBaseten claims that mammoth-1 holds the top position among all evaluated decision models. On the Jev Decision Index 0.4—which comprises 37 public benchmarks alongside private evaluation splits—Base Labs reported that mammoth-1 achieved a score of 71.24, ranking first out of 208 evaluated models, according to the [announcement blog post](https://www.baseten.co/blog/the-best-decision-models-in-the-world-mammoth-1-and-elephant-1/). That score placed it ahead of Perplexity Decider v1.2 (69.42), Jev 1.14 (62.2), and Cloudflare Clef (55.7).\n\nElephant-1 scored 62.65 on the same index, ranking as the highest-performing model under 15 billion parameters and placing in a tie for eighth position overall. On the public split of the index, mammoth-1 reportedly led in four of five subcategories, while elephant-1 trailed mammoth-1 across all five.\n\nOn an internal replica of the Artificial Analysis Decision Index, Base Labs reported that mammoth-1 scored 65.9 and elephant-1 scored 65.2, compared against the official score of 65 recorded for Liquid AI's d1-ultra. However, external analyses from publications like *Startup Fortune* pointed out minor documentation discrepancies in the release notes—such as elephant-1's Artificial Analysis score appearing as both 65 and 65.2 in different tables, and its public Jev score listed as 72.2 in text versus 74.0 elsewhere. Additionally, the Artificial Analysis comparisons reflect an internal reproduction rather than an official shared audit.\n\n## Licensing, Pricing, and Deployment\n\nBoth models have been released as open weights on Hugging Face under the permissive MIT license, while the underlying base weights from Qwen3.5 remain governed by Apache 2.0. Base Labs published self-hosting deployment files built around a pinned OneJev runtime requiring a single CUDA-capable GPU running PyTorch 2.8.0 with CUDA 12.8 support.\n\nFor managed hosting, Baseten added both models to its Model APIs catalog. The company announced that API access to elephant-1 and mammoth-1 is free for one week through October 27, 2026, at 11:59 PM PT, with zero data retention enabled by default. Standard commercial pay-per-token or pay-per-call pricing after the trial period has not yet been detailed.\n\nBase Labs indicated that future development will focus on multimodal decision processing and cyclical or looped decision frameworks, alongside the upcoming public release of its proprietary decision benchmark suite.",
+ "faq": [
+  {
+   "q": "What is a decision model?",
+   "a": "A decision model evaluates an input state and a set of structured questions to output calibrated probabilities, scores, or boolean classifications in a single pass, rather than generating free-form text."
+  },
+  {
+   "q": "What are the sizes and base architectures of elephant-1 and mammoth-1?",
+   "a": "Elephant-1 has 9 billion parameters post-trained from Qwen3.5-9B, while mammoth-1 has 27 billion parameters post-trained from Qwen3.5-27B. Both retain a 16,384-token context window."
+  },
+  {
+   "q": "How can developers run these models?",
+   "a": "Developers can download the open-weight models from Hugging Face under an MIT license to host on their own CUDA hardware, or access them via Baseten Model APIs, where they are free to use through October 27, 2026."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern data center interior with illuminated server racks, where glowing lines of light stream into an intricate central network switch that routes data into clean numeric paths",
+  "alt": "An illuminated server infrastructure routing data streams through a central system",
+  "caption": "",
+  "src": "img/base-labs-mammoth-1-elephant-1-decision-models/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 79312,
+  "small": "img/base-labs-mammoth-1-elephant-1-decision-models/hero-640.webp",
+  "og": "img/base-labs-mammoth-1-elephant-1-decision-models/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/base-labs-mammoth-1-elephant-1-decision-models/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An engineer sitting in a dimly lit workstation analyzing mathematical probability graphs and bar charts displayed across multiple monitors",
+   "alt": "An engineer reviewing probability and statistical calibration charts on multiple screens",
+   "caption": "",
+   "slot": "FIG1",
+   "src": "img/base-labs-mammoth-1-elephant-1-decision-models/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 32844,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A clean industrial automated routing hub where geometric parcels are sorted into separate colored channels based on numeric confidence indicators",
+   "alt": "An automated sorting facility categorizing items into distinct streams",
+   "caption": "",
+   "slot": "FIG2",
+   "src": "img/base-labs-mammoth-1-elephant-1-decision-models/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 80992,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://huggingface.co/baselabs/elephant-1",
+   "title": "baselabs/elephant-1",
+   "site": "Hugging Face",
+   "published": 1792438508000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://huggingface.co/baselabs/mammoth-1",
+   "title": "baselabs/mammoth-1",
+   "site": "Hugging Face",
+   "published": 1792438512000,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://labs.baseten.co/articles/mammoth-1-and-elephant-1-frontier-decision-models",
+   "title": "Mammoth-1 and Elephant-1: frontier decision models",
+   "site": "Base Labs",
+   "published": 1792540800000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.baseten.co/blog/the-best-decision-models-in-the-world-mammoth-1-and-elephant-1/",
+   "title": "The top ranked decision models in the world: mammoth-1 and elephant-1",
+   "site": "Baseten",
+   "published": 1792601932000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://superpowerdaily.com/posts/baseten-releases-ai-models-that-score-decisions-instead-of-writing-answers",
+   "title": "Baseten releases AI models that score decisions instead of writing answers",
+   "site": "superpowerdaily.com",
+   "published": 1792677985410,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://startupfortune.com/mammoth-1-and-elephant-1-decision-models-review-as-base-labs-claims-the-top-spot/",
+   "title": "Mammoth-1 and Elephant-1 Decision Models Review as Base Labs Claims the Top Spot",
+   "site": "Startup Fortune",
+   "published": 1792659106000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://explainx.ai/blog/base-labs-mammoth-1-elephant-1-open-decision-models-baseten-jev-index-claimed-vs-verified-2026",
+   "title": "Base Labs Mammoth-1 and Elephant-1: Open Decision Models Claim #1 (Claimed vs Verified)",
+   "site": "explainx.ai",
+   "published": 1792627200000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792723281431,
+ "updatedAt": 1792723281431,
+ "foundVia": "Google Search",
+ "check": {
+  "claims": 59,
+  "score": 10
+ },
+ "story": {
+  "id": "Pe7864d05",
+  "score": 84,
+  "items": [
+   "https://huggingface.co/baselabs/elephant-1",
+   "https://superpowerdaily.com/posts/baseten-releases-ai-models-that-score-decisions-instead-of-writing-answers"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
