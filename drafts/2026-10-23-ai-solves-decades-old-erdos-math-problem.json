@@ -1,0 +1,156 @@
+{
+ "reason": "fact-checker: event is not recent",
+ "story": {
+  "id": "Pd2a8cb3d",
+  "headline": "AI Solves Decades-Old Erdős Math Problem",
+  "firstSeen": 1792706585189,
+  "items": [
+   "https://news.northeastern.edu/2026/10/22/ai-math-problems-future/"
+  ],
+  "attempts": 1,
+  "importance": 85,
+  "summary": "Researchers analyzed major strides in machine reasoning after an advanced AI system solved an open distance conjecture originally posed by Paul Erdős in 1946. This milestone highlights AI's expanding capability in solving longstanding research mathematics problems.",
+  "category": "Science",
+  "lastSeen": 1792706585189,
+  "update": false,
+  "updateOf": "",
+  "score": 85
+ },
+ "draft": {
+  "newsworthy": true,
+  "title": "OpenAI Model Disproves Erdős Planar Unit Distance Conjecture",
+  "seoTitle": "AI Disproves Erdős Planar Unit Distance Conjecture",
+  "slug": "openai-model-disproves-erdos-unit-distance-conjecture",
+  "description": "An OpenAI reasoning model disproved Paul Erdős's 1946 unit distance conjecture, using algebraic number theory to find a surprising geometric counterexample.",
+  "dek": "An internal OpenAI reasoning system found an unexpected counterexample to Paul Erdős's 1946 unit distance problem, marking an autonomous breakthrough in research mathematics.",
+  "category": "Research",
+  "tags": [
+   "OpenAI",
+   "Paul Erdős",
+   "Discrete Geometry",
+   "Machine Reasoning",
+   "Mathematics"
+  ],
+  "keyTakeaways": [
+   "An internal OpenAI general-purpose reasoning model autonomously disproved Paul Erdős's 1946 planar unit distance conjecture.",
+   "The proof drew on algebraic number theory, using infinite class field towers and Golod-Shafarevich theory to construct a geometric counterexample.",
+   "External mathematicians, including Fields medalist Tim Gowers, validated the proof, and Princeton mathematician Will Sawin refined the lower bound exponent to 0.014.",
+   "The achievement highlights expanding machine reasoning capabilities while underscoring the ongoing necessity of human evaluation and interpretation."
+  ],
+  "body": "On May 20, 2026, OpenAI announced that an internal reasoning model disproved a longstanding conjecture in discrete geometry originally proposed by Hungarian mathematician Paul Erdős in 1946, known as the Erdős planar unit distance conjecture. The problem asks how many pairs among n points in a plane can sit exactly one unit apart. According to an official announcement by [OpenAI](https://openai.com/index/model-disproves-discrete-geometry-conjecture/), the system identified an unexpected family of point configurations that exceed the theoretical upper bound Erdős hypothesized, marking an autonomous breakthrough by an AI system in pure mathematics.\n\nThe proof emerged not from a specialized automated theorem prover, but from a general-purpose reasoning model evaluated across a collection of open mathematical problems, as reported by [The Guardian](https://www.theguardian.com/technology/2026/may/21/openai-paul-erdos-maths-problem-breakthrough). Outside mathematicians verified the argument and authored a companion paper detailing its implications. The result underscores growing machine reasoning proficiency while sparking fresh discussion across the scientific community regarding the expanding role of automated proofs.\n\n## The History of the Erdős Planar Unit Distance Conjecture\n\nPaul Erdős first posed the planar unit distance problem in 1946, attaching a monetary bounty for its resolution. The question is straightforward to state: given n points marked on a flat two-dimensional surface, what is the maximum number of pairs separated by exactly unit distance? Placing n points on a single straight line produces n - 1 unit-distance pairs, while a square grid yields roughly 2n pairs.\n\n[[FIG1]]\n\nFor decades, mathematicians believed that configurations derived from rescaled square grids were essentially optimal. As Keith Devlin outlined for the [Mathematical Association of America](https://maa.org/math-values/ai-solves-an-80-year-old-erdos-problem/), these square grids achieve a pair count growing at a rate exceeding n^(1 + C / log log n) for a positive constant C. Because log log n increases as n grows, this growth is only slightly faster than linear. Erdős conjectured an asymptotic upper bound of n^(1 + o(1)). Although mathematicians Joel Spencer, Endre Szemerédi, and William T. Trotter established an upper bound of O(n^(4/3)) in 1984, the lower bound had remained unchanged since Erdős's initial 1946 paper.\n\n## Algebraic Number Fields Provide the Counterexample\n\nOpenAI's reasoning model overturned Erdős's conjecture by constructing point sets that produce at least n^(1 + delta) unit-distance pairs for a fixed positive exponent delta, demonstrating a polynomial improvement over prior square-grid configurations. As explained by [OpenAI](https://openai.com/index/model-disproves-discrete-geometry-conjecture/), the model departed from conventional geometric grid arrangements by borrowing tools from algebraic number theory.\n\nErdős's original lower bound relied on Gaussian integers—complex numbers of the form a + bi, where a and b are integers. The AI system generalized this framework by turning to algebraic number fields with richer symmetries that generate substantially more unit-length differences. To establish that these required algebraic structures exist, the model employed advanced concepts including infinite class field towers and Golod-Shafarevich theory. Devlin noted in his [MAA](https://maa.org/math-values/ai-solves-an-80-year-old-erdos-problem/) column that the construction can be understood as an elaborate higher-dimensional lattice with distance symmetries projected down into two dimensions as a flattened shadow.\n\n[[FIG2]]\n\nAlthough the AI's original proof established the existence of a positive delta without calculating a specific value, Princeton University mathematics professor Will Sawin subsequently refined the argument to prove that delta can be taken to be at least 0.014.\n\n## Independent Verification and Mathematical Collaboration\n\nBefore releasing the finding, OpenAI shared the derivation with external mathematicians for rigorous evaluation. Fields medalist Tim Gowers described the proof as \"a milestone in AI mathematics\" in the companion paper. University of Toronto number theorist Arul Shankar stated that the demonstration indicates current AI models \"go beyond just helpers to human mathematicians – they are capable of having original ingenious ideas, and then carrying them out to fruition.\"\n\nThomas Bloom, a mathematician at the University of Manchester who curates the erdosproblems.com database, co-authored the companion paper. Bloom observed that the AI system succeeded by persevering down lines of inquiry human researchers had previously dismissed. However, Bloom emphasized that human mathematicians remained indispensable in refining, organizing, and interpreting the raw argument into a cohesive paper.\n\nThe milestone aligns with a broader surge in AI-assisted mathematics across academic and amateur circles. According to [Quanta Magazine](https://www.quantamagazine.org/why-the-legendary-erdos-problems-are-falling-to-ai-20260803/), undergraduate Kevin Barreto and amateur mathematician Liam Price used GPT-5.2 Pro to resolve Erdős Problem 728 concerning divisibility, and later co-authored a May 2026 paper resolving Erdős Problem 1196 regarding primitive sets alongside mathematicians including Terence Tao. Reporting by [Physics World](https://physicsworld.com/a/ai-led-solutions-of-erdos-problems-spark-debate-over-the-future-of-mathematics/) noted that Price obtained the initial proof for Problem 1196 by prompting GPT-5.4 Pro directly with the problem statement, prompting Stanford University mathematician Jared Lichtman to describe the compact result as a \"Book Proof.\"\n\n[[FIG3]]\n\n## Broader Implications and Current Limitations of AI in Research\n\nDespite these advances, researchers caution that automated systems are not poised to replace human mathematicians. In an analysis by [Physics World](https://physicsworld.com/a/ai-led-solutions-of-erdos-problems-spark-debate-over-the-future-of-mathematics/), François Charton of AxiomMath observed that broad theoretical framework building remains entirely out of reach for machine learning systems, even if models excel at cross-disciplinary searches and correlation spotting. Former algebraist David Bessis also warned that proofs checked automatically in proof assistants like Lean may produce formal derivations that humans cannot easily interpret, potentially obscuring conceptual understanding.\n\nSpeaking to [Northeastern Global News](https://news.northeastern.edu/2026/10/22/ai-math-problems-future/), Northeastern University mathematics professor Ken Duffy noted that research mathematics fundamentally relies on formulating the right questions rather than just executing calculations. Duffy pointed out that AI models still hallucinate and produce invalid arguments, making expert human evaluation necessary to separate valid discoveries from errors. While automated reasoning models continue to tackle challenging conjectures, researchers expect these systems to serve primarily as assistive collaborators that expand the reach of human inquiry across complex disciplines.",
+  "faq": [
+   {
+    "q": "What is the Erdős planar unit distance conjecture?",
+    "a": "Proposed by Paul Erdős in 1946, the problem asks for the maximum number of pairs of points that can sit exactly one unit apart among n points in a two-dimensional plane. Erdős conjectured an upper bound scaling as n^(1 + o(1))."
+   },
+   {
+    "q": "How did the OpenAI model disprove Erdős's conjecture?",
+    "a": "Rather than relying on conventional square grid constructions, the model applied advanced tools from algebraic number theory, such as infinite class field towers and Golod-Shafarevich theory, to construct point sets yielding at least n^(1 + delta) unit-distance pairs for a fixed positive exponent delta."
+   },
+   {
+    "q": "Did human mathematicians verify the proof?",
+    "a": "Yes. External mathematicians, including Fields medalist Tim Gowers and Thomas Bloom, reviewed and confirmed the proof, and Princeton mathematician Will Sawin subsequently refined the argument to show that delta can be at least 0.014."
+   }
+  ],
+  "hero": {
+   "marker": "HERO",
+   "type": "ai",
+   "prompt": "A large classroom chalkboard covered in geometric point diagrams, lattices, and algebraic equations in an empty university lecture hall with afternoon sunlight filtering through tall windows.",
+   "alt": "A lecture hall chalkboard covered with geometric point configurations and mathematical formulas.",
+   "caption": "Illustration: The planar unit distance problem investigates configurations of points and their separation distances on a two-dimensional surface."
+  },
+  "figures": [
+   {
+    "marker": "FIG1",
+    "type": "ai",
+    "prompt": "An abstract two-dimensional geometric plane displaying scattered glowing dots connected by precisely measured distance lines, showing complex network symmetries.",
+    "alt": "An abstract depiction of points in a plane connected by lines of uniform length.",
+    "caption": "Illustration: Erdős conjectured that points on a flat plane could only generate a near-linear number of unit-distance pairs."
+   },
+   {
+    "marker": "FIG2",
+    "type": "ai",
+    "prompt": "A three-dimensional lattice structure casting a complex, flattened shadow onto a flat surface below, illustrating geometric projection from higher dimensions.",
+    "alt": "A high-dimensional lattice projecting a flattened pattern onto a flat surface.",
+    "caption": "Illustration: The counterexample relied on algebraic number fields to map higher-dimensional symmetries down to a two-dimensional plane."
+   },
+   {
+    "marker": "FIG3",
+    "type": "ai",
+    "prompt": "Two research mathematicians sitting at a wooden table covered in handwritten calculation sheets, examining notes and printed derivations together.",
+    "alt": "Two researchers reviewing mathematical derivations across printed papers at a table.",
+    "caption": "Illustration: Human mathematicians verified the derivation and explored its theoretical consequences."
+   }
+  ],
+  "sourcesUsed": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ]
+ },
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+   "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
+   "site": "OpenAI",
+   "official": true,
+   "primary": true,
+   "published": null,
+   "text": "For nearly 80 years, mathematicians have studied a deceptively simple question: if you place nn points in the plane, how many pairs of points can be exactly distance 11 apart?This is the planar unit distance problem, first posed by Paul Erdős in 1946. It is one of the best-known questions in combinatorial geometry, easy to state and remarkably difficult to resolve. The 2005 book Research Problems "
+  },
+  {
+   "n": 2,
+   "url": "https://www.quantamagazine.org/why-the-legendary-erdos-problems-are-falling-to-ai-20260803/",
+   "title": "Why the Legendary Erdős Problems Are Falling to AI | Quanta Magazine",
+   "site": "Quanta Magazine",
+   "official": false,
+   "primary": false,
+   "published": 1785769520000,
+   "text": "AI’s greatest mathematical successes have come from answers to problems posed by a mid-20th century iconoclast. By examining what makes the Erdős problems unique, mathematicians are trying to understand how AI might change the rest of math. \n \n \n On May 20, 2026, OpenAI made an announcement that shook the mathematical world. An internal AI model — one not available to the public — had come up with"
+  },
+  {
+   "n": 3,
+   "url": "https://www.theguardian.com/technology/2026/may/21/openai-paul-erdos-maths-problem-breakthrough",
+   "title": "OpenAI makes breakthrough on 80-year-old maths problem",
+   "site": "The Guardian",
+   "official": false,
+   "primary": false,
+   "published": 1779380654000,
+   "text": "OpenAI has claimed a further advance in AI reasoning after its technology successfully tackled an 80-year-old maths problem.The company behind ChatGPT said it had made a breakthrough with a challenge first posed by Hungarian mathematician Paul Erdős in 1946: the planar unit distance problem.The question posed by Erdős is simple to explain. If you take a sheet of paper and add some dots, how many p"
+  },
+  {
+   "n": 4,
+   "url": "https://maa.org/math-values/ai-solves-an-80-year-old-erdos-problem/",
+   "title": "AI solves an 80 year-old Erdős problem.",
+   "site": "maa.org",
+   "official": false,
+   "primary": false,
+   "published": 1780272000000,
+   "text": "Author and Metadata:\n- Author: Keith Devlin (@KeithDevlin@fediscience.org, @profkeithdevlin.bsky.social)\n- Publication/Blog: Mathematical Association of America (MAA), Math Values, Devlin's Angle\n- Date: June 1, 2026\n\nBackground on AI:\n- Recent attention on AI has focused on Anthropic's Claude, particularly Claude's discovery of 23,000 potential security vulnerabilities across 1,000 Open Source So"
+  },
+  {
+   "n": 5,
+   "url": "https://physicsworld.com/a/ai-led-solutions-of-erdos-problems-spark-debate-over-the-future-of-mathematics/",
+   "title": "AI-led solutions of Erdős problems spark debate over the future of mathematics",
+   "site": "Physics World",
+   "official": false,
+   "primary": false,
+   "published": 1780047090000,
+   "text": "(Courtesy: iStock/Mr Squid)\n \n News that large language models (LLM) have made major advances in solving Erdős problems – a set of problems formulated by the renowned 20th-century mathematician Paul Erdős – has created an amalgamation of uproar and interest among mathematicians. The past month alone has seen two significant LLM-generated solutions. The first relates to prime sets, a generalization"
+  },
+  {
+   "n": 6,
+   "url": "https://news.northeastern.edu/2026/10/22/ai-math-problems-future/",
+   "title": "AI is solving math problems that stumped humans. What comes next?",
+   "site": "Northeastern Global News",
+   "official": false,
+   "primary": true,
+   "published": 1792697830000,
+   "text": "A few short years ago, asking AI to add two four-digit numbers together for a third-grade math assignment would have been a bad idea. Over half the time, the answer would be wrong, studies have shown. Long division or a “leaky tank” problem, an algebra class staple? Forget about it. \n\nAlthough AI still struggles with arithmetic, in 2024, Google DeepMind’s AI systems scored high enough for a silver"
+  }
+ ]
+}
