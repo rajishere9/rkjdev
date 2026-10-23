@@ -1,0 +1,144 @@
+{
+ "slug": "rfdiffusion3-baker-lab-atom-level-enzyme-design",
+ "title": "Baker Lab Breakthrough Yields RFdiffusion3 for Atom-Level Enzyme Design",
+ "seoTitle": "RFdiffusion3: Atom-Level AI Enzyme Design in Science",
+ "description": "Baker Lab researchers published RFdiffusion3 in Science, designing functional enzymes and RNA atom by atom to break down toxins and target disease peptides.",
+ "dek": "Published in Science, the generative model builds catalytic sites and nucleic acids atom by atom, yielding lab-validated enzymes that destroy toxins and disease peptides.",
+ "category": "Science",
+ "tags": [
+  "RFdiffusion3",
+  "Protein Design",
+  "Enzyme Engineering",
+  "Generative AI",
+  "Structural Biology"
+ ],
+ "keyTakeaways": [
+  "RFdiffusion3 models individual atoms in protein backbones, side chains, and nucleic acids, departing from previous amino acid-level design tools.",
+  "Experimental validation in Science showed de novo enzymes successfully neutralizing the organophosphate toxin paraoxon and selectively cleaving transthyretin amyloid peptides.",
+  "The model achieved a ten-fold speedup over RFdiffusion2 and outperformed earlier methods in 37 of 41 enzyme active site design benchmarks.",
+  "The Baker lab released both training code and model weights under an open-source license on GitHub through the Rosetta Commons Foundry."
+ ],
+ "body": "In a peer-reviewed study published in *Science*, researchers from the University of Washington's Baker lab introduced RFdiffusion3 (RFD3), a generative artificial intelligence system capable of designing functional enzymes, catalytic side chains, and nucleic acids atom by atom. The breakthrough, detailed in *Science*, enables the creation of custom biocatalysts from scratch by modeling molecular interactions at the resolution of individual atoms rather than coarse amino acid positions. In wet-lab validation, the system produced synthetic enzymes that break down toxic organophosphates as well as proteases engineered to cleave peptide sequences implicated in human disease.\n\nUnlike traditional protein design workflows that modify existing enzymes found in nature, RFdiffusion3 generates bespoke macromolecular structures tailored to specific chemical targets. The tool builds upon the lab's prior generative software while introducing an entirely new architectural foundation optimized for atomic-level precision.\n\n## Atom-by-Atom Generation Across Biomolecules\n\nPrior generative protein design tools operate primarily at the level of amino acid residues, treating proteins as chains of standard building blocks. While that resolution works for generating stable structural folds and simple protein binders, it struggles with the catalytic centers of enzymes, where the exact placement of individual atoms determines whether chemical bonds break or form. RFdiffusion3 abandons the code base of its predecessors to implement a unified all-atom generation framework, according to the [UW Institute for Protein Design](https://www.ipd.uw.edu/2025/12/rfdiffusion3-now-available/).\n\n[[FIG1]]\n\nAs reported by [SingularityHub](https://singularityhub.com/2026/10/22/a-new-ai-model-designs-enzymes-with-atomic-precision/), the model represents each amino acid with 14 atomic coordinate slots—four for the backbone and 10 for side chains—analogous to markers on a motion-capture suit. Rather than selecting an amino acid sequence first and predicting how it folds, researchers can directly specify key spatial constraints, such as active-site atom positions, hydrogen bond networks, substrate orientations, and atom burial degrees. RFdiffusion3 then performs diffusion directly on atomic coordinates to generate a matching backbone and side-chain framework.\n\nCrucially, the architecture handles interactions beyond pure proteins. [BIOENGINEER.ORG](https://bioengineer.org/rfdiffusion3-designs-proteins-and-nucleic-acids-atom-by-atom-with-striking-precision/) noted that RFD3 models individual atoms across both proteins and nucleic acids, extending generative design to RNA structures, protein-DNA complexes, small-molecule ligands, and metal coordination centers within a single foundation model.\n\n## Laboratory Validation: Detoxifying Organophosphates and Cleaving Disease Targets\n\nTo test whether atom-level computational designs translate into actual biological activity, the team synthesized and experimentally evaluated candidates targeting environmental and biomedical challenges.\n\n[[FIG2]]\n\nAs detailed in [*Science* coverage by 36Kr](https://eu.36kr.com/en/p/4027795416814215), the researchers used RFD3 to design de novo phosphotriesterases to hydrolyze paraoxon, a toxic organophosphate found in pesticides. Natural phosphotriesterases require complex active sites consisting of six catalytic residues, two coordinated metal ions, and a specialized carbamoylated lysine modification. Using quantum chemistry modeling to represent the reaction transition state, the team generated protein backbones around the active site and selected sequences using LigandMPNN and AlphaFold3. In the initial batch of 96 designs, four exhibited catalytic activity; a top variant named ZAPP-1 performed multiple catalytic cycles with a catalytic rate constant (kcat) of 0.015 ± 0.003 s⁻¹. In a secondary round of 192 designs, an optimized variant named ZAPP-2 demonstrated an acceleration rate roughly 500,000 times higher than the uncatalyzed reaction across four distinct protein backbones.\n\nIn another laboratory validation, the researchers engineered artificial proteases to cleave a target peptide sequence from transthyretin (TTR), an abnormal protein whose aggregation causes damage in amyloidosis affecting the heart, kidneys, and nervous system. Of 96 candidate designs, 56 cleaved the target peptide with an efficiency greater than 10 percent in cis-cleavage tests. One design, TTRg11, cleaved the majority of the reporter substrate within one hour with an efficiency (kcat/KM) of 1100 ± 300 M⁻¹ s⁻¹, demonstrating high selectivity against other disease-associated peptides.\n\n## Architectural Overhaul and Computational Performance\n\nBeyond wet-lab catalytic validation, the researchers evaluated RFdiffusion3 against preceding tools across a wide range of computational benchmarks. In tests involving 41 enzyme active site design challenges, RFD3 outperformed RFdiffusion2 in 37 instances, as reported by [36Kr](https://eu.36kr.com/en/p/4027795416814215). For typical protein lengths, the generation speed of RFD3 was more than twice as fast as RFD1 and BoltzGen, and achieved a ten-fold speedup over RFdiffusion2 according to the [UW Institute for Protein Design](https://www.ipd.uw.edu/2025/12/rfdiffusion3-now-available/).\n\n[[FIG3]]\n\nThe tool also showed capacity in generating nucleic acid geometry. In 57 RNA structure design benchmarks, 21 generated designs achieved a structural consistency standard with a Local Distance Difference Test (LDDT) score above 0.9, compared to only 10 reaching that threshold using the baseline RFDpoly model. The team computationally modeled functional RNA aptamers and hybrid RNA-protein catalytic assemblies, demonstrating that direct atomic reasoning can address non-protein biomolecular folding.\n\n## Open Science Release and Remaining Hurdles\n\nUnlike proprietary models in structural biology, RFdiffusion3 has been released openly. The Baker lab made both the model weights and the complete training code available via the Rosetta Commons Foundry on GitHub, as confirmed by the [UW Institute for Protein Design](https://www.ipd.uw.edu/2025/12/rfdiffusion3-now-available/). The release enables researchers worldwide to retrain, fine-tune, or adapt the architecture for custom scientific tasks. Research funding for the work was provided by The Audacious Project, Microsoft, the Howard Hughes Medical Institute, Open Philanthropy, and the National Institutes of Health.\n\nDespite these results, the developers and observers noted distinct boundaries to the technology's current performance. As highlighted in [SingularityHub](https://singularityhub.com/2026/10/22/a-new-ai-model-designs-enzymes-with-atomic-precision/), the de novo proteases and synthetic enzymes operate at lower catalytic efficiencies than natural enzymes evolved over millennia—natural enzymes typically exhibit kcat/KM ranges between 10⁴ and 10⁸ M⁻¹ s⁻¹, well above the unoptimized 1100 M⁻¹ s⁻¹ measured for TTRg11. Furthermore, in vitro cleavage of isolated peptide targets does not demonstrate that these designed enzymes can safely eliminate amyloid deposits in living organisms or serve as finished drugs. Much of the RNA modeling work also remains computational and awaits extensive wet-lab validation.",
+ "faq": [
+  {
+   "q": "What makes RFdiffusion3 different from previous protein design tools?",
+   "a": "Earlier tools primarily modeled proteins at the amino acid residue level. RFdiffusion3 models individual atoms in both protein backbones and catalytic side chains, as well as RNA and DNA, using 14 atom slots per amino acid to position catalytic machinery with atomic precision."
+  },
+  {
+   "q": "What practical enzymes did the researchers successfully build?",
+   "a": "The researchers demonstrated functional enzymes in the laboratory, including phosphotriesterases capable of breaking down the organophosphate pesticide paraoxon and proteases that selectively cleave peptide sequences linked to transthyretin amyloidosis."
+  },
+  {
+   "q": "Is RFdiffusion3 open source and publicly accessible?",
+   "a": "Yes. The Institute for Protein Design released both the pre-trained model weights and the training code under an open-source license on GitHub through the Rosetta Commons Foundry."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern structural biology laboratory where a biochemist in a white lab coat observes a detailed, glowing three-dimensional holographic projection of an enzyme active site holding a small molecule substrate with atomic coordinates highlighted in cyan and amber light",
+  "alt": "AI illustration of a scientist analyzing a 3D holographic model of a custom enzyme active site",
+  "caption": "Illustration: Generative modeling enables the atomic-level arrangement of catalytic residues to construct functional custom enzymes.",
+  "src": "img/rfdiffusion3-baker-lab-atom-level-enzyme-design/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 54830,
+  "small": "img/rfdiffusion3-baker-lab-atom-level-enzyme-design/hero-640.webp",
+  "og": "img/rfdiffusion3-baker-lab-atom-level-enzyme-design/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/rfdiffusion3-baker-lab-atom-level-enzyme-design/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An artistic visualization of all-atom diffusion in molecular design, showing diffuse glowing spherical particles assembling into an intricate protein backbone spiral and side-chain coordination sphere against a dark blue background",
+   "alt": "AI illustration depicting glowing atomic particles coalescing into a structured protein helix and active site",
+   "caption": "Illustration: RFdiffusion3 treats individual atoms as fundamental units, organizing complex catalytic geometries directly from atomic coordinates.",
+   "slot": "FIG1",
+   "src": "img/rfdiffusion3-baker-lab-atom-level-enzyme-design/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 34848,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A laboratory researcher working in a sterile biochemistry facility holding a glass vial containing a clear catalytic enzyme solution, surrounded by clean test tube racks and analytical equipment",
+   "alt": "AI illustration of a laboratory researcher inspecting a vial of synthesized artificial enzymes",
+   "caption": "Illustration: Synthetic enzymes designed by the model were synthesized and experimentally validated for catalytic degradation of toxic compounds in test tubes.",
+   "slot": "FIG2",
+   "src": "img/rfdiffusion3-baker-lab-atom-level-enzyme-design/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 35000,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "A computer workstation in an academic research center showing high-resolution structural bioinformatics diagrams and molecular coordinate trees across dual monitors",
+   "alt": "AI illustration of an academic computer workstation running biomolecular design models",
+   "caption": "Illustration: Open-source training code and model weights allow research teams globally to adapt all-atom generative models to new biochemical targets.",
+   "slot": "FIG3",
+   "src": "img/rfdiffusion3-baker-lab-atom-level-enzyme-design/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 41954,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://www.ipd.uw.edu/2025/12/rfdiffusion3-now-available/",
+   "title": "RFdiffusion3 now available – Institute for Protein Design",
+   "site": "Institute for Protein Design – Designing tomorrow",
+   "published": 1764783453000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://singularityhub.com/2026/10/22/a-new-ai-model-designs-enzymes-with-atomic-precision/",
+   "title": "This AI Model Designs Enzymes With Atomic Precision",
+   "site": "SingularityHub",
+   "published": 1792677600000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://bioengineer.org/rfdiffusion3-designs-proteins-and-nucleic-acids-atom-by-atom-with-striking-precision/",
+   "title": "RFdiffusion3 designs proteins and nucleic acids atom by atom with striking",
+   "site": "BIOENGINEER.ORG",
+   "published": 1792183452000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://eu.36kr.com/en/p/4027795416814215",
+   "title": "Nobel Laureate David Baker's Team Lands New Science Breakthrough: Advancing Protein Design to the Exact Atomic Level",
+   "site": "eu.36kr.com",
+   "published": null,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792719485957,
+ "updatedAt": 1792719485957,
+ "foundVia": "Google Search",
+ "check": {
+  "claims": 26,
+  "score": 10
+ },
+ "story": {
+  "id": "P9cd8eeae",
+  "score": 85,
+  "items": [
+   "https://singularityhub.com/2026/10/22/a-new-ai-model-designs-enzymes-with-atomic-precision/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
