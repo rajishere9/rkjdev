@@ -1,0 +1,192 @@
+{
+ "slug": "moonshot-ai-releases-kimi-k3-1-pro",
+ "title": "Moonshot AI Releases Kimi K3.1 Pro With Open Weights Set for November",
+ "seoTitle": "Moonshot AI Releases Kimi K3.1 Pro Open-Weight Model",
+ "description": "Moonshot AI has released Kimi K3.1 Pro, a 3T-class model with a 1M context window and benchmark results that Moonshot AI and independent index evaluations report rival top proprietary systems.",
+ "dek": "The Chinese AI lab introduces Kimi K3.1 Pro, which Moonshot AI reports in its technical announcement posted competitive scores across coding benchmarks while deliberately pruning offensive cyber capabilities ahead of an open-weight release.",
+ "category": "AI Models",
+ "tags": [
+  "Moonshot AI",
+  "Kimi K3.1 Pro",
+  "Open Weights",
+  "AI Benchmarks",
+  "Coding Agents"
+ ],
+ "keyTakeaways": [
+  "Moonshot AI has launched Kimi K3.1 Pro and a faster Highspeed variant across its apps and API, with full open weights scheduled for publication by November 4, 2026.",
+  "The 3-trillion-class model features a 1-million-token context window and achieved 55 points on the Artificial Analysis Intelligence Index, landing fourth behind top closed proprietary models.",
+  "On Terminal-Bench 4.0, Moonshot AI self-reported that K3.1 Pro scored 65.7% (not independently verified), trailing Claude Opus 5.5 (66.4%) and outpacing GPT-6 Astra (58.2%).",
+  "Moonshot AI states that it intentionally removed cyberattack data from training, reducing in-house vulnerability-exploitation benchmark scores from 90.5% to 81.0% to mitigate open-weight security risks.",
+  "Hosted API pricing is set at $2.00 per million input tokens and $10.00 per million output tokens, representing a 33% reduction from Kimi K3."
+ ],
+ "body": "Moonshot AI has unveiled Kimi K3.1 Pro, an upgraded post-trained model built on its 3-trillion-class architecture, alongside a faster companion variant called Kimi K3.1 Pro Highspeed. The release, announced via an [official technical blog post](https://www.kimi.ai/blog/kimi-k3-1-pro), brings a 1-million-token context window and major updates to coding, 3D spatial design, and financial analysis. While the model is accessible immediately through Moonshot AI's consumer apps, desktop software, and developer API, the company announced that full model weights will be released publicly by November 4, 2026.\n\nThe launch immediately narrows the documented performance spread between open-weight architectures and top-tier closed proprietary systems. Independent evaluation firm Artificial Analysis placed K3.1 Pro at 55 points on its Intelligence Index, according to [The Decoder](https://the-decoder.com/chinese-ai-model-kimi-k3-1-pro-is-closing-in-on-anthropics-claude-opus-5-5/). That score positions K3.1 Pro in fourth place globally, trailing Claude Opus 5.5 at 58 points, and Claude Sonnet 5.5 and Muse Wonder Full at 56 points, while matching or exceeding frontier offerings from OpenAI and Google.\n\n[[FIG1]]\n\n## Post-Training Architecture and Compute Scaling\n\nKimi K3.1 Pro is not an entirely new foundational model from scratch; rather, it is a post-trained iteration of Kimi K3, which initially debuted in July 2026. According to [The Decoder](https://the-decoder.com/chinese-ai-model-kimi-k3-1-pro-is-closing-in-on-anthropics-claude-opus-5-5/), the system retains the structural dimensions of K3, maintaining approximately 2.8 trillion total parameters with 104 billion active parameters.\n\nTo build K3.1 Pro, Moonshot AI applied substantially increased post-training compute. The company reported that it revamped its reinforcement learning (RL) framework, long-context inference runtime, distributed training efficiency, execution sandbox infrastructure, rollout scheduling, and automated environment evaluation. This unified infrastructure was tuned to support joint reinforcement learning across hundreds of downstream domains simultaneously, ensuring that ongoing compute scaling produced predictable capability improvements.\n\nAlongside the base model, Moonshot AI launched Kimi K3.1 Pro Highspeed. As detailed in the [Kimi Code documentation](https://www.kimi.com/code/docs/en/kimi-code/models.html), the Highspeed edition retains identical underlying reasoning capabilities while delivering two to three times the generation speed of standard K3.1 Pro, in exchange for roughly double the quota consumption.\n\n## Benchmark Performance in Coding, 3D, and Finance\n\nIn synthetic tests and realistic agent evaluations, Moonshot AI reported marks that place K3.1 Pro alongside premier proprietary systems. On Terminal-Bench 4.0—an evaluation testing coding agents on realistic terminal tasks under resource constraints—K3.1 Pro achieved 65.7% using the Claude Code harness, according to Moonshot AI's technical blog and [explainx.ai](https://explainx.ai/blog/kimi-k3-1-pro-open-weights-benchmarks-price-terminal-bench-nov-4-2026). That mark places the model narrowly behind Anthropic's Claude Opus 5.5 (66.4%) and ahead of OpenAI's GPT-6 Astra (58.2%).\n\nOn internal coding assessments, Moonshot reported a score of 61.2% on Kimi Code Bench 3.0 Long-horizon, up from 55.95% on Kimi K3. In a demonstration of extended agentic problem solving cited by [Unite.AI](https://www.unite.ai/moonshot-ai-releases-kimi-k3-1-pro-first-model-in-new-k3-1-series/), the model was tasked with building a bipedal walking dynamics simulator on top of human-atlas, an anatomical model comprising 296 skeletal components and 402 muscles. Operating across 167 missions and 420 independent evaluation reviews, K3.1 Pro diagnosed dynamic imbalances in the walking controller. When standard reward shaping failed to correct erratic arm motion, the model executed open-loop probes of the physics simulator, identified 36 mathematical errors in shoulder-muscle moment-arm calculations, corrected them, and trained the simulation to walk stably for 11.2 seconds.\n\n[[FIG2]]\n\nBeyond software development, the model shows improvements in spatial generation and fiscal research:\n\n* **3D Design:** On BenchCAD, which evaluates multi-view 3D reconstruction into CAD instructions, Moonshot AI reported that K3.1 Pro achieved 92.7% with tools (compared to 96.2% for Claude Opus 5.5 and 95.9% for GPT-6 Astra). According to Moonshot AI's technical report, it can script CAD engines and Blender directly without Model Context Protocol connectors.\n* **Financial Workflows:** Moonshot reported a state-of-the-art score of 64.4 on OfficeQA Pro v2, a test measuring numerical synthesis across complex corporate documents. On internal benchmarks, the model posted gains of 7.2 points in financial modeling, 11.6 points in financial research, and roughly 4.2 times K3's score on long-horizon business operation simulations.\n* **Reduced Hallucinations:** On Kimi Hallu Bench Hard, Moonshot's internal stress test designed to induce factual errors, the claim-level hallucination rate declined from 23.4% on K3 to 8.3% on K3.1 Pro.\n\n## Deliberate Cybersecurity Filtering\n\nOne of the most consequential decisions detailed in the technical disclosure involves Moonshot AI's handling of offensive cyber capabilities. Post-training scaling naturally improved the model's capacity to identify software vulnerabilities and construct functional exploits, as security-related discussions and tasks were embedded across the general mid-training corpus and reinforcement learning environments.\n\nBecause open-weight models cannot be recalled, modified, or gated once weights are distributed publicly, Moonshot chose to systematically scrub cyberattack-related data from both mid-training corpora and downstream RL environments. To measure the impact, the team ran evaluations on xdev-bench-hard, an in-house suite reproducing recently disclosed software flaws across targets like the Linux kernel, Node.js, JavaScriptCore, and Exim.\n\nA checkpoint trained without safety interventions solved 90.5% of exploit tasks at pass@3. Following data sanitization, the production K3.1 Pro solved 81.0%. While this marks an intentional downgrade compared to what the raw training pipeline could generate, it remains substantially higher than Kimi K3's 33.3% score. Moonshot noted that general improvements in debugging and code synthesis naturally transferred to cyber tasks even after targeted scrubbing.\n\nMoonshot stated two principles guiding its open-weight releases: first, avoid publishing weights that push the absolute frontier of offensive cyber utility beyond that of known proprietary models; second, progressively elevate open defense capabilities so external developers can run audits on legacy codebases using hardware they fully control.\n\n[[FIG3]]\n\n## Developer Access, Pricing, and Availability\n\nKimi K3.1 Pro and K3.1 Pro Highspeed are live across consumer, developer, and enterprise tiers. Software clients include web access at Kimi.ai, mobile apps across iOS, Android, and HarmonyOS, and desktop applications for Windows and Apple silicon Macs on Kimi Work version 3.1.0 or higher.\n\nDevelopers using Kimi Code can activate the system with the `/model` command. As noted in official documentation, K3.1 Pro operates exclusively in reasoning mode; sending API calls with thinking disabled results in an HTTP 400 rejection. The models accept `reasoning_effort` parameters configured to low, high, or max, with max set as the default.\n\nHosted API pricing via the [Kimi API Platform](https://simonwillison.net/2026/Oct/23/kimi-k31-pro/) drops standard token costs by 33% compared to K3:\n\n* **Standard K3.1 Pro:** $2.00 per million input tokens, $10.00 per million output tokens, and $0.20 per million cached input tokens.\n* **K3.1 Pro Highspeed:** $4.00 per million input tokens, $20.00 per million output tokens, and $0.20 per million cached input tokens.\n\nFor enterprise deployments, access remains toggled off by default and requires administrative activation. Moonshot AI also provides Zero Data Retention policies for API customers. The broader open-source community will be able to audit and run the weights locally once the scheduled publication window concludes on November 4, 2026.",
+ "faq": [
+  {
+   "q": "When will the open weights for Kimi K3.1 Pro be released?",
+   "a": "Moonshot AI announced that the full model weights will be released publicly by November 4, 2026."
+  },
+  {
+   "q": "How does Kimi K3.1 Pro compare to Claude Opus 5.5 and GPT-6 Astra?",
+   "a": "On the coding benchmark Terminal-Bench 4.0, Moonshot reported that K3.1 Pro scored 65.7%, placing it ahead of GPT-6 Astra (58.2%) and slightly behind Claude Opus 5.5 (66.4%). On the Artificial Analysis Intelligence Index, K3.1 Pro scored 55 points, ranking fourth overall."
+  },
+  {
+   "q": "Why did Moonshot AI remove cybersecurity data from Kimi K3.1 Pro?",
+   "a": "Because open weights cannot be modified once downloaded, Moonshot filtered cyberattack material from mid-training and reinforcement learning to prevent the model from expanding the frontier of offensive hacking capabilities, lowering its score on an internal vulnerability exploit benchmark from 90.5% to 81.0%."
+  },
+  {
+   "q": "How much does the Kimi K3.1 Pro API cost?",
+   "a": "Standard Kimi K3.1 Pro is priced at $2.00 per million input tokens and $10.00 per million output tokens, with cache hits billed at $0.20 per million tokens. The Highspeed variant is priced at $4.00 for input and $20.00 for output."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern, dimly lit high-tech computer laboratory filled with large server racks glowing with soft blue and green indicator lights. In the center, a focused AI research engineer stands examining holographic architectural schematics and data flow diagrams of an advanced neural network.",
+  "alt": "An AI researcher reviewing complex system diagrams in a high-performance compute datacenter.",
+  "caption": "",
+  "src": "img/moonshot-ai-releases-kimi-k3-1-pro/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 52626,
+  "small": "img/moonshot-ai-releases-kimi-k3-1-pro/hero-640.webp",
+  "og": "img/moonshot-ai-releases-kimi-k3-1-pro/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/moonshot-ai-releases-kimi-k3-1-pro/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A software engineer working at a desk with multiple monitors displaying lines of code, terminal windows, and mechanical CAD renderings, set in a clean, modern creative studio illuminated by soft natural desk lighting.",
+   "alt": "A software developer coding complex engineering tools across multiple desktop monitors.",
+   "caption": "",
+   "slot": "FIG1",
+   "src": "img/moonshot-ai-releases-kimi-k3-1-pro/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 35462,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A digital simulation environment showing a translucent anatomical human model with visible joint structures and muscles, standing on an illuminated motion-capture platform with trajectory vectors surrounding its legs.",
+   "alt": "A digital anatomical model on a simulation platform executing biomechanical movement tests.",
+   "caption": "",
+   "slot": "FIG2",
+   "src": "img/moonshot-ai-releases-kimi-k3-1-pro/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 36176,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "A cybersecurity analyst sitting in a secure operations center monitoring code review interfaces and shield motifs representing digital defense mechanisms across several large, dark screens.",
+   "alt": "A cybersecurity specialist auditing system source code in a digital security operations room.",
+   "caption": "",
+   "slot": "FIG3",
+   "src": "img/moonshot-ai-releases-kimi-k3-1-pro/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 30948,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+   "title": "Kimi K3.1 Pro Tech Blog: Advancing Open Intelligence",
+   "site": "Kimi",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://thenextweb.com/news/moonshot-kimi-k3-1-pro-open-weight-cyber",
+   "title": "Moonshot releases Kimi K3.1 Pro and says it cut its hacking skills",
+   "site": "TNW | Artificial-intelligence",
+   "published": 1792779574000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://simonwillison.net/2026/Oct/23/kimi-k31-pro/",
+   "title": "Introducing Kimi K3.1 Pro",
+   "site": "Simon Willison’s Weblog",
+   "published": null,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://the-decoder.com/chinese-ai-model-kimi-k3-1-pro-is-closing-in-on-anthropics-claude-opus-5-5/",
+   "title": "Chinese AI model Kimi K3.1 Pro is closing in on Anthropic's Claude Opus 5.5",
+   "site": "The Decoder",
+   "published": 1792782007000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://www.unite.ai/moonshot-ai-releases-kimi-k3-1-pro-first-model-in-new-k3-1-series/",
+   "title": "Moonshot AI Releases Kimi K3.1 Pro, First Model in New K3.1 Series",
+   "site": "Unite.AI",
+   "published": 1792776362000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://explainx.ai/blog/kimi-k3-1-pro-open-weights-benchmarks-price-terminal-bench-nov-4-2026",
+   "title": "Kimi K3.1 Pro: Benchmarks, $2/$10 Price, Open Weights Nov 4 | explainx.ai Blog | explainx.ai",
+   "site": "explainx.ai",
+   "published": 1792713600000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://www.kimi.com/code/docs/en/kimi-code/models.html",
+   "title": "Model Configuration | Kimi Code Docs",
+   "site": "kimi.com",
+   "published": null,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792800512720,
+ "updatedAt": 1792800512720,
+ "foundVia": "Google News, Hacker News and Reddit",
+ "check": {
+  "claims": 19,
+  "score": 10
+ },
+ "story": {
+  "id": "Pefcb35b2",
+  "score": 91,
+  "items": [
+   "https://news.google.com/rss/articles/CBMiswFBVV95cUxPcktaUjlRNUc4SkZ3UzlJSnJwX0tzalVkaHFKTmxkWGItR0J6b3VVQ01xU25ZdFRueWdrVXNsMjRab2NJNTVFMG9sRHdfbWJwQ2FLQlBwSGdfS1hYWFhWUXRONm8zczlYSnoxX1hiamdRWFU3UThWS05fVFpKNzN4OU5ISkZoOXJNS09Qc2djYVVxMGtnQjVlWFJHTE1wQWdmVjZYckhnd2JjbURxSy1ra2lXbw?oc=5",
+   "https://www.kimi.com/code/docs/en/kimi-code/models.html",
+   "https://www.reddit.com/r/singularity/comments/1xditjc/kimi_k31_pro_rolling_out_now/",
+   "https://www.kimi.ai/blog/kimi-k3-1-pro",
+   "https://news.google.com/rss/articles/CBMikAFBVV95cUxPOWFlMmFWTWZLYV9UNVVwQ2dXRXFWQUxROU9KX1YzQnRzQWpGQ2dhSF9pNGh5SFNlcGxEeFo3VC1paU1fVGRrRWJ3SjBhSjRTUTJQdHhpOVVocVNnYl9KRlBhUmp3dHZjV0J6OHNnRE9jZnA1anlkdnZvNWVmRkRhZVQ4UGNsS2dwSlpHVUowQW8?oc=5",
+   "https://www.techmeme.com/261023/p15#a261023p15",
+   "https://news.google.com/rss/articles/CBMikwFBVV95cUxQZ2dRVnFfUzJoZTk3dXVNWDVZQktUaUpPRkR5bm0yUHFKZDBPUkNvd01zOGR4Z3lWUEtMd2tqUWNTdTY4VEQ1clgzZUMzMGlabWoxWVhHbVVhOXFwOEMxMVpnc2JoSXVBc0hZZmR0RmFjMUYwVlpERS0ybjZDRnVmQlY5SkluRkNKSXFFZDNpbkNObE0?oc=5",
+   "https://bsky.app/profile/timkellogg.me/post/3mykq7q5fq22z",
+   "https://www.reddit.com/r/LocalLLaMA/comments/1xdjr67/kimi_31_and_28_preview/",
+   "https://www.reddit.com/r/singularity/comments/1xdkbgt/kimi_k31_pro_benchmarks/",
+   "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5ld1dVbGFlMkNsdEcwNHdlTFFDRmJySG9yTVFHUml6bHYzMFN0Y2RHb0RxaGZJTUxQSFVBeFh6Z1FQalF0aElMc3A1YmIxWEUwWmpLMEtUUGoyWE0yTm9FZ3FR?oc=5",
+   "https://www.techmeme.com/261023/p18#a261023p18",
+   "https://the-decoder.com/chinese-ai-model-kimi-k3-1-pro-is-closing-in-on-anthropics-claude-opus-5-5/",
+   "https://www.reddit.com/r/singularity/comments/1xdligf/babe_wake_up_kimi_k31_is_rated_higher_than_fable/",
+   "https://news.google.com/rss/articles/CBMitAFBVV95cUxQS2ZUclFjQkw5bkNVcmlUTTdLaHhzTnFDbTJCOEFpT3RreDllUExyc0ltaEZRRFFQdzJHSklCY0FYTkVjdkJHbnNuZy1WMGI5Y1lWWFBpUGZnazBxdGVoNElRNUNFazFpdjFsaEZjNlRneTBtdmxHd2FXcDlqLWZKd1NZYVpIcHFCWlhhRDRsSDBIejdwM2x5LTZaOFRfVEFhU1NfUG1MVVJHcGY2M0hDSE1xdW4?oc=5",
+   "https://www.techmeme.com/261023/p19#a261023p19",
+   "https://simonwillison.net/2026/Oct/23/kimi-k31-pro/",
+   "https://artificialanalysis.ai/models/kimi-k3-1-pro",
+   "https://news.google.com/rss/articles/CBMimwFBVV95cUxPT3VwQndMemVCbVNzZFc2UmZkdGdySTJ3cGZwaTFwcUpsc3ZURW9VRW45QUtFVUxSS2RNZWdmYUR3bG1neUdmYWljOHJTaHpuaVRtaG11Y3dvSUdiZW9WbnI4cW9KakNNVnRPWXBVMm1OMEhDcUd6dUpuQU53TFdSbEt6RXdKaTR6VTN0Y09vWGdsTG1rZHU2b3dCSQ?oc=5",
+   "https://news.google.com/rss/articles/CBMioAFBVV95cUxPZ3hIVEJReWhldnNyNVRzeGhuZjdJNHh6X1dkSG9CbkliWXducy14dlhrdk0yM09mLTJNcmtRak5JRTlCSW5oVm1vVnY0ZDJod0ZZZmxCd2JScllXdHVvLXlLR1BsOFNuLXBsWGhWWjNoMm1tY0FoN3BaM2F4LUpLZjFVNTI4VmNySFBneWNCWFMxSFRDNUhiWW1WVzhITUIy?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
