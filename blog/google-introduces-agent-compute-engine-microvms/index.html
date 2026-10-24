@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Google Unveils Agent Compute Engine for AI Agents | rkj dev</title>
+<meta name="description" content="Google announced Agent Compute Engine, using hardware-isolated microVMs and fast checkpointing to cut the idle-time infrastructure costs of AI agents.">
+<link rel="canonical" href="https://www.rkjdev.com/blog/google-introduces-agent-compute-engine-microvms/">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#110b14">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta property="og:site_name" content="rkj dev Blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Google Unveils Agent Compute Engine for AI Agents | rkj dev">
+<meta property="og:description" content="Google announced Agent Compute Engine, using hardware-isolated microVMs and fast checkpointing to cut the idle-time infrastructure costs of AI agents.">
+<meta property="og:url" content="https://www.rkjdev.com/blog/google-introduces-agent-compute-engine-microvms/">
+<meta property="og:image" content="https://www.rkjdev.com/blog/img/google-introduces-agent-compute-engine-microvms/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://www.rkjdev.com/blog/img/google-introduces-agent-compute-engine-microvms/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Google Unveils Agent Compute Engine for AI Agents | rkj dev">
+<meta name="twitter:description" content="Google announced Agent Compute Engine, using hardware-isolated microVMs and fast checkpointing to cut the idle-time infrastructure costs of AI agents.">
+<link rel="alternate" type="application/rss+xml" title="rkj dev Blog" href="/blog/feed.xml">
+<link rel="alternate" type="application/feed+json" title="rkj dev Blog" href="/blog/feed.json">
+<link rel="icon" href="/favicon.svg?v=bdff7dc5" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,40;1,9..144,400..600,40&family=Schibsted+Grotesk:ital,wght@0,400..600;1,400..600&display=swap">
+<link rel="stylesheet" href="/site.css?v=e85724ed">
+<link rel="stylesheet" href="/blog/blog.css?v=7ad332ef">
+<meta property="article:published_time" content="2026-10-24T03:05:59.234Z">
+<meta property="article:modified_time" content="2026-10-24T03:05:59.234Z">
+<meta property="article:section" content="AI Models">
+<meta property="article:tag" content="Google Cloud">
+<meta property="article:tag" content="Agent Compute Engine">
+<meta property="article:tag" content="Gemini">
+<meta property="article:tag" content="AI Agents">
+<meta property="article:tag" content="Cloud Computing">
+<meta property="article:tag" content="MicroVM">
+<link rel="preload" as="image" href="/blog/img/google-introduces-agent-compute-engine-microvms/hero.webp" imagesrcset="/blog/img/google-introduces-agent-compute-engine-microvms/hero-640.webp 640w, /blog/img/google-introduces-agent-compute-engine-microvms/hero.webp 1200w" imagesizes="(max-width: 760px) 100vw, 1200px">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"Google Introduces Agent Compute Engine with MicroVM Sandboxes","description":"Google announced Agent Compute Engine, using hardware-isolated microVMs and fast checkpointing to cut the idle-time infrastructure costs of AI agents.","url":"https://www.rkjdev.com/blog/google-introduces-agent-compute-engine-microvms/","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.rkjdev.com/blog/google-introduces-agent-compute-engine-microvms/"},"inLanguage":"en","isAccessibleForFree":true,"image":["https://www.rkjdev.com/blog/img/google-introduces-agent-compute-engine-microvms/og.jpg","https://www.rkjdev.com/blog/img/google-introduces-agent-compute-engine-microvms/hero.webp"],"datePublished":"2026-10-24T03:05:59.234Z","dateModified":"2026-10-24T03:05:59.234Z","articleSection":"AI Models","keywords":"Google Cloud, Agent Compute Engine, Gemini, AI Agents, Cloud Computing, MicroVM","wordCount":1089,"thumbnailUrl":"https://www.rkjdev.com/blog/img/google-introduces-agent-compute-engine-microvms/hero-640.webp","author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","@id":"https://www.rkjdev.com/#labs","name":"RKJDEV Labs","url":"https://www.rkjdev.com/","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/apple-touch-icon.png","width":180,"height":180}},"isPartOf":{"@id":"https://www.rkjdev.com/#website"},"isBasedOn":["https://cloud.google.com/blog/topics/ai-infrastructure/introducing-agent-compute-engine-and-expanded-agent-governance","https://www.marktechpost.com/2026/10/22/google-cloud-agent-compute-engine-microvm-ai-agents/","https://siliconangle.com/2026/10/22/google-cloud-introduces-agent-compute-engine-to-host-ai-agents/","https://the-decoder.com/googles-agent-compute-engine-gives-every-gemini-agent-its-own-hardware-isolated-micro-virtual-machine/","https://www.infoworld.com/article/4239685/google-targets-ai-agents-idle-time-costs-with-new-compute-service.html"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"AI Models","item":"https://www.rkjdev.com/blog/category/ai-models/"},{"@type":"ListItem","position":3,"name":"Google Introduces Agent Compute Engine with MicroVM Sandboxes","item":"https://www.rkjdev.com/blog/google-introduces-agent-compute-engine-microvms/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Google Agent Compute Engine?","acceptedAnswer":{"@type":"Answer","text":"Agent Compute Engine is a specialized Google Cloud infrastructure service that provides each AI agent with a hardware-isolated microVM, designed to pause during idle periods to reduce server resource usage."}},{"@type":"Question","name":"How does Agent Compute Engine differ from standard virtual machines?","acceptedAnswer":{"@type":"Answer","text":"Unlike traditional VMs, Agent Compute Engine microVMs boot rapidly, share read-only operating system memory through copy-on-write mechanisms, and automatically checkpoint memory to sleep when an agent waits for input or tool responses."}},{"@type":"Question","name":"What is Agent Substrate?","acceptedAnswer":{"@type":"Answer","text":"Agent Substrate is an open-source, Kubernetes-native runtime that brings agent suspend-and-resume mechanisms, high-density host packing, and microVM or gVisor isolation to GKE and other Kubernetes clusters."}},{"@type":"Question","name":"When will Agent Compute Engine be publicly available?","acceptedAnswer":{"@type":"Answer","text":"Google plans to launch a customer preview of Agent Compute Engine in the coming months, while governance extensions and token management features are scheduled for preview later this quarter."}}]}]</script>
+</head>
+<body class="post">
+<div class="progress" aria-hidden="true"><span></span></div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="mark" href="/">rkj dev</a>
+    <nav aria-label="Site">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <article class="article">
+    <header class="post-head wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/category/ai-models/">AI Models</a></nav>
+      <h1>Google Introduces Agent Compute Engine with MicroVM Sandboxes</h1>
+      <p class="standfirst">Announced at AGNTCon + MCPCon, the service pairs microVM sandboxes with fast suspend-and-resume mechanisms to lower agent infrastructure overhead.</p>
+      <div class="byline">
+        <span class="by">rkj dev newsroom</span>
+        <span><time datetime="2026-10-24T03:05:59.234Z" class="abs" data-rel>Oct 24, 2026</time></span>
+        <span>5 min read</span>
+        <a href="#sources">5 sources, fact-checked</a>
+      </div>
+    </header>
+    <div class="hero-wrap wrap"><figure class="hero-fig is-ai">
+  <div class="img"><img src="/blog/img/google-introduces-agent-compute-engine-microvms/hero.webp" srcset="/blog/img/google-introduces-agent-compute-engine-microvms/hero-640.webp 640w, /blog/img/google-introduces-agent-compute-engine-microvms/hero.webp 1200w" sizes="(max-width: 760px) 100vw, 1200px" width="1200" height="675" alt="A modern data center interior with illuminated server racks representing virtual machine isolation" fetchpriority="high" decoding="async"></div>
+  <figcaption><span>Illustration: High-density data center racks running isolated microVM infrastructure for AI agent workloads.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure></div>
+    <div class="layout wrap">
+      <aside class="rail" aria-label="On this page">
+        <nav class="toc"><p>Contents</p><ol><li><a href="#solving-idle-costs-with-fast-microvm-checkpointing">Solving Idle Costs with Fast MicroVM Checkpointing</a></li><li><a href="#architecture-and-zero-trust-sandbox-security">Architecture and Zero-Trust Sandbox Security</a></li><li><a href="#agent-substrate-brings-density-to-kubernetes">Agent Substrate Brings Density to Kubernetes</a></li><li><a href="#expanding-the-enterprise-governance-stack">Expanding the Enterprise Governance Stack</a></li><li><a href="#trade-offs-state-risks-and-industry-reality">Trade-offs, State Risks, and Industry Reality</a></li></ol></nav>
+        <div class="share">
+          <p>Share</p>
+          <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fgoogle-introduces-agent-compute-engine-microvms%2F&text=Google%20Introduces%20Agent%20Compute%20Engine%20with%20MicroVM%20Sandboxes" target="_blank" rel="noopener">X</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fgoogle-introduces-agent-compute-engine-microvms%2F" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://wa.me/?text=Google%20Introduces%20Agent%20Compute%20Engine%20with%20MicroVM%20Sandboxes%20https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fgoogle-introduces-agent-compute-engine-microvms%2F" target="_blank" rel="noopener">WhatsApp</a>
+          <button type="button" data-copy="https://www.rkjdev.com/blog/google-introduces-agent-compute-engine-microvms/">Copy link</button>
+        </div>
+      </aside>
+      <div class="prose">
+        <section class="inshort" aria-labelledby="tk">
+          <h2 id="tk">In short</h2>
+          <ul><li>Google launched Agent Compute Engine to tackle idle-time infrastructure overhead by providing each autonomous agent with a dedicated, hardware-isolated microVM.</li><li>The architecture decouples the agent harness from the execution sandbox, leaving zero stored credentials inside the guest environment.</li><li>Idle sandboxes are checkpointed to release active compute resources, while copy-on-write memory sharing reduces RAM footprint across concurrent agents.</li><li>Alongside the proprietary engine, Google offers the open-source Agent Substrate runtime for Kubernetes clusters on GKE and other clouds.</li><li>Analysts emphasize that net enterprise savings depend on idle duration, while potential trade-offs include higher storage fees and state synchronization challenges.</li></ul>
+        </section>
+        <p>On October 22, 2026, Google announced Agent Compute Engine, a purpose-built cloud infrastructure service engineered to run autonomous artificial intelligence agents inside dedicated, hardware-isolated microVMs. Unveiled at the AGNTCon + MCPCon event, the service is designed to tackle the steep resource costs of AI agents that sit idle between task steps, human approvals, and API calls. According to <a href="https://cloud.google.com/blog/topics/ai-infrastructure/introducing-agent-compute-engine-and-expanded-agent-governance" target="_blank" rel="noopener">Google Cloud&#39;s announcement</a>, the system already runs internally to host Gemini for enterprise work tasks and will become available in customer preview in the coming months.</p>
+<p>Running autonomous agents presents unique infrastructure hurdles compared to standard web applications. While conventional software processes continuous streams of requests, agentic workloads operate in iterative, high-churn loops. They trigger code execution, manipulate browsers, and call external tools, but spend the majority of their session lifetimes waiting for language models to finish generation or waiting on human feedback. Traditional virtual machines run continuously during those waiting periods, racking up infrastructure bills for idle capacity.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/google-introduces-agent-compute-engine-microvms/figure-1.webp" width="1200" height="670" alt="Conceptual diagram of virtual compute instances pausing and snapshotting memory state" loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: MicroVMs snapshotting active memory to release physical host compute during idle periods.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="solving-idle-costs-with-fast-microvm-checkpointing">Solving Idle Costs with Fast MicroVM Checkpointing</h2>
+<p>To prevent enterprises from paying for unused compute, Agent Compute Engine isolates each agent session into an individual microVM backed by Cloud Hypervisor. When an agent finishes executing an action and moves into the &quot;thinking&quot; phase of its loop, the sandbox signals that it has entered an idle state. The host system then checkpoints the microVM, freeing its active processing resources, as reported by <a href="https://siliconangle.com/2026/10/22/google-cloud-introduces-agent-compute-engine-to-host-ai-agents/" target="_blank" rel="noopener">SiliconANGLE</a>. When the model or user sends the next instruction, the microVM resumes from its snapshot.</p>
+<p>This suspend-and-resume mechanism is combined with memory optimization. Google utilizes copy-on-write memory sharing via direct access (DAX) mapping against pre-warmed operating system images. This design allows hundreds or thousands of agent sandboxes on a single physical machine to read from common operating system and runtime library pages, with private RAM dedicated solely to pages modified by a specific agent.</p>
+<p>Storage is split across three distinct tiers: disposable scratch overlays for ephemeral runtime artifacts, shared read-only volumes for core system dependencies, and dedicated Hyperdisks assigned to each microVM. By assigning each sandbox its own Hyperdisk, Google enables execution workspaces and context files to persist across multi-session tasks without keeping compute nodes pinned.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/google-introduces-agent-compute-engine-microvms/figure-2.webp" width="1200" height="670" alt="Abstract representation of a zero-credential execution sandbox isolated by hardware security barriers" loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: A segregated runtime architecture where sandboxes execute code without direct access to credentials.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="architecture-and-zero-trust-sandbox-security">Architecture and Zero-Trust Sandbox Security</h2>
+<p>Autonomous agents execute dynamic, model-generated code and handle external inputs, making them prime targets for prompt injection and sandbox escape attempts. As detailed by <a href="https://www.marktechpost.com/2026/10/22/google-cloud-agent-compute-engine-microvm-ai-agents/" target="_blank" rel="noopener">MarkTechPost</a>, Google operates under a threat model that assumes an attacker has gained complete control inside the sandbox. To mitigate that risk, Agent Compute Engine splits execution into two parts: an external harness acting as the &quot;brain&quot; that invokes models and dispatches tasks, and the isolated sandbox acting as the &quot;hands&quot; that runs shell commands and browser automation.</p>
+<p>MicroVMs do not possess standard network interfaces, default gateways, or direct Virtual Private Cloud (VPC) connections. Outbound traffic must pass across a virtio-vsock boundary to a local mediation proxy, which forwards requests to Google&#39;s Agent Gateway. The sandbox contains no static credentials, API keys, or enterprise secrets. Instead, the guest receives only a short-lived SPIFFE certificate identifying the session. When the agent requests external tools or data, Agent Gateway verifies the policy scope and injects authentication tokens on the wire outside the microVM.</p>
+<p>At the physical layer, Agent Compute Engine appliances run on Google-managed servers equipped with Titan security silicon and Titanium Infrastructure Processing Units (IPUs). The Titanium IPU isolates hypervisor management and attestation keys outside the host guest environment, while the appliance hosts run stateless configurations protected by dm-verity read-only filesystems.</p>
+<h2 id="agent-substrate-brings-density-to-kubernetes">Agent Substrate Brings Density to Kubernetes</h2>
+<p>For engineering teams operating existing clusters or running multi-cloud deployments, Google introduced an open-source sibling called Agent Substrate. Running on Google Kubernetes Engine (GKE) since September 15, 2026, and available via an <a href="https://cloud.google.com/blog/topics/ai-infrastructure/introducing-agent-compute-engine-and-expanded-agent-governance" target="_blank" rel="noopener">open-source repository</a>, Agent Substrate decouples agent execution from node management.</p>
+<p>According to Google, Agent Substrate supports both Cloud Hypervisor microVMs and gVisor sandboxes, offering up to 10 times higher compute density compared to standard compute instances. In benchmark tests managing 200,000 agents, Google reported that Agent Substrate maintained 500 activations per second while keeping suspend-and-restore latency under 500 milliseconds. The runtime also supports over 1,000 dormant agents on a single host and connects with Filestore agent volumes for shared persistent workspaces. It functions across multiple agent harnesses, including Claude Code, OpenClaw, and Nous Research&#39;s Hermes.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/google-introduces-agent-compute-engine-microvms/figure-3.webp" width="1200" height="670" alt="Systems engineers monitoring agent cluster metrics and execution traces in a cloud management center" loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: Platform engineering teams monitoring fleet density and governance across distributed agent runtimes.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="expanding-the-enterprise-governance-stack">Expanding the Enterprise Governance Stack</h2>
+<p>Alongside Agent Compute Engine, Google expanded its Gemini for business governance stack to support distributed agent runtimes across Cloud Run, GKE, Agent Runtime, and client devices. The control suite includes four primary pillars:</p>
+<ul>
+<li><strong>Agent Gateway:</strong> An orchestration broker that manages inbound and outbound agent traffic, applying sensitive data screening and runtime policy checks.</li>
+<li><strong>Agent Registry:</strong> A directory that acts as the single source of truth for approved agents, tools, Model Context Protocol (MCP) servers, skills, and model endpoints.</li>
+<li><strong>Agent Identity:</strong> A credentialing system that issues open-standard SPIFFE identities to authenticate every tool hop and sandbox session.</li>
+<li><strong>Agent Observability:</strong> OpenTelemetry-compliant tracing and metrics that track distributed execution hops across models and tools.</li>
+</ul>
+<p>According to <a href="https://the-decoder.com/googles-agent-compute-engine-gives-every-gemini-agent-its-own-hardware-isolated-micro-virtual-machine/" target="_blank" rel="noopener">The Decoder</a>, Google plans to roll out preview capabilities this quarter for token tracking, model routing, and delegated authorization integrations with Ping Identity, SailPoint, and Saviynt. Policy enforcement using Envoy proxies for hybrid and multi-cloud environments, as well as local OS-level governance for coding agents on managed endpoints, are scheduled to enter preview soon.</p>
+<h2 id="trade-offs-state-risks-and-industry-reality">Trade-offs, State Risks, and Industry Reality</h2>
+<p>While Google positions Agent Compute Engine as a key architectural step for agent deployment, analysts and cloud architects point to operational hurdles. As reported by <a href="https://www.infoworld.com/article/4239685/google-targets-ai-agents-idle-time-costs-with-new-compute-service.html" target="_blank" rel="noopener">InfoWorld</a>, AWS has operated per-session microVMs in its AgentCore service with pause-based billing since 2025, and Microsoft provides suspended agent sessions within Foundry. Google&#39;s differentiator is holding full memory and execution state across microVM checkpoints rather than purely tearing down environments to disk.</p>
+<p>That mechanism introduces specific software reliability risks. Amit Kumar Jena, AI development head at Kanerika, told InfoWorld that pausing during external transactions creates idempotency risks: if an agent suspends between issuing an external API call and receiving its confirmation, it may repeat payments or code commits upon resuming. Jena also warned that maintaining persistent disks across thousands of dormant agents can cause storage bills to offset compute savings.</p>
+<p>Additionally, Pareekh Jain of Pareekh Consulting noted that Agent Compute Engine relies heavily on proprietary Google Cloud identity and networking components, increasing vendor lock-in risks for enterprises trying to maintain portable multi-cloud footprints. For continuously active agents that rarely sleep, principal analyst Manoj Chandra Jha noted that the financial benefits of suspend-and-resume infrastructure will remain minimal.</p>
+
+        <section class="faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Questions people ask</h2>
+          <details open><summary>What is Google Agent Compute Engine?</summary><p>Agent Compute Engine is a specialized Google Cloud infrastructure service that provides each AI agent with a hardware-isolated microVM, designed to pause during idle periods to reduce server resource usage.</p></details>
+<details><summary>How does Agent Compute Engine differ from standard virtual machines?</summary><p>Unlike traditional VMs, Agent Compute Engine microVMs boot rapidly, share read-only operating system memory through copy-on-write mechanisms, and automatically checkpoint memory to sleep when an agent waits for input or tool responses.</p></details>
+<details><summary>What is Agent Substrate?</summary><p>Agent Substrate is an open-source, Kubernetes-native runtime that brings agent suspend-and-resume mechanisms, high-density host packing, and microVM or gVisor isolation to GKE and other Kubernetes clusters.</p></details>
+<details><summary>When will Agent Compute Engine be publicly available?</summary><p>Google plans to launch a customer preview of Agent Compute Engine in the coming months, while governance extensions and token management features are scheduled for preview later this quarter.</p></details>
+        </section>
+        <section class="sources" id="sources" aria-labelledby="src-title">
+          <h2 id="src-title">Sources</h2>
+          <ol><li><a href="https://cloud.google.com/blog/topics/ai-infrastructure/introducing-agent-compute-engine-and-expanded-agent-governance" target="_blank" rel="noopener">Introducing Agent Compute Engine and expanding agent governance</a><span>Google Cloud, Oct 22, 2026, <b class="official">official source</b></span></li><li><a href="https://www.marktechpost.com/2026/10/22/google-cloud-agent-compute-engine-microvm-ai-agents/" target="_blank" rel="noopener">Google Cloud Launches Agent Compute Engine: A MicroVM per AI Agent</a><span>marktechpost.com, Oct 22, 2026</span></li><li><a href="https://siliconangle.com/2026/10/22/google-cloud-introduces-agent-compute-engine-to-host-ai-agents/" target="_blank" rel="noopener">Google Cloud introduces Agent Compute Engine to host AI agents</a><span>SiliconANGLE, Oct 23, 2026</span></li><li><a href="https://the-decoder.com/googles-agent-compute-engine-gives-every-gemini-agent-its-own-hardware-isolated-micro-virtual-machine/" target="_blank" rel="noopener">Google's Agent Compute Engine gives every Gemini agent its own hardware-isolated micro virtual machine</a><span>The Decoder, Oct 22, 2026</span></li><li><a href="https://www.infoworld.com/article/4239685/google-targets-ai-agents-idle-time-costs-with-new-compute-service.html" target="_blank" rel="noopener">Google targets AI agents’ idle-time costs with new compute service</a><span>InfoWorld, Oct 23, 2026</span></li></ol>
+          <p class="method">How this story was made: the newsroom picked it up from the-decoder.com and Google Search, gathered the full text of the sources above, and drafted it with AI assistance. Every factual claim was then checked against those sources before publishing (39 claims checked). Illustrations marked as AI-generated are not photographs. Spotted an error? <a href="mailto:rajankrishnan909@gmail.com?subject=Correction%3A%20Google%20Introduces%20Agent%20Compute%20Engine%20with%20MicroVM%20Sandboxes">Tell us</a>.</p>
+        </section>
+        <p class="tags"><span>#Google Cloud</span> <span>#Agent Compute Engine</span> <span>#Gemini</span> <span>#AI Agents</span> <span>#Cloud Computing</span> <span>#MicroVM</span></p>
+        <p class="stamp">Published October 24, 2026 at 03:05 UTC</p>
+      </div>
+    </div>
+  </article>
+  <section class="related wrap" aria-labelledby="rel-title">
+    <h2 id="rel-title">Keep reading</h2>
+    <div class="rows"><article class="story row">
+  <a class="story-link" href="/blog/openai-frontier-models-codex-google-cloud/">
+    <span class="pic"><img src="/blog/img/openai-frontier-models-codex-google-cloud/hero-640.webp" srcset="/blog/img/openai-frontier-models-codex-google-cloud/hero-640.webp 640w, /blog/img/openai-frontier-models-codex-google-cloud/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Illustration of technology executives collaborating over cloud architecture blueprints in a server room facility." loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-10-22T01:13:47.864Z" data-rel>Oct 22, 2026</time></span>
+      <h3>OpenAI Frontier Models and Codex Launch on Google Cloud Model Garden</h3>
+      <span class="dek">Enterprise customers can run GPT-6 Astra, Sol, and Luna alongside Google Cloud services and draw down existing spend commitments.</span>
+      
+    </span>
+  </a>
+</article>
+<article class="story row">
+  <a class="story-link" href="/blog/anthropic-releases-claude-haiku-5-5-cloud-platforms/">
+    <span class="pic"><img src="/blog/img/anthropic-releases-claude-haiku-5-5-cloud-platforms/hero-640.webp" srcset="/blog/img/anthropic-releases-claude-haiku-5-5-cloud-platforms/hero-640.webp 640w, /blog/img/anthropic-releases-claude-haiku-5-5-cloud-platforms/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Modern enterprise data center with illuminated optical server racks" loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-10-08T00:59:23.028Z" data-rel>Oct 8, 2026</time></span>
+      <h3>Anthropic Releases Claude Haiku 5.5 With Effort Controls and Lower Pricing</h3>
+      <span class="dek">The lightweight model arrives with major agentic performance gains, adjustable effort controls, and immediate deployment across AWS, Google Cloud, and Azure.</span>
+      
+    </span>
+  </a>
+</article>
+<article class="story row">
+  <a class="story-link" href="/blog/modal-nvidia-vera-cpu-agent-sandboxes/">
+    <span class="pic"><img src="/blog/img/modal-nvidia-vera-cpu-agent-sandboxes/hero-640.webp" srcset="/blog/img/modal-nvidia-vera-cpu-agent-sandboxes/hero-640.webp 640w, /blog/img/modal-nvidia-vera-cpu-agent-sandboxes/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="A glowing server chassis installed in a data center rack" loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">Chips &amp; Hardware</span><time datetime="2026-10-21T02:08:11.035Z" data-rel>Oct 21, 2026</time></span>
+      <h3>Modal Adopts Nvidia Vera CPUs After Tests Show 2x Agent Throughput</h3>
+      <span class="dek">Internal benchmarks showed the Arm-based processor doubled throughput under heavy container load, though Modal will retain its x86 fleet.</span>
+      
+    </span>
+  </a>
+</article></div>
+  </section>
+  <nav class="prevnext wrap" aria-label="More stories">
+    <span></span>
+    <a class="next" href="/blog/warp-sciences-launch-ai-drug-discovery/"><span>Older</span>Kevin Weil Launches Warp Sciences With $215M for AI Drug Chemistry</a>
+  </nav>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="biz">
+      <p class="biz-name">RKJDEV Labs</p>
+      <p>© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan</p>
+      <p>Udyam registered MSME, India, <span class="nowrap">UDYAM-BR-26-0254766</span></p>
+      <p><a href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a></p>
+    </div>
+    <nav aria-label="Site">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/blog/feed.xml">RSS</a>
+    </nav>
+    <p class="fine">Stories are researched from the linked sources, written with AI assistance and checked claim by claim against those sources before publishing. AI-generated illustrations are labeled.</p>
+  </div>
+</footer>
+<script src="/blog/blog.js?v=45c7aef4" defer></script>
+</body>
+</html>
