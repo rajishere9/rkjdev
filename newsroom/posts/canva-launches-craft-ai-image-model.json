@@ -1,0 +1,177 @@
+{
+ "slug": "canva-launches-craft-ai-image-model",
+ "title": "Canva Unveils Craft, Its First In-House AI Image Generation Model",
+ "seoTitle": "Canva Launches In-House AI Image Model Craft",
+ "description": "Canva has released Craft, its first proprietary AI image generation model, using a two-stage planning architecture trained on design templates.",
+ "dek": "Trained on millions of design templates rather than photography, Canva Craft uses a two-stage architecture to plan layouts before rendering images.",
+ "category": "AI Models",
+ "tags": [
+  "Canva",
+  "Canva Craft",
+  "Generative AI",
+  "AI Models",
+  "Computer Vision"
+ ],
+ "keyTakeaways": [
+  "Canva released Canva Craft, a proprietary foundation image generation model built from scratch by its Canva Research division.",
+  "Craft uses a two-stage architecture that plans composition, text, and layout boundaries before generating images at up to 2K resolution.",
+  "The model debuted in fourth place overall on DesignArena's crowdsourced benchmark, securing first place in portrait and landscape categories.",
+  "Canva trained the model on millions of human-made templates from its library to prioritize visual hierarchy and graphic design principles."
+ ],
+ "body": "On October 22, 2026, design software company Canva unveiled Canva Craft, its first proprietary generative image model built from scratch. Developed by its internal lab, Canva Research, the model is designed specifically around graphic composition rather than traditional photography datasets. The launch marks Canva's direct entry into foundation image modeling, with Canva claiming the model can compete with comparable models from Google, OpenAI, ByteDance, and Meta, according to [The Decoder](https://the-decoder.com/canva-launches-craft-its-first-in-house-image-model/).\n\nCraft operates through a distinct two-step pipeline that separates structural planning from image rendering. Canva, which counts more than 250 million users generating 400 designs per second, integrated the tool into its platform interface while also opening it to third-party software builders through a public developer API, as outlined by [Canva's announcement](https://www.canva.com/newsroom/news/canva-craft/).\n\n[[FIG1]]\n\n## A Two-Stage Architecture Designed for Composition\n\nUnlike most AI image generation tools that go from prompt to pixels in a single step, Craft uses a specialized two-stage architecture. In the first phase, an Image Planning Model interprets the user prompt to build a composition blueprint. This blueprint maps out visual hierarchy, object placement, relative proportions, and expected text elements. Engineers developed a custom inference engine specifically optimized to execute this initial planning stage rapidly.\n\nOnce the composition plan is defined, the second-stage Image Rendering Model generates the high-fidelity output. Craft can produce images at resolutions up to 2K across more than 30 preset aspect ratios or custom user-defined canvas dimensions, according to [Canva's announcement](https://www.canva.com/newsroom/news/canva-craft/). Because the planning stage assigns spatial boundaries, the system uses JSON boundary boxing to break outputs into separate components. These elements feed directly into Canva's Magic Layers feature, allowing users to modify isolated objects or text without altering the entire background.\n\nIn terms of language capabilities, Craft accepts text prompts submitted in any language and can render legible, integrated on-image typography in 55 languages.\n\n## Training on Human-Made Templates Rather Than Photos\n\nCanva trained Craft on millions of human-made templates drawn from its internal content catalog, including presentation slides, infographics, marketing posters, menus, and typography-rich flyers. According to reporting by [PetaPixel](https://petapixel.com/2026/10/23/canva-releases-ai-image-generator-that-wasnt-trained-on-photographs/), Canva stated that Craft was not trained using photographs. By learning from structured templates rather than flat photographic pixels, the model was instructed directly on how layout, visual hierarchy, and typography interact in finished graphic work.\n\n[[FIG2]]\n\nFollowing pretraining, Canva Research refined Craft through supervised fine-tuning and reinforcement learning guided by feedback from professional graphic designers. During internal validation, Canva researchers and designers evaluated more than 25,000 image pairs in head-to-head comparisons against rival image models. According to [BetaNews](https://betanews.com/article/canva-craft-ai-image-model-designarena-api/), the team operated under a policy where human designer evaluations overruled automated metric scores whenever the two conflicted.\n\nThe development was handled by Canva Research, an internal division that has grown to over 160 researchers and engineers since its formation in 2025. The group incorporates staff from Kaleido and Leonardo.ai, two visual technology startups Canva acquired in previous years, as reported by [BetaNews](https://betanews.com/article/canva-craft-ai-image-model-designarena-api/).\n\n## Benchmark Results on DesignArena\n\nCraft debuted on DesignArena, a public crowdsourced leaderboard where users vote between AI-generated images. On the overall leaderboard, Craft placed fourth globally with an initial Elo rating of 1340, which adjusted to 1330 by October 23, 2026. It finished behind three OpenAI systems—GPT-Image-2.5 Sunburst, GPT-Image-2.5 Flare, and GPT-Image-2—while outranking other GPT, Grok, and Gemini models, including Nano Banana 2.1.\n\nAcross specific thematic subcategories on DesignArena, Craft captured several top placements according to [Canva's published metrics](https://www.canva.com/newsroom/news/canva-craft/):\n\n* **People & Portraits:** 1st place out of 87 competing models.\n* **Landscapes & Nature:** 1st place out of 85 competing models.\n* **Abstract & Patterns:** 2nd place out of 85 competing models.\n* **Products:** 4th place globally.\n\nCanva boasts that based on DesignArena rankings, Canva Research ranks as the world's second most advanced AI lab for image generation behind OpenAI.\n\n## Latency, Developer API, and Future Variants\n\nCanva used model distillation to reduce Craft's required inference steps to a fraction, while a custom inference engine developed for the planning stage made Craft an order of magnitude faster than the first internal version. However, speed remains a hurdle for external integrations; Canva staff noted that API generations currently take roughly 50 to 60 seconds end-to-end, as reported by [BetaNews](https://betanews.com/article/canva-craft-ai-image-model-designarena-api/).\n\nCraft is available immediately to Canva users through the \"Dream Lab\" tool found on the platform's lower-left interface panel, as detailed by [BetaNews](https://betanews.com/article/canva-craft-ai-image-model-designarena-api/). Developers can query the model via Canva's Connect API under the identifier `craft_v1_2k`, with calls drawing from the user account's existing AI credits. Canva confirmed that partner models from other providers will remain available across its platform alongside its proprietary engine.\n\nThe model is governed under Canva Shield, a safety suite that provides prompt moderation, output filtering, and content reporting tools. Canva plans to expand Craft's reach by launching a server compatible with the open Model Context Protocol (MCP) to let external autonomous agents trigger image generations. Additionally, Canva Research announced plans to release two lightweight, lower-latency models dubbed Craft-fast and Craft-ultrafast, aimed at cutting per-generation computing costs, while noting that future iterations are planned to improve fine print and technical drawings.",
+ "faq": [
+  {
+   "q": "What is Canva Craft?",
+   "a": "Canva Craft is Canva's first in-house generative AI foundation model for creating images, designed by Canva Research using a two-stage layout planning and rendering process."
+  },
+  {
+   "q": "How does Craft differ from other AI image generators?",
+   "a": "Rather than training primarily on photographs, Craft was trained on millions of design templates from Canva's library, allowing it to plan typography, object placement, and visual hierarchy before rendering images."
+  },
+  {
+   "q": "Where did Canva Craft rank on public benchmarks?",
+   "a": "Craft ranked fourth overall on DesignArena's crowdsourced leaderboard, placing first in both the People & Portraits and Landscapes & Nature categories."
+  },
+  {
+   "q": "How can users and developers access Canva Craft?",
+   "a": "Canva Craft is available globally inside Canva via the Dream Lab tool on the left-hand panel, and for developers through the Canva Connect API under the name craft_v1_2k."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An artistic digital concept studio where a graphic designer inspects floating holographic layout frames, color swatches, and structural wireframes assembling into a finished poster on a drafting table.",
+  "alt": "Conceptual illustration showing an AI design layout assembling into a finished graphic composition.",
+  "caption": "Illustration: Canva Craft maps visual hierarchies and layouts before generating the final rendered artwork.",
+  "src": "img/canva-launches-craft-ai-image-model/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 65088,
+  "small": "img/canva-launches-craft-ai-image-model/hero-640.webp",
+  "og": "img/canva-launches-craft-ai-image-model/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/canva-launches-craft-ai-image-model/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A split conceptual schematic showing a prompt being converted into a structural blueprint with geometric wireframe boxes, transitioning into a fully rendered graphic design scene.",
+   "alt": "Diagrammatic visual illustrating a two-stage process from layout blueprint to high-resolution visual art.",
+   "caption": "Illustration: The two-stage architecture separates compositional planning from final visual rendering.",
+   "slot": "FIG1",
+   "src": "img/canva-launches-craft-ai-image-model/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 48100,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "Two AI researchers and a graphic designer analyzing side-by-side visual variations on large studio monitors in a research laboratory setting.",
+   "alt": "Graphic design researchers evaluating side-by-side image outputs on monitors.",
+   "caption": "Illustration: Human designers directed fine-tuning and evaluated thousands of comparative image outputs.",
+   "slot": "FIG2",
+   "src": "img/canva-launches-craft-ai-image-model/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 37244,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model",
+   "title": "Canva’s first AI image model plans designs before generating them",
+   "site": "The Verge",
+   "published": 1792705885000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://the-decoder.com/canva-launches-craft-its-first-in-house-image-model/",
+   "title": "Canva launches Craft, its first in-house image model",
+   "site": "The Decoder",
+   "published": 1792755390000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://www.canva.com/newsroom/news/canva-craft/",
+   "title": "Introducing Canva Craft",
+   "site": "canva.com",
+   "published": 1792627200000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.techradar.com/pro/canva-launches-craft-its-first-image-generation-model-trained-on-human-designed-templates",
+   "title": "Canva launches Craft — its first image generation model, trained on human-designed templates",
+   "site": "TechRadar",
+   "published": 1792775100000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://betanews.com/article/canva-craft-ai-image-model-designarena-api/",
+   "title": "Canva launches Craft, its first in-house image model, with API access",
+   "site": "betanews.com",
+   "published": 1792713600000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://petapixel.com/2026/10/23/canva-releases-ai-image-generator-that-wasnt-trained-on-photographs/",
+   "title": "Canva Releases AI Image Generator That Wasn't Trained on Photographs",
+   "site": "petapixel.com",
+   "published": 1792713600000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://www.thurrott.com/a-i/343158/canva-releases-its-first-ai-model-for-images",
+   "title": "Canva Releases Its First AI Model for Images",
+   "site": "Thurrott.com",
+   "published": 1792701844000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792804216001,
+ "updatedAt": 1792804216001,
+ "foundVia": "Google News, Techmeme and theverge.com",
+ "check": {
+  "claims": 46,
+  "score": 10
+ },
+ "story": {
+  "id": "P1163328e",
+  "score": 85,
+  "items": [
+   "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQbC1NbUxzSjhHU2FpQXYwaXZ6RkRaaXR1Mm02VkxEZUtUX0JxVjIzQm56bnB4d0Vab0p6YzRNejJfN2RZVmVxTnJOQkdGSVp2cHdhemJzZGJwMkpod0VIUmROWG42VGhFQUhWOV9hMVQ4Y0JyRG9oRWFxYnljeE1VWkI0cWRrcEZMUlFv?oc=5",
+   "https://news.google.com/rss/articles/CBMikgFBVV95cUxOZ0lzZDNxOHBscVVsSDZkelp2Z0NQc3Z4TURVMVFic0xPQTVFWUtmTndoLTh1RGFRaHVKVERFVnIxQWxHbVdVU3NxNWxtVmNLa3pnVU1wOWFVMFZkaE02b1ZqOTBqNkx4NGRZNkVDWDVKb2h1V2FiTE5OODl3TFBfbzR3Y1ZnZkFWa2ZSMTczUFBRZw?oc=5",
+   "https://www.techmeme.com/261022/p51#a261022p51",
+   "https://news.google.com/rss/articles/CBMiigFBVV95cUxNd21jWkQ5TzJTSGZRdl9YQVBqMWNLR3JRME9XX0JiZUJ4OXRFbjZSeWZ3NTlrT3VPLWhQeElXbzJueHAzU1hhUlB6LXFWQ1MyQXFPcUJ1ZU9Vd0ZjbkFmWjY4Y05JOU9KNGk4d3FIVTA5aFhUeHJueG5RVnhwNjgwcUpMQzBiUUc2OEE?oc=5",
+   "https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model",
+   "https://news.google.com/rss/articles/CBMisgFBVV95cUxPZFhKMUZPNGptVFVmR2VMSzYyZ3lnMGJoX1BPUmFMRGpwMEVhWjlXVEJ6RTJkcXNBV2V6ZFFPakJtbHE3YlFmSC1kWVBqbmxCQ2RpQVZiQS1qSC1ESTVDZzZNX1c2cW9SYzl6VjE4c0JiS1hDaks2TUNRUExVVWRFUjJOcHFBZzRLVW1JanpfVlJNb1dGRlVpcWJ1bkNQRktBaU5VQWRIZzRHZEhfRUZDVXdn?oc=5",
+   "https://news.google.com/rss/articles/CBMijgFBVV95cUxQa2FyWHEzZWxYdm9rQXVQWUNoZlJMeG1EbEJ5OHgybmVUbEdLb0RKZWMwYzUxclBsOHc5NUpTSWJzX21kaW5DQWFnVjAyWWtKSUZEWmpSSGxJT1ZQSUdBc1BoOFJnVXFQSl85RVN6dXZlQ1c1TTZzTEFkaXFtbVpIZmtZWkM3WkgxNk9IdnJ3?oc=5",
+   "https://emergent.sh/news/canva-craft-ai-image-model-plans-designs",
+   "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOX2dMQ19oU0Q5UV9EYnZYX1NmXzNmQkpjRHo4MnVDN2tqZTlLSy1uSUY0ZTBWSHhOSVBzR0dsZmhpbU02LVItcUJXamxXQnNKdXMzVnpKUzBoZGt3OW5tZTdMNzR6a2F4RzlNUG9ScjJXWGhuMElBdXZ5LUVaY01IZ20zYWtjSTRhZUVGSGVDNUNpWXdmQVZWc3BYQmVXTU9SZzN6UDhYcUlaQkN3QlF5ME43Z3lZOW5mSk9FcEtHTEM3V2dOcElVY1BnSXpVckY5dXZWUVFn?oc=5",
+   "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOUGQxcEhSdHljbXpJTUZjTDZ6ZG1KWF9TS3d3MFhpeEJ4SHp4cU1oRTNOUEJ6OV9kS2Ntd2ZscnJxbnBFaGthdGJnbG44VnBTZHpSd1paSEcxcmwtbVU2V01uaWZWM2FBTE10eDZ5cWh0NkpnYkx2enk0c2NCdEczVjBEdGlDVDgzUW5GZlpfSVd5dWROcGc3YmFGQ2xNWWM1TWJ4Vm8tMUFGTUxOS1YtN0NMVHFUcVY3Qm9VMTNEUG5sQlJ3eXE3UDBQeWcwUDNw?oc=5",
+   "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQQzY4TWdXaGFXMldpNTlSWHJLZHctNmFOci1xZVVZQXdLQzUweG1fb0JBTkJncExKTjBzRVI4aU1BYmh5OVFONl9FN1pzbDdrcUJ1UnpzeFFuUnBac0hjNU0yOF9IZlU3LUtsVjVCdlZ0eHBkQ0dWLXZBNUxWUk9ySkp3VTNWc2tqU2dnMEd4YXp3MzRiUk11Zk40UmozRHNxVjZCRXZxWWc?oc=5",
+   "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQVFNnbWhBaVpZOVp4b0JSTTRoOGg4dEtvXzQyWndfN05ZcGQwTlpDVlRyMm80enQyS3l0dmxxY3FreURSVDNfMG9ZNWhlcklVME1GOXJ0elZuU1c2UHFsX1pneGJMVDB1ZFplSVMzSmFiNmlNR3Y5bDJ0eTZlbW1wZEctUDl5VWdiUy1F?oc=5",
+   "https://the-decoder.com/canva-launches-craft-its-first-in-house-image-model/",
+   "https://news.google.com/rss/articles/CBMikAFBVV95cUxPbUJmX1ZycnNXNVpLOGFQdExZeHZQUVZ1dXJXS3JyUUhiaGZyU1U4UDVlZWFEZFRtZ25tMFA4QjZoZ0FERzRhZy1IZzV6aDhVRDJhNFd5YTJYREhSLWVwXzFmNlZpSjNfWkNLajFIOHg5VF9xeFVuWkpydzgyTDBpaWg1NjRJdGZjSWx0ejRqRFU?oc=5",
+   "https://agentlocker.ai/news/canva-launches-canva-craft-its-first-ai-image-generation-model",
+   "https://news.google.com/rss/articles/CBMinAFBVV95cUxQOXJleEdOelREdEs5U0t2SW94cEt2UzBNbmxvYjNfV0dqOXdaN09FVWNiVUxGQ1JzVHgza1dFbk8zVGpna2dkSS0zeGFsS1E4cnM3OFpfcDNEc2NKTEh6V0pSM0M2aWw2T00xYmN1cDM1bmlaNFRZellZRmhwWjRzZlp6aVktUXgybkxoLVM3XzcybEkwdEVYQWMtYS0?oc=5",
+   "https://news.google.com/rss/articles/CBMifEFVX3lxTE5ZeE9tS1d6Y25IbEp1R0NpT2NJN3AtZnQ2LVRWVk5yRUFZbU5feS1fOWsxWHAtQXFSTk40cjMtN2xpTGtseS16R25IeXlZeFQ2RVlHN0VpWllXcVZKNzVPRXZibnFLZFh3Y05aRTVSQWo0cV9lak5GQjJvUDc?oc=5",
+   "https://news.google.com/rss/articles/CBMilwFBVV95cUxQWDBBS0hnbWx6VnJlalFGcW1CVkVELWpXZVR3Zld0TEtsM09MQ3hsR0pHUUYtTE9CSWx2alBVTUktZC1wdkxRd2dLTmRGaXZVelpjYk1UUkpVOVFtNVhCdmNmSmFLVmNTWTRrUVBNekJKMFlVSDBvSHpOclI0am9UWVBJRXRhQkNBTEZpUXZCWEhSc2lHUjRJ?oc=5",
+   "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNQWtWT2k2c2UxY1RCbnZoTUpTcFNQeU1wV1IwMDFmSnFqOVVPOTl2NDZYc2FWeERsU0dneXlOcE01ekkyaklhNVJBUTBkVHZwV3FocDl4TVpVQjRYdmJrUlAwa0FHZzJhNkNGOXpiYUZ6YkJGWnB6d250bHA4UU1tdFdqY0VFNDNwaU5VdTJ5bmpSVndpcDljdFBrTGw3ekRsaDdBUFBKSUU1UdIBrwFBVV95cUxPMEJpNFBLbEFIQkpZM2RhY0NZVEFuTjAzZHFDM1hhc1JjMWI2NVM3VF9Lczl1SEdOUEUtaG1CdGdZaHZ5X05UVlBQR3M2aHoxOEJjM1BWTDEzWF90OEZKdG5HRENtZ2doeUJwZVY5OTVORnYzTTJYWTVXQ2UyRjZnb0dXV0ZmeUZpNWtrN2UxVUtVS3p6NzBLaHk1emx3cHJUYk51T05JeWdQUjF3NGp3?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
