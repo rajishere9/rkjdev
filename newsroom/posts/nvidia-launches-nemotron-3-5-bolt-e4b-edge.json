@@ -1,0 +1,144 @@
+{
+ "slug": "nvidia-launches-nemotron-3-5-bolt-e4b-edge",
+ "title": "NVIDIA Launches Nemotron-3.5-Bolt-E4B for Edge Robotics and Gaming",
+ "seoTitle": "NVIDIA Launches Nemotron-3.5-Bolt-E4B for Edge AI",
+ "description": "NVIDIA releases Nemotron-3.5-Bolt-E4B, a 4-gigabyte open small language model designed for real-time robotics, gaming NPCs, and local voice assistants.",
+ "dek": "The compact 4-gigabyte model brings conversational reasoning, multi-turn tool use, and 64K context windows directly to local PCs, robotics, and edge hardware.",
+ "category": "AI Models",
+ "tags": [
+  "NVIDIA",
+  "Small Language Models",
+  "Edge AI",
+  "Robotics",
+  "Open Source"
+ ],
+ "keyTakeaways": [
+  "NVIDIA released Nemotron-3.5-Bolt-E4B on October 23, 2026, delivering an open 4B effective parameter model that operates in roughly 4GB of memory.",
+  "Post-trained from Google's Gemma-4-E4B-it, the model is built for edge hardware including Jetson modules, RTX GPUs, and AI PCs.",
+  "According to NVIDIA's internal benchmark evaluations, the model scored 40% higher on average across conversational agent benchmarks compared to the prior Nemotron-3 Nano-4B while generating up to 80% fewer output tokens.",
+  "It is released under the OpenMDW-1.1 license for both commercial and non-commercial deployment.",
+  "According to NVIDIA's reported findings, speculative decoding support via a companion DFlash drafter improves throughput by up to 21% compared to Gemma-4-E4B's original drafter."
+ ],
+ "body": "NVIDIA officially released Nemotron-3.5-Bolt-E4B on October 23, 2026, introducing an open small language model engineered to run conversational agents and tool-calling routines on local hardware. The release targets embedded robotics, gaming non-player characters (NPCs), and offline voice assistants that must operate within strict memory and latency boundaries.\n\nBuilt to fit inside approximately 4GB of memory in its quantized 4-bit configuration, the model is available directly through [Hugging Face](https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB) and [NVIDIA's developer platform](https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB/). NVIDIA developed the model to give developers low time-to-first-token latency while preserving headroom for applications or adjacent model pipelines.\n\n[[FIG1]]\n\n## Compact Architecture and Training Pipeline\n\nNemotron-3.5-Bolt-E4B is derived from Google's Gemma-4-E4B-it foundation. It contains 8 billion total parameters with 4 billion effective parameters, allowing it to maintain a compact footprint while supporting a 64K token context window for both inputs and outputs. According to the official [Hugging Face model card](https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB), the base Gemma model is licensed under Apache 2.0, while NVIDIA distributes Nemotron-3.5-Bolt-E4B under the OpenMDW-1.1 license for commercial and non-commercial applications.\n\nNVIDIA post-trained the model between December 2025 and May 2026 using its NeMo RL and NeMo Gym software frameworks. The training process applied Group Relative Policy Optimization (GRPO) with reinforcement learning from verifiable rewards (RLVR) and reinforcement learning from human feedback (RLHF) across multi-turn dialogue, tool usage, and structured output tasks.\n\nTo prevent the verbosity common in reasoning models, NVIDIA implemented group-relative length penalties during post-training. The company also balanced training batches with a 2:1 ratio of non-reasoning to reasoning data, ensuring the model maintains high accuracy even when extended chain-of-thought processing is turned off.\n\n## Benchmark Performance Across Interactive Tasks\n\nIn evaluations detailed in the [NVIDIA technical report](https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB/), Nemotron-3.5-Bolt-E4B delivered an average quality improvement of approximately 40% over the older Nemotron-3 Nano-4B across conversational agent benchmarks. NVIDIA also reported that the model generated up to 80% fewer output tokens compared to rival models during reasoning-enabled tasks, reducing decoding compute costs and execution times.\n\nOn the MultiChallenge benchmark, which measures conversational consistency across multiple turns, the Q4_K_M quantized version of Bolt E4B scored 55.60, outperforming Gemma-4-E4B-it at 39.36 and Qwen3.5 4B at 52.23. In role identity adherence on RoleMRC, the quantized model reached 79.12, compared to 75.24 for Gemma-4 and 62.61 for Qwen3.5.\n\nFor agentic execution and tool grounding, Bolt E4B recorded 69.29 on RelyToolBench in Q4_K_M precision, compared to 38.34 for Qwen3.5 4B and 38.97 for Nemotron-3 Nano-4B. On the IHEval instruction hierarchy evaluation, the BF16 edition scored 84.79, outperforming Gemma-4's 67.04 and Qwen3.5's 60.57.\n\n[[FIG2]]\n\n## Edge Robotics, Gaming NPCs, and Hardware Efficiency\n\nNVIDIA designed Bolt E4B specifically for local systems where sending data to cloud servers is impractical due to memory, latency, hardware compatibility, cost, or privacy concerns. In an earlier launch announcement reported by [TechCrunch](https://techcrunch.com/2026/10/19/nvidia-launches-new-open-models-to-run-agents-in-the-enterprise-and-on-pcs/), NVIDIA pointed to consumer AI PCs and edge devices as central deployment targets for its compact Bolt family.\n\nTo showcase robotics capabilities, NVIDIA demonstrated Bolt E4B operating on a Reachy Mini robot powered by a Jetson Orin Nano with 8GB of memory. In that setup, NVIDIA's Cosmos 3 Edge model provided live computer vision while Bolt E4B interpreted environmental data, triggered motion animation scripts, and generated voice replies.\n\nFor gaming environments, the model was tested controlling an interactive blacksmith NPC. The model evaluated player transactions, verified payments, inspected crafting formulas, gathered components, crafted equipment, and transferred items to the player character using autonomous tool calls.\n\nBenchmark measurements on llama.cpp show the model's footprint across varied systems:\n\n* On a GeForce RTX 5070 (12GB), a context workload of 3,000 input tokens and 50 output tokens consumed 3.5GB of VRAM, with a time to first token of 548 milliseconds and a generation throughput of 133.4 tokens per second.\n* On an RTX Spark system (32GB), the same workload required 3.1GB of VRAM, reaching a 930-millisecond time to first token at 67.0 tokens per second.\n* On an embedded Jetson Orin Nano (8GB), memory usage registered at 4.2GB, producing 15.5 tokens per second with a time to first token of 5,785 milliseconds.\n\nTo further boost generation speed, NVIDIA published a companion parallel drafter called DFlash. According to the [NVIDIA Research announcement](https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB/), DFlash predicts multiple tokens in a single forward pass, providing up to 21% higher generation throughput than Gemma-4's original multi-token prediction drafter.\n\n[[FIG3]]\n\n## Availability and Tooling Ecosystem\n\nNemotron-3.5-Bolt-E4B-4GB is available for download in GGUF and BF16 formats from [Hugging Face](https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB). NVIDIA confirmed deployment support through Ollama, LM Studio, Unsloth, Canonical, the Jetson AI Lab, and the NVIDIA In-Game Inferencing SDK.\n\nThe model supports 35 languages and includes runtime chat-template switches for controlling internal reasoning buffers and conversational output modes. Developers can enable thinking tokens when handling multi-step planning or deactivate them to maintain speech-friendly, low-latency dialogue.",
+ "faq": [
+  {
+   "q": "What is NVIDIA Nemotron-3.5-Bolt-E4B?",
+   "a": "It is an open 8-billion parameter (4 billion effective) small language model post-trained from Google's Gemma-4-E4B-it, optimized by NVIDIA to run local conversational agents within roughly 4GB of memory."
+  },
+  {
+   "q": "What hardware can run Nemotron-3.5-Bolt-E4B?",
+   "a": "The model is tested for NVIDIA GeForce RTX GPUs (such as the RTX 5070), Jetson Orin Nano, Jetson AGX Orin, RTX Spark AI PCs, and DGX Spark workstations, running on Linux systems with CUDA acceleration."
+  },
+  {
+   "q": "What license does Nemotron-3.5-Bolt-E4B use?",
+   "a": "NVIDIA released the model under the OpenMDW-1.1 license, which allows both commercial and non-commercial use. The underlying base model from Google is governed by Apache License 2.0."
+  },
+  {
+   "q": "How does DFlash speculative decoding work with Bolt E4B?",
+   "a": "NVIDIA released a companion DFlash drafting model that proposes multiple candidate tokens in a single forward pass, increasing inference throughput by up to 21% compared to Gemma-4's standard drafter."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern engineering laboratory where a small humanoid desktop robot and an interactive computer display operate simultaneously, with circuit components and hardware microchips visible on an illuminated worktable in cool green and slate tones.",
+  "alt": "An engineering workbench with a compact robot and an edge computing system.",
+  "caption": "Illustration: Compact edge language models power interactive robotics and local PC assistants without requiring cloud servers.",
+  "src": "img/nvidia-launches-nemotron-3-5-bolt-e4b-edge/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 58136,
+  "small": "img/nvidia-launches-nemotron-3-5-bolt-e4b-edge/hero-640.webp",
+  "og": "img/nvidia-launches-nemotron-3-5-bolt-e4b-edge/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/nvidia-launches-nemotron-3-5-bolt-e4b-edge/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An illuminated semiconductor wafer with glowing geometric data pathways connecting neural network diagrams to a compact memory module, rendered in high detail with dark metallic background.",
+   "alt": "A close-up representation of a microchip architecture running neural network parameters.",
+   "caption": "Illustration: The model architecture uses four billion effective parameters compressed into a four-gigabyte memory footprint.",
+   "slot": "FIG1",
+   "src": "img/nvidia-launches-nemotron-3-5-bolt-e4b-edge/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 45082,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A digital fantasy game environment showing a non-player character blacksmith standing near an anvil, examining tools and equipment alongside interactive glowing command prompts.",
+   "alt": "A digital game character standing at a workbench with automated tool prompts.",
+   "caption": "Illustration: Small language models handle autonomous tool calling and dialogue for in-game interactive characters.",
+   "slot": "FIG2",
+   "src": "img/nvidia-launches-nemotron-3-5-bolt-e4b-edge/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 40202,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "A robotic developer in an electronics workshop testing a small robotic arm on a compact hardware developer board connected to diagnostic monitors.",
+   "alt": "A hardware developer testing a robotic arm attached to an edge computing module.",
+   "caption": "Illustration: On-device models run on compact developer kits like Jetson modules to execute physical robotic motions locally.",
+   "slot": "FIG3",
+   "src": "img/nvidia-launches-nemotron-3-5-bolt-e4b-edge/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 43612,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+   "title": "nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+   "site": "Hugging Face",
+   "published": 1791174403000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB/",
+   "title": "NVIDIA Nemotron 3.5 Bolt E4B 4GB",
+   "site": "NVIDIA Nemotron",
+   "published": 1792738800000,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://techcrunch.com/2026/10/19/nvidia-launches-new-open-models-to-run-agents-in-the-enterprise-and-on-pcs/",
+   "title": "Nvidia launches new open models to run agents in the enterprise and on PCs",
+   "site": "TechCrunch",
+   "published": 1792424229000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792889239642,
+ "updatedAt": 1792889239642,
+ "foundVia": "Reddit and Google News",
+ "check": {
+  "claims": 24,
+  "score": 10
+ },
+ "story": {
+  "id": "Pe4e25242",
+  "score": 81,
+  "items": [
+   "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+   "https://news.google.com/rss/articles/CBMihgFBVV95cUxNNGNxS0VBd19Xd09JNFlONDhGdVcxRHp6YTJrZlk3bWdYSEMyMUxMb29QeFRXRmI1Zjh2YlhHWDBUcTFZV0xlSkw4ZElvSXczV1dQQlJ2NkR2a3Zkb0FDNkhxZUN6ZmgwZkhKQWZNZlBSM3NIM3N0a1ZRNmZNaGE4eUx3TzFMZ9IBhgFBVV95cUxNNGNxS0VBd19Xd09JNFlONDhGdVcxRHp6YTJrZlk3bWdYSEMyMUxMb29QeFRXRmI1Zjh2YlhHWDBUcTFZV0xlSkw4ZElvSXczV1dQQlJ2NkR2a3Zkb0FDNkhxZUN6ZmgwZkhKQWZNZlBSM3NIM3N0a1ZRNmZNaGE4eUx3TzFMZw?oc=5",
+   "https://news.google.com/rss/articles/CBMifkFVX3lxTFBKNlJXQlltakNHcmxKaEpIUlR4VC1jZ3VUdkJseEcwOWhOSXV3UEh0VGlJNmlCSzBUOU1oZkhaRTNYcjhFTFk0TWxrWFVhN3ZpeGhJdm1jTXBCdm04Rkd6V0FKeTlNTXJOOVp1TUd6V19sQVZpWXpraVpjc0tyZ9IBfkFVX3lxTFBKNlJXQlltakNHcmxKaEpIUlR4VC1jZ3VUdkJseEcwOWhOSXV3UEh0VGlJNmlCSzBUOU1oZkhaRTNYcjhFTFk0TWxrWFVhN3ZpeGhJdm1jTXBCdm04Rkd6V0FKeTlNTXJOOVp1TUd6V19sQVZpWXpraVpjc0tyZw?oc=5",
+   "https://news.google.com/rss/articles/CBMijgFBVV95cUxQaW1MS1pSMlhZRlE1alE3RTI4dEZmMzF2UHdNNWoxTXY0LXVNV1kwWFpzV1M2bUhJQnlRTzhzcXY3NWhhZGh6eGxaakJOWVgxWjROU3U1T2g3cHR1Z0k5dlpsVFNKMHA1UHVGUUFZY19FcFoyeGxZRlV6cm1haXZhQ2x4QjgxVXotN0JHX3Jn?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
