@@ -1,0 +1,134 @@
+{
+ "slug": "elvis-presley-estate-sues-anthropic-copyright",
+ "title": "Elvis Presley Estate Sues Anthropic Over Lyrics Training in Claude",
+ "seoTitle": "Elvis Presley Estate Sues Anthropic Over AI Training",
+ "description": "Elvis Presley rights holders sued Anthropic for $48.6 million, alleging Claude models used 274 copyrighted songs without permission.",
+ "dek": "A federal lawsuit filed by Authentic Brands Group and publishing partners accuses Anthropic of ingesting 274 Elvis Presley songs to train its Claude models.",
+ "category": "Industry",
+ "tags": [
+  "Anthropic",
+  "Claude",
+  "Copyright",
+  "Music Industry",
+  "Authentic Brands Group"
+ ],
+ "keyTakeaways": [
+  "Rights holders to Elvis Presley's catalog filed a federal copyright lawsuit against Anthropic on October 23, 2026, over 274 songs.",
+  "The complaint seeks up to $48.6 million in total statutory damages, including claims under DMCA Sections 1201 and 1202.",
+  "Plaintiffs demand the impoundment or destruction of copies in Anthropic's training sets, internal repositories, and model weights.",
+  "Anthropic had not publicly responded to the filing as of October 24, 2026."
+ ],
+ "body": "The intellectual property holders managing Elvis Presley's musical catalog filed a copyright infringement lawsuit against Anthropic on October 23, 2026, alleging the artificial intelligence company copied 274 copyrighted songs to train its Claude models without authorization. First reported by [Billboard](https://www.billboard.com/pro/elvis-presley-estate-sues-suno-anthropic/), the case marks a major legal action brought directly on behalf of one of recorded music's most enduring figures.\n\nThe complaint, titled *ABG EPE IP LLC et al. v. Anthropic PBC* and filed in the U.S. District Court for the Northern District of California, targets the ingestion and output capabilities of Anthropic's flagship chatbot family. Lead plaintiff ABG EPE IP LLC, a division of licensing corporation Authentic Brands Group, brought the action alongside Abilene Music, Raleigh Music Publishing, Aberbach family trusts, and the Luigi Creatore Trust, according to court documents cited by [AI Chat Daily](https://www.aichatdaily.com/ai-security/elvis-presley-rights-holders-sue-anthropic-over-claude).\n\n## The Scope of the Copyright Allegations\n\nThe lawsuit centers on 274 compositions across Presley's career, including \"Can't Help Falling in Love,\" \"Don't Be Cruel,\" \"All Shook Up,\" \"A Little Less Conversation,\" \"Return to Sender,\" and \"(You're The) Devil in Disguise.\" Lead attorney Richard Busch argued in the filing that Anthropic built its business on infringement on a massive scale, noting that the plaintiffs remain deeply protective of the catalog.\n\n[[FIG1]]\n\nThe plaintiffs assert that Anthropic gathered the protected lyrics across several ingestion pipelines without licensing the material. According to the complaint cited by [AI Chat Daily](https://www.aichatdaily.com/ai-security/elvis-presley-rights-holders-sue-anthropic-over-claude), these sources allegedly included web scraping from commercial lyrics repositories and streaming metadata, public dataset archives such as Common Crawl and Books3, the YouTube Subtitles subset of The Pile, Internet Archive captures, and BitTorrent distributions of shadow libraries including Library Genesis, PiLiMi, and Z-Library.\n\nBeyond basic copyright infringement, the plaintiffs added counts under 17 U.S.C. § 1201 and § 1202. The complaint accuses Anthropic of bypassing access controls to gather lyrics and stripping out author credits, titles, and copyright management metadata during data preparation pipelines.\n\n## Output Tests and Claims of Derivative Works\n\nThe legal filing directly addresses how Claude handles prompts involving Presley's song catalog. As detailed by superpowerdaily.com, the plaintiffs prompted recent versions of the system to remake or rewrite the catalog tracks for modern audiences.\n\n[[FIG2]]\n\nWhile Claude declined direct requests to reproduce original lyrics verbatim, the plaintiffs allege the chatbot generated alternative versions that retained the identical core structure, verses, bridges, and hooks, with minor wording substitutions. The complaint names Claude Opus 5, Sonnet 5, Fable 5, and Mythos 5, alongside earlier systems such as Claude Haiku 4.5 and Claude 3 Opus, as containing the ingested works.\n\nThe complaint states that in one interaction documented by the plaintiffs, Claude evaluated its own text generation by observing that the outputs remained very close to the originals in structure and recurring hooks, crossing from inspiration into reproduction. As noted in coverage by superpowerdaily.com, that statement represents the plaintiffs' characterization in court papers rather than a legal finding or a company admission.\n\n## Financial Demands and Model Remedies\n\nThe plaintiffs are asking the federal court to award statutory damages totaling roughly $48.6 million. That figure breaks down into maximum willful infringement damages of $150,000 per song, which totals $41.1 million for the 274 tracks, alongside $685,000 for digital protection circumvention and $6.85 million for metadata removal, as reported by [AI Chat Daily](https://www.aichatdaily.com/ai-security/elvis-presley-rights-holders-sue-anthropic-over-claude).\n\nThe demanded remedies extend past financial penalties. The Presley rights holders have requested a permanent injunction, a complete accounting of training scrapes, and an order requiring Anthropic to impound and destroy all unlicensed copies of the catalog found across training sets, internal caches, and the weights of deployed models.\n\n## Broadening Legal Exposure for Model Training\n\nThe case adds to mounting pressure on generative AI model developers over unlicensed training corpuses. As reported by [VICE](https://www.vice.com/en/article/elvis-presley-estate-sues-anthropic-for-stealing-his-music-at-a-scale-never-seen-before-to-train-ai/), earlier industry conflicts often concluded in commercial settlements or structured partnerships, but individual legacy catalogs are increasingly taking direct legal routes.\n\nAI developers have argued in multiple pending federal proceedings that ingesting copyrighted text, audio, and visual works for algorithmic training represents fair use under U.S. law. However, that defense has not been definitively resolved across dozens of pending lawsuits, leaving billions of dollars in theoretical liabilities hanging over foundation model builders. As noted by [Billboard](https://www.billboard.com/pro/elvis-presley-estate-sues-suno-anthropic/), Anthropic did not immediately provide comment on the newly filed Presley litigation.",
+ "faq": [
+  {
+   "q": "What specific damages are the Elvis Presley rights holders seeking?",
+   "a": "The plaintiffs are seeking approximately $48.6 million total, including up to $41.1 million for willful copyright infringement across 274 songs, $685,000 for circumvention under Section 1201, and $6.85 million for metadata stripping under Section 1202."
+  },
+  {
+   "q": "Which Claude models are named in the lawsuit?",
+   "a": "The complaint names Claude Opus 5, Sonnet 5, Fable 5, and Mythos 5, alongside references to Claude Haiku 4.5 and Claude 3 Opus."
+  },
+  {
+   "q": "Has Anthropic responded to the Elvis Presley lawsuit?",
+   "a": "Anthropic had not publicly responded to requests for comment regarding the Elvis Presley complaint as of October 24, 2026."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An artistic conceptual illustration of a vintage studio microphone standing on a polished wooden floor, casting a long shadow that dissolves into glowing streams of binary code and digital data strands in a dimly lit courtroom hall.",
+  "alt": "Illustration of a vintage microphone blending into digital streams inside a courtroom setting",
+  "caption": "Illustration: The collision between historic music catalogs and modern AI model training pipelines.",
+  "src": "img/elvis-presley-estate-sues-anthropic-copyright/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 64904,
+  "small": "img/elvis-presley-estate-sues-anthropic-copyright/hero-640.webp",
+  "og": "img/elvis-presley-estate-sues-anthropic-copyright/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/elvis-presley-estate-sues-anthropic-copyright/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An illustration showing physical vinyl records and paper lyric sheet scrolls being scanned by digital laser grids, transforming into abstract floating packets of server data inside a modern computer server room.",
+   "alt": "Illustration depicting music manuscripts and records converting into computational data",
+   "caption": "Illustration: Rights holders allege protected song lyrics were processed into large-scale training datasets.",
+   "slot": "FIG1",
+   "src": "img/elvis-presley-estate-sues-anthropic-copyright/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 57402,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "An illustration of an attorney in a suit pointing toward a massive holographic display projecting overlapping musical stave lines, waveforms, and lines of computer code during a legal hearing.",
+   "alt": "Illustration of a lawyer analyzing digital music waveforms and code on a projection screen",
+   "caption": "Illustration: The complaint alleges prompt tests produced derivative musical works retaining protected song structures.",
+   "slot": "FIG2",
+   "src": "img/elvis-presley-estate-sues-anthropic-copyright/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 38744,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://www.billboard.com/pro/elvis-presley-estate-sues-suno-anthropic/",
+   "title": "Anthropic Sued For Stealing Elvis Presley Music to Train AI: ‘Deeply Protective of These Iconic Songs’",
+   "site": "Billboard",
+   "published": 1792852494000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://www.vice.com/en/article/elvis-presley-estate-sues-anthropic-for-stealing-his-music-at-a-scale-never-seen-before-to-train-ai/",
+   "title": "Elvis Presley Estate Sues Anthropic for Stealing His Music ‘At a Scale Never Seen Before’ To Train AI",
+   "site": "VICE",
+   "published": 1792868311000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://superpowerdaily.com/posts/elvis-presley-rights-holders-sue-anthropic-over-ai-training-on-274-songs",
+   "title": "Elvis Presley rights holders sue Anthropic over AI training on 274 songs",
+   "site": "superpowerdaily.com",
+   "published": 1792868983381,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.aichatdaily.com/ai-security/elvis-presley-rights-holders-sue-anthropic-over-claude",
+   "title": "Elvis Presley rights holders sue Anthropic over Claude training on 274 songs",
+   "site": "AI Chat Daily",
+   "published": 1792886893000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792896305605,
+ "updatedAt": 1792896305605,
+ "foundVia": "Google News and Google Search",
+ "check": {
+  "claims": 13,
+  "score": 10
+ },
+ "story": {
+  "id": "P7e898454",
+  "score": 78,
+  "items": [
+   "https://news.google.com/rss/articles/CBMie0FVX3lxTE8tQUZPNFFsYXJZcnJydGJWWldtMmJLZEF4QlpiVWtQeHVZY1UwdjJHOFRLMHEyS0FvR0pjZ0ZXZHdQQURfNDNuWXNMaHlnZUdjUUYzeHF1T2pscmtVUFhXYTdwUkE2NmdWaEY4RkdneUhHNXFUdzZVbG5kOA?oc=5",
+   "https://news.google.com/rss/articles/CBMizAFBVV95cUxNYkpHcG95OGt1cGU3Z3VWSmJHZkVzUVRlUko5S0xpLVM5REs2RUxkeHlENUQ3SzhYV3psUllVUE02YXM4bFVMbHlMbEgyaHIyM0ltNm9pdmJLTFY3aFpyNS1KTDFjRFo2enVVeVpjMUJXektqU21hbmRDZHVfQk81WlVVLWpmZEQ2dzRWcUI4TTd5M0dRbjFjM2RNWkc2eHQ2NEZOdTFETTVHdHV1OE9TOXVOSGdvYWNMQlJ4azFGYU1pUmFTUExoeTB0bFY?oc=5",
+   "https://www.vice.com/en/article/elvis-presley-estate-sues-anthropic-for-stealing-his-music-at-a-scale-never-seen-before-to-train-ai/",
+   "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNX2w5MWpVOHBzaUxLMllrM0c1SDcxREV3WGt1VGdMNjM2STE3VHBlSEZwSnBDc1lKWnJ5c0pPNWJHMHlZcV9rVXRRVjNGYkxOcUpNZmRQVmVHTEZJZ1NYcUJhVzBCeW1hQ09mZTIzZm5JVDZ0emRMN3hSUXdhUnhodkF5NWJYTVBZNzNVejk4RjJQWTd0b0lROXNjWHpYM0NKc0hSb1ZtVmM0QQ?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
