@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nanbeige Releases Nanbeige4.3-33B Open Agent Model | rkj dev</title>
+<meta name="description" content="Nanbeige has released Nanbeige4.3-33B under Apache 2.0 with a 512K context window and self-reported benchmark leads over Qwen and Gemma in agent coding.">
+<link rel="canonical" href="https://www.rkjdev.com/blog/nanbeige-releases-nanbeige43-33b-open-agentic-model/">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#110b14">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta property="og:site_name" content="rkj dev Blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nanbeige Releases Nanbeige4.3-33B Open Agent Model | rkj dev">
+<meta property="og:description" content="Nanbeige has released Nanbeige4.3-33B under Apache 2.0 with a 512K context window and self-reported benchmark leads over Qwen and Gemma in agent coding.">
+<meta property="og:url" content="https://www.rkjdev.com/blog/nanbeige-releases-nanbeige43-33b-open-agentic-model/">
+<meta property="og:image" content="https://www.rkjdev.com/blog/img/nanbeige-releases-nanbeige43-33b-open-agentic-model/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://www.rkjdev.com/blog/img/nanbeige-releases-nanbeige43-33b-open-agentic-model/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nanbeige Releases Nanbeige4.3-33B Open Agent Model | rkj dev">
+<meta name="twitter:description" content="Nanbeige has released Nanbeige4.3-33B under Apache 2.0 with a 512K context window and self-reported benchmark leads over Qwen and Gemma in agent coding.">
+<link rel="alternate" type="application/rss+xml" title="rkj dev Blog" href="/blog/feed.xml">
+<link rel="alternate" type="application/feed+json" title="rkj dev Blog" href="/blog/feed.json">
+<link rel="icon" href="/favicon.svg?v=bdff7dc5" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,40;1,9..144,400..600,40&family=Schibsted+Grotesk:ital,wght@0,400..600;1,400..600&display=swap">
+<link rel="stylesheet" href="/site.css?v=e85724ed">
+<link rel="stylesheet" href="/blog/blog.css?v=7ad332ef">
+<meta property="article:published_time" content="2026-10-26T00:09:06.389Z">
+<meta property="article:modified_time" content="2026-10-26T00:09:06.389Z">
+<meta property="article:section" content="AI Models">
+<meta property="article:tag" content="Nanbeige">
+<meta property="article:tag" content="Open Source">
+<meta property="article:tag" content="AI Agents">
+<meta property="article:tag" content="Coding">
+<meta property="article:tag" content="Hugging Face">
+<link rel="preload" as="image" href="/blog/img/nanbeige-releases-nanbeige43-33b-open-agentic-model/hero.webp" imagesrcset="/blog/img/nanbeige-releases-nanbeige43-33b-open-agentic-model/hero-640.webp 640w, /blog/img/nanbeige-releases-nanbeige43-33b-open-agentic-model/hero.webp 1200w" imagesizes="(max-width: 760px) 100vw, 1200px">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"Nanbeige Releases Nanbeige4.3-33B Open Agentic Coding Model","description":"Nanbeige has released Nanbeige4.3-33B under Apache 2.0 with a 512K context window and self-reported benchmark leads over Qwen and Gemma in agent coding.","url":"https://www.rkjdev.com/blog/nanbeige-releases-nanbeige43-33b-open-agentic-model/","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.rkjdev.com/blog/nanbeige-releases-nanbeige43-33b-open-agentic-model/"},"inLanguage":"en","isAccessibleForFree":true,"image":["https://www.rkjdev.com/blog/img/nanbeige-releases-nanbeige43-33b-open-agentic-model/og.jpg","https://www.rkjdev.com/blog/img/nanbeige-releases-nanbeige43-33b-open-agentic-model/hero.webp"],"datePublished":"2026-10-26T00:09:06.389Z","dateModified":"2026-10-26T00:09:06.389Z","articleSection":"AI Models","keywords":"Nanbeige, Open Source, AI Agents, Coding, Hugging Face","wordCount":981,"thumbnailUrl":"https://www.rkjdev.com/blog/img/nanbeige-releases-nanbeige43-33b-open-agentic-model/hero-640.webp","author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","@id":"https://www.rkjdev.com/#labs","name":"RKJDEV Labs","url":"https://www.rkjdev.com/","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/apple-touch-icon.png","width":180,"height":180}},"isPartOf":{"@id":"https://www.rkjdev.com/#website"},"isBasedOn":["https://huggingface.co/Nanbeige/Nanbeige4.3-33B","https://huggingface.co/AtomicChat/Nanbeige4.3-33B-GGUF","https://explainx.ai/blog/nanbeige-4-3-33b-open-agentic-model-guide-2026","https://startupfortune.com/nanbeiges-new-33b-open-model-takes-aim-at-qwen-and-gemma-on-coding/","https://aiweekly.co/alerts/nanbeige-opens-33b-model-under-apache-20-with-512k-context","https://www.orcarouter.ai/blog/nanbeige-4-3-33b-vs-gemma-4-31b","https://www.explainx.ai/catch-up-on-ai/2026-10-25"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"AI Models","item":"https://www.rkjdev.com/blog/category/ai-models/"},{"@type":"ListItem","position":3,"name":"Nanbeige Releases Nanbeige4.3-33B Open Agentic Coding Model","item":"https://www.rkjdev.com/blog/nanbeige-releases-nanbeige43-33b-open-agentic-model/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the context window size of Nanbeige4.3-33B?","acceptedAnswer":{"@type":"Answer","text":"The model natively supports a context window of up to 524,288 tokens (512K)."}},{"@type":"Question","name":"What license is Nanbeige4.3-33B distributed under?","acceptedAnswer":{"@type":"Answer","text":"It is released under a permissive Apache 2.0 license with open weights, allowing unrestricted commercial and personal deployment."}},{"@type":"Question","name":"Can Nanbeige4.3-33B process images?","acceptedAnswer":{"@type":"Answer","text":"No. The model is text-only in English and Chinese, unlike competing models such as Google's Gemma 4 31B which support vision inputs."}},{"@type":"Question","name":"Can the model run on consumer GPUs?","acceptedAnswer":{"@type":"Answer","text":"Yes. Community GGUF quantized builds created by AtomicChat allow 4-bit variants (around 20-21 GB) to load onto 24 GB GPUs, though running long context windows will constrain available memory."}}]}]</script>
+</head>
+<body class="post">
+<div class="progress" aria-hidden="true"><span></span></div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="mark" href="/">rkj dev</a>
+    <nav aria-label="Site">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <article class="article">
+    <header class="post-head wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/category/ai-models/">AI Models</a></nav>
+      <h1>Nanbeige Releases Nanbeige4.3-33B Open Agentic Coding Model</h1>
+      <p class="standfirst">The Chinese lab backed by BOSS Zhipin launches an open-weight 33B model designed for autonomous coding and office agents, featuring a 524,288-token context window.</p>
+      <div class="byline">
+        <span class="by">rkj dev newsroom</span>
+        <span><time datetime="2026-10-26T00:09:06.389Z" class="abs" data-rel>Oct 26, 2026</time></span>
+        <span>4 min read</span>
+        <a href="#sources">7 sources, fact-checked</a>
+      </div>
+    </header>
+    <div class="hero-wrap wrap"><figure class="hero-fig is-ai">
+  <div class="img"><img src="/blog/img/nanbeige-releases-nanbeige43-33b-open-agentic-model/hero.webp" srcset="/blog/img/nanbeige-releases-nanbeige43-33b-open-agentic-model/hero-640.webp 640w, /blog/img/nanbeige-releases-nanbeige43-33b-open-agentic-model/hero.webp 1200w" sizes="(max-width: 760px) 100vw, 1200px" width="1200" height="675" alt="An AI developer workstation set up for local model deployment and code generation" fetchpriority="high" decoding="async"></div>
+  <figcaption><span>Illustration: Local hardware environments running open-weight agent models for autonomous software engineering.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure></div>
+    <div class="layout wrap">
+      <aside class="rail" aria-label="On this page">
+        <nav class="toc"><p>Contents</p><ol><li><a href="#architecture-and-teacher-distillation-strategy">Architecture and Teacher Distillation Strategy</a></li><li><a href="#agentic-coding-and-cowork-benchmarks">Agentic Coding and Cowork Benchmarks</a></li><li><a href="#evaluation-caveats-and-testing-context">Evaluation Caveats and Testing Context</a></li><li><a href="#inference-settings-and-local-deployment">Inference Settings and Local Deployment</a></li><li><a href="#why-the-apache-2-0-release-matters">Why the Apache 2.0 Release Matters</a></li></ol></nav>
+        <div class="share">
+          <p>Share</p>
+          <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fnanbeige-releases-nanbeige43-33b-open-agentic-model%2F&text=Nanbeige%20Releases%20Nanbeige4.3-33B%20Open%20Agentic%20Coding%20Model" target="_blank" rel="noopener">X</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fnanbeige-releases-nanbeige43-33b-open-agentic-model%2F" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://wa.me/?text=Nanbeige%20Releases%20Nanbeige4.3-33B%20Open%20Agentic%20Coding%20Model%20https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fnanbeige-releases-nanbeige43-33b-open-agentic-model%2F" target="_blank" rel="noopener">WhatsApp</a>
+          <button type="button" data-copy="https://www.rkjdev.com/blog/nanbeige-releases-nanbeige43-33b-open-agentic-model/">Copy link</button>
+        </div>
+      </aside>
+      <div class="prose">
+        <section class="inshort" aria-labelledby="tk">
+          <h2 id="tk">In short</h2>
+          <ul><li>Nanbeige released Nanbeige4.3-33B on October 24, 2026, under an Apache 2.0 license with a 524,288-token context window.</li><li>The 33.1-billion parameter dense model is designed as a teacher model to distill future smaller variants like Nanbeige4.3-3B.</li><li>Self-reported benchmarks claim strong leads on Terminal-Bench 2.1 (80.9) and DeepSWE (65.5), though it trailed Qwen3.8-27B on SWE-Bench Pro.</li><li>Community quantization group AtomicChat released GGUF builds on October 25, 2026, noting the architecture is sensitive to sub-4-bit quantization.</li></ul>
+        </section>
+        <p>On October 24, 2026, Chinese artificial intelligence laboratory Nanbeige released <a href="https://huggingface.co/Nanbeige/Nanbeige4.3-33B" target="_blank" rel="noopener">Nanbeige4.3-33B on Hugging Face</a>, an open-weight model licensed under Apache 2.0 and tailored for autonomous coding and multi-step cowork workflows. Built on a dense architecture with approximately 33.1 billion parameters in BF16 precision, the release introduces a native context window of 524,288 tokens (512K) and ships with reasoning activated by default. The lab, backed by Chinese recruitment platform BOSS Zhipin, positions the release as a capable agentic engine intended to serve as a teacher model for smaller upcoming derivatives.</p>
+<p>The launch immediately drew interest from developers looking to run agentic coding tasks without paying managed API rates or running hundreds of billions of parameters. On October 25, 2026, community maintainers at <a href="https://huggingface.co/AtomicChat/Nanbeige4.3-33B-GGUF" target="_blank" rel="noopener">AtomicChat published GGUF quantized weights</a>, enabling developers to evaluate the model on local workstations and individual high-memory cards.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/nanbeige-releases-nanbeige43-33b-open-agentic-model/figure-1.webp" width="1200" height="670" alt="Researchers analyzing machine learning distillation frameworks" loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: The teacher-student distillation strategy used to transfer agentic capabilities to compact models.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="architecture-and-teacher-distillation-strategy">Architecture and Teacher Distillation Strategy</h2>
+<p>According to the official <a href="https://huggingface.co/Nanbeige/Nanbeige4.3-33B" target="_blank" rel="noopener">Nanbeige4.3-33B model card</a>, the release acts as the flagship anchor for the Nanbeige4.3 series. The lab&#39;s stated design philosophy is to train a high-capacity teacher agent first, collecting execution trajectories and reasoning outputs to distill into compact edge models later. Nanbeige previously published smaller on-device models, including Nanbeige4.1-3B and Nanbeige4.2-3B, and plans to release Nanbeige4.3-3B as the distilled student model using this 33B foundation.</p>
+<p>The model features a Llama-style tag and runs in BF16 across approximately 66 gigabytes on disk. In contrast to multimodal models such as Google&#39;s Gemma 4 31B, Nanbeige4.3-33B is strictly text-based, supporting English and Chinese. Nanbeige has not disclosed training dataset compositions, compute cluster details, or token counts, keeping the underlying data recipe private as reported by <a href="https://explainx.ai/blog/nanbeige-4-3-33b-open-agentic-model-guide-2026" target="_blank" rel="noopener">explainx.ai</a>.</p>
+<h2 id="agentic-coding-and-cowork-benchmarks">Agentic Coding and Cowork Benchmarks</h2>
+<p>Nanbeige reported detailed benchmark evaluations comparing Nanbeige4.3-33B against three comparable open models in the ~30B parameter bracket: Alibaba&#39;s Qwen3.8-27B, Muse-Glimmer-30B, and Gemma 4 31B. All models were tested at their highest thinking effort using identical harnesses per benchmark. As detailed on <a href="https://startupfortune.com/nanbeiges-new-33b-open-model-takes-aim-at-qwen-and-gemma-on-coding/" target="_blank" rel="noopener">Startup Fortune</a>, the self-reported scores show significant margins in long-horizon terminal and software engineering environments.</p>
+<p>On agentic coding, Nanbeige4.3-33B achieved an 80.9 on Terminal-Bench 2.1 (evaluated with Terminus 2), surpassing Qwen3.8-27B (73.0), Muse-Glimmer-30B (61.8), and Gemma 4 31B (47.2). On Terminal-Bench 4.0 using mini-swe-agent v2.4.6, Nanbeige scored 23.8 compared to Qwen&#39;s 6.3, while Muse-Glimmer-30B scored 1.6 and Gemma scored 0.0. On DeepSWE, Nanbeige posted 65.5 against Qwen&#39;s 42.5. However, the model did not post a clean sweep: Qwen3.8-27B led on SWE-Bench Pro with 61.7 versus Nanbeige&#39;s 60.3.</p>
+<p>In agentic cowork benchmarks, Nanbeige4.3-33B scored 54.2 on Automation Bench v1.0.6 (outperforming Qwen&#39;s 38.3) and 44.8 on JobBench (ahead of Qwen&#39;s 34.5). On YC-bench, a long-horizon enterprise simulation scored in simulated dollars, Nanbeige reported $1,025,437 compared to Qwen3.8-27B&#39;s $641,290. On GDPval, however, Qwen retained a lead at 86.4 over Nanbeige&#39;s 84.8. Pure reasoning tasks yielded tight results: Nanbeige posted 95.2 on AIME 2026 against Qwen&#39;s 94.5, while trailing Gemma 4 31B on GPQA Diamond (89.5 to 91.3), as noted in coverage by <a href="https://aiweekly.co/alerts/nanbeige-opens-33b-model-under-apache-20-with-512k-context" target="_blank" rel="noopener">AI Weekly</a>.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/nanbeige-releases-nanbeige43-33b-open-agentic-model/figure-2.webp" width="1200" height="670" alt="Abstract representation of autonomous coding agents operating in software repositories" loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: Autonomous agents executing multi-turn terminal tasks and repository maintenance.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<h2 id="evaluation-caveats-and-testing-context">Evaluation Caveats and Testing Context</h2>
+<p>Independent analysts have urged caution regarding the headline figures. Analysis from <a href="https://www.orcarouter.ai/blog/nanbeige-4-3-33b-vs-gemma-4-31b" target="_blank" rel="noopener">OrcaRouter</a> highlighted that Gemma 4 31B&#39;s score of 0.0 on Terminal-Bench 4.0 and 2.7 on DeepSWE likely reflects tool harness incompatibility rather than baseline capability. The evaluations used mini-swe-agent v2.4.6 and Terminus 2 tuned for XML tool syntax, which aligns with Nanbeige&#39;s default configuration but may not support competing chat templates.</p>
+<p>Furthermore, discrepancies exist between reported scores and third-party published documentation. While Nanbeige credited Gemma 4 31B with 91.3 on GPQA Diamond, Google&#39;s official model documentation lists 84.3 for Gemma 4 31B. Independent tracking platforms like Artificial Analysis do not list Nanbeige4.3-33B, meaning all current performance metrics stem solely from Nanbeige&#39;s repository.</p>
+<h2 id="inference-settings-and-local-deployment">Inference Settings and Local Deployment</h2>
+<p>For teams deploying the model, Nanbeige provides specific chat template toggles in its <a href="https://huggingface.co/Nanbeige/Nanbeige4.3-33B" target="_blank" rel="noopener">official release repository</a>:</p>
+<ul>
+<li><code>enable_thinking</code>: Set to <code>True</code> by default; toggles chain-of-thought generation.</li>
+<li><code>preserve_thinking</code>: Keeps reasoning traces from prior turns in multi-turn dialogues. Nanbeige recommends setting this to <code>True</code> for agentic coding and multi-turn tool calling, and <code>False</code> for general chat.</li>
+<li>Tool formats: Supports both XML and JSON formats, with XML explicitly recommended for higher accuracy.</li>
+<li>Recommended sampling: Temperature 1.0, top-p 0.95, and up to 65,536 max tokens for tool-use tasks; temperature 0.6, top-p 0.95, and up to 262,144 max tokens for reasoning.</li>
+</ul>
+<p>Official serving instructions target SGLang and vLLM runtimes, specifying four-way tensor parallelism (<code>--tp-size 4</code>) and requiring the <code>qwen3_coder</code> tool parser. Because loading the model in Transformers requires <code>trust_remote_code=True</code>, users must execute code packaged directly in the model repository.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/nanbeige-releases-nanbeige43-33b-open-agentic-model/figure-3.webp" width="1200" height="670" alt="High-performance workstation hardware running localized quantized neural network weights" loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: Workstation-class hardware capable of executing quantized 33-billion-parameter models.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<p>For local execution, <a href="https://huggingface.co/AtomicChat/Nanbeige4.3-33B-GGUF" target="_blank" rel="noopener">AtomicChat&#39;s GGUF repository</a> offers quantized files ranging from 13.7 GB to 35.2 GB. AtomicChat noted that Nanbeige4.3-33B is unusually sensitive to quantization. Standard llama.cpp presets like <code>Q4_K_M</code> experienced noticeable prediction drift, achieving a 89.9% top-1 match rate against the original BF16 weights. Using custom importance matrices (<code>AD-</code> builds), top-1 agreement improved to 92.6% for <code>AD-Q4_K_M</code> (21.2 GB) and 97.5% for <code>AD-Q6_K</code> (30.1 GB), while aggressive sub-4-bit quantizations dropped below 85% agreement.</p>
+<h2 id="why-the-apache-2-0-release-matters">Why the Apache 2.0 Release Matters</h2>
+<p>Hardware economics have made mid-sized open-weight models increasingly attractive. According to figures cited by <a href="https://startupfortune.com/nanbeiges-new-33b-open-model-takes-aim-at-qwen-and-gemma-on-coding/" target="_blank" rel="noopener">Startup Fortune</a>, one-year rental prices for Nvidia H100 GPUs increased nearly 40% between October 2025 and March 2026, rising from $1.70 to $2.35 per GPU-hour. Nvidia executives confirmed earlier in the year that rental costs continued an upward trend.</p>
+<p>Because Nanbeige4.3-33B carries an Apache 2.0 license, enterprises and independent engineers can self-host internal agent systems without commercial revenue caps or per-token API charges. A quantized 4-bit representation occupies roughly 20 to 21 GB on disk, enabling teams to run the weights on a single 24 GB consumer or workstation GPU—though large KV caches at extended context lengths will require distributed memory or reduced window targets.</p>
+<p>Nanbeige has invited developers to contact its team for joint work on domain-specific agents, while the broader community awaits third-party validation and the subsequent distilled Nanbeige4.3-3B release.</p>
+
+        <section class="faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Questions people ask</h2>
+          <details open><summary>What is the context window size of Nanbeige4.3-33B?</summary><p>The model natively supports a context window of up to 524,288 tokens (512K).</p></details>
+<details><summary>What license is Nanbeige4.3-33B distributed under?</summary><p>It is released under a permissive Apache 2.0 license with open weights, allowing unrestricted commercial and personal deployment.</p></details>
+<details><summary>Can Nanbeige4.3-33B process images?</summary><p>No. The model is text-only in English and Chinese, unlike competing models such as Google's Gemma 4 31B which support vision inputs.</p></details>
+<details><summary>Can the model run on consumer GPUs?</summary><p>Yes. Community GGUF quantized builds created by AtomicChat allow 4-bit variants (around 20-21 GB) to load onto 24 GB GPUs, though running long context windows will constrain available memory.</p></details>
+        </section>
+        <section class="sources" id="sources" aria-labelledby="src-title">
+          <h2 id="src-title">Sources</h2>
+          <ol><li><a href="https://huggingface.co/Nanbeige/Nanbeige4.3-33B" target="_blank" rel="noopener">Nanbeige/Nanbeige4.3-33B</a><span>Hugging Face, Oct 24, 2026, <b class="official">official source</b></span></li><li><a href="https://huggingface.co/AtomicChat/Nanbeige4.3-33B-GGUF" target="_blank" rel="noopener">AtomicChat/Nanbeige4.3-33B-GGUF</a><span>Hugging Face, Oct 25, 2026, <b class="official">official source</b></span></li><li><a href="https://explainx.ai/blog/nanbeige-4-3-33b-open-agentic-model-guide-2026" target="_blank" rel="noopener">Nanbeige4.3-33B: Open 33B Agent Model, 80.9 on Terminal-Bench | explainx.ai Blog | explainx.ai</a><span>explainx.ai, Oct 25, 2026</span></li><li><a href="https://startupfortune.com/nanbeiges-new-33b-open-model-takes-aim-at-qwen-and-gemma-on-coding/" target="_blank" rel="noopener">Nanbeige's New 33B Open Model Takes Aim at Qwen and Gemma on Coding</a><span>Startup Fortune, Oct 25, 2026</span></li><li><a href="https://aiweekly.co/alerts/nanbeige-opens-33b-model-under-apache-20-with-512k-context" target="_blank" rel="noopener">Nanbeige Opens 33B Model Under Apache 2.0 With 512K Context</a><span>AI Weekly, Oct 25, 2026</span></li><li><a href="https://www.orcarouter.ai/blog/nanbeige-4-3-33b-vs-gemma-4-31b" target="_blank" rel="noopener">Nanbeige4.3-33B vs Gemma 4 31B: What a 33-Point Gap in the Vendor Table Really Means</a><span>OrcaRouter, Oct 25, 2026</span></li><li><a href="https://www.explainx.ai/catch-up-on-ai/2026-10-25" target="_blank" rel="noopener">AI News October 25, 2026: 16 Stories Explained | explainx.ai</a><span>explainx.ai, Oct 25, 2026</span></li></ol>
+          <p class="method">How this story was made: the newsroom picked it up from Reddit, Google News and Google Search, gathered the full text of the sources above, and drafted it with AI assistance. Every factual claim was then checked against those sources before publishing (36 claims checked). Illustrations marked as AI-generated are not photographs. Spotted an error? <a href="mailto:rajankrishnan909@gmail.com?subject=Correction%3A%20Nanbeige%20Releases%20Nanbeige4.3-33B%20Open%20Agentic%20Coding%20Model">Tell us</a>.</p>
+        </section>
+        <p class="tags"><span>#Nanbeige</span> <span>#Open Source</span> <span>#AI Agents</span> <span>#Coding</span> <span>#Hugging Face</span></p>
+        <p class="stamp">Published October 26, 2026 at 00:09 UTC</p>
+      </div>
+    </div>
+  </article>
+  <section class="related wrap" aria-labelledby="rel-title">
+    <h2 id="rel-title">Keep reading</h2>
+    <div class="rows"><article class="story row">
+  <a class="story-link" href="/blog/hugging-face-carbon-x-dna-model/">
+    <span class="pic"><img src="/blog/img/hugging-face-carbon-x-dna-model/hero-640.webp" srcset="/blog/img/hugging-face-carbon-x-dna-model/hero-640.webp 640w, /blog/img/hugging-face-carbon-x-dna-model/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Illustration of a computational genomics laboratory with digital representations of DNA sequences" loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-10-24T01:46:32.744Z" data-rel>Oct 24, 2026</time></span>
+      <h3>Hugging Face Releases Carbon-X Open-Source Model for DNA Analysis</h3>
+      <span class="dek">The 14.8-billion-parameter model processes genetic code and English in a single stream, enabling mutation analysis without external cloud APIs.</span>
+      
+    </span>
+  </a>
+</article>
+<article class="story row">
+  <a class="story-link" href="/blog/nvidia-launches-nemotron-3-5-bolt-e4b-edge/">
+    <span class="pic"><img src="/blog/img/nvidia-launches-nemotron-3-5-bolt-e4b-edge/hero-640.webp" srcset="/blog/img/nvidia-launches-nemotron-3-5-bolt-e4b-edge/hero-640.webp 640w, /blog/img/nvidia-launches-nemotron-3-5-bolt-e4b-edge/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="An engineering workbench with a compact robot and an edge computing system." loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-10-25T00:47:19.642Z" data-rel>Oct 25, 2026</time></span>
+      <h3>NVIDIA Launches Nemotron-3.5-Bolt-E4B for Edge Robotics and Gaming</h3>
+      <span class="dek">The compact 4-gigabyte model brings conversational reasoning, multi-turn tool use, and 64K context windows directly to local PCs, robotics, and edge hardware.</span>
+      
+    </span>
+  </a>
+</article>
+<article class="story row">
+  <a class="story-link" href="/blog/google-introduces-agent-compute-engine-microvms/">
+    <span class="pic"><img src="/blog/img/google-introduces-agent-compute-engine-microvms/hero-640.webp" srcset="/blog/img/google-introduces-agent-compute-engine-microvms/hero-640.webp 640w, /blog/img/google-introduces-agent-compute-engine-microvms/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="A modern data center interior with illuminated server racks representing virtual machine isolation" loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-10-24T03:05:59.234Z" data-rel>Oct 24, 2026</time></span>
+      <h3>Google Introduces Agent Compute Engine with MicroVM Sandboxes</h3>
+      <span class="dek">Announced at AGNTCon + MCPCon, the service pairs microVM sandboxes with fast suspend-and-resume mechanisms to lower agent infrastructure overhead.</span>
+      
+    </span>
+  </a>
+</article></div>
+  </section>
+  <nav class="prevnext wrap" aria-label="More stories">
+    <span></span>
+    <a class="next" href="/blog/amazon-rainforest-carbon-emissions-study/"><span>Older</span>Amazon Carbon Emissions Average Net 1.17 Billion Tons Annually</a>
+  </nav>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="biz">
+      <p class="biz-name">RKJDEV Labs</p>
+      <p>© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan</p>
+      <p>Udyam registered MSME, India, <span class="nowrap">UDYAM-BR-26-0254766</span></p>
+      <p><a href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a></p>
+    </div>
+    <nav aria-label="Site">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/blog/feed.xml">RSS</a>
+    </nav>
+    <p class="fine">Stories are researched from the linked sources, written with AI assistance and checked claim by claim against those sources before publishing. AI-generated illustrations are labeled.</p>
+  </div>
+</footer>
+<script src="/blog/blog.js?v=45c7aef4" defer></script>
+</body>
+</html>
