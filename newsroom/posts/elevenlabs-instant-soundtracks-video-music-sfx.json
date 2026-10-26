@@ -1,0 +1,135 @@
+{
+ "slug": "elevenlabs-instant-soundtracks-video-music-sfx",
+ "title": "ElevenLabs Instant Soundtracks Adds Video-Matched AI Music and SFX",
+ "seoTitle": "ElevenLabs Instant Soundtracks: Video Music & SFX",
+ "description": "ElevenLabs has launched Instant Soundtracks, generating synchronized original music and layered sound effects from uploaded video footage and scratch audio.",
+ "dek": "The new tool scores uploaded video footage and aligns sound effects to visual cues in a single generation pass, outputting editable layers and API stems.",
+ "category": "Audio & Video",
+ "tags": [
+  "ElevenLabs",
+  "Instant Soundtracks",
+  "AI Audio",
+  "Video Production",
+  "Sound Effects"
+ ],
+ "keyTakeaways": [
+  "ElevenLabs launched Instant Soundtracks to compose original music and place synchronized sound effects on uploaded video footage in a single pass.",
+  "The model analyzes visual cues, supports dynamic mood transitions across scene cuts, and can use existing video audio as a reference for tempo, instrumentation, and genre.",
+  "Sound effects and music output on separate editable timeline layers in ElevenCreative, and can be exported as split tracks in a ZIP file via the API.",
+  "Requests via the Studio API support batches of up to 10 videos, capped at a combined 200 MB and 10 minutes of footage."
+ ],
+ "body": "ElevenLabs launched Instant Soundtracks on October 15, 2026, introducing an automated audio system that writes original musical scores and aligns synchronized sound effects to video footage in a single generation pass. While South Korean news outlet [Maeil Business](https://www.mk.co.kr/en/culture/12185588) reported the launch on October 26, 2026, official product documentation and early technical reviews date the initial release to mid-October.\n\nThe feature operates inside ElevenCreative, the company's creative hub, as well as ElevenMusic, Creative Engine, and the ElevenCreative Studio API. The tool is designed to reduce the work creators do to produce and place background music and sound effects separately for ads and short-form content.\n\n## How ElevenLabs Instant Soundtracks Generates Coordinated Audio\n\nWhen a user uploads footage to the ElevenCreative platform, the underlying model reviews the video track for timing cues such as camera cuts, transitions, and on-screen movements. According to technical reporting from [Superpower Daily](https://superpowerdaily.com/posts/elevenlabs-adds-video-matched-music-and-sound-effects-with-editable-tracks), the model spots moments calling for audio punctuation and positions matching effects at specific timestamps. A practical example highlighted by ElevenLabs includes placing a whoosh effect precisely as an advertiser's brand logo appears at the conclusion of a commercial clip.\n\nThe system is tuned for the pacing of short-form video content, tracking fast visual actions while shifting musical mood across scenes. ElevenLabs states that the background score can transition between genres to mirror narrative shifts, such as playing electronic dance music (EDM) or rhythm and blues (R&B) during rapid sequences before transitioning to acoustic guitar when the framing slows down for an intimate scene.\n\n[[FIG1]]\n\nTo prevent creators from having to prompt scores entirely from scratch, the system includes an audio-as-reference capability. If an uploaded video already contains a scratch track, rough mix, or temporary audio bed, the model analyzes the file's instrumentation, beats per minute (BPM), crescendos, and genre conventions. It then synthesizes a clean, original score that retains the acoustic profile and character of the reference material.\n\n## Multi-Track Editing and Studio API Controls\n\nA critical distinction between Instant Soundtracks and conventional generative audio tools is its delivery format. Instead of rendering a single flattened, unalterable audio file, the tool places generated elements onto discrete tracks within the ElevenCreative Music Video Editor. Sound effects populate their own layer separate from the musical score.\n\nThis separation enables editors to refine individual assets directly on the timeline, as detailed by [ArtRealmAI](https://artrealmai.com/article/elevenlabs-instant-soundtracks-video-music-sfx). Creators can slide sound effect hits to compensate for slight timing variations, delete misplaced accents, add complementary effects, or swap the background musical bed entirely without forcing a full regeneration cycle of the accompanying sound effects.\n\n[[FIG2]]\n\nFor programmatic generation, the capabilities are mirrored across the ElevenCreative Studio API (also referred to as the Video to Music API). Developers can pass specific parameters to control the output format:\n\n* `add_sfx`: A boolean flag enabling the automatic generation and timestamping of visual-aligned sound effects.\n* `separate_tracks`: When set to true, the API packages the response into a downloadable ZIP archive containing the music and sound effects as distinct audio files, enabling direct ingestion into external editing suites or downstream mixing pipelines.\n* `use_audio_as_reference`: Instructs the engine to derive tempo, instrumentation, and genre guidance from the video's embedded audio track.\n\nElevenLabs imposes specific constraints on API-driven processing. Every request supports up to 10 videos, with a combined cap of 200 megabytes (MB) and a maximum total duration of 10 minutes per submission batch. All three limits apply simultaneously.\n\n## Production Workflows and Market Positioning\n\nArtRealmAI described the products as complementary rather than direct competition ('sits next to, not on top of' and 'different vendor, different job'). As noted by [ArtRealmAI](https://artrealmai.com/article/elevenlabs-instant-soundtracks-video-music-sfx), tools such as Mirelo SFX 2.0 focus on dialogue isolation while replacing unwanted background audio with synchronized ambient noise and effects. ElevenLabs approaches the problem from the opposite direction by composing complete original scores alongside sound effects in one centralized pass.\n\nCreative Engine provides access to Instant Soundtracks for adding music and sound effects to advertisements. Additionally, [Maeil Business](https://www.mk.co.kr/en/culture/12185588) noted that ElevenLabs intends to expand its ecosystem by offering high-quality voice direction controls across multiple services in upcoming releases.",
+ "faq": [
+  {
+   "q": "What is ElevenLabs Instant Soundtracks?",
+   "a": "Instant Soundtracks is a feature from ElevenLabs that analyzes uploaded video footage to automatically compose an original musical score and place synchronized sound effects onto timeline cues in a single pass."
+  },
+  {
+   "q": "Can generated music and sound effects be edited separately?",
+   "a": "Yes. In the ElevenCreative Music Video Editor, sound effects appear on separate layers from the music track. Additionally, setting the separate_tracks parameter to true in the API exports a ZIP file containing the music and sound effect stems as individual files."
+  },
+  {
+   "q": "What are the API file size and duration limits?",
+   "a": "The ElevenLabs Video to Music API supports up to 10 videos per request, with a combined maximum file size of 200 MB and a combined total duration of 10 minutes."
+  },
+  {
+   "q": "How does the audio-as-reference feature work?",
+   "a": "When a video with existing audio is uploaded, the model can analyze the scratch track's genre, tempo (BPM), crescendos, and instrumentation to compose a new original score that matches the character of the reference audio."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern video editing studio workstation showing dual ultrawide displays illuminated by soft studio lights. The monitor screen shows a digital video editing timeline with distinct visual video blocks, split musical audio wave tracks in blue, and punctual sound effect event spikes highlighted in orange, with studio headphones resting on the desk.",
+  "alt": "Digital video workstation displaying multi-track audio and sound effect waveforms matched to video frames.",
+  "caption": "Illustration: An editing studio environment visualizing synchronized soundtrack composition and layered sound effects.",
+  "src": "img/elevenlabs-instant-soundtracks-video-music-sfx/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 47734,
+  "small": "img/elevenlabs-instant-soundtracks-video-music-sfx/hero-640.webp",
+  "og": "img/elevenlabs-instant-soundtracks-video-music-sfx/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/elevenlabs-instant-soundtracks-video-music-sfx/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An artistic split visual of an advertising cut showing dynamic transitions, camera motion, and a sleek modern logo reveal, surrounded by stylized glowing audio waveforms and cue markers indicating sound sync points.",
+   "alt": "Graphic depicting video frames aligned with audio cue points and waveform markers.",
+   "caption": "Illustration: Automated cue detection aligning sound effects and scene-specific musical changes to on-screen video actions.",
+   "slot": "FIG1",
+   "src": "img/elevenlabs-instant-soundtracks-video-music-sfx/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 34780,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A sound engineer working at a clean mixing console in a recording studio, reviewing audio stem exports with separate track channels shown on digital displays.",
+   "alt": "Sound designer organizing separate audio stem tracks and mixing channel controls.",
+   "caption": "Illustration: Multi-track stems and API-driven audio layers allow editors to manipulate individual sound effects independently of the background music.",
+   "slot": "FIG2",
+   "src": "img/elevenlabs-instant-soundtracks-video-music-sfx/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 53038,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://elevenlabs.io/blog/introducing-instant-soundtracks",
+   "title": "Introducing Instant Soundtracks",
+   "site": "ElevenLabs",
+   "published": 1792065600000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://www.mk.co.kr/en/culture/12185588",
+   "title": "ElevenLabs launches AI that creates music and sound effects to match videos",
+   "site": "매일경제",
+   "published": 1792981689000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://superpowerdaily.com/posts/elevenlabs-adds-video-matched-music-and-sound-effects-with-editable-tracks",
+   "title": "ElevenLabs adds video-matched music and sound effects with editable tracks",
+   "site": "superpowerdaily.com",
+   "published": 1792199389393,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://artrealmai.com/article/elevenlabs-instant-soundtracks-video-music-sfx",
+   "title": "ElevenLabs Instant Soundtracks Scores Any Video",
+   "site": "ArtRealmAI",
+   "published": 1792106131000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792987799080,
+ "updatedAt": 1792987799080,
+ "foundVia": "Google News",
+ "check": {
+  "claims": 14,
+  "score": 10
+ },
+ "story": {
+  "id": "Pf993e290",
+  "score": 78,
+  "items": [
+   "https://news.google.com/rss/articles/CBMiUkFVX3lxTE50UkJMYlVzZnhTNHgzQ1RwenNGZjZMMnhDNFA5SGNhSlU4Q3VrenBLN3JlQnVacnJMekZGdXpBbTZoQUpCQzB6YkQ5MkQ3X1NKZ1E?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
