@@ -1,0 +1,152 @@
+{
+ "slug": "first-ai-designed-phage-treatment-patient",
+ "title": "Radical Numerics Administers First AI-Designed Phages to Human Patient",
+ "seoTitle": "First AI-Designed Phages Given to Human Patient",
+ "description": "Radical Numerics has administered an AI-designed bacteriophage cocktail to a patient under FDA compassionate use, targeting an antibiotic-resistant infection.",
+ "dek": "A biotechnology startup deployed its Omnii-1 genome model to engineer virus tail fibers targeting an antibiotic-resistant bacterial infection.",
+ "category": "Science",
+ "tags": [
+  "Bacteriophages",
+  "Generative AI",
+  "Antibiotic Resistance",
+  "Omnii-1",
+  "Biotechnology"
+ ],
+ "keyTakeaways": [
+  "Radical Numerics administered an AI-designed bacteriophage cocktail to a human patient under an FDA compassionate-use protocol.",
+  "The company utilized its Omnii-1 genome language model to redesign receptor-binding tail fibers of the T7 bacteriophage.",
+  "Laboratory benchmarks showed 69.9% recovery for designs with 11 to 15 amino acid mutations, compared with 4.8% for random controls.",
+  "Clinical treatment outcomes, patient identity, and specific hospital details remain undisclosed pending patient consent."
+ ],
+ "body": "In what marks the first reported clinical administration of an artificial intelligence-designed virus, San Francisco biotechnology startup Radical Numerics announced that a bacteriophage cocktail developed with its proprietary AI model has been given to a human patient. The treatment, authorized under a U.S. Food and Drug Administration compassionate-use protocol, targets a severe antibiotic-resistant bacterial infection.\n\nAccording to an announcement published by [Radical Numerics](https://www.radicalnumerics.ai/blog/omnii-phage) on October 20, 2026, the company deployed its multimodal genome language model, Omnii-1, to design functional bacteriophages tailored to the patient's specific bacterial isolate. Bacteriophages, or phages, are viruses that naturally infect and kill bacteria without harming human cells.\n\n[[FIG1]]\n\n## Targeting Antibiotic-Resistant Pathogens\n\nBacterial antimicrobial resistance presents an escalating global health challenge. In 2021, drug-resistant bacterial infections were associated with an estimated 4.7 million deaths worldwide, and projections indicate nearly 40 million deaths could occur between 2025 and 2050, according to data cited by [Radical Numerics](https://www.radicalnumerics.ai/blog/omnii-phage).\n\nWhile phage therapy has been studied for more than a century, identifying natural phages that target a specific patient's bacterial strain typically requires screening large physical phage libraries or environmental samples. As reported by [The Elec](https://www.thelec.net/news/articleView.html?idxno=14896), identifying matching phages and preparing them for clinical administration can take weeks to months under traditional empirical workflows. For patients experiencing life-threatening, multidrug-resistant infections, these extended delays leave few viable options.\n\nNaturally occurring lytic phages replicate inside susceptible bacteria, eventually bursting the host cell to destroy the pathogen and release new viral particles without establishing dormancy. Unlike broad-spectrum antibiotics, phages operate with narrow host specificity, preserving beneficial microflora such as gut bacteria. However, this specificity means treatments must closely match the molecular receptors on the bacterial surface, including lipopolysaccharides, outer membrane proteins, capsules, and pili.\n\nTo bypass the delays of empirical screening, Radical Numerics engineered variants of the well-characterized *Escherichia coli* bacteriophage T7, which possesses a genome of approximately 40 kilobases. The engineering focused specifically on gp17, T7's receptor-binding tail fiber protein responsible for recognizing receptors on bacterial cell walls, as detailed by [Radical Numerics](https://www.radicalnumerics.ai/blog/omnii-phage).\n\n[[FIG2]]\n\n## How Omnii-1 Engineered Viable Viruses\n\nOmnii-1 was pretrained on diverse genomic sequences and multiomics data before being trained on phage genomes and experimental phage-host interaction datasets. Unlike models that generate short, uncontextualized fragments, Omnii-1 generates synthetic DNA sequences while considering the surrounding genomic context on both sides of a targeted design region.\n\nIn laboratory validation tests published by [Radical Numerics](https://www.radicalnumerics.ai/blog/omnii-phage), the company measured the viability and activity of Omnii-1 designs after introducing assembled genomes into host cells—a process termed rebooting. At 11 to 15 amino acid alterations away from the wild-type protein sequence, 69.9% of AI-designed variants were successfully recovered as viable phages, compared to just 4.8% for random mutation controls. Viable variants were recovered across mutational spans extending up to 30 amino acid modifications.\n\nWhen evaluating host infection efficacy across 6,694 variants with measurable activity, 2,161 designs exceeded wild-type performance, including designs carrying up to 28 amino acid mutations. In contrast, random controls that exceeded wild-type activity exhibited no more than five mutations. In ranking tests across three bacterial strains, Omnii-1's top-ranked candidates enriched high-activity variants fivefold compared to the unselected baseline in difficult-to-target strains.\n\nAs reported by [Chosun](https://www.chosun.com/english/industry-en/2026/10/21/B5VZNYNCGVGOTGDPW26MVNQKCU/), the company synthesized the AI-generated genetic blueprints, verified in laboratory assays that the modified phages eliminated the patient's resistant bacterial isolate, and completed safety evaluations before handing the treatment over to clinical personnel. Radical Numerics indicated that this computational workflow can shorten the phage design phase to a timeframe spanning days to weeks.\n\n[[FIG3]]\n\n## Clinical Limitations and Unanswered Questions\n\nDespite the technical milestone, significant questions remain regarding the clinical efficacy of the treatment. Radical Numerics did not disclose the patient's identity, the treating medical institution, or whether the infection was successfully eliminated.\n\nAs reported by [Mashable](https://mashable.com/tech/ai-designed-virus-infects-person-for-the-first-time), Radical Numerics Chief Executive Eric Nguyen stated that the startup cannot disclose detailed medical outcomes due to confidentiality agreements, though the team plans to share further information once patient consent is granted. The technical report posted on the company's website has not undergone formal academic peer review or publication in a scientific journal, though the company plans future journal submission.\n\nEvaluating the outcome of phage therapy typically requires monitoring a patient for weeks or months following treatment to verify whether the bacterial infection has been cleared and does not recur, according to [Mashable](https://mashable.com/tech/ai-designed-virus-infects-person-for-the-first-time). Furthermore, as noted by [The Elec](https://www.thelec.net/news/articleView.html?idxno=14896), overall drug development programs typically require around 10 years and exceed $2 billion, with only 10% to 12% of drugs entering Phase 1 trials gaining regulatory approval. While the administration demonstrates that generative AI can produce biologically active viral agents delivered to humans under compassionate use, confirming therapeutic efficacy will depend on published clinical data from this and future cases.",
+ "faq": [
+  {
+   "q": "What is a bacteriophage?",
+   "a": "A bacteriophage is a virus that infects and replicates within specific bacteria, causing the bacterial cell to burst and die. They do not infect human cells and are considered safe for therapeutic investigation."
+  },
+  {
+   "q": "What specific part of the virus did Omnii-1 design?",
+   "a": "Omnii-1 engineered gp17, the receptor-binding tail fiber protein of the T7 bacteriophage, which determines which bacterial surface receptors the phage can bind to."
+  },
+  {
+   "q": "Did the AI-designed phage cure the patient's infection?",
+   "a": "The clinical outcome has not been disclosed. Radical Numerics cited confidentiality rules, while Mashable reported that doctors must monitor patients over months to determine therapeutic success."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A 3D scientific rendering of a geometric bacteriophage virus landing on the textured outer membrane of an Escherichia coli bacterium, deploying tail fibers to attach to surface receptors.",
+  "alt": "Scientific illustration of a bacteriophage virus attaching to the cell wall of a bacterium.",
+  "caption": "Illustration: A bacteriophage docking onto a bacterial cell surface using its tail fiber structures.",
+  "src": "img/first-ai-designed-phage-treatment-patient/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 61048,
+  "small": "img/first-ai-designed-phage-treatment-patient/hero-640.webp",
+  "og": "img/first-ai-designed-phage-treatment-patient/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/first-ai-designed-phage-treatment-patient/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A high-magnification scientific visualization of bacterial cells showing outer membrane surface proteins and receptors under cellular stress from antibiotic exposure.",
+   "alt": "Scientific illustration of bacterial cell surfaces and cellular structures.",
+   "caption": "Illustration: Bacterial cell surfaces, where surface receptors serve as binding targets for bacteriophages.",
+   "slot": "FIG1",
+   "src": "img/first-ai-designed-phage-treatment-patient/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 38240,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A scientific visualization of a double-helix DNA strand with highlighted genetic sequence modifications within a viral genome structure.",
+   "alt": "Scientific illustration of a DNA double helix highlighting sequence changes in a viral genome.",
+   "caption": "Illustration: Synthetic alterations in viral DNA sequences designed to modify receptor-binding tail fiber proteins.",
+   "slot": "FIG2",
+   "src": "img/first-ai-designed-phage-treatment-patient/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 42676,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "A high-resolution scientific visualization of a viral capsid structure showing symmetric protein arrangements and molecular assembly pathways.",
+   "alt": "Scientific illustration of a viral capsid and protein assembly structure.",
+   "caption": "Illustration: Molecular assembly of bacteriophage capsid and tail machinery.",
+   "slot": "FIG3",
+   "src": "img/first-ai-designed-phage-treatment-patient/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 44122,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://www.radicalnumerics.ai/blog/omnii-phage",
+   "title": "Radical Numerics creates first AI-generated phages to reach human patient with Omnii-1 — Radical Numerics",
+   "site": "Radical Numerics",
+   "published": 1792454400000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://mashable.com/tech/ai-designed-virus-infects-person-for-the-first-time",
+   "title": "AI-designed virus infects person for the first time",
+   "site": "Mashable",
+   "published": 1792771996000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://www.thelec.net/news/articleView.html?idxno=14896",
+   "title": "AI-Designed Virus Administered to Human Patient for First Time",
+   "site": "The Elec Inc.",
+   "published": 1792969905000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://humanprogress.org/ai-designed-virus-used-to-treat-a-patients-infection/",
+   "title": "AI-Designed Viruses Used to Treat a Patient’s Infection",
+   "site": "Human Progress",
+   "published": 1792783245000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://www.chosun.com/english/industry-en/2026/10/21/B5VZNYNCGVGOTGDPW26MVNQKCU/",
+   "title": "Radical NewMetrics' AI Virus Targets Antibiotic-Resistant Bacteria",
+   "site": "chosun.com",
+   "published": 1792564733521,
+   "official": false
+  }
+ ],
+ "publishedAt": 1792982552838,
+ "updatedAt": 1792982552838,
+ "foundVia": "Reddit",
+ "check": {
+  "claims": 30,
+  "score": 10
+ },
+ "story": {
+  "id": "P5c7594c8",
+  "score": 75,
+  "items": [
+   "https://www.nytimes.com/2026/10/20/science/ai-virus-bacteria-radical-numerics.html"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
