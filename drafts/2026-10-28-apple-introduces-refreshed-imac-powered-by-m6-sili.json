@@ -1,5 +1,5 @@
 {
- "reason": "fact-check failed: Apple Intelligence processes data without sending raw personal data to remote servers, utilizing Private Cloud Compute only when larger cloud models are required. | When compared to the final Intel-based iMac, overall system speeds are rated up to 18x higher.",
+ "reason": "fact-check failed: Local processing extends to third-party tools such as Claude.",
  "story": {
   "id": "P68eab9f1",
   "headline": "Apple Introduces Refreshed iMac Powered by M6 Silicon and Dual 16-Core Neural Engine",
@@ -21,76 +21,74 @@
    "https://news.google.com/rss/articles/CBMinwFBVV95cUxPckthb2RtSjkxZFhackRobWpsdV8wLTJGYWQxZzBQZHpPSnFKc3FGb2lGVThqNDFSb1BMRUZlbm43TXBsNzM1dFk4SkxBQzNfZVZCN2NBR1Q4QktlNUJyMUQ5LXA5Qy0wakJyTkVRRTFRVU5nTjB2LXZKYWh5SGxoeVI3bFNyUC1LZFk0Y3dWbElHOG1TN0pwSjRlRHg3cE0?oc=5",
    "https://www.apple.com/newsroom/2026/10/apple-unveils-new-imac-with-m6/"
   ],
-  "attempts": 1,
+  "attempts": 2,
   "importance": 78,
   "summary": "Apple officially announced the new 24-inch iMac powered by the M6 processor featuring core-integrated Neural Accelerators. The updated machine delivers up to 5x faster on-device AI performance compared to previous generations.",
   "category": "Chips & Hardware",
   "lastSeen": 1793138584657,
   "update": false,
   "updateOf": "",
-  "score": 91
+  "score": 91,
+  "retryAfter": 1793154102121
  },
  "draft": {
   "newsworthy": true,
-  "title": "Apple Unveils 24-Inch M6 iMac With Dual 16-Core Neural Engine",
-  "seoTitle": "Apple Announces 24-Inch M6 iMac With AI Upgrades",
-  "slug": "apple-announces-m6-imac-dual-neural-engine",
-  "description": "Apple announced a refreshed 24-inch M6 iMac featuring a dual 16-core Neural Engine, Wi-Fi 7 connectivity, and up to 5x faster on-device AI performance.",
-  "dek": "The updated all-in-one desktop brings Apple's M6 processor, dedicated GPU Neural Accelerators, and PCIe 5.0 storage speeds.",
+  "title": "Apple Unveils iMac with M6 Chip and Dual 16-Core Neural Engine",
+  "seoTitle": "Apple Unveils iMac with M6 Chip and AI Upgrades",
+  "slug": "apple-unveils-imac-with-m6-chip",
+  "description": "Apple announced the refreshed 24-inch iMac with M6 silicon, featuring a dual 16-core Neural Engine, Wi-Fi 7 connectivity, and what Apple claims is up to 5x faster on-device AI performance compared to the M4 model.",
+  "dek": "The updated 24-inch all-in-one desktop introduces Apple's M6 processor with core-level Neural Accelerators, a dual Neural Engine, and an N1 wireless chip.",
   "category": "Chips & Hardware",
   "tags": [
    "Apple",
-   "M6 iMac",
+   "iMac",
    "Apple Silicon",
-   "Apple Intelligence",
-   "Mac"
+   "M6",
+   "Artificial Intelligence",
+   "Hardware"
   ],
   "keyTakeaways": [
-   "Apple refreshed the 24-inch iMac with the M6 processor, introducing a dual 16-core Neural Engine and on-core GPU Neural Accelerators.",
-   "According to Apple, on-device AI performance sees up to a 5x increase for local prompt processing over the previous M4 generation, with early Geekbench estimates pointing to around 40 percent faster CPU speeds.",
-   "Internal connectivity is upgraded with the Apple N1 wireless chip delivering Wi-Fi 7 and Bluetooth 6, alongside optional 2.5Gb Ethernet.",
-   "Pre-orders open October 28, 2026, with retail availability beginning November 6, 2026, starting at an unchanged $1,499 base price."
+   "Apple refreshed the 24-inch iMac with M6 silicon featuring up to a 12-core CPU, a 12-core GPU, and a dual 16-core Neural Engine.",
+   "According to Apple, on-device AI performance is up to 5x faster than the previous M4 model, with ray tracing and SSD transfer speeds doubling.",
+   "The desktop incorporates an Apple-designed N1 wireless chip for Wi-Fi 7 and Bluetooth 6, alongside standard or optional 2.5Gb Ethernet.",
+   "Pricing begins at $1,499 for the 10-core configuration, with pre-orders beginning October 28, 2026, and retail availability starting November 6, 2026."
   ],
-  "body": "On October 27, 2026, Apple announced an upgraded 24-inch M6 iMac, outfitting the desktop system with its latest silicon architecture and a dual 16-core Neural Engine. The hardware update retains the signature slim profile and seven-color palette of prior models while overhauling the machine's processing core to deliver up to five times faster on-device artificial intelligence performance compared to the preceding M4 model, according to [Apple's official product specifications](https://www.apple.com/imac/).\n\nThe introduction of the M6 chip brings dedicated Neural Accelerators inside each GPU core, higher memory bandwidth, and an expanded core count to Apple's all-in-one line. The computer arrives alongside an updated 14-inch MacBook Pro as part of Apple's late-October product releases.\n\n[[FIG1]]\n\n## Architecture Upgrades: Dual Neural Engines and GPU Acceleration\n\nThe centerpiece of the new desktop is the M6 system-on-chip, which Apple first deployed in the Mac mini in August 2026, as reported by [MacRumors](https://www.macrumors.com/2026/10/27/apple-announces-new-imac-with-m6-chip-and-more/). Unlike previous generations that relied on a single neural processing array, the M6 integrates the first dual Neural Engine in the desktop line, featuring two 16-core engines.\n\nApple has also redesigned the graphics pipeline by embedding Neural Accelerators directly into each GPU core. Unified memory bandwidth expands to 170GB/s, up from 120GB/s in the M4 iteration. The base M6 silicon configuration supplies a 10-core CPU alongside a 10-core GPU, while an upgraded tier provides a 12-core CPU and 12-core GPU.\n\nRunning macOS 27, the M6 iMac leverages this architecture for local processing within Apple Intelligence and Siri AI, as outlined by [Engadget](https://www.engadget.com/2298132/apples-imac-with-m6-arrives-promising-a-huge-leap-in-AI-performance/). The expanded neural hardware powers system-level capabilities such as Spotlight question synthesis, photo indexing, and contextual email retrieval without sending raw personal data to remote servers, utilizing Private Cloud Compute only when larger cloud models are required. Apple's official footnotes state that Siri AI is currently unavailable in the EU on iOS, iPadOS, and watchOS, while Engadget notes that Apple Intelligence is not yet available in Europe.\n\n[[FIG2]]\n\n## Display, Connectivity, and Hardware Specifications\n\nExternally, the desktop maintains the physical chassis established in earlier iterations, centered around a 24-inch 4.5K Retina display offering 500 nits of brightness and P3 wide color coverage, detailed on [Apple's iMac page](https://www.apple.com/imac/). Buyers can also select an optional nano-texture glass coating to mitigate reflections under harsh lighting conditions. A 12-megapixel Center Stage camera with Desk View support remains embedded in the top bezel, paired with a studio-quality directional three-microphone array and a six-speaker sound system capable of Spatial Audio playback.\n\nWireless and wired connectivity receive significant technical revisions via the Apple-designed N1 chip, as reported by [9to5Mac](https://9to5mac.com/2026/10/27/apple-launches-new-imac-with-powerful-m6-chip/). The N1 adds Wi-Fi 7 and Bluetooth 6 support, replacing the Wi-Fi 6E and Bluetooth 5.3 standards found on the prior generation. Wired network transfers are accelerated through an available 2.5 Gigabit Ethernet port integrated into the power adapter, providing up to 2.5 times the throughput of the older Gigabit standard. Storage throughput is also up to twice as fast compared to the previous model due to PCIe 5.0 integration across internal solid-state drives.\n\nBase models come equipped with two Thunderbolt 4 ports, while the 12-core configuration features four Thunderbolt 4 ports. Both configurations support driving up to two external 6K displays.\n\n## Performance Benchmarks Across AI and Productivity\n\nApple reports noticeable performance differentials when comparing the M6 iMac against legacy platforms. In local AI workloads, the company cites up to a 5x increase in token prompt processing speeds within tools like LM Studio compared to the M4 iMac, and up to 12x the speed of the original M1 model, according to [Engadget](https://www.engadget.com/2298132/apples-imac-with-m6-arrives-promising-a-huge-leap-in-AI-performance/).\n\nGeneral compute benchmarks show equivalent gains. Based on early Geekbench results from the M6 Mac mini, CPU tasks are estimated to be up to around 40 percent faster than the M4 baseline, while Apple says graphics workflows see up to a 2x boost. In common productivity software, Apple states the system handles spreadsheets in Microsoft Excel up to 50 percent faster than the M4 desktop. When compared to the final Intel-based iMac, overall system speeds are rated up to 18x higher.\n\n## Pricing, Configurations, and Availability\n\nThe 24-inch M6 iMac is scheduled to open for pre-orders on Wednesday, October 28, 2026, at 10:10 a.m. Pacific Time, with official retail shipments commencing Friday, November 6, 2026, according to [MacRumors](https://www.macrumors.com/2026/10/27/apple-announces-new-imac-with-m6-chip-and-more/).\n\nThe base configuration starts at $1,499, matching the price established earlier in the year. This baseline provides an M6 chip with a 10-core CPU, 10-core GPU, the dual 16-core Neural Engine, 16GB of unified memory, 256GB of PCIe 5.0 storage, and two Thunderbolt 4 ports. The 2.5Gb Ethernet adapter is available on this model as a $30 upgrade. The $1,699 higher-tier configuration includes the 12-core CPU, 12-core GPU, 16GB of unified memory, four Thunderbolt 4 ports, and the 2.5Gb Ethernet power adapter standard. Factory configurations scale up to 32GB of unified memory and 2TB of internal storage.\n\nEach system includes a color-matched Magic Keyboard with Touch ID, Magic Mouse, power cord, 143W power adapter, and USB-C cable, available in green, yellow, orange, pink, purple, blue, and silver finishes.",
+  "body": "On October 27, 2026, Apple announced an upgraded version of its all-in-one desktop computer, introducing the [iMac with M6](https://www.apple.com/imac/) silicon. The refreshed machine integrates hardware specifically tuned for local machine learning, combining dedicated Neural Accelerators inside each graphics core with a dual 16-core Neural Engine, which was first introduced on desktop in the Mac mini in August. Apple states that the architecture delivers up to 5x faster on-device artificial intelligence performance compared to the previous M4 generation, expanding local model processing for home, school, and creative desktop environments.\n\nThe hardware announcement arrived as part of Apple's staggered rollout of M6-generation systems, following the initial introduction of the silicon in the Mac mini and preceding the wider launch of updated pro systems, as reported by [MacRumors](https://www.macrumors.com/2026/10/27/apple-announces-new-imac-with-m6-chip-and-more/). While the external industrial design of the 24-inch chassis remains consistent with the previous version, the internal hardware transition modernizes computing throughput, internal storage bus speeds, and wireless communication standards.\n\n## M6 Silicon and the Dual Neural Engine\n\nThe central architectural shift in the updated iMac is Apple's M6 processor. The silicon is offered in two tiers: a base configuration with a 10-core CPU and a 10-core GPU, and an upgraded configuration pairing a 12-core CPU with a 12-core GPU. Based on Mac mini Geekbench results reported by MacRumors, the M6 is estimated to deliver up to around 40 percent faster CPU performance than the previous iMac with M4, while [Engadget](https://www.engadget.com/2298132/apples-imac-with-m6-arrives-promising-a-huge-leap-in-ai-performance/) reported Apple claiming up to 50 percent faster performance in Excel, and up to 2.5x faster in general productivity tasks than the M1 model.\n\nFor graphics and neural computing, the M6 GPU incorporates hardware-level Neural Accelerators within each core. Apple paired this GPU architecture with a dual Neural Engine containing two 16-core blocks, doubling the engine hardware present in earlier iterations. Unified memory bandwidth has expanded to 170GB/s, up from the 120GB/s ceiling on M4 configurations. Base models include 16GB of unified memory, with factory upgrade options for 24GB and 32GB.\n\nApple states that these architectural adjustments yield up to 2x faster graphics processing and up to double the gaming performance for hardware-accelerated ray tracing compared to the M4 iMac. In local artificial intelligence workflows—such as large language model prompt evaluation in applications like LM Studio—Apple reports gains reaching up to 5x faster performance compared to M4, and up to 12x faster performance when measured against the M1 iMac.\n\n[[FIG1]]\n\n## Display, Design, and Hardware Specifications\n\nThe external enclosure of the iMac retains the thin design of the previous model and the selection of seven colors: blue, green, pink, yellow, purple, orange, and silver. Visuals are driven by the familiar 24-inch 4.5K Retina display, which outputs 500 nits of brightness with support for the P3 wide color gamut. For spaces with challenging reflections, Apple also provides a nano-texture glass configuration, as detailed on the [official iMac specifications](https://www.apple.com/imac/).\n\nInternal storage speeds have improved through the integration of PCIe 5.0 architecture. Apple claims the updated bus allows the new internal SSDs to reach read and write speeds up to twice as fast as the solid-state drives used in the M4 models. Factory storage capacities start at 256GB on the entry-level machine and scale up to 2TB.\n\nAudio and video hardware remain focused on remote communication. The iMac features a 12-megapixel Center Stage camera that supports Desk View, designed to keep users centered during video conferences or present an overhead view of a physical desk. Audio capture is handled by a studio-quality three-microphone array featuring directional beamforming, while output is routed through a six-speaker sound system with force-cancelling woofers, tweeters, and Spatial Audio support for Dolby Atmos.\n\n## N1 Wireless Chip and Expanded Connectivity\n\nConnectivity across the desktop line has also shifted through the deployment of Apple's proprietary N1 wireless chip. As reported by [9to5Mac](https://9to5mac.com/2026/10/27/apple-launches-new-imac-with-powerful-m6-chip/), the N1 introduces Wi-Fi 7 and Bluetooth 6 support to the iMac, upgrading the previous generation's Wi-Fi 6E and Bluetooth 5.3 standards to reduce latency and improve wireless data transfer rates.\n\nPhysical I/O depends on the chosen processor tier. The base 10-core M6 iMac includes two Thunderbolt 4 ports alongside a 3.5mm headphone jack. The higher-tier 12-core model expands rear connectivity to four Thunderbolt 4 ports. Both configurations support up to two external 6K displays simultaneously.\n\n[[FIG2]]\n\nWired networking has also received an optional boost. While previous models relied on Gigabit Ethernet, the power supply for the M6 iMac can be outfitted with a 2.5 Gigabit Ethernet port, delivering up to 2.5x faster wired throughput according to Apple. The 2.5Gb Ethernet connector is standard on the $1,699 tier and available as a $30 build-to-order option on the base model.\n\n## macOS 27 and Local AI Integration\n\nThe iMac ships with macOS 27 Golden Gate, incorporating Apple Intelligence and updated system integrations. Apple highlights that on-device processing powers tools such as intelligent email searches and automated tab organization in Safari, though footnote 4 notes that features such as Siri AI and AFM 3 Cloud models in Shortcuts rely on server-side models rather than purely on-device processing. Local processing also extends to third-party tools such as Pixelmator Pro, Claude, and Affinity.\n\nFor features requiring broader compute power, the operating system routes complex queries through Private Cloud Compute, which Apple notes does not retain personal information or make user data accessible to the company. However, regional availability remains staggered: footnote 4 of the press release for Apple's [14-inch MacBook Pro launch](https://www.apple.com/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/) specifies that Siri AI is currently unavailable in the EU on iOS, iPadOS, and watchOS, without stating it is unavailable on macOS.\n\n## Pricing, Configurations, and Availability\n\nThe base 24-inch iMac with M6 starts at $1,499 in the United States. This configuration features a 10-core CPU, a 10-core GPU, the dual 16-core Neural Engine, 16GB of unified memory, 256GB of SSD storage, and two Thunderbolt 4 ports.\n\nThe upgraded $1,699 configuration includes the 12-core CPU and 12-core GPU variant of the M6 chip, four Thunderbolt 4 ports, 16GB of unified memory, and the integrated 2.5Gb Ethernet adapter. Both tiers include color-matched accessories in the box: a Magic Keyboard with Touch ID, a Magic Mouse, a 143W power adapter, a power cord, and a USB-C charging cable. Orders with the nano-texture glass option also include an Apple polishing cloth.\n\nApple opens pre-orders for the new iMac on Wednesday, October 28, 2026, at 10:10 a.m. Pacific Time through the online Apple Store. In-store retail availability and customer deliveries begin on Friday, November 6, 2026.",
   "faq": [
    {
-    "q": "What is the starting price and release date for the M6 iMac?",
-    "a": "The M6 iMac starts at $1,499 in the United States. Pre-orders open October 28, 2026, at 10:10 a.m. PT, with in-store availability and customer deliveries starting November 6, 2026."
+    "q": "What are the main performance differences between the M6 iMac and the M4 model?",
+    "a": "Based on Geekbench results reported by MacRumors, the M6 iMac should offer up to around 40 percent faster CPU performance, while Apple claims up to 2x faster graphics performance, twice the SSD storage transfer speeds, and up to 5x faster on-device AI performance compared to the iMac with M4."
    },
    {
-    "q": "What architectural changes did Apple make to the M6 chip in the iMac?",
-    "a": "The M6 incorporates a dual 16-core Neural Engine, dedicated Neural Accelerators inside each GPU core, up to 170GB/s unified memory bandwidth, and an expanded maximum layout of 12 CPU cores and 12 GPU cores."
+    "q": "How much does the updated 24-inch iMac with M6 cost?",
+    "a": "Pricing begins at $1,499 for the base model with a 10-core CPU, 10-core GPU, 16GB of RAM, and 256GB of storage. An upgraded tier with a 12-core CPU, 12-core GPU, four Thunderbolt 4 ports, and 2.5Gb Ethernet is priced at $1,699."
    },
    {
-    "q": "How does the M6 iMac compare to the previous M4 model?",
-    "a": "Apple reports that the M6 iMac delivers up to 5x faster on-device AI prompt processing, 2x faster graphics, and up to twice as fast SSD read and write speeds compared to the M4 model, while Geekbench benchmarks indicate up to around 40 percent faster CPU performance."
-   },
-   {
-    "q": "What connectivity upgrades are included on the new iMac?",
-    "a": "Equipped with the Apple N1 chip, the computer supports Wi-Fi 7 and Bluetooth 6. It also offers an optional or standard 2.5 Gigabit Ethernet port integrated into the external power brick."
+    "q": "When is the iMac with M6 available to order?",
+    "a": "Pre-orders begin on Wednesday, October 28, 2026, at 10:10 a.m. Pacific Time, with official availability and shipping scheduled for Friday, November 6, 2026."
    }
   ],
   "hero": {
    "marker": "HERO",
    "type": "ai",
-   "prompt": "An elegant, ultra-slim colorful all-in-one desktop computer standing proudly on a clean wooden creative workspace studio desk, soft cinematic morning light reflecting gently off its thin glass screen, minimal Scandinavian decor in the background.",
-   "alt": "An all-in-one desktop computer positioned on a clean creative workstation studio desk.",
-   "caption": "Illustration: Apple's updated all-in-one desktop design powered by next-generation silicon."
+   "prompt": "A modern studio desk bathed in natural morning light displaying a slim, colorful all-in-one desktop computer with a clean aluminum stand and matching minimalist keyboard, with a creative professional reviewing graphics against an open office backdrop.",
+   "alt": "A slim all-in-one desktop computer standing on a wooden desk in a modern studio",
+   "caption": "Illustration: a compact desktop workstation set up for creative computing tasks"
   },
   "figures": [
    {
     "marker": "FIG1",
     "type": "ai",
-    "prompt": "A modern cleanroom computer engineering lab where a hardware engineer in white protective attire inspects a glowing microscopic semiconductor processor wafer under specialized diagnostic optical lighting.",
-    "alt": "A hardware engineer in cleanroom attire inspecting a high-density silicon processor wafer.",
-    "caption": "Illustration: Semiconductor engineering behind integrated neural accelerators and multi-core processing architecture."
+    "prompt": "An illuminated silicon processor die showing layered micro-architecture pathways, dual integrated computational engine blocks, and glowing circuit interconnects on a dark technological board.",
+    "alt": "Illustration of an advanced silicon processor showing dual computing engines and circuit pathways",
+    "caption": "Illustration: the micro-architecture of an advanced processor featuring dual neural compute blocks"
    },
    {
     "marker": "FIG2",
     "type": "ai",
-    "prompt": "A digital artist seated in an open-concept loft studio working on visual media across an ultra-thin desktop screen connected to secondary displays, warm ambient room lighting and cables neatly managed.",
-    "alt": "A creative professional editing digital media on a high-resolution desktop setup.",
-    "caption": "Illustration: Creative workflows utilizing high-bandwidth graphics and external 6K display support."
+    "prompt": "A technology workstation setup showing an engineer examining data streams on a wide high-resolution desktop screen next to modern high-speed wireless networking hardware in an office.",
+    "alt": "An engineer analyzing system performance on an all-in-one desktop computer in an office",
+    "caption": "Illustration: a desktop system deployed for high-throughput network tasks and data analysis"
    }
   ],
   "sourcesUsed": [
@@ -98,327 +96,178 @@
    2,
    3,
    4,
-   5
+   5,
+   7
   ]
  },
  "check": {
   "claims": [
    {
-    "claim": "Apple unveiled a 24-inch M6 iMac with a dual 16-core Neural Engine.",
+    "claim": "Apple announced an upgraded 24-inch iMac with M6 silicon on October 27, 2026.",
     "status": "supported",
     "source": 3,
     "fix": ""
    },
    {
-    "claim": "The updated all-in-one desktop brings Apple's M6 processor, dedicated GPU Neural Accelerators, and PCIe 5.0 storage speeds.",
+    "claim": "The M6 chip features up to a 12-core CPU, 12-core GPU, and a dual 16-core Neural Engine.",
     "status": "supported",
     "source": 3,
     "fix": ""
    },
    {
-    "claim": "Apple announced a refreshed 24-inch M6 iMac featuring Wi-Fi 7 connectivity and up to 5x faster on-device AI performance.",
+    "claim": "The M6 GPU introduces dedicated Neural Accelerators inside each graphics core for the first time on iMac.",
     "status": "supported",
     "source": 3,
     "fix": ""
    },
    {
-    "claim": "Apple refreshed the 24-inch iMac with the M6 processor, introducing a dual 16-core Neural Engine and on-core GPU Neural Accelerators.",
+    "claim": "The dual 16-core Neural Engine was first introduced on desktop in the Mac mini in August.",
     "status": "supported",
     "source": 3,
     "fix": ""
    },
    {
-    "claim": "According to Apple, on-device AI performance sees up to a 5x increase for local prompt processing over the previous M4 generation.",
+    "claim": "Apple claims on-device AI performance is up to 5x faster than the previous M4 model.",
+    "status": "supported",
+    "source": 3,
+    "fix": ""
+   },
+   {
+    "claim": "Geekbench results reported by MacRumors estimate the M6 delivers up to around 40 percent faster CPU performance than the M4 iMac.",
+    "status": "supported",
+    "source": 3,
+    "fix": ""
+   },
+   {
+    "claim": "Apple claims the M6 iMac is up to 50 percent faster in Excel and up to 2.5x faster in productivity performance than the M1 model.",
     "status": "supported",
     "source": 4,
     "fix": ""
    },
    {
-    "claim": "Early Geekbench estimates point to around 40 percent faster CPU speeds for the M6 compared to the M4 baseline.",
+    "claim": "Unified memory bandwidth expands to 170GB/s, up from 120GB/s on M4 configurations.",
     "status": "supported",
     "source": 3,
     "fix": ""
    },
    {
-    "claim": "Internal connectivity is upgraded with the Apple N1 wireless chip delivering Wi-Fi 7 and Bluetooth 6, alongside optional 2.5Gb Ethernet.",
-    "status": "supported",
-    "source": 5,
-    "fix": ""
-   },
-   {
-    "claim": "Pre-orders open October 28, 2026, with retail availability beginning November 6, 2026, starting at an unchanged $1,499 base price.",
-    "status": "supported",
-    "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "On October 27, 2026, Apple announced an upgraded 24-inch M6 iMac with its latest silicon architecture and a dual 16-core Neural Engine.",
-    "status": "supported",
-    "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "The hardware update retains the slim profile and seven-color palette of prior models.",
-    "status": "supported",
-    "source": 2,
-    "fix": ""
-   },
-   {
-    "claim": "According to Apple's official product specifications, the machine delivers up to five times faster on-device AI performance compared to the preceding M4 model.",
-    "status": "supported",
-    "source": 2,
-    "fix": ""
-   },
-   {
-    "claim": "The introduction of the M6 chip brings dedicated Neural Accelerators inside each GPU core, higher memory bandwidth, and an expanded core count to Apple's all-in-one line.",
-    "status": "supported",
-    "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "The computer arrives alongside an updated 14-inch MacBook Pro as part of Apple's late-October product releases.",
-    "status": "supported",
-    "source": 7,
-    "fix": ""
-   },
-   {
-    "claim": "Apple first deployed the M6 system-on-chip in the Mac mini in August 2026.",
-    "status": "supported",
-    "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "The M6 integrates the first dual Neural Engine in the desktop line, featuring two 16-core engines, whereas previous generations relied on a single neural processing array.",
-    "status": "supported",
-    "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "Apple has redesigned the graphics pipeline by embedding Neural Accelerators directly into each GPU core.",
-    "status": "supported",
-    "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "Unified memory bandwidth expands to 170GB/s, up from 120GB/s in the M4 iteration.",
-    "status": "supported",
-    "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "The base M6 silicon configuration supplies a 10-core CPU alongside a 10-core GPU, while an upgraded tier provides a 12-core CPU and 12-core GPU.",
-    "status": "supported",
-    "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "Running macOS 27, the M6 iMac leverages this architecture for local processing within Apple Intelligence and Siri AI.",
+    "claim": "Base configurations include 16GB of unified memory with upgrade options for 24GB and 32GB.",
     "status": "supported",
     "source": 4,
     "fix": ""
    },
    {
-    "claim": "The expanded neural hardware powers system-level capabilities such as Spotlight question synthesis, photo indexing, and contextual email retrieval.",
+    "claim": "Apple claims up to 2x faster graphics processing and up to double the gaming performance for ray tracing compared to the M4 iMac.",
     "status": "supported",
     "source": 4,
     "fix": ""
    },
    {
-    "claim": "Apple Intelligence processes data without sending raw personal data to remote servers, utilizing Private Cloud Compute only when larger cloud models are required.",
-    "status": "needs_attribution",
-    "source": 2,
-    "fix": "Attribute this privacy claim to Apple (e.g., 'According to Apple, Apple Intelligence processes personal information on-device without collecting it and utilizes Private Cloud Compute only when larger models are required')."
+    "claim": "Apple reports up to 5x faster on-device prompt processing in LM Studio compared to M4, and up to 12x faster than M1.",
+    "status": "supported",
+    "source": 4,
+    "fix": ""
    },
    {
-    "claim": "Apple's official footnotes state that Siri AI is currently unavailable in the EU on iOS, iPadOS, and watchOS.",
+    "claim": "The iMac enclosure retains its previous design and seven color options: blue, green, pink, yellow, purple, orange, and silver.",
+    "status": "supported",
+    "source": 3,
+    "fix": ""
+   },
+   {
+    "claim": "The display is a 24-inch 4.5K Retina display with 500 nits of brightness and P3 wide color support, with an optional nano-texture finish.",
+    "status": "supported",
+    "source": 4,
+    "fix": ""
+   },
+   {
+    "claim": "PCIe 5.0 support enables SSD read and write speeds up to twice as fast as the M4 generation.",
+    "status": "supported",
+    "source": 3,
+    "fix": ""
+   },
+   {
+    "claim": "Storage options start at 256GB and scale up to 2TB.",
+    "status": "supported",
+    "source": 3,
+    "fix": ""
+   },
+   {
+    "claim": "The iMac includes a 12MP Center Stage camera with Desk View support.",
+    "status": "supported",
+    "source": 3,
+    "fix": ""
+   },
+   {
+    "claim": "Audio hardware includes a three-mic array with directional beamforming and a six-speaker sound system with Spatial Audio and Dolby Atmos support.",
+    "status": "supported",
+    "source": 2,
+    "fix": ""
+   },
+   {
+    "claim": "An Apple-designed N1 wireless chip provides Wi-Fi 7 and Bluetooth 6 support, upgraded from Wi-Fi 6E and Bluetooth 5.3.",
+    "status": "supported",
+    "source": 3,
+    "fix": ""
+   },
+   {
+    "claim": "The base 10-core configuration includes two Thunderbolt 4 ports, while the 12-core tier features four Thunderbolt 4 ports.",
+    "status": "supported",
+    "source": 3,
+    "fix": ""
+   },
+   {
+    "claim": "The iMac supports up to two external 6K displays simultaneously.",
+    "status": "supported",
+    "source": 2,
+    "fix": ""
+   },
+   {
+    "claim": "The power adapter can be configured with a 2.5Gb Ethernet port, which comes standard on the $1,699 tier and costs $30 on the base tier.",
+    "status": "supported",
+    "source": 3,
+    "fix": ""
+   },
+   {
+    "claim": "The iMac runs macOS 27 Golden Gate with Apple Intelligence.",
+    "status": "supported",
+    "source": 4,
+    "fix": ""
+   },
+   {
+    "claim": "Footnote 4 notes that certain Apple Intelligence features like Siri AI and AFM 3 Cloud models in Shortcuts rely on server-side models subject to daily usage limits.",
     "status": "supported",
     "source": 1,
     "fix": ""
    },
    {
-    "claim": "Apple Intelligence is not yet available in Europe.",
-    "status": "supported",
-    "source": 4,
-    "fix": ""
-   },
-   {
-    "claim": "The desktop retains a 24-inch 4.5K Retina display offering 500 nits of brightness and P3 wide color coverage.",
-    "status": "supported",
-    "source": 4,
-    "fix": ""
-   },
-   {
-    "claim": "Buyers can select an optional nano-texture glass coating to mitigate reflections under harsh lighting conditions.",
-    "status": "supported",
+    "claim": "Local processing extends to third-party tools such as Claude.",
+    "status": "unsupported",
     "source": 2,
+    "fix": "State instead that the Mac is optimized to run AI applications like Claude, rather than claiming Claude processes locally."
+   },
+   {
+    "claim": "Footnote 4 of Apple's MacBook Pro press release specifies that Siri AI is unavailable in the EU on iOS, iPadOS, and watchOS without mentioning macOS.",
+    "status": "supported",
+    "source": 1,
     "fix": ""
    },
    {
-    "claim": "A 12-megapixel Center Stage camera with Desk View support remains embedded in the top bezel.",
+    "claim": "Pricing starts at $1,499 for the 10-core CPU/GPU base configuration and $1,699 for the 12-core CPU/GPU tier.",
     "status": "supported",
     "source": 3,
     "fix": ""
    },
    {
-    "claim": "The iMac includes a studio-quality directional three-microphone array and a six-speaker sound system capable of Spatial Audio playback.",
-    "status": "supported",
-    "source": 2,
-    "fix": ""
-   },
-   {
-    "claim": "Wireless and wired connectivity receive technical revisions via the Apple-designed N1 chip.",
-    "status": "supported",
-    "source": 5,
-    "fix": ""
-   },
-   {
-    "claim": "The N1 adds Wi-Fi 7 and Bluetooth 6 support, replacing Wi-Fi 6E and Bluetooth 5.3 found on the prior generation.",
+    "claim": "The iMac box includes a color-matched Magic Keyboard with Touch ID, Magic Mouse, 143W power adapter, power cord, and USB-C charging cable, plus a polishing cloth with nano-texture models.",
     "status": "supported",
     "source": 3,
     "fix": ""
    },
    {
-    "claim": "Wired network transfers are accelerated through an available 2.5 Gigabit Ethernet port integrated into the power adapter, providing up to 2.5 times the throughput of the older Gigabit standard.",
+    "claim": "Pre-orders begin Wednesday, October 28, 2026, at 10:10 a.m. PT, with general availability beginning Friday, November 6, 2026.",
     "status": "supported",
     "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "Storage throughput is up to twice as fast compared to the previous model due to PCIe 5.0 integration across internal solid-state drives.",
-    "status": "supported",
-    "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "Base models come equipped with two Thunderbolt 4 ports, while the 12-core configuration features four Thunderbolt 4 ports.",
-    "status": "supported",
-    "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "Both configurations support driving up to two external 6K displays.",
-    "status": "supported",
-    "source": 2,
-    "fix": ""
-   },
-   {
-    "claim": "In local AI workloads, Apple cites up to a 5x increase in token prompt processing speeds within tools like LM Studio compared to the M4 iMac, and up to 12x the speed of the original M1 model.",
-    "status": "supported",
-    "source": 4,
-    "fix": ""
-   },
-   {
-    "claim": "Based on early Geekbench results from the M6 Mac mini, CPU tasks are estimated to be up to around 40 percent faster than the M4 baseline.",
-    "status": "supported",
-    "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "Apple says graphics workflows see up to a 2x boost.",
-    "status": "supported",
-    "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "In common productivity software, Apple states the system handles spreadsheets in Microsoft Excel up to 50 percent faster than the M4 desktop.",
-    "status": "supported",
-    "source": 4,
-    "fix": ""
-   },
-   {
-    "claim": "When compared to the final Intel-based iMac, overall system speeds are rated up to 18x higher.",
-    "status": "needs_attribution",
-    "source": 3,
-    "fix": "Attribute this performance benchmark directly to Apple (e.g., 'Apple claims the new iMac is up to 18x faster than the final Intel-based model')."
-   },
-   {
-    "claim": "The 24-inch M6 iMac is scheduled to open for pre-orders on Wednesday, October 28, 2026, at 10:10 a.m. Pacific Time, with official retail shipments commencing Friday, November 6, 2026.",
-    "status": "supported",
-    "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "The base configuration starts at $1,499, matching the price established earlier in the year.",
-    "status": "supported",
-    "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "The base configuration includes an M6 chip with a 10-core CPU, 10-core GPU, the dual 16-core Neural Engine, 16GB of unified memory, 256GB of PCIe 5.0 storage, and two Thunderbolt 4 ports.",
-    "status": "supported",
-    "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "The 2.5Gb Ethernet adapter is available on the base model as a $30 upgrade.",
-    "status": "supported",
-    "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "The $1,699 higher-tier configuration includes the 12-core CPU, 12-core GPU, 16GB of unified memory, four Thunderbolt 4 ports, and the 2.5Gb Ethernet power adapter standard.",
-    "status": "supported",
-    "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "Factory configurations scale up to 32GB of unified memory and 2TB of internal storage.",
-    "status": "supported",
-    "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "Each system includes a color-matched Magic Keyboard with Touch ID, Magic Mouse, power cord, 143W power adapter, and USB-C cable.",
-    "status": "supported",
-    "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "The iMac is available in green, yellow, orange, pink, purple, blue, and silver finishes.",
-    "status": "supported",
-    "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "FAQ: The M6 iMac starts at $1,499 in the United States, with pre-orders opening October 28, 2026, at 10:10 a.m. PT, and deliveries starting November 6, 2026.",
-    "status": "supported",
-    "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "FAQ: Architectural changes to the M6 chip include a dual 16-core Neural Engine, dedicated Neural Accelerators inside each GPU core, up to 170GB/s unified memory bandwidth, and an expanded maximum layout of 12 CPU cores and 12 GPU cores.",
-    "status": "supported",
-    "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "FAQ: Apple reports up to 5x faster on-device AI prompt processing, 2x faster graphics, and up to twice as fast SSD read and write speeds compared to the M4 model, while Geekbench benchmarks indicate up to around 40 percent faster CPU performance.",
-    "status": "supported",
-    "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "FAQ: The iMac is equipped with the Apple N1 chip supporting Wi-Fi 7 and Bluetooth 6, alongside an optional or standard 2.5 Gigabit Ethernet port integrated into the power adapter.",
-    "status": "supported",
-    "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "Caption 1: Apple's updated all-in-one desktop design is powered by next-generation silicon.",
-    "status": "supported",
-    "source": 2,
-    "fix": ""
-   },
-   {
-    "claim": "Caption 2: Semiconductor engineering behind integrated neural accelerators and multi-core processing architecture.",
-    "status": "supported",
-    "source": 3,
-    "fix": ""
-   },
-   {
-    "claim": "Caption 3: Creative workflows utilizing high-bandwidth graphics and external 6K display support.",
-    "status": "supported",
-    "source": 2,
     "fix": ""
    }
   ],
