@@ -1,0 +1,109 @@
+{
+ "slug": "gemini-robotics-embodied-reasoning-2-google-cloud",
+ "title": "Google Launches Gemini Robotics Embodied Reasoning 2 on Cloud",
+ "seoTitle": "Gemini Robotics Embodied Reasoning 2 Debuts on Google Cloud",
+ "description": "Google Cloud and DeepMind launched Gemini Robotics ER 2 in public preview, bringing video-based reasoning, tool use, and verification to autonomous robots.",
+ "dek": "Available in public preview on the Gemini platform, the model serves as a high-level cognitive brain for arms, quadrupeds, and humanoids.",
+ "category": "Robotics",
+ "tags": [
+  "Gemini Robotics",
+  "Google Cloud",
+  "Google DeepMind",
+  "Physical AI",
+  "Robotics"
+ ],
+ "keyTakeaways": [
+  "Gemini Robotics Embodied Reasoning 2 (ER 2) is now accessible in public preview via Model Garden on Google Cloud.",
+  "The model functions across stationary arms, rovers, quadrupeds, and humanoids to orchestrate low-level action models and navigation APIs.",
+  "Internal benchmarks show the model identifies critical video moments with 91.3% accuracy at four times the execution speed of larger model tiers.",
+  "The system reads more than 10 instrument categories directly from video feeds and enables multi-robot task handoffs."
+ ],
+ "body": "On October 27, 2026, Google DeepMind and Google Cloud released [Gemini Robotics Embodied Reasoning 2 (ER 2)](https://cloud.google.com/blog/products/ai-machine-learning/gemini-robotics-embodied-reasoning-2-is-now-available-on-google-cloud) in public preview on the Gemini platform. The release brings DeepMind's frontier physical reasoning model into enterprise cloud environments, allowing organizations to deploy embodied artificial intelligence across diverse hardware configurations. Serving as an orchestration brain, Gemini Robotics ER 2 pairs continuous spatio-temporal video comprehension with long-horizon task planning and integrated safety guardrails.\n\nBuilding upon the Gemini Robotics 2 system introduced earlier in 2026, the updated reasoning layer functions as a physical agent. Rather than handling direct motor joint control itself, the model operates at a supervisory tier. Developers stream multimodal video, audio, and text directly into ER 2, which then directs low-level execution systems—including Vision-Language-Action (VLA) models, navigation routines, and hardware application programming interfaces.\n\n## Unified Reasoning Across Diverse Embodiments\n\nAccording to Google Cloud, Gemini Robotics ER 2 is built to generalize across differing mechanical forms rather than requiring custom intelligence layers for each machine. The model supports stationary industrial arms, wheeled rovers, four-legged robots, and full humanoid platforms.\n\nBeyond single-device operations, the system introduces multi-robot collaboration. Multiple machines operating in the same workspace can share a semantic representation of their environment, split labor dynamically, and hand off physical components to complete workflows a single machine could not do alone.\n\n[[FIG1]]\n\n## Verification, Moment Finding, and Instrument Reading\n\nA central operational hurdle in automated physical tasks is verifying whether an action achieved its intended outcome before initiating subsequent steps. As outlined in the [Google Cloud announcement](https://cloud.google.com/blog/products/ai-machine-learning/gemini-robotics-embodied-reasoning-2-is-now-available-on-google-cloud), Gemini Robotics ER 2 monitors continuous video feeds to classify progress into binary completion statuses, discrete categories, or continuous numerical scores. This visual feedback loop enables machines to self-correct during failed steps without needing an operator to reset the entire workflow.\n\nGoogle reports that ER 2 pinpoints the exact video frame where a critical physical transition occurs—such as determining the precise second to cease pouring liquid—with 91.3% accuracy and a 0.96-second mean absolute frame distance. Google notes the model achieves this while operating at four times the execution speed and a fraction of the compute expense compared to larger model classes.\n\nThe system also expands spatial perception capabilities to read analog and digital measurement tools directly from visual inputs. ER 2 can interpret readings across more than 10 hardware instrument categories without direct electrical data links. Supported equipment includes circular dials, sight glasses, digital screens, linear scales, physical rulers, and liquid thermometers.\n\n## Agentic Orchestration and Google Cloud Integration\n\nGemini Robotics ER 2 incorporates tool declaration capabilities, allowing developers to connect navigation functions, manipulation APIs, or tele-operation software as executable tools. Operating through natural language commands, robots can verbally explain their planned trajectory while executing tasks, while human supervisors can issue verbal redirections in standard language.\n\n[[FIG2]]\n\nTo support lifecycle management, Google Cloud linked the model with its broader infrastructure stack, as detailed on the [Google Cloud Physical AI documentation](https://cloud.google.com/blog/products/ai-machine-learning/gemini-robotics-embodied-reasoning-2-is-now-available-on-google-cloud):\n\n* **Simulation:** Teams can test movement patterns in simulation engines such as MuJoCo-Warp and NVIDIA Isaac Sim, using multimodal models to synthesize scenarios and auto-label workcell imagery.\n* **Data curation and training:** Engineers can use ER 2's spatial pointing, moment finding, and progress evaluation to curate demonstration datasets stored in Cloud Storage and BigQuery, training downstream custom VLA models on Google Kubernetes Engine (GKE) or Cluster Director.\n* **Fleet operations:** Latency-critical workloads such as simultaneous localization and mapping (SLAM) and real-time path planning can be offloaded to local factory floors through Google Distributed Cloud, while machine telemetry streams to BigQuery under enterprise Identity and Access Management (IAM) controls.\n\n## Industry Adoption Across Robotics and Research\n\nSeveral enterprise hardware and research organizations have begun testing the model within their workflows. Marco da Silva, Vice President and General Manager of Spot at Boston Dynamics, noted that applying ER 2's continuous video reasoning enables Spot to conduct fluid inspections across operational environments rather than relying on point-in-time image captures.\n\nIn materials science, the ASTAR Institute of Materials Research and Engineering (ASTAR IMRE) and MARVEL-AI are applying ER 2 to laboratory automation. Executive Director Prof. Loh Xian Jun stated that the model allows automated systems to interact with legacy hardware lacking APIs—such as reading touchscreens on older microwave reactors, loading and balancing centrifuges, and transporting samples across facilities to execute multi-stage experimental campaigns.\n\nPhysical AI platform DeepReach uses the model to label real-world demonstration video libraries for model training flywheels, while semiconductor firm Arm is collaborating with Google to examine how embodied reasoning needs influence future physical computing silicon.\n\n## Availability and Documentation\n\nGemini Robotics ER 2 is available immediately in public preview via Model Garden on the Gemini platform. Developers can access API documentation, bidirectional streaming integration guides, benchmark data, and pricing structures through [Google Cloud's developer portal](https://cloud.google.com/blog/products/ai-machine-learning/gemini-robotics-embodied-reasoning-2-is-now-available-on-google-cloud).",
+ "faq": [
+  {
+   "q": "What is Gemini Robotics Embodied Reasoning 2?",
+   "a": "Gemini Robotics ER 2 is an embodied AI reasoning model developed by Google DeepMind and Google Cloud that acts as a supervisory brain for robots, planning complex tasks, verifying physical steps via video, and calling low-level action tools."
+  },
+  {
+   "q": "What robotic platforms can run Gemini Robotics ER 2?",
+   "a": "The model functions across stationary mechanical arms, wheeled rovers, quadrupeds like Boston Dynamics' Spot, and full humanoid robots, as well as multi-robot collaborative teams."
+  },
+  {
+   "q": "How accurate is the model at recognizing real-time physical events?",
+   "a": "According to Google, Gemini Robotics ER 2 pinpoints the specific frame where a physical event occurs with 91.3% accuracy and a 0.96-second mean absolute frame distance."
+  },
+  {
+   "q": "How can developers access Gemini Robotics ER 2?",
+   "a": "The model is available in public preview through Model Garden on Google Cloud's Gemini platform."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "alt": "An illustration of multiple robot types collaborating in an industrial automation testing facility",
+  "caption": "Illustration: Diverse robotic platforms coordinating complex tasks through shared visual reasoning models in an industrial workspace setting under ambient factory lighting.",
+  "src": "img/gemini-robotics-embodied-reasoning-2-google-cloud/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 83058,
+  "small": "img/gemini-robotics-embodied-reasoning-2-google-cloud/hero-640.webp",
+  "og": "img/gemini-robotics-embodied-reasoning-2-google-cloud/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/gemini-robotics-embodied-reasoning-2-google-cloud/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "alt": "An illustration of a mechanical robotic arm visually examining analog dials and instruments",
+   "caption": "Illustration: Robotic systems using multimodal reasoning to inspect analog pressure dials, sight glasses, and digital meters.",
+   "slot": "FIG1",
+   "src": "img/gemini-robotics-embodied-reasoning-2-google-cloud/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 39234,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "alt": "An illustration of engineers in an advanced robotics facility monitoring simulated and physical robot interactions",
+   "caption": "Illustration: Robotics researchers using cloud-based simulation environments to coordinate physical automation.",
+   "slot": "FIG2",
+   "src": "img/gemini-robotics-embodied-reasoning-2-google-cloud/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 57000,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-robotics-embodied-reasoning-2-is-now-available-on-google-cloud",
+   "title": "Gemini Robotics Embodied Reasoning 2 is now available on Google Cloud",
+   "site": "Google Cloud",
+   "published": 1793059200000,
+   "official": true
+  }
+ ],
+ "publishedAt": 1793168019601,
+ "updatedAt": 1793168019601,
+ "foundVia": "Google Search and Google News",
+ "check": {
+  "claims": 18,
+  "score": 10
+ },
+ "story": {
+  "id": "P539650e5",
+  "score": 84,
+  "items": [
+   "https://cloud.google.com/blog/products/ai-machine-learning/gemini-robotics-embodied-reasoning-2-is-now-available-on-google-cloud",
+   "https://news.google.com/rss/articles/CBMixwFBVV95cUxPYmFHdjgxSllxUXBrQTBJSEJXWXdqLUYzcHM1TTRkZEpMeEwxMHZmVGNkd0hCMVlHb0VrdHhwUzJLQnEydFBvLTZvcVU1TVdaVlFVUllxQ2NQM1pmY24yRFRubjViLU9ONkpDUEhPVUMyU0pRX1hBRzVrOWtrTXFCRDZkcDl1Nnp0bmVqT0NTMGxZYVZ4Z29WSmh3V1A3NGRsYzBDWTNSVm9leV80cTlnYk9Ib2JQX3RzRlB6dUVNUGtUZVM1NThz?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
