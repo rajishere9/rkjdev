@@ -1,0 +1,167 @@
+{
+ "slug": "liquid-ai-releases-lfm3-multimodal-family",
+ "title": "Liquid AI Unveils LFM3 On-Device Multimodal Model Family",
+ "seoTitle": "Liquid AI Releases LFM3 Multimodal AI Family",
+ "description": "Liquid AI launched LFM3, an open-weight family of six 2B-class models spanning text, vision, audio, and omni, optimized for local on-device hardware.",
+ "dek": "The company's new tri-hybrid models combine convolutions and attention to pack 256K-token contexts into a 1 GB edge footprint.",
+ "category": "AI Models",
+ "tags": [
+  "Liquid AI",
+  "LFM3",
+  "On-Device AI",
+  "Multimodal",
+  "Edge AI",
+  "Open Weights"
+ ],
+ "keyTakeaways": [
+  "Liquid AI released LFM3, a family of six open-weight 2B-class models for text, vision, audio, omni, and decision tasks.",
+  "Built on a tri-hybrid architecture of convolutions, sliding-window attention, and global attention, the 1.7B text model fits in roughly 1 GB of memory at 4-bit precision.",
+  "LFM3-1.7B features a 256K-token context window and achieved company-reported scores of 71.39 on BFCL V4 and 38.42 on WebArena-Verified.",
+  "While competitive in browser tasks and instruction following, Liquid AI acknowledged the small model trails larger systems in agentic coding and knowledge-heavy tasks.",
+  "Model weights are available under the LFM Open License v1.0, with free commercial use capped at $10 million in annual enterprise revenue."
+ ],
+ "body": "Liquid AI released its LFM3 family of six lightweight models on October 27, 2026, bringing text, vision, audio, omni, and decision-making capabilities to a shared 2B-parameter architecture. The new lineup is optimized for local deployment on laptops, phones, edge silicon, and private servers, pairing a compact memory footprint with a 256,000-token context window. According to [Liquid AI's announcement](https://www.liquid.ai/blog/lfm3), the release aims to let enterprises and developers run specialized, agentic workloads directly on client hardware without routing private data to cloud providers.\n\nThe base and post-trained weights are available via [Hugging Face](https://huggingface.co/LiquidAI/LFM3-1.7B), the Liquid AI Playground, and the hosted Liquid AI API. Hardware and software partners participating in the release include AMD, Ambarella, Arm, Intel via OpenVINO, Nvidia, Qualcomm, OpenRouter, and Vercel. Companies including Mercedes-Benz and Shopify participated in pre-release evaluation.\n\n[[FIG1]]\n\n## Tri-Hybrid Architecture and Training Details\n\nAt the center of the release is a new tri-hybrid backbone. Rather than relying exclusively on standard transformer attention, the 24-layer LFM3-1.7B-Base balances three distinct operators: 13 gated short convolutions, five sliding-window attention (SWA) layers with a 256-token window, and six global attention layers. The convolution kernel size expanded from 3 in the previous-generation LFM2 to 7 in LFM3. According to [Liquid AI's technical post](https://www.liquid.ai/blog/lfm3), this combination preserves speed across long contexts while improving parameter efficiency.\n\nThe architecture incorporates three key structural adjustments:\n- Head-wise gated attention: A sigmoid gate scales the output of each attention head, allowing the network to suppress activation outliers that complicate quantization.\n- Partial RoPE: Global attention layers apply rotary positional embeddings only to the highest-frequency half of each head, keeping low-frequency dimensions invariant to distance, while sliding-window layers retain full RoPE.\n- Sandwich normalization: Each layer block normalizes both its input and output to maintain stable activation scales.\n\nLiquid AI refined this layout using automated hardware-in-the-loop architecture search across 14 device and backend targets, including the Samsung Galaxy S26 Ultra, OnePlus 15, Raspberry Pi 5, Apple M4 Max, AMD Ryzen AI, cloud x86 and Arm CPUs, and the Qualcomm Hexagon NPU. Pre-training consumed 22 trillion tokens, with the final 3.5 trillion tokens dedicated to a mid-training phase emphasizing agent traces, tool calls, and extending the context length to 256K tokens. Post-training involved four stages: supervised fine-tuning across 1.75 trillion tokens, mixed reinforcement learning (RL), multi-domain on-policy distillation (MOPD) from six specialized RL teacher models, and final agentic RL inside live software harnesses.\n\n## Six Models on One Shared Backbone\n\nAll six models in the lineup stem from the shared LFM3-1.7B-Base model, giving each variant a foundation in the 2B-parameter class, as documented by [Unite.AI](https://www.unite.ai/liquid-ai-launches-lfm3-family-of-six-open-weight-2b-class-models/):\n\n1. **LFM3-1.7B**: A 1.73-billion-parameter text-only language model equipped with a 256K context window, 128,000-token vocabulary, and support for 16 languages. It is post-trained for agent environments such as Hermes Agent, Pi, and OpenClaw.\n2. **LFM3-VL-2B**: A 1.92-billion-parameter vision-language model with a 128K context window. It introduces video processing to Liquid's vision lineup, sampling clips at 2 frames per second using an in-house 164-million-parameter vision encoder.\n3. **LFM3-Audio-2B**: An audio model supporting speech input and output across 18 languages alongside tool calling, featuring a causal encoder capable of returning a first audio token in as little as 50 milliseconds.\n4. **LFM3-Omni-2B**: Liquid AI's first unified omni model, holding 2.2 billion parameters. As detailed on its [Hugging Face repository](https://huggingface.co/LiquidAI/LFM3-Omni-2B-GGUF), it processes text, images, video, and audio while generating text and synthesized speech.\n5. **d1-2B**: A decision model specialized from the vision system that evaluates structured questions in a single forward pass, providing calibrated probabilities, bounding boxes, and document extractions.\n6. **d1-Omni-2B**: An omni decision model that applies structured multi-question decision passes to audio, text, and visual inputs.\n\n[[FIG2]]\n\n## Performance Benchmarks and Clear Trade-offs\n\nOn internal benchmarks reported by [Liquid AI](https://www.liquid.ai/blog/lfm3) and reported by [VentureBeat](https://venturebeat.com/technology/liquid-ais-new-lfm3-models-put-browser-agents-voice-commands-and-image-recognition-onto-enterprise-controlled-devices), LFM3-1.7B posted notable results on agentic execution and tool handling. On the Berkeley Function-Calling Leaderboard (BFCL V4), LFM3-1.7B reached 71.39, outscoring LFM2.5-2.6B (55.89), Qwen3.5-4B (55.12), and Qwen3.5-9B (62.83). On WebArena-Verified, LFM3-1.7B scored 38.42, outperforming Qwen3.5-9B's 28.94 and LFM2.5-2.6B's 3.02. On instruction following, the model registered 96.66 on IFEval.\n\nIn vision evaluations across 62 benchmarks, Liquid AI reported that LFM3-VL-2B averaged 71.4, matching the 71.7 average of Google's Gemma 4 12B while operating at a fraction of the parameter scale. On GUI understanding, it reached 83.1, and achieved 77.3 on visual grounding.\n\nHowever, Liquid AI emphasized that physical parameter size imposes strict constraints. LFM3 trails larger models on coding and deep factual knowledge. On SWE-bench Verified (OpenCode), LFM3-1.7B scored 43.40, trailing Qwen3.5-9B's 51.20. On GPQA Diamond, LFM3-1.7B reached 63.37 against 80.40 for Qwen3.5-9B. On Humanity's Last Exam without external tools, LFM3-1.7B scored 7.17, though adding tool-assisted search raised its score to 13.90. On long-context retrieval via RULER 128K, LFM3-1.7B scored 65.56, trailing Qwen3.5-9B's 87.11. Liquid AI noted directly in its model card documentation that the model is not recommended for autonomous agentic coding or complex multi-step reasoning.\n\n```\nBenchmark Comparison (Selected Company-Reported Metrics)\nMetric                 LFM3-1.7B     LFM2.5-2.6B    Qwen3.5-9B\nBFCL V4 (Tool Use)     71.39         55.89          62.83\nWebArena-Verified      38.42          3.02          28.94\nAutomationBench        41.29          0.94          15.10\nIFEval (Instructions)  96.66         95.39          92.08\nSWE-bench Verified     43.40         18.00          51.20\nGPQA Diamond           63.37         57.78          80.40\nRULER 128K             65.56          1.15          87.11\n```\n\n## On-Device Footprint, Serving, and Availability\n\nEfficiency at the edge is the primary design target of the LFM3 line. At 4-bit quantization, LFM3-1.7B requires approximately 1 GB of memory, making execution feasible on standard consumer mobile hardware and budget laptops. Liquid AI reported that under llama.cpp at Q4_0, retaining a full 128K context consumes 1.6 GB of key-value (KV) cache, compared to 4.3 GB required by Qwen3.5-4B and 5.6 GB by MiniCPM5-2B, according to [Marktechpost](https://www.marktechpost.com/2026/10/27/liquid-ai-lfm3-open-weight-2b-multimodal-models/).\n\nLocal speed benchmarks run with GPU offloading yielded 237.1 generation tokens per second on an Apple M5 Max (2.25 GB memory), 129.6 tokens per second on an AMD Ryzen AI Max+ 395 (2.75 GB memory), and 43.6 tokens per second on an iPhone 17 Pro (1.90 GB memory). In cloud datacenter setups using an Nvidia B300 and SGLang in BF16, Liquid AI reported throughput reaching 3.6 billion tokens per day across 1,024 concurrent requests.\n\nModel weights are published on Hugging Face across multiple formats including BF16, FP8, NVFP4, GGUF, MLX, and ONNX, with runtime support for llama.cpp, Ollama, LM Studio, vLLM, and SGLang. For hosted cloud deployment, the Liquid AI API charges $0.08 per million input tokens ($0.02 cached) and $0.20 per million output tokens for LFM3-1.7B, with hosted context windows set to 128,000 tokens.\n\nAll LFM3 models are released under the LFM Open License v1.0. The license allows free commercial deployment for organizations earning less than $10 million in annual gross revenue. Commercial entities exceeding that threshold must execute an enterprise agreement with Liquid AI.",
+ "faq": [
+  {
+   "q": "What models are included in the Liquid AI LFM3 release?",
+   "a": "The lineup contains six 2B-class models built from a shared 1.7B base: LFM3-1.7B (text), LFM3-VL-2B (vision and video), LFM3-Audio-2B (speech and audio), LFM3-Omni-2B (unified omni-modal), d1-2B (structured visual decisions), and d1-Omni-2B (structured multimodal decisions)."
+  },
+  {
+   "q": "How does the LFM3 tri-hybrid architecture work?",
+   "a": "The 24-layer backbone combines 13 gated short convolutions (kernel size 7), five sliding-window attention layers (256-token window), and six global attention layers, paired with head-wise sigmoid gating, partial RoPE, and sandwich normalization."
+  },
+  {
+   "q": "What are the commercial licensing terms for LFM3?",
+   "a": "The models are licensed under the LFM Open License v1.0, which allows free commercial use and private fine-tuning for entities with annual revenue up to $10 million. Companies exceeding that threshold require an enterprise commercial agreement."
+  },
+  {
+   "q": "What are the known performance limitations of LFM3-1.7B?",
+   "a": "Due to its compact 1.73B size, LFM3-1.7B trails larger models on deep factual knowledge (scoring 63.37 on GPQA Diamond compared to 80.40 for Qwen3.5-9B) and agentic coding (43.40 on SWE-bench Verified versus 51.20 for Qwen3.5-9B)."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An illuminated microchip on a sleek metallic circuit board, emitting gentle pulses of light that split into distinct data streams representing text, visual waves, and audio soundwaves inside a clean modern research facility.",
+  "alt": "Concept illustration of an edge processor running multimodal artificial intelligence streams",
+  "caption": "Illustration: Liquid AI's LFM3 architecture brings text, vision, and audio processing into a compact hardware footprint.",
+  "src": "img/liquid-ai-releases-lfm3-multimodal-family/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 56390,
+  "small": "img/liquid-ai-releases-lfm3-multimodal-family/hero-640.webp",
+  "og": "img/liquid-ai-releases-lfm3-multimodal-family/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/liquid-ai-releases-lfm3-multimodal-family/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An engineer in a hardware lab examining diagnostic metrics on a low-power handheld device connected to monitoring oscilloscopes and testing equipment on a wooden workbench.",
+   "alt": "An engineer testing low-power AI hardware on a test bench",
+   "caption": "Illustration: Hardware-in-the-loop testing across 14 device setups informed the design of the LFM3 architecture.",
+   "slot": "FIG1",
+   "src": "img/liquid-ai-releases-lfm3-multimodal-family/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 40844,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A modern laptop resting on an office desk displaying abstract visualizations of simultaneous document scanning, voice transcription waveforms, and video frame analysis.",
+   "alt": "A laptop running simultaneous multimodal agent workflows",
+   "caption": "Illustration: The LFM3 model family targets multimodal tasks such as video parsing, audio tools, and document processing on local machines.",
+   "slot": "FIG2",
+   "src": "img/liquid-ai-releases-lfm3-multimodal-family/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 36368,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
+   "title": "LiquidAI/LFM3-1.7B",
+   "site": "Hugging Face",
+   "published": 1792791342000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://huggingface.co/LiquidAI/LFM3-Omni-2B-GGUF",
+   "title": "LiquidAI/LFM3-Omni-2B-GGUF",
+   "site": "Hugging Face",
+   "published": 1793060965000,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://www.liquid.ai/blog/lfm3",
+   "title": "Introducing LFM3: Every Modality for Specialized Intelligence",
+   "site": "Liquid AI",
+   "published": 1793059200000,
+   "official": true
+  },
+  {
+   "n": 4,
+   "url": "https://venturebeat.com/technology/liquid-ais-new-lfm3-models-put-browser-agents-voice-commands-and-image-recognition-onto-enterprise-controlled-devices",
+   "title": "Liquid AI's new LFM3 models put browser agents, voice commands, and image recognition onto enterprise-controlled devices",
+   "site": "venturebeat.com",
+   "published": 1793129820000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://www.marktechpost.com/2026/10/27/liquid-ai-lfm3-open-weight-2b-multimodal-models/",
+   "title": "Liquid AI Releases LFM3: 6 Open-Weight 2B-Class Multimodal Models",
+   "site": "marktechpost.com",
+   "published": 1793059200000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://www.unite.ai/liquid-ai-launches-lfm3-family-of-six-open-weight-2b-class-models/",
+   "title": "Liquid AI Launches LFM3 Family of Six Open-Weight 2B-Class Models",
+   "site": "Unite.AI",
+   "published": 1793122635000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://aiweekly.co/alerts/liquid-ai-opens-six-model-lfm3-family-at-256k-context",
+   "title": "Liquid AI opens six-model LFM3 family at 256K context",
+   "site": "AI Weekly",
+   "published": 1793125958000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1793156992708,
+ "updatedAt": 1793156992708,
+ "foundVia": "Reddit, Google News and Google Search",
+ "check": {
+  "claims": 29,
+  "score": 10
+ },
+ "story": {
+  "id": "Pece687aa",
+  "score": 87,
+  "items": [
+   "https://huggingface.co/LiquidAI/LFM3-1.7B",
+   "https://news.google.com/rss/articles/CBMikAFBVV95cUxObEhfc2pwUHE4b1d4N1VmZk8tLU5WbWttckMyUDZYdkZPdlpPNlZiOGFwRXJUSEJreUNYdU5SVmpYcDUwWWpZT3NpeElCSUlOTWJ0VjRpU0h1MG52RnFpaFNvbEVCdHE2RzJseGNyOXJaTDBmYm1IZGlPM2VHZlQ0TlRVVXlESzhmaWRVZlNxVl8?oc=5",
+   "https://huggingface.co/LiquidAI/LFM3-Omni-2B-GGUF",
+   "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPRGpKdjhPN2RkXzRmc1FQRTZKTUtocFFQbUkyLUpVY2xIMmRZZm1VcHRWd3ZYMmJlZlZhMEVoaDFILU1OYXlMaUhDeEZKaHZWV3BqV1E1OHY2S2VNYnFPM2ZqOThQN244bFhfZ0hpc0EwX3J3NkR4ckdudHFqSVQxQ0lhM3ZXUVpVeVByRFdudkNiX0I3VS1NQkZtQ0pidWxoZWZwRVowWms5d0pRS0xrVmxvWEFQQ3BvYTREbmVRZEN4a3lJTzhuNVA1OHNveUQ1aGk3amRSYkpmdEhja1BfdVJQb1hVNkE?oc=5",
+   "https://aiweekly.co/alerts/liquid-ai-opens-six-model-lfm3-family-at-256k-context",
+   "https://news.google.com/rss/articles/CBMikgFBVV95cUxNTXNBai0xemJjMk8zTG9CeThlWTYzajlNRjB3TC1FODRMVENZR2ZFLXl2NU00YlZhb0pxZGotUFM2RUVfMWF1Rkp0a3pHSi0yOWppSGF6US1xN3BoSGE1YTNsWWF1M011VWNlM1JTU2taeTd5c2xUdmgyTjJDMWNsVVl3S3o0QkNsSkd5WmgzRkxnQdIBkgFBVV95cUxNTXNBai0xemJjMk8zTG9CeThlWTYzajlNRjB3TC1FODRMVENZR2ZFLXl2NU00YlZhb0pxZGotUFM2RUVfMWF1Rkp0a3pHSi0yOWppSGF6US1xN3BoSGE1YTNsWWF1M011VWNlM1JTU2taeTd5c2xUdmgyTjJDMWNsVVl3S3o0QkNsSkd5WmgzRkxnQQ?oc=5",
+   "https://superpowerdaily.com/posts/liquidai-releases-six-lfm3-models-built-for-specialized-on-device-ai"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
