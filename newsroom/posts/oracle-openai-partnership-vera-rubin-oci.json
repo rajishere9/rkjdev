@@ -1,0 +1,173 @@
+{
+ "slug": "oracle-openai-partnership-vera-rubin-oci",
+ "title": "Oracle Expands OpenAI Partnership and Unveils Vera Rubin on OCI",
+ "seoTitle": "Oracle Expands OpenAI Alliance and Adds Vera Rubin to OCI",
+ "description": "Oracle deepens its OpenAI alliance with enterprise ChatGPT tools and expands OCI with NVIDIA Vera Rubin, Google TPUs, and Cerebras chips.",
+ "dek": "The enterprise cloud provider integrates ChatGPT across its application suite and plans multi-gigawatt deployments of NVIDIA and Google silicon, while deployment capacity for Cerebras was not specified.",
+ "category": "Tech",
+ "tags": [
+  "Oracle",
+  "OpenAI",
+  "NVIDIA",
+  "Cloud Computing",
+  "AI Infrastructure",
+  "Enterprise Software"
+ ],
+ "keyTakeaways": [
+  "Oracle launched four new enterprise software offerings developed with OpenAI: Oracle AI Workspace, Oracle AI Security Mesh, Oracle App Composer, and an SMB bundle.",
+  "NVIDIA Vera Rubin NVL72 rack-scale systems and standalone Vera CPUs have reached general availability on Oracle Cloud Infrastructure (OCI).",
+  "OCI will become the first external hyperscaler to host Google TPUs (TPU 8t and 8i), with multi-gigawatt rollouts starting in 2027 alongside Cerebras Wafer-Scale inference systems.",
+  "Oracle reported 850 megawatts of data center capacity and more than 300,000 GPUs added during fiscal Q1 2027, with remaining performance obligations hitting $664 billion."
+ ],
+ "body": "On October 27, 2026, at Oracle AI World in Las Vegas, Oracle announced a comprehensive expansion of its artificial intelligence portfolio spanning enterprise software and high-density compute. The company unveiled an expanded partnership with OpenAI to integrate models directly into Oracle's business suite, while simultaneously broadening Oracle Cloud Infrastructure (OCI) with new compute architectures including NVIDIA Vera Rubin systems, Google TPUs, and Cerebras wafer-scale processors.\n\nAccording to [Oracle's corporate announcement](https://www.oracle.com/news/announcement/ai-world-oracle-reinvents-enterprise-computing-for-the-ai-era-with-openai-2026-10-27/), the software collaboration focuses on bringing generative and agent-based AI directly into daily enterprise operations. In a statement, Oracle CEO Clay Magouyrk said the initiative unites OpenAI's capabilities with the \"Oracle applications, data, and cloud infrastructure\" that enterprises depend on for core operations. OpenAI President and Co-founder Greg Brockman noted that the tie-up helps organizations \"build software faster, strengthen security and take on more complex knowledge work.\"\n\n## Bringing ChatGPT and Codex into Enterprise Operations\n\nThe software collaboration introduces four core offerings targeting different business roles: Oracle AI Workspace, Oracle AI Security Mesh, Oracle App Composer, and the Oracle AI SMB Bundle.\n\nOracle AI Workspace acts as a unified hub connecting OpenAI models with Oracle Fusion Applications, Oracle NetSuite, Oracle AI Database, and underlying OCI services. As detailed by [OpenAI](https://openai.com/index/oracle-apps-in-chatgpt/), the workspace is designed to allow workers to trigger approved workflows and query records in plain English through ChatGPT. For example, a finance employee can use ChatGPT to examine cost allocations, analyze purchasing records, and resolve closing items prior to a month-end close. OpenAI reported that Oracle itself has reached 130,000 active ChatGPT users and over 95,000 active Codex users internally, noting its recruiting staff reduced market research preparation from several days down to 15 to 20 minutes.\n\n[[FIG1]]\n\nFor custom development, [Unite.AI reported](https://www.unite.ai/oracle-expands-openai-partnership-with-four-enterprise-ai-offerings/) that Oracle App Composer allows teams to generate internal software using Codex without manual coding. Currently in limited availability, the platform provisions resources directly on OCI, connecting to OCI Kubernetes Engine and Oracle Autonomous AI Database while enforcing corporate identity and audit controls. It also supports APEXlang, a proprietary Oracle technology designed to accelerate generative software development without producing unmaintainable code.\n\nTo reach early-stage companies, Oracle introduced the Oracle AI SMB Bundle, offering up to $12,000 annually in OCI credits for up to three years. The package pairs ChatGPT Business, Codex, and App Composer with NetSuite QuickStart for basic invoicing and accounting. Oracle restricted eligibility to independent, privately held U.S. businesses with under $250,000 in prior Oracle credit usage, excluding crypto enterprises, service-only consultancies, and government units.\n\n## Automated Vulnerability Defense with AI Security Mesh\n\nAddressing cybersecurity risks, the companies introduced Oracle AI Security Mesh. This managed service uses OpenAI cyber models to proactively identify and remediate vulnerabilities across OCI, on-premises environments, and rival clouds before malicious actors exploit them.\n\nUnder this workflow, Oracle outlines the customer's attack surface and presents a test plan for administrative approval. Specialized agents analyze software weak points and verify exploitable pathways, while secondary agents rerun tests independently to confirm issues are real rather than false positives. Coding agents then supply proposed software patches for human review. Oracle stated that findings are saved exclusively to the customer's private knowledge repository to refine subsequent audits while minimizing downtime risks.\n\n[[FIG2]]\n\nBeyond application integration, U.S. customers can now purchase access to the OpenAI API, Codex, and ChatGPT Work directly on the Oracle Marketplace using existing Universal Credits agreements.\n\n## OCI Deploys NVIDIA Vera Rubin and Standalone Vera CPUs\n\nOn the hardware front, Oracle revealed that NVIDIA Vera Rubin NVL72 rack-scale systems and NVIDIA Vera CPUs have attained general availability on OCI. According to [DataCenterDynamics](https://www.datacenterdynamics.com/en/news/nvidia-vera-rubin-and-vera-cpus-now-generally-available-on-oracle/), Oracle plans to scale these Vera Rubin architectures across multi-gigawatt OCI Superclusters, building on its previous deployment of over 100,000 Blackwell GPUs used by OpenAI in Abilene to train GPT-6 Astra.\n\nEach Vera Rubin NVL72 rack links 72 GPUs over NVIDIA NVLink, paired with NVIDIA Spectrum-X Ethernet featuring Spectrum-6 switches and BlueField-4 data processing units (DPUs). Sreekanth Pothanis, compute infrastructure engineering lead at OpenAI, said Vera Rubin on OCI supplies the computing scale required to serve demanding frontier workloads. OpenAI also plans to run NVIDIA's standalone Vera CPUs in production on OCI to handle orchestration, tool execution, and code processing for agentic workloads.\n\nOracle confirmed it will subsequently introduce NVIDIA HGX Rubin NVL8 configurations, combining eight Rubin GPUs with dual 64-core Intel Xeon 6 processors, 4TB of DDR5 memory, and 6.4 Tbps high-speed RDMA networking, as outlined by [Seeking Alpha](https://seekingalpha.com/news/4658111-oracle-perks-up-on-wave-of-new-chip-partnerships-ahead-of-investor-day).\n\n## Diversifying Silicon: Google TPUs, Cerebras, and Custom Chips\n\nRather than relying solely on a single hardware vendor, Oracle is opening OCI to alternative processing architectures. Writing on [Oracle's corporate blog](https://www.oracle.com/news/announcement/blog/ai-world-building-the-next-decade-of-oracle-cloud-infrastructure-2026-10-27/), Karan Batta, senior vice president of product for OCI, confirmed that Oracle will become the first external hyperscale provider to offer Google TPUs.\n\nUnder a multi-gigawatt agreement, Oracle will deploy Google's eighth-generation accelerators starting in 2027, offering TPU 8t for large-scale model training and TPU 8i for inference. Furthermore, Oracle plans to deploy Cerebras Wafer-Scale Engine systems in 2027 to lower per-token latency for reasoning tasks. Andrew Feldman, CEO and co-founder of Cerebras, noted that minimizing token generation latency is vital because multi-step AI agents repeatedly verify logic and invoke software tools.\n\n[[FIG3]]\n\nOracle's compute lineup is also expanding across general-purpose and custom architectures:\n\n* **Intel Collaboration:** A multi-year roadmap extending Intel Xeon compute to future OCI X14 instances powered by Diamond Rapids processors, incorporating Advanced Matrix Extensions (AMX) for FP8, FP16, and BF16 inference alongside Advanced Performance Extensions (APX).\n* **AMD Compute E7 Instances:** Upcoming servers powered by 6th Gen AMD EPYC 9006 processors supporting up to 256 cores, 1,024 MB of L3 cache, PCIe 6.0, and AMD Pensando DPUs.\n* **Specialized Accelerators:** Immediate general availability of Intel-fabricated Positron Atlas inference chips, upcoming deployments of SambaNova SN50 hardware, and plans to host OpenAI's proprietary Jalapeño inference accelerators developed with Broadcom.\n\n## Network Fabric and Datacenter Expansion\n\nTo manage these compute clusters, Oracle unveiled enhancements to its Oracle Acceleron networking fabric. Originally introduced in 2025, Acceleron has been upgraded with front-end RDMA connectivity, an automated Collective Communications Library to steer traffic away from degraded hardware pathways, and multiplanar networking that provides automated path selection and congestion control.\n\nAccording to [Converge Digest](https://convergedigest.com/oracle-ai-world-2026-acceleron-nvidia-google-cerebras-intel/), the physical scale underpinning these services expanded substantially during the first quarter of fiscal 2027. Oracle added 850 megawatts of operational data center capacity and deployed more than 300,000 GPUs during the quarter. OCI cloud infrastructure revenue reached $7.4 billion—up 121 percent year over year—while total remaining performance obligations climbed to $664 billion.\n\nBy uniting enterprise database tools and OpenAI models on top of a multi-vendor hardware ecosystem, Oracle is positioning its cloud infrastructure to support both frontier model research and day-to-day enterprise agent workloads.",
+ "faq": [
+  {
+   "q": "What software tools did Oracle and OpenAI launch together?",
+   "a": "Oracle and OpenAI introduced four products: Oracle AI Workspace for running Oracle workflows through ChatGPT, Oracle AI Security Mesh for identifying infrastructure vulnerabilities, Oracle App Composer for building software with Codex, and the Oracle AI SMB Bundle for small businesses."
+  },
+  {
+   "q": "Which new chips are entering Oracle Cloud Infrastructure?",
+   "a": "NVIDIA Vera Rubin NVL72 systems, standalone Vera CPUs, and Positron Atlas chips are now generally available. Google TPU 8t and 8i processors, Cerebras Wafer-Scale engines, and Intel Diamond Rapids processors are scheduled to follow in 2027 and beyond."
+  },
+  {
+   "q": "Who is eligible for the Oracle AI SMB Bundle?",
+   "a": "The package is open to independent, for-profit U.S. businesses that have used less than $250,000 in Oracle Universal Credits. It provides $12,000 per year in cloud credits for up to three years alongside access to ChatGPT Business, Codex, and NetSuite QuickStart."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern data center interior with high-density server racks glowing with amber and blue indicators, showing heavy fiber-optic cables routed along overhead trays, representing high-performance enterprise cloud computing.",
+  "alt": "A modern data center with glowing server racks and fiber-optic cabling.",
+  "caption": "Illustration: Enterprise server infrastructure designed to support high-density AI clusters.",
+  "src": "img/oracle-openai-partnership-vera-rubin-oci/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 93678,
+  "small": "img/oracle-openai-partnership-vera-rubin-oci/hero-640.webp",
+  "og": "img/oracle-openai-partnership-vera-rubin-oci/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/oracle-openai-partnership-vera-rubin-oci/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An office worker sitting at a desk in a contemporary office setting, interacting with an AI productivity workflow displayed on a screen, with clean glass architectural backgrounds.",
+   "alt": "An office worker collaborating with AI software tools at a desk.",
+   "caption": "Illustration: Enterprise workers using conversational AI interfaces for financial and operational planning.",
+   "slot": "FIG1",
+   "src": "img/oracle-openai-partnership-vera-rubin-oci/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 31486,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A digital operations security room where cybersecurity analysts monitor defensive systems and vulnerability diagnostic graphs across large ambient display panels.",
+   "alt": "Cybersecurity analysts monitoring infrastructure defense monitors in a security operations center.",
+   "caption": "Illustration: Autonomous cyber defense models auditing cloud infrastructure for software vulnerabilities.",
+   "slot": "FIG2",
+   "src": "img/oracle-openai-partnership-vera-rubin-oci/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 44330,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "A semiconductor manufacturing cleanroom showing robotic mechanical arms handling high-performance wafer-scale microchips and processor dies under specialized ambient lighting.",
+   "alt": "Robotic machinery handling semiconductor chips in an advanced cleanroom facility.",
+   "caption": "Illustration: Specialized processor architectures and wafer-scale hardware powering high-speed cloud inference.",
+   "slot": "FIG3",
+   "src": "img/oracle-openai-partnership-vera-rubin-oci/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 59700,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://openai.com/index/oracle-apps-in-chatgpt/",
+   "title": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+   "site": "OpenAI",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://www.oracle.com/news/announcement/ai-world-oracle-reinvents-enterprise-computing-for-the-ai-era-with-openai-2026-10-27/",
+   "title": "Oracle Reinvents Enterprise Computing for the AI Era with OpenAI",
+   "site": "oracle.com",
+   "published": null,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://www.oracle.com/news/announcement/blog/ai-world-building-the-next-decade-of-oracle-cloud-infrastructure-2026-10-27/",
+   "title": "Building the Next Decade of Oracle Cloud Infrastructure",
+   "site": "oracle.com",
+   "published": null,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://convergedigest.com/oracle-ai-world-2026-acceleron-nvidia-google-cerebras-intel/",
+   "title": "Oracle Unveils AI Fabric and Multi-Gigawatt Expansion, Partnerships",
+   "site": "Converge Digest",
+   "published": 1793123808000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://www.unite.ai/oracle-expands-openai-partnership-with-four-enterprise-ai-offerings/",
+   "title": "Oracle Expands OpenAI Partnership With Four Enterprise AI Offerings",
+   "site": "Unite.AI",
+   "published": 1793119201000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://www.datacenterdynamics.com/en/news/nvidia-vera-rubin-and-vera-cpus-now-generally-available-on-oracle/",
+   "title": "Nvidia Vera Rubin and Vera CPUs now generally available on Oracle",
+   "site": "datacenterdynamics.com",
+   "published": 1793059200000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://seekingalpha.com/news/4658111-oracle-perks-up-on-wave-of-new-chip-partnerships-ahead-of-investor-day",
+   "title": "Oracle perks up on wave of new chip partnerships ahead of Investor Day",
+   "site": "seekingalpha.com",
+   "published": 1793119937000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1793149750246,
+ "updatedAt": 1793149750246,
+ "foundVia": "openai.com, Google News and Techmeme",
+ "check": {
+  "claims": 42,
+  "score": 10
+ },
+ "story": {
+  "id": "P26e8fed9",
+  "score": 94,
+  "items": [
+   "https://openai.com/index/oracle-apps-in-chatgpt",
+   "https://news.google.com/rss/articles/CBMitAFBVV95cUxQR2NVNktFbE9qMDdnX1B5dXBsS2RoRF9TMmUwZlVEcVBIamFmalNsc05lNWZIYWsyanpaSzFRNkphWW4tRHNMS2FucW9udWdKakhZWDNWX3I1YkJZajJwVmplUnF6QWRfT010eDMwQ2d6VW1Ob3NqZm1FQmRwLWNLUnVnTGZOVVQtdDZLUE5sNFhOYXJzUzlNeU9Dd0t6N3Z6czhzUmdrZUwtN0szeTIwRkRQd3k?oc=5",
+   "https://news.google.com/rss/articles/CBMigwFBVV95cUxPLVlhbnlEZWk5ODRPbzhqa19hanFXNWZHcHdfSnV3Y2JMWlQ2bVBxTkl1V09yRVFjeXJ0ekZROTVfQld6aFlsWVdjQU5xTnNPS0ZRdkdlaXJaUGRTOC1tc0hpOG1XMWZsdG4wbWFJR1lobmtyejVjYlh6emFpMkVZa1E0OA?oc=5",
+   "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNMkc2eEt1TWtsdGMyakwwbENvTldlM2tKNjJTb1RwSTdnbXgxOTVwWmRyTlVSeElfcmtGclZnbThpR05IOVQ2SmdxMlpZMVByMFRZU29aeVNXSHR3VWpZWDJ2M2FROFVwZlZOUkdFTXRKR0U3M1hCLTVNSE84V25YZnEwYXRkRTFPVXV0QWdZdzdSVnhtYzVLajlLQlo3bUFTRUc3VWtsUGswdWJraVQxXzU3MExyZGhpNmY0a2FCRUU4NE1Ma3lSYnFGbE41OTNnLUU1MmhaaWc5a25qMjVnTENtQ2JIbFRMTmt0blhfWQ?oc=5",
+   "https://www.techmeme.com/261027/p24#a261027p24"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
