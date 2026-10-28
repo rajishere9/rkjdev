@@ -1,0 +1,153 @@
+{
+ "slug": "oracle-cloud-adds-google-tpu-chatgpt",
+ "title": "Oracle Adds Google TPUs and ChatGPT to Cloud Infrastructure",
+ "seoTitle": "Oracle Cloud Adds Google TPUs and ChatGPT",
+ "description": "Oracle expands OCI by adding Google TPUs and OpenAI ChatGPT features, marking the first time Google provides its AI silicon to a rival hyperscaler.",
+ "dek": "Google's proprietary AI silicon arrives on a competing cloud for the first time alongside expanded OpenAI application workflows.",
+ "category": "Chips & Hardware",
+ "tags": [
+  "Oracle",
+  "Google Cloud",
+  "TPU",
+  "OpenAI",
+  "Cloud Computing",
+  "AI Hardware"
+ ],
+ "keyTakeaways": [
+  "Oracle Cloud Infrastructure (OCI) will begin deploying Google eighth-generation TPUs (TPU 8t and TPU 8i) in calendar year 2027.",
+  "The agreement marks the first time Google has supplied its custom Tensor Processing Units to a competing hyperscale cloud provider.",
+  "Oracle is simultaneously embedding OpenAI ChatGPT and Codex tools into enterprise workflows, while CNBC reported future support for OpenAI's Jalapeño and Cerebras wafer-scale chips.",
+  "OCI will connect Google TPU clusters using its proprietary Acceleron SmartNICs, optical circuit switching, and direct liquid cooling."
+ ],
+ "body": "At the Oracle AI World conference in Las Vegas on October 27, 2026, Oracle Corp. announced an expansion of its cloud services to host Google's custom Tensor Processing Units alongside new enterprise OpenAI features. The agreement represents the first time Google has agreed to supply its proprietary AI accelerators to an outside hyperscale cloud competitor. Deployments of Google TPUs on Oracle Cloud Infrastructure are scheduled to begin in calendar year 2027, expanding over a multi-year period as customer demand scales.\n\nAccording to an official announcement from [Google Cloud](https://cloud.google.com/blog/products/infrastructure/bringing-google-tpus-to-oracle-cloud-infrastructure), the deployment will incorporate Google's eighth-generation TPUs across Oracle's liquid-cooled data center footprint. Speaking on the partnership, Oracle Cloud Infrastructure President Mahesh Thiagarajan stated, \"Bringing Google TPUs to OCI gives customers access to multiple leading AI compute architectures in one cloud. That choice gives them the flexibility to choose the right infrastructure for the performance, throughput, and economics of each AI workload,\" as reported in [Oracle's announcement](https://www.oracle.com/news/announcement/ai-world-oracle-brings-google-tpus-to-oracle-cloud-infrastructure-2026-10-27/).\n\n## Google TPUs on Oracle Cloud: Silicon and Optical Architecture\n\nGoogle developed its first TPU over a decade ago, relying on co-designed silicon, compilers, and optical networking. The eighth-generation chips to be deployed on OCI deliver up to 12.6 PFLOPS of native FP4 compute per chip, offering more than 100 times the raw compute of the 92-TFLOPS TPU v1 and up to twice the performance per watt of the previous generation, according to Google Cloud.\n\n[[FIG1]]\n\nThe eighth-generation portfolio introduces two purpose-built architectures: TPU 8t for large-model training and TPU 8i for inference, as detailed by [Investing.com](https://www.investing.com/news/company-news/oracle-to-offer-google-tpus-on-cloud-infrastructure-in-2027-93CH-4976446). Google claims TPU 8t delivers nearly three times the compute performance per pod over its predecessor, supporting dense and mixture-of-experts (MoE) models, while TPU 8i handles multi-step reasoning and agentic tasks.\n\nInternally, Google's TPU clusters communicate across copper Inter-Chip Interconnects (ICI) and Optical Circuit Switching (OCS). As reported by [SiliconANGLE](https://siliconangle.com/2026/10/27/oracle-brings-googles-tpus-to-its-cloud-adds-chatgpt-integrations/), OCS employs tiny mechanical mirrors to steer light beams directly between recipient servers, skipping light-to-electricity-to-light conversions to lower power draw. Google reports that real-time optical fault rerouting sustains over 97% goodput on large training clusters. To tie those clusters into OCI storage and databases, Oracle will employ its proprietary Acceleron networking fabric, which relies on custom SmartNICs with hardware-isolated multitenancy and Zero Trust Packet Routing.\n\nOn the software side, Google highlighted that developers will not need to rewrite code to run on OCI-hosted TPUs. The company recently released TorchTPU, its open-source PyTorch stack, allowing teams to use frameworks such as vLLM, SGLang, Ray, TorchTitan, and Hugging Face directly on TPU hardware.\n\n## OpenAI Integrations and Third-Party Accelerators\n\nAlongside the Google TPU expansion, Oracle broadened its relationship with OpenAI by introducing several managed application services powered by ChatGPT and Codex, according to reporting from [Quartz](https://qz.com/oracle-openai-chatgpt-codex-google-tpu-102726).\n\n[[FIG2]]\n\nThe primary addition is Oracle AI Workspace, a system that connects ChatGPT directly to business data across Oracle Fusion Applications, Oracle NetSuite, and the Oracle AI Database. The integration allows workers to delegate multi-step administrative workflows to the chatbot, such as checking inventory, updating orders, and assessing financial impact. For software creation, Oracle introduced App Composer, an interface where non-technical employees build custom applications using OpenAI's Codex while Oracle automates backend cloud deployment.\n\nOracle also announced AI Security Mesh, a managed remediation tool that uses OpenAI cybersecurity models to scan and prioritize code vulnerabilities across hybrid cloud environments. For smaller enterprises, the company introduced the Oracle AI SMB Bundle, a package providing $12,000 in annual cloud credits alongside access to ChatGPT Business, App Composer, and NetSuite accounting tools.\n\nBeyond software, CNBC reported that Oracle plans to deploy OpenAI's custom Jalapeño inference processor and Cerebras Systems' wafer-scale chips. OpenAI stated in August that Jalapeño runs certain open-source models 1.5 times faster than competing silicon, while Cerebras offers wafer-scale processors containing trillions of transistors.\n\n## Hyperscaler Competition and Multi-Architecture Strategy\n\nOracle's multi-chip roadmap contrasts with the silicon strategies of rivals Amazon Web Services and Microsoft Azure. As highlighted by [24/7 Wall St.](https://247wallst.com/investing/2026/10/27/oracle-rises-5-as-google-tpus-come-to-oracle-cloud-and-nvidia-deal-expands-amazon-nudges-higher-microsoft-treads-water/), AWS focuses on internal Trainium chips and Microsoft deploys its custom Maia 200 accelerators. In contrast, Oracle is positioning OCI as a multi-architecture provider where customers can run workloads across Nvidia GPUs, Google TPUs, and OpenAI processors under a single roof.\n\nOracle emphasized that this partnership does not diminish its work with Nvidia. At the same conference, Oracle and Nvidia announced plans to scale OCI's Nvidia Vera Rubin superclusters to multi-gigawatt capacity, making Vera Rubin systems and Vera CPUs generally available. Mahesh Thiagarajan told CNBC that Nvidia GPUs remain \"the best, most fungible\" option, but noted that industry-wide supply constraints mean customers benefit from having multiple accelerator types.\n\nFinancial markets responded favorably on Tuesday, with Oracle shares climbing roughly 5% to trade around $132.28, while Google parent Alphabet rose 1.7% and Cerebras stock gained approximately 8%. The strategic gains come against heavy capital outlays: Oracle's first-quarter fiscal 2027 earnings showed cloud infrastructure revenue expanding 121% with $664 billion in remaining performance obligations, alongside $28.5 billion in capital expenditures and negative free cash flow of $5.4 billion.\n\nWith physical deployments of Google TPUs scheduled for 2027, Oracle must now execute on the data center buildouts and cooling capacity needed to bring Google's optical clusters online alongside its growing Nvidia infrastructure.",
+ "faq": [
+  {
+   "q": "When will Google TPUs become available on Oracle Cloud Infrastructure?",
+   "a": "Deployments of Google TPUs on OCI are scheduled to begin in calendar year 2027 and ramp over a multi-year period."
+  },
+  {
+   "q": "Which generation of Google TPUs is Oracle adding?",
+   "a": "Oracle is deploying Google's eighth-generation TPUs, which include the TPU 8t processor tailored for training and the TPU 8i processor optimized for inference workloads."
+  },
+  {
+   "q": "Is Oracle replacing Nvidia GPUs with Google TPUs?",
+   "a": "No. Oracle confirmed that Nvidia hardware remains central to its strategy, announcing general availability for Nvidia Vera Rubin systems and Vera CPUs alongside plans to expand Vera Rubin superclusters to multi-gigawatt scale."
+  },
+  {
+   "q": "What new OpenAI integrations did Oracle announce?",
+   "a": "Oracle introduced Oracle AI Workspace for ChatGPT-driven business workflows, App Composer for Codex-assisted app development, AI Security Mesh for vulnerability remediation, and the Oracle AI SMB Bundle."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern data center interior with illuminated server racks, glowing optical cables running overhead, visible direct liquid cooling tubes, and clean geometric architecture without logos or text.",
+  "alt": "A modern high-density data center room filled with liquid-cooled server racks and optical cabling",
+  "caption": "Illustration: High-density cloud infrastructure equipped with liquid cooling and optical interconnects designed for large-scale AI workloads.",
+  "src": "img/oracle-cloud-adds-google-tpu-chatgpt/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 62558,
+  "small": "img/oracle-cloud-adds-google-tpu-chatgpt/hero-640.webp",
+  "og": "img/oracle-cloud-adds-google-tpu-chatgpt/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/oracle-cloud-adds-google-tpu-chatgpt/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A close-up view of a custom silicon accelerator board mounted on a server rack sled, showing direct liquid cooling blocks, optical transceivers, and copper circuit traces.",
+   "alt": "A modular server board featuring custom computing silicon and liquid cooling hardware",
+   "caption": "Illustration: Custom accelerator hardware engineered with direct liquid cooling and high-bandwidth interconnects for distributed AI training.",
+   "slot": "FIG1",
+   "src": "img/oracle-cloud-adds-google-tpu-chatgpt/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 54324,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "Two enterprise software engineers working in a dimly lit operations room analyzing data flows and network routing schematics across multiple computer screens.",
+   "alt": "Software engineers collaborating around multi-screen displays showing system architecture schematics",
+   "caption": "Illustration: Enterprise engineers managing application workflows and distributed cloud infrastructure.",
+   "slot": "FIG2",
+   "src": "img/oracle-cloud-adds-google-tpu-chatgpt/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 36312,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://cloud.google.com/blog/products/infrastructure/bringing-google-tpus-to-oracle-cloud-infrastructure",
+   "title": "Google and Oracle are partnering to bring Google TPUs to Oracle Cloud Infrastructure",
+   "site": "Google Cloud",
+   "published": 1793059200000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://siliconangle.com/2026/10/27/oracle-brings-googles-tpus-to-its-cloud-adds-chatgpt-integrations/",
+   "title": "Oracle brings Google’s TPUs to its cloud, adds ChatGPT integrations",
+   "site": "SiliconANGLE",
+   "published": 1793144035000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://www.oracle.com/news/announcement/ai-world-oracle-brings-google-tpus-to-oracle-cloud-infrastructure-2026-10-27/",
+   "title": "Oracle Brings Google TPUs to Oracle Cloud Infrastructure",
+   "site": "oracle.com",
+   "published": null,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://qz.com/oracle-openai-chatgpt-codex-google-tpu-102726",
+   "title": "Oracle is embedding ChatGPT and Codex in its apps and adding Google AI chips",
+   "site": "qz.com",
+   "published": 1793059200000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://www.investing.com/news/company-news/oracle-to-offer-google-tpus-on-cloud-infrastructure-in-2027-93CH-4976446",
+   "title": "Oracle to offer Google TPUs on cloud infrastructure in 2027",
+   "site": "investing.com",
+   "published": 1793103120000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://247wallst.com/investing/2026/10/27/oracle-rises-5-as-google-tpus-come-to-oracle-cloud-and-nvidia-deal-expands-amazon-nudges-higher-microsoft-treads-water/",
+   "title": "Oracle Rises 5% as Google TPUs Come to Oracle Cloud and NVIDIA Deal Expands; Amazon Nudges Higher, Microsoft Treads Water",
+   "site": "24/7 Wall St.",
+   "published": 1793120543000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1793153379808,
+ "updatedAt": 1793153379808,
+ "foundVia": "Google News and siliconangle.com",
+ "check": {
+  "claims": 26,
+  "score": 10
+ },
+ "story": {
+  "id": "P78d10f8c",
+  "score": 88,
+  "items": [
+   "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQcWRibmpLV1RyczRyQ2RRMGZaeDVFbEZwNWhvMjZJY0Iwa1JnVHp4UWJHbi1CWTAxU0ZDaW9qMm5SeEd5LXczXzJvRXpGbmhWV2FMcDBISHpRSkRLQk94X3hPOWRjanJIb1J2ZzNpMm5TWTUtLVJSaVhmV242VFNrcE1IYmpTaWxLeFBiNUdnOVc4RE1FN3FQeGxDQ0p3YktNOS0xN1ExbHo?oc=5",
+   "https://siliconangle.com/2026/10/27/oracle-brings-googles-tpus-to-its-cloud-adds-chatgpt-integrations/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
