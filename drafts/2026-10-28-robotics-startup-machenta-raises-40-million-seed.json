@@ -1,0 +1,366 @@
+{
+ "reason": "fact-check failed: Edward Johns said in a statement released by BusinessCloud: 'Intelligence is not so much about what you can already do, it’s about how quickly you can learn to do something new... Humans don’t need to see the same thing over and over before they can do it. If you take some objects, and show somebody what to do with them, they’ll probably then be able to do the same task immediately.' | Vosylius and Johns founded Machenta to scale the technology, bringing researchers from their Imperial laboratory into the company, according to Vestbee.",
+ "story": {
+  "id": "P269395f3",
+  "headline": "Robotics Startup Machenta Raises $40 Million Seed Round for One-Shot Learning Foundation Models",
+  "firstSeen": 1793102584701,
+  "items": [
+   "https://www.businessinsider.com/this-11-person-startup-raised-40-million-train-robots-virtual-worlds-2026-10",
+   "https://news.google.com/rss/articles/CBMihAFBVV95cUxPUmYtbmN2OG5vNW96X2xtdGJuc1NPelVpc2ZlWkFjNzFCTkktVnhWMUJSMkV4eVk0M0luaEtlNW44TFU5bUNUVTQ1eFNWUlFtYUhHdkVpMmhiQXdQS1ljMVR0ZkhBbTVSbTY1RUEyRS1UV1ZHS2t2WW5qMC1waHdjZVd0dDM?oc=5",
+   "https://www.vestbee.com/insights/articles/machenta-lands-40-m",
+   "https://www.techmeme.com/261027/p21#a261027p21"
+  ],
+  "attempts": 1,
+  "importance": 75,
+  "summary": "London-based robotics startup Machenta has secured $40 million in seed funding to build foundation models that teach robots new physical tasks after a single observation. The technology aims to significantly accelerate physical AI capabilities in automated environments.",
+  "category": "Robotics",
+  "lastSeen": 1793113384482,
+  "update": false,
+  "updateOf": "",
+  "score": 84
+ },
+ "draft": {
+  "newsworthy": true,
+  "title": "Machenta Raises $40M Seed for Robot Foundation Models",
+  "seoTitle": "Machenta Raises $40M Seed for Robot Foundation Models",
+  "slug": "machenta-raises-40m-robot-foundation-models",
+  "description": "Imperial College London spinout Machenta raised $40M in seed funding to develop robot foundation models trained entirely in computer simulations.",
+  "dek": "The Imperial College London spinout secured $40 million to train robotics foundation models entirely in simulation without real-world training data.",
+  "category": "Robotics",
+  "tags": [
+   "Robotics",
+   "Machenta",
+   "Foundation Models",
+   "Artificial Intelligence",
+   "Synthetic Data"
+  ],
+  "keyTakeaways": [
+   "Machenta announced a $40 million (£30 million) seed round co-led by Creandum and Union Square Ventures.",
+   "The startup trains its foundation models purely in simulated environments without using real-world data.",
+   "The system allows robots to perform tasks such as packing, tidying, and assembling after observing a single demonstration.",
+   "The 11-person team remains focused on research at its King's Cross lab, with early access registration open online."
+  ],
+  "body": "On October 27, 2026, London-based physical AI startup Machenta announced a $40 million seed funding round to develop foundation models that allow robots to learn physical tasks after observing them just once. The investment, co-led by Creandum and Union Square Ventures alongside several angel investors, represents the largest seed funding round raised by a robotics enterprise in the United Kingdom, according to [Imperial College London](https://www.imperial.ac.uk/news/articles/2026/imperial-ai-spinout-machenta-raises-40-million-to-make-robots-instant-learners/).\n\nSpun out from Imperial College London late last year, Machenta is taking a different direction from the robotics sector's prevailing data-gathering practices. While major robotics developers invest heavily in amassing real-world demonstration data, Machenta develops algorithms that train foundation models completely inside computer-generated simulation environments.\n\n[[FIG1]]\n\n## Simulation Data Replaces Real-World Video Pipelines\n\nTeaching conventional physical AI systems often requires days or weeks of work, relying on hundreds or thousands of human demonstrations to automate a single task. In contrast, Machenta pre-trains its foundation models without using a \"single pixel of real-world data,\" co-founder and Chief Executive Officer Edward Johns told [Business Insider](https://www.businessinsider.com/this-11-person-startup-raised-40-million-train-robots-virtual-worlds-2026-10).\n\nInstead of real-world footage, Machenta generates simulated worlds designed to mimic how objects move and interact. After pre-training on these virtual dynamics, the system can interpret a real-world setting and instruct a robot to execute a task after watching a single human demonstration. Johns likened the workflow to a physical equivalent of vibe coding, as reported by [tech.eu](https://tech.eu/2026/10/27/london-robotics-startup-machenta-raises-40m-seed-investment/).\n\n\"Intelligence is not so much about what you can already do, it’s about how quickly you can learn to do something new,\" Johns said in a statement released by [BusinessCloud](https://businesscloud.co.uk/news/machenta-building-frontier-ai-for-robots-raises-30m/). \"Humans don’t need to see the same thing over and over before they can do it. If you take some objects, and show somebody what to do with them, they’ll probably then be able to do the same task immediately.\"\n\n[[FIG2]]\n\n## Academic Research Background and Technical Limits\n\nThe underlying system builds on six years of research at the Imperial College Robot Learning Lab led by Johns, a professor of robot learning in the university's Department of Computing. In early university experiments, researchers guided a robotic arm through a motion manually, such as using a spatula to lift an item. The machine then required roughly 30 minutes of additional environment data collection before it could operate autonomously.\n\nJohns and his former doctoral student Vitalis Vosylius subsequently developed in-context learning algorithms for robotics, adapting techniques that power large language models to physical hardware. Vosylius and Johns founded Machenta to scale the technology, bringing researchers from their Imperial laboratory into the company, according to [Vestbee](https://www.vestbee.com/insights/articles/machenta-lands-40-m). The company has shown that a single underlying model can execute tasks like packaging, assembling, and tidying across multiple platforms, including humanoid hardware.\n\nMachenta has also noted present limits to its technology. Johns told Business Insider that while the model handles tasks like tidying tables and packing boxes, high-precision tasks and complex movements remain difficult challenges.\n\n## Competition in the Physical AI Market\n\nMachenta operates in an increasingly well-funded field featuring heavily capitalized American competitors, as reported by [Business Insider](https://www.businessinsider.com/this-11-person-startup-raised-40-million-train-robots-virtual-worlds-2026-10). California-based developer Physical Intelligence holds a valuation of roughly $11 billion, FieldAI is raising funding at a $10 billion valuation, and Skild AI is valued at more than $14 billion.\n\nSkild AI has already introduced commercial products with single-demonstration features. In August 2026, Skild launched a model designed to carry out previously unseen tasks lasting up to 10 minutes from a single video demonstration. In September 2026, Skild announced it had reached $100 million in annual recurring revenue across more than 60 enterprise clients.\n\nBy comparison, Machenta has kept its corporate valuation private and stated it has no immediate plans to commercialize its system, choosing to prioritize foundational research.\n\n## Early Access and Laboratory Expansion\n\nMachenta will use the $40 million seed funding to expand its team and train its model with additional compute and simulated data, while growing operations at its King's Cross office and lab in London, according to [Imperial College London](https://www.imperial.ac.uk/news/articles/2026/imperial-ai-spinout-machenta-raises-40-million-to-make-robots-instant-learners/).\n\nAlthough commercial deployment is not scheduled, the startup has opened a waitlist for developers and hardware teams. Through the company's official website at [machenta.com](https://machenta.com/), prospective users can register their target robot hardware and intended manipulation tasks for future access to the model.",
+  "faq": [
+   {
+    "q": "What is Machenta?",
+    "a": "Machenta is a London-based robotics startup spun out of Imperial College London that develops robot foundation models capable of learning tasks from a single demonstration."
+   },
+   {
+    "q": "How does Machenta train its robot models?",
+    "a": "Machenta trains its foundation models entirely inside computer-generated simulation environments without using real-world video or human demonstration data."
+   },
+   {
+    "q": "Who invested in Machenta's seed round?",
+    "a": "The $40 million seed round was co-led by venture capital firms Creandum and Union Square Ventures, alongside angel investors."
+   },
+   {
+    "q": "Is Machenta's software commercially available?",
+    "a": "Machenta has no near-term commercial deployment plans, but developers and robotics teams can register on its website for early access."
+   }
+  ],
+  "hero": {
+   "marker": "HERO",
+   "type": "ai",
+   "prompt": "An industrial robotic arm picking up and positioning a cardboard box on an automated assembly line workstation, viewed from the side.",
+   "alt": "An illustration of a robotic arm handling a cardboard box.",
+   "caption": "An illustration of a robotic system performing an automated packaging task."
+  },
+  "figures": [
+   {
+    "marker": "FIG1",
+    "type": "ai",
+    "prompt": "A digital three-dimensional simulation showing geometric objects, tables, and mechanical arms moving in a virtual computer space.",
+    "alt": "An illustration of a computer-generated simulation environment for robotics.",
+    "caption": "An illustration of simulated virtual environments used to train robotics algorithms."
+   },
+   {
+    "marker": "FIG2",
+    "type": "ai",
+    "prompt": "A robotics researcher standing beside a robotic manipulator on a workbench in a bright engineering facility.",
+    "alt": "An illustration of a robotics researcher standing next to a robotic manipulator.",
+    "caption": "An illustration of a researcher working alongside a robotic manipulator."
+   }
+  ],
+  "sourcesUsed": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ]
+ },
+ "check": {
+  "claims": [
+   {
+    "claim": "Machenta raised a $40 million seed round to build robot foundation models.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "Machenta is an Imperial College London spinout that secured $40 million to train robotics foundation models entirely in simulation without real-world training data.",
+    "status": "supported",
+    "source": 2,
+    "fix": ""
+   },
+   {
+    "claim": "Machenta raised a £30 million ($40 million) seed round co-led by Creandum and Union Square Ventures.",
+    "status": "supported",
+    "source": 5,
+    "fix": ""
+   },
+   {
+    "claim": "Machenta trains its foundation models purely in simulated environments without using real-world data.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "The system allows robots to perform tasks such as packing, tidying, and assembling after observing a single demonstration.",
+    "status": "supported",
+    "source": 4,
+    "fix": ""
+   },
+   {
+    "claim": "Machenta has an 11-person team focused on research at its King's Cross lab, with early access registration open online.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "On October 27, 2026, London-based physical AI startup Machenta announced a $40 million seed funding round to develop foundation models that allow robots to learn physical tasks after observing them just once.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "The investment was co-led by Creandum and Union Square Ventures alongside several angel investors.",
+    "status": "supported",
+    "source": 6,
+    "fix": ""
+   },
+   {
+    "claim": "The funding round represents the largest seed funding round raised by a robotics enterprise in the United Kingdom, according to Imperial College London.",
+    "status": "supported",
+    "source": 2,
+    "fix": ""
+   },
+   {
+    "claim": "Machenta was spun out from Imperial College London late last year.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "While major robotics developers invest heavily in amassing real-world demonstration data, Machenta develops algorithms that train foundation models completely inside computer-generated simulation environments.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "Teaching conventional physical AI systems often requires days or weeks of work, relying on hundreds or thousands of human demonstrations to automate a single task.",
+    "status": "supported",
+    "source": 5,
+    "fix": ""
+   },
+   {
+    "claim": "Machenta pre-trains its foundation models without using a 'single pixel of real-world data,' co-founder and CEO Edward Johns told Business Insider.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "Instead of real-world footage, Machenta generates simulated worlds designed to mimic how objects move and interact.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "After pre-training on virtual dynamics, the system can interpret a real-world setting and instruct a robot to execute a task after watching a single human demonstration.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "Edward Johns likened the workflow to a physical equivalent of vibe coding, as reported by tech.eu.",
+    "status": "supported",
+    "source": 4,
+    "fix": ""
+   },
+   {
+    "claim": "Edward Johns said in a statement released by BusinessCloud: 'Intelligence is not so much about what you can already do, it’s about how quickly you can learn to do something new... Humans don’t need to see the same thing over and over before they can do it. If you take some objects, and show somebody what to do with them, they’ll probably then be able to do the same task immediately.'",
+    "status": "contradicted",
+    "source": 5,
+    "fix": "Change 'released by BusinessCloud' to 'reported by BusinessCloud' (BusinessCloud is a news publication that reported Johns's statement, rather than releasing it)."
+   },
+   {
+    "claim": "The underlying system builds on six years of research at the Imperial College Robot Learning Lab led by Johns, a professor of robot learning in the university's Department of Computing.",
+    "status": "supported",
+    "source": 2,
+    "fix": ""
+   },
+   {
+    "claim": "In early university experiments, researchers guided a robotic arm through a motion manually, such as using a spatula to lift an item, after which the robot required roughly 30 minutes of additional environment data collection before performing the task autonomously.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "Johns and his former doctoral student Vitalis Vosylius developed in-context learning algorithms for robotics, adapting techniques that power large language models to physical hardware.",
+    "status": "supported",
+    "source": 5,
+    "fix": ""
+   },
+   {
+    "claim": "Vosylius and Johns founded Machenta to scale the technology, bringing researchers from their Imperial laboratory into the company, according to Vestbee.",
+    "status": "contradicted",
+    "source": 6,
+    "fix": "Attribute to Imperial College London (Source 2) or BusinessCloud (Source 5) instead of Vestbee, as Vestbee does not mention bringing lab researchers into the company."
+   },
+   {
+    "claim": "The company has shown that a single underlying model can execute tasks like packaging, assembling, and tidying across multiple platforms, including humanoid hardware.",
+    "status": "supported",
+    "source": 2,
+    "fix": ""
+   },
+   {
+    "claim": "Johns told Business Insider that while the model handles tasks like tidying tables and packing boxes, high-precision tasks and complex movements remain difficult challenges.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "Competitor Physical Intelligence holds a valuation of roughly $11 billion, FieldAI is raising funding at a $10 billion valuation, and Skild AI is valued at more than $14 billion.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "In August 2026, Skild launched a model designed to carry out previously unseen tasks lasting up to 10 minutes from a single video demonstration.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "In September 2026, Skild announced it had reached $100 million in annual recurring revenue across more than 60 customers.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "Machenta has kept its corporate valuation private and stated it has no immediate plans to commercialize its system, choosing to prioritize foundational research.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "Machenta will use the $40 million seed funding to expand its team and train its model with additional compute and simulated data, while growing operations at its King's Cross office and lab in London.",
+    "status": "supported",
+    "source": 2,
+    "fix": ""
+   },
+   {
+    "claim": "Through machenta.com, prospective users can register their target robot hardware and intended manipulation tasks for future access to the model.",
+    "status": "supported",
+    "source": 3,
+    "fix": ""
+   },
+   {
+    "claim": "Machenta is a London-based robotics startup spun out of Imperial College London that develops robot foundation models capable of learning tasks from a single demonstration.",
+    "status": "supported",
+    "source": 2,
+    "fix": ""
+   },
+   {
+    "claim": "Machenta trains its foundation models entirely inside computer-generated simulation environments without using real-world video or human demonstration data.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "The $40 million seed round was co-led by venture capital firms Creandum and Union Square Ventures, alongside angel investors.",
+    "status": "supported",
+    "source": 6,
+    "fix": ""
+   },
+   {
+    "claim": "Machenta has no near-term commercial deployment plans, but developers and robotics teams can register on its website for early access.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   },
+   {
+    "claim": "Captions describe simulated virtual environments, automated packaging tasks, and researchers working with robotic manipulators.",
+    "status": "supported",
+    "source": 1,
+    "fix": ""
+   }
+  ],
+  "recent": true,
+  "score": 9
+ },
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://www.businessinsider.com/this-11-person-startup-raised-40-million-train-robots-virtual-worlds-2026-10",
+   "title": "This 11-person startup raised $40 million to train robots in virtual worlds",
+   "site": "Business Insider",
+   "official": false,
+   "primary": false,
+   "published": 1793095201465,
+   "text": "Exclusive\n \n \n \n \n \n \n \n An 11-person startup raised $40 million to challenge robotics' data-hungry giants\n \n \n \n \n \n \n By\n \n \n \n \n \n \n Rya Jetha \n \n \n \n \n \n You're currently following this author!\n Click to unsubscribe from email alerts.\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n Machenta cofounders Edward Johns and Vitalis Vosylius\n \n Oscar May \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n"
+  },
+  {
+   "n": 2,
+   "url": "https://www.imperial.ac.uk/news/articles/2026/imperial-ai-spinout-machenta-raises-40-million-to-make-robots-instant-learners/",
+   "title": "Imperial AI spinout Machenta raises $40 million to make robots instant learners",
+   "site": "Imperial College London",
+   "official": false,
+   "primary": true,
+   "published": 1793099400000,
+   "text": "A physical AI spinout from Imperial College London has secured record-breaking seed funding to develop a new kind of robot foundation model building on the founders’ research at Imperial.\r\n Machenta has raised $40 million in the largest ever seed raise by a UK robotics startup. The funding round led by Creandum and Union Square Ventures will help the company scale an AI model that enables robots t"
+  },
+  {
+   "n": 3,
+   "url": "https://machenta.com/",
+   "title": "Machenta | Instant Robot Learning",
+   "site": "machenta.com",
+   "official": false,
+   "primary": true,
+   "published": null,
+   "text": "Navigation:\n- Home\n- Vision\n- Team\n- Blog\n- Sound\n\nMain Content:\nInstant Robot Learning.\n\nWe're a frontier AI company, building a new kind of robot foundation model. One demonstration, no further training. Welcome to the era of Instant Robot Learning.\n\nFunding:\nAnnouncing our $40M Seed round, co-led by:\n- Creandum\n- USV\n\nMission & Approach:\n\"The measure of intelligence is not what you can do. It's"
+  },
+  {
+   "n": 4,
+   "url": "https://tech.eu/2026/10/27/london-robotics-startup-machenta-raises-40m-seed-investment/",
+   "title": "London robotics startup Machenta raises $40M seed investment",
+   "site": "tech.eu",
+   "official": false,
+   "primary": false,
+   "published": 1793059200000,
+   "text": "Author: John Reynolds\nTopic: Artificial Intelligence / ai, robots, London\n\nSummary Strapline:\nMachenta likens its tech to \"physical vibe coding\".\n\nKey Facts and Details:\n- Startup: Machenta, a London robotics startup.\n- Announcement: The company emerged out of stealth and announced the funding round.\n- Funding amount: $40 million seed round.\n- Investors: Co-led by Creandum and Union Square Venture"
+  },
+  {
+   "n": 5,
+   "url": "https://businesscloud.co.uk/news/machenta-building-frontier-ai-for-robots-raises-30m/",
+   "title": "Machenta, building frontier AI for robots, raises £30m",
+   "site": "BusinessCloud",
+   "official": false,
+   "primary": false,
+   "published": 1793145477000,
+   "text": "InvestmentMachenta, a frontier AI company building a new kind of foundation model for robots, has raised a £30 million seed round co-led by Creandum and Union Square Ventures.\nPeople are remarkably good at learning new physical tasks: show someone how to do something once and, in many cases, they can do it straight away. However, robots today are very different, and teaching them a new task usuall"
+  },
+  {
+   "n": 6,
+   "url": "https://www.vestbee.com/insights/articles/machenta-lands-40-m",
+   "title": "UK's robotics firm Machenta lands $40M to teach robots from a single demonstration",
+   "site": "Vestbee",
+   "official": false,
+   "primary": false,
+   "published": 1793108494516,
+   "text": "London-based robotics startup Machenta has come out of stealth with a $40 million in a seed round co-led by Creandum and Union Square Ventures, with several angel investors also taking part. The company says it is the largest seed round ever raised by a UK robotics company.Machenta was founded by Edward Johns, Professor of Robot Learning at Imperial College London, and his PhD student Vitalis Vosy"
+  }
+ ]
+}
