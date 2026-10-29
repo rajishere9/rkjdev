@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NVIDIA Releases Nemotron 3.5 Transcribe Speech Model | rkj dev</title>
+<meta name="description" content="NVIDIA released Nemotron 3.5 Transcribe, an open-weight 30B speech model handling 40 languages, speaker attribution, and audio question answering.">
+<link rel="canonical" href="https://www.rkjdev.com/blog/nvidia-nemotron-3-5-transcribe-speech-model/">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#110b14">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta property="og:site_name" content="rkj dev Blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NVIDIA Releases Nemotron 3.5 Transcribe Speech Model | rkj dev">
+<meta property="og:description" content="NVIDIA released Nemotron 3.5 Transcribe, an open-weight 30B speech model handling 40 languages, speaker attribution, and audio question answering.">
+<meta property="og:url" content="https://www.rkjdev.com/blog/nvidia-nemotron-3-5-transcribe-speech-model/">
+<meta property="og:image" content="https://www.rkjdev.com/blog/img/nvidia-nemotron-3-5-transcribe-speech-model/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://www.rkjdev.com/blog/img/nvidia-nemotron-3-5-transcribe-speech-model/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NVIDIA Releases Nemotron 3.5 Transcribe Speech Model | rkj dev">
+<meta name="twitter:description" content="NVIDIA released Nemotron 3.5 Transcribe, an open-weight 30B speech model handling 40 languages, speaker attribution, and audio question answering.">
+<link rel="alternate" type="application/rss+xml" title="rkj dev Blog" href="/blog/feed.xml">
+<link rel="alternate" type="application/feed+json" title="rkj dev Blog" href="/blog/feed.json">
+<link rel="icon" href="/favicon.svg?v=bdff7dc5" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,40;1,9..144,400..600,40&family=Schibsted+Grotesk:ital,wght@0,400..600;1,400..600&display=swap">
+<link rel="stylesheet" href="/site.css?v=e85724ed">
+<link rel="stylesheet" href="/blog/blog.css?v=7ad332ef">
+<meta property="article:published_time" content="2026-10-29T01:21:05.241Z">
+<meta property="article:modified_time" content="2026-10-29T01:21:05.241Z">
+<meta property="article:section" content="AI Models">
+<meta property="article:tag" content="NVIDIA">
+<meta property="article:tag" content="Nemotron 3.5 Transcribe">
+<meta property="article:tag" content="Speech Recognition">
+<meta property="article:tag" content="Open Source AI">
+<meta property="article:tag" content="Audio Processing">
+<link rel="preload" as="image" href="/blog/img/nvidia-nemotron-3-5-transcribe-speech-model/hero.webp" imagesrcset="/blog/img/nvidia-nemotron-3-5-transcribe-speech-model/hero-640.webp 640w, /blog/img/nvidia-nemotron-3-5-transcribe-speech-model/hero.webp 1200w" imagesizes="(max-width: 760px) 100vw, 1200px">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"NVIDIA Releases Nemotron 3.5 Transcribe Open Speech Recognition Model","description":"NVIDIA released Nemotron 3.5 Transcribe, an open-weight 30B speech model handling 40 languages, speaker attribution, and audio question answering.","url":"https://www.rkjdev.com/blog/nvidia-nemotron-3-5-transcribe-speech-model/","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.rkjdev.com/blog/nvidia-nemotron-3-5-transcribe-speech-model/"},"inLanguage":"en","isAccessibleForFree":true,"image":["https://www.rkjdev.com/blog/img/nvidia-nemotron-3-5-transcribe-speech-model/og.jpg","https://www.rkjdev.com/blog/img/nvidia-nemotron-3-5-transcribe-speech-model/hero.webp"],"datePublished":"2026-10-29T01:21:05.241Z","dateModified":"2026-10-29T01:21:05.241Z","articleSection":"AI Models","keywords":"NVIDIA, Nemotron 3.5 Transcribe, Speech Recognition, Open Source AI, Audio Processing","wordCount":863,"thumbnailUrl":"https://www.rkjdev.com/blog/img/nvidia-nemotron-3-5-transcribe-speech-model/hero-640.webp","author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","@id":"https://www.rkjdev.com/#labs","name":"RKJDEV Labs","url":"https://www.rkjdev.com/","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/apple-touch-icon.png","width":180,"height":180}},"isPartOf":{"@id":"https://www.rkjdev.com/#website"},"isBasedOn":["https://huggingface.co/blog/nvidia/nemotron-transcribe-granary","https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/","https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B","https://the-decoder.com/nvidias-open-nemotron-3-5-transcribe-combines-transcription-translation-and-speaker-recognition/","https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model/","https://siliconangle.com/2026/10/28/nvidia-releases-all-in-one-adaptable-nemotron-3-5-audio-transcription-and-translation-model/"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"AI Models","item":"https://www.rkjdev.com/blog/category/ai-models/"},{"@type":"ListItem","position":3,"name":"NVIDIA Releases Nemotron 3.5 Transcribe Open Speech Recognition Model","item":"https://www.rkjdev.com/blog/nvidia-nemotron-3-5-transcribe-speech-model/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What languages does Nemotron 3.5 Transcribe support?","acceptedAnswer":{"@type":"Answer","text":"The model transcribes 40 languages (including seven Indic languages), translates 31 languages to and from English, and performs speaker attribution in 13 languages. Audio question answering is trained in English."}},{"@type":"Question","name":"Can Nemotron 3.5 Transcribe be used for real-time live streaming audio?","acceptedAnswer":{"@type":"Answer","text":"No. NVIDIA explicitly designed Nemotron 3.5 Transcribe for offline processing of recorded audio up to one hour in length, rather than live audio streams."}},{"@type":"Question","name":"What hardware is required to run the model?","acceptedAnswer":{"@type":"Answer","text":"The model can be served in full precision on a single 80GB H100 GPU using vLLM. Quantized NVFP4 and FP8 variants run on single-chip platforms including RTX PRO 6000 Blackwell GPUs, while running quantized variants locally on RTX Spark laptops, DGX Spark systems, and Jetson AGX Thor devices is coming soon."}},{"@type":"Question","name":"Under what license is Nemotron 3.5 Transcribe released?","acceptedAnswer":{"@type":"Answer","text":"The model weights and related artifacts are released under the OpenMDW-1.1 license, permitting commercial and non-commercial development."}}]}]</script>
+</head>
+<body class="post">
+<div class="progress" aria-hidden="true"><span></span></div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="mark" href="/">rkj dev</a>
+    <nav aria-label="Site">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <article class="article">
+    <header class="post-head wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/category/ai-models/">AI Models</a></nav>
+      <h1>NVIDIA Releases Nemotron 3.5 Transcribe Open Speech Recognition Model</h1>
+      <p class="standfirst">The promptable, open-weight model combines transcription, speaker attribution, translation, and audio understanding into a single mixture-of-experts checkpoint.</p>
+      <div class="byline">
+        <span class="by">rkj dev newsroom</span>
+        <span><time datetime="2026-10-29T01:21:05.241Z" class="abs" data-rel>Oct 29, 2026</time></span>
+        <span>4 min read</span>
+        <a href="#sources">6 sources, fact-checked</a>
+      </div>
+    </header>
+    <div class="hero-wrap wrap"><figure class="hero-fig is-ai">
+  <div class="img"><img src="/blog/img/nvidia-nemotron-3-5-transcribe-speech-model/hero.webp" srcset="/blog/img/nvidia-nemotron-3-5-transcribe-speech-model/hero-640.webp 640w, /blog/img/nvidia-nemotron-3-5-transcribe-speech-model/hero.webp 1200w" sizes="(max-width: 760px) 100vw, 1200px" width="1200" height="675" alt="Illustration of several business professionals conversing in a conference room meeting." fetchpriority="high" decoding="async"></div>
+  <figcaption><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure></div>
+    <div class="layout wrap">
+      <aside class="rail" aria-label="On this page">
+        <nav class="toc"><p>Contents</p><ol><li><a href="#architecture-and-promptable-capabilities">Architecture and Promptable Capabilities</a></li><li><a href="#benchmark-performance-across-speech-and-diarization">Benchmark Performance Across Speech and Diarization</a></li><li><a href="#granary-v2-pipeline-and-domain-fine-tuning">Granary v2 Pipeline and Domain Fine-Tuning</a></li><li><a href="#hardware-support-and-deployment">Hardware Support and Deployment</a></li></ol></nav>
+        <div class="share">
+          <p>Share</p>
+          <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fnvidia-nemotron-3-5-transcribe-speech-model%2F&text=NVIDIA%20Releases%20Nemotron%203.5%20Transcribe%20Open%20Speech%20Recognition%20Model" target="_blank" rel="noopener">X</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fnvidia-nemotron-3-5-transcribe-speech-model%2F" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://wa.me/?text=NVIDIA%20Releases%20Nemotron%203.5%20Transcribe%20Open%20Speech%20Recognition%20Model%20https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fnvidia-nemotron-3-5-transcribe-speech-model%2F" target="_blank" rel="noopener">WhatsApp</a>
+          <button type="button" data-copy="https://www.rkjdev.com/blog/nvidia-nemotron-3-5-transcribe-speech-model/">Copy link</button>
+        </div>
+      </aside>
+      <div class="prose">
+        <section class="inshort" aria-labelledby="tk">
+          <h2 id="tk">In short</h2>
+          <ul><li>Nemotron 3.5 Transcribe is an open-weight speech model handling transcription across 40 languages, translation across 31, and speaker diarization across 13.</li><li>Built on a hybrid Mamba-Transformer mixture-of-experts design, the model activates roughly 4.3 billion parameters per token out of 30B to 34B total.</li><li>The model placed first among open-weight systems on the Hugging Face Open ASR Leaderboard for English and led speaker attribution on VoiceArena and David AI benchmarks.</li><li>NVIDIA also released the open Granary v2 dataset manifest covering 463,062 hours of speech data alongside NeMo Speech fine-tuning recipes.</li></ul>
+        </section>
+        <p>NVIDIA on October 28, 2026, released Nemotron 3.5 Transcribe, an open-weight speech recognition model capable of transcribing 40 languages, translating between 31 languages and English, and separating up to eight speakers in 13 languages. Rather than relying on separate pipelines for acoustic decoding, diarization, and text formatting, the model consolidates transcription, speaker attribution, speech translation, and spoken question answering into a single promptable checkpoint under the OpenMDW-1.1 license.</p>
+<p>Announced alongside the new <a href="https://huggingface.co/blog/nvidia/nemotron-transcribe-granary" target="_blank" rel="noopener">Granary v2 dataset manifest</a>, the release targets speech workflows in enterprise meetings, customer support analytics, and medical documentation. The release arrives during an active cycle for open speech technology, following releases like Mistral&#39;s Voxtral 3 and Salesforce&#39;s Launa-Omni, as documented by <a href="https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model/" target="_blank" rel="noopener">TechCrunch</a>.</p>
+<h2 id="architecture-and-promptable-capabilities">Architecture and Promptable Capabilities</h2>
+<p>Traditional speech stacks route audio through specialized speech-to-text encoders, downstream diarization classifiers, and large language models for summarization. According to <a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B" target="_blank" rel="noopener">NVIDIA&#39;s Hugging Face model card</a>, Nemotron 3.5 Transcribe operates as a unified Speech-Augmented Language Model (SALM). It pairs a parallel expert audio encoder with a Mamba-2 and Transformer hybrid mixture-of-experts (MoE) backbone.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/nvidia-nemotron-3-5-transcribe-speech-model/figure-1.webp" width="1200" height="670" alt="Illustration of a doctor and medical students discussing clinical notes in an office." loading="lazy" decoding="async"></div>
+  <figcaption><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<p>The full architecture spans 30 billion to 34 billion total parameters, but activates only about 4 billion to 4.3 billion parameters per token. This allows the model to process audio recordings up to one hour long across a 65,536-token context window. To label distinct speakers without post-processing, Sortformer speaker cues feed directly into the language model alongside acoustic features.</p>
+<p>Developers guide output through natural language instructions without retraining. A single audio file can yield a verbatim transcript preserving verbal pauses, a cleaned inverse-text-normalized script converting spoken numbers to digits, an English translation, or answers to conversational queries about the recording. For specialized fields, prompts can also include vocabulary hints, such as drug names, which the model incorporates only when acoustic evidence supports them.</p>
+<p>NVIDIA emphasized that Nemotron 3.5 Transcribe is an offline processing model designed for recorded audio, not a live streaming speech-to-text service.</p>
+<h2 id="benchmark-performance-across-speech-and-diarization">Benchmark Performance Across Speech and Diarization</h2>
+<p>On public evaluations cited in the <a href="https://huggingface.co/blog/nvidia/nemotron-transcribe-granary" target="_blank" rel="noopener">Hugging Face release notes</a>, Nemotron 3.5 Transcribe achieved top rankings among open-weight architectures.</p>
+<p>On the Hugging Face Open ASR Leaderboard, the model placed first among open models in English with a 5.33% average word error rate (WER). In multilingual evaluations across seven languages, it recorded a 4.62% mean WER, and scored 10.98% on long-form audio sets. On the Artificial Analysis Speech-to-Text Leaderboard, it registered a 2.8% AA-WER, placing on the accuracy–active-parameter Pareto frontier by matching the accuracy of 24-billion-parameter systems while using roughly one-sixth of the active parameters. Independent outlet <a href="https://the-decoder.com/nvidias-open-nemotron-3-5-transcribe-combines-transcription-translation-and-speaker-recognition/" target="_blank" rel="noopener">The Decoder</a> noted that the model scored 2.81% in Artificial Analysis&#39;s testing, placing slightly behind Mistral&#39;s Voxtral Small (2.77%) while requiring far fewer active parameters.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/nvidia-nemotron-3-5-transcribe-speech-model/figure-2.webp" width="1200" height="670" alt="Illustration of a university instructor speaking to students in a lecture hall." loading="lazy" decoding="async"></div>
+  <figcaption><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<p>In speaker attribution benchmarks, the model led across multiple evaluations:</p>
+<ul>
+<li><strong>David AI DAI-ASR-I18N:</strong> Posted the lowest diarization error rate across 21 languages at 18.26%, edging out NVIDIA&#39;s standalone Nemotron 3 Diarization model (18.38%).</li>
+<li><strong>VoiceArena Diarization-Bench:</strong> Ranked first among 14 systems in English full-session tests at 32.4% concatenated minimum-permutation WER (cpWER), dropping 8.32% of reference words against a benchmark median deletion rate of 31%.</li>
+<li><strong>Overlap Handling:</strong> Accurately maintained speaker tags during rapid, overlapping speech segments, demonstrated in historical multi-speaker film dialogue.</li>
+</ul>
+<h2 id="granary-v2-pipeline-and-domain-fine-tuning">Granary v2 Pipeline and Domain Fine-Tuning</h2>
+<p>Alongside the model weights, NVIDIA introduced Granary v2, an open data curation pipeline constructed with NVIDIA NeMo Curator. As outlined by <a href="https://siliconangle.com/2026/10/28/nvidia-releases-all-in-one-adaptable-nemotron-3-5-audio-transcription-and-translation-model/" target="_blank" rel="noopener">SiliconANGLE</a>, the public Granary v2 manifest includes 463,062 hours of transcribed audio across 48 languages drawn from 16 source corpora, expanding from 25 languages in Granary v1. While The Decoder noted total speech assets of roughly 844,000 hours in the broader collection, NVIDIA&#39;s official documentation defines the initial manifest release at 463,062 hours.</p>
+<p>The pipeline automates the generation of three distinct transcript targets: verbatim text, inverse text normalization with fillers, and cleaned normalized text without disfluencies. It also generates entity hints, question-answering pairs, and code-switching markers across four processing stages: Audio Preparation, Transcription, Task Label Generation, and High Fidelity filtering.</p>
+<p>To show how teams can adapt the model to specialized terminology, NVIDIA published an adaptation case study based on Eka Care&#39;s Indian medical speech benchmark. Out of the box, standard decoding showed a 30.8% WER. Prompting the model with script and language formatting dropped the error rate to 23.8%. Applying LoRA fine-tuning across the language model and tuning the audio encoder with synthetic speech and clinical samples brought benchmark WER down to 11.8%. On held-out speakers, fine-tuning reduced WER from 22.44% to 12.17%—a 45.8% relative error reduction achieved in 14 GPU hours on a single NVIDIA GB300 system.</p>
+<h2 id="hardware-support-and-deployment">Hardware Support and Deployment</h2>
+<p>Nemotron 3.5 Transcribe weights are available on Hugging Face and ModelScope in full-precision BF16, alongside FP8 and NVFP4 quantized variants.</p>
+<p>Serving benchmarks provided by NVIDIA indicate that an RTX PRO 6000 Blackwell Server Edition running NVFP4 precision can transcribe 100 hours of audio in under three minutes at high concurrency. For enterprise deployment, the model can be served using vLLM on a single 80GB H100 GPU. As detailed in the <a href="https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/" target="_blank" rel="noopener">NVIDIA Blog</a>, quantized versions for running Transcribe locally on RTX Spark laptops, DGX Spark systems, and Jetson AGX Thor devices are coming soon, with local C++ runtime support via NeMo-Speech.cpp scheduled for future updates.</p>
+
+        <section class="faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Questions people ask</h2>
+          <details open><summary>What languages does Nemotron 3.5 Transcribe support?</summary><p>The model transcribes 40 languages (including seven Indic languages), translates 31 languages to and from English, and performs speaker attribution in 13 languages. Audio question answering is trained in English.</p></details>
+<details><summary>Can Nemotron 3.5 Transcribe be used for real-time live streaming audio?</summary><p>No. NVIDIA explicitly designed Nemotron 3.5 Transcribe for offline processing of recorded audio up to one hour in length, rather than live audio streams.</p></details>
+<details><summary>What hardware is required to run the model?</summary><p>The model can be served in full precision on a single 80GB H100 GPU using vLLM. Quantized NVFP4 and FP8 variants run on single-chip platforms including RTX PRO 6000 Blackwell GPUs, while running quantized variants locally on RTX Spark laptops, DGX Spark systems, and Jetson AGX Thor devices is coming soon.</p></details>
+<details><summary>Under what license is Nemotron 3.5 Transcribe released?</summary><p>The model weights and related artifacts are released under the OpenMDW-1.1 license, permitting commercial and non-commercial development.</p></details>
+        </section>
+        <section class="sources" id="sources" aria-labelledby="src-title">
+          <h2 id="src-title">Sources</h2>
+          <ol><li><a href="https://huggingface.co/blog/nvidia/nemotron-transcribe-granary" target="_blank" rel="noopener">NVIDIA Nemotron 3.5 Transcribe and Granary v2: Intelligent Multilingual Transcription You Can Prompt and Adapt</a><span>Hugging Face, Oct 28, 2026, <b class="official">official source</b></span></li><li><a href="https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/" target="_blank" rel="noopener">Thin, Light and Built for Everything: NVIDIA RTX Spark Windows Laptops Gain New Models, Agent Tools and Games</a><span>NVIDIA Blog, Oct 28, 2026, <b class="official">official source</b></span></li><li><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B" target="_blank" rel="noopener">nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B</a><span>Hugging Face, Oct 7, 2026, <b class="official">official source</b></span></li><li><a href="https://the-decoder.com/nvidias-open-nemotron-3-5-transcribe-combines-transcription-translation-and-speaker-recognition/" target="_blank" rel="noopener">Nvidia's open Nemotron 3.5 Transcribe combines transcription, translation, and speaker recognition</a><span>The Decoder, Oct 28, 2026</span></li><li><a href="https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model/" target="_blank" rel="noopener">Voice AI in vogue: Nvidia releases new open transcription model</a><span>TechCrunch, Oct 28, 2026</span></li><li><a href="https://siliconangle.com/2026/10/28/nvidia-releases-all-in-one-adaptable-nemotron-3-5-audio-transcription-and-translation-model/" target="_blank" rel="noopener">Nvidia releases all-in-one adaptable Nemotron 3.5 audio transcription and translation model</a><span>SiliconANGLE, Oct 28, 2026</span></li></ol>
+          <p class="method">How this story was made: the newsroom picked it up from huggingface.co, techcrunch.com and Google News, gathered the full text of the sources above, and drafted it with AI assistance. Every factual claim was then checked against those sources before publishing (27 claims checked). Illustrations marked as AI-generated are not photographs. Spotted an error? <a href="mailto:rajankrishnan909@gmail.com?subject=Correction%3A%20NVIDIA%20Releases%20Nemotron%203.5%20Transcribe%20Open%20Speech%20Recognition%20Model">Tell us</a>.</p>
+        </section>
+        <p class="tags"><span>#NVIDIA</span> <span>#Nemotron 3.5 Transcribe</span> <span>#Speech Recognition</span> <span>#Open Source AI</span> <span>#Audio Processing</span></p>
+        <p class="stamp">Published October 29, 2026 at 01:21 UTC</p>
+      </div>
+    </div>
+  </article>
+  <section class="related wrap" aria-labelledby="rel-title">
+    <h2 id="rel-title">Keep reading</h2>
+    <div class="rows"><article class="story row">
+  <a class="story-link" href="/blog/nvidia-launches-nemotron-3-5-bolt-e4b-edge/">
+    <span class="pic"><img src="/blog/img/nvidia-launches-nemotron-3-5-bolt-e4b-edge/hero-640.webp" srcset="/blog/img/nvidia-launches-nemotron-3-5-bolt-e4b-edge/hero-640.webp 640w, /blog/img/nvidia-launches-nemotron-3-5-bolt-e4b-edge/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="An engineering workbench with a compact robot and an edge computing system." loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-10-25T00:47:19.642Z" data-rel>Oct 25, 2026</time></span>
+      <h3>NVIDIA Launches Nemotron-3.5-Bolt-E4B for Edge Robotics and Gaming</h3>
+      <span class="dek">The compact 4-gigabyte model brings conversational reasoning, multi-turn tool use, and 64K context windows directly to local PCs, robotics, and edge hardware.</span>
+      
+    </span>
+  </a>
+</article>
+<article class="story row">
+  <a class="story-link" href="/blog/deepseek-releases-v4-1-flash-1017-search-api/">
+    <span class="pic"><img src="/blog/img/deepseek-releases-v4-1-flash-1017-search-api/hero-640.webp" srcset="/blog/img/deepseek-releases-v4-1-flash-1017-search-api/hero-640.webp 640w, /blog/img/deepseek-releases-v4-1-flash-1017-search-api/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Digital illustration of monitors displaying code and geometric models in a workspace." loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-10-18T00:21:33.039Z" data-rel>Oct 18, 2026</time></span>
+      <h3>DeepSeek Launches V4.1-Flash-1017 Checkpoint and Public Search API</h3>
+      <span class="dek">According to DeepSeek's self-reported evaluation, the updated Mixture-of-Experts checkpoint cuts task completion time, posts higher agent benchmark marks, and unlocks DeepSeek's internal web search index.</span>
+      
+    </span>
+  </a>
+</article>
+<article class="story row">
+  <a class="story-link" href="/blog/nvidia-releases-nemotron-3-5-super/">
+    <span class="pic"><img src="/blog/img/nvidia-releases-nemotron-3-5-super/hero-640.webp" srcset="/blog/img/nvidia-releases-nemotron-3-5-super/hero-640.webp 640w, /blog/img/nvidia-releases-nemotron-3-5-super/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Digital visualization of server racks and glowing data streams representing multimodal artificial intelligence models." loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-10-16T00:50:05.633Z" data-rel>Oct 16, 2026</time></span>
+      <h3>NVIDIA Releases Nemotron 3.5 Super VL Open Multimodal Agent Model</h3>
+      <span class="dek">The 120-billion-parameter open-weights mixture-of-experts model pairs vision and reasoning for continuous enterprise workflows, accompanied by two edge-focused Bolt models.</span>
+      
+    </span>
+  </a>
+</article></div>
+  </section>
+  <nav class="prevnext wrap" aria-label="More stories">
+    <span></span>
+    <a class="next" href="/blog/anthropic-unreleased-claude-exploit-chains/"><span>Older</span>Anthropic Says Unreleased Claude Built Working Multi-OS Exploit Chains</a>
+  </nav>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="biz">
+      <p class="biz-name">RKJDEV Labs</p>
+      <p>© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan</p>
+      <p>Udyam registered MSME, India, <span class="nowrap">UDYAM-BR-26-0254766</span></p>
+      <p><a href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a></p>
+    </div>
+    <nav aria-label="Site">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/blog/feed.xml">RSS</a>
+    </nav>
+    <p class="fine">Stories are researched from the linked sources, written with AI assistance and checked claim by claim against those sources before publishing. AI-generated illustrations are labeled.</p>
+  </div>
+</footer>
+<script src="/blog/blog.js?v=45c7aef4" defer></script>
+</body>
+</html>
