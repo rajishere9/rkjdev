@@ -1,0 +1,135 @@
+{
+ "slug": "cathedral-ai-agents-breach-anthropic-systems",
+ "title": "Cathedral AI Agents Breach Anthropic via Third-Party Software",
+ "seoTitle": "Cathedral AI Agents Breach Anthropic Systems",
+ "description": "Cathedral used AI agents to penetrate Anthropic's business systems through vendor software, sparking debate over bug bounty rules and enterprise AI security.",
+ "dek": "AI cybersecurity startup Cathedral claimed in a draft report that it breached Anthropic's internal business tools in under 12 hours, exposing employee records and igniting a dispute over bug bounty boundaries.",
+ "category": "Industry",
+ "tags": [
+  "Anthropic",
+  "Cathedral",
+  "AI Agents",
+  "Cybersecurity",
+  "Enterprise Security"
+ ],
+ "keyTakeaways": [
+  "Cathedral researchers used autonomous AI agents to infiltrate Anthropic's internal sales, HR, and IT systems through vulnerabilities in third-party vendor tools.",
+  "Anthropic confirmed basic user accounts and business contact records were accessed, but stated Claude conversations, model weights, and source code remained untouched.",
+  "The two companies dispute the breach timeline and scope, with Anthropic accusing Cathedral of violating bug bounty rules by probing third-party software and withholding disclosures.",
+  "The breach triggered national security concerns among federal officials regarding foreign adversaries targeting enterprise supply chains with offensive AI agents."
+ ],
+ "body": "Autonomous AI agents deployed by cybersecurity startup Cathedral penetrated the internal business systems of AI safety lab Anthropic by exploiting flaws in external vendor tools, the companies confirmed in late October 2026. In the draft report reviewed by *The Washington Post*, Cathedral claimed its automated agents discovered access pathways to internal business environments within 12 hours. Anthropic confirmed that basic account records and contact databases were accessed, though it stressed that its flagship AI models, weights, and user chat logs were never compromised.\n\nAccording to reporting from [The Decoder](https://the-decoder.com/ai-agents-hacked-anthropic-maker-of-arguably-the-most-capable-ai-models-for-cyberdefense/), Cathedral carried out the assessment under Anthropic's active vulnerability rewards program. However, the probe quickly spiraled into a sharp disagreement between the two organizations over disclosure conduct, safe harbor limits, and the actual depth of the breach.\n\n[[FIG1]]\n\n## How Cathedral Infiltrated Anthropic's Environment\n\nCathedral, an AI security company founded by former personnel from the Department of Government Efficiency (DOGE), probed Anthropic under Anthropic's bug bounty program. In reporting detailed by [Gizmodo](https://gizmodo.com/former-doge-staffers-new-startup-claims-it-hacked-anthropic-2000830560), Cathedral's draft report claimed its agents broke in within 12 hours, while Anthropic countered that researchers had spent several days unsuccessfully trying to breach its software directly. According to Cathedral's draft report, within half a day, the agents mapped routes to meeting transcripts, salary data, job offers, and internal communications on Slack.\n\nAnthropic verified that researchers reached a limited cluster of systems handling human resources, sales, and IT services. Exposed records included partner and customer business contact info, alongside basic account profiles. Anthropic stated that its telemetry detected elements of Cathedral's activity before the team filed a disclosure report, prompting internal security teams to sever access channels the same day and pull the affected third-party integrations offline until vendors patched the flaws.\n\nCathedral asserted in its report that \"data accesses were kept to the absolute minimum in accordance with security research best practices,\" adding that the compromise proves ordinary enterprise integrations can jeopardize elite technology organizations.\n\n## The Dispute Over Timelines and Safe Harbor Limits\n\nThe parties diverge significantly on how the intrusion unfolded. While Cathedral reported reaching target data in under 12 hours, Anthropic red teamer Logan Graham stated the startup's human analysts first spent several days attempting direct breaches against Anthropic's proprietary software without success, as reported by [The Decoder](https://the-decoder.com/ai-agents-hacked-anthropic-maker-of-arguably-the-most-capable-ai-models-for-cyberdefense/).\n\nGraham explained that only after these direct attempts failed did the startup pivot to third-party dependencies. During that phase, Cathedral uncovered two distinct vulnerabilities but only reported one to Anthropic, leaving the AI lab to discover and patch the second flaw independently. Anthropic subsequently accused Cathedral of violating bug bounty guidelines, stating that targeting external commercial vendors and siphoning internal files exceeded authorized safe harbor provisions.\n\n[[FIG2]]\n\nThe controversy expanded when former OpenAI employee Will Depue claimed publicly that Anthropic was downplaying the event. Citing sources, Depue alleged Cathedral obtained full administrative control over Anthropic's Slack workspace, allowing researchers to inspect any channel and assume user credentials. Depue warned that frontier labs maintain sensitive research documentation across commercial collaboration tools. Graham denied Depue's assertions, stating his sources were inaccurate, but acknowledged Depue's broader premise that AI-driven threats are forcing the sector to rebuild defense models constantly.\n\n## Supply Chain Vulnerabilities and National Security Fallout\n\nThe incident reveals an uncomfortable reality for frontier AI developers: possessing defensive AI models does not immunize an enterprise against vendor software flaws. Industry practitioners pointed to third-party dependencies as the weakest link in corporate security postures.\n\n\"Cathedral's agents got into Anthropic the same way attackers get into everyone else, through the vendors,\" Jacob Krell, Senior Director for Secure AI Solutions at Suzu Labs, told [TechRadar](https://www.techradar.com/pro/security/ai-startup-claims-it-hacked-anthropic-in-12-hours-gains-access-to-employee-details-and-internal-messages). \"Security maturity is capped by the weakest vendor you integrate with, and no amount of in-house engineering changes that.\"\n\nAlex Stamos, chief security officer at Cognition, which uses Anthropic's models, characterized Cathedral's findings as significant. Stamos observed that SaaS integrations remain an enterprise-wide problem, noting that Anthropic could have enforced tighter access controls over its perimeter connections.\n\nThe breach also reverberated across government offices. Cathedral, which raised $160 million at a $1.4 billion valuation from venture firms Andreessen Horowitz and Sequoia Capital, focuses on military and governmental cybersecurity systems. Its founding roster includes former Pentagon chief data officer Gavin Kliger, machine learning specialist Luke Farritor, Marko Elez, and Jack Stein.\n\nFollowing the circulation of Cathedral's findings, an unnamed senior Trump administration official warned that foreign state actors could mimic the tactics. \"If a bunch of kids who have just started a company can do this, then potentially, the Chinese aren't far behind,\" the official said, referencing concerns that foreign intelligence services could exploit SaaS vendors to target proprietary AI weights and algorithms.\n\n## The Shift to Continuous Autonomous Defense\n\nFor enterprise defense teams, the Anthropic breach marks a structural turning point in how offensive operations are conducted.\n\nGraham warned that adversaries already operate AI agents 24 hours a day, specifically hunting for misconfigurations in third-party software. Crucially, Graham noted that models half a generation behind the frontier demonstrate ample reasoning capability to conduct these compromises.\n\nTo counter automated intrusions, Anthropic's security team advocates for continuous, programmatic red-teaming coupled with formal software verification, an expensive verification technique that AI now makes economically practical. As autonomous agents become the standard tool for probing attack surfaces, organizations face mounting pressure to continuously audit external software vendors rather than relying on perimeter defenses alone.",
+ "faq": [
+  {
+   "q": "Did Cathedral access Anthropic's Claude models or training weights?",
+   "a": "No. Anthropic confirmed that customer conversations with Claude, proprietary source code, and model weights remained secure and were never accessed during the intrusion."
+  },
+  {
+   "q": "How did Cathedral's AI agents breach Anthropic's systems?",
+   "a": "The AI agents penetrated Anthropic's network by identifying and exploiting security flaws in third-party enterprise tools used for sales, IT, and administrative operations, rather than breaking Anthropic's proprietary core software directly."
+  },
+  {
+   "q": "What data was compromised during the incident?",
+   "a": "Cathedral claimed access to Slack communications, meeting transcripts, and salary figures. Anthropic confirmed that researchers accessed a limited set of IT, HR, and sales records, including contact information for select partners and customers."
+  },
+  {
+   "q": "Why did Anthropic claim Cathedral violated bug bounty rules?",
+   "a": "Anthropic stated Cathedral exceeded program boundaries by targeting third-party software vendors, downloading internal business data, and failing to disclose all identified vulnerabilities promptly."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An autonomous digital agent depicted as a glowing data entity navigating through an interconnected web of corporate servers and digital supply chains, dark futuristic cybersecurity operations room, high-contrast atmospheric lighting",
+  "alt": "Digital representation of autonomous AI agents penetrating enterprise network systems",
+  "caption": "Illustration: Autonomous AI agents navigating complex corporate networks and software supply chains.",
+  "src": "img/cathedral-ai-agents-breach-anthropic-systems/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 78036,
+  "small": "img/cathedral-ai-agents-breach-anthropic-systems/hero-640.webp",
+  "og": "img/cathedral-ai-agents-breach-anthropic-systems/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/cathedral-ai-agents-breach-anthropic-systems/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "Cybersecurity researchers in a dimly lit monitoring center analyzing real-time digital threat vectors and breach alerts across wide multi-display terminals, cinematic corporate security setting",
+   "alt": "Cybersecurity analysts monitoring security telemetry in a network defense operations center",
+   "caption": "Illustration: Defense teams monitoring automated security probes across enterprise networks.",
+   "slot": "FIG1",
+   "src": "img/cathedral-ai-agents-breach-anthropic-systems/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 49994,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A modern glass-walled corporate boardroom with abstract digital lock motifs fading into fragmented network nodes, representing third-party software vendor security vulnerabilities",
+   "alt": "Abstract digital locks unlocking across interconnected enterprise software layers",
+   "caption": "Illustration: Enterprise supply chain vulnerabilities exposing internal communications and employee records.",
+   "slot": "FIG2",
+   "src": "img/cathedral-ai-agents-breach-anthropic-systems/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 39788,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://the-decoder.com/ai-agents-hacked-anthropic-maker-of-arguably-the-most-capable-ai-models-for-cyberdefense/",
+   "title": "AI agents hacked Anthropic, maker of arguably the most capable AI models for cyberdefense",
+   "site": "The Decoder",
+   "published": 1793184984000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://gizmodo.com/former-doge-staffers-new-startup-claims-it-hacked-anthropic-2000830560",
+   "title": "Former DOGE Staffers' New Startup Claims It Hacked Anthropic",
+   "site": "gizmodo.com",
+   "published": 1793026800000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://qz.com/cathedral-ai-agents-anthropic-systems-breach-102726",
+   "title": "Cathedral AI agents broke into Anthropic in less than 12 hours",
+   "site": "qz.com",
+   "published": 1793059200000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.techradar.com/pro/security/ai-startup-claims-it-hacked-anthropic-in-12-hours-gains-access-to-employee-details-and-internal-messages",
+   "title": "AI startup claims it hacked Anthropic in 12 hours, gains access to employee details and internal messages",
+   "site": "TechRadar",
+   "published": 1793201100000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1793239919943,
+ "updatedAt": 1793239919943,
+ "foundVia": "the-decoder.com",
+ "check": {
+  "claims": 30,
+  "score": 10
+ },
+ "story": {
+  "id": "P45a6b5df",
+  "score": 85,
+  "items": [
+   "https://the-decoder.com/ai-agents-hacked-anthropic-maker-of-arguably-the-most-capable-ai-models-for-cyberdefense/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
