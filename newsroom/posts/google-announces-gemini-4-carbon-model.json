@@ -1,0 +1,187 @@
+{
+ "slug": "google-announces-gemini-4-carbon-model",
+ "title": "Google Unveils Gemini 4 Carbon with Focus on Cybersecurity",
+ "seoTitle": "Google Unveils Gemini 4 Carbon Frontier Model",
+ "description": "Google debuts Gemini 4 Carbon two weeks after Argon, leading cybersecurity benchmarks and topping the Artificial Analysis Intelligence Index.",
+ "dek": "Two weeks after launching Argon, Google has introduced Gemini 4 Carbon, a frontier AI model engineered for long-horizon engineering and cyberdefense.",
+ "category": "AI Models",
+ "tags": [
+  "Google",
+  "Gemini 4 Carbon",
+  "Cybersecurity",
+  "Artificial Intelligence",
+  "LLMs"
+ ],
+ "keyTakeaways": [
+  "Google introduced Gemini 4 Carbon on October 28, 2026, just two weeks after rolling out Gemini 4 Argon.",
+  "The model takes the top spot on the Artificial Analysis Intelligence Index v5.0 with a score of 59, surpassing GPT-6 Astra and Claude Opus 5.5.",
+  "Carbon leads key security benchmarks evaluated without guardrails, including SEC-bench Pro (88.2%), ExploitGym (54.8%), and CWE-bench (71.0%).",
+  "Availability begins this week for a select group of cybersecurity defenders under US government pre-release testing before opening broadly at introductory rates of $2 per million input tokens and $10 per million output tokens."
+ ],
+ "body": "On October 28, 2026, Google announced Gemini 4 Carbon, its newest frontier model built specifically for complex engineering tasks and cybersecurity workflows. The debut arrived just two weeks after the company released Gemini 4 Argon, demonstrating an unusually swift deployment cadence across its frontier AI systems.\n\nAccording to an official announcement from [Google](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=), Gemini 4 Carbon captured the top ranking on the updated version 5.0 of the Artificial Analysis Intelligence Index with an overall score of 59, surpassing its predecessor Argon at 50 as well as competitors Claude Opus 5.5 and GPT-6 Astra. Google reported that the rapid turnaround was driven by internal researchers using their own advanced models to accelerate development.\n\n[[FIG1]]\n\n## Cybersecurity Defenses and Benchmark Performance\n\nGoogle is positioning Gemini 4 Carbon primarily around the software security lifecycle, from vulnerability discovery to exploit testing and root-cause patching. In external evaluations conducted without safety guardrails, Carbon posted top results across multiple security benchmarks:\n\n* **SEC-bench Pro:** Carbon scored 88.2% in autonomous vulnerability discovery across real-world codebases.\n* **ExploitGym:** The model reached 54.8% in validating risk by testing whether discovered flaws can be converted into working exploits.\n* **CWE-bench:** On Collinear's patch benchmark, Carbon reached 71.0%, generating working code fixes for identified flaws.\n\nInternal evaluations showed similar shifts. Google stated that Carbon achieved more than double the success rate of Argon when generating secure code. Additionally, Koray Kavukcuoglu, senior vice president of Google DeepMind, wrote that Google's Chrome team found Carbon performed more than ten times better at generating high-quality patches than a large frontier model from an unnamed competing lab, as reported by [SiliconANGLE](https://siliconangle.com/2026/10/28/google-debuts-flagship-gemini-4-carbon-model-with-cybersecurity-upgrades/). Cloud security platform Wiz also noted that Carbon led benchmarks for web penetration testing.\n\n[[FIG2]]\n\n## Long-Horizon Reasoning and Developer Workflows\n\nBeyond specialized cybersecurity duties, Google designed Gemini 4 Carbon to handle sustained agentic programming tasks. Internal teams observed the model running continuously for days, working through dead ends autonomously to isolate root causes and repair subtle software bugs in large codebases and low-level systems.\n\nIn broader developer benchmarks reported by [The Decoder](https://the-decoder.com/google-deepmind-releases-gemini-4-carbon-just-two-weeks-after-argon-with-gains-across-the-board/), Carbon gained 89 Elo points on WebDev Arena, landing in fourth place at 1,768 points. On Arena.ai's Text Arena, Carbon took first place with 1,528 points, slightly ahead of Argon's 1,520. In the Agent Arena, Carbon ranked second overall across more than 21,900 live sessions with a net improvement of 16.2%, trailing Claude Opus 5.5 (+21.1%) but ahead of GPT-6 Astra (+13.4%).\n\nEvaluator Vals AI placed Carbon second overall in its index at 70.36% accuracy, situated between Claude Sonnet 5.5 (70.85%) and Claude Opus 5.5 (70.18%). Vals AI observed that Carbon generated 2.3 times as many reasoning tokens and 64% more output tokens than Argon, spending an average of over 50 minutes per task on legal research.\n\n## Model Alignment and Safeguards\n\nTo balance elevated offensive capabilities, Google altered Carbon's alignment and safety profile. On the Gray Swan Indirect Prompt Injection benchmark, Carbon recorded a 0.0% attack success rate, stopping every tested manipulation attempt compared to Argon's 0.7% failure rate.\n\nAddressing model honesty, Google reported that Carbon reduced unsupported assertions by approximately half compared to Argon, inserting methodological caveats into results or listing missing prerequisites when actions are blocked. During live coding trials with internal engineers, high-severity misalignment alerts dropped by nearly 80%. When evaluated on Terminal-Bench 4.0, Carbon's attempts to take shortcut loopholes dropped to 0.4%, with zero successful cheating attempts.\n\n[[FIG3]]\n\n## Phased Rollout and Pricing Structure\n\nGoogle is not releasing Gemini 4 Carbon to the public immediately. The company is participating in the US government's voluntary pre-release model evaluation framework, as detailed by [Android Authority](https://www.androidauthority.com/google-announces-gemini-4-carbon-3729367/).\n\nAccess is restricted initially to a select cohort of cybersecurity defenders this week before broadening to partners in Google DeepMind's Fairwind Program. Once testing concludes, Google plans to introduce Carbon to enterprise clients, software developers, and standard consumers across its platforms, as noted by The Verge.\n\nWhen released on commercial developer APIs, Gemini 4 Carbon will carry an introductory price matching Argon: $2 per million input tokens and $10 per million output tokens, with introductory cached input tokens priced at $0.10 per million tokens (95% off the introductory $2 rate), while $0.20 applies to the standard $4 rate. According to [9to5Google](https://9to5google.com/2026/10/28/gemini-4-carbon-announcement/), standard pricing will eventually rise to $4 per million input tokens and $20 per million output tokens after the introductory period ends in late 2026.",
+ "faq": [
+  {
+   "q": "How does Gemini 4 Carbon compare to Gemini 4 Argon?",
+   "a": "Gemini 4 Carbon scores 59 on the Artificial Analysis Intelligence Index v5.0 compared to Argon's 50, doubles the success rate for generating secure code according to Google's internal benchmarks, and blocked 100% of tested attacks on the Gray Swan prompt injection benchmark."
+  },
+  {
+   "q": "How much does Gemini 4 Carbon cost to run?",
+   "a": "Carbon carries an introductory pricing tier of $2 per million input tokens and $10 per million output tokens, with prompt caching discounted by 95% to $0.10 per million tokens. Standard pricing will eventually adjust to $4 per million input tokens and $20 per million output tokens."
+  },
+  {
+   "q": "Who has access to Gemini 4 Carbon right now?",
+   "a": "Access is currently restricted to selected cybersecurity defenders and partners in Google's Fairwind Program while Google participates in the US government's voluntary pre-release review process. Public access for developers and enterprises will follow later."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern software security operations center at night where cybersecurity analysts inspect glowing abstract digital network nodes and code streams across expansive panoramic displays.",
+  "alt": "An illustration of a modern security operations center with analysts monitoring abstract digital systems.",
+  "caption": "Illustration: Cybersecurity researchers monitoring complex digital systems during vulnerability analysis.",
+  "src": "img/google-announces-gemini-4-carbon-model/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 76602,
+  "small": "img/google-announces-gemini-4-carbon-model/hero-640.webp",
+  "og": "img/google-announces-gemini-4-carbon-model/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/google-announces-gemini-4-carbon-model/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An abstract conceptual view of digital defense mechanisms, showing interconnected geometric code blocks and protective glowing barriers isolating a central core.",
+   "alt": "An illustration representing software security layers and vulnerability remediation.",
+   "caption": "Illustration: Conceptual depiction of digital security safeguards and automated patching architecture.",
+   "slot": "FIG1",
+   "src": "img/google-announces-gemini-4-carbon-model/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 63374,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A software engineer working late at a multi-monitor workstation examining complex branching algorithms and dependency maps in an engineering office.",
+   "alt": "An illustration of a software engineer evaluating multi-step programming workflows.",
+   "caption": "Illustration: Long-horizon agentic workflows tackling multi-day codebase remediation.",
+   "slot": "FIG2",
+   "src": "img/google-announces-gemini-4-carbon-model/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 44428,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG3",
+   "type": "ai",
+   "prompt": "A government technical review room with policy analysts and technology specialists evaluating documents and data charts around a conference table.",
+   "alt": "An illustration of officials and researchers in a technical pre-release review room.",
+   "caption": "Illustration: Technical review processes evaluating frontier models prior to broad public release.",
+   "slot": "FIG3",
+   "src": "img/google-announces-gemini-4-carbon-model/figure-3.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 37540,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=",
+   "title": "Gemini 4 Carbon: our next frontier model",
+   "site": "Google",
+   "published": 1793145600000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://www.androidauthority.com/google-announces-gemini-4-carbon-3729367/",
+   "title": "Gemini 4 Carbon is Google’s second new frontier model this month",
+   "site": "Android Authority",
+   "published": 1793220824000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://9to5google.com/2026/10/28/gemini-4-carbon-announcement/",
+   "title": "Google announces Gemini 4 Carbon with ‘significant gains across coding and agentic tasks’",
+   "site": "9to5Google",
+   "published": 1793207312000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://the-decoder.com/google-deepmind-releases-gemini-4-carbon-just-two-weeks-after-argon-with-gains-across-the-board/",
+   "title": "Google Deepmind releases Gemini 4 Carbon just two weeks after Argon with gains across the board",
+   "site": "The Decoder",
+   "published": 1793215078000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://www.theverge.com/tech/1021339/google-gemini-4-carbon-cybersecurity-frontier",
+   "title": "Google launches Gemini 4 Carbon with a ‘significant leap’ in cybersecurity",
+   "site": "The Verge",
+   "published": 1793217780000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://siliconangle.com/2026/10/28/google-debuts-flagship-gemini-4-carbon-model-with-cybersecurity-upgrades/",
+   "title": "Google debuts flagship Gemini 4 Carbon model with cybersecurity upgrades",
+   "site": "SiliconANGLE",
+   "published": 1793230033000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://www.cnet.com/tech/services-and-software/google-genie-4-gemini-4-carbon-ai-news/",
+   "title": "Google Debuts New AI Models, Genie 4 and Gemini 4 Carbon: What You Need to Know - CNET",
+   "site": "CNET",
+   "published": 1793220697000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1793232759299,
+ "updatedAt": 1793232759299,
+ "foundVia": "deepmind.google, Hacker News and Google News",
+ "check": {
+  "claims": 26,
+  "score": 10
+ },
+ "story": {
+  "id": "P9cd4e9ac",
+  "score": 108,
+  "items": [
+   "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
+   "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+   "https://news.google.com/rss/articles/CBMiggFBVV95cUxObUFXNVpqemhXX19jSG14WVpHZlltNjFjYUJTbDVYYUhmZF9iZVZYSzVFTGVwdmVhZWhEU2tqOGY0dTNicnA0d1NhSkZHMVdkZWRjYTc3clNhVi1VY1kwbWZ3WjNuQ3VZRTFfblZsakdSR2hFb3p0WV9fS1FES2tTN1RB0gGCAUFVX3lxTE5tQVc1Wmp6aFdfX2NIbXhZWkdmWW02MWNhQlNsNVhhSGZkX2JlVlhLNUVMZXB2ZWFlaERTa2o4ZjR1M2JycDR3U2FKRkcxV2RlZGNhNzdyU2FWLVVjWTBtZndaM25DdVlFMV9uVmxqR1JHaEVvenRZX19LUURLa1M3VEE?oc=5",
+   "https://news.google.com/rss/articles/CBMicEFVX3lxTE5XaTVkbFZ1VUh4akhDTWtqY0RRUjZMZkx3WlN0UFVlYTVoa0N4QndiVkRkajJDUjF4Z1hjVGpNVFNzTWluMERLcWlodlVvWkFObnFiTEEwT2RBTmJ0N2FBeDlvRC1XNGJUQXc4ajE1bUo?oc=5",
+   "https://news.google.com/rss/articles/CBMikwFBVV95cUxQYmpzc3VyRVIzQ3JzWm92THpZTzJraHU3eklrdTZrZlZjZzhUa2R3ZlpXem83SEdFTF8wQVVDdmJHYUx5dDhUU2hNTGlwWllwVWU1ZXl2QVVDb1RsYWtFVGZTVHg2VXhuOU4yYVVXWDBHcFo3RmpQVksyaTNwRTZacWdRYzhWaXprRFBRUW1Vb0Jxa28?oc=5",
+   "https://www.techmeme.com/261028/p38#a261028p38",
+   "https://9to5google.com/2026/10/28/gemini-4-carbon-announcement/",
+   "https://news.google.com/rss/articles/CBMisgFBVV95cUxNLXQyWUp5N0QwdVRZWXFkd1M5b2RrcExtNVBJS0JKaDdhaG1DQThXeEVlUWVWQUNPTjNOak9ZSnZlQjhDUkNIT2oxSlJrSjlJSkVSMVZFMW5acXV1N0l5bWxKTU1CNmtzZVM3U2dZVE5RbHlrZ2k5LTljM2FnNDVLM3NFbGI4N1hSMVIyQ2FNZXZYY0ZuNV9KR0lQYzdxT2RGdzkxamkzLXloVUVmLUhmdUZ3?oc=5",
+   "https://news.google.com/rss/articles/CBMihwFBVV95cUxORjF4WGpjdElyM0xtVktMbmhlY2k1SW9hSUlXSEVKX25yQlhOOHJpeGdKZWtaY01vNUExVzJjZkZhUnhHM2ZrcEw3bGIyRGFHbUZBTUxkZkphcGZDYWNLekZvX2VsRTJfV2J1VHNzWWFVMEtweXVGOEFScFY0dG84VDVtQ1NXOGM?oc=5",
+   "https://www.reddit.com/r/ClaudeAI/comments/1xhu9ez/google_introduced_gemini_4_carbon_allegedly_the/",
+   "https://www.reddit.com/r/singularity/comments/1xhtwjm/gemini_4_carbon/",
+   "https://www.reddit.com/r/accelerate/comments/1xhu18a/new_google_model/",
+   "https://www.reddit.com/r/singularity/comments/1xhum9n/youre_here/",
+   "https://www.reddit.com/r/singularity/comments/1xhuuc3/google_is_back_1_on_artificial_analysis/",
+   "https://www.reddit.com/r/singularity/comments/1xhu30w/google_carbon_is_here_1_in_artificial_analysis_59/",
+   "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRW1ZYWNNNHRHU1pTM1FqNGIxajFURmFRZGlxM3BLaXNWWkl5Vl9lcUtMTmp3SEd4XzEyT1JUZHlzdjNvNWNDbE9NYk9VdUMzUkY2ZHVNalEtVWl4ckFwaTlsWFhjbTRDZURBdktRRGZpWGdheHVlZHlJYUNoS1YxcFphU2JVSFhBZkVZREo1R18yTWYwM0xnU1AzNllLYWZCLWZjNFMteDg2eEd2RXNTSVJ2ZmNsQQ?oc=5",
+   "https://news.google.com/rss/articles/CBMigAFBVV95cUxQMERZUjBoODBqdy15Mm5NX29KSmtucm81ajdqbXFXSnlNWV9oZzMwb2dIQTZYSzh2MkVxcm1CTy12bnVSeVFGbTN0MHJPOTVLRjd2OGRDUHFaQXVOMGhfMGstaFZsNVRaRVEyQXNDeWQxdmZPdUN6elp4YmRjcGNfVw?oc=5",
+   "https://news.google.com/rss/articles/CBMiogFBVV95cUxQTHJxLU9oeW51ZGg2aG8xbWpXWjlhazdlbnJHSEZhdHhmQklFRnpKUkpPM1Vubk52TkNOMDRHM0ZWVmdlbGs0UHF5ZFY2QUpMT29DUUpFcXUxb084eGFWWXBpY0poZThuZ2NFbmVjempGam0za085ZHAxLXVuNFp4WkNvXzlhdTZsZWIyS3FXaEhFckliUzNialNtNW1sOS1MLUE?oc=5",
+   "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOZFB4NVdwWlB0SHdVUnBWak5VREFrTklGSU5QMUZiV3VaNXI0cVRNUC1wQVZUaVEyMzNGMjloVjZsVExTM1czcE1Rd0FfSVc5cV9VYW91N3ltYTY3STZSUEFWMksyMTlDRFJUdlpGVEZjd1BHb3E5SFoySjBsMTdfbzhTMmFLQ3liRzcw?oc=5",
+   "https://news.google.com/rss/articles/CBMiggFBVV95cUxNLXlTYmpwNTYyV09BOTMtVml6elE3SDg1RHpLYmVhUVZ4WHlMY3o1TEFzYUR2NGJsTVJfSHY1V3EwbDFzU0w2VmRWUDBydFl3SGZoQlNCVEk5c29jNkpGZnQ2M1hTSkNQM2s3NDhtNmdiSW12MkN2VEFhaW9DNUpnQ0NB?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
