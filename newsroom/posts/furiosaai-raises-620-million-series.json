@@ -1,0 +1,135 @@
+{
+ "slug": "furiosaai-raises-620-million-series",
+ "title": "FuriosaAI Raises $620 Million Series D to Expand AI Inference Chips",
+ "seoTitle": "FuriosaAI Raises $620M Series D at $2.9B Valuation",
+ "description": "South Korean chip startup FuriosaAI has raised $620 million at a $2.9 billion valuation to ramp production of its RNGD accelerator and challenge Nvidia.",
+ "dek": "South Korea's National Growth Fund led the round, which values the Seoul-based startup at $2.9 billion as it scales production of its RNGD inference accelerator.",
+ "category": "Chips & Hardware",
+ "tags": [
+  "FuriosaAI",
+  "AI Hardware",
+  "Inference Chips",
+  "Semiconductors",
+  "Venture Capital"
+ ],
+ "keyTakeaways": [
+  "FuriosaAI completed a $620 million (820 billion won) Series D funding round at a post-money valuation of $2.9 billion (3.8 trillion won).",
+  "South Korea's state-backed National Growth Fund led the round with a $280 million (370 billion won) investment.",
+  "The capital will fund production scaling for the company's 180-watt RNGD inference chip and advance third-generation silicon developed with Broadcom.",
+  "FuriosaAI plans to produce 20,000 RNGD accelerators in 2026 and more than 40,000 units in 2027, backed by deployments at Samsung SDS, LG, and Upstage."
+ ],
+ "body": "South Korean artificial intelligence semiconductor startup FuriosaAI has raised $620 million (820 billion Korean won) in a Series D funding round that values the company at approximately $2.9 billion (3.8 trillion won), the company announced on October 28, 2026. According to [MoneyToday](https://www.mt.co.kr/en/future/2026/10/29/2026102908523397390), the company stated the capital injection is the largest investment ever secured by a domestic startup, while [DigitalToday](https://www.digitaltoday.co.kr/en/view/121000/furiosaai-raises-820-billion-won-series-d-valued-at-3-8-trillion-won) reported it as South Korea's largest funding round to date for a domestic AI chip startup.\n\nState-backed capital anchored the deal, led by the National Growth Fund of Korea with a $280 million (370 billion won) commitment. The startup initially opened fundraising in January 2026 seeking between 450 billion and 750 billion won, but expanded the round after seeing strong domestic and international demand, as detailed by [Chosun](https://www.chosun.com/english/industry-en/2026/10/29/OJBX4O7SUJCEBBVMK3MGFP5WAI/). FuriosaAI plans to use the new funds to expand manufacturing of its second-generation inference chip, RNGD, enlarge its global software ecosystem, and accelerate development of its upcoming third-generation accelerator.\n\n[[FIG1]]\n\n## Global Syndicate Backs FuriosaAI Expansion\n\nThe funding round drew backing from international technology investors, strategic corporate funds, and South Korean state development institutions. According to FuriosaAI's [official BusinessWire announcement](https://www.businesswire.com/news/home/20261028655033/en/FuriosaAI-Secures-%24620-Million-Series-D-to-Meet-Surging-Enterprise-AI-Inference-Demand-and-Accelerate-Next-Gen-Silicon), international investors accounted for $110 million of the round. U.S.-based semiconductor investment firm Infinitum led overseas participation, joined by Cisco Investments, Singapore-based QUDA Capital Partners, Abu Dhabi's NeoFort Holding, and U.S. funds Jericho Capital and Worldline Capital.\n\nQUDA Capital Partners was established by Charlie Foo, a former vice president and general manager for Asia Pacific Enterprise Business at Nvidia and Mellanox Technologies, who serves as a principal advisor to FuriosaAI. Infinitum Chief Investment Officer John Yetimoglu, whose firm also co-led a $650 million funding round for AI chipmaker Groq, pointed to FuriosaAI's ability to transition from engineering to commercial deployments as key to the investment.\n\nDomestic institutional participants contributed substantial follow-on and primary funding. The Export-Import Bank of Korea made FuriosaAI its first direct startup investment since the bank's founding, while United Asset Management Company (UAMCO) committed $30 million (reported as 40 billion won by [DigitalToday](https://www.digitaltoday.co.kr/en/view/121000/furiosaai-raises-820-billion-won-series-d-valued-at-3-8-trillion-won)). Existing shareholders contributed $125 million in follow-on capital. That group included Korea Development Bank, seed backers DSC Investment and KDB Capital, and early backer NAVER through its Silicon Valley arm NAVER Ventures. Early investors NEXTRANS—which contributed 48 billion won—along with Kakao Investment, Quantum Ventures, and Korea Investment Partners also participated, while Hanwha Asset Management joined as a new domestic investor.\n\n[[FIG2]]\n\n## Technical Architecture of the RNGD AI Inference Accelerator\n\nFuriosaAI is directing the proceeds toward scaling its second-generation accelerator, RNGD (pronounced Renegade), which entered mass production in January 2026. The processor is designed specifically for artificial intelligence inference—executing trained models to generate text, process search queries, or analyze data—rather than model training.\n\nInstead of adhering to standard GPU architectures that slice neural network computations into two-dimensional matrix multiplications, FuriosaAI developed a proprietary Tensor Contraction Processor (TCP) architecture, according to [FuriosaAI's announcement](https://www.businesswire.com/news/home/20261028655033/en/FuriosaAI-Secures-%24620-Million-Series-D-to-Meet-Surging-Enterprise-AI-Inference-Demand-and-Accelerate-Next-Gen-Silicon). The TCP design treats higher-dimensional tensor contraction as the native computational unit for both hardware execution and compiler optimization. The silicon uses reconfigurable compute slices and deterministic execution to minimize data movement across memory buses.\n\nThe hardware design choices allow RNGD to operate as a 180-watt, air-cooled card equipped with high-bandwidth memory. FuriosaAI reports that the card delivers throughput comparable to enterprise GPUs that draw twice as much power or more, allowing data centers to add inference capacity without retrofitting liquid cooling or exceeding rack power caps.\n\nOn the software side, the startup built an integrated AI computing stack designed to fit existing engineering workflows. The software layer supports models loaded directly from Hugging Face, neural networks built in PyTorch, and serves as a drop-in replacement for vLLM runtimes. For low-level customization, developers can target Furiosa's Tensor Contraction Language or write instructions against a low-level virtual instruction set architecture (ISA).\n\n## Enterprise Deployments and Production Targets\n\nUnlike many early-stage silicon ventures that rely primarily on simulation benchmarks, FuriosaAI has placed RNGD into active production environments in South Korea. According to company disclosures and reporting by [Chosun](https://www.chosun.com/english/industry-en/2026/10/29/OJBX4O7SUJCEBBVMK3MGFP5WAI/), Samsung SDS introduced a commercial NPU-as-a-service offering powered by RNGD in July 2026.\n\nLG Group runs its proprietary EXAONE foundation models on RNGD hardware in cooperation with the LG AI Research Institute. In addition, South Korean AI software company Upstage uses RNGD accelerators to power live search summarization on the Daum web portal for millions of active users.\n\nTo meet expanding demand, FuriosaAI outlined specific manufacturing targets for the next two years. The startup plans to produce 20,000 RNGD accelerators across 2026, and expects to more than double that output to over 40,000 units in 2027. The company operates international offices in the United States, Portugal, and Singapore in addition to its Seoul headquarters.\n\n## Collaboration with Broadcom for Next-Gen Silicon\n\nWhile scaling volume shipments of RNGD, FuriosaAI is already designing its third-generation AI accelerator, referred to as Gen 3. The company confirmed that it is collaborating with U.S. semiconductor giant Broadcom to develop the architecture, which targets hyperscale AI infrastructure operators, as reported by [MoneyToday](https://www.mt.co.kr/en/future/2026/10/29/2026102908523397390).\n\nFuriosaAI Co-Founder and Chief Executive Officer June Paik stated that the Series D round positions the startup to challenge entrenched hardware providers as enterprise data centers look to contain operating expenses. \"We are entering a new phase of bringing our technology to the global AI infrastructure market at scale,\" Paik said in the company's release. \"By accelerating the commercialization of RNGD and advancing the development of Gen 3, we aim to help shape the next generation of AI infrastructure.\"",
+ "faq": [
+  {
+   "q": "How much money did FuriosaAI raise in its Series D round?",
+   "a": "FuriosaAI secured $620 million (820 billion Korean won) at a post-money valuation of $2.9 billion (approximately 3.8 trillion won), surpassing its initial target of 450 billion to 750 billion won."
+  },
+  {
+   "q": "Who were the primary investors in the Series D funding?",
+   "a": "South Korea's National Growth Fund led the round with a $280 million investment. Other participants included U.S. firm Infinitum, Cisco Investments, Singapore's QUDA Capital Partners, Abu Dhabi's NeoFort Holding, UAMCO, the Export-Import Bank of Korea, and follow-on backing from NAVER Ventures, DSC Investment, and Korea Development Bank."
+  },
+  {
+   "q": "What is FuriosaAI's RNGD chip, and what are its specifications?",
+   "a": "RNGD is a second-generation AI inference accelerator that entered mass production in January 2026. Built on a proprietary Tensor Contraction Processor (TCP) architecture, the 180-watt air-cooled card features high-bandwidth memory and, according to FuriosaAI's reported performance benchmarks, delivers throughput matching GPUs that consume double the power."
+  },
+  {
+   "q": "Which companies are currently deploying FuriosaAI hardware?",
+   "a": "RNGD is deployed in commercial environments including Samsung SDS's NPU-as-a-service, LG Group's EXAONE model infrastructure, and Upstage's live search summarization service for the Daum search portal."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern cleanroom laboratory in an advanced semiconductor facility, where an engineer in cleanroom protective gear examines a sophisticated silicon processor card glowing faintly with amber circuit traces, cinematic lighting, ultra detailed.",
+  "alt": "Illustration of an engineer inspecting an advanced artificial intelligence processor card in a semiconductor facility",
+  "caption": "Illustration: FuriosaAI secured $620 million to scale production of its energy-efficient AI inference processors.",
+  "src": "img/furiosaai-raises-620-million-series/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 59972,
+  "small": "img/furiosaai-raises-620-million-series/hero-640.webp",
+  "og": "img/furiosaai-raises-620-million-series/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/furiosaai-raises-620-million-series/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An executive boardroom overlooking a futuristic Seoul skyline at dusk, where institutional investors and tech founders review hardware blueprints and investment contracts on a polished table, dramatic corporate lighting.",
+   "alt": "Illustration of global and domestic investors meeting in Seoul to finalize hardware venture capital funding",
+   "caption": "Illustration: The $620 million Series D round drew heavy participation from South Korean state funds and global semiconductor investors.",
+   "slot": "FIG1",
+   "src": "img/furiosaai-raises-620-million-series/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 53508,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "An enterprise data center rack filled with low-power air-cooled accelerator cards, cool blue server lights with warm accent trails illustrating efficient thermal airflow through server chassis, hyper-detailed tech photography style.",
+   "alt": "Illustration of high-density air-cooled server racks running AI accelerator hardware in an enterprise data center",
+   "caption": "Illustration: FuriosaAI's 180-watt RNGD chip is designed to deliver high inference throughput within existing data center cooling limits.",
+   "slot": "FIG2",
+   "src": "img/furiosaai-raises-620-million-series/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 49946,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://www.businesswire.com/news/home/20261028655033/en/FuriosaAI-Secures-%24620-Million-Series-D-to-Meet-Surging-Enterprise-AI-Inference-Demand-and-Accelerate-Next-Gen-Silicon",
+   "title": "FuriosaAI Secures $620 Million Series D to Meet Surging Enterprise AI Inference Demand and Accelerate Next-Gen Silicon",
+   "site": "businesswire.com",
+   "published": 1793231820000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://www.chosun.com/english/industry-en/2026/10/29/OJBX4O7SUJCEBBVMK3MGFP5WAI/",
+   "title": "FuriosaAI Raises 820 Billion Won, Valued at 3.8 Trillion, Challenges NVIDIA",
+   "site": "chosun.com",
+   "published": 1793238672452,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://www.mt.co.kr/en/future/2026/10/29/2026102908523397390",
+   "title": "FuriosaAI, backed by Korea's National Growth Fund, raises 820 billion won at 3.8 trillion won valuation",
+   "site": "MoneyToday",
+   "published": 1793236200000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.digitaltoday.co.kr/en/view/121000/furiosaai-raises-820-billion-won-series-d-valued-at-3-8-trillion-won",
+   "title": "FuriosaAI raises 820 billion won in funding, valued at 3.8 trillion won",
+   "site": "DigitalToday",
+   "published": 1793233894000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1793241603060,
+ "updatedAt": 1793241603060,
+ "foundVia": "Techmeme",
+ "check": {
+  "claims": 32,
+  "score": 10
+ },
+ "story": {
+  "id": "Peab93520",
+  "score": 85,
+  "items": [
+   "https://www.techmeme.com/261028/p58#a261028p58"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
