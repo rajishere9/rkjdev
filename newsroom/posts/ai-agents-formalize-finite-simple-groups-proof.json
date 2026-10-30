@@ -1,0 +1,148 @@
+{
+ "slug": "ai-agents-formalize-finite-simple-groups-proof",
+ "title": "Axiom Math Claims AI Agents Formalized Math's 15,000-Page Enormous Theorem in 24 Days",
+ "seoTitle": "AI Agents Formalize 15,000-Page Math Proof in 24 Days",
+ "description": "Axiom Math says it used AI agent swarms to formalize the 15,000-page Classification of Finite Simple Groups into 43.1 million lines of Lean code in 24 days.",
+ "dek": "Axiom Math announced that its AxiomProver system converted the Classification of Finite Simple Groups into 43.1 million lines of computer-checked code, uncovering 34 literature errors along the way.",
+ "category": "Research",
+ "tags": [
+  "Axiom Math",
+  "Lean",
+  "Mathematics",
+  "AxiomProver",
+  "Formal Verification",
+  "Artificial Intelligence"
+ ],
+ "keyTakeaways": [
+  "Axiom Math announced that dozens of AI agents organized under its AxiomProver system converted the 15,000-page Classification of Finite Simple Groups into machine-checked Lean code in 24 days.",
+  "The resulting formalization spans 43.1 million lines of code and 2.05 million declarations, building on Mathlib and 1.2 million lines reused from the Qiuzhen-CFSG project.",
+  "The agents identified 34 noteworthy deviations from the mathematical literature, including a flaw in an intermediate 1986 proof step that required producing an alternative argument.",
+  "The formal proof currently represents a self-assessed achievement by Axiom Math; independent researchers have not yet executed a third-party rebuild of the complete repository."
+ ],
+ "body": "On October 26, 2026, Palo Alto startup Axiom Math announced that swarms of AI agents had successfully translated the Classification of Finite Simple Groups—often called \"the enormous theorem\"—into computer-verifiable code in 24 days. The human mathematical proof for the theorem, established across decades by roughly 100 mathematicians, spans approximately 15,000 pages across more than 500 published papers. According to Axiom Math's project website and news coverage, the automated process produced roughly 43.1 million lines of code in the Lean proof assistant language.\n\nThe project marks a major shift in the scale of automated proof checking. In a mathematical proof assistant like Lean, an argument is validated line by line through an algorithmic kernel that accepts deductions only if they strictly satisfy core logical axioms without placeholders. Rather than discovering a fundamentally new classification theorem from scratch, Axiom Math targeted the existing human literature, systematically encoding definitions, intermediate lemmas, and overarching deductions into a single executable repository.\n\n[[FIG1]]\n\n## Cataloging the Atoms of Symmetry\n\nThe Classification of Finite Simple Groups serves as a definitive catalog of symmetry in mathematics. In group theory, a group captures the ways to manipulate or transform an object while leaving its overall structure intact. A standard cube, for example, possesses 24 rotational symmetries that return it to an identical appearance. Just as chemical molecules break down into indivisible chemical elements, finite groups break down into indivisible components known as finite simple groups.\n\nThe classification theorem proves that all finite simple groups belong to a set of known families or a finite collection of exceptions, as reported by [DailyAI](https://dailyai.com/it/2026/10/ai-agents-checked-maths-longest-proof-15000-pages-in-24-days/). These include cyclic groups of prime order, alternating groups on five or more symbols, 16 infinite families of groups of Lie type, and exactly 26 sporadic groups that fall outside those regular patterns. The largest of these exceptions, the Monster group, has an order of approximately 8 × 10⁵³ elements.\n\nMathematician Daniel Gorenstein announced the classification completed in 1983, but subsequent analysis revealed substantial gaps. A major omission involving the quasithin case was not fully resolved until Michael Aschbacher and Stephen Smith published a 1,221-page work in 2004, followed by further corrections in 2008. As group theorist Michael Aschbacher remarked in 2005, writing a massive and complex mathematical argument without errors is practically impossible for humans.\n\n## Inside the 24-Day AxiomProver Workflow\n\nAxiom Math launched the formalization initiative on October 1, 2026, setting up an initial operational outline with 108 milestones and roughly 380 smaller subtasks. The system deployed on October 2 under an architecture named AxiomProver, as reported by [DailyAI](https://dailyai.com/it/2026/10/ai-agents-checked-maths-longest-proof-15000-pages-in-24-days/) and [Fast Company](https://www.fastcompany.com/91631570/anthropics-ipo-is-selling-investors-a-story-the-numbers-tell-another-one). The platform orchestrated dozens of AI agents running across a dynamically shifting selection of underlying AI models, with human mathematicians resolving theoretical obstructions and software engineers managing build infrastructure.\n\nLead agents decomposed complex mathematical arguments into subproblems and verified formal statements, while subordinate agents retrieved known results and generated Lean code. Coordination took place across GitHub issues, with operational updates directed to Slack. The team also incorporated prior formalization efforts, integrating Lean's community-driven Mathlib library and approximately 1.2 million lines of code from the Qiuzhen-CFSG project, while borrowing the high-level formulation of the classification statement from the TauCeti repository.\n\nThe team encountered severe friction during the project's early phases. Some early milestones hid unproved assumptions that agents took for granted, forcing engineers to delete tens of thousands of lines of dependent code and restart entire sections. On October 13, progress slowed to a crawl, completing only a single milestone in 24 hours. Axiom reorganized the pipeline into smaller, strictly defined tasks. As agent drafting accelerated, Lean's compilation engine struggled to keep pace, prompting engineers to implement a distributed build system to verify proofs across machines.\n\n[[FIG2]]\n\n## Uncovering Flaws in the Mathematical Literature\n\nWhile encoding the literature into formal code, the system uncovered 34 noteworthy deviations where published claims did not align with mathematical reality. Most discrepancies involved typographical errors, missed boundary preconditions, or misstated table values, but several were substantial.\n\nIn Aschbacher and Smith's 2004 quasithin volumes, agents located an error in a lemma asserting that two quantities were always equal. The system identified a counterexample using the group SL₂(5), where one quantity evaluated to 1 and the other evaluated to 2. To preserve the proof chain, mathematicians adjusted the claim to an inequality and re-derived the downstream arguments, as detailed by [MACCUS](https://maccus.fr/en/finite-simple-groups-lean/).\n\nA larger issue emerged within the Unbalanced Group Theorem (UGT), a core pillar of the classification. When formalizing John Walter's 1986 memoir, the agents found a counterexample to a \"closure assertion\" that assumed a specific operation kept simple components within an intended family. Using the group PSL₂(49), the system showed that an order-two field automorphism produced the centralizer PGL₂(7) with simple component PSL₂(7), a group explicitly excluded from the family because 7 is a Mersenne prime. While this did not invalidate the overarching theorem, it broke Walter's published inference step.\n\nTo repair the gap, Axiom Math consulted original classification contributors Richard Lyons and Ronald Solomon. Axiom stated that, drawing on Solomon's 1976 theory of maximal 2-components, AxiomProver produced and formalized an alternative path, establishing Theorem 2.3 (\"Preservation of simple tops\"), though the accompanying paper is labeled \"primarily human-written\". Axiom Math published this repair in a preprint on Hexagon, authored by Colin Defant and Ken Ono. The paper also documents a subsequent, shorter deduction discovered by Axiom mathematicians that bypasses Theorem 2.3 entirely.\n\n## Independent Audits and Open Questions\n\nAxiom Math has released the formal proof code across a public GitHub repository, containing roughly 2.05 million declarations across 43.1 million lines of code. However, as noted in analyses by [Kingy AI](https://kingy.ai/blog/axiom-ai-math-proof-15000-pages-24-days/) and [Xenospectrum](https://xenospectrum.com/en/axiom-cfsg-formal-proof/), the achievement remains self-assessed.\n\nNo third-party research group has completed an independent rebuild or mathematical audit of the full repository. Furthermore, Axiom Math noted in its repository documentation that compiling the entire proof in under 24 hours requires unreleased modifications to Lean's Lake build system that have yet to be upstreamed. Independent experts also caution that while Lean's kernel guarantees internal deductive consistency, human specialists must inspect the top-level definitions to confirm that the formal code faithfully reflects the intended mathematical concepts rather than a weakened assertion.\n\nThe project demonstrates how AI agents combined with algorithmic verification engines can process and debug interconnected scientific literature. As independent group theorists evaluate the preprint and attempt third-party builds, the release provides a concrete foundation for testing automated reasoning on the largest structures in pure mathematics.",
+ "faq": [
+  {
+   "q": "What is the Classification of Finite Simple Groups?",
+   "a": "It is a central theorem in abstract algebra that provides a complete catalog of finite simple groups, which serve as the fundamental building blocks of all finite symmetry. The original human proof spans roughly 15,000 pages across more than 500 published papers."
+  },
+  {
+   "q": "Did the AI discover a new mathematical classification?",
+   "a": "No. The AI system verified and formalized the existing human proof into the Lean proof assistant rather than discovering a new classification. However, Axiom claims that while repairing a flawed step in an intermediate 1986 paper, AxiomProver proved a new result known as Theorem 2.3, though Axiom also stated the system verified proofs rather than discovering new ones, and the accompanying preprint is labeled \"primarily human-written\"."
+  },
+  {
+   "q": "Has the formal proof been independently verified by outside mathematicians?",
+   "a": "Not yet. While Axiom Math published its codebase on GitHub, as of late October 2026 no external party had reproduced the build or completed an independent audit of the entire repository."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern computational mathematics laboratory at twilight, featuring massive glowing geometric models of multidimensional polyhedra and crystalline symmetry structures suspended in air above tidy workstations with glowing screens showing cascading formal mathematical proofs, with research scientists in casual attire discussing theoretical diagrams on a transparent whiteboard in the background.",
+  "alt": "An AI-generated illustration of a research lab with geometric symmetry structures and digital proof displays",
+  "caption": "Illustration: AI-assisted verification systems tackle complex symmetry structures in higher mathematics.",
+  "src": "img/ai-agents-formalize-finite-simple-groups-proof/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 83958,
+  "small": "img/ai-agents-formalize-finite-simple-groups-proof/hero-640.webp",
+  "og": "img/ai-agents-formalize-finite-simple-groups-proof/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/ai-agents-formalize-finite-simple-groups-proof/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An artistic visualization of abstract algebraic symmetry represented as an intricate periodic table made of interlocking polyhedral glass shapes and luminous geometric lattice nodes floating in an illuminated gallery space.",
+   "alt": "An AI-generated illustration representing the classification of symmetry groups as an interconnected lattice of geometric components",
+   "caption": "Illustration: The Classification of Finite Simple Groups acts as an exhaustive catalog for basic symmetrical building blocks.",
+   "slot": "FIG1",
+   "src": "img/ai-agents-formalize-finite-simple-groups-proof/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 69480,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A software engineer and a theoretical mathematician standing together examining complex dependency flowcharts illuminated on an interactive holographic wall display in a server room environment, reviewing branching algorithmic proof pathways.",
+   "alt": "An AI-generated illustration showing researchers collaborating on dependency graphs in a computing environment",
+   "caption": "Illustration: Mathematicians and systems engineers collaborated to resolve proof bottlenecks and distributed compilation limits.",
+   "slot": "FIG2",
+   "src": "img/ai-agents-formalize-finite-simple-groups-proof/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 38712,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://axiommath.ai/research/the-enormous-theorem-formalized/",
+   "title": "Formalizing the Enormous Theorem",
+   "site": "Axiom",
+   "published": null,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://www.fastcompany.com/91631570/anthropics-ipo-is-selling-investors-a-story-the-numbers-tell-another-one",
+   "title": "Anthropic's IPO is selling investors a story. The numbers tell another one",
+   "site": "fastcompany.com",
+   "published": 1793232000000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://dailyai.com/it/2026/10/ai-agents-checked-maths-longest-proof-15000-pages-in-24-days/",
+   "title": "Agenti di intelligenza artificiale verificano la dimostrazione matematica più lunga in 24 giorni",
+   "site": "dailyai.com",
+   "published": 1793204381000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://xenospectrum.com/en/axiom-cfsg-formal-proof/",
+   "title": "AI Formalizes the Classification of Finite Simple Groups in 24 Days, Exposing a Flaw in an Intermediate Step",
+   "site": "xenospectrum.com",
+   "published": 1793145600000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://kingy.ai/blog/axiom-ai-math-proof-15000-pages-24-days/",
+   "title": "Axiom Says AI Formalized a 15,000-Page Proof in 24 Days",
+   "site": "Kingy AI",
+   "published": 1793127452000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://maccus.fr/en/finite-simple-groups-lean/",
+   "title": "Axiom used AI agents to turn math's 15,000-page proof into computer-checked code in 24 days",
+   "site": "MACCUS - SEO, Influence & Organic Marketing Agency",
+   "published": 1793234960000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1793327398254,
+ "updatedAt": 1793327398254,
+ "foundVia": "Reddit",
+ "check": {
+  "claims": 49,
+  "score": 10
+ },
+ "story": {
+  "id": "P28e9a301",
+  "score": 85,
+  "items": [
+   "https://maccus.fr/en/finite-simple-groups-lean/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
