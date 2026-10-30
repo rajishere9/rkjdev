@@ -1,0 +1,144 @@
+{
+ "slug": "deepseek-moonshot-openai-distillation-allegations",
+ "title": "DeepSeek and Moonshot AI Used OpenAI's GPT-6 Astra, Reports Allege",
+ "seoTitle": "DeepSeek, Moonshot Used OpenAI Models to Train AI",
+ "description": "Reports state Chinese AI firms DeepSeek and Moonshot AI trained their latest models using synthetic outputs distilled from OpenAI's GPT-6 Astra system.",
+ "dek": "Investigations allege the Chinese developers harvested outputs from GPT-6 Astra to build their latest competing systems.",
+ "category": "AI Models",
+ "tags": [
+  "Artificial Intelligence",
+  "OpenAI",
+  "DeepSeek",
+  "Moonshot AI",
+  "Model Distillation"
+ ],
+ "keyTakeaways": [
+  "The Information reported that DeepSeek and Moonshot AI relied heavily on outputs from OpenAI's GPT-6 Astra to train their latest models.",
+  "The systems cited in the reports are Moonshot's Kimi K3.1 Pro and DeepSeek's updated V4.1-Flash 1017.",
+  "OpenAI previously disclosed disrupting a July 2026 data extraction campaign across 15,000 accounts, linking a core cluster to individuals associated with Moonshot AI while stating it was unclear whether all accounts came from a single actor.",
+  "Frontier labs including OpenAI, Anthropic, and Google warn that unauthorized distillation allows rivals to replicate advanced capabilities without comparable investment, while OpenAI warned that extracting reasoning could bypass safety guardrails."
+ ],
+ "body": "Chinese artificial intelligence firms DeepSeek and Moonshot AI relied heavily on OpenAI's GPT-6 Astra to train their latest AI systems, according to a report published by [The Information and relayed by The Next Web](https://thenextweb.com/news/deepseek-moonshot-gpt-6-astra-distillation), citing people with direct knowledge of the matter. The claims focus on two newly deployed architectures: Moonshot's Kimi K3.1 Pro, which debuted in late October 2026, and DeepSeek's V4.1-Flash 1017, an updated system launched on October 17, 2026.\n\nThe disclosures underscore growing cross-border friction over model distillation, an AI training technique where developers feed prompts to an advanced system and use its answers to train smaller, more efficient models. While distillation is common across the software industry to compress models, American developers argue that systematic distillation allows rivals to capture complex capabilities at a fraction of the time and research spending required to build frontier systems from scratch.\n\n## The Scope of the Distillation Allegations\n\nAccording to reporting covered by [The Times of India](https://timesofindia.indiatimes.com/technology/tech-news/months-after-release-of-gpt-6-astra-report-says-two-top-chinese-ai-companies-copied-what-openai-called-worlds-most-intelligent-and-aligned-model/articleshow/135318341.cms), the reports allege that both Moonshot AI and DeepSeek gathered synthetic responses from GPT-6 Astra, which OpenAI released in September 2026 as what it described as the world's most intelligent and aligned model. Neither DeepSeek nor Moonshot AI has publicly confirmed using Astra outputs, and spokespersons for OpenAI, DeepSeek, and Moonshot AI did not immediately respond to requests for comment from news organizations.\n\n[[FIG1]]\n\nThe reported use of outputs from GPT-6 Astra does not show that all training data came from OpenAI, or that either company copied an entire foundation architecture, as noted by [Gadgets Now](https://gadgetsnow.indiatimes.com/tech-news/deepseek-and-moonshot-ai-reportedly-used-openai-models-to-train-their-latest-ai-systems/articleshow/135295755.cms). However, both models posted strong results in their developers' own evaluations. Moonshot stated that Kimi K3.1 Pro outperformed GPT-6 Astra on a coding benchmark, while DeepSeek has marketed V4.1-Flash as a lower-cost alternative to leading American models. Neither company's claims have undergone independent verification.\n\n## OpenAI's Prior Disruption of Scraping Operations\n\nThe recent allegations follow earlier security disclosures published by OpenAI on September 30, 2026. In that disclosure, covered by [Hindustan Times](https://www.hindustantimes.com/world-news/chinese-ai-giants-deepseek-moonshot-used-openais-gpt-6-astra-to-train-their-models-report-101793247532638.html), OpenAI detailed how it disrupted a coordinated campaign that began on July 1, 2026. Activity spiked sharply on July 24 and 25 to 16,000 requests involving more than 4,000 user profiles, eventually tracing across a broader network of over 15,000 accounts.\n\nOpenAI attributed a core cluster of that extraction activity to individuals associated with Moonshot AI, stating that operators manipulated model interactions so that protected reasoning—the internal steps an AI takes before finalizing an output—could be reproduced in visible formats. OpenAI confirmed that operators did not break encryption, compromise databases, or access private user communications. Instead, queries moved encrypted reasoning from one conversation into another, asking the system to transcribe and decrypt it. OpenAI shut down the campaign accounts on July 28, 2026, though the disclosure did not provide direct evidence that those specific July attempts were used in the development of Kimi K3.1 Pro or V4.1-Flash 1017.\n\n[[FIG2]]\n\n## Terms of Service, Security, and Broader Industry Safeguards\n\nOpenAI has defined the unauthorized extraction of outputs or chain-of-thought data as adversarial distillation, pointing out that extracting hidden reasoning can expose unfiltered thinking and allow competing systems to replicate complex abilities without inheriting the safety alignments of the original model. As reported by [Gadgets Now](https://gadgetsnow.indiatimes.com/tech-news/deepseek-and-moonshot-ai-reportedly-used-openai-models-to-train-their-latest-ai-systems/articleshow/135295755.cms), OpenAI's usage policy prohibits using its models or outputs to train models intended as alternatives to or substitutes for OpenAI's services. OpenAI announced on October 21, 2026, that an updated usage policy will take effect on November 20, 2026.\n\nOther frontier AI labs have faced similar challenges. Earlier in October 2026, Anthropic announced that defensive countermeasures had reduced the volume of data harvested from Claude models in distillation attacks by 90% to 99%. Anthropic reported investigating extraction operations involving DeepSeek, Moonshot, and MiniMax that generated over 16 million exchanges across 24,000 accounts. The ongoing extraction disputes coincide with wider scrutiny of Chinese software firms; Bloomberg previously reported that the Trump administration barred civilian US government agencies from using DeepSeek services over national security concerns.",
+ "faq": [
+  {
+   "q": "What is AI model distillation?",
+   "a": "Distillation is a machine learning method where a developer trains a model using outputs generated by a larger, more capable model. This allows the smaller model to learn specific reasoning and problem-solving patterns at lower computational cost."
+  },
+  {
+   "q": "Which models are named in the reports?",
+   "a": "The reports name Moonshot AI's Kimi K3.1 Pro, released in late October 2026, and DeepSeek's V4.1-Flash 1017, an upgraded model launched on October 17, 2026."
+  },
+  {
+   "q": "Did the distillation campaigns breach OpenAI's internal systems?",
+   "a": "No. In its September 30 disclosure, OpenAI stated that investigators found no evidence of compromised databases, broken encryption, or unauthorized access to stored user conversations."
+  },
+  {
+   "q": "Do OpenAI's terms permit using model outputs for training?",
+   "a": "OpenAI's usage policy explicitly prohibits using its outputs to train or improve models intended to serve as alternatives to or substitutes for its services."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An AI researcher in an illuminated server room inspecting large volumetric data streams flowing between interconnected visual nodes.",
+  "alt": "AI researcher examining complex synthetic data patterns inside a modern server facility",
+  "caption": "Illustration: Technical researchers analyzing synthetic model outputs across networked computational infrastructure.",
+  "src": "img/deepseek-moonshot-openai-distillation-allegations/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 77422,
+  "small": "img/deepseek-moonshot-openai-distillation-allegations/hero-640.webp",
+  "og": "img/deepseek-moonshot-openai-distillation-allegations/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/deepseek-moonshot-openai-distillation-allegations/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An engineer sitting in front of multiple widescreen computer monitors showing detailed neural network weight topologies and performance charts.",
+   "alt": "Computer engineer analyzing neural network parameters and model benchmark graphics",
+   "caption": "Illustration: Data scientists evaluating performance graphs and synthetic data generated during model training.",
+   "slot": "FIG1",
+   "src": "img/deepseek-moonshot-openai-distillation-allegations/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 44788,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A modern corporate boardroom where technology executives and compliance specialists review diagrams of cloud architecture on digital displays.",
+   "alt": "Technology professionals discussing digital infrastructure security in a conference room",
+   "caption": "Illustration: Industry specialists reviewing technical safeguards and API security protocols in an enterprise environment.",
+   "slot": "FIG2",
+   "src": "img/deepseek-moonshot-openai-distillation-allegations/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 42626,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://thenextweb.com/news/deepseek-moonshot-gpt-6-astra-distillation",
+   "title": "DeepSeek and Moonshot trained new models on GPT-6 Astra, report says",
+   "site": "TNW | Artificial-intelligence",
+   "published": 1793264207000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://www.hindustantimes.com/world-news/chinese-ai-giants-deepseek-moonshot-used-openais-gpt-6-astra-to-train-their-models-report-101793247532638.html",
+   "title": "Chinese AI giants DeepSeek, Moonshot used OpenAI's GPT-6 Astra to train their models: Report | World News",
+   "site": "Hindustan Times",
+   "published": 1793255739000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://timesofindia.indiatimes.com/technology/tech-news/months-after-release-of-gpt-6-astra-report-says-two-top-chinese-ai-companies-copied-what-openai-called-worlds-most-intelligent-and-aligned-model/articleshow/135318341.cms",
+   "title": "Months after release of GPT-6 Astra, report says two top Chinese AI companies ‘copied’ what OpenAI called ‘world’s most intelligent and aligned model’",
+   "site": "The Times Of India",
+   "published": 1793282400000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://superpowerdaily.com/posts/deepseek-and-moonshot-relied-on-openai-outputs-to-train-new-models-report-says",
+   "title": "DeepSeek and Moonshot relied on OpenAI outputs to train new models, report says",
+   "site": "superpowerdaily.com",
+   "published": 1793283178943,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://gadgetsnow.indiatimes.com/tech-news/deepseek-and-moonshot-ai-reportedly-used-openai-models-to-train-their-latest-ai-systems/articleshow/135295755.cms",
+   "title": "DeepSeek And Moonshot AI Reportedly Used OpenAI Models To Train Their Latest AI Systems",
+   "site": "gadgetsnow.indiatimes.com",
+   "published": 1793216040000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1793328145310,
+ "updatedAt": 1793328145310,
+ "foundVia": "Techmeme and Google Search",
+ "check": {
+  "claims": 41,
+  "score": 10
+ },
+ "story": {
+  "id": "P5437d64b",
+  "score": 88,
+  "items": [
+   "https://www.techmeme.com/261029/p19#a261029p19",
+   "https://gadgetsnow.indiatimes.com/tech-news/deepseek-and-moonshot-ai-reportedly-used-openai-models-to-train-their-latest-ai-systems/articleshow/135295755.cms"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
