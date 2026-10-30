@@ -1,0 +1,179 @@
+{
+ "slug": "mistral-releases-open-weights-mistral-large",
+ "title": "Mistral Releases Open Weights for 1T-Parameter Mistral Large 4",
+ "seoTitle": "Mistral Large 4 Open Weights Released: Specs & Benchmarks",
+ "description": "Mistral AI has released the open weights for Mistral Large 4, a 1-trillion-parameter MoE model built for agentic coding and cyber defense.",
+ "dek": "The European AI startup released open weights for its flagship 1-trillion-parameter model, emphasizing sovereign AI, automated coding, and defensive cybersecurity.",
+ "category": "Open Source",
+ "tags": [
+  "Mistral AI",
+  "Open Weights",
+  "Mistral Large 4",
+  "Cybersecurity",
+  "Coding Agents",
+  "Artificial Intelligence"
+ ],
+ "keyTakeaways": [
+  "Mistral Large 4 ('Le Chonk') is a 1-trillion-parameter MoE model with 52 billion active parameters and a 1-million-token context window.",
+  "Trained on 3,800 Nvidia Grace Blackwell GPUs in Europe, the model targets defensive cybersecurity and agentic coding workflows.",
+  "On the Artificial Analysis Coding Agent Index, it scores 48%, matching GLM-5.3 while consuming 47% fewer tokens per task.",
+  "Mistral released the weights under the Mistral Ecosystem Open-Weight license, which requires model-as-a-service providers to secure a separate commercial agreement."
+ ],
+ "body": "On October 29, 2026, Paris-based AI company [Mistral AI](https://mistral.ai/news/mistral-large-4-oss/) released the open weights for Mistral Large 4, its largest system to date. Nicknamed \"Le Chonk,\" the 1-trillion-parameter multimodal model arrives after three additional weeks of reinforcement learning following an initial public preview on October 6, 2026. The release targets enterprise software development and defensive cybersecurity, pitching sovereign, locally hostable infrastructure to organizations seeking alternatives to closed commercial APIs and Chinese open-weight systems.\n\nAccording to [Mistral's model card on Hugging Face](https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B), the architecture uses a granular Mixture-of-Experts (MoE) setup with 128 routed experts—activating four per token—alongside one shared expert. This configuration yields roughly 49 billion active routed parameters per token and 52 billion active parameters overall when counting embeddings and output layers. The system accepts text and image inputs, outputs text, and features a context window spanning 1 million tokens.\n\n[[FIG1]]\n\n## Coding Benchmarks and Token Efficiency\n\nMistral focused heavily on software engineering tasks during the post-preview training period. On the [Artificial Analysis Coding Agent Index](https://mistral.ai/news/mistral-large-4-oss/), Mistral Large 4 reached a score of 48% when paired with the Mistral Vibe agent, effectively matching the leading open-weight benchmark set by China's GLM-5.3 (49%) while consuming 47% fewer tokens per task on average.\n\nTerminal-based agent performance showed similar movement. On Terminal-Bench 4.0, Mistral reported that the model advanced from 28% in its preview stage to 41%, while reducing output tokens by 30%. On Cognition's private FrontierCode 2.0 evaluation, Mistral reported an open-weight lead of 19.7%. However, independent evaluations conducted by [Artificial Analysis](https://venturebeat.com/technology/mistral-large-4-le-chonk-arrives-as-the-top-open-model-outside-china-with-improved-coding-performance-and-63-lower-cost-per-task) recorded a lower score of 15% on FrontierCode 2.0 in high-reasoning mode, trailing GLM-5.3 at 22% and DeepSeek V4.1 Flash at 29%.\n\nIn blind pairwise evaluations conducted by Surge Code, human graders preferred code written by Mistral Large 4 over GLM-5.3 and Kimi K3 in 64% of comparisons, and over DeepSeek V4.1 Flash in 56% of matchups. Against proprietary leader Claude Opus 5.5, Mistral Large 4 won 22% of head-to-head assessments.\n\nTo balance latency and operating expenses, the model provides three distinct reasoning modes: Low (which replaces the previous \"None\" setting for basic prompts), Medium (configured for everyday tasks), and High (the default mode intended for complex coding and multi-step agentic execution).\n\n## Cybersecurity Capabilities and Guardrail Balancing\n\nMistral designed Mistral Large 4 to perform defensive cybersecurity operations without triggering false-positive refusals on authorized enterprise workflows. On the [Artificial Analysis Cyber Index](https://the-decoder.com/paris-based-mistral-releases-le-chonk-a-strong-coding-model-that-still-trails-china-overall/), which tests a model's ability to identify, reproduce, and patch vulnerabilities without disrupting existing functionality, Mistral Large 4 scored 51%.\n\nThat mark places it third among evaluated open-weight models, trailing DeepSeek V4.1 Flash 1017 (57%) and MiMo-V2.6-Pro (56%), though ahead of GLM-5.3 Flash (50%). Within specific sub-tests, Mistral Large 4 hit 79% on CyberGym-E2E-AA (matching MiMo-V2.6-Pro and surpassing DeepSeek V4.1 Flash's 76%), 58% on CWE-Bench-AA, and 15% on DeepsecBench-AA.\n\n[[FIG2]]\n\nAlongside defensive tasks, Mistral reported an average refusal rate of 96.6% on malicious requests across JailbreakBench, StrongREJECT, and AgentHarm prompts. Mistral acknowledged that observing live traffic highlighted the potential for models to assist real attacks, confirming that it will continue updating its guardrails in coming months. For specialized red-teaming, penetration testing, and vulnerability assessments, Mistral is offering select design partners, including Orange Cyberdefense, access to a vetted, contractually safeguarded variant restricted to authorized target environments.\n\nOn broader agent resilience, the model scored 97.1% on the B3 Agent Security Benchmark, up from 93.3% during the preview, measuring resistance to system prompt exfiltration and malicious injection.\n\n## Global Intelligence Standings and Hardware Footprint\n\nOn the aggregate [Artificial Analysis Intelligence Index v5](https://the-decoder.com/paris-based-mistral-releases-le-chonk-a-strong-coding-model-that-still-trails-china-overall/), Mistral Large 4 scored 26 points in high-reasoning mode, up from 25 points during the preview. This ranks it as the highest-scoring open-weight model developed outside China, edging past Muse Spark Open (25 points). However, it remains behind Chinese open-weight leaders DeepSeek V4.1 Flash 1017 and GLM-5.3, both of which registered 32 points, while closed models like Gemini 4 Carbon (59 points) and Claude Opus 5.5 (58 points) hold wider leads.\n\nMistral trained the model from scratch on 3,800 Nvidia Grace Blackwell GPUs hosted in its European data centers, drawing approximately 10 megawatts of power for the reinforcement learning phase. \"Other labs have raised hundreds of billions to develop equivalent capabilities; in three years, Mistral raised roughly $6 billion,\" said Mistral co-founder and CEO Arthur Mensch in comments reported by [SiliconANGLE](https://siliconangle.com/2026/10/29/mistral-releases-open-weights-for-mistral-large-4-providing-sovereign-control-for-the-companys-le-chonk-ai-model/).\n\nSelf-hosting a 1-trillion-parameter system requires substantial compute. According to framework documentation from SGLang, serving the uncompressed model requires eight Nvidia B300 GPUs, while a quantized NVFP4 checkpoint can run on four GB300 or B200 GPUs. The model checkpoint also includes an integrated DSpark draft head featuring three dense draft layers in BF16, which Mistral reports can improve decoding throughput by up to 1.9 times.\n\n## Licensing, Deployment, and API Pricing\n\nMistral released the weights under the [Mistral Ecosystem Open-Weight License](https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B), a modified MIT license. The license grants broad rights to run, modify, fine-tune, and commercialize the model, but introduces a specific limitation: organizations that operate a commercial \"model-as-a-service\" business—offering third parties direct inference or tuning API access—must secure a separate commercial agreement from Mistral. Internal enterprise deployments and services that embed model capabilities into specific end-user applications are exempt from this restriction.\n\nFor managed cloud inference, Mistral Large 4 is available through the Mistral API, Mistral Studio, OpenRouter, and Microsoft Foundry for private Azure deployments, alongside an optimized Nvidia NIM container. On the Mistral API, pricing is set at $0.70 per million input tokens, $0.07 per million cached input tokens, and $2.10 per million output tokens—roughly half the list rates posted during the October preview.\n\nPierre Stock, VP of Science at Mistral, emphasized the strategic importance of open European infrastructure during a press briefing covered by [WIRED](https://www.wired.com/story/mistral-says-le-chonk-surpasses-chinese-models-cybersecurity/). \"AI is going to be like electricity. You don’t want to live in a world in which your neighbor can cut off electricity from one day to another,\" Stock said. Mistral confirmed that smaller, distilled versions of Mistral Large 4 are scheduled for release in the coming months.",
+ "faq": [
+  {
+   "q": "What are the core technical specifications of Mistral Large 4?",
+   "a": "Mistral Large 4 is a Mixture-of-Experts model containing roughly 1.05 trillion total parameters and 52 billion active parameters (49 billion routed parameters per token). It features a 1-million-token context window, supports text and image inputs with text outputs, and was trained on 3,800 Nvidia Grace Blackwell GPUs."
+  },
+  {
+   "q": "Can companies use Mistral Large 4 commercially for free?",
+   "a": "Yes, under the Mistral Ecosystem Open-Weight license, commercial deployment, internal enterprise usage, and feature-embedded software applications are permitted. However, entities offering model-as-a-service platforms that provide third parties with hosted API access to the model must obtain a separate commercial license from Mistral."
+  },
+  {
+   "q": "How does Mistral Large 4 perform on cybersecurity benchmarks?",
+   "a": "On the Artificial Analysis Cyber Index, Mistral Large 4 scored 51%, placing third behind DeepSeek V4.1 Flash (57%) and MiMo-V2.6-Pro (56%). It matched MiMo-V2.6-Pro on the CyberGym-E2E test at 79% and demonstrated a 96.6% refusal rate against malicious cyber prompts."
+  },
+  {
+   "q": "What hardware is required to run the open weights locally?",
+   "a": "According to deployment documentation, standard serving of the uncompressed model requires eight Nvidia B300 GPUs using frameworks like vLLM or SGLang, while a quantized NVFP4 release can run on four Nvidia B200 or GB300 GPUs."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern European server room interior with tall rows of high-density computing racks illuminated by subtle teal and blue LED indicator strips, reflecting off a polished concrete floor, with high-voltage cabling visible along overhead metal trays.",
+  "alt": "Illustration of an enterprise datacenter with racks of AI hardware and server cabinets",
+  "caption": "Illustration: high-density datacenter infrastructure supporting sovereign, open-weight AI models.",
+  "src": "img/mistral-releases-open-weights-mistral-large/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 46248,
+  "small": "img/mistral-releases-open-weights-mistral-large/hero-640.webp",
+  "og": "img/mistral-releases-open-weights-mistral-large/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/mistral-releases-open-weights-mistral-large/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A software engineer working at an ultra-wide desktop setup displaying complex terminal commands, code compilation trees, and green security status indicators in a softly lit office setting.",
+   "alt": "Illustration of a software developer running terminal-based coding and security tasks",
+   "caption": "Illustration: agentic coding models automate terminal workflows and software patch generation.",
+   "slot": "FIG1",
+   "src": "img/mistral-releases-open-weights-mistral-large/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 41862,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A cybersecurity analyst sitting before multiple displays analyzing network graphs, digital vulnerability topologies, and glowing system defense schematics in a high-tech security operations center.",
+   "alt": "Illustration of a security operations analyst monitoring defensive cybersecurity workflows",
+   "caption": "Illustration: enterprise security teams utilizing AI systems for automated threat reproduction and patching.",
+   "slot": "FIG2",
+   "src": "img/mistral-releases-open-weights-mistral-large/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 36982,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://mistral.ai/news/mistral-large-4-oss/",
+   "title": "Le Chonk: Built for Coders, Trusted by Defenders.",
+   "site": "Mistral",
+   "published": 1793275207000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
+   "title": "mistralai/Mistral-Large-4-1T-A52B",
+   "site": "Hugging Face",
+   "published": 1790793313000,
+   "official": true
+  },
+  {
+   "n": 3,
+   "url": "https://venturebeat.com/technology/mistral-large-4-le-chonk-arrives-as-the-top-open-model-outside-china-with-improved-coding-performance-and-63-lower-cost-per-task",
+   "title": "Mistral Large 4 'Le Chonk' arrives as the top open model outside China with improved coding performance and 63% lower cost-per-task",
+   "site": "venturebeat.com",
+   "published": 1793290200000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.wired.com/story/mistral-says-le-chonk-surpasses-chinese-models-cybersecurity/",
+   "title": "Mistral Says Its AI Model ‘Le Chonk’ Has Leapfrogged China in the Open-Weight Race",
+   "site": "WIRED",
+   "published": 1793282400000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://the-decoder.com/paris-based-mistral-releases-le-chonk-a-strong-coding-model-that-still-trails-china-overall/",
+   "title": "Paris-based Mistral releases \"Le Chonk,\" a strong coding model that still trails China overall",
+   "site": "The Decoder",
+   "published": 1793287527000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://siliconangle.com/2026/10/29/mistral-releases-open-weights-for-mistral-large-4-providing-sovereign-control-for-the-companys-le-chonk-ai-model/",
+   "title": "Mistral releases open weights for Mistral Large 4, providing sovereign control for the company’s ‘Le Chonk’ AI model",
+   "site": "SiliconANGLE",
+   "published": 1793287238000,
+   "official": false
+  },
+  {
+   "n": 7,
+   "url": "https://thenextweb.com/news/mistral-large-4-open-weights-release",
+   "title": "Mistral releases open weights for its 1 trillion-parameter Large 4 model",
+   "site": "TNW | Artificial-intelligence",
+   "published": 1793282437000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1793318832091,
+ "updatedAt": 1793318832091,
+ "foundVia": "mistral.ai, Google News and Techmeme",
+ "check": {
+  "claims": 27,
+  "score": 10
+ },
+ "story": {
+  "id": "P3cd43e6f",
+  "score": 103,
+  "items": [
+   "https://mistral.ai/news/mistral-large-4-oss/",
+   "https://news.google.com/rss/articles/CBMikwFBVV95cUxNVjRSWVJNVm85YldrSjhfUVBxN3owOFZ5R1dsbk10Yk03Qy04QXpzalI3OUp1R19BSEVITTFIXzFCUWJwRWpNZVhDR19MSVJnZTdOQTczSEtpWjhGc2VVRWJ1TUhybkczRm1tbXRFaS1jU0FjZ0VSaF81V0dwNDRIYXFPTmkxMUh1NlUxTjBkMDNpeEk?oc=5",
+   "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOYzZpUXA0LXZzVzFDcDVYNGdhRmh4T2FXb25rdjM1M1ZkTE42VVU3SDdwTmpwLXkzcDZGdEpFeE51Z19pUTI2TjJ5TFI3SU5LLWFCc0dNbk9RdElTSnpHYlRVdDA5UmluSHhRSWF6RTQ4UzJKZ21DSnF0MlR0SDJIUVRxMWlJYWtMWjNxeHJTa0FHckV2QW5YQ0twYWx3V2RFYXR0TDFKbW1aWnZXNWpFUWl5TzhkTnVjaFk2WHRBRDZOZkRfQ0IyUA?oc=5",
+   "https://www.techmeme.com/261029/p30#a261029p30",
+   "https://www.wired.com/story/mistral-says-le-chonk-surpasses-chinese-models-cybersecurity/",
+   "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
+   "https://news.google.com/rss/articles/CBMixAFBVV95cUxPOWlfcWswLUlERGllQ3RvSmx1M2JWeUlBXzJSRDNmay1NOFpVU3d2X2JGSFFtd0xaRFA5ZGFkSjE0Rl9RRWVLYlEyVUkxOTVSSmVyb3Joekt2WXNmNE0yV0MyaHZRNmpZcnBiNTU1OXZabGNWT2I0WkE2WUFvQVZKRXZKWmlTOHlhU0V2dV9INGxpbUxueDYxNnVLQjMtWjlRdTFnWUdtc3BpUlN2eFVQZE43MUdkMGR1TGdFczJQTlJGcE9K?oc=5",
+   "https://news.google.com/rss/articles/CBMimgFBVV95cUxOenEyRGlBUGxnX0tNZXZXZGxtRmJTaEFtbXp5Q3hTV2VjT0ppMUlESk5mNlJXRXFZYWxDQV9NRjJpWVVaN29XbVZfXzk5VUFSUGtmaXlaUFctRTMyZ0dhVGNQMVRxNXd5M0VXQzJHVzJmNU10NWc2Z2YwelZtdUM0WUNHY0tkNzNUUEU1ZUxvVGlFS1lTbU5iUl9R?oc=5",
+   "https://the-decoder.com/paris-based-mistral-releases-le-chonk-a-strong-coding-model-that-still-trails-china-overall/",
+   "https://siliconangle.com/2026/10/29/mistral-releases-open-weights-for-mistral-large-4-providing-sovereign-control-for-the-companys-le-chonk-ai-model/",
+   "https://thenextweb.com/news/mistral-large-4-open-weights-release",
+   "https://www.reddit.com/r/LocalLLaMA/comments/1xilhng/le_chonk_is_here/",
+   "https://news.google.com/rss/articles/CBMic0FVX3lxTE1oUDdGckVKYzJobVpZMk5HeFFpX1Z5U0FRQnRoQTJfeEZXaHRCRHVwLUluQWNJSDVKcHI5VFhPR3NvSDdvbUNhZ2JUbGN1SjVmeGltaVVDMTc2ODVnU1dGbXVUMGFCLWVKbVhIOExJZllTZnM?oc=5",
+   "https://news.google.com/rss/articles/CBMickFVX3lxTE1XcVRkZU9oekdPekFMUWNQM1pyb2JmMEtOQm81ZnVyWW9MWjhEMk5yTkpOdzYzUW9Ob0Ftd1BGNXN6WkFqZnktSnRxMzN6WkhWaHlrT0pLMDAwZjM3azNLRVNXc2VFV0s4Mnp3X2w5cVVmZw?oc=5",
+   "https://news.google.com/rss/articles/CBMihwFBVV95cUxPQUl3dFEwM1FjaWpUazRUT0kyNVpjVk51eDlfZjQ0dUZSZ1ctbW5xRUtzakU3YTZsYlpQdUt1cWlqZlR0VERRWW94NzROUVBaNXFqNDYzTUk5emt3bjZsa2U0ZDFfYXo3Z25rNnpIa3lLSlMwM3dZZHM5QUVpck9fN1ZvaTllMUU?oc=5",
+   "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPTkdvMFRuNl9QVGp5NXBjYWdneWpQUmctMnVqZzc4UzZMTDVfdlNqbUI0YjhvMF8xS29kc2RtVFBKYjNQZEhvdHptOHRkM1JYUXk1R3ljbEdYc1gtS2s5Ulo2eThsaXlZLWJPajQ3TjFiS0phSGtZcjVkOTFQRGpZeGlTMHZ3anRI?oc=5",
+   "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOMjNidjZYcnoxeE9Gc3NzX05BMlFMeDVwRjF2eWNNQ0FZTWR2amRmYm9YVzFKbmJteUR1TEZpallEUXBoeFVKeDBQemNhd3ExckNJUzYxMmFIXy1NNEhqNUdHeW1OVWdyVVRMa2ItV2pxOWhEdzlXRU80NVhOd1FPRFdGSDh0VHRTLWFXamJJUlNabTQyMlVNNjBqc3FMQkg1enB3TlBQcW1ESmhJa1lrcVRpeHJWRFNjdjhB?oc=5",
+   "https://news.google.com/rss/articles/CBMikwFBVV95cUxOX0dnUVZOUmRWd1Vwdm9MdHE1Y1lyS2lWdUN3bS10R2Q1NXFGSGljM2JpQmJVNjFXX3laYVdjMzMyNk96TnJtR0MwQWFnbklzTXV4X3B5bWpNR2RCMGJMdjEzRTlNY3lvWHpUSGhHNFlGUEtTVTNHbk5VYlEzeEF4bi1vN2V3dlJHVFNRVlg4VWZWbDQ?oc=5",
+   "https://techcrunch.com/2026/10/29/mistral-releases-weights-for-its-trillion-parameter-ai-model-targeting-cybersecurity/",
+   "https://news.google.com/rss/articles/CBMiogFBVV95cUxOMExLUnRIU0hNbXhZWjA1WUpDTWxSd3IxQk5iQW05MkZzMXNtUTNNSm4wdzNHMkVmZkViRmtkNUtVLTVqZFVMWVpOY0N2bXhSeEh5UzJ5b3Y0YlExNk9FMGtMbkJPdi02LWpldDUzOElRdkY0N0hGYno3dFdwU0pZRDlpMTVzNWZJTUpRMTZsMXFCU3d6c0RuaEotNUlVSGZCQ2c?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
