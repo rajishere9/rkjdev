@@ -1,0 +1,141 @@
+{
+ "slug": "openai-updates-model-spec-five-core-values",
+ "title": "OpenAI Overhauls Model Spec Around Five Core Values for AI Behavior",
+ "seoTitle": "OpenAI Model Spec Overhauled Around Five Core Values",
+ "description": "OpenAI has revised its Model Spec around five foundational values, establishing a strict chain of command and stripping away granular style guidelines.",
+ "dek": "The updated public rulebook prioritizes human intent, establishes guardrails against autonomous self-preservation, and renames the system GPT.",
+ "category": "AI Models",
+ "tags": [
+  "OpenAI",
+  "Model Spec",
+  "AI Alignment",
+  "AI Safety",
+  "Machine Learning"
+ ],
+ "keyTakeaways": [
+  "OpenAI restructured its Model Spec framework around five core values: faithfulness to human intent, harm minimization, honesty and transparency, human agency, and care.",
+  "The update removes detailed style rules, switches the system reference from 'the assistant' to 'GPT', and sets strict limits against models pursuing self-preservation or compute accumulation.",
+  "A formal hierarchy of authority gives top precedence to root safety instructions over system, developer, and user commands.",
+  "OpenAI acknowledged that its current shipping models do not yet fully conform to the updated behavioral specifications."
+ ],
+ "body": "OpenAI has reorganized its [Model Spec](https://openai.com/index/updated-model-spec/), the company's public blueprint outlining how its artificial intelligence systems should behave. Released on October 29, 2026, the updated framework reorganizes the system's operational guidelines around five central values: faithfulness to human intent, harm minimization, honesty and transparency, human agency, and care. The overhaul also retires most of the document's legacy style mandates and formally refers to the underlying system as \"GPT\" rather than \"the assistant.\"\n\nThe revision comes as frontier systems take on more open-ended and consequential responsibilities, creating scenarios where literal instruction following can produce unintended outcomes. OpenAI explained that the updated framework is meant to guide how models navigate trade-offs in unfamiliar situations while remaining subject to human oversight.\n\n[[FIG1]]\n\n## The Five Values Anchoring the Spec\n\nOpenAI designated faithfulness to human intent as the bedrock of the entire structure. According to the [official Model Spec announcement](https://openai.com/index/updated-model-spec/), this approach draws inspiration from the assistance-games alignment framework. Instead of following user prompts word for word, models are directed to infer what people and developers actually intend, while recognizing that preferences can evolve. For example, if a user requests help evaluating employment offers, GPT may incorporate previously stated preferences like schedule predictability, provided it makes those assumptions transparent and straightforward to modify.\n\nThe remaining four values define boundaries and expectations around how assistance is delivered. Harm minimization requires adhering to safety guardrails and calculating foreseeable consequences. Honesty and transparency demand that the system state clearly what it knows, what it has completed, and where it lacks certainty. Facilitating human agency focuses on supporting the user's independent decision-making rather than making choices for them. Finally, care requires the model to follow applicable social norms and produce work that people can safely depend on.\n\nAs reported by [The Next Web](https://thenextweb.com/news/openai-model-spec-five-values-update), the document explicitly cautions against flattery. The model should maintain an objective perspective on sensitive questions rather than telling users what it assumes they prefer to hear, though it may adopt specific viewpoints when explicitly requested to do so.\n\n[[FIG2]]\n\n## A Defined Chain of Command and Autonomy Caps\n\nBeyond high-level principles, the updated document details an explicit hierarchy of authority designed to resolve conflicting instructions. As outlined by [Unite.AI](https://www.unite.ai/openai-reorganizes-model-spec-around-five-core-behavior-values/), the Model Spec establishes root sections as immutable rules that cannot be bypassed by context. OpenAI system directives take secondary priority, followed sequentially by developer commands and user prompts. Baseline guidelines operate merely as defaults, while messages from tools, assistants, or untrusted external inputs carry no inherent authority.\n\nThe document's non-negotiable red lines declare human safety and human rights paramount. The principles state that OpenAI's models should never be used to facilitate critical and high-severity harms such as acts of violence, creation of cyber, biological, or nuclear weapons, terrorism, or mass surveillance.\n\nCrucially for autonomous systems, root rules include a strict \"no other objectives\" mandate. The model is forbidden from treating self-preservation, shutdown evasion, compute accumulation, data harvesting, credential acquisition, or revenue generation for OpenAI as internal goals. It must also remain corrigible—staying open to inspection, correction, and termination by authorized supervisors. When operating autonomously, models must function within an explicit ScopeOfAutonomy record that specifies allowed tools, execution time cutoffs, spending thresholds, and mandatory stop conditions.\n\n## Retiring Style Rules and Bridging the Implementation Gap\n\nTo accommodate a broader variety of applications across languages and business settings, OpenAI dropped much of its granular style guidance. Instead of forcing rigid formatting habits across the board, the company stated that tone and style should adapt flexibly based on context and user preferences, keeping only baseline requirements like neutrality intact.\n\nOpenAI acknowledged that its operational models do not yet fully comply with the newly defined standards. The company stated it is actively exploring novel training techniques to teach the five core values and help systems internalize the underlying reasons behind behavioral rules. The move shares conceptual ground with constitutional approaches used by rivals like Anthropic, as noted by [Reuters](https://cio.economictimes.indiatimes.com/news/artificial-intelligence/openai-updates-model-spec-five-core-values-to-enhance-ai-alignment-and-transparency/135339843?utm_source=portal_category_widget&utm_medium=homepage), which rely on explicit principle sets to direct model actions.\n\nThe updated Model Spec has been released under the Creative Commons CC0 1.0 universal public domain dedication, with OpenAI inviting developers and external researchers to provide feedback on the trade-offs and rules established in the document.",
+ "faq": [
+  {
+   "q": "What are the five core values in OpenAI's updated Model Spec?",
+   "a": "The five core values organizing the revised framework are faithfulness to human intent, harm minimization, honesty and transparency, human agency, and care."
+  },
+  {
+   "q": "How does the chain of command resolve conflicting AI instructions?",
+   "a": "The hierarchy places root rules from the Model Spec at the top, followed by OpenAI system messages, developer instructions, and then user commands. Tool outputs and untrusted data carry no authority."
+  },
+  {
+   "q": "Do current OpenAI models follow this new rulebook completely?",
+   "a": "No. OpenAI admitted that its current models do not yet fully reflect the updated Model Spec and noted that it is developing new training methods to teach systems these values."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An abstract, clean digital scene showing five luminous, geometric glass pillars arranged in a circle inside a minimalist research laboratory. Soft architectural light shines across white floors, symbolizing foundational structure and core ethics.",
+  "alt": "Five glowing geometric pillars standing in a modern research environment",
+  "caption": "Illustration: five conceptual pillars representing the core behavioral values in the updated framework.",
+  "src": "img/openai-updates-model-spec-five-core-values/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 28348,
+  "small": "img/openai-updates-model-spec-five-core-values/hero-640.webp",
+  "og": "img/openai-updates-model-spec-five-core-values/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/openai-updates-model-spec-five-core-values/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An AI researcher in casual clothing sitting before a desk with transparent glass monitors displaying balanced scales and logical flowcharts in clean lines, bathed in natural window daylight.",
+   "alt": "A software researcher reviewing logical flowcharts and decision trees",
+   "caption": "Illustration: an engineer working on value alignment and human intent models.",
+   "slot": "FIG1",
+   "src": "img/openai-updates-model-spec-five-core-values/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 34298,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A modern server room corridor with clean white cabinetry and subtle amber warning lines along the floor, showing a digital access terminal locked with clear boundaries.",
+   "alt": "A high-security server corridor with distinct safety perimeter lines",
+   "caption": "Illustration: strict boundaries and autonomy limits governing advanced computing agents.",
+   "slot": "FIG2",
+   "src": "img/openai-updates-model-spec-five-core-values/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 19572,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://openai.com/index/updated-model-spec/",
+   "title": "An updated Model Spec for more capable and beneficial AI",
+   "site": "OpenAI",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://thenextweb.com/news/openai-model-spec-five-values-update",
+   "title": "OpenAI rewrites its AI rulebook around five core values",
+   "site": "TNW | Artificial-intelligence",
+   "published": 1793297773000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/openai-updates-model-spec-five-core-values-to-enhance-ai-alignment-and-transparency/135339843?utm_source=portal_category_widget&utm_medium=homepage",
+   "title": "OpenAI updates Model Spec: Five core values to enhance AI alignment and transparency",
+   "site": "Reuters",
+   "published": 1793328013000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.unite.ai/openai-reorganizes-model-spec-around-five-core-behavior-values/",
+   "title": "OpenAI Reorganizes Model Spec Around Five Core Behavior Values",
+   "site": "Unite.AI",
+   "published": 1793294522000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://aiweekly.co/alerts/openai-rebuilds-model-spec-on-five-values-renames-model-gpt",
+   "title": "OpenAI Rebuilds Model Spec on Five Values, Renames Model 'GPT'",
+   "site": "AI Weekly",
+   "published": 1793299332000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1793332386809,
+ "updatedAt": 1793332386809,
+ "foundVia": "openai.com, Techmeme and Google News",
+ "check": {
+  "claims": 28,
+  "score": 10
+ },
+ "story": {
+  "id": "P4063fab5",
+  "score": 84,
+  "items": [
+   "https://openai.com/index/updated-model-spec",
+   "https://www.techmeme.com/261029/p42#a261029p42",
+   "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5xNEEzYVdFemd2ZlNTclVaYVZ4M0JlcTBSODQ2ODlQRWpkc05hWk5sMDIxVG00OEJCbm8wX284VFBTTm1kUEktV0VlemVUQzI2WWFBNTlOWQ?oc=5"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
