@@ -1,0 +1,132 @@
+{
+ "slug": "anthropic-blocks-claude-reverse-engineering-video-games",
+ "title": "Anthropic Restricts Claude From Reverse-Engineering Video Games",
+ "seoTitle": "Anthropic Blocks Claude From Video Game Reverse Engineering",
+ "description": "Anthropic updated Claude Code to block users from reverse-engineering and cloning video games following complaints over AI clones on Steam.",
+ "dek": "Prompt guardrails added to Claude Code and Opus 5.5 aim to stop software cloning, but legitimate game developers report collateral refusals.",
+ "category": "AI Models",
+ "tags": [
+  "Anthropic",
+  "Claude",
+  "Game Development",
+  "Steam",
+  "Intellectual Property",
+  "Artificial Intelligence"
+ ],
+ "keyTakeaways": [
+  "Anthropic added a strict directive to Claude Code on Opus 5.5 instructing the model to reject recreating specific existing games.",
+  "The restriction followed rampant AI-assisted game cloning, demo scraping fears, and reverse-engineering projects across the gaming sector.",
+  "Legitimate developers report that the guardrail is misfiring on routine troubleshooting, game mechanics, and tabletop game patches."
+ ],
+ "body": "Anthropic has implemented system-level prompt restrictions to stop its Claude AI models from being used to decompile, mod, and clone video games. The change, pushed to Claude Code running on the Opus 5.5 model in late October 2026, aims to curb an influx of unauthorized software clones and protect commercial intellectual property.\n\nAccording to reporting from [Game Developer](https://www.gamedeveloper.com/programming/anthropic-appears-to-have-ordered-ai-tool-claude-to-stop-remaking-video-games), users first noticed the modification on October 27, filed under an internal rule identifier labeled \"tengu_heron_brook.\" The directive instructs the assistant: \"Do build original games, games in a genre, and games from the user’s own designs and assets. Do not build a recreation of a specific existing game, even if it is renamed or called original.\"\n\nAddy Osmani, a member of Anthropic's technical staff, confirmed the policy update on social platform X, noting that the team inserted two sentences into Claude Code's prompt on Opus 5.5. Osmani explained that using the model to infringe on intellectual property violates Anthropic's usage guidelines, while clarifying that original software designs and genre concepts remain permitted.\n\n[[FIG1]]\n\n## The Catalysts Behind the Crackdown\n\nThe move arrives amid rising anxiety across the video game industry over automated code scraping and fast-follow cloning. As reported by [PC Gamer](https://www.pcgamer.com/gaming-industry/anthropic-updates-claude-to-steer-it-away-from-letting-users-clone-games-following-weeks-of-steam-being-inundated-with-ai-slop/), independent game developers have grown alarmed by low-effort, AI-assisted imitations flooding storefronts like Valve's Steam. During the most recent Steam Next Fest, demo submissions doubled compared to the previous edition, with AI-generated titles driving much of the surge.\n\nThe rapid capabilities of Opus 5.5 also exacerbated reverse-engineering activities. [Mashable](https://mashable.com/tech/anthropic-takes-steps-to-block-video-game-cloning-and-reverse-engineering) reported that community hobbyists and bad actors used AI to accelerate game decompilation. Users ported titles such as *World of Warcraft*, *Call of Duty*, and *Grand Theft Auto: Vice City* directly into web browsers without developer authorization. In other instances, modders merged mechanics from disparate titles, placing Nintendo's Mario inside *Elden Ring* or inserting Spider-Man into *Batman: Arkham City*.\n\nMore pressing for platform holders, reverse-engineering workflows assisted a jailbreak of the PlayStation 5 console. That exploit allowed cross-platform play and unauthorized execution of console exclusives, including running *Halo 2* and *The Legend of Zelda: Breath of the Wild* on Sony hardware. Coupled with legal fallout surrounding viral leaks of *Grand Theft Auto VI*, which led Take-Two Interactive to serve subpoenas to Discord and Microsoft, frontier AI developers faced mounting pressure to curtail infringement vectors.\n\nIndependent studios have altered their public roadmaps in response to AI-assisted asset theft. Studio Digital Sun Games recently canceled an upcoming public playtest of its game *ReVamp*, fearing unauthorized parties would feed the demo code into an automated model to generate a copycat release before the studio could ship the final product. [Tom's Hardware](https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-ai-model-is-now-blocking-attempts-at-video-game-recreation-and-cloning-users-also-claim-non-malicious-generic-reverse-engineering-tasks-are-blocked) also documented instances of extortion scams targeting developers with threats of duplicating unfinished game demos.\n\n[[FIG2]]\n\n## False Positives Disrupt Legitimate Programmers\n\nWhile the updated policy targets bad actors, legitimate software engineers are facing unexpected disruptions. As [Tom's Hardware](https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-ai-model-is-now-blocking-attempts-at-video-game-recreation-and-cloning-users-also-claim-non-malicious-generic-reverse-engineering-tasks-are-blocked) reported, Claude Code's GitHub repository has recorded an influx of issue tickets detailing refusals on ordinary development tasks.\n\nDevelopers report that innocuous workflows—including debugging code midway through an original game's production, requesting help to implement common mechanics, patching tabletop-style games, and utilizing legitimate decompiling utilities like the Reverse Engineer Anything (REA) tool—are being blocked by Claude's new prompt filters. The blanket nature of the rule makes it difficult for the model to differentiate between genuine intellectual property theft and standard engineering practices.\n\nAddressing the complaints, Osmani acknowledged the friction on X, stating that Anthropic intends to iterate to balance safety and utility. \"In the meantime, if Claude turns down something that's yours, send it my way,\" Osmani wrote.\n\n## Platform Responses and the Open-Weight Question\n\nPlatform distributors have struggled to craft concrete policies around AI-generated software clones. At Steam's Indie Connect event, Valve's Tom Giardino acknowledged that Steam faces an issue with low-effort AI titles. However, Giardino stated that Valve will not ban AI coding assistants outright, explaining that the company does not want to act as a gatekeeper dictating developer toolsets. Instead, Giardino advised creators to protect their work by emphasizing personal perspective, distinct creativity, and ongoing feature updates.\n\nObservers have also pointed out industry ironies and enforcement loopholes. As Tom's Hardware contributor Bruno Ferreira highlighted, frontier AI developers that scraped public internet data to train foundational models are now tasked with preventing copyright violations from their own users.\n\nFurthermore, prompt-level restrictions on closed models may do little to deter determined bad actors. Generative AI filters can frequently be bypassed using rhetorical prompting techniques, and programmers seeking to reverse-engineer software can easily pivot away from Claude toward uncensored, open-weight models that lack centralized usage controls.",
+ "faq": [
+  {
+   "q": "What rule did Anthropic add to Claude Code?",
+   "a": "Anthropic added a prompt directive under the identifier 'tengu_heron_brook' instructing Claude Code to refuse recreating specific existing video games, even if they are renamed or presented as original."
+  },
+  {
+   "q": "Why did Anthropic implement this restriction?",
+   "a": "The guardrail addresses mounting intellectual property concerns, extortion scams against indie developers, unauthorized game decompilation, and a surge of low-effort AI clone submissions on Steam."
+  },
+  {
+   "q": "How does the rule affect legitimate developers?",
+   "a": "Developers have reported false positives on GitHub, with Claude Code refusing routine requests like troubleshooting gameplay mechanics, modifying tabletop rule sets, and using standard reverse-engineering utilities."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An isometric illustration of a digital game development studio bathed in soft blue and amber ambient light, showing holographic video game wireframes, circuit lines, and code blocks being locked inside a glowing digital safety vault.",
+  "alt": "Illustration of digital game code and wireframes being secured inside an encrypted barrier",
+  "caption": "Illustration: AI-assisted game development tools face new safety barriers to protect intellectual property.",
+  "src": "img/anthropic-blocks-claude-reverse-engineering-video-games/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 114552,
+  "small": "img/anthropic-blocks-claude-reverse-engineering-video-games/hero-640.webp",
+  "og": "img/anthropic-blocks-claude-reverse-engineering-video-games/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/anthropic-blocks-claude-reverse-engineering-video-games/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A modern computer workspace with multiple glowing monitors displaying software code, retro arcade sprite assets, and a glowing digital stop shield icon floating above the keyboard.",
+   "alt": "Illustration of a software developer desk with an AI refusal shield hovering over game code",
+   "caption": "Illustration: Prompt safeguards are halting code generation when models detect copyrighted game designs.",
+   "slot": "FIG1",
+   "src": "img/anthropic-blocks-claude-reverse-engineering-video-games/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 40882,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "An independent game developer sitting thoughtfully in a modest home studio filled with monitors, concept art sketches, and gaming controllers, looking at a screen filled with original project code.",
+   "alt": "Illustration of an indie developer reviewing project files at a multi-monitor workstation",
+   "caption": "Illustration: Indie studios have raised alarms over automated cloning risks threatening upcoming game releases.",
+   "slot": "FIG2",
+   "src": "img/anthropic-blocks-claude-reverse-engineering-video-games/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 43374,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-ai-model-is-now-blocking-attempts-at-video-game-recreation-and-cloning-users-also-claim-non-malicious-generic-reverse-engineering-tasks-are-blocked",
+   "title": "Anthropic's Claude AI blocks video game cloning and reverse-engineering — sweeping new restrictions also hit legitimate developers and basic troubleshooting tasks",
+   "site": "Tom's Hardware",
+   "published": 1793449200000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://mashable.com/tech/anthropic-takes-steps-to-block-video-game-cloning-and-reverse-engineering",
+   "title": "Anthropic takes steps to block Claude from reverse-engineering video games",
+   "site": "Mashable",
+   "published": 1793456921000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://www.pcgamer.com/gaming-industry/anthropic-updates-claude-to-steer-it-away-from-letting-users-clone-games-following-weeks-of-steam-being-inundated-with-ai-slop/",
+   "title": "Anthropic updates Claude to 'steer it away' from letting users clone games following weeks of Steam being…",
+   "site": "PC Gamer",
+   "published": 1793460184000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.gamedeveloper.com/programming/anthropic-appears-to-have-ordered-ai-tool-claude-to-stop-remaking-video-games",
+   "title": "Anthropic orders AI tool Claude to stop remaking video games",
+   "site": "Game Developer",
+   "published": 1793386340000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1793520431276,
+ "updatedAt": 1793520431276,
+ "foundVia": "Hacker News",
+ "check": {
+  "claims": 30,
+  "score": 10
+ },
+ "story": {
+  "id": "Pb0e4aa10",
+  "score": 78,
+  "items": [
+   "https://twitter.com/jiahaoshao1/status/2116475922190922088",
+   "https://mashable.com/tech/anthropic-takes-steps-to-block-video-game-cloning-and-reverse-engineering"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
