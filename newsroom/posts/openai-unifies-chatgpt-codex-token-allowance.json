@@ -1,0 +1,145 @@
+{
+ "slug": "openai-unifies-chatgpt-codex-token-allowance",
+ "title": "OpenAI Unifies ChatGPT and Codex Token Allowance for December",
+ "seoTitle": "OpenAI Merges ChatGPT and Codex Token Allowances",
+ "description": "Starting in December, OpenAI will combine ChatGPT and Codex usage limits into a single token-based allowance across Plus, Pro, and Business plans.",
+ "dek": "Paid subscribers on Plus, Pro, and Business tiers will draw from a shared token pool across conversational and coding workloads.",
+ "category": "AI Models",
+ "tags": [
+  "OpenAI",
+  "ChatGPT",
+  "Codex",
+  "AI Pricing",
+  "Token Metering"
+ ],
+ "keyTakeaways": [
+  "Starting in December 2026, OpenAI Plus, Pro, and Business plans will share a single usage allowance across ChatGPT and Codex.",
+  "Usage will be metered in tokens rather than fixed message counts, though Instant chat remains excluded from drawing allowance.",
+  "Users will track combined remaining balances and reset schedules in Settings under Usage, with options to wait, upgrade, or purchase credits when limits are reached.",
+  "OpenAI has not yet published an exact December launch date or specific numerical allowance sizes for the shared tiers."
+ ],
+ "body": "OpenAI plans to merge usage allowances for ChatGPT and Codex into a single shared balance starting in December 2026 across its Plus, Pro, and Business subscriptions. The change, detailed in an updated [OpenAI Help Center article](https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits) on October 31, ties consumption across both tools directly to token-based metering as the company integrates its agentic Work capabilities directly into the core ChatGPT experience.\n\nUnder the forthcoming model, subscriber usage will no longer be siloed into separate allocations for conversational generation and code development. Instead, activity across both environments will draw from a single shared credit balance, measured in tokens—the discrete units of information that models read and generate. OpenAI stated that fast conversational requests handled by Instant chat will not draw from the shared allowance, shielding baseline conversational workflows from the meter.\n\n[[FIG1]]\n\n## How the Unified Metering Model Works\n\nUnder the unified structure outlined by OpenAI, the rate at which an account expends its allowance will depend directly on task difficulty and the chosen underlying architecture. OpenAI's support documentation notes that more advanced models and computationally demanding operations will consume more of the available quota.\n\nAccount holders will be able to monitor their remaining balance and reset timers by navigating to the Usage tab inside their account settings. When a subscriber reaches the cap, OpenAI outlines three options: wait for the designated reset window, upgrade to a higher subscription tier, or purchase supplemental credits to continue accessing supported tools. OpenAI stated in its documentation that it anticipates most users will not need to wait for usage resets more frequently than under existing limits, as reported by [CellCog](https://cellcog.ai/blog/chatgpt-codex-shared-usage-limit/).\n\nOn personal Plus and Pro subscriptions, shared metering is not entirely unfamiliar. OpenAI previously combined agentic usage allowances for Codex alongside ChatGPT Work, Excel, and PowerPoint integrations. The December update expands that pooled bucket to encompass advanced chat models that previously operated under independent quotas, according to [FourWeekMBA](https://fourweekmba.com/ai-chatgpt-and-codex-will-share-one-usage-allowance-in-december/).\n\n[[FIG2]]\n\n## Model Variations and Allowance Consumption\n\nBecause token consumption dictates allowance burn, higher-tier reasoning models deplete allowances substantially faster than lightweight alternatives. While OpenAI has not published explicit December figures for the shared pool, existing documentation for Work and Codex on ChatGPT Plus reveals the disparity in throughput across model families.\n\nAccording to [FourWeekMBA's analysis of OpenAI documentation](https://fourweekmba.com/ai-chatgpt-and-codex-will-share-one-usage-allowance-in-december/), a standard five-hour window on a Plus plan accommodates an estimated 5 to 45 local messages using GPT-6 Astra, compared to 350 to 3,000 messages when using GPT-6 Luna. In credit-based Office feature billing cards tracked by [CellCog](https://cellcog.ai/blog/chatgpt-codex-shared-usage-limit/), GPT-6 Astra output is billed at 1,250 credits per million tokens, compared to 30 credits per million tokens for GPT-5.6 Luna.\n\nPlan pacing also retains structural variations across customer tiers. As reported by [Crypto Briefing](https://cryptobriefing.com/openai-unifies-chatgpt-codex-token-allowance/), Plus and standard Business plans operate against five-hour rate windows alongside weekly thresholds. Conversely, Pro tiers—including Pro 100, Pro 200, and Pro 500—carry no five-hour limits for Work and Codex features, though they remain subject to broader weekly quotas.\n\n## Implications for Developers and Businesses\n\nThe move marks an evolution from OpenAI's earlier message-count models. On April 2, 2026, OpenAI began transitioning product lines to token-based metrics to align consumption quotas with raw compute costs, [Crypto Briefing notes](https://cryptobriefing.com/openai-unifies-chatgpt-codex-token-allowance/).\n\nFor enterprise administrators and developers, the shared meter eliminates scenarios where users exhaust their coding allocation while leaving chat quotas idle. However, technical users who rely heavily on Codex express concern that intensive coding sessions could deplete allowances needed for daytime conversational tasks, as noted by [LuminaBench](https://luminabench.com/journal/chatgpt-codex-shared-usage-limits/).\n\nAs of November 1, 2026, OpenAI has not published an exact calendar launch date for December, nor has it revealed the total numerical token allowances allocated to Plus, Pro, or Business accounts.",
+ "faq": [
+  {
+   "q": "When does the unified ChatGPT and Codex allowance take effect?",
+   "a": "OpenAI's help documentation states the change begins in December 2026, but the company has not published a specific calendar day."
+  },
+  {
+   "q": "Which OpenAI plans will share a single token allowance?",
+   "a": "The shared allowance applies to Plus, Pro, and Business subscription plans. Free, Go, and Enterprise tiers were not cited in the update."
+  },
+  {
+   "q": "Does every ChatGPT prompt count against the shared allowance?",
+   "a": "No. OpenAI confirmed that Instant chat will not draw from the shared allowance, while complex queries and advanced models will consume tokens."
+  },
+  {
+   "q": "Where can subscribers check their remaining allowance and reset schedules?",
+   "a": "Subscribers can check their combined balance, reset timers, and usage data by visiting the Usage section within account settings."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern software engineer working late at a sleek workstation with dual glowing monitors displaying ambient code flows and abstract network graphics, surrounded by soft office lighting",
+  "alt": "An engineer working at a desk surrounded by abstract digital visualization streams representing data balances",
+  "caption": "Illustration: Unified allowances will require developers to share resource budgets between coding and conversation.",
+  "src": "img/openai-unifies-chatgpt-codex-token-allowance/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 61926,
+  "small": "img/openai-unifies-chatgpt-codex-token-allowance/hero-640.webp",
+  "og": "img/openai-unifies-chatgpt-codex-token-allowance/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/openai-unifies-chatgpt-codex-token-allowance/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "An artistic representation of digital streams merging from two channels into a single central luminous reservoir, stylized with minimalist geometry and soft blue lighting",
+   "alt": "Graphic depicting two separate streams of glowing data points merging into a single unified reservoir",
+   "caption": "Illustration: Two distinct quotas for coding and conversation are merging into a centralized token allowance.",
+   "slot": "FIG1",
+   "src": "img/openai-unifies-chatgpt-codex-token-allowance/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 42368,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "A technical analyst reviewing complex abstract holographic data structures representing computational workload distribution across varied processor levels",
+   "alt": "An analyst examining an abstract holographic visual showing varying computing tier volumes",
+   "caption": "Illustration: Token consumption scales based on computational intensity and the complexity of the selected model.",
+   "slot": "FIG2",
+   "src": "img/openai-unifies-chatgpt-codex-token-allowance/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 39992,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits",
+   "title": "Understanding ChatGPT and Codex usage limits | OpenAI Help Center",
+   "site": "OpenAI Help Center",
+   "published": null,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://cellcog.ai/blog/chatgpt-codex-shared-usage-limit/",
+   "title": "ChatGPT and Codex Will Share One Usage Limit in December",
+   "site": "CellCog",
+   "published": 1793541600000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://cryptobriefing.com/openai-unifies-chatgpt-codex-token-allowance/",
+   "title": "OpenAI to merge ChatGPT and Codex token allowances in December 2026",
+   "site": "Crypto Briefing",
+   "published": 1793478869000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://luminabench.com/journal/chatgpt-codex-shared-usage-limits/",
+   "title": "ChatGPT and Codex are getting one shared usage allowance",
+   "site": "LuminaBench",
+   "published": 1793484655000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://fourweekmba.com/ai-chatgpt-and-codex-will-share-one-usage-allowance-in-december/",
+   "title": "ChatGPT and Codex Will Share One Usage Allowance in December",
+   "site": "FourWeekMBA",
+   "published": 1793478247000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1793518060823,
+ "updatedAt": 1793518060823,
+ "foundVia": "Hacker News, Google News and Google Search",
+ "check": {
+  "claims": 20,
+  "score": 10
+ },
+ "story": {
+  "id": "Pbb46e8fe",
+  "score": 84,
+  "items": [
+   "https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits",
+   "https://news.google.com/rss/articles/CBMirAFBVV95cUxQVFJNdG5CSEJMQ2JOaVBCOVRSdUhtZ1JTWGt4ai1UMGtwUGs0ckJvT3E5SkZJWUF5bTFnT29BSHM5dFh0X0duZVdXMmdMUU9FMzhORGZqVkw4RWg0MVliVWVSaXhIbkdwZi00TG1FSmcwQXNUSkc0RkNRdmhiRkpxSjNSMHc1WDBLUlNORV9UWHNnN2k4VFFpMlNWQk85bmZfc1NkSzd5WWhlai1o?oc=5",
+   "https://cellcog.ai/blog/chatgpt-codex-shared-usage-limit/"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}

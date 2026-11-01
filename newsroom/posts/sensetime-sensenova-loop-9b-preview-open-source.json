@@ -1,0 +1,137 @@
+{
+ "slug": "sensetime-sensenova-loop-9b-preview-open-source",
+ "title": "SenseTime Open-Sources SenseNova-Loop-9B-Preview with Looped Layers",
+ "seoTitle": "SenseTime Releases SenseNova-Loop-9B-Preview",
+ "description": "SenseTime open-sources SenseNova-Loop-9B-Preview under Apache 2.0, executing middle decoder layers twice to deliver 14.6B inference depth with 9B weights.",
+ "dek": "SenseTime has released SenseNova-Loop-9B-Preview under the Apache 2.0 license, using a shared looped block and hyper-connections to deepen computation without increasing storage.",
+ "category": "AI Models",
+ "tags": [
+  "SenseTime",
+  "SenseNova-Loop",
+  "Open Source AI",
+  "Multimodal AI",
+  "Transformers"
+ ],
+ "keyTakeaways": [
+  "SenseNova-Loop-9B-Preview executes a middle block of 24 decoder layers twice, performing 56 layer passes while storing only 32 distinct layers.",
+  "The model has approximately 9 billion total weights and roughly 14.6 billion inference parameters, released under the Apache 2.0 license.",
+  "A two-stream manifold-constrained hyper-connections (mHC) design mixes residual data during the looped stages using Sinkhorn normalization.",
+  "SenseTime reports the model matches 27-billion-parameter performance and outperforms Qwen3.5-27B on WorkBuddy Bench, RaccoonPPT Bench, and AutomationBench."
+ ],
+ "body": "On October 30, 2026, artificial intelligence company SenseTime open-sourced [SenseNova-Loop-9B-Preview on Hugging Face](https://huggingface.co/sensenova/SenseNova-Loop-9B-Preview), releasing model weights and code under the permissive Apache 2.0 license. The multimodal release pairs a 9-billion-parameter weight footprint with a looped Transformer architecture that executes a large sequence of decoder layers twice per forward pass, delivering what SenseTime calculates as roughly 14.6 billion inference parameters.\n\nDesigned for agentic workflows, document comprehension, and software engineering, the model accepts text and image inputs to output text. By recycling its intermediate layer weights during inference, SenseTime claims the system achieves reasoning depth comparable to conventional 27-billion-parameter models while maintaining a smaller memory storage footprint.\n\n## How the Looped Architecture Executes\n\nStandard autoregressive Transformer decoders evaluate token sequences by passing intermediate activations through each layer once from bottom to top. SenseNova-Loop-9B-Preview alters that progression by inserting an explicit loop over its middle layers, according to [technical documentation on Hugging Face](https://huggingface.co/sensenova/SenseNova-Loop-9B-Preview).\n\nThe backbone contains 32 distinct decoder layers organized into three computational stages. Layers 0 through 3 run once at the start of the pass. The model then enters a repeated block spanning layers 4 through 27—a contiguous stretch of 24 decoder layers—which executes twice in sequence using the exact same shared weights. Following this loop, layers 28 through 31 run once before passing representations to the output head.\n\n[[FIG1]]\n\nAcross a single forward pass, the model completes 56 layer executions while storing weights for only 32 distinct layers. This approach provides a deeper execution path without duplicating the repeated block's parameters.\n\n## Hyper-Connections and Hybrid Attention\n\nSenseTime integrated two-stream manifold-constrained hyper-connections, abbreviated as mHC. According to [reporting by Pandaily](https://pandaily.com/sensetime-sensenova-loop-9b-preview-looped-transformer-mhc-open-source-apache-2), mHC routes two parallel residual streams through the looped layers, using learned mappings to control how the model reads from and combines residual states. The stream-mixing operations are constrained through Sinkhorn normalization configured for 20 iterations.\n\nThe attention mechanism also departs from uniform self-attention. The decoder interleaves linear attention and full attention in repeating four-layer groups, placing three linear-attention layers ahead of each full-attention layer. Because the loop boundary at layer 4 aligns with these four-layer group boundaries, this attention cadence remains consistent across both the first and second passes through the shared block.\n\nThe export precision splits computational formats across components: the primary model backbone uses BF16 precision, whereas the mHC routing parameters require FP32 precision.\n\n## Benchmark Performance and Ablation Testing\n\nSenseTime evaluated the model across several operational and agent benchmarks. According to [data reported by Pandaily](https://pandaily.com/sensetime-sensenova-loop-9b-preview-looped-transformer-mhc-open-source-apache-2), SenseTime states that ablation tests showed mHC raised scores on GPQA Diamond by 4.42 points and on TeamBench by 13.34 points.\n\n[[FIG2]]\n\nSenseTime reports that SenseNova-Loop-9B-Preview outperformed Qwen3.5-27B on WorkBuddy Bench, RaccoonPPT Bench, and AutomationBench. Model documentation also tracks evaluation results across BIRD-Dev, AIDABench, Terminal Bench 2.1, and T³-Banking. SenseTime notes that a full technical report providing comprehensive methodology and comparative metrics is still to come.\n\nDocumented training recipes for the model included long sequences of text, images, code, and supervised agent tool trajectories, reaching maximum training context lengths of up to 262,144 tokens.\n\n## Deployment Environment and Acceleration Methods\n\nDeploying SenseNova-Loop-9B-Preview requires explicit compatibility checks due to its custom execution flow. Analysis from [My Monday AI](https://mymondayai.wordpress.com/2026/10/31/sensenova-loop-9b-preview-deployment-sizing/) notes that the checked inference environment specifies Transformers 5.18.0 and PyTorch 2.11.0 running with CUDA 13.0, loading custom logic via remote execution flags.\n\nServing configurations have been integrated into third-party frameworks. The project repository provides deployment configurations for LightLLM via Docker and offers a branch targeting the SGLang inference engine via pull request #47281. The model card lists native support for MTP to accelerate decoding, while training remains underway for two additional speculative acceleration tools: Dspark and Dflash2. SenseTime indicated that subsequent research will examine DSA and adaptive loop iteration counts.",
+ "faq": [
+  {
+   "q": "What is the license for SenseNova-Loop-9B-Preview?",
+   "a": "SenseNova-Loop-9B-Preview is released under the open-source Apache 2.0 license on Hugging Face and GitHub."
+  },
+  {
+   "q": "How does the looped layer mechanism work?",
+   "a": "The model has 32 distinct layers. Layers 0 to 3 run once, layers 4 to 27 execute twice using shared weights, and layers 28 to 31 run once, resulting in 56 total layer passes per forward pass."
+  },
+  {
+   "q": "What modalities does the model support?",
+   "a": "SenseNova-Loop-9B-Preview takes text and images as inputs and generates text outputs."
+  },
+  {
+   "q": "What hardware and software are recommended for inference?",
+   "a": "The documented inference environment uses Transformers 5.18.0 and PyTorch 2.11.0 with CUDA 13.0, with serving templates available for LightLLM and SGLang."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "An abstract digital illustration showing layers of glowing neural network structures with circulating loops of light routing intermediate data through shared stages",
+  "alt": "Abstract conceptual visualization of a looped neural network architecture.",
+  "caption": "Illustration: Looped Transformer architectures recirculate data through shared neural layers to deepen inference computation.",
+  "src": "img/sensetime-sensenova-loop-9b-preview-open-source/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 74402,
+  "small": "img/sensetime-sensenova-loop-9b-preview-open-source/hero-640.webp",
+  "og": "img/sensetime-sensenova-loop-9b-preview-open-source/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/sensetime-sensenova-loop-9b-preview-open-source/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A conceptual illustration of dual parallel computational streams flowing side-by-side through glowing geometric connection nodes in blue and gold",
+   "alt": "Abstract diagrammatic illustration representing two-stream manifold-constrained hyper-connections.",
+   "caption": "Illustration: Two-stream manifold-constrained hyper-connections route and balance parallel residual data streams across computational layers.",
+   "slot": "FIG1",
+   "src": "img/sensetime-sensenova-loop-9b-preview-open-source/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 49684,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "An abstract conceptual visualization of diverse data streams including text symbols, code syntax, and image pixels merging into a unified processing pathway",
+   "alt": "Abstract illustration of multimodal text and image inputs feeding into a computational pipeline.",
+   "caption": "Illustration: Multimodal architectures process combined text and image inputs across long sequence contexts.",
+   "slot": "FIG2",
+   "src": "img/sensetime-sensenova-loop-9b-preview-open-source/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 48020,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://huggingface.co/sensenova/SenseNova-Loop-9B-Preview",
+   "title": "sensenova/SenseNova-Loop-9B-Preview",
+   "site": "Hugging Face",
+   "published": 1793201680000,
+   "official": true
+  },
+  {
+   "n": 2,
+   "url": "https://pandaily.com/sensetime-sensenova-loop-9b-preview-looped-transformer-mhc-open-source-apache-2",
+   "title": "SenseTime Open-Sources SenseNova-Loop-9B-Preview, a Looped Model That Runs Its Middle Layers Twice",
+   "site": "pandaily.com",
+   "published": 1793404800000,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://framefandom.com/posts/en-sensenova-loop-9b-preview-looped-open-model/",
+   "title": "SenseNova-Loop-9B-Preview Runs Its Own Layers Twice, and It Is Open Source",
+   "site": "Wren",
+   "published": 1793419612000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://mymondayai.wordpress.com/2026/10/31/sensenova-loop-9b-preview-deployment-sizing/",
+   "title": "5 SenseNova-Loop-9B-Preview Checks Before You Deploy",
+   "site": "My Monday AI",
+   "published": 1793390766000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1793518551501,
+ "updatedAt": 1793518551501,
+ "foundVia": "Hugging Face, Google News and pandaily.com",
+ "check": {
+  "claims": 20,
+  "score": 10
+ },
+ "story": {
+  "id": "P09fd6bfc",
+  "score": 84,
+  "items": [
+   "https://huggingface.co/sensenova/SenseNova-Loop-9B-Preview",
+   "https://news.google.com/rss/articles/CBMiogFBVV95cUxPYzJNT3hHdXZ3UURfWDRZSUZjZG5NZW5EOVFGQ08yX0FqZnBFZjJFQnBhUF9Wb1owNm1xNmxDX3lQQW5QdTdQaTc3VWs5M0ZYc0lCcF9qdDFoSVkzckVCei11ZWRZamVsN0dkdDF2V1JYVW9TazVSOEc0Y3JGUHU4SS1zNFRkNk80UkVVRUx5VFRJcGNWOTlnTmJGQVZjaU5kRHc?oc=5",
+   "https://pandaily.com/sensetime-sensenova-loop-9b-preview-looped-transformer-mhc-open-source-apache-2"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}
