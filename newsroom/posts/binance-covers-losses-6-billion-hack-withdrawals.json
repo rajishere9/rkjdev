@@ -1,0 +1,157 @@
+{
+ "slug": "binance-covers-losses-6-billion-hack-withdrawals",
+ "title": "Binance Says It Has Replaced 90% of $6.3B Hack Losses, Prepares Sunday Withdrawals",
+ "seoTitle": "Binance Covers 90% of $6.3B Hack Losses",
+ "description": "Binance says it has replenished 90% of assets stolen in a $6.3 billion hack attributed to North Korea and plans phased withdrawal resumptions on Sunday.",
+ "dek": "Binance said it tapped emergency funds and corporate reserves to replace stolen tokens while preparing phased withdrawal resumptions.",
+ "category": "Industry",
+ "tags": [
+  "Binance",
+  "Cryptocurrency",
+  "Cybersecurity",
+  "North Korea"
+ ],
+ "keyTakeaways": [
+  "Binance stated that it replaced 90% of the assets stolen in the October 29, 2026 cyberattack and set aside approximately $6.34 billion in internal funds.",
+  "The FBI confirmed that TraderTraitor, a North Korean state-sponsored cyber unit linked to the Lazarus Group, was responsible for the theft.",
+  "Major stablecoin issuers and networks froze roughly $2.7 billion in stolen assets, while the attackers retain control of about $2.4 billion in assets beyond issuers' reach.",
+  "Binance reported that top tokens are 100% backed and stated it remains on schedule to resume user withdrawals in phases starting Sunday."
+ ],
+ "body": "Cryptocurrency exchange Binance announced that it has replaced 90% of the funds taken during a record-breaking $6.3 billion cyberattack, preparing to resume customer withdrawals in stages. The breach, which occurred on October 29, 2026, targeted the exchange's hot wallet infrastructure across ten distinct blockchains. As reported by [The Guardian](https://www.theguardian.com/business/2026/nov/01/binance-losses-covered-hack-fbi-north-korea-cryptocurrency), Binance co-CEO Richard Teng stated that the company is committed to covering the remaining 10% and pledged that users will not bear the financial impact of the breach.\n\nThe scale of the intrusion marks the largest digital asset theft on record, surpassing the $1.5 billion hack suffered by Bybit in February 2025. Following the unauthorized outflows, the platform temporarily halted user withdrawals across several networks.\n\n## How Binance Replenished Billions in Customer Funds\n\nTo replace the siphoned holdings, Binance said it had set aside around $6.34 billion of company funds to acquire replacement assets through open-market purchases and over-the-counter channels. According to [Business Insider](https://www.businessinsider.com/binance-hack-heist-crypto-security-2026-10), the exchange had replenished an estimated $5.7 billion within two days of the incident by drawing from several internal safety nets.\n\nBinance confirmed that funding came from deploying part of its $1 billion Secure Asset Fund for Users (SAFU)—an emergency bitcoin reserve established to protect depositors during security failures—as well as portions of its Futures Insurance Fund and primary corporate treasury. As reported by [CNBC](https://www.cnbc.com/2026/10/31/binance-hack-asset-coverage-withdrawals.html), Binance stated that all user balances in ten major tokens—Bitcoin (BTC), Ethereum (ETH), Tether (USDT), BNB, Solana (SOL), USD Coin (USDC), XRP, USD1, RLUSD, and Zcash (ZEC)—are now fully backed at a 1:1 ratio.\n\nAccording to Binance, the outstanding 10% of unreplenished assets comprises secondary tokens outside the top ten. The company explained that these smaller assets are less liquid on public markets, meaning they may take longer to purchase.\n\n[[FIG1]]\n\n## Technical Scale and the EIP-7702 Compromise\n\nDetailed on-chain forensic analysis published by [TRM Labs](https://www.trmlabs.com/resources/blog/north-korea-steals-usd-6-36-billion-from-binance-in-the-largest-hack-in-history) revealed that the unauthorized transfers began on October 29 at 20:05 UTC. Within minutes, the attacker drained hot wallets across nine networks, while a second wave around 23:05 UTC hit Avalanche and Polygon. Ethereum accounted for the largest share of the theft at approximately $3.79 billion, including 200,630 ETH, 1.875 billion USDT, and 823 million USDC. Bitcoin outflows totaled 18,270 BTC, valued at roughly $1.47 billion.\n\nOn Ethereum, the attacker exploited an EIP-7702 delegation, an account abstraction standard introduced in Ethereum's Pectra upgrade in May 2025. This standard allows an account to delegate its execution logic to a designated smart contract. The attacker submitted 50 batch authorizations signed in advance by Binance's Ethereum hot wallet, linking it to an external sweeper contract under the hacker's control. Once executed, the contract drained the wallet's contents and repeatedly swept incoming user deposits over the following four hours.\n\nIn that initial window, Binance hot wallets across eight non-Ethereum chains executed ordinary signed transfers to the attacker's addresses, while Polygon was hit about two and a half hours later at 23:05 UTC. According to TRM Labs, because these disparate networks rely on separate key architectures and signing schemes, the evidence points to a broader compromise of Binance's centralized hot wallet signing infrastructure. While Binance initially suggested that a compromised DevOps engineer's laptop allowed unauthorized container access, Teng later revised that explanation, describing the breach as a complex operation involving malware designed to purge activity logs.\n\n## Freezes, Laundering, and Attribution to North Korea\n\nOn Saturday, the Federal Bureau of Investigation formally attributed the theft to TraderTraitor, an elite state-sponsored cyber group operating under North Korea's Lazarus Group. As reported by [The Guardian](https://www.theguardian.com/business/2026/nov/01/binance-losses-covered-hack-fbi-north-korea-cryptocurrency), the FBI stated that the Democratic People's Republic of Korea was responsible for the theft and observed TraderTraitor converting pilfered assets into Ethereum. The agency urged private financial entities to monitor and block addresses tied to the laundering pipeline.\n\nCoordinated industry countermeasures managed to restrict a large portion of the stolen funds. As detailed by [TRM Labs](https://www.trmlabs.com/resources/blog/north-korea-steals-usd-6-36-billion-from-binance-in-the-largest-hack-in-history), stablecoin issuers Tether, Circle, Ripple, and World Liberty Financial froze approximately $2.67 billion across various networks. Arbitrum's Security Council also exercised emergency administrative powers to extract 8,426 ETH and 74.6 million ARB—totaling around $30 million—from the attacker's wallet.\n\n[[FIG2]]\n\nDespite those freezes, the perpetrators managed to move substantial amounts into unfreezable digital assets. The attacker sold roughly 325 million USDT through decentralized protocols at a discount of more than 10% to acquire 122,300 ETH, borrowed nearly 19,760 ETH against USDT collateral on Aave, and routed stolen Bitcoin through peel chains to fracture the transaction trail. TRM Labs reported that the group retains control of over 420,000 ETH and 18,270 BTC, worth approximately $2.4 billion, which cannot be frozen by centralized asset issuers.\n\n## Verification and Phased Withdrawal Resumption\n\nTo restore customer confidence, Binance implemented transparency measures while preparing to resume standard operations. As reported by [Hindustan Times](https://www.hindustantimes.com/world-news/us-news/binance-says-it-has-covered-90-of-losses-after-6-3-billion-crypto-hack-101793503494961.html), the exchange executed a fresh Proof of Reserves snapshot as of October 31, 2026. The exchange noted that users will be able to verify that their deposited balances remain backed at least 1:1 once zero-knowledge proof generation completes, a process expected to conclude by November 3.\n\nBinance confirmed on Sunday that phased withdrawal services had begun rolling out following operational security reviews. The company reiterated that the intrusion targeted corporate hot wallet reserves rather than individual account credentials or balances. Digital asset markets reacted sharply following news of the breach, with Bitcoin declining nearly 5%, Ethereum dropping roughly 6%, and Binance's native BNB token falling nearly 10%.",
+ "faq": [
+  {
+   "q": "How much money was stolen from Binance during the hack?",
+   "a": "Blockchain intelligence firm TRM Labs calculated the total stolen assets across ten blockchains at approximately $6.36 billion at the time of the transfer, while law enforcement and Binance cited losses of roughly $6.3 billion."
+  },
+  {
+   "q": "How did Binance cover the stolen cryptocurrency?",
+   "a": "According to Binance, it tapped its $1 billion Secure Asset Fund for Users (SAFU), a portion of its Futures Insurance Fund, and corporate treasury reserves to purchase replacement tokens on the open market and through private brokers."
+  },
+  {
+   "q": "Who carried out the $6.3 billion cyberattack?",
+   "a": "The FBI and private intelligence firm TRM Labs attributed the attack to TraderTraitor, an elite state-sponsored cyber unit backed by North Korea and affiliated with the Lazarus Group."
+  },
+  {
+   "q": "When are Binance customer withdrawals resuming?",
+   "a": "Binance announced that phased withdrawal services began rolling out on Sunday, November 1, 2026, subject to ongoing system security checks."
+  }
+ ],
+ "hero": {
+  "marker": "HERO",
+  "type": "ai",
+  "prompt": "A modern cryptocurrency infrastructure operations center illuminated by cool blue indicator lights, with rows of server racks, emergency system status monitors, and empty workstations.",
+  "alt": "An illustration of a darkened cryptocurrency exchange server room and control center with blue lights",
+  "caption": "Illustration: Cryptocurrency infrastructure operating under heightened monitoring following security disruptions.",
+  "src": "img/binance-covers-losses-6-billion-hack-withdrawals/hero.webp",
+  "width": 1200,
+  "height": 675,
+  "bytes": 58012,
+  "small": "img/binance-covers-losses-6-billion-hack-withdrawals/hero-640.webp",
+  "og": "img/binance-covers-losses-6-billion-hack-withdrawals/og.jpg",
+  "credit": "AI-generated illustration"
+ },
+ "og": "img/binance-covers-losses-6-billion-hack-withdrawals/og.jpg",
+ "figures": [
+  {
+   "marker": "FIG1",
+   "type": "ai",
+   "prompt": "A corporate executive standing behind a media briefing podium with microphones, addressing attendees in a formal press conference room.",
+   "alt": "An illustration of an executive delivering an official briefing at a podium",
+   "caption": "Illustration: Corporate management addressing security operations and reserve management.",
+   "slot": "FIG1",
+   "src": "img/binance-covers-losses-6-billion-hack-withdrawals/figure-1.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 25182,
+   "credit": "AI-generated illustration"
+  },
+  {
+   "marker": "FIG2",
+   "type": "ai",
+   "prompt": "Cybersecurity forensic specialists examining illuminated network node graphs and transaction pathways across large digital wall monitors in a darkened operations room.",
+   "alt": "An illustration of forensic analysts tracing multi-chain transaction networks on large display panels",
+   "caption": "Illustration: Blockchain forensics and law enforcement tracking multi-chain asset movements.",
+   "slot": "FIG2",
+   "src": "img/binance-covers-losses-6-billion-hack-withdrawals/figure-2.webp",
+   "width": 1200,
+   "height": 670,
+   "bytes": 40166,
+   "credit": "AI-generated illustration"
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "url": "https://www.theguardian.com/business/2026/nov/01/binance-losses-covered-hack-fbi-north-korea-cryptocurrency",
+   "title": "Binance says 90% of losses from $6.3bn hack covered as FBI says North Korea behind attack",
+   "site": "The Guardian",
+   "published": 1793515998000,
+   "official": false
+  },
+  {
+   "n": 2,
+   "url": "https://www.businessinsider.com/binance-hack-heist-crypto-security-2026-10",
+   "title": "Binance says 90% of $6.3 billion in crypto stolen in hack replenished",
+   "site": "Business Insider",
+   "published": 1793464874085,
+   "official": false
+  },
+  {
+   "n": 3,
+   "url": "https://www.cnbc.com/2026/10/31/binance-hack-asset-coverage-withdrawals.html",
+   "title": "Binance says 90% of $6.3 billion hack losses are now covered, plans to resume withdrawals Sunday",
+   "site": "CNBC",
+   "published": 1793462604000,
+   "official": false
+  },
+  {
+   "n": 4,
+   "url": "https://www.hindustantimes.com/world-news/us-news/binance-says-it-has-covered-90-of-losses-after-6-3-billion-crypto-hack-101793503494961.html",
+   "title": "Binance says it has covered 90% of losses after $6.3 billion crypto hack | Hindustan Times",
+   "site": "Hindustan Times",
+   "published": 1793508101000,
+   "official": false
+  },
+  {
+   "n": 5,
+   "url": "https://www.channelnewsasia.com/business/binance-says-it-has-covered-90-losses-63-billion-hack-6509761",
+   "title": "Binance says it has covered 90% of losses from $6.3 billion hack",
+   "site": "CNA",
+   "published": 1793458749000,
+   "official": false
+  },
+  {
+   "n": 6,
+   "url": "https://www.trmlabs.com/resources/blog/north-korea-steals-usd-6-36-billion-from-binance-in-the-largest-hack-in-history",
+   "title": "North Korea Steals USD 6.36 Billion From Binance in the Largest Hack in History",
+   "site": "TRM Labs",
+   "published": 1793326200000,
+   "official": false
+  }
+ ],
+ "publishedAt": 1793517091947,
+ "updatedAt": 1793517091947,
+ "foundVia": "Techmeme and Reddit",
+ "check": {
+  "claims": 43,
+  "score": 10
+ },
+ "story": {
+  "id": "P92d426b1",
+  "score": 87,
+  "items": [
+   "https://www.techmeme.com/261029/p58#a261029p58",
+   "https://www.techmeme.com/261029/p67#a261029p67",
+   "https://www.techmeme.com/261030/p2#a261030p2",
+   "https://www.techmeme.com/261030/p3#a261030p3",
+   "https://www.trmlabs.com/resources/blog/north-korea-steals-usd-6-36-billion-from-binance-in-the-largest-hack-in-history",
+   "https://www.techmeme.com/261030/p9#a261030p9",
+   "https://www.reddit.com/r/OpenAI/comments/1xjazid/black_october_update_the_largest_hack_in_crypto/",
+   "https://www.cnbc.com/2026/10/31/binance-hack-asset-coverage-withdrawals.html"
+  ]
+ },
+ "models": {
+  "writer": "gemini-3.7-flash",
+  "checker": "gemini-3.8-flash"
+ }
+}

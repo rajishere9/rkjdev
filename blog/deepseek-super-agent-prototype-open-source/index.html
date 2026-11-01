@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeepSeek Releases Open-Source Super-Agent Prototype | rkj dev</title>
+<meta name="description" content="DeepSeek has open-sourced an MIT-licensed Super-agent prototype on GitHub, testing a two-tier Router-Worker architecture for autonomous bug fixing.">
+<link rel="canonical" href="https://www.rkjdev.com/blog/deepseek-super-agent-prototype-open-source/">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#110b14">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta property="og:site_name" content="rkj dev Blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DeepSeek Releases Open-Source Super-Agent Prototype | rkj dev">
+<meta property="og:description" content="DeepSeek has open-sourced an MIT-licensed Super-agent prototype on GitHub, testing a two-tier Router-Worker architecture for autonomous bug fixing.">
+<meta property="og:url" content="https://www.rkjdev.com/blog/deepseek-super-agent-prototype-open-source/">
+<meta property="og:image" content="https://www.rkjdev.com/blog/img/deepseek-super-agent-prototype-open-source/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://www.rkjdev.com/blog/img/deepseek-super-agent-prototype-open-source/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DeepSeek Releases Open-Source Super-Agent Prototype | rkj dev">
+<meta name="twitter:description" content="DeepSeek has open-sourced an MIT-licensed Super-agent prototype on GitHub, testing a two-tier Router-Worker architecture for autonomous bug fixing.">
+<link rel="alternate" type="application/rss+xml" title="rkj dev Blog" href="/blog/feed.xml">
+<link rel="alternate" type="application/feed+json" title="rkj dev Blog" href="/blog/feed.json">
+<link rel="icon" href="/favicon.svg?v=bdff7dc5" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,40;1,9..144,400..600,40&family=Schibsted+Grotesk:ital,wght@0,400..600;1,400..600&display=swap">
+<link rel="stylesheet" href="/site.css?v=e85724ed">
+<link rel="stylesheet" href="/blog/blog.css?v=7ad332ef">
+<meta property="article:published_time" content="2026-11-01T07:18:22.576Z">
+<meta property="article:modified_time" content="2026-11-01T07:18:22.576Z">
+<meta property="article:section" content="Open Source">
+<meta property="article:tag" content="DeepSeek">
+<meta property="article:tag" content="Autonomous Agents">
+<meta property="article:tag" content="Open Source">
+<meta property="article:tag" content="Software Development">
+<meta property="article:tag" content="GitHub">
+<link rel="preload" as="image" href="/blog/img/deepseek-super-agent-prototype-open-source/hero.webp" imagesrcset="/blog/img/deepseek-super-agent-prototype-open-source/hero-640.webp 640w, /blog/img/deepseek-super-agent-prototype-open-source/hero.webp 1200w" imagesizes="(max-width: 760px) 100vw, 1200px">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"NewsArticle","headline":"DeepSeek Releases Open-Source Super-Agent Prototype for Bug Fixing","description":"DeepSeek has open-sourced an MIT-licensed Super-agent prototype on GitHub, testing a two-tier Router-Worker architecture for autonomous bug fixing.","url":"https://www.rkjdev.com/blog/deepseek-super-agent-prototype-open-source/","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.rkjdev.com/blog/deepseek-super-agent-prototype-open-source/"},"inLanguage":"en","isAccessibleForFree":true,"image":["https://www.rkjdev.com/blog/img/deepseek-super-agent-prototype-open-source/og.jpg","https://www.rkjdev.com/blog/img/deepseek-super-agent-prototype-open-source/hero.webp"],"datePublished":"2026-11-01T07:18:22.576Z","dateModified":"2026-11-01T07:18:22.576Z","articleSection":"Open Source","keywords":"DeepSeek, Autonomous Agents, Open Source, Software Development, GitHub","wordCount":897,"thumbnailUrl":"https://www.rkjdev.com/blog/img/deepseek-super-agent-prototype-open-source/hero-640.webp","author":{"@type":"Organization","name":"rkj dev newsroom","url":"https://www.rkjdev.com/blog/"},"publisher":{"@type":"Organization","@id":"https://www.rkjdev.com/#labs","name":"RKJDEV Labs","url":"https://www.rkjdev.com/","logo":{"@type":"ImageObject","url":"https://www.rkjdev.com/apple-touch-icon.png","width":180,"height":180}},"isPartOf":{"@id":"https://www.rkjdev.com/#website"},"isBasedOn":["https://github.com/deepseek-ai/dsh-superagent-prototype","https://pandaily.com/deepseek-harness-super-agent-prototype-router-worker-event-driven-watchdog-open-source-mit","https://startupfortune.com/deepseek-open-sources-the-architecture-behind-its-super-agent/","https://agentspulse.github.io/tutorials/deepseek-super-agent-architecture/","https://finance.biggo.com/news/ccf3ef75-c371-43e4-a87d-dfbcf203c450"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https://www.rkjdev.com/blog/"},{"@type":"ListItem","position":2,"name":"Open Source","item":"https://www.rkjdev.com/blog/category/open-source/"},{"@type":"ListItem","position":3,"name":"DeepSeek Releases Open-Source Super-Agent Prototype for Bug Fixing","item":"https://www.rkjdev.com/blog/deepseek-super-agent-prototype-open-source/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the DeepSeek Super-agent prototype an official DeepSeek product?","acceptedAnswer":{"@type":"Answer","text":"No. DeepSeek explicitly designated dsh-superagent-prototype as an experimental research prototype for reference and study. It warned that the code contains inconsistencies and unvetted implementations that are not ready for production environments."}},{"@type":"Question","name":"What license governs the Super-agent prototype?","acceptedAnswer":{"@type":"Answer","text":"The prototype repository and the underlying DeepSeek Harness runtime are licensed under the permissive MIT license on GitHub."}},{"@type":"Question","name":"How does the Super-agent avoid interrupting human developers?","acceptedAnswer":{"@type":"Answer","text":"The system follows a strict notification policy: on instant messaging channels, it caps updates under 100 words and speaks only when a human decision or approval is required. In its internal test groups, it silently reproduces reported bugs in the background and only posts when it has verified a fix."}},{"@type":"Question","name":"What are the main security risks identified in the research?","acceptedAnswer":{"@type":"Answer","text":"Because the architecture pairs cloud-hosted agent loops with local execution daemons that hold developer credentials, prompt-injection attacks or compromised cloud containers could potentially lead to unauthorized commands executing on local machines."}}]}]</script>
+</head>
+<body class="post">
+<div class="progress" aria-hidden="true"><span></span></div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="mark" href="/">rkj dev</a>
+    <nav aria-label="Site">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <article class="article">
+    <header class="post-head wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/blog/">Blog</a><span aria-hidden="true">/</span><a href="/blog/category/open-source/">Open Source</a></nav>
+      <h1>DeepSeek Releases Open-Source Super-Agent Prototype for Bug Fixing</h1>
+      <p class="standfirst">A research prototype published on GitHub pairs an always-on dispatch router with isolated worker sessions to fix software bugs and open pull requests autonomously.</p>
+      <div class="byline">
+        <span class="by">rkj dev newsroom</span>
+        <span><time datetime="2026-11-01T07:18:22.576Z" class="abs" data-rel>Nov 1, 2026</time></span>
+        <span>4 min read</span>
+        <a href="#sources">5 sources, fact-checked</a>
+      </div>
+    </header>
+    <div class="hero-wrap wrap"><figure class="hero-fig is-ai">
+  <div class="img"><img src="/blog/img/deepseek-super-agent-prototype-open-source/hero.webp" srcset="/blog/img/deepseek-super-agent-prototype-open-source/hero-640.webp 640w, /blog/img/deepseek-super-agent-prototype-open-source/hero.webp 1200w" sizes="(max-width: 760px) 100vw, 1200px" width="1200" height="675" alt="Concept illustration of an event-driven software routing architecture distributing tasks to independent background workers" fetchpriority="high" decoding="async"></div>
+  <figcaption><span>Illustration: a conceptual two-tier agent architecture delegating tasks across isolated worker threads.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure></div>
+    <div class="layout wrap">
+      <aside class="rail" aria-label="On this page">
+        <nav class="toc"><p>Contents</p><ol><li><a href="#the-deepseek-super-agent-prototype-architecture">The DeepSeek Super-Agent Prototype Architecture</a></li><li><a href="#event-triggers-direct-subscriptions-and-asynchronous-loops">Event Triggers, Direct Subscriptions, and Asynchronous Loops</a></li><li><a href="#synthetic-benchmark-performance-and-token-costs">Synthetic Benchmark Performance and Token Costs</a></li><li><a href="#runtime-foundation-and-open-engineering-challenges">Runtime Foundation and Open Engineering Challenges</a></li></ol></nav>
+        <div class="share">
+          <p>Share</p>
+          <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fdeepseek-super-agent-prototype-open-source%2F&text=DeepSeek%20Releases%20Open-Source%20Super-Agent%20Prototype%20for%20Bug%20Fixing" target="_blank" rel="noopener">X</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fdeepseek-super-agent-prototype-open-source%2F" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://wa.me/?text=DeepSeek%20Releases%20Open-Source%20Super-Agent%20Prototype%20for%20Bug%20Fixing%20https%3A%2F%2Fwww.rkjdev.com%2Fblog%2Fdeepseek-super-agent-prototype-open-source%2F" target="_blank" rel="noopener">WhatsApp</a>
+          <button type="button" data-copy="https://www.rkjdev.com/blog/deepseek-super-agent-prototype-open-source/">Copy link</button>
+        </div>
+      </aside>
+      <div class="prose">
+        <section class="inshort" aria-labelledby="tk">
+          <h2 id="tk">In short</h2>
+          <ul><li>DeepSeek's Harness team published an MIT-licensed research prototype, dsh-superagent-prototype, alongside a design essay on October 31, 2026.</li><li>The architecture divides responsibilities between a lightweight, resident Router for dispatch and parallel, isolated Workers equipped with execution tools.</li><li>A thread subscription mechanism delivers follow-up events directly to active Workers, and omitting it increased Router decisions by approximately 30 percent in synthetic benchmarks.</li><li>In preliminary benchmark runs, the prototype finished 95 percent of synthetic tasks in 15.7 minutes, compared to 29.5 minutes for a single-session agent.</li><li>DeepSeek emphasizes that the code is an experimental research prototype rather than a production product, noting unsolved risks in long-term memory and local security.</li></ul>
+        </section>
+        <p>On October 31, 2026, the DeepSeek Harness team published an open-source research prototype designed to investigate how autonomous software agents can handle multiple engineering tasks at once. Released under the permissive MIT license on <a href="https://github.com/deepseek-ai/dsh-superagent-prototype" target="_blank" rel="noopener">GitHub</a>, the repository, named <code>dsh-superagent-prototype</code>, introduces the DeepSeek Super-agent prototype: an event-driven system where an always-on dispatching agent coordinates background workers that autonomously reproduce issues, patch software bugs, and open pull requests.</p>
+<p>The project arrives alongside a technical paper titled &quot;Super-agent Design Exploration: Toward a More Autonomous Agent System,&quot; reported by <a href="https://pandaily.com/deepseek-harness-super-agent-prototype-router-worker-event-driven-watchdog-open-source-mit" target="_blank" rel="noopener">Pandaily</a>. DeepSeek emphasized in its documentation that the published code is a research prototype rather than an official DeepSeek product. Much of the prototype was written by coding agents during internal team workflows, meaning it is not production-ready and omits certain theoretical designs described in the accompanying paper.</p>
+<h2 id="the-deepseek-super-agent-prototype-architecture">The DeepSeek Super-Agent Prototype Architecture</h2>
+<p>Current autonomous coding tools generally run within a single session, requiring human engineers to manage each context window individually. As the DeepSeek Harness team explained in an analysis detailed by <a href="https://agentspulse.github.io/tutorials/deepseek-super-agent-architecture/" target="_blank" rel="noopener">AgentsPulse</a>, software developers typically struggle to juggle more than three to five parallel agent sessions before context switching breaks down.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/deepseek-super-agent-prototype-open-source/figure-1.webp" width="1200" height="670" alt="A software engineer monitoring an automated development workflow on desk monitors" loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: developers shifting from active session management to supervising automated task pipelines.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<p>To move past that human attention bottleneck, DeepSeek split the agent into two layers: a resident Router and isolated Workers. The Router acts as an always-on coordination node across channels like GitHub and Feishu chat threads. It does not execute code directly and can operate without bash tool access or heavyweight reasoning models. Instead, it processes incoming requests, evaluates permissions, and dispatches assignments.</p>
+<p>Actual execution occurs within isolated Worker sessions. Each Worker receives a dedicated directory and context window, along with the complete suite of execution tools and a stronger model. Workers do not communicate directly with human users; instead, they report progress and completed artifacts back to the Router, which formats updates according to the destination platform.</p>
+<h2 id="event-triggers-direct-subscriptions-and-asynchronous-loops">Event Triggers, Direct Subscriptions, and Asynchronous Loops</h2>
+<p>The prototype operates as an event-driven engine responding to external signals called Triggers, such as continuous integration failures, code review comments, and team chat messages. Because collaborative chat rooms generate high volumes of noise, inputs pass through a two-tiered filter. A deterministic programmatic filter—the Fast Path—checks source whitelists and permissions, followed by a model-driven Slow Path that verifies whether a request requires action according to project rules documented in <a href="https://github.com/deepseek-ai/dsh-superagent-prototype" target="_blank" rel="noopener">the dsh-superagent-prototype repository</a>.</p>
+<figure class="fig is-ai">
+  <div class="img"><img src="/blog/img/deepseek-super-agent-prototype-open-source/figure-2.webp" width="1200" height="670" alt="Abstract diagram of message filtering pipelines routing incoming events into isolated containers" loading="lazy" decoding="async"></div>
+  <figcaption><span>Illustration: multi-stage event filtering that separates noisy team conversations from actionable engineering tasks.</span><span class="credit ai">AI-generated illustration</span></figcaption>
+</figure>
+<p>Once a Worker initiates a task—such as responding to a pull request—it subscribes directly to that event Thread. Subsequent comments and continuous integration updates bypass the Router entirely and deliver straight to the subscribed Worker. If two Workers touch the same pull request, both receive the thread events, allowing them to detect potential conflicts without point-to-point agent messaging.</p>
+<p>To prevent long tasks from blocking ongoing communication, the system replaces traditional synchronous ReAct loops with asynchronous commands, according to <a href="https://finance.biggo.com/news/ccf3ef75-c371-43e4-a87d-dfbcf203c450" target="_blank" rel="noopener">BigGo Finance</a>. Tasks start in the background while the foreground session continues processing incoming messages. Outside the main loop, an independent Watchdog session monitors active Workers using timed queries, checking whether workers are making tangible progress or drifting into repetitive loops.</p>
+<h2 id="synthetic-benchmark-performance-and-token-costs">Synthetic Benchmark Performance and Token Costs</h2>
+<p>DeepSeek evaluated the architecture using synthetic workloads comprising roughly 300 messages, including about 20 actionable work requests mixed with casual discussion, follow-ups, and build notifications. To measure coordination rather than code generation quality, tasks utilized mock tools that consumed time rather than altering real codebases, as outlined by <a href="https://agentspulse.github.io/tutorials/deepseek-super-agent-architecture/" target="_blank" rel="noopener">AgentsPulse</a>.</p>
+<p>Under this testing regime, the Super-agent architecture completed 50 percent of tasks within 12.4 minutes and 95 percent within 15.7 minutes. In contrast, a conventional single-session setup using a subagent tool recorded a 95th percentile completion time of 29.5 minutes when guided by neutral prompting, primarily because the model failed to delegate tasks and suffered constant interruptions from incoming chatter.</p>
+<p>This speed advantage introduced higher token overhead. The Super-agent consumed 23.23 million cache-read tokens during the test run, compared to 6.05 million for the single-session baseline. When researchers disabled direct thread delivery—forcing every follow-up message back through the Router—cache reads climbed by approximately 37 percent to 31.77 million tokens, and the Router was forced to make 30 percent more routing decisions.</p>
+<p>Batching mitigated routing latency under high traffic. When inbound triggers increased from 1 to 40 per minute, the Router aggregated pending items during model prefill, dropping amortized inference time per decision from 6.4 seconds down to 1.6 seconds.</p>
+<h2 id="runtime-foundation-and-open-engineering-challenges">Runtime Foundation and Open Engineering Challenges</h2>
+<p>The prototype builds on DeepSeek Harness, an MIT-licensed extensible agent framework first published on August 13, 2026, which uses a modular runtime called Cordis, according to <a href="https://startupfortune.com/deepseek-open-sources-the-architecture-behind-its-super-agent/" target="_blank" rel="noopener">Startup Fortune</a>. The system separates cloud-based orchestration from local execution: stateless containers manage agent logic in the cloud, session state persists in an external database, and a lightweight daemon runs on the user&#39;s local hardware to execute terminal commands locally.</p>
+<p>This separation enables developers to connect local workstations containing uncommitted code and private credentials. However, the Harness team explicitly identified security as a significant unsolved challenge. Because cloud-managed agent loops retain access to local execution daemons, server vulnerabilities or prompt-injection attacks could expose local machines and repositories to unauthorized commands.</p>
+<p>The team also listed long-term memory across months of operation, horizontal scaling for the central Router, and agent-to-agent communication protocols as unresolved research areas. For developers looking to inspect the prototype, DeepSeek provides interactive setup instructions through coding agents, requiring Node.js and a package manager to verify builds with <code>pnpm check</code>.</p>
+
+        <section class="faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Questions people ask</h2>
+          <details open><summary>Is the DeepSeek Super-agent prototype an official DeepSeek product?</summary><p>No. DeepSeek explicitly designated dsh-superagent-prototype as an experimental research prototype for reference and study. It warned that the code contains inconsistencies and unvetted implementations that are not ready for production environments.</p></details>
+<details><summary>What license governs the Super-agent prototype?</summary><p>The prototype repository and the underlying DeepSeek Harness runtime are licensed under the permissive MIT license on GitHub.</p></details>
+<details><summary>How does the Super-agent avoid interrupting human developers?</summary><p>The system follows a strict notification policy: on instant messaging channels, it caps updates under 100 words and speaks only when a human decision or approval is required. In its internal test groups, it silently reproduces reported bugs in the background and only posts when it has verified a fix.</p></details>
+<details><summary>What are the main security risks identified in the research?</summary><p>Because the architecture pairs cloud-hosted agent loops with local execution daemons that hold developer credentials, prompt-injection attacks or compromised cloud containers could potentially lead to unauthorized commands executing on local machines.</p></details>
+        </section>
+        <section class="sources" id="sources" aria-labelledby="src-title">
+          <h2 id="src-title">Sources</h2>
+          <ol><li><a href="https://github.com/deepseek-ai/dsh-superagent-prototype" target="_blank" rel="noopener">deepseek-ai/dsh-superagent-prototype</a><span>GitHub, Oct 31, 2026, <b class="official">official source</b></span></li><li><a href="https://pandaily.com/deepseek-harness-super-agent-prototype-router-worker-event-driven-watchdog-open-source-mit" target="_blank" rel="noopener">DeepSeek Harness Team Open-Sources a Super-agent Prototype That Finds and Fixes Bugs on Its Own</a><span>pandaily.com, Oct 31, 2026</span></li><li><a href="https://startupfortune.com/deepseek-open-sources-the-architecture-behind-its-super-agent/" target="_blank" rel="noopener">DeepSeek Open Sources the Architecture Behind Its Super-Agent</a><span>Startup Fortune, Nov 1, 2026</span></li><li><a href="https://agentspulse.github.io/tutorials/deepseek-super-agent-architecture/" target="_blank" rel="noopener">DeepSeek Super-agent: A Router and Worker Multi-Agent Architecture</a><span>AgentsPulse, Oct 31, 2026</span></li><li><a href="https://finance.biggo.com/news/ccf3ef75-c371-43e4-a87d-dfbcf203c450" target="_blank" rel="noopener">DeepSeek Unveils &quot;Super-agent&quot; Architecture: Autonomously Fixes Bugs Without Being @-Mentioned, More Than Doubles Multi-Task Efficiency</a><span>BigGo Finance, Oct 31, 2026</span></li></ol>
+          <p class="method">How this story was made: the newsroom picked it up from Reddit, Techmeme and pandaily.com, gathered the full text of the sources above, and drafted it with AI assistance. Every factual claim was then checked against those sources before publishing (30 claims checked). Illustrations marked as AI-generated are not photographs. Spotted an error? <a href="mailto:rajankrishnan909@gmail.com?subject=Correction%3A%20DeepSeek%20Releases%20Open-Source%20Super-Agent%20Prototype%20for%20Bug%20Fixing">Tell us</a>.</p>
+        </section>
+        <p class="tags"><span>#DeepSeek</span> <span>#Autonomous Agents</span> <span>#Open Source</span> <span>#Software Development</span> <span>#GitHub</span></p>
+        <p class="stamp">Published November 1, 2026 at 07:18 UTC</p>
+      </div>
+    </div>
+  </article>
+  <section class="related wrap" aria-labelledby="rel-title">
+    <h2 id="rel-title">Keep reading</h2>
+    <div class="rows"><article class="story row">
+  <a class="story-link" href="/blog/deepseek-minimax-ai-export-registration-approval/">
+    <span class="pic"><img src="/blog/img/deepseek-minimax-ai-export-registration-approval/hero-640.webp" srcset="/blog/img/deepseek-minimax-ai-export-registration-approval/hero-640.webp 640w, /blog/img/deepseek-minimax-ai-export-registration-approval/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Illustration of a government official reviewing regulatory compliance filings in a modern office." loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">Policy</span><time datetime="2026-10-24T02:37:39.624Z" data-rel>Oct 24, 2026</time></span>
+      <h3>DeepSeek and MiniMax Clear AI Export Registration for Global Rollout</h3>
+      <span class="dek">Chinese AI developers DeepSeek and MiniMax cleared initial export registration under draft technology trade rules, preserving open weights and global licensing.</span>
+      
+    </span>
+  </a>
+</article>
+<article class="story row">
+  <a class="story-link" href="/blog/anthropic-donates-agent-skills-agentic-ai-foundation/">
+    <span class="pic"><img src="/blog/img/anthropic-donates-agent-skills-agentic-ai-foundation/hero-640.webp" srcset="/blog/img/anthropic-donates-agent-skills-agentic-ai-foundation/hero-640.webp 640w, /blog/img/anthropic-donates-agent-skills-agentic-ai-foundation/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="Developers attending an open source agent technology conference." loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">Open Source</span><time datetime="2026-10-23T01:13:17.992Z" data-rel>Oct 23, 2026</time></span>
+      <h3>Anthropic Donates Agent Skills Standard to Agentic AI Foundation</h3>
+      <span class="dek">The transfer hands governance of the modular instruction format, domain, and brand to the Linux Foundation-backed body alongside contributions from OpenAI, Hugging Face, and Alibaba.</span>
+      
+    </span>
+  </a>
+</article>
+<article class="story row">
+  <a class="story-link" href="/blog/deepseek-moonshot-openai-distillation-allegations/">
+    <span class="pic"><img src="/blog/img/deepseek-moonshot-openai-distillation-allegations/hero-640.webp" srcset="/blog/img/deepseek-moonshot-openai-distillation-allegations/hero-640.webp 640w, /blog/img/deepseek-moonshot-openai-distillation-allegations/hero.webp 1200w" sizes="(max-width: 700px) 30vw, 160px" width="640" height="360" alt="AI researcher examining complex synthetic data patterns inside a modern server facility" loading="lazy" decoding="async"></span>
+    <span class="story-body">
+      <span class="meta"><span class="cat">AI Models</span><time datetime="2026-10-30T02:42:25.310Z" data-rel>Oct 30, 2026</time></span>
+      <h3>DeepSeek and Moonshot AI Used OpenAI's GPT-6 Astra, Reports Allege</h3>
+      <span class="dek">Investigations allege the Chinese developers harvested outputs from GPT-6 Astra to build their latest competing systems.</span>
+      
+    </span>
+  </a>
+</article></div>
+  </section>
+  <nav class="prevnext wrap" aria-label="More stories">
+    <span></span>
+    <a class="next" href="/blog/binance-covers-losses-6-billion-hack-withdrawals/"><span>Older</span>Binance Says It Has Replaced 90% of $6.3B Hack Losses, Prepares Sunday Withdrawals</a>
+  </nav>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="biz">
+      <p class="biz-name">RKJDEV Labs</p>
+      <p>© 2026 RKJDEV Labs, Proprietor: Rajan Krishnan</p>
+      <p>Udyam registered MSME, India, <span class="nowrap">UDYAM-BR-26-0254766</span></p>
+      <p><a href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a></p>
+    </div>
+    <nav aria-label="Site">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/play/">Play</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/blog/feed.xml">RSS</a>
+    </nav>
+    <p class="fine">Stories are researched from the linked sources, written with AI assistance and checked claim by claim against those sources before publishing. AI-generated illustrations are labeled.</p>
+  </div>
+</footer>
+<script src="/blog/blog.js?v=45c7aef4" defer></script>
+</body>
+</html>
