@@ -6,7 +6,7 @@ fetch("ai-dle/puzzles/index.json").then((r) => r.json()).then((index) => {
   let save = {}; try { save = JSON.parse(localStorage.getItem("aidle:v1")) || {}; } catch {}
   const res = save.results?.[p.date], no = String(p.n).padStart(3, "0");
   const el = document.getElementById("aidle-status");
-  el.innerHTML = res?.status === "won" ? `You solved case ${no} on clue ${res.guesses.length}.` : res?.status === "lost" ? `Case ${no} is closed. The next one opens at midnight.` : `<b>Case ${no} is open.</b>`;
+  el.innerHTML = res?.status === "won" ? `You solved case ${no} on clue ${res.guesses.length}.` : res?.status === "lost" ? `Case ${no} is closed. Try another from the archive.` : `<b>Case ${no} is open.</b>`;
   if ((save.streak || 0) > 1) el.innerHTML += ` Your streak is ${save.streak} days.`;
 }).catch(() => {});
 fetch("scale-of-ai/data.json").then((r) => r.json()).then((d) => {

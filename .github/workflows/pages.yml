@@ -1,4 +1,4 @@
-# Deploys the site to GitHub Pages when you push to main. (Newsroom runs deploy themselves.)
+# Deploys the site to GitHub Pages when you push to main. The blog is dormant: /blog stays in the repo but isn't published.
 name: Pages
 
 on:
@@ -23,7 +23,7 @@ jobs:
       - name: Build site
         run: |
           mkdir _site
-          rsync -a --exclude='.git*' --exclude=newsroom --exclude=cf-trigger --exclude=_site --exclude=node_modules --exclude=stamp.py ./ _site/
+          rsync -a --exclude='.git*' --exclude=newsroom --exclude=cf-trigger --exclude=_site --exclude=node_modules --exclude=stamp.py --exclude=/blog ./ _site/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

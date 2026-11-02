@@ -101,20 +101,13 @@ function renderVerdict(fresh) {
     ? `It was <span class="ans">${esc(secret.answer)}</span>. You got it on clue ${WORDS[used]}.`
     : `It was <span class="ans">${esc(secret.answer)}</span>.`;
   $("#blurb").textContent = secret.blurb || "";
-  const posts = secret.posts || [];
-  $("#reads").innerHTML = posts.length ? `<p>The reporting behind this case</p>${posts.map((p) => `<a href="/blog/${encodeURIComponent(p.slug)}/">${esc(p.title)}</a>`).join("")}` : "";
   renderNext();
 }
 
+// No new cases are being made, so point players at the cases they haven't opened yet.
 function renderNext() {
-  const el = $("#next");
-  if (puzzle.date !== today) { el.innerHTML = `This is case ${caseNo(puzzle.n)} from the archive. <a href="./">Open today's case</a>`; return; }
-  const tick = () => {
-    const now = new Date(), mid = new Date(now); mid.setHours(24, 0, 0, 0);
-    const s = Math.max(0, Math.floor((mid - now) / 1000));
-    el.innerHTML = `Next case opens in <b>${String(Math.floor(s / 3600)).padStart(2, "0")}:${String(Math.floor((s % 3600) / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}</b>`;
-  };
-  tick(); clearInterval(renderNext.t); renderNext.t = setInterval(tick, 1000);
+  const left = index.filter((p) => p.date <= today && p.date !== puzzle.date && !save.results[p.date]).length;
+  $("#next").innerHTML = left ? `${left} more case${left === 1 ? "" : "s"} to crack. <button type="button" data-open="archive">Past cases</button>` : "You've opened every case.";
 }
 
 function render({ lift = -1, fresh = false } = {}) {
@@ -258,7 +251,7 @@ function renderArchive() {
     const st = !r ? `<span class="st">Not played</span>` : r.status === "won" ? `<span class="st won">Solved on clue ${r.guesses.length}</span>` : r.status === "lost" ? `<span class="st lost">Unsolved</span>` : `<span class="st">In progress</span>`;
     return `<li><a href="?d=${p.date}"><span class="no">${caseNo(p.n)}</span><span>${longDate(p.date)}${p.date === today ? " (today)" : ""}</span>${st}</a></li>`;
   });
-  $("#archive-list").innerHTML = rows.join("") || `<li class="empty">The archive grows by one case a day.</li>`;
+  $("#archive-list").innerHTML = rows.join("") || `<li class="empty">No cases yet.</li>`;
 }
 
 // ---------- start ----------
@@ -268,7 +261,8 @@ async function boot() {
   catch { $("#subject").textContent = "Couldn't load today's case. Check your connection, then reload."; return; }
   const want = new URLSearchParams(location.search).get("d");
   const avail = index.filter((p) => p.date <= today);
-  const pick = (want && avail.find((p) => p.date === want)) || avail[avail.length - 1] || index[0];
+  // Without ?d=, open the newest case this player hasn't finished.
+  const pick = (want && avail.find((p) => p.date === want)) || avail.slice().reverse().find((p) => !["won", "lost"].includes(save.results[p.date]?.status)) || avail[avail.length - 1] || index[0];
   if (!pick) { $("#subject").textContent = "The first case opens soon."; return; }
   const [p, ents] = await Promise.all([
     fetch(`puzzles/${pick.date}.json`).then((r) => r.json()),
