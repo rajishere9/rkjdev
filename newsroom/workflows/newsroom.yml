@@ -1,3 +1,6 @@
+# DORMANT since 2026-11-02: the blog is switched off. GitHub only runs workflows in .github/workflows/,
+# so this file does nothing here. To bring the newsroom back, move it to .github/workflows/newsroom.yml,
+# remove --exclude=blog from .github/workflows/pages.yml, restore the Blog links, and redeploy cf-trigger/.
 # The newsroom: finds breaking AI and tech news, writes fact-checked posts, and deploys the site.
 # Triggered every 30 minutes by the Cloudflare Worker in cf-trigger/, with a GitHub schedule as a fallback.
 name: Newsroom

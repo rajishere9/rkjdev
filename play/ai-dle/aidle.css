@@ -133,6 +133,7 @@
 .next { font-size: 15px; color: var(--ink-soft); }
 .next b { font: 700 16px var(--type); color: var(--ink); }
 .next a { color: var(--ink); font-weight: 600; }
+.next button { padding: 0; border: 0; background: none; cursor: pointer; font: inherit; color: var(--ink); font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
 
 .sheet-foot { display: flex; flex-wrap: wrap; gap: 0 22px; margin-top: 26px; padding-top: 6px; border-top: 1px solid var(--rule); }
 .sheet-foot button { min-height: 44px; padding: 0; border: 0; background: none; cursor: pointer; font: 600 14px var(--form); color: var(--ink-soft); }

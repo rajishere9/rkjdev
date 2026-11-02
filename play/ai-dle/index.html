@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>AI-dle: the daily AI news guessing game</title>
-<meta name="description" content="Identify today's mystery AI company or model from six clues drawn from the week's real AI news. A new case every day, free, no sign-up.">
+<title>AI-dle: the AI news guessing game</title>
+<meta name="description" content="Identify the mystery AI company or model from six clues drawn from real AI news. Dozens of cases to crack, free, no sign-up.">
 <link rel="canonical" href="https://www.rkjdev.com/play/ai-dle/">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#110b14">
 <meta property="og:type" content="website">
-<meta property="og:title" content="AI-dle: the daily AI news guessing game">
-<meta property="og:description" content="One mystery AI company or model a day. Six redacted clues from real news. How many do you need?">
+<meta property="og:title" content="AI-dle: the AI news guessing game">
+<meta property="og:description" content="One mystery AI company or model. Six redacted clues from real news. How many do you need?">
 <meta property="og:url" content="https://www.rkjdev.com/play/ai-dle/">
 <meta property="og:image" content="https://www.rkjdev.com/play/ai-dle/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -22,9 +22,9 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/site.css?v=e85724ed">
 <link rel="stylesheet" href="../play.css?v=cbf09fb8">
-<link rel="stylesheet" href="aidle.css?v=2ee1e5e1">
+<link rel="stylesheet" href="aidle.css?v=33b02a6d">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"VideoGame","name":"AI-dle","url":"https://www.rkjdev.com/play/ai-dle/","description":"A daily guessing game: identify the mystery AI company or model from six clues drawn from real AI news.","gamePlatform":"Web browser","applicationCategory":"Game","genre":["Puzzle","Trivia"],"isAccessibleForFree":true,"author":{"@type":"Person","name":"Rajan Krishnan","url":"https://www.rkjdev.com/"}}
+{"@context":"https://schema.org","@type":"VideoGame","name":"AI-dle","url":"https://www.rkjdev.com/play/ai-dle/","description":"A guessing game: identify the mystery AI company or model from six clues drawn from real AI news.","gamePlatform":"Web browser","applicationCategory":"Game","genre":["Puzzle","Trivia"],"isAccessibleForFree":true,"author":{"@type":"Person","name":"Rajan Krishnan","url":"https://www.rkjdev.com/"}}
 </script>
 </head>
 <body class="desk">
@@ -35,7 +35,6 @@
     <nav aria-label="Site">
       <a href="/#work">Work</a>
       <a href="/#about">About</a>
-      <a href="/blog/">Blog</a>
       <a href="/play/" aria-current="page">Play</a>
       <a href="/#contact">Contact</a>
     </nav>
@@ -88,7 +87,7 @@
       <button type="button" data-open="archive">Past cases</button>
     </footer>
   </article>
-  <p class="provenance">Clues come only from <a href="/blog/">rkj dev Blog</a> stories, which are checked against their sources, and each clue is fact-checked again before it's used.</p>
+  <p class="provenance">Clues come only from fact-checked AI news reporting, and each clue was checked again before it was used.</p>
 </main>
 <footer class="site-foot">
   <div class="wrap">
@@ -100,10 +99,8 @@
     </div>
     <nav aria-label="Site">
       <a href="/">Home</a>
-      <a href="/blog/">Blog</a>
       <a href="/play/">Play</a>
       <a href="/privacy/">Privacy</a>
-      <a href="/blog/feed.xml">RSS</a>
     </nav>
     <p class="fine">No trackers. The game saves your progress only in your own browser.</p>
   </div>
@@ -112,13 +109,13 @@
 <dialog class="memo" id="help" aria-labelledby="help-title">
   <form method="dialog" class="memo-in">
     <h2 id="help-title">How to play</h2>
-    <p>Every day there's one subject from the week's AI news: a company or lab, or an AI model or product.</p>
+    <p>Each case has one subject from the AI news: a company or lab, or an AI model or product.</p>
     <ol class="rules">
       <li>You start with one clue. The other five are redacted.</li>
       <li>Type a name and pick it from the list. Each wrong guess, or a skip, declassifies the next clue.</li>
       <li>Wrong guesses get a note in the margin: <mark>same country as the subject</mark> or <mark>same maker</mark> means you're close.</li>
     </ol>
-    <p>Six clues, six guesses. A new case opens at midnight, your time.</p>
+    <p>Six clues, six guesses. Finished one? Open another from Past cases.</p>
     <button class="submit" value="close">Open the case</button>
   </form>
 </dialog>
@@ -143,6 +140,6 @@
 </dialog>
 
 <div class="toast" role="status" aria-live="polite"></div>
-<script src="aidle.js?v=807bd2ae" defer></script>
+<script src="aidle.js?v=beb9ac21" defer></script>
 </body>
 </html>

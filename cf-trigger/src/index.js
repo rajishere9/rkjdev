@@ -1,3 +1,4 @@
+// DORMANT: the blog is switched off. Delete this Worker in Cloudflare (or don't redeploy it) so nothing dispatches the newsroom.
 // Starts the newsroom GitHub Action every 30 minutes. Cloudflare crons fire on time;
 // GitHub's own scheduler is often late, so it only acts as a fallback.
 const REPO = "rajishere9/rkjdev";
