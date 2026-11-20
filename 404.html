@@ -6,25 +6,31 @@
 <title>Page not found, rkj dev</title>
 <meta name="robots" content="noindex">
 <meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#110b14">
-<link rel="icon" href="/favicon.svg?v=bdff7dc5" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=ffe10b2c">
+<meta name="theme-color" content="#09090b">
+<link rel="icon" href="/favicon.svg?v=da47b064" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=5651a688">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,40;1,9..144,400..600,40&family=Schibsted+Grotesk:ital,wght@0,400..600;1,400..600&display=swap">
-<link rel="stylesheet" href="/site.css?v=e85724ed">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400..600&family=Inter+Tight:wght@500..700&display=swap">
+<link rel="stylesheet" href="/site.css?v=ffe67509">
 <style>
-  /* The candle here has gone out. Only the smoke moves, and only once. */
-  :root { --li: .25; }
-  .lost { max-width: 720px; padding-top: clamp(48px, 12vh, 140px); padding-bottom: 40px; }
-  .out { width: 96px; height: 160px; margin-bottom: 28px; }
-  .out svg { width: 100%; height: 100%; }
-  .lost h1 { font-size: clamp(40px, 6vw, 72px); line-height: 1; letter-spacing: -.02em; }
-  .lost p { margin-top: 20px; max-width: 32em; font-size: 19px; line-height: 1.5; color: var(--ash); }
-  .lost nav { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 32px; }
+  .lost { display: grid; align-content: center; min-height: calc(100svh - var(--head-h) - 260px); max-width: 980px; padding-top: clamp(48px, 10vh, 120px); padding-bottom: 24px; }
+  .lost::before {
+    content: ""; position: absolute; z-index: -1; left: 50%; top: 0; width: min(100vw, 1400px); height: 560px; transform: translateX(-50%); pointer-events: none;
+    background: radial-gradient(50% 100% at 30% 0%, rgb(255 91 36 / .12), transparent 70%);
+  }
+  .code {
+    font: 600 clamp(120px, 30vw, 360px)/.8 var(--display); letter-spacing: -.04em; margin-left: -.03em;
+    color: transparent; background: linear-gradient(180deg, rgb(255 255 255 / .2), rgb(255 255 255 / .03) 90%); -webkit-background-clip: text; background-clip: text;
+    user-select: none;
+  }
+  .code b { font-weight: inherit; color: var(--accent); }
+  .lost h1 { margin-top: clamp(28px, 5vw, 48px); font-size: clamp(34px, 5vw, 60px); line-height: 1; letter-spacing: -.04em; }
+  .lost .say { margin-top: 18px; max-width: 32em; font-size: 18px; line-height: 1.55; color: var(--fg-2); }
+  .lost nav { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 14px; margin-top: 32px; }
   @media (prefers-reduced-motion: no-preference) {
-    .smoke { animation: rise 6s ease-out .4s both; }
-    @keyframes rise { from { opacity: 0; transform: translateY(6px); } 30% { opacity: .7; } to { opacity: .25; transform: translateY(-4px); } }
+    .code { animation: drop 1s var(--ease-out) both; }
+    @keyframes drop { from { opacity: 0; transform: translateY(24px); } }
   }
 </style>
 </head>
@@ -35,33 +41,21 @@
     <a class="mark" href="/">rkj dev</a>
     <nav aria-label="Site">
       <a href="/#work">Work</a>
-      <a href="/#about">About</a>
       <a href="/play/">Play</a>
-      <a href="/#contact">Contact</a>
+      <a href="/#about">About</a>
+      <a class="cta" href="/#contact">Contact</a>
     </nav>
   </div>
 </header>
 
 <main id="main" class="wrap lost">
-  <div class="out" aria-hidden="true">
-    <svg viewBox="0 0 24 40" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
-      <g class="smoke" fill="#8d8390">
-        <path opacity=".9" d="M12 14h1v1h-1zM11 12h1v2h-1zM12 10h1v2h-1zM13 8h1v2h-1zM12 6h1v2h-1zM11 4h1v2h-1zM12 2h1v2h-1z"/>
-        <path opacity=".45" d="M13 11h1v1h-1zM10 9h1v1h-1zM14 5h1v1h-1z"/>
-      </g>
-      <path fill="#3a2a22" d="M12 15h1v3h-1z"/>
-      <path fill="#c24a2a" d="M12 15h1v1h-1z"/>
-      <path fill="#f2eadf" d="M7 18h11v22H7z"/>
-      <path fill="#fff3d6" d="M7 18h1v22H7z"/>
-      <path fill="#d9ccbd" d="M16 18h2v22h-2z"/>
-      <path fill="#e8dccb" d="M9 18h7v1H9z"/>
-    </svg>
-  </div>
-  <h1>This page has gone out.</h1>
-  <p>There is nothing at this address. It may have moved, or the link may have a typo. Here is where the light still is.</p>
+  <p class="code" aria-hidden="true">4<b>0</b>4</p>
+  <h1>Nothing lives at this address.</h1>
+  <p class="say">The page may have moved, or the link may have a typo. Everything that does exist is one click away.</p>
   <nav aria-label="Where to go">
-    <a class="btn" href="/">Home</a>
-    <a class="textlink" href="/play/">The games</a>
+    <a class="btn" href="/">Back to home <span class="arr" aria-hidden="true">→</span></a>
+    <a class="btn quiet" href="/#work">See the work</a>
+    <a class="btn quiet" href="/play/">Play a game</a>
   </nav>
 </main>
 
@@ -73,9 +67,10 @@
       <p>Udyam registered MSME, India, <span class="nowrap">UDYAM-BR-26-0254766</span></p>
       <p><a href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a></p>
     </div>
-    <nav aria-label="Site">
+    <nav aria-label="Footer">
       <a href="/">Home</a>
       <a href="/play/">Play</a>
+      <a href="/candledeep/">CandleDeep</a>
       <a href="/privacy/">Privacy</a>
     </nav>
   </div>

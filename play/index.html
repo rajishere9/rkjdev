@@ -7,7 +7,7 @@
 <meta name="description" content="Free browser games about AI: an AI news guessing game, a scroll through the scale of AI, and a pixel-art mystery on a datacenter night shift.">
 <link rel="canonical" href="https://www.rkjdev.com/play/">
 <meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#110b14">
+<meta name="theme-color" content="#09090b">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="rkj dev">
 <meta property="og:title" content="Play, by rkj dev">
@@ -15,14 +15,14 @@
 <meta property="og:url" content="https://www.rkjdev.com/play/">
 <meta property="og:image" content="https://www.rkjdev.com/play/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/favicon.svg?v=bdff7dc5" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=ffe10b2c">
+<link rel="icon" href="/favicon.svg?v=da47b064" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=5651a688">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,40;1,9..144,400..600,40&family=Schibsted+Grotesk:ital,wght@0,400..600;1,400..600&display=swap">
-<link rel="stylesheet" href="/site.css?v=e85724ed">
-<link rel="stylesheet" href="play.css?v=cbf09fb8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400..600&family=Inter+Tight:wght@500..700&display=swap">
+<link rel="stylesheet" href="/site.css?v=ffe67509">
+<link rel="stylesheet" href="play.css?v=14fb77c6">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"CollectionPage","name":"Play","url":"https://www.rkjdev.com/play/","description":"Free browser games about artificial intelligence.","hasPart":[
 {"@type":"VideoGame","name":"AI-dle","url":"https://www.rkjdev.com/play/ai-dle/","gamePlatform":"Web browser","applicationCategory":"Game","genre":"Puzzle"},
@@ -37,54 +37,60 @@
     <a class="mark" href="/">rkj dev</a>
     <nav aria-label="Site">
       <a href="/#work">Work</a>
-      <a href="/#about">About</a>
       <a href="/play/" aria-current="page">Play</a>
-      <a href="/#contact">Contact</a>
+      <a href="/#about">About</a>
+      <a class="cta" href="/#contact">Contact</a>
     </nav>
   </div>
 </header>
 
-<main id="main" class="wrap hub">
-  <h1>Play</h1>
-  <p class="intro">Small games about AI, built on real data. They're free, run in your browser, and keep your scores on your device.</p>
+<main id="main" class="play-hub">
+  <header class="wrap hub-head">
+    <p class="kicker">Play in your browser</p>
+    <h1>Play</h1>
+    <p class="intro">Small games about AI, built on real data. They're free, run in your browser, and keep your scores on your device.</p>
+  </header>
 
-  <ol class="games">
+  <ol class="wrap games">
     <li>
-      <a class="game" href="ai-dle/">
+      <a class="game" href="ai-dle/" style="--tint: 233 236 230">
         <span class="shot"><img src="ai-dle/thumb.webp?v=bf20198d" width="640" height="400" alt="The AI-dle case sheet, with one typed clue and five redacted ones"></span>
         <div class="game-body">
-          <p class="kind">Puzzle</p>
+          <p class="kind kicker"><span>01</span>Puzzle</p>
           <h2>AI-dle</h2>
-          <p>Identify the AI company or model behind six clues from real AI news, with each wrong guess lifting the redaction on the next one.</p>
+          <p class="desc">Identify the AI company or model behind six clues from real AI news, with each wrong guess lifting the redaction on the next one.</p>
           <p class="status" id="aidle-status">Dozens of cases to crack.</p>
+          <p class="go">Play now <span class="arr" aria-hidden="true">→</span></p>
         </div>
       </a>
     </li>
     <li>
-      <a class="game" href="scale-of-ai/">
-        <span class="shot"><img src="scale-of-ai/thumb.webp?v=cdaa4a1b" width="640" height="400" alt="The Scale of AI chart, with models placed down a log ruler of training compute"></span>
+      <a class="game" href="scale-of-ai/" style="--tint: 242 180 92">
+        <span class="shot"><img src="scale-of-ai/thumb.webp?v=4b586072" width="640" height="400" alt="The Scale of AI chart, with models placed down a log ruler of training compute"></span>
         <div class="game-body">
-          <p class="kind">Interactive</p>
+          <p class="kind kicker"><span>02</span>Interactive</p>
           <h2>The Scale of AI</h2>
-          <p>Scroll from a single calculation down to the largest AI training runs ever, past every notable model since 1950.</p>
+          <p class="desc">Scroll from a single calculation down to the largest AI training runs ever, past every notable model since 1950.</p>
           <p class="status" id="scale-status">Data from Epoch AI, refreshed every week.</p>
+          <p class="go">Start scrolling <span class="arr" aria-hidden="true">→</span></p>
         </div>
       </a>
     </li>
     <li>
-      <a class="game" href="night-shift/">
+      <a class="game" href="night-shift/" style="--tint: 79 179 255">
         <span class="shot"><img src="night-shift/thumb.webp?v=b94dd3c9" width="640" height="400" alt="Night Shift: the break room at night, with the night tech and MOP-E the cleaning robot"></span>
         <div class="game-body">
-          <p class="kind">Adventure</p>
+          <p class="kind kicker"><span>03</span>Adventure</p>
           <h2>Night Shift</h2>
-          <p>A pixel-art mystery. It's 3am at a datacenter, and something is using the cluster 17 minutes at a time. Seven puzzles, three endings, about half an hour. Plays on phones too.</p>
+          <p class="desc">A pixel-art mystery. It's 3am at a datacenter, and something is using the cluster 17 minutes at a time. Seven puzzles, three endings, about half an hour. Plays on phones too.</p>
           <p class="status" id="night-status">New: your first shift starts at 03:00.</p>
+          <p class="go">Start the shift <span class="arr" aria-hidden="true">→</span></p>
         </div>
       </a>
     </li>
   </ol>
 
-  <p class="later">More games are in the works.</p>
+  <p class="wrap later">More games are in the works.</p>
 </main>
 
 <footer class="site-foot">
@@ -95,9 +101,10 @@
       <p>Udyam registered MSME, India, <span class="nowrap">UDYAM-BR-26-0254766</span></p>
       <p><a href="mailto:rajankrishnan909@gmail.com">rajankrishnan909@gmail.com</a></p>
     </div>
-    <nav aria-label="Site">
+    <nav aria-label="Footer">
       <a href="/">Home</a>
       <a href="/play/">Play</a>
+      <a href="/candledeep/">CandleDeep</a>
       <a href="/privacy/">Privacy</a>
     </nav>
     <p class="fine">No trackers. The games save your progress only in your own browser.</p>
