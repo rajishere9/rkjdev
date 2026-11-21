@@ -26,7 +26,7 @@
 .page th { font: 500 12px/1.5 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--fg-3); }
 .page th[scope="row"] { white-space: nowrap; width: 11em; padding-top: 17px; }
 .page td.price { white-space: nowrap; font: 600 18px/1.5 var(--display); letter-spacing: -.02em; font-variant-numeric: tabular-nums; color: var(--fg); text-align: right; padding-right: 0; }
-.page tr > th:last-child:not(:first-child) { text-align: right; padding-right: 0; }
+.page table:has(td.price) tr > th:last-child { text-align: right; padding-right: 0; }
 .page td:first-child:not(:only-child) { color: var(--fg); font-weight: 500; white-space: nowrap; }
 
 /* Facts: a raised panel for the things people come looking for */
@@ -37,6 +37,14 @@
 nav.legal { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); }
 nav.legal a, .page nav.legal a { padding: 8px 14px; border-radius: 999px; background: rgb(255 255 255 / .04); box-shadow: inset 0 0 0 1px var(--line); color: var(--fg-2); font-size: 14px; font-weight: 500; text-decoration: none; transition: color .2s, background-color .2s, box-shadow .2s; }
 nav.legal a:hover, .page nav.legal a:hover { color: var(--fg); background: rgb(255 255 255 / .08); box-shadow: inset 0 0 0 1px var(--line-2); }
+
+/* Steps: a numbered list of things to do, used on the data deletion page */
+.page .steps { list-style: none; counter-reset: step; display: grid; gap: 12px; margin: 0 0 1.2em; padding: 0; }
+.page .steps li { counter-increment: step; position: relative; margin: 0; padding: 22px 24px 22px 76px; border-radius: 18px; border: 1px solid var(--line); background: var(--bg-1); box-shadow: var(--edge); }
+.page .steps li::before { content: counter(step, decimal-leading-zero); position: absolute; left: 24px; top: 24px; font: 500 13px/1.5 var(--mono); letter-spacing: .06em; color: var(--accent-hi); }
+.page .steps h3 { font-size: 20px; line-height: 1.2; letter-spacing: -.025em; }
+.page .steps p { margin: 8px 0 0; }
+@media (max-width: 640px) { .page .steps li { padding: 46px 20px 20px; } .page .steps li::before { left: 20px; top: 18px; } }
 
 /* CandleDeep: the game's own page */
 .app::before { background: radial-gradient(50% 100% at 50% 0%, rgb(244 184 96 / .13), transparent 70%); }
@@ -53,6 +61,11 @@ nav.legal a:hover, .page nav.legal a:hover { color: var(--fg); background: rgb(2
 @media (max-width: 640px) {
   .page th[scope="row"] { width: 7.5em; white-space: normal; }
   .page td:first-child:not(:only-child) { white-space: normal; }
+  /* A table of sentences reads better as a list on a phone. */
+  .page table.rows tr { display: block; padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .page table.rows tr:first-child { display: none; }
+  .page table.rows td { display: block; padding: 0; border: 0; }
+  .page table.rows td + td { margin-top: 4px; }
   .shots { gap: 10px; }
   .shots img { border-radius: 14px; border-width: 3px; }
 }
